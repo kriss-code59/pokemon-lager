@@ -235,33 +235,21 @@ PLAYWRIGHT_SITES = [
         ],
         # PokeMadness (PrestaShop) sine produktsider ender alltid pa ".html".
         # I stedet for a gjette CSS-klassenavn i listevisningen, henter vi
-        # bare produktlenkene her og besoker hver side separat (samme
-        # metode som for Nille tidligere) -- mer robust mot design-endringer.
+        # bare produktlenkene her og besoker hver side separat -- mer robust
+        # mot design-endringer.
         "card_selector": "a[href$='.html']",
         "name_selector": None,
         "price_selector": ".price",
         "visit_product_pages": True,
         "product_url_pattern": r"/\d+-[^/]+\.html$",
         "detail_name_selector": "h1",
-        # VIKTIG FIKS: den forrige selektoren (".price, [class*='price']")
-        # traff en tom, skjult div ("search_results...") FOR selve prisen i
-        # DOM-rekkefolgen, sa pris ble ofte lest som tom. Vi avgrenser derfor
-        # til prisblokken i selve produktinfoen.
         "detail_price_selector": ".product-prices .price, .current-price .price",
-        # VIKTIG FIKS: lagerstatus ble tidligere lest fra HELE sideteksten,
-        # som ogsa viser "Utsolgt" for anbefalte/relaterte produkter lenger
-        # ned pa siden -- det ga falske "utsolgt"-treff for varer som faktisk
-        # var pa lager. Vi avgrenser derfor til kjop-knapp-blokken, som viser
-        # noyaktig "Pa lager <antall> Produkter" eller "Utsolgt" for DENNE varen.
         "detail_stock_selector": ".product-add-to-cart",
-        # Kategoriene kan i prinsippet ha flere sider med resultater.
         "paginate": True,
     },
 ]
 
 # Vanlige tekster pa "godta cookies"-knapper i norske nettbutikker.
-# Vi provver a klikke disse automatisk, fordi et cookie-banner ofte blokkerer
-# resten av siden fra a laste riktig (og dermed gir 0 treff).
 COOKIE_BUTTON_TEXTS = [
     "Godta alle", "Godta alle cookies", "Aksepter alle", "Aksepter",
     "Godta", "OK", "Jeg forstar", "Tillat alle",
@@ -269,12 +257,10 @@ COOKIE_BUTTON_TEXTS = [
 
 
 def dismiss_cookie_banner(page, attempts: int = 6, wait_ms: int = 1000):
-    """Provver a klikke bort cookie-banner. Noen bannere (f.eks. Cookiebot,
-    brukt av bl.a. Norli) dukker opp med en liten forsinkelse etter at siden
-    er lastet, sa vi provver flere ganger over noen sekunder i stedet for a
-    gi opp med en gang. Kall med lave attempts/wait_ms nar samtykke allerede
-    er gitt tidligere i samme nettleserokt (f.eks. pa produktdetaljsider), for
-    a unnga a kaste bort tid pa a lete etter en knapp som uansett ikke finnes."""
+    """Provver a klikke bort cookie-banner. Noen bannere dukker opp med en
+    liten forsinkelse etter at siden er lastet, sa vi provver flere ganger
+    over noen sekunder. Kall med lave attempts/wait_ms nar samtykke allerede
+    er gitt tidligere i samme nettleserokt (f.eks. pa produktdetaljsider)."""
     for _ in range(attempts):
         for text in COOKIE_BUTTON_TEXTS:
             try:
@@ -310,8 +296,6 @@ def safe_screenshot(page, store: str, suffix: str = ""):
 
 
 def extract_href(card, page_url: str) -> str | None:
-    """Henter href enten fra selve kortet (hvis kortet er en <a>-tag) eller
-    fra en lenke inni kortet."""
     href = card.get_attribute("href")
     if not href:
         link_el = card.query_selector("a")
@@ -328,7 +312,10 @@ def scrape_nille(page, site: dict) -> list[Product]:
     besoke hver produktside (mye raskere enn for). Kategorisiden bruker en
     virtualisert liste der bare et fatall kort finnes i DOM-en om gangen, sa
     vi samler opp kort fortlopende mens vi scroller, i stedet for a lese alt
-    til slutt (som tidligere kun fanget opp under halvparten av produktene)."""
+    til slutt. Vi leser ogsa det oppgitte totalantallet produkter ("X
+    produkter") fra siden, og fortsetter a scrolle helt til vi har samlet
+    like mange -- ikke bare til noen fa runder uten nye treff (headless
+    nettleser i CI kan trenge lengre tid per steg enn en vanlig nettleser)."""
     store = site["store"]
     url = site["urls"][0]
     collected: dict[str, Product] = {}
@@ -340,6 +327,16 @@ def scrape_nille(page, site: dict) -> list[Product]:
     except Exception as e:
         print(f"[{store}] Kunne ikke laste {url}: {e}")
         return []
+
+    expected_total = None
+    try:
+        body_text = page.inner_text("body")
+        m = re.search(r"(\d+)\s+produkter", body_text)
+        if m:
+            expected_total = int(m.group(1))
+            print(f"[{store}] Siden oppgir {expected_total} produkter totalt.")
+    except Exception:
+        pass
 
     def collect_visible_cards():
         cards = page.query_selector_all('div[class*="itemCard--"]')
@@ -379,13 +376,15 @@ def scrape_nille(page, site: dict) -> list[Product]:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
 
     stagnant_rounds = 0
-    for _ in range(40):
+    for _ in range(60):
         before = len(collected)
         collect_visible_cards()
-        page.evaluate("window.scrollBy(0, window.innerHeight * 0.9)")
-        page.wait_for_timeout(600)
+        if expected_total is not None and len(collected) >= expected_total:
+            break
+        page.evaluate("window.scrollBy(0, window.innerHeight * 0.85)")
+        page.wait_for_timeout(1000)
         stagnant_rounds = stagnant_rounds + 1 if len(collected) == before else 0
-        if stagnant_rounds >= 5:
+        if stagnant_rounds >= 8:
             break
 
     collect_visible_cards()
@@ -397,7 +396,8 @@ def scrape_nille(page, site: dict) -> list[Product]:
             print(f"[{store}] Mulig blokkering oppdaget: {diag}")
         safe_screenshot(page, store)
     else:
-        print(f"[{store}] Fant {len(collected)} produkter direkte pa kategorisiden.")
+        extra = f" av {expected_total} oppgitt" if expected_total else ""
+        print(f"[{store}] Fant {len(collected)} produkter direkte pa kategorisiden{extra}.")
 
     return list(collected.values())
 
@@ -410,10 +410,6 @@ def scrape_product_detail_pages(page, site: dict, product_urls: list[str]) -> li
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=45000)
             page.wait_for_timeout(1500)
-            # Samtykke er som regel allerede gitt fra kategorisiden i samme
-            # nettleserokt -- vi bruker derfor et raskt, billig forsok her i
-            # stedet for full gjentatt-forsok-logikken (sparer mye tid nar vi
-            # besoker mange produktsider etter hverandre).
             dismiss_cookie_banner(page, attempts=1, wait_ms=300)
         except Exception as e:
             print(f"[{site['store']}] Kunne ikke laste produktside {url}: {e}")
@@ -476,15 +472,11 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
 
         for page_num, url in enumerate(page_urls_to_try, start=1):
             try:
-                # domcontentloaded i stedet for networkidle: mange JS-sider har
-                # konstant bakgrunnstrafikk (analytics o.l.) som gjor at siden
-                # ALDRI blir "helt stille" -- networkidle timer da ut selv om
-                # siden i praksis er ferdig lastet for oss.
                 page.goto(url, wait_until="domcontentloaded", timeout=45000)
-                page.wait_for_timeout(2500)  # gi JS-rammeverket tid til a rendre innhold
+                page.wait_for_timeout(2500)
                 dismiss_cookie_banner(page)
                 scroll_to_load_lazy_content(page)
-                page.wait_for_timeout(1000)  # la siste batch produkter rendres
+                page.wait_for_timeout(1000)
             except Exception as e:
                 print(f"[{site['store']}] Kunne ikke laste {url} ferdig: {e}. "
                       f"Provver likevel a lese det som lastet, og tar skjermbilde.")
@@ -498,10 +490,6 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
             cards = page.query_selector_all(site["card_selector"])
 
             if not cards and page_num == 1:
-                # Kan vaere en forbigaende nettverks-/rendringsfeil eller at
-                # siden brukte litt for lang tid pa a rendre -- provver en
-                # gang til med en frisk innlasting for vi konkluderer med at
-                # noe faktisk er galt.
                 print(f"[{site['store']}] Fant ingen produktkort ved forste forsok pa {url}, provver pa nytt...")
                 try:
                     page.reload(wait_until="domcontentloaded", timeout=45000)
@@ -583,8 +571,6 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
 
 
 def load_previous_products() -> dict:
-    """Leser forrige kjorings docs/data.json (hvis den finnes) FOR vi
-    overskriver den, slik at vi kan oppdage hva som er nytt siden sist."""
     try:
         with open("docs/data.json", "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -594,8 +580,6 @@ def load_previous_products() -> dict:
 
 
 def compute_new_stock_events(all_products: list, previous_by_url: dict) -> list:
-    """Finner produkter som har blitt tilgjengelige (pa lager) siden forrige
-    kjoring -- enten fordi de er helt nye, eller fordi de har blitt restocket."""
     events = []
     now = datetime.datetime.now().isoformat(timespec="seconds")
     for p in all_products:
@@ -614,8 +598,6 @@ def compute_new_stock_events(all_products: list, previous_by_url: dict) -> list:
 
 
 def update_changes_log(new_events: list, max_entries: int = 300, max_age_days: int = 14) -> list:
-    """Slar sammen nye hendelser med den eksisterende historikken i
-    docs/changes.json, rydder bort gamle oppforinger, og lagrer."""
     path = "docs/changes.json"
     try:
         with open(path, "r", encoding="utf-8") as f:
