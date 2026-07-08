@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08T15:22:03",
+  "last_updated": "2026-07-08T15:39:32",
   "products": [
     {
       "store": "Cardcenter",
@@ -2814,6 +2814,18 @@
       "price": "319,90",
       "in_stock": false,
       "url": "https://www.nille.no/produkter/barnerom-og-leker/spill/pokemon-3pk-sv8-blister-cbd1f3fa/"
+    }
+  ],
+  "manual_check_stores": [
+    {
+      "store": "Norli",
+      "url": "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
+      "reason": "Norli svarer med HTTP 403 Forbidden til automatiske besok."
+    },
+    {
+      "store": "PokeMadness",
+      "url": "https://www.pokemadness.no/",
+      "reason": "PokeMadness viser en Cloudflare-utfordring (\"Vent litt...\") til automatiske besok."
     }
   ]
 }
