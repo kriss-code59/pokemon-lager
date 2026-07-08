@@ -1,10 +1,11 @@
 """
 Pokemon-lagerscanner for norske nettbutikker.
 
-Scanner automatisk Ark, Cardcenter og Nille for Pokemon-produkter og lagrer
-resultatet som JSON (docs/data.json) som dashboardet leser. I tillegg lagres
-nye lagerhendelser (restock / nye varer) i docs/changes.json, som brukes av
-"Nytt siden sist"-siden i dashboardet.
+Scanner automatisk Ark, Cardcenter, Nille, PokeShop (poke-shop.no) og
+Outland for Pokemon-produkter og lagrer resultatet som JSON (docs/data.json)
+som dashboardet leser. I tillegg lagres nye lagerhendelser (restock / nye
+varer) i docs/changes.json, som brukes av "Nytt siden sist"-siden i
+dashboardet.
 
 Norli og PokeMadness blokkerer automatiske nettleserbesok (Norli svarer med
 HTTP 403, PokeMadness viser en Cloudflare-utfordring). Vi bygger ikke inn
@@ -54,6 +55,7 @@ class Product:
     price: str
     in_stock: bool | None  # None = vi klarte ikke a avgjore lagerstatus
     url: str
+    store_count: int | None = None  # antall fysiske butikker med varen (kun noen butikker oppgir dette)
 
 
 def classify_stock(text: str) -> bool | None:
@@ -184,6 +186,28 @@ def scrape_cardcenter() -> list[Product]:
 # element" i nettleseren pa siden for a finne riktige klassenavn.
 # ---------------------------------------------------------------------------
 
+# poke-shop.no organiserer Pokemon-produkter i faste underkategorier (samme
+# type inndeling som PokeMadness brukte: boosterbokser, boosterpakker osv.).
+POKE_SHOP_CATEGORIES = [
+    "https://poke-shop.no/butikk/alle-produkter/boosterbokser-1",
+    "https://poke-shop.no/butikk/alle-produkter/boosterpakker-1",
+    "https://poke-shop.no/butikk/alle-produkter/elite-trainer-box",
+    "https://poke-shop.no/butikk/alle-produkter/spesialbokser",
+    "https://poke-shop.no/butikk/alle-produkter/blistere-tins-1",
+    "https://poke-shop.no/butikk/alle-produkter/decks",
+    "https://poke-shop.no/butikk/alle-produkter/mystery-box",
+    "https://poke-shop.no/butikk/alle-produkter/spill",
+]
+
+# Outland sitt Pokemon-univers har over 1000 produkter (klaer, figurer osv.),
+# sa vi filtrerer pa nettsiden til kun TCG-relaterte formater (booster,
+# boks-sett, deck, tin, blister) for a matche det de andre butikkene viser.
+OUTLAND_URL = (
+    "https://www.outland.no/c/brands/pokemon/q/category_uid/MjE2/book_cover/"
+    "Blister,Boks-set,Booster%20Display,Booster%20Pack,Deck%20Boks,"
+    "Theme%20Deck,Tin%20Boks"
+)
+
 PLAYWRIGHT_SITES = [
     {
         "store": "Ark",
@@ -207,6 +231,22 @@ PLAYWRIGHT_SITES = [
         # NETTLAGER" som "pa lager" fordi teksten inneholder delstrengen
         # "PA NETTLAGER".
         "custom_scraper": "nille",
+    },
+    {
+        "store": "PokeShop",
+        "urls": POKE_SHOP_CATEGORIES,
+        # poke-shop.no bruker schema.org-markup (itemprop="availability") for
+        # lagerstatus direkte i kategorikortene -- se scrape_poke_shop().
+        "custom_scraper": "poke_shop",
+    },
+    {
+        "store": "Outland",
+        "urls": [OUTLAND_URL],
+        # Outland viser bade nettlager-status og antall fysiske butikker
+        # direkte i kategorikortene, men siden bruker en virtualisert liste
+        # som laster inn flere produkter etter hvert som man scroller (samme
+        # utfordring som Nille) -- se scrape_outland().
+        "custom_scraper": "outland",
     },
 ]
 
@@ -353,6 +393,187 @@ def scrape_nille(page, site: dict) -> list[Product]:
 
                 collected[href] = Product(
                     store=store, name=name, price=price, in_stock=in_stock, url=href,
+                )
+            except Exception as e:
+                print(f"[{store}] Feil ved lesing av produktkort: {e}")
+
+    stagnant_rounds = 0
+    for _ in range(80):
+        before = len(collected)
+        collect_visible_cards()
+        if expected_total is not None and len(collected) >= expected_total:
+            break
+        page.mouse.wheel(0, 1500)
+        page.wait_for_timeout(1100)
+        stagnant_rounds = stagnant_rounds + 1 if len(collected) == before else 0
+        if stagnant_rounds >= 10:
+            break
+
+    collect_visible_cards()
+
+    if not collected:
+        print(f"[{store}] Fant ingen produktkort pa {url} -- selektorene ma sannsynligvis oppdateres.")
+        diag = diagnose_possible_block(page)
+        if diag:
+            print(f"[{store}] Mulig blokkering oppdaget: {diag}")
+        safe_screenshot(page, store)
+    else:
+        extra = f" av {expected_total} oppgitt" if expected_total else ""
+        print(f"[{store}] Fant {len(collected)} produkter direkte pa kategorisiden{extra}.")
+
+    return list(collected.values())
+
+
+def scrape_poke_shop(page, site: dict) -> list[Product]:
+    """poke-shop.no viser pris og lagerstatus direkte i produktkortene pa
+    hver kategoriside, ved hjelp av standard schema.org-markup
+    (<link itemprop="availability" href=".../InStock" eller ".../SoldOut">).
+    Dette er mer palitelig enn a lete etter norsk tekst, og kategoriene her
+    er sma nok (under 15 produkter hver) til at vi ikke trenger scrolling
+    eller paginering."""
+    store = site["store"]
+    products: dict[str, Product] = {}
+
+    for url in site["urls"]:
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(1500)
+            dismiss_cookie_banner(page)
+        except Exception as e:
+            print(f"[{store}] Kunne ikke laste {url}: {e}")
+            continue
+
+        cards = page.query_selector_all("article.productlist__product")
+        if not cards:
+            diag = diagnose_possible_block(page)
+            if diag:
+                print(f"[{store}] Fant ingen produktkort pa {url}. Mulig blokkering: {diag}")
+            else:
+                print(f"[{store}] Fant ingen produktkort pa {url} -- selektorene ma sjekkes.")
+            safe_screenshot(page, store, "_" + url.rstrip("/").split("/")[-1])
+
+        for card in cards:
+            try:
+                link_el = card.query_selector("a.productlist__product-wrap")
+                href = link_el.get_attribute("href") if link_el else None
+                if href and href.startswith("/"):
+                    from urllib.parse import urljoin
+                    href = urljoin(url, href)
+                if not href or href in products:
+                    continue
+
+                name_el = card.query_selector(".productlist__product__headline")
+                name = name_el.inner_text().strip() if name_el else None
+                if not name:
+                    continue
+
+                price_el = card.query_selector(".price__display")
+                price = (price_el.inner_text().strip() + " kr") if price_el else "?"
+
+                avail_el = card.query_selector('link[itemprop="availability"]')
+                avail = avail_el.get_attribute("href") if avail_el else ""
+                if avail and "InStock" in avail:
+                    in_stock = True
+                elif avail:
+                    in_stock = False
+                else:
+                    in_stock = None
+
+                products[href] = Product(
+                    store=store, name=name, price=price, in_stock=in_stock, url=href,
+                )
+            except Exception as e:
+                print(f"[{store}] Feil ved lesing av produktkort: {e}")
+
+        time.sleep(1)
+
+    print(f"[{store}] Fant {len(products)} produkter totalt.")
+    return list(products.values())
+
+
+def scrape_outland(page, site: dict) -> list[Product]:
+    """Outland viser nettlager-status og antall fysiske butikker direkte i
+    kategorikortene (f.eks. "Pa nettlager" + "Tilgjengelig i 5 butikker"),
+    men bruker en virtualisert liste som laster inn flere produkter etter
+    hvert som man scroller -- samme utfordring som Nille, sa vi bruker
+    samme teknikk (ekte scrollhjul-event + oppgitt totalantall som
+    stoppekriterium)."""
+    store = site["store"]
+    url = site["urls"][0]
+    collected: dict[str, Product] = {}
+
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        page.wait_for_timeout(2500)
+        dismiss_cookie_banner(page)
+        page.wait_for_timeout(1000)
+        page.mouse.move(400, 400)
+    except Exception as e:
+        print(f"[{store}] Kunne ikke laste {url}: {e}")
+        return []
+
+    expected_total = None
+    for _ in range(5):
+        try:
+            body_text = page.inner_text("body")
+            m = re.search(r"(\d+)\s+produkter", body_text)
+            if m:
+                expected_total = int(m.group(1))
+                print(f"[{store}] Siden oppgir {expected_total} produkter totalt.")
+                break
+        except Exception:
+            pass
+        page.wait_for_timeout(500)
+
+    def classify(texts: list) -> bool | None:
+        joined = [t.lower() for t in texts]
+        positive = any(
+            ("nettlager" in t and "ikke" not in t) or ("tilgjengelig i" in t) or t.startswith("kun ")
+            for t in joined
+        )
+        negative = any("ikke pa lager" in t for t in joined)
+        if positive:
+            return True
+        if negative:
+            return False
+        return None
+
+    def store_count_from(texts: list) -> int | None:
+        for t in texts:
+            m = re.search(r"tilgjengelig i (\d+) butikk", t.lower())
+            if m:
+                return int(m.group(1))
+        return None
+
+    def collect_visible_cards():
+        cards = page.query_selector_all('[class*="ProductListItem-root"]')
+        for card in cards:
+            try:
+                link_el = card.query_selector("a[href]")
+                href = link_el.get_attribute("href") if link_el else None
+                if not href:
+                    continue
+                if href.startswith("/"):
+                    from urllib.parse import urljoin
+                    href = urljoin(url, href)
+                if href in collected:
+                    continue
+
+                name_el = card.query_selector('[class*="ProductListItem-title"]')
+                name = name_el.inner_text().strip() if name_el else None
+                if not name:
+                    continue
+
+                price_el = card.query_selector('[class*="ProductListPrice-root"]')
+                price = price_el.inner_text().strip() if price_el else "?"
+
+                stock_els = card.query_selector_all('[class*="StockMessage-status"]')
+                stock_texts = [e.inner_text().strip() for e in stock_els]
+
+                collected[href] = Product(
+                    store=store, name=name, price=price,
+                    in_stock=classify(stock_texts), url=href,
+                    store_count=store_count_from(stock_texts),
                 )
             except Exception as e:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
@@ -633,8 +854,13 @@ def main():
 
         for site in PLAYWRIGHT_SITES:
             print(f"Scanner {site['store']}...")
-            if site.get("custom_scraper") == "nille":
+            custom = site.get("custom_scraper")
+            if custom == "nille":
                 all_products += scrape_nille(page, site)
+            elif custom == "poke_shop":
+                all_products += scrape_poke_shop(page, site)
+            elif custom == "outland":
+                all_products += scrape_outland(page, site)
             else:
                 all_products += scrape_with_browser(page, site)
 
