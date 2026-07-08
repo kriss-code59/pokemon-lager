@@ -1,8 +1,12 @@
 """
 Pokemon-lagerscanner for norske nettbutikker.
 
-Scanner Norli, Ark, Cardcenter og PokeMadness for Pokemon-produkter
+Scanner Ark, Cardcenter, Nille og PokeMadness for Pokemon-produkter
 og lagrer resultatet som JSON (docs/data.json) som dashboardet leser.
+
+Norli er bevisst utelatt: siden bruker aktiv bot-deteksjon, og å omgå
+den ville krevd å skjule at trafikken kommer fra en bot — det bygger vi
+ikke inn her. Sjekk Norli manuelt i din egen nettleser i stedet.
 
 Kjør lokalt:
     pip install -r requirements.txt
@@ -132,15 +136,10 @@ PLAYWRIGHT_SITES = [
         "name_selector": "h2, h3, .product-title, [data-testid='product-title']",
         "price_selector": ".price, [data-testid='price']",
     },
-    {
-        "store": "Norli",
-        "urls": [
-            "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
-        ],
-        "card_selector": "article, li.product, div.product-item, [data-testid='product-card']",
-        "name_selector": "h2, h3, .product-title, [data-testid='product-title']",
-        "price_selector": ".price, [data-testid='price']",
-    },
+    # Norli er tatt ut: nettsiden deres bruker aktiv bot-deteksjon som
+    # blokkerer automatiserte nettlesere. Å omgå det ville krevd bevisst
+    # skjuling av at det er en bot, noe jeg ikke bygger inn her. Sjekk
+    # Norli manuelt i din egen nettleser i stedet.
     {
         "store": "Nille",
         "urls": [
@@ -167,9 +166,17 @@ PLAYWRIGHT_SITES = [
             "https://www.pokemadness.no/124-blisters",
             "https://www.pokemadness.no/125-premium-collection",
         ],
-        "card_selector": "article.product-miniature, .js-product-miniature",
-        "name_selector": ".product-title, h3 a",
+        # PokeMadness (PrestaShop) sine produktsider ender alltid på ".html".
+        # I stedet for å gjette CSS-klassenavn i listevisningen, henter vi
+        # bare produktlenkene her og besøker hver side separat (samme
+        # metode som for Nille) — mer robust mot design-endringer.
+        "card_selector": "a[href$='.html']",
+        "name_selector": None,
         "price_selector": ".price",
+        "visit_product_pages": True,
+        "product_url_pattern": r"/\d+-[^/]+\.html$",  # ekte produktlenker har et tall-ID, f.eks. /1922-navn.html
+        "detail_name_selector": "h1",
+        "detail_price_selector": ".price, [class*='price'], [itemprop='price']",
     },
 ]
 
@@ -306,13 +313,18 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
         if site.get("visit_product_pages"):
             # Denne siden viser ikke pris/status i listevisningen — vi henter
             # kun produktlenkene her, og besøker hver side separat under.
+            url_pattern = site.get("product_url_pattern")
+            compiled_pattern = re.compile(url_pattern) if url_pattern else None
             product_urls = []
             seen = set()
             for card in cards:
                 href = extract_href(card, url)
-                if href and href not in seen:
-                    seen.add(href)
-                    product_urls.append(href)
+                if not href or href in seen:
+                    continue
+                if compiled_pattern and not compiled_pattern.search(href):
+                    continue  # ser ikke ut som en ekte produktlenke (f.eks. blogginnlegg)
+                seen.add(href)
+                product_urls.append(href)
             print(f"[{site['store']}] Fant {len(product_urls)} produktlenker, besøker hver side...")
             results += scrape_product_detail_pages(page, site, product_urls)
             time.sleep(DELAY_BETWEEN_SITES)
