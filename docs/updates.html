@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nyheter - Pokemon Lagerstatus</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="topnav">
+  <a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
+  <div class="navRight">
+    <div class="navlinks">
+      <a href="index.html">Hjem</a>
+      <a href="updates.html" class="active">Nyheter</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus"></button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Nytt siden sist</h1>
+  <p class="sub">Nye produkter og restock oppdaget av boten, nyeste forst. Listen oppdateres automatisk ca. hvert 20. minutt.</p>
+</section>
+
+<div id="resultCount"></div>
+
+<div class="updates-list" id="skeletonList"></div>
+<div class="state-block" id="errorState" style="display:none">
+  <div class="icon">⚠️</div>
+  <div>Kunne ikke laste changes.json. Prov igjen senere.</div>
+  <button id="retryBtn">Prov igjen</button>
+</div>
+<div class="state-block" id="emptyState" style="display:none">
+  <div class="icon">📭</div>
+  <div>Ingen nye hendelser er oppdaget ennaa. Sjekk igjen senere.</div>
+</div>
+<div class="updates-list" id="updatesList"></div>
+
+<footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions.</footer>
+
+<script>
+function renderSkeleton() {
+  const el = document.getElementById('skeletonList');
+  el.innerHTML = '';
+  for (let i = 0; i < 6; i++) {
+    const d = document.createElement('div');
+    d.className = 'skeleton-card';
+    el.appendChild(d);
+  }
+}
+
+function dayLabel(dateStr) {
+  const today = new Date();
+  const d = new Date(dateStr);
+  const todayKey = today.toISOString().slice(0, 10);
+  const yestKey = new Date(today.getTime() - 86400000).toISOString().slice(0, 10);
+  const dKey = dateStr.slice(0, 10);
+  if (dKey === todayKey) return 'I dag';
+  if (dKey === yestKey) return 'I gar';
+  return d.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function timeLabel(dateStr) {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return '';
+  return d.toLocaleTimeString('nb-NO', { hour: '2-digit', minute: '2-digit' });
+}
+
+async function loadChanges() {
+  renderSkeleton();
+  try {
+    const res = await fetch('changes.json?_=' + Date.now());
+    if (!res.ok) throw new Error('bad response');
+    const data = await res.json();
+    const changes = data.changes || [];
+
+    document.getElementById('skeletonList').style.display = 'none';
+    document.getElementById('errorState').style.display = 'none';
+    document.getElementById('resultCount').textContent =
+      changes.length + ' hendelse' + (changes.length === 1 ? '' : 'r') + ' siste 14 dager';
+
+    if (changes.length === 0) {
+      document.getElementById('emptyState').style.display = 'block';
+      return;
+    }
+    document.getElementById('emptyState').style.display = 'none';
+
+    const list = document.getElementById('updatesList');
+    list.innerHTML = '';
+    let lastDay = null;
+
+    changes.forEach(c => {
+      const label = dayLabel(c.detected_at);
+      if (label !== lastDay) {
+        const heading = document.createElement('div');
+        heading.className = 'day-heading';
+        heading.textContent = label;
+        list.appendChild(heading);
+        lastDay = label;
+      }
+
+      const item = document.createElement('div');
+      item.className = 'update-item';
+
+      const timeDiv = document.createElement('div');
+      timeDiv.className = 'update-time';
+      timeDiv.textContent = timeLabel(c.detected_at);
+
+      const bodyDiv = document.createElement('div');
+      bodyDiv.className = 'update-body';
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'title';
+      const link = document.createElement('a');
+      link.href = c.url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = c.name;
+      titleDiv.appendChild(link);
+
+      const metaDiv = document.createElement('div');
+      metaDiv.className = 'update-meta';
+
+      const eventTag = document.createElement('span');
+      eventTag.className = 'event-tag ' + (c.event === 'ny' ? 'ny' : 'restock');
+      eventTag.textContent = c.event === 'ny' ? '🆕 Nytt produkt' : '🔁 Restock';
+
+      const storeSpan = document.createElement('span');
+      storeSpan.textContent = c.store;
+
+      const priceSpan = document.createElement('span');
+      priceSpan.textContent = c.price || '';
+
+      metaDiv.appendChild(eventTag);
+      metaDiv.appendChild(storeSpan);
+      metaDiv.appendChild(priceSpan);
+
+      bodyDiv.appendChild(titleDiv);
+      bodyDiv.appendChild(metaDiv);
+
+      item.appendChild(timeDiv);
+      item.appendChild(bodyDiv);
+      list.appendChild(item);
+    });
+  } catch (e) {
+    document.getElementById('skeletonList').style.display = 'none';
+    document.getElementById('errorState').style.display = 'block';
+  }
+}
+
+document.getElementById('retryBtn').addEventListener('click', () => {
+  document.getElementById('errorState').style.display = 'none';
+  loadChanges();
+});
+
+loadChanges();
+</script>
+</body>
+</html>
