@@ -72,6 +72,7 @@
   }
   .card.instock { border-left: 3px solid var(--green); }
   .card.outstock { border-left: 3px solid var(--red); opacity: 0.6; }
+  .card.unknown { border-left: 3px solid var(--muted); opacity: 0.75; }
   .store {
     font-size: 11px;
     text-transform: uppercase;
@@ -100,6 +101,7 @@
   }
   .status.instock { background: rgba(61,220,132,0.15); color: var(--green); }
   .status.outstock { background: rgba(239,91,91,0.15); color: var(--red); }
+  .status.unknown { background: rgba(139,145,160,0.15); color: var(--muted); }
   #empty { padding: 40px 20px; color: var(--muted); text-align: center; }
   #loading { padding: 40px 20px; color: var(--muted); text-align: center; }
 </style>
@@ -175,11 +177,13 @@ document.getElementById('showAll').onclick = () => {
 function render() {
   let list = allProducts;
   if (storeFilter) list = list.filter(p => p.store === storeFilter);
-  if (onlyInStock) list = list.filter(p => p.in_stock);
+  if (onlyInStock) list = list.filter(p => p.in_stock === true);
 
-  // På lager først, deretter alfabetisk
+  // På lager først, så ukjent, så utsolgt
   list = [...list].sort((a, b) => {
-    if (a.in_stock !== b.in_stock) return a.in_stock ? -1 : 1;
+    const rank = v => v === true ? 0 : (v === null ? 1 : 2);
+    const ra = rank(a.in_stock), rb = rank(b.in_stock);
+    if (ra !== rb) return ra - rb;
     return a.name.localeCompare(b.name);
   });
 
@@ -194,15 +198,17 @@ function render() {
   empty.style.display = 'none';
 
   for (const p of list) {
+    const statusClass = p.in_stock === true ? 'instock' : (p.in_stock === null ? 'unknown' : 'outstock');
+    const statusText = p.in_stock === true ? 'På lager' : (p.in_stock === null ? 'Ukjent' : 'Utsolgt');
     const card = document.createElement('div');
-    card.className = 'card ' + (p.in_stock ? 'instock' : 'outstock');
+    card.className = 'card ' + statusClass;
     card.innerHTML = `
       <div class="store">${p.store}</div>
       <div class="name"><a href="${p.url}" target="_blank" rel="noopener">${p.name}</a></div>
       <div class="row">
         <span class="price">${p.price}</span>
-        <span class="status ${p.in_stock ? 'instock' : 'outstock'}">
-          ${p.in_stock ? 'På lager' : 'Utsolgt'}
+        <span class="status ${statusClass}">
+          ${statusText}
         </span>
       </div>
     `;
