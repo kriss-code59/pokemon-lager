@@ -1,10 +1,16 @@
 """
 Pokemon-lagerscanner for norske nettbutikker.
 
-Scanner Ark, Cardcenter, Nille, Norli og PokeMadness for Pokemon-produkter
-og lagrer resultatet som JSON (docs/data.json) som dashboardet leser.
-I tillegg lagres nye lagerhendelser (restock / nye varer) i docs/changes.json,
-som brukes av "Nytt siden sist"-siden i dashboardet.
+Scanner automatisk Ark, Cardcenter og Nille for Pokemon-produkter og lagrer
+resultatet som JSON (docs/data.json) som dashboardet leser. I tillegg lagres
+nye lagerhendelser (restock / nye varer) i docs/changes.json, som brukes av
+"Nytt siden sist"-siden i dashboardet.
+
+Norli og PokeMadness blokkerer automatiske nettleserbesok (Norli svarer med
+HTTP 403, PokeMadness viser en Cloudflare-utfordring). Vi bygger ikke inn
+teknikker for a omga slike blokkeringer (ingen fingerprint-triksing e.l.),
+sa disse to butikkene vises i stedet som "sjekk manuelt" i dashboardet, med
+en direkte lenke til butikkens Pokemon-side -- se MANUAL_CHECK_STORES.
 
 Kjor lokalt:
     pip install -r requirements.txt
@@ -202,49 +208,22 @@ PLAYWRIGHT_SITES = [
         # "PA NETTLAGER".
         "custom_scraper": "nille",
     },
+]
+
+# Norli og PokeMadness blokkerer automatiserte besok (se docstring ovenfor).
+# Vi lister dem her med en direkte lenke, slik at dashboardet kan vise dem
+# under "Sjekk manuelt" i stedet for a late som om vi har fersk lagerdata
+# fra dem.
+MANUAL_CHECK_STORES = [
     {
         "store": "Norli",
-        "urls": [
-            "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
-        ],
-        # Norli bruker Algolia (InstantSearch) til produktlisten. "ais-Hits-item"
-        # er et stabilt klassenavn fra selve sokebiblioteket (ikke et
-        # generert/hashet klassenavn), sa det er mer robust enn a gjette pa
-        # butikkens egne CSS-klasser.
-        "card_selector": "li.ais-Hits-item a[href]",
-        "name_selector": None,
-        "price_selector": None,
-        "visit_product_pages": True,
-        "detail_name_selector": "h1",
-        "detail_price_selector": "[class*='productPriceDetail']",
-        # Norli skiller mellom nettlager og butikklager (klikk-og-hent). Vi
-        # bruker en egen funksjon (get_norli_online_stock) i stedet for
-        # generisk tekst-sniffing, for a unnga a blande de to.
-        "stock_mode": "norli",
+        "url": "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
+        "reason": "Norli svarer med HTTP 403 Forbidden til automatiske besok.",
     },
     {
         "store": "PokeMadness",
-        "urls": [
-            "https://www.pokemadness.no/34-booster-pakker",
-            "https://www.pokemadness.no/119-booster-boks",
-            "https://www.pokemadness.no/121-elite-trainer-boks",
-            "https://www.pokemadness.no/123-collection-bokser",
-            "https://www.pokemadness.no/124-blisters",
-            "https://www.pokemadness.no/125-premium-collection",
-        ],
-        # PokeMadness (PrestaShop) sine produktsider ender alltid pa ".html".
-        # I stedet for a gjette CSS-klassenavn i listevisningen, henter vi
-        # bare produktlenkene her og besoker hver side separat -- mer robust
-        # mot design-endringer.
-        "card_selector": "a[href$='.html']",
-        "name_selector": None,
-        "price_selector": ".price",
-        "visit_product_pages": True,
-        "product_url_pattern": r"/\d+-[^/]+\.html$",
-        "detail_name_selector": "h1",
-        "detail_price_selector": ".product-prices .price, .current-price .price",
-        "detail_stock_selector": ".product-add-to-cart",
-        "paginate": True,
+        "url": "https://www.pokemadness.no/",
+        "reason": "PokeMadness viser en Cloudflare-utfordring (\"Vent litt...\") til automatiske besok.",
     },
 ]
 
@@ -667,6 +646,7 @@ def main():
     output = {
         "last_updated": datetime.datetime.now().isoformat(timespec="seconds"),
         "products": [asdict(p) for p in all_products],
+        "manual_check_stores": MANUAL_CHECK_STORES,
     }
 
     with open("docs/data.json", "w", encoding="utf-8") as f:
@@ -677,6 +657,8 @@ def main():
           f"{in_stock_count} pa lager. Lagret til docs/data.json")
     print(f"{len(new_events)} nye lagerhendelser siden forrige kjoring "
           f"(totalt {len(changes)} lagret i docs/changes.json).")
+    print(f"{len(MANUAL_CHECK_STORES)} butikker ma sjekkes manuelt (blokkerer automatiske besok): "
+          + ", ".join(s["store"] for s in MANUAL_CHECK_STORES))
 
 
 if __name__ == "__main__":
