@@ -276,9 +276,7 @@ def dismiss_cookie_banner(page, attempts: int = 6, wait_ms: int = 1000):
 def scroll_to_load_lazy_content(page, rounds: int = 8, pause_ms: int = 700):
     """Mange norske nettbutikker laster produkter i puljer nar man scroller.
     Vi bruker et EKTE scrollhjul-event (page.mouse.wheel) i stedet for a
-    endre window.scrollY direkte via JavaScript -- flere sider (bl.a. Nille)
-    lytter spesifikt pa scroll-/wheel-hendelser for a vite nar de skal laste
-    inn flere produkter, og reagerer ikke pa en JS-satt scrollposisjon."""
+    endre window.scrollY direkte via JavaScript."""
     for _ in range(rounds):
         page.mouse.wheel(0, 2200)
         page.wait_for_timeout(pause_ms)
@@ -312,31 +310,36 @@ def scrape_nille(page, site: dict) -> list[Product]:
     """Nille viser faktisk pris, nettlager-status og antall fysiske butikker
     direkte i produktkortene pa kategorisiden -- vi trenger derfor ikke
     besoke hver produktside (mye raskere enn for). Kategorisiden bruker en
-    virtualisert liste som KUN laster inn flere produkter ved et ekte
-    scrollhjul-event (wheel) -- en JS-satt scrollposisjon (window.scrollBy)
-    trigger ikke innlasting av flere produkter, sa vi bruker
-    page.mouse.wheel() her, som sender en ekte wheel-hendelse."""
+    virtualisert liste som laster inn flere produkter etter hvert som man
+    scroller. Vi flytter musepekeren til midten av siden forst, og bruker et
+    ekte scrollhjul-event (page.mouse.wheel) -- en JS-satt scrollposisjon
+    (window.scrollBy) trigger ikke innlasting av flere produkter."""
     store = site["store"]
     url = site["urls"][0]
     collected: dict[str, Product] = {}
 
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=45000)
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(2500)
         dismiss_cookie_banner(page)
+        page.wait_for_timeout(1000)
+        page.mouse.move(400, 400)
     except Exception as e:
         print(f"[{store}] Kunne ikke laste {url}: {e}")
         return []
 
     expected_total = None
-    try:
-        body_text = page.inner_text("body")
-        m = re.search(r"(\d+)\s+produkter", body_text)
-        if m:
-            expected_total = int(m.group(1))
-            print(f"[{store}] Siden oppgir {expected_total} produkter totalt.")
-    except Exception:
-        pass
+    for _ in range(5):
+        try:
+            body_text = page.inner_text("body")
+            m = re.search(r"(\d+)\s+produkter", body_text)
+            if m:
+                expected_total = int(m.group(1))
+                print(f"[{store}] Siden oppgir {expected_total} produkter totalt.")
+                break
+        except Exception:
+            pass
+        page.wait_for_timeout(500)
 
     def collect_visible_cards():
         cards = page.query_selector_all('div[class*="itemCard--"]')
@@ -376,15 +379,15 @@ def scrape_nille(page, site: dict) -> list[Product]:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
 
     stagnant_rounds = 0
-    for _ in range(60):
+    for _ in range(80):
         before = len(collected)
         collect_visible_cards()
         if expected_total is not None and len(collected) >= expected_total:
             break
-        page.mouse.wheel(0, 1800)
-        page.wait_for_timeout(900)
+        page.mouse.wheel(0, 1500)
+        page.wait_for_timeout(1100)
         stagnant_rounds = stagnant_rounds + 1 if len(collected) == before else 0
-        if stagnant_rounds >= 8:
+        if stagnant_rounds >= 10:
             break
 
     collect_visible_cards()
@@ -633,7 +636,19 @@ def main():
     all_products += scrape_cardcenter()
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        # --disable-*-throttling/backgrounding: uten disse behandler Chromium
+        # headless-fanen som en "bakgrunnsfane" og nedprioriterer timere/
+        # scroll-observatorer, som gjor at sider med "last inn ved scroll"
+        # (som Nille) slutter a laste inn flere produkter. Dette er rene
+        # ytelsesflagg og har ingenting med a skjule at det er en bot a gjore.
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-background-timer-throttling",
+                "--disable-backgrounding-occluded-windows",
+                "--disable-renderer-backgrounding",
+            ],
+        )
         context = browser.new_context(user_agent=USER_AGENT, locale="nb-NO")
         page = context.new_page()
 
