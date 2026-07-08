@@ -157,20 +157,76 @@ PLAYWRIGHT_SITES = [
 ]
 
 
+# Vanlige tekster på "godta cookies"-knapper i norske nettbutikker.
+# Vi prøver å klikke disse automatisk, fordi et cookie-banner ofte blokkerer
+# resten av siden fra å laste riktig (og dermed gir 0 treff).
+COOKIE_BUTTON_TEXTS = [
+    "Godta alle", "Godta alle cookies", "Aksepter alle", "Aksepter",
+    "Godta", "OK", "Jeg forstår", "Tillat alle",
+]
+
+
+def dismiss_cookie_banner(page):
+    for text in COOKIE_BUTTON_TEXTS:
+        try:
+            btn = page.get_by_role("button", name=text, exact=False)
+            if btn.count() > 0:
+                btn.first.click(timeout=2000)
+                page.wait_for_timeout(500)
+                return
+        except Exception:
+            continue
+
+
+def scroll_to_load_lazy_content(page, rounds: int = 6, pause_ms: int = 700):
+    """Mange norske nettbutikker laster produkter i puljer når man scroller.
+    Vi scroller stegvis mot bunnen for å tvinge frem alt innholdet."""
+    for _ in range(rounds):
+        page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+        page.wait_for_timeout(pause_ms)
+
+
+import os
+
+
+def safe_screenshot(page, store: str, suffix: str = ""):
+    try:
+        os.makedirs("debug_screenshots", exist_ok=True)
+        safe_name = store.lower().replace(" ", "_") + suffix
+        page.screenshot(path=f"debug_screenshots/{safe_name}.png", full_page=True)
+        print(f"[{store}] Lagret skjermbilde: debug_screenshots/{safe_name}.png")
+    except Exception as e:
+        print(f"[{store}] Klarte ikke ta skjermbilde: {e}")
+
+
 def scrape_with_browser(page, site: dict) -> list[Product]:
     results = []
-    for url in site["urls"]:
+    for i, url in enumerate(site["urls"]):
+        suffix = f"_{i}" if len(site["urls"]) > 1 else ""
         try:
-            page.goto(url, wait_until="networkidle", timeout=30000)
-            page.wait_for_timeout(1500)  # la evt. lazy-loading fullføre
+            # domcontentloaded i stedet for networkidle: mange JS-sider har
+            # konstant bakgrunnstrafikk (analytics o.l.) som gjør at siden
+            # ALDRI blir "helt stille" — networkidle timer da ut selv om
+            # siden i praksis er ferdig lastet for oss.
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(2500)  # gi JS-rammeverket tid til å rendre innhold
+            dismiss_cookie_banner(page)
+            scroll_to_load_lazy_content(page)
+            page.wait_for_timeout(1000)  # la siste batch produkter rendres
         except Exception as e:
-            print(f"[{site['store']}] Kunne ikke laste {url}: {e}")
-            continue
+            print(f"[{site['store']}] Kunne ikke laste {url} ferdig: {e}. "
+                  f"Prøver likevel å lese det som lastet, og tar skjermbilde.")
+            safe_screenshot(page, site["store"], suffix + "_error")
+            # Ikke "continue" — vi prøver å hente ut det som faktisk rakk å laste,
+            # i stedet for å hoppe over siden helt.
 
         cards = page.query_selector_all(site["card_selector"])
         if not cards:
             print(f"[{site['store']}] Fant ingen produktkort på {url} "
-                  f"— selektor '{site['card_selector']}' må sannsynligvis oppdateres.")
+                  f"— selektor '{site['card_selector']}' må sannsynligvis oppdateres. "
+                  f"Åpne siden i nettleseren, høyreklikk på et produkt -> Inspiser, "
+                  f"og oppdater 'card_selector' i scrape.py.")
+            safe_screenshot(page, site["store"], suffix)
 
         for card in cards:
             try:
