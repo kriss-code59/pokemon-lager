@@ -5,127 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pokemon Lagerstatus</title>
 <style>
-  :root {
-    --bg: #0f1115;
-    --card: #171a21;
-    --border: #262b36;
-    --text: #e8e9ec;
-    --muted: #8b91a0;
-    --green: #3ddc84;
-    --red: #ef5b5b;
-    --accent: #ffcb05;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-  }
-  header {
-    padding: 24px 20px 16px;
-    border-bottom: 1px solid var(--border);
-  }
-  h1 {
-    margin: 0 0 4px;
-    font-size: 22px;
-  }
-  #updated {
-    color: var(--muted);
-    font-size: 13px;
-  }
-  .controls {
-    display: flex;
-    gap: 8px;
-    padding: 16px 20px;
-    flex-wrap: wrap;
-  }
-  .controls button {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    cursor: pointer;
-  }
-  .controls button.active {
-    background: var(--accent);
-    color: #111;
-    border-color: var(--accent);
-    font-weight: 600;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 12px;
-    padding: 0 20px 40px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .card.instock { border-left: 3px solid var(--green); }
-  .card.outstock { border-left: 3px solid var(--red); opacity: 0.6; }
-  .card.unknown { border-left: 3px solid var(--muted); opacity: 0.75; }
-  .store {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted);
-  }
-  .name {
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-  .name a { color: var(--text); text-decoration: none; }
-  .name a:hover { text-decoration: underline; }
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-  }
-  .price { color: var(--muted); }
-  .status {
-    font-weight: 600;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 10px;
-  }
-  .status.instock { background: rgba(61,220,132,0.15); color: var(--green); }
-  .status.outstock { background: rgba(239,91,91,0.15); color: var(--red); }
-  .status.unknown { background: rgba(139,145,160,0.15); color: var(--muted); }
-  #empty { padding: 40px 20px; color: var(--muted); text-align: center; }
-  #loading { padding: 40px 20px; color: var(--muted); text-align: center; }
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --border: #262b36;
+  --text: #e8e9ec;
+  --muted: #8b91a0;
+  --green: #3ddc84;
+  --red: #ef5b5b;
+  --accent: #ffcb05;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+#updated {
+  color: var(--muted);
+  font-size: 13px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.controls button {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.controls button.active {
+  background: var(--accent);
+  color: #111;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+#searchBox {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 420px;
+}
+#searchBox:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.sortLabel {
+  color: var(--muted);
+  font-size: 13px;
+}
+#sortSelect {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+#resultCount {
+  color: var(--muted);
+  font-size: 12px;
+  padding: 0 20px 4px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  padding: 0 20px 40px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card.instock { border-left: 3px solid var(--green); }
+.card.outstock { border-left: 3px solid var(--red); opacity: 0.6; }
+.card.unknown { border-left: 3px solid var(--muted); opacity: 0.75; }
+.store {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.name a { color: var(--text); text-decoration: none; }
+.name a:hover { text-decoration: underline; }
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.price { color: var(--muted); }
+.status {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.status.instock { background: rgba(61,220,132,0.15); color: var(--green); }
+.status.outstock { background: rgba(239,91,91,0.15); color: var(--red); }
+.status.unknown { background: rgba(139,145,160,0.15); color: var(--muted); }
+#empty { padding: 40px 20px; color: var(--muted); text-align: center; }
+#loading { padding: 40px 20px; color: var(--muted); text-align: center; }
 </style>
 </head>
 <body>
-  <header>
-    <h1>🔍 Pokemon Lagerstatus</h1>
-    <div id="updated">Laster...</div>
-  </header>
+<header>
+  <h1>🔍 Pokemon Lagerstatus</h1>
+  <div id="updated">Laster...</div>
+</header>
 
-  <div class="controls" id="storeFilters"></div>
-  <div class="controls">
-    <button id="onlyInStock" class="active">Kun på lager</button>
-    <button id="showAll">Vis alle</button>
-  </div>
+<div class="controls">
+  <input type="text" id="searchBox" placeholder="Søk etter produkt (f.eks. 'Booster Box', 'Elite Trainer')...">
+</div>
+<div class="controls" id="storeFilters"></div>
+<div class="controls">
+  <button id="onlyInStock" class="active">Kun på lager</button>
+  <button id="showAll">Vis alle</button>
+  <span class="sortLabel">Sorter etter:</span>
+  <select id="sortSelect">
+    <option value="stock">Lagerstatus (på lager først)</option>
+    <option value="store">Butikk (A-Å)</option>
+    <option value="name">Produktnavn (A-Å)</option>
+    <option value="price">Pris (lav til høy)</option>
+  </select>
+</div>
+<div id="resultCount"></div>
 
-  <div id="loading">Laster data...</div>
-  <div id="empty" style="display:none">Ingen produkter funnet ennå. Kjør scrape.py for å hente data.</div>
-  <div class="grid" id="grid"></div>
+<div id="loading">Laster data...</div>
+<div id="empty" style="display:none">Ingen produkter funnet ennå. Kjør scrape.py for å hente data.</div>
+<div class="grid" id="grid"></div>
 
 <script>
 let allProducts = [];
 let onlyInStock = true;
 let storeFilter = null;
+let searchTerm = '';
+let sortMode = 'stock';
 
 async function loadData() {
   try {
@@ -174,22 +221,69 @@ document.getElementById('showAll').onclick = () => {
   render();
 };
 
+let searchDebounce = null;
+document.getElementById('searchBox').addEventListener('input', (e) => {
+  const value = e.target.value;
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(() => {
+    searchTerm = value.trim().toLowerCase();
+    render();
+  }, 150);
+});
+
+document.getElementById('sortSelect').addEventListener('change', (e) => {
+  sortMode = e.target.value;
+  render();
+});
+
+function parsePrice(price) {
+  if (!price) return Infinity;
+  const cleaned = price.replace(/[^0-9.,]/g, '');
+  if (!cleaned) return Infinity;
+  const normalized = cleaned.replace(/[.,](?=\d{3}(\D|$))/g, '').replace(',', '.');
+  const val = parseFloat(normalized);
+  return isNaN(val) ? Infinity : val;
+}
+
+function sortList(list) {
+  const stockRank = v => v === true ? 0 : (v === null ? 1 : 2);
+  const sorted = [...list];
+  if (sortMode === 'store') {
+    sorted.sort((a, b) => {
+      const s = a.store.localeCompare(b.store);
+      if (s !== 0) return s;
+      const r = stockRank(a.in_stock) - stockRank(b.in_stock);
+      if (r !== 0) return r;
+      return a.name.localeCompare(b.name);
+    });
+  } else if (sortMode === 'name') {
+    sorted.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortMode === 'price') {
+    sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+  } else {
+    sorted.sort((a, b) => {
+      const r = stockRank(a.in_stock) - stockRank(b.in_stock);
+      if (r !== 0) return r;
+      return a.name.localeCompare(b.name);
+    });
+  }
+  return sorted;
+}
+
 function render() {
   let list = allProducts;
   if (storeFilter) list = list.filter(p => p.store === storeFilter);
   if (onlyInStock) list = list.filter(p => p.in_stock === true);
+  if (searchTerm) list = list.filter(p => p.name.toLowerCase().includes(searchTerm));
 
-  // På lager først, så ukjent, så utsolgt
-  list = [...list].sort((a, b) => {
-    const rank = v => v === true ? 0 : (v === null ? 1 : 2);
-    const ra = rank(a.in_stock), rb = rank(b.in_stock);
-    if (ra !== rb) return ra - rb;
-    return a.name.localeCompare(b.name);
-  });
+  list = sortList(list);
 
   const grid = document.getElementById('grid');
   const empty = document.getElementById('empty');
+  const resultCount = document.getElementById('resultCount');
   grid.innerHTML = '';
+
+  resultCount.textContent = list.length + ' produkt' + (list.length === 1 ? '' : 'er') + ' funnet';
 
   if (list.length === 0) {
     empty.style.display = 'block';
