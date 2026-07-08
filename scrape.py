@@ -246,16 +246,22 @@ COOKIE_BUTTON_TEXTS = [
 ]
 
 
-def dismiss_cookie_banner(page):
-    for text in COOKIE_BUTTON_TEXTS:
-        try:
-            btn = page.get_by_role("button", name=text, exact=False)
-            if btn.count() > 0:
-                btn.first.click(timeout=2000)
-                page.wait_for_timeout(500)
-                return
-        except Exception:
-            continue
+def dismiss_cookie_banner(page, attempts: int = 6, wait_ms: int = 1000):
+    """Prøver å klikke bort cookie-banner. Noen bannere (f.eks. Cookiebot,
+    brukt av bl.a. Norli) dukker opp med en liten forsinkelse etter at siden
+    er lastet, så vi prøver flere ganger over noen sekunder i stedet for å
+    gi opp med én gang."""
+    for _ in range(attempts):
+        for text in COOKIE_BUTTON_TEXTS:
+            try:
+                btn = page.get_by_role("button", name=text, exact=False)
+                if btn.count() > 0:
+                    btn.first.click(timeout=2000)
+                    page.wait_for_timeout(500)
+                    return
+            except Exception:
+                continue
+        page.wait_for_timeout(wait_ms)
 
 
 def scroll_to_load_lazy_content(page, rounds: int = 6, pause_ms: int = 700):
@@ -378,6 +384,15 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
                 safe_screenshot(page, site["store"], suffix + "_error")
                 # Ikke "continue" — vi prøver å hente ut det som faktisk rakk å laste,
                 # i stedet for å hoppe over siden helt.
+
+            # Vent aktivt på at produktkort dukker opp (i stedet for å stole
+            # blindt på faste pauser) — mer robust mot trege JS-rammeverk og
+            # sider som Norli, der resultatene lastes inn via Algolia etter
+            # at cookie-banneret er lukket.
+            try:
+                page.wait_for_selector(site["card_selector"], timeout=15000)
+            except Exception:
+                pass
 
             cards = page.query_selector_all(site["card_selector"])
             if not cards:
