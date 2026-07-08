@@ -370,6 +370,17 @@ function render() {
     card.appendChild(storeDiv);
     card.appendChild(nameDiv);
     card.appendChild(rowDiv);
+
+    if (p.store_count) {
+      const storeCountDiv = document.createElement('div');
+      storeCountDiv.className = 'row';
+      const storeCountSpan = document.createElement('span');
+      storeCountSpan.className = 'price';
+      storeCountSpan.textContent = '\ud83c\udfea Tilgjengelig i ' + p.store_count + ' butikk' + (p.store_count === 1 ? '' : 'er');
+      storeCountDiv.appendChild(storeCountSpan);
+      card.appendChild(storeCountDiv);
+    }
+
     grid.appendChild(card);
   }
 }
