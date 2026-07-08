@@ -29,6 +29,14 @@ jobs:
       - name: Kjør scraper
         run: python scrape.py
 
+      - name: Last opp debug-skjermbilder (hvis noen sider feilet)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshots
+          path: debug_screenshots/
+          if-no-files-found: ignore
+
       - name: Commit og push oppdatert data
         run: |
           git config user.name "pokemon-lagerbot"
