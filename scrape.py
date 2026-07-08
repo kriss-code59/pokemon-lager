@@ -28,13 +28,23 @@ USER_AGENT = "PokemonLagerBot/1.0 (privat prosjekt, kontakt: <legg inn din e-pos
 IN_STOCK_WORDS = ["på lager", "på nettlager", "legg i handlekurv", "legg i handlevogn", "kjøp nå"]
 OUT_OF_STOCK_WORDS = ["utsolgt", "ikke på lager", "ikke tilgjengelig", "sold out"]
 
+# Matcher norske prisformater som "249,00 kr", "249 kr", "kr 249,-"
+PRICE_PATTERN = re.compile(r"(\d[\d\s]*[.,]?\d*)\s*,?-?\s*kr\b|kr\s*(\d[\d\s]*[.,]?\d*)", re.IGNORECASE)
+
+
+def extract_price_fallback(text: str) -> str | None:
+    match = PRICE_PATTERN.search(text)
+    if match:
+        return match.group(0).strip()
+    return None
+
 
 @dataclass
 class Product:
     store: str
     name: str
     price: str
-    in_stock: bool
+    in_stock: bool | None  # None = vi klarte ikke å avgjøre lagerstatus
     url: str
 
 
@@ -136,9 +146,16 @@ PLAYWRIGHT_SITES = [
         "urls": [
             "https://www.nille.no/category/pokemon/",
         ],
-        "card_selector": "article, li.product, div.product-item, [data-testid='product-card'], a[href*='/produkter/']",
-        "name_selector": "h2, h3, .product-title, [data-testid='product-title']",
-        "price_selector": ".price, [data-testid='price']",
+        # Nille sin kategoriside viser ikke pris/lagerstatus i selve
+        # produktkortene — bare bilde + navn. Vi henter derfor kun
+        # produktlenker her, og besøker hver produktside separat
+        # (se visit_product_pages under) for å finne ekte pris og status.
+        "card_selector": "a[href*='/produkter/']",
+        "name_selector": None,  # brukes ikke når visit_product_pages er på
+        "price_selector": ".price, [class*='price'], [data-testid='price']",
+        "visit_product_pages": True,
+        "detail_name_selector": "h1",
+        "detail_price_selector": ".price, [class*='price'], [data-testid='price']",
     },
     {
         "store": "PokeMadness",
@@ -199,6 +216,63 @@ def safe_screenshot(page, store: str, suffix: str = ""):
         print(f"[{store}] Klarte ikke ta skjermbilde: {e}")
 
 
+def extract_href(card, page_url: str) -> str | None:
+    """Henter href enten fra selve kortet (hvis kortet er en <a>-tag) eller
+    fra en lenke inni kortet. Den forrige versjonen sjekket kun inni kortet,
+    som ga feil resultat når selve produktkortet var selve <a>-taggen."""
+    href = card.get_attribute("href")
+    if not href:
+        link_el = card.query_selector("a")
+        href = link_el.get_attribute("href") if link_el else None
+    if href and href.startswith("/"):
+        from urllib.parse import urljoin
+        href = urljoin(page_url, href)
+    return href
+
+
+def scrape_product_detail_pages(page, site: dict, product_urls: list[str]) -> list[Product]:
+    """For sider der listevisningen ikke viser pris/lagerstatus pålitelig:
+    besøk hver produktside for seg og les det derfra (tregere, men riktig)."""
+    results = []
+    for url in product_urls:
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(1500)
+            dismiss_cookie_banner(page)
+        except Exception as e:
+            print(f"[{site['store']}] Kunne ikke laste produktside {url}: {e}")
+            safe_screenshot(page, site["store"], "_produktside_feil")
+            continue
+
+        try:
+            name_el = page.query_selector(site["detail_name_selector"])
+            name = name_el.inner_text().strip() if name_el else None
+            if not name:
+                continue
+
+            price_el = page.query_selector(site["detail_price_selector"])
+            price = price_el.inner_text().strip() if price_el else None
+            full_text = page.inner_text("body")
+            if not price:
+                price = extract_price_fallback(full_text) or "?"
+            in_stock = classify_stock(full_text)
+
+            results.append(
+                Product(
+                    store=site["store"],
+                    name=name,
+                    price=price,
+                    in_stock=in_stock,
+                    url=url,
+                )
+            )
+        except Exception as e:
+            print(f"[{site['store']}] Feil ved lesing av produktside {url}: {e}")
+
+        time.sleep(1.5)
+    return results
+
+
 def scrape_with_browser(page, site: dict) -> list[Product]:
     results = []
     for i, url in enumerate(site["urls"]):
@@ -227,6 +301,22 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
                   f"Åpne siden i nettleseren, høyreklikk på et produkt -> Inspiser, "
                   f"og oppdater 'card_selector' i scrape.py.")
             safe_screenshot(page, site["store"], suffix)
+            continue
+
+        if site.get("visit_product_pages"):
+            # Denne siden viser ikke pris/status i listevisningen — vi henter
+            # kun produktlenkene her, og besøker hver side separat under.
+            product_urls = []
+            seen = set()
+            for card in cards:
+                href = extract_href(card, url)
+                if href and href not in seen:
+                    seen.add(href)
+                    product_urls.append(href)
+            print(f"[{site['store']}] Fant {len(product_urls)} produktlenker, besøker hver side...")
+            results += scrape_product_detail_pages(page, site, product_urls)
+            time.sleep(DELAY_BETWEEN_SITES)
+            continue
 
         for card in cards:
             try:
@@ -236,18 +326,14 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
                     continue
 
                 price_el = card.query_selector(site["price_selector"])
-                price = price_el.inner_text().strip() if price_el else "?"
+                price = price_el.inner_text().strip() if price_el else None
 
-                link_el = card.query_selector("a")
-                href = link_el.get_attribute("href") if link_el else None
-                if href and href.startswith("/"):
-                    from urllib.parse import urljoin
-                    href = urljoin(url, href)
+                href = extract_href(card, url)
 
                 full_text = card.inner_text()
+                if not price:
+                    price = extract_price_fallback(full_text) or "?"
                 in_stock = classify_stock(full_text)
-                if in_stock is None:
-                    in_stock = False  # usikker -> antar utsolgt for å unngå falske positiver
 
                 results.append(
                     Product(
