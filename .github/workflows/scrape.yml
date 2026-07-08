@@ -1,0 +1,38 @@
+name: Scan Pokemon-lager
+
+on:
+  schedule:
+    # Kjører hvert 20. minutt. Juster gjerne (vær snill mot butikkenes servere).
+    - cron: "*/20 * * * *"
+  workflow_dispatch: {}   # lar deg trykke "Run workflow" manuelt på GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer avhengigheter
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Kjør scraper
+        run: python scrape.py
+
+      - name: Commit og push oppdatert data
+        run: |
+          git config user.name "pokemon-lagerbot"
+          git config user.email "actions@github.com"
+          git add docs/data.json
+          git diff --quiet --cached || git commit -m "Oppdater lagerstatus [automatisk]"
+          git push
