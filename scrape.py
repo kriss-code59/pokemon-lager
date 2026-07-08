@@ -199,8 +199,7 @@ PLAYWRIGHT_SITES = [
         # stedet for a besoke hver produktside. Tidligere ble lagerstatus
         # lest fra hele produktsideteksten, som feilaktig tolket "IKKE PA
         # NETTLAGER" som "pa lager" fordi teksten inneholder delstrengen
-        # "PA NETTLAGER". I tillegg fanget den gamle scrollingen bare opp
-        # under halvparten av produktene pga. en virtualisert liste.
+        # "PA NETTLAGER".
         "custom_scraper": "nille",
     },
     {
@@ -274,11 +273,14 @@ def dismiss_cookie_banner(page, attempts: int = 6, wait_ms: int = 1000):
         page.wait_for_timeout(wait_ms)
 
 
-def scroll_to_load_lazy_content(page, rounds: int = 6, pause_ms: int = 700):
+def scroll_to_load_lazy_content(page, rounds: int = 8, pause_ms: int = 700):
     """Mange norske nettbutikker laster produkter i puljer nar man scroller.
-    Vi scroller stegvis mot bunnen for a tvinge frem alt innholdet."""
+    Vi bruker et EKTE scrollhjul-event (page.mouse.wheel) i stedet for a
+    endre window.scrollY direkte via JavaScript -- flere sider (bl.a. Nille)
+    lytter spesifikt pa scroll-/wheel-hendelser for a vite nar de skal laste
+    inn flere produkter, og reagerer ikke pa en JS-satt scrollposisjon."""
     for _ in range(rounds):
-        page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+        page.mouse.wheel(0, 2200)
         page.wait_for_timeout(pause_ms)
 
 
@@ -310,12 +312,10 @@ def scrape_nille(page, site: dict) -> list[Product]:
     """Nille viser faktisk pris, nettlager-status og antall fysiske butikker
     direkte i produktkortene pa kategorisiden -- vi trenger derfor ikke
     besoke hver produktside (mye raskere enn for). Kategorisiden bruker en
-    virtualisert liste der bare et fatall kort finnes i DOM-en om gangen, sa
-    vi samler opp kort fortlopende mens vi scroller, i stedet for a lese alt
-    til slutt. Vi leser ogsa det oppgitte totalantallet produkter ("X
-    produkter") fra siden, og fortsetter a scrolle helt til vi har samlet
-    like mange -- ikke bare til noen fa runder uten nye treff (headless
-    nettleser i CI kan trenge lengre tid per steg enn en vanlig nettleser)."""
+    virtualisert liste som KUN laster inn flere produkter ved et ekte
+    scrollhjul-event (wheel) -- en JS-satt scrollposisjon (window.scrollBy)
+    trigger ikke innlasting av flere produkter, sa vi bruker
+    page.mouse.wheel() her, som sender en ekte wheel-hendelse."""
     store = site["store"]
     url = site["urls"][0]
     collected: dict[str, Product] = {}
@@ -381,8 +381,8 @@ def scrape_nille(page, site: dict) -> list[Product]:
         collect_visible_cards()
         if expected_total is not None and len(collected) >= expected_total:
             break
-        page.evaluate("window.scrollBy(0, window.innerHeight * 0.85)")
-        page.wait_for_timeout(1000)
+        page.mouse.wheel(0, 1800)
+        page.wait_for_timeout(900)
         stagnant_rounds = stagnant_rounds + 1 if len(collected) == before else 0
         if stagnant_rounds >= 8:
             break
