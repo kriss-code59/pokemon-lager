@@ -4,7 +4,7 @@ on:
   schedule:
     # Kjører hvert 20. minutt. Juster gjerne (vær snill mot butikkenes servere).
     - cron: "*/20 * * * *"
-  workflow_dispatch: {}   # lar deg trykke "Run workflow" manuelt på GitHub
+  workflow_dispatch: {}  # lar deg trykke "Run workflow" manuelt på GitHub
 
 permissions:
   contents: write
@@ -41,6 +41,6 @@ jobs:
         run: |
           git config user.name "pokemon-lagerbot"
           git config user.email "actions@github.com"
-          git add docs/data.json
+          git add docs/data.json docs/changes.json
           git diff --quiet --cached || git commit -m "Oppdater lagerstatus [automatisk]"
           git push
