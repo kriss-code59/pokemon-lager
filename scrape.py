@@ -1,12 +1,8 @@
 """
 Pokemon-lagerscanner for norske nettbutikker.
 
-Scanner Ark, Cardcenter, Nille og PokeMadness for Pokemon-produkter
+Scanner Ark, Cardcenter, Nille, Norli og PokeMadness for Pokemon-produkter
 og lagrer resultatet som JSON (docs/data.json) som dashboardet leser.
-
-Norli er bevisst utelatt: siden bruker aktiv bot-deteksjon, og å omgå
-den ville krevd å skjule at trafikken kommer fra en bot — det bygger vi
-ikke inn her. Sjekk Norli manuelt i din egen nettleser i stedet.
 
 Kjør lokalt:
     pip install -r requirements.txt
@@ -68,6 +64,39 @@ def classify_stock(text: str) -> bool | None:
     return None
 
 
+def get_norli_online_stock(page) -> bool | None:
+    """Norli skiller mellom nettlager og lager i fysiske butikker (klikk-og-hent).
+    Vi vil kun vite om varen kan kjøpes på nett akkurat nå, så vi leter
+    spesifikt etter nettlager-teksten ("På lager" / "Ikke på lager") og
+    ignorerer klikk-og-hent-status for fysiske butikker (som har klassenavn
+    som inneholder "clickPickup")."""
+    try:
+        text = page.evaluate(
+            """
+            () => {
+                const els = [...document.querySelectorAll('b, strong, span, div')];
+                for (const el of els) {
+                    if (el.children.length > 0) continue;
+                    const t = el.textContent.trim();
+                    if ((t === 'På lager' || t === 'Ikke på lager') && !el.className.includes('clickPickup')) {
+                        return t;
+                    }
+                }
+                return null;
+            }
+            """
+        )
+    except Exception:
+        return None
+    if text == "På lager":
+        return True
+    if text == "Ikke på lager":
+        return False
+    # Andre statuser (f.eks. "Forventes i salg <dato>") betyr at varen ikke
+    # kan kjøpes på nett akkurat nå.
+    return False
+
+
 # ---------------------------------------------------------------------------
 # CARDCENTER.NO — Shopify har et offentlig produkt-API, mye mer robust enn
 # å scrape HTML. Vi bruker det direkte i stedet for Playwright her.
@@ -116,9 +145,9 @@ def scrape_cardcenter() -> list[Product]:
 
 
 # ---------------------------------------------------------------------------
-# Generiske sider som trenger en ekte nettleser (Playwright): Ark, Norli,
-# PokeMadness. Vi definerer per side hvilken URL og hvilke CSS-selektorer
-# som brukes for å finne produktkort.
+# Generiske sider som trenger en ekte nettleser (Playwright): Ark, Nille,
+# Norli og PokeMadness. Vi definerer per side hvilken URL og hvilke
+# CSS-selektorer som brukes for å finne produktkort.
 #
 # VIKTIG: Nettbutikker endrer ofte HTML-strukturen sin. Selektorene under er
 # basert på struktur observert i juli 2026. Hvis boten slutter å finne
@@ -136,10 +165,6 @@ PLAYWRIGHT_SITES = [
         "name_selector": "h2, h3, .product-title, [data-testid='product-title']",
         "price_selector": ".price, [data-testid='price']",
     },
-    # Norli er tatt ut: nettsiden deres bruker aktiv bot-deteksjon som
-    # blokkerer automatiserte nettlesere. Å omgå det ville krevd bevisst
-    # skjuling av at det er en bot, noe jeg ikke bygger inn her. Sjekk
-    # Norli manuelt i din egen nettleser i stedet.
     {
         "store": "Nille",
         "urls": [
@@ -155,6 +180,26 @@ PLAYWRIGHT_SITES = [
         "visit_product_pages": True,
         "detail_name_selector": "h1",
         "detail_price_selector": ".price, [class*='price'], [data-testid='price']",
+    },
+    {
+        "store": "Norli",
+        "urls": [
+            "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
+        ],
+        # Norli bruker Algolia (InstantSearch) til produktlisten. "ais-Hits-item"
+        # er et stabilt klassenavn fra selve søkebiblioteket (ikke et
+        # generert/hashet klassenavn), så det er mer robust enn å gjette på
+        # butikkens egne CSS-klasser.
+        "card_selector": "li.ais-Hits-item a[href]",
+        "name_selector": None,
+        "price_selector": None,
+        "visit_product_pages": True,
+        "detail_name_selector": "h1",
+        "detail_price_selector": "[class*='productPriceDetail']",
+        # Norli skiller mellom nettlager og butikklager (klikk-og-hent). Vi
+        # bruker en egen funksjon (get_norli_online_stock) i stedet for
+        # generisk tekst-sniffing, for å unngå å blande de to.
+        "stock_mode": "norli",
     },
     {
         "store": "PokeMadness",
@@ -176,10 +221,21 @@ PLAYWRIGHT_SITES = [
         "visit_product_pages": True,
         "product_url_pattern": r"/\d+-[^/]+\.html$",  # ekte produktlenker har et tall-ID, f.eks. /1922-navn.html
         "detail_name_selector": "h1",
-        "detail_price_selector": ".price, [class*='price'], [itemprop='price']",
+        # VIKTIG FIKS: den forrige selektoren (".price, [class*='price']")
+        # traff en tom, skjult div ("search_results...") FØR selve prisen i
+        # DOM-rekkefølgen, så pris ble ofte lest som tom. Vi avgrenser derfor
+        # til prisblokken i selve produktinfoen.
+        "detail_price_selector": ".product-prices .price, .current-price .price",
+        # VIKTIG FIKS: lagerstatus ble tidligere lest fra HELE sideteksten,
+        # som også viser "Utsolgt" for anbefalte/relaterte produkter lenger
+        # ned på siden — det ga falske "utsolgt"-treff for varer som faktisk
+        # var på lager. Vi avgrenser derfor til kjøp-knapp-blokken, som viser
+        # nøyaktig "På lager <antall> Produkter" eller "Utsolgt" for DENNE varen.
+        "detail_stock_selector": ".product-add-to-cart",
+        # Kategoriene kan i prinsippet ha flere sider med resultater.
+        "paginate": True,
     },
 ]
-
 
 # Vanlige tekster på "godta cookies"-knapper i norske nettbutikker.
 # Vi prøver å klikke disse automatisk, fordi et cookie-banner ofte blokkerer
@@ -262,7 +318,17 @@ def scrape_product_detail_pages(page, site: dict, product_urls: list[str]) -> li
             full_text = page.inner_text("body")
             if not price:
                 price = extract_price_fallback(full_text) or "?"
-            in_stock = classify_stock(full_text)
+
+            if site.get("stock_mode") == "norli":
+                in_stock = get_norli_online_stock(page)
+            else:
+                stock_selector = site.get("detail_stock_selector")
+                if stock_selector:
+                    stock_el = page.query_selector(stock_selector)
+                    stock_text = stock_el.inner_text() if stock_el else full_text
+                else:
+                    stock_text = full_text
+                in_stock = classify_stock(stock_text)
 
             results.append(
                 Product(
@@ -280,84 +346,101 @@ def scrape_product_detail_pages(page, site: dict, product_urls: list[str]) -> li
     return results
 
 
+MAX_PAGES_PER_CATEGORY = 15
+
+
 def scrape_with_browser(page, site: dict) -> list[Product]:
     results = []
-    for i, url in enumerate(site["urls"]):
+    for i, base_url in enumerate(site["urls"]):
         suffix = f"_{i}" if len(site["urls"]) > 1 else ""
-        try:
-            # domcontentloaded i stedet for networkidle: mange JS-sider har
-            # konstant bakgrunnstrafikk (analytics o.l.) som gjør at siden
-            # ALDRI blir "helt stille" — networkidle timer da ut selv om
-            # siden i praksis er ferdig lastet for oss.
-            page.goto(url, wait_until="domcontentloaded", timeout=45000)
-            page.wait_for_timeout(2500)  # gi JS-rammeverket tid til å rendre innhold
-            dismiss_cookie_banner(page)
-            scroll_to_load_lazy_content(page)
-            page.wait_for_timeout(1000)  # la siste batch produkter rendres
-        except Exception as e:
-            print(f"[{site['store']}] Kunne ikke laste {url} ferdig: {e}. "
-                  f"Prøver likevel å lese det som lastet, og tar skjermbilde.")
-            safe_screenshot(page, site["store"], suffix + "_error")
-            # Ikke "continue" — vi prøver å hente ut det som faktisk rakk å laste,
-            # i stedet for å hoppe over siden helt.
 
-        cards = page.query_selector_all(site["card_selector"])
-        if not cards:
-            print(f"[{site['store']}] Fant ingen produktkort på {url} "
-                  f"— selektor '{site['card_selector']}' må sannsynligvis oppdateres. "
-                  f"Åpne siden i nettleseren, høyreklikk på et produkt -> Inspiser, "
-                  f"og oppdater 'card_selector' i scrape.py.")
-            safe_screenshot(page, site["store"], suffix)
-            continue
+        page_urls_to_try = [base_url]
+        if site.get("paginate"):
+            page_urls_to_try += [f"{base_url}?page={n}" for n in range(2, MAX_PAGES_PER_CATEGORY + 1)]
 
-        if site.get("visit_product_pages"):
-            # Denne siden viser ikke pris/status i listevisningen — vi henter
-            # kun produktlenkene her, og besøker hver side separat under.
-            url_pattern = site.get("product_url_pattern")
-            compiled_pattern = re.compile(url_pattern) if url_pattern else None
-            product_urls = []
-            seen = set()
-            for card in cards:
-                href = extract_href(card, url)
-                if not href or href in seen:
-                    continue
-                if compiled_pattern and not compiled_pattern.search(href):
-                    continue  # ser ikke ut som en ekte produktlenke (f.eks. blogginnlegg)
-                seen.add(href)
-                product_urls.append(href)
-            print(f"[{site['store']}] Fant {len(product_urls)} produktlenker, besøker hver side...")
-            results += scrape_product_detail_pages(page, site, product_urls)
-            time.sleep(DELAY_BETWEEN_SITES)
-            continue
+        collected_product_urls = []
+        seen = set()
 
-        for card in cards:
+        for page_num, url in enumerate(page_urls_to_try, start=1):
             try:
-                name_el = card.query_selector(site["name_selector"])
-                name = name_el.inner_text().strip() if name_el else None
-                if not name:
-                    continue
-
-                price_el = card.query_selector(site["price_selector"])
-                price = price_el.inner_text().strip() if price_el else None
-
-                href = extract_href(card, url)
-
-                full_text = card.inner_text()
-                if not price:
-                    price = extract_price_fallback(full_text) or "?"
-                in_stock = classify_stock(full_text)
-
-                results.append(
-                    Product(
-                        store=site["store"],
-                        name=name,
-                        price=price,
-                        in_stock=in_stock,
-                        url=href or url,
-                    )
-                )
+                # domcontentloaded i stedet for networkidle: mange JS-sider har
+                # konstant bakgrunnstrafikk (analytics o.l.) som gjør at siden
+                # ALDRI blir "helt stille" — networkidle timer da ut selv om
+                # siden i praksis er ferdig lastet for oss.
+                page.goto(url, wait_until="domcontentloaded", timeout=45000)
+                page.wait_for_timeout(2500)  # gi JS-rammeverket tid til å rendre innhold
+                dismiss_cookie_banner(page)
+                scroll_to_load_lazy_content(page)
+                page.wait_for_timeout(1000)  # la siste batch produkter rendres
             except Exception as e:
-                print(f"[{site['store']}] Feil ved parsing av produktkort: {e}")
+                print(f"[{site['store']}] Kunne ikke laste {url} ferdig: {e}. "
+                      f"Prøver likevel å lese det som lastet, og tar skjermbilde.")
+                safe_screenshot(page, site["store"], suffix + "_error")
+                # Ikke "continue" — vi prøver å hente ut det som faktisk rakk å laste,
+                # i stedet for å hoppe over siden helt.
+
+            cards = page.query_selector_all(site["card_selector"])
+            if not cards:
+                if page_num == 1:
+                    print(f"[{site['store']}] Fant ingen produktkort på {url} "
+                          f"— selektor '{site['card_selector']}' må sannsynligvis oppdateres. "
+                          f"Åpne siden i nettleseren, høyreklikk på et produkt -> Inspiser, "
+                          f"og oppdater 'card_selector' i scrape.py.")
+                    safe_screenshot(page, site["store"], suffix)
+                break  # ingen (flere) produkter på denne siden -> stopp paginering
+
+            if site.get("visit_product_pages"):
+                # Denne siden viser ikke pris/status i listevisningen — vi henter
+                # kun produktlenkene her, og besøker hver side separat under.
+                url_pattern = site.get("product_url_pattern")
+                compiled_pattern = re.compile(url_pattern) if url_pattern else None
+                new_links_found = 0
+                for card in cards:
+                    href = extract_href(card, url)
+                    if not href or href in seen:
+                        continue
+                    if compiled_pattern and not compiled_pattern.search(href):
+                        continue  # ser ikke ut som en ekte produktlenke (f.eks. blogginnlegg)
+                    seen.add(href)
+                    collected_product_urls.append(href)
+                    new_links_found += 1
+
+                if not site.get("paginate") or new_links_found == 0:
+                    break
+            else:
+                for card in cards:
+                    try:
+                        name_el = card.query_selector(site["name_selector"])
+                        name = name_el.inner_text().strip() if name_el else None
+                        if not name:
+                            continue
+
+                        price_el = card.query_selector(site["price_selector"])
+                        price = price_el.inner_text().strip() if price_el else None
+
+                        href = extract_href(card, url)
+
+                        full_text = card.inner_text()
+                        if not price:
+                            price = extract_price_fallback(full_text) or "?"
+                        in_stock = classify_stock(full_text)
+
+                        results.append(
+                            Product(
+                                store=site["store"],
+                                name=name,
+                                price=price,
+                                in_stock=in_stock,
+                                url=href or url,
+                            )
+                        )
+                    except Exception as e:
+                        print(f"[{site['store']}] Feil ved parsing av produktkort: {e}")
+                break  # denne butikk-typen har ingen paginering foreløpig
+
+        if site.get("visit_product_pages") and collected_product_urls:
+            print(f"[{site['store']}] Fant {len(collected_product_urls)} produktlenker, besøker hver side...")
+            results += scrape_product_detail_pages(page, site, collected_product_urls)
 
         time.sleep(DELAY_BETWEEN_SITES)
     return results
