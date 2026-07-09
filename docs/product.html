@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produkt - Pokemon Lagerstatus</title>
+<meta name="description" id="metaDescription" content="Sammenlign pris og lagerstatus for et Pokemon TCG-produkt hos norske nettbutikker.">
+<meta name="theme-color" content="#ffcb05">
+<meta property="og:type" content="product">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex">
 <link rel="stylesheet" href="style.css">
 <script src="theme.js"></script>
 </head>
@@ -142,6 +147,28 @@ async function loadProduct() {
 
     document.title = anchor.name + ' - Pokemon Lagerstatus';
     document.getElementById('productName').textContent = anchor.name;
+
+    document.getElementById('metaDescription').setAttribute('content',
+      anchor.name + ' - sammenlign pris og lagerstatus hos norske nettbutikker.');
+
+    const ldJson = document.createElement('script');
+    ldJson.type = 'application/ld+json';
+    ldJson.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: anchor.name,
+      offers: group.map(function (p) {
+        return {
+          '@type': 'Offer',
+          price: (p.price || '').replace(/[^0-9.,]/g, '').replace(',', '.'),
+          priceCurrency: 'NOK',
+          availability: p.in_stock === true ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+          url: p.url,
+          seller: { '@type': 'Organization', name: p.store }
+        };
+      })
+    });
+    document.head.appendChild(ldJson);
 
     var storeCount = group.length;
     document.getElementById('productMeta').textContent =
