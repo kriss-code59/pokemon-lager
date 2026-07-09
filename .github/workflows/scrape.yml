@@ -2,8 +2,8 @@ name: Scan Pokemon-lager
 
 on:
   schedule:
-    # Kjører hvert 20. minutt, men ikke mellom 22:00-04:00 norsk tid
-    - cron: "*/20 * * * *"
+    # Kjører hvert 30. minutt, men ikke mellom 22:00-04:00 norsk tid
+    - cron: "*/30 * * * *"
   workflow_dispatch:  # lar deg trykke "Run workflow" manuelt på GitHub
     inputs:
       send_test_notification:

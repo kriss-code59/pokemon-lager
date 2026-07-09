@@ -11,7 +11,8 @@ resultatet i et enkelt dashboard.
 3. Gå til **Settings → Actions → General** og sørg for at "Read and write permissions"
    er slått på for GITHUB_TOKEN (trengs for at boten kan committe oppdatert data).
 4. Det er det! Workflowen (`.github/workflows/scrape.yml`) kjører automatisk
-   hvert 20. minutt og oppdaterer `docs/data.json`, som dashboardet leser.
+   hvert 30. minutt (unntatt 22:00-04:00 norsk tid) og oppdaterer
+   `docs/data.json`, som dashboardet leser.
 
 Du kan også trigge en kjøring manuelt: gå til **Actions**-fanen → "Scan Pokemon-lager" → "Run workflow".
 
