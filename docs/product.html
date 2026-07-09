@@ -35,6 +35,7 @@
 <div class="product-hero-info">
 <h1 id="productName">-</h1>
 <div class="product-hero-meta" id="productMeta"></div>
+<button class="fav-btn" id="favBtn"><span class="star">☆</span> <span id="favBtnLabel">Legg til i favoritter</span></button>
 <div class="cheapest-box" id="cheapestBox" style="display:none">
 <div class="cheapest-label">Billigst pa lager na</div>
 <div class="cheapest-value" id="cheapestValue">-</div>
@@ -173,6 +174,21 @@ async function loadProduct() {
     var storeCount = group.length;
     document.getElementById('productMeta').textContent =
       storeCount + ' butikk' + (storeCount === 1 ? '' : 'er') + ' overvaket for dette produktet';
+
+    const favorites = new Set(JSON.parse(localStorage.getItem('favoriteProducts') || '[]'));
+    const favBtn = document.getElementById('favBtn');
+    function refreshFavBtn() {
+      const isFav = favorites.has(anchor.url);
+      favBtn.classList.toggle('active', isFav);
+      favBtn.querySelector('.star').textContent = isFav ? '\u2605' : '\u2606';
+      document.getElementById('favBtnLabel').textContent = isFav ? 'Fjernet fra favoritter' : 'Legg til i favoritter';
+    }
+    refreshFavBtn();
+    favBtn.addEventListener('click', () => {
+      if (favorites.has(anchor.url)) favorites.delete(anchor.url); else favorites.add(anchor.url);
+      localStorage.setItem('favoriteProducts', JSON.stringify([...favorites]));
+      refreshFavBtn();
+    });
 
     var inStockGroup = group.filter(function (p) { return p.in_stock === true; });
     if (inStockGroup.length > 0) {
