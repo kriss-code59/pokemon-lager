@@ -577,7 +577,10 @@ function render() {
 
 setupChips();
 loadData();
-setInterval(loadData, 20 * 60 * 1000);
+setInterval(function () {
+  if (isNorwegianQuietHours()) return;
+  loadData();
+}, 20 * 60 * 1000);
 </script>
 </body>
 </html>

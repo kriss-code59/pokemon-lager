@@ -15,6 +15,27 @@ resultatet i et enkelt dashboard.
 
 Du kan også trigge en kjøring manuelt: gå til **Actions**-fanen → "Scan Pokemon-lager" → "Run workflow".
 
+## Push-varsler (ntfy)
+
+Boten sender et push-varsel via [ntfy.sh](https://ntfy.sh) hver gang den finner
+et nytt produkt eller en restock. Standard-topic er `pokemon-lager-sk82sw9vyl`
+(generert tilfeldig) — installer ntfy-appen (iOS/Android/nettleser) og
+abonner på det topic-navnet, så får du varsler med en gang.
+
+**Merk:** ntfy-topics er offentlige med mindre du selv setter opp autentisering
+— alle som gjetter/finner topic-navnet kan abonnere på det samme varselet.
+Standard-topic-navnet ligger i `.github/workflows/scrape.yml`, som er
+offentlig synlig i repoet. Vil du ha et privat topic-navn, sett en
+repo-secret kalt `NTFY_TOPIC` (Settings → Secrets and variables → Actions)
+med ditt eget, hemmelige topic-navn — den overstyrer standardverdien
+automatisk uten at du trenger å endre kode.
+
+## Nattemodus (22:00–04:00)
+
+Boten skanner ikke, og dashboardet oppdaterer seg ikke automatisk, mellom
+22:00 og 04:00 norsk tid (Europe/Oslo, håndterer sommer-/vintertid riktig).
+Dette gjelder både GitHub Actions-workflowen og siden i nettleseren.
+
 ## Kjøre lokalt (for testing)
 
 ```bash

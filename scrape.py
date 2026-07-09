@@ -837,6 +837,47 @@ def update_changes_log(new_events: list, max_entries: int = 300, max_age_days: i
     return filtered
 
 
+def send_ntfy_notification(events: list) -> None:
+    """Sender push-varsel via ntfy.sh nar nye lagerhendelser (restock / nye
+    produkter) er oppdaget. Krever miljovariabelen NTFY_TOPIC (satt i
+    .github/workflows/scrape.yml). Gjor ingenting hvis den mangler eller det
+    ikke er noen nye hendelser denne kjoringen."""
+    topic = os.environ.get("NTFY_TOPIC")
+    if not topic or not events:
+        return
+
+    lines = []
+    for e in events[:10]:
+        tag = "NY" if e["event"] == "ny" else "RESTOCK"
+        lines.append(f"[{tag}] {e['store']}: {e['name']} ({e['price']})")
+    if len(events) > 10:
+        lines.append(f"... og {len(events) - 10} til")
+    message = "\n".join(lines)
+
+    title = (
+        f"Pokemon Lager: {len(events)} ny hendelse"
+        if len(events) == 1
+        else f"Pokemon Lager: {len(events)} nye hendelser"
+    )
+
+    try:
+        req = Request(
+            f"https://ntfy.sh/{topic}",
+            data=message.encode("utf-8"),
+            method="POST",
+            headers={
+                "Title": title,
+                "Priority": "default",
+                "Tags": "tada",
+            },
+        )
+        with urlopen(req, timeout=10) as resp:
+            resp.read()
+        print(f"Sendte ntfy-varsel til topic '{topic}' ({len(events)} hendelser).")
+    except Exception as e:
+        print(f"Klarte ikke sende ntfy-varsel: {e}")
+
+
 def main():
     all_products: list = []
     previous_by_url = load_previous_products()
@@ -877,6 +918,7 @@ def main():
 
     new_events = compute_new_stock_events(all_products, previous_by_url)
     changes = update_changes_log(new_events)
+    send_ntfy_notification(new_events)
 
     output = {
         "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
