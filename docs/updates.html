@@ -64,9 +64,19 @@ function renderSkeleton() {
   }
 }
 
+function parseServerDate(value) {
+  if (!value) return new Date(NaN);
+  // Serveren (GitHub Actions) lagrer tidspunkt i UTC. Eldre data mangler
+  // tidssone-suffiks, som gjor at nettleseren feilaktig tolker det som
+  // lokal tid. Vi legger til "Z" nar tidssone mangler, sa klokkeslettet
+  // vises korrekt i norsk tid.
+  const hasTimezone = /[Zz]$/.test(value) || /[+-]\d{2}:?\d{2}$/.test(value);
+  return new Date(hasTimezone ? value : value + 'Z');
+}
+
 function dayLabel(dateStr) {
   const today = new Date();
-  const d = new Date(dateStr);
+  const d = parseServerDate(dateStr);
   const todayKey = today.toISOString().slice(0, 10);
   const yestKey = new Date(today.getTime() - 86400000).toISOString().slice(0, 10);
   const dKey = dateStr.slice(0, 10);
@@ -76,7 +86,7 @@ function dayLabel(dateStr) {
 }
 
 function timeLabel(dateStr) {
-  const d = new Date(dateStr);
+  const d = parseServerDate(dateStr);
   if (isNaN(d.getTime())) return '';
   return d.toLocaleTimeString('nb-NO', { hour: '2-digit', minute: '2-digit' });
 }
@@ -169,6 +179,7 @@ document.getElementById('retryBtn').addEventListener('click', () => {
 });
 
 loadChanges();
+setInterval(loadChanges, 20 * 60 * 1000);
 </script>
 </body>
 </html>
