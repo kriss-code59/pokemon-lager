@@ -35,6 +35,12 @@
 <section class="toolbar">
   <div class="search-row">
     <input type="text" id="searchBox" placeholder="Sok etter produkt (f.eks. 'Booster Box', 'Elite Trainer')...">
+    <div class="price-range-row">
+      <label for="minPrice">Pris fra</label>
+      <input type="number" id="minPrice" placeholder="0" min="0">
+      <label for="maxPrice">til</label>
+      <input type="number" id="maxPrice" placeholder="Ingen grense" min="0">
+    </div>
     <select id="sortSelect">
       <option value="stock">Sorter: Lagerstatus (pa lager forst)</option>
       <option value="updated">Sorter: Nylig oppdatert</option>
@@ -50,6 +56,7 @@
     <button class="chip" data-status="unknown">⚪ Ukjent</button>
   </div>
   <div class="chip-row" id="storeChips"></div>
+  <div class="chip-row" id="categoryChips"></div>
 </section>
 
 <div id="resultCount"></div>
@@ -83,6 +90,10 @@ let storeFilter = null;
 let searchTerm = '';
 let sortMode = 'stock';
 let latestChangeByUrl = {};
+let minPriceFilter = null;
+let maxPriceFilter = null;
+let categoryFilter = null;
+let groupsByKey = {};
 
 function normalize(s) {
   return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -122,6 +133,33 @@ function fuzzyMatch(text, term) {
   });
 }
 
+const STOPWORDS = ['pokemon', 'tcg', 'the', 'a', 'an', 'og', 'med', 'norsk', 'engelsk', 'kort', 'trading', 'card', 'game', 'samlekort', 'norge', 'ns'];
+
+function canonicalKey(name) {
+  const n = normalize(name).replace(/[^a-z0-9\s]/g, ' ');
+  const words = n.split(/\s+/).filter(w => w && !STOPWORDS.includes(w));
+  words.sort();
+  return words.join('');
+}
+
+const CATEGORY_ORDER = [
+  { key: 'Elite Trainer Box', test: /elite trainer|etb\b/ },
+  { key: 'Booster Box / Display', test: /booster box|booster display|boosterboks|display\b/ },
+  { key: 'Boosterpakke', test: /booster pack|boosterpakke/ },
+  { key: 'Tin', test: /tin\b/ },
+  { key: 'Blister', test: /blister/ },
+  { key: 'Deck', test: /theme deck|deck boks|deck\b/ },
+  { key: 'Samleboks / Bundle', test: /mystery box|bundle|premium collection|collection box/ },
+];
+
+function categoryOf(name) {
+  const n = (name || '').toLowerCase();
+  for (const c of CATEGORY_ORDER) {
+    if (c.test.test(n)) return c.key;
+  }
+  return 'Annet';
+}
+
 function renderSkeleton() {
   const el = document.getElementById('skeletonGrid');
   el.innerHTML = '';
@@ -143,6 +181,13 @@ async function loadData() {
     allProducts = data.products || [];
     manualStores = data.manual_check_stores || [];
 
+    groupsByKey = {};
+    allProducts.forEach(p => {
+      const k = canonicalKey(p.name);
+      if (!groupsByKey[k]) groupsByKey[k] = new Set();
+      groupsByKey[k].add(p.store);
+    });
+
     if (changesRes && changesRes.ok) {
       const changesData = await changesRes.json();
       allChanges = changesData.changes || [];
@@ -162,6 +207,7 @@ async function loadData() {
 
     buildStats();
     buildStoreChips();
+    buildCategoryChips();
     buildManualSection();
     updateUpdatesBadge();
     render();
@@ -208,6 +254,25 @@ function buildStoreChips() {
     btn.textContent = store;
     btn.className = 'chip' + (storeFilter === store ? ' active' : '');
     btn.onclick = () => { storeFilter = store; buildStoreChips(); render(); };
+    container.appendChild(btn);
+  });
+}
+
+function buildCategoryChips() {
+  const cats = [...new Set(allProducts.map(p => categoryOf(p.name)))].sort();
+  const container = document.getElementById('categoryChips');
+  container.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.textContent = 'Alle typer';
+  allBtn.className = 'chip' + (categoryFilter === null ? ' active' : '');
+  allBtn.onclick = () => { categoryFilter = null; buildCategoryChips(); render(); };
+  container.appendChild(allBtn);
+
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.textContent = cat;
+    btn.className = 'chip' + (categoryFilter === cat ? ' active' : '');
+    btn.onclick = () => { categoryFilter = cat; buildCategoryChips(); render(); };
     container.appendChild(btn);
   });
 }
@@ -267,6 +332,20 @@ document.getElementById('sortSelect').addEventListener('change', (e) => {
   render();
 });
 
+let priceDebounce = null;
+function handlePriceInput() {
+  clearTimeout(priceDebounce);
+  priceDebounce = setTimeout(() => {
+    const minVal = document.getElementById('minPrice').value;
+    const maxVal = document.getElementById('maxPrice').value;
+    minPriceFilter = minVal !== '' ? parseFloat(minVal) : null;
+    maxPriceFilter = maxVal !== '' ? parseFloat(maxVal) : null;
+    render();
+  }, 250);
+}
+document.getElementById('minPrice').addEventListener('input', handlePriceInput);
+document.getElementById('maxPrice').addEventListener('input', handlePriceInput);
+
 document.getElementById('retryBtn').addEventListener('click', () => {
   document.getElementById('errorState').style.display = 'none';
   loadData();
@@ -321,6 +400,10 @@ function render() {
   else if (statusFilter === 'unknown') list = list.filter(p => p.in_stock === null);
   if (searchTerm) list = list.filter(p => fuzzyMatch(p.name, searchTerm));
 
+  if (categoryFilter) list = list.filter(p => categoryOf(p.name) === categoryFilter);
+  if (minPriceFilter !== null) list = list.filter(p => parsePrice(p.price) >= minPriceFilter);
+  if (maxPriceFilter !== null) list = list.filter(p => parsePrice(p.price) <= maxPriceFilter);
+
   list = sortList(list);
 
   const grid = document.getElementById('grid');
@@ -350,11 +433,9 @@ function render() {
     const nameDiv = document.createElement('div');
     nameDiv.className = 'name';
     const nameLink = document.createElement('a');
-    nameLink.href = p.url;
-    nameLink.target = '_blank';
-    nameLink.rel = 'noopener';
-    nameLink.textContent = p.name;
-    nameDiv.appendChild(nameLink);
+  nameLink.href = 'product.html?url=' + encodeURIComponent(p.url);
+  nameLink.textContent = p.name;
+  nameDiv.appendChild(nameLink);
 
     const rowDiv = document.createElement('div');
     rowDiv.className = 'row';
@@ -362,16 +443,36 @@ function render() {
     priceSpan.className = 'price';
     priceSpan.textContent = p.price;
     const badgeSpan = document.createElement('span');
-    badgeSpan.className = 'badge ' + statusClass;
-    badgeSpan.textContent = statusText;
-    rowDiv.appendChild(priceSpan);
-    rowDiv.appendChild(badgeSpan);
+  badgeSpan.className = 'badge ' + statusClass;
+  badgeSpan.textContent = statusText;
+
+  const externalLink = document.createElement('a');
+  externalLink.href = p.url;
+  externalLink.target = '_blank';
+  externalLink.rel = 'noopener';
+  externalLink.className = 'external-link';
+  externalLink.title = 'Apne hos butikk';
+  externalLink.setAttribute('aria-label', 'Apne hos butikk (ny fane)');
+  externalLink.textContent = String.fromCharCode(8599);
+
+  rowDiv.appendChild(priceSpan);
+  rowDiv.appendChild(badgeSpan);
+  rowDiv.appendChild(externalLink);
 
     card.appendChild(storeDiv);
     card.appendChild(nameDiv);
     card.appendChild(rowDiv);
 
-    if (p.store_count) {
+    const groupSet = groupsByKey[canonicalKey(p.name)];
+  if (groupSet && groupSet.size > 1) {
+    const compareDiv = document.createElement('a');
+      compareDiv.href = 'product.html?url=' + encodeURIComponent(p.url);
+      compareDiv.className = 'compare-hint';
+      compareDiv.textContent = String.fromCharCode(0x1F517) + ' Finnes hos ' + groupSet.size + ' butikker - sammenlign';
+      card.appendChild(compareDiv);
+  }
+
+  if (p.store_count) {
       const storeCountDiv = document.createElement('div');
       storeCountDiv.className = 'row';
       const storeCountSpan = document.createElement('span');
