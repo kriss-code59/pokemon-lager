@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Hopp til innhold</a>
 <header class="topnav">
   <a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
   <div class="navRight">
@@ -16,10 +17,11 @@
       <a href="index.html">Hjem</a>
       <a href="updates.html" class="active">Nyheter</a>
     </div>
-    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus"></button>
+    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
   </div>
 </header>
 
+<main id="main">
 <section class="hero">
   <h1>Nytt siden sist</h1>
   <p class="sub">Nye produkter og restock oppdaget av boten, nyeste forst. Listen oppdateres automatisk ca. hvert 20. minutt.</p>
@@ -38,6 +40,8 @@
   <div>Ingen nye hendelser er oppdaget ennaa. Sjekk igjen senere.</div>
 </div>
 <div class="updates-list" id="updatesList"></div>
+
+</main>
 
 <footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions.</footer>
 
