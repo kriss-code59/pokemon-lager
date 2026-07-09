@@ -202,7 +202,17 @@ function renderSkeleton() {
   }
 }
 
-async function loadData() {
+function parseServerDate(value) {
+      if (!value) return new Date(NaN);
+      // Serveren (GitHub Actions) lagrer tidspunkt i UTC. Eldre data mangler
+      // tidssone-suffiks, som gjor at nettleseren feilaktig tolker det som
+      // lokal tid. Vi legger til "Z" nar tidssone mangler, sa klokkeslettet
+      // vises korrekt i norsk tid.
+      const hasTimezone = /[Zz]$/.test(value) || /[+-]\d{2}:?\d{2}$/.test(value);
+      return new Date(hasTimezone ? value : value + 'Z');
+    }
+
+    async function loadData() {
   renderSkeleton();
   try {
     const [dataRes, changesRes] = await Promise.all([
@@ -233,7 +243,7 @@ async function loadData() {
     }
 
     document.getElementById('updated').textContent =
-      'Sist oppdatert: ' + new Date(data.last_updated).toLocaleString('nb-NO');
+      'Sist oppdatert: ' + parseServerDate(data.last_updated).toLocaleString('nb-NO');
     document.getElementById('skeletonGrid').style.display = 'none';
     document.getElementById('errorState').style.display = 'none';
 
@@ -567,6 +577,7 @@ function render() {
 
 setupChips();
 loadData();
+setInterval(loadData, 20 * 60 * 1000);
 </script>
 </body>
 </html>
