@@ -2,9 +2,14 @@ name: Scan Pokemon-lager
 
 on:
   schedule:
-    # Kjører hvert 20. minutt, men ikke mellom 22:00-04:00 norsk tid
-    - cron: "*/20 * * * *"
-  workflow_dispatch: {}  # lar deg trykke "Run workflow" manuelt på GitHub
+    # Kjører hvert 30. minutt, men ikke mellom 22:00-04:00 norsk tid
+    - cron: "*/30 * * * *"
+  workflow_dispatch:  # lar deg trykke "Run workflow" manuelt på GitHub
+    inputs:
+      send_test_notification:
+        description: "Kun send en test-varsel via ntfy (ingen skanning)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -31,23 +36,31 @@ jobs:
           fi
 
       - name: Checkout repo
-        if: steps.time_check.outputs.skip == 'false'
+        if: steps.time_check.outputs.skip == 'false' || github.event.inputs.send_test_notification == 'true'
         uses: actions/checkout@v4
 
       - name: Sett opp Python
-        if: steps.time_check.outputs.skip == 'false'
+        if: steps.time_check.outputs.skip == 'false' || github.event.inputs.send_test_notification == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Installer avhengigheter
-        if: steps.time_check.outputs.skip == 'false'
-        run: |
-          pip install -r requirements.txt
-          playwright install --with-deps chromium
+      - name: Installer Python-avhengigheter
+        if: steps.time_check.outputs.skip == 'false' || github.event.inputs.send_test_notification == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Installer Playwright-nettleser
+        if: steps.time_check.outputs.skip == 'false' && github.event.inputs.send_test_notification != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Send test-varsel (ntfy)
+        if: github.event.inputs.send_test_notification == 'true'
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC || 'pokemon-lager-sk82sw9vyl' }}
+        run: python scrape.py --test-notification
 
       - name: Kjør scraper
-        if: steps.time_check.outputs.skip == 'false'
+        if: steps.time_check.outputs.skip == 'false' && github.event.inputs.send_test_notification != 'true'
         env:
           # Brukes til a sende push-varsel via ntfy.sh nar boten finner nye
           # produkter/restock (se send_ntfy_notification() i scrape.py).
@@ -60,7 +73,7 @@ jobs:
         run: python scrape.py
 
       - name: Last opp debug-skjermbilder (hvis noen sider feilet)
-        if: always() && steps.time_check.outputs.skip == 'false'
+        if: always() && steps.time_check.outputs.skip == 'false' && github.event.inputs.send_test_notification != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: debug-screenshots
@@ -68,7 +81,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit og push oppdatert data
-        if: steps.time_check.outputs.skip == 'false'
+        if: steps.time_check.outputs.skip == 'false' && github.event.inputs.send_test_notification != 'true'
         run: |
           git config user.name "pokemon-lagerbot"
           git config user.email "actions@github.com"
