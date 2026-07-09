@@ -45,6 +45,11 @@
   <div class="stat-card"><div class="num" id="statNewToday">-</div><div class="label">Nye/restock i dag</div></div>
 </section>
 
+<section class="recent-section" id="recentSection" style="display:none">
+<h2>Nylig restocket</h2>
+<div class="recent-list" id="recentList"></div>
+</section>
+
 <section class="toolbar">
   <div class="search-row">
     <input type="text" id="searchBox" placeholder="Sok etter produkt (f.eks. 'Booster Box', 'Elite Trainer')...">
@@ -67,7 +72,8 @@
     <button class="chip" data-status="all">Vis alle</button>
     <button class="chip" data-status="outstock">🔴 Utsolgt</button>
     <button class="chip" data-status="unknown">⚪ Ukjent</button>
-  </div>
+  <button class="chip" id="favChip">⭐ Favoritter</button>
+</div>
   <div class="chip-row" id="storeChips"></div>
   <div class="chip-row" id="categoryChips"></div>
 </section>
@@ -109,6 +115,8 @@ let minPriceFilter = null;
 let maxPriceFilter = null;
 let categoryFilter = null;
 let groupsByKey = {};
+let favoritesOnly = false;
+let favorites = new Set(JSON.parse(localStorage.getItem('favoriteProducts') || '[]'));
 
 function normalize(s) {
   return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -175,6 +183,15 @@ function categoryOf(name) {
   return 'Annet';
 }
 
+function saveFavorites() {
+  localStorage.setItem('favoriteProducts', JSON.stringify([...favorites]));
+}
+
+function toggleFavorite(url) {
+  if (favorites.has(url)) favorites.delete(url); else favorites.add(url);
+  saveFavorites();
+}
+
 function renderSkeleton() {
   const el = document.getElementById('skeletonGrid');
   el.innerHTML = '';
@@ -223,6 +240,7 @@ async function loadData() {
     buildStats();
     buildStoreChips();
     buildCategoryChips();
+    buildRecentSection();
     buildManualSection();
     updateUpdatesBadge();
     render();
@@ -292,6 +310,33 @@ function buildCategoryChips() {
   });
 }
 
+function buildRecentSection() {
+  const section = document.getElementById('recentSection');
+  const list = document.getElementById('recentList');
+  const recent = [...allChanges].sort((a, b) => b.detected_at.localeCompare(a.detected_at)).slice(0, 8);
+  if (!recent.length) { section.style.display = 'none'; return; }
+  section.style.display = 'block';
+  list.innerHTML = '';
+  recent.forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'recent-card';
+    const tag = document.createElement('span');
+    tag.className = 'recent-tag ' + (c.event === 'ny' ? 'ny' : 'restock');
+    tag.textContent = c.event === 'ny' ? '\ud83c\udd95 Nytt' : '\ud83d\udd01 Restock';
+    const link = document.createElement('a');
+    link.className = 'recent-name';
+    link.href = 'product.html?url=' + encodeURIComponent(c.url);
+    link.textContent = c.name;
+    const meta = document.createElement('div');
+    meta.className = 'recent-meta';
+    meta.textContent = c.store + ' \u00b7 ' + (c.price || '');
+    card.appendChild(tag);
+    card.appendChild(link);
+    card.appendChild(meta);
+    list.appendChild(card);
+  });
+}
+
 function buildManualSection() {
   const section = document.getElementById('manualSection');
   const grid = document.getElementById('manualGrid');
@@ -331,6 +376,12 @@ function setupChips() {
     if (btn.dataset.status === statusFilter) btn.classList.add('active');
   });
 }
+
+document.getElementById('favChip').addEventListener('click', () => {
+  favoritesOnly = !favoritesOnly;
+  document.getElementById('favChip').classList.toggle('active', favoritesOnly);
+  render();
+});
 
 let searchDebounce = null;
 document.getElementById('searchBox').addEventListener('input', (e) => {
@@ -416,6 +467,7 @@ function render() {
   if (searchTerm) list = list.filter(p => fuzzyMatch(p.name, searchTerm));
 
   if (categoryFilter) list = list.filter(p => categoryOf(p.name) === categoryFilter);
+  if (favoritesOnly) list = list.filter(p => favorites.has(p.url));
   if (minPriceFilter !== null) list = list.filter(p => parsePrice(p.price) >= minPriceFilter);
   if (maxPriceFilter !== null) list = list.filter(p => parsePrice(p.price) <= maxPriceFilter);
 
@@ -474,7 +526,19 @@ function render() {
   rowDiv.appendChild(badgeSpan);
   rowDiv.appendChild(externalLink);
 
-    card.appendChild(storeDiv);
+    const favBtn = document.createElement('button');
+  favBtn.className = 'fav-btn' + (favorites.has(p.url) ? ' active' : '');
+  favBtn.setAttribute('aria-label', favorites.has(p.url) ? 'Fjern fra favoritter' : 'Legg til i favoritter');
+  favBtn.textContent = favorites.has(p.url) ? '\u2605' : '\u2606';
+  favBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFavorite(p.url);
+    render();
+  });
+  card.appendChild(favBtn);
+
+  card.appendChild(storeDiv);
     card.appendChild(nameDiv);
     card.appendChild(rowDiv);
 
