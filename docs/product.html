@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produkt - Pokemon Lagerstatus</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="topnav">
+<a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
+<div class="navRight">
+<div class="navlinks">
+<a href="index.html">Hjem</a>
+<a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
+</div>
+<button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus"></button>
+</div>
+</header>
+
+<div class="product-page" id="productPage" style="display:none">
+<a class="back-link" href="index.html">← Tilbake til alle produkter</a>
+
+<section class="product-hero">
+<div class="product-image-box" id="imageBox">🃏<span>Bilde ikke tilgjengelig</span></div>
+<div class="product-hero-info">
+<h1 id="productName">-</h1>
+<div class="product-hero-meta" id="productMeta"></div>
+<div class="cheapest-box" id="cheapestBox" style="display:none">
+<div class="cheapest-label">Billigst pa lager na</div>
+<div class="cheapest-value" id="cheapestValue">-</div>
+</div>
+</div>
+</section>
+
+<section class="compare-section">
+<h2>Sammenlign butikker</h2>
+<p class="hint" id="compareHint"></p>
+<div class="compare-list" id="compareList"></div>
+</section>
+
+<section class="history-section" id="historySection" style="display:none">
+<h2>Historikk</h2>
+<div class="updates-list" id="historyList"></div>
+</section>
+</div>
+
+<div class="state-block" id="errorState" style="display:none">
+<div class="icon">⚠️</div>
+<div id="errorText">Fant ikke produktet.</div>
+<a class="btn" href="index.html">Til forsiden</a>
+</div>
+
+<div class="state-block" id="loadingState">
+<div class="icon">⏳</div>
+<div>Laster produkt...</div>
+</div>
+
+<footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions.</footer>
+
+<script>
+function normalize(s) {
+  return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+var STOPWORDS = ['pokemon', 'tcg', 'the', 'a', 'an', 'og', 'med', 'norsk', 'engelsk', 'kort', 'trading', 'card', 'game', 'samlekort', 'norge', 'ns'];
+
+function canonicalKey(name) {
+  var n = normalize(name).replace(/[^a-z0-9\s]/g, ' ');
+  var words = n.split(/\s+/).filter(function (w) { return w && STOPWORDS.indexOf(w) === -1; });
+  words.sort();
+  return words.join('');
+}
+
+function dayLabel(dateStr) {
+  var today = new Date();
+  var d = new Date(dateStr);
+  var todayKey = today.toISOString().slice(0, 10);
+  var yestKey = new Date(today.getTime() - 86400000).toISOString().slice(0, 10);
+  var dKey = dateStr.slice(0, 10);
+  if (dKey === todayKey) return 'I dag';
+  if (dKey === yestKey) return 'I gar';
+  return d.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function timeLabel(dateStr) {
+  var d = new Date(dateStr);
+  if (isNaN(d.getTime())) return '';
+  return d.toLocaleTimeString('nb-NO', { hour: '2-digit', minute: '2-digit' }) + ' - ' + d.toLocaleDateString('nb-NO');
+}
+
+function parsePrice(price) {
+  if (!price) return Infinity;
+  var cleaned = price.replace(/[^0-9.,]/g, '');
+  if (!cleaned) return Infinity;
+  var normalized = cleaned.replace(/[.,](?=\d{3}(\D|$))/g, '').replace(',', '.');
+  var val = parseFloat(normalized);
+  return isNaN(val) ? Infinity : val;
+}
+
+function updateUpdatesBadge(allChanges) {
+  var today = new Date().toISOString().slice(0, 10);
+  var count = allChanges.filter(function (c) { return (c.detected_at || '').slice(0, 10) === today; }).length;
+  var badge = document.getElementById('updatesBadge');
+  badge.innerHTML = count > 0 ? ('<span class="badge-count">' + count + '</span>') : '';
+}
+
+async function loadProduct() {
+  var params = new URLSearchParams(location.search);
+  var targetUrl = params.get('url');
+
+  try {
+    var dataRes = await fetch('data.json?_=' + Date.now());
+    var data = await dataRes.json();
+    var allProducts = data.products || [];
+
+    var allChanges = [];
+    try {
+      var changesRes = await fetch('changes.json?_=' + Date.now());
+      if (changesRes.ok) {
+        var changesData = await changesRes.json();
+        allChanges = changesData.changes || [];
+      }
+    } catch (e) {}
+    updateUpdatesBadge(allChanges);
+
+    var anchor = allProducts.find(function (p) { return p.url === targetUrl; });
+    if (!anchor) {
+      document.getElementById('loadingState').style.display = 'none';
+      document.getElementById('errorState').style.display = 'block';
+      return;
+    }
+
+    var key = canonicalKey(anchor.name);
+    var group = allProducts.filter(function (p) { return canonicalKey(p.name) === key; });
+
+    document.title = anchor.name + ' - Pokemon Lagerstatus';
+    document.getElementById('productName').textContent = anchor.name;
+
+    var storeCount = group.length;
+    document.getElementById('productMeta').textContent =
+      storeCount + ' butikk' + (storeCount === 1 ? '' : 'er') + ' overvaket for dette produktet';
+
+    var inStockGroup = group.filter(function (p) { return p.in_stock === true; });
+    if (inStockGroup.length > 0) {
+      var cheapest = inStockGroup.slice().sort(function (a, b) { return parsePrice(a.price) - parsePrice(b.price); })[0];
+      document.getElementById('cheapestValue').textContent = cheapest.price + ' hos ' + cheapest.store;
+      document.getElementById('cheapestBox').style.display = 'block';
+    }
+
+    document.getElementById('compareHint').textContent =
+      storeCount > 1
+        ? 'Vi har funnet dette produktet hos flere butikker basert pa produktnavn - sjekk at det faktisk er samme vare for du kjoper.'
+        : 'Dette produktet er forelopig kun funnet hos en butikk.';
+
+    var sortedGroup = group.slice().sort(function (a, b) {
+      var rankA = a.in_stock === true ? 0 : (a.in_stock === null ? 1 : 2);
+      var rankB = b.in_stock === true ? 0 : (b.in_stock === null ? 1 : 2);
+      if (rankA !== rankB) return rankA - rankB;
+      return parsePrice(a.price) - parsePrice(b.price);
+    });
+
+    var compareList = document.getElementById('compareList');
+    compareList.innerHTML = '';
+    sortedGroup.forEach(function (p) {
+      var statusClass = p.in_stock === true ? 'instock' : (p.in_stock === null ? 'unknown' : 'outstock');
+      var statusText = p.in_stock === true ? '🟢 Pa lager' : (p.in_stock === null ? '⚪ Ukjent' : '🔴 Utsolgt');
+
+      var row = document.createElement('div');
+      row.className = 'compare-row ' + statusClass;
+      if (p.url === anchor.url) row.classList.add('is-anchor');
+
+      var storeDiv = document.createElement('div');
+      storeDiv.className = 'compare-store';
+      storeDiv.textContent = p.store;
+
+      var nameDiv = document.createElement('div');
+      nameDiv.className = 'compare-name';
+      nameDiv.textContent = p.name;
+
+      var priceDiv = document.createElement('div');
+      priceDiv.className = 'compare-price';
+      priceDiv.textContent = p.price;
+
+      if (p.store_count) {
+        var countSpan = document.createElement('span');
+        countSpan.className = 'compare-storecount';
+        countSpan.textContent = '🏪 ' + p.store_count + ' butikk' + (p.store_count === 1 ? '' : 'er');
+        priceDiv.appendChild(document.createElement('br'));
+        priceDiv.appendChild(countSpan);
+      }
+
+      var badgeSpan = document.createElement('span');
+      badgeSpan.className = 'badge ' + statusClass;
+      badgeSpan.textContent = statusText;
+
+      var linkEl = document.createElement('a');
+      linkEl.className = 'btn';
+      linkEl.href = p.url;
+      linkEl.target = '_blank';
+      linkEl.rel = 'noopener';
+      linkEl.textContent = 'Apne butikk ↗';
+
+      row.appendChild(storeDiv);
+      row.appendChild(nameDiv);
+      row.appendChild(priceDiv);
+      row.appendChild(badgeSpan);
+      row.appendChild(linkEl);
+      compareList.appendChild(row);
+    });
+
+    var groupUrls = {};
+    group.forEach(function (p) { groupUrls[p.url] = true; });
+    var history = allChanges.filter(function (c) { return groupUrls[c.url]; })
+      .sort(function (a, b) { return b.detected_at.localeCompare(a.detected_at); });
+
+    if (history.length > 0) {
+      document.getElementById('historySection').style.display = 'block';
+      var historyList = document.getElementById('historyList');
+      historyList.innerHTML = '';
+      var lastDay = null;
+      history.forEach(function (c) {
+        var label = dayLabel(c.detected_at);
+        if (label !== lastDay) {
+          var heading = document.createElement('div');
+          heading.className = 'day-heading';
+          heading.textContent = label;
+          historyList.appendChild(heading);
+          lastDay = label;
+        }
+        var item = document.createElement('div');
+        item.className = 'update-item';
+        var timeDiv = document.createElement('div');
+        timeDiv.className = 'update-time';
+        timeDiv.textContent = timeLabel(c.detected_at);
+        var bodyDiv = document.createElement('div');
+        bodyDiv.className = 'update-body';
+        var titleDiv = document.createElement('div');
+        titleDiv.className = 'title';
+        titleDiv.textContent = c.store + ' - ' + (c.event === 'ny' ? '🆕 Nytt produkt' : '🔁 Restock');
+        var metaDiv = document.createElement('div');
+        metaDiv.className = 'update-meta';
+        var priceSpan = document.createElement('span');
+        priceSpan.textContent = c.price || '';
+        metaDiv.appendChild(priceSpan);
+        bodyDiv.appendChild(titleDiv);
+        bodyDiv.appendChild(metaDiv);
+        item.appendChild(timeDiv);
+        item.appendChild(bodyDiv);
+        historyList.appendChild(item);
+      });
+    }
+
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('productPage').style.display = 'block';
+  } catch (e) {
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('errorState').style.display = 'block';
+  }
+}
+
+loadProduct();
+</script>
+</body>
+</html>
