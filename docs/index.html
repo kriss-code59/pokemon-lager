@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Hopp til innhold</a>
 <header class="topnav">
   <a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
   <div class="navRight">
@@ -16,10 +17,11 @@
       <a href="index.html" class="active">Hjem</a>
       <a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
     </div>
-    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus"></button>
+    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
   </div>
 </header>
 
+<main id="main">
 <section class="hero">
   <h1>Full oversikt over Pokemon-varer i norske butikker</h1>
   <p class="sub" id="updated">Laster data...</p>
@@ -78,6 +80,8 @@
   <p class="hint">Disse butikkene blokkerer automatiske besok (bot-beskyttelse), sa vi kan ikke hente lagerstatus derfra automatisk. Sjekk dem direkte via lenkene under.</p>
   <div class="manual-grid" id="manualGrid"></div>
 </section>
+
+</main>
 
 <footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions. Bygget for a holde oversikt over Pokemon-varer i norske nettbutikker.</footer>
 
