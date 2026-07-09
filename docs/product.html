@@ -319,7 +319,10 @@ async function loadProduct() {
 }
 
 loadProduct();
-setInterval(loadProduct, 20 * 60 * 1000);
+setInterval(function () {
+  if (isNorwegianQuietHours()) return;
+  loadProduct();
+}, 20 * 60 * 1000);
 </script>
 </body>
 </html>

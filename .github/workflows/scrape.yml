@@ -2,8 +2,8 @@ name: Scan Pokemon-lager
 
 on:
   schedule:
-    # Kjører hvert 30. minutt, men ikke mellom 22:00-04:00 norsk tid
-    - cron: "*/30 * * * *"
+    # Kjører hvert 20. minutt, men ikke mellom 22:00-04:00 norsk tid
+    - cron: "*/20 * * * *"
   workflow_dispatch: {}  # lar deg trykke "Run workflow" manuelt på GitHub
 
 permissions:
@@ -16,14 +16,18 @@ jobs:
       - name: Sjekk tid (hopp over hvis natt)
         id: time_check
         run: |
-          HOUR=$(date -u +%H)
-          # Hopp over mellom 20:00-03:00 UTC (dekker 22:00-04:00 CET/CEST)
-          if [[ $HOUR -ge 20 || $HOUR -lt 3 ]]; then
+          # TZ='Europe/Oslo' gir riktig lokal time direkte (haandterer CET/CEST
+          # automatisk), i stedet for a regne pa et fast UTC-offset som blir
+          # feil halve aaret pga sommertid.
+          HOUR=$(TZ='Europe/Oslo' date +%H)
+          # 10#$HOUR tvinger tolkning som grunntall 10 (ellers feiltolker bash
+          # f.eks. "08"/"09" som ugyldige oktale tall)
+          if [[ 10#$HOUR -ge 22 || 10#$HOUR -lt 4 ]]; then
             echo "skip=true" >> $GITHUB_OUTPUT
-            echo "⏸️ Skipping - det er natt"
+            echo "⏸️ Skipping - det er natt i Norge"
           else
             echo "skip=false" >> $GITHUB_OUTPUT
-            echo "✅ Fortsetter - det er dag"
+            echo "✅ Fortsetter - det er dag i Norge"
           fi
 
       - name: Checkout repo
@@ -44,6 +48,15 @@ jobs:
 
       - name: Kjør scraper
         if: steps.time_check.outputs.skip == 'false'
+        env:
+          # Brukes til a sende push-varsel via ntfy.sh nar boten finner nye
+          # produkter/restock (se send_ntfy_notification() i scrape.py).
+          # Standardverdien under er et tilfeldig generert topic-navn -- du
+          # kan abonnere pa det i ntfy-appen med en gang. Vil du bruke et
+          # annet (mer privat) navn, sett en repo-secret kalt NTFY_TOPIC i
+          # Settings -> Secrets and variables -> Actions, den overstyrer da
+          # standardverdien automatisk.
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC || 'pokemon-lager-sk82sw9vyl' }}
         run: python scrape.py
 
       - name: Last opp debug-skjermbilder (hvis noen sider feilet)

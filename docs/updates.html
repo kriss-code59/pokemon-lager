@@ -179,7 +179,10 @@ document.getElementById('retryBtn').addEventListener('click', () => {
 });
 
 loadChanges();
-setInterval(loadChanges, 20 * 60 * 1000);
+setInterval(function () {
+  if (isNorwegianQuietHours()) return;
+  loadChanges();
+}, 20 * 60 * 1000);
 </script>
 </body>
 </html>
