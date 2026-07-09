@@ -784,7 +784,7 @@ def load_previous_products() -> dict:
 
 def compute_new_stock_events(all_products: list, previous_by_url: dict) -> list:
     events = []
-    now = datetime.datetime.now().isoformat(timespec="seconds")
+    now = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
     for p in all_products:
         prev = previous_by_url.get(p.url)
         was_in_stock = bool(prev and prev.get("in_stock") is True)
@@ -809,14 +809,23 @@ def update_changes_log(new_events: list, max_entries: int = 300, max_age_days: i
         existing = []
 
     combined = new_events + existing
-    cutoff = datetime.datetime.now() - datetime.timedelta(days=max_age_days)
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=max_age_days)
+
+    def _parse_when(value):
+        try:
+            dt = datetime.datetime.fromisoformat(value)
+        except Exception:
+            return datetime.datetime.now(datetime.timezone.utc)
+        if dt.tzinfo is None:
+            # Eldre oppforinger ble lagret uten tidssone (naiv UTC-tid fra
+            # GitHub Actions-serveren). Vi antar UTC her slik at
+            # sammenligningen mot cutoff blir korrekt.
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        return dt
 
     filtered = []
     for e in combined:
-        try:
-            when = datetime.datetime.fromisoformat(e["detected_at"])
-        except Exception:
-            when = datetime.datetime.now()
+        when = _parse_when(e.get("detected_at", ""))
         if when >= cutoff:
             filtered.append(e)
 
@@ -870,7 +879,7 @@ def main():
     changes = update_changes_log(new_events)
 
     output = {
-        "last_updated": datetime.datetime.now().isoformat(timespec="seconds"),
+        "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "products": [asdict(p) for p in all_products],
         "manual_check_stores": MANUAL_CHECK_STORES,
     }
