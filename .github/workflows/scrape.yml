@@ -2,8 +2,8 @@ name: Scan Pokemon-lager
 
 on:
   schedule:
-    # Kjører hvert 20. minutt. Juster gjerne (vær snill mot butikkenes servere).
-    - cron: "0,20,40 * * * *"
+    # Kjører hvert 30. minutt, men ikke mellom 22:00-04:00 norsk tid
+    - cron: "*/30 * * * *"
   workflow_dispatch: {}  # lar deg trykke "Run workflow" manuelt på GitHub
 
 permissions:
@@ -13,24 +13,41 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
+      - name: Sjekk tid (hopp over hvis natt)
+        id: time_check
+        run: |
+          HOUR=$(date -u +%H)
+          # Hopp over mellom 20:00-03:00 UTC (dekker 22:00-04:00 CET/CEST)
+          if [[ $HOUR -ge 20 || $HOUR -lt 3 ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "⏸️ Skipping - det er natt"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "✅ Fortsetter - det er dag"
+          fi
+
       - name: Checkout repo
+        if: steps.time_check.outputs.skip == 'false'
         uses: actions/checkout@v4
 
       - name: Sett opp Python
+        if: steps.time_check.outputs.skip == 'false'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Installer avhengigheter
+        if: steps.time_check.outputs.skip == 'false'
         run: |
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
       - name: Kjør scraper
+        if: steps.time_check.outputs.skip == 'false'
         run: python scrape.py
 
       - name: Last opp debug-skjermbilder (hvis noen sider feilet)
-        if: always()
+        if: always() && steps.time_check.outputs.skip == 'false'
         uses: actions/upload-artifact@v4
         with:
           name: debug-screenshots
@@ -38,6 +55,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit og push oppdatert data
+        if: steps.time_check.outputs.skip == 'false'
         run: |
           git config user.name "pokemon-lagerbot"
           git config user.email "actions@github.com"
