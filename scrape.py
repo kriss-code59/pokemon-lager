@@ -939,4 +939,17 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    if "--test-notification" in sys.argv:
+        # Sender en enkelt test-hendelse via ntfy uten a skanne butikkene --
+        # brukes for a verifisere at NTFY_TOPIC/ntfy-oppsettet fungerer (se
+        # "Send test-varsel (ntfy)"-steget i .github/workflows/scrape.yml).
+        send_ntfy_notification([{
+            "event": "ny",
+            "store": "Testbutikk",
+            "name": "Dette er en test-varsel fra Pokemon Lagerbot",
+            "price": "0 kr",
+        }])
+    else:
+        main()
