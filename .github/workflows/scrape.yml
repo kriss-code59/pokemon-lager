@@ -2,8 +2,18 @@ name: Scan Pokemon-lager
 
 on:
   schedule:
-    # Kjører hvert 30. minutt, men ikke mellom 22:00-04:00 norsk tid
-    - cron: "*/30 * * * *"
+    # Kjører hvert 30. minutt (på :07 og :37), men ikke mellom 22:00-04:00
+    # norsk tid (nattsjekken i "time_check"-steget under håndterer den
+    # nøyaktige Oslo-grensen, inkl. sommer-/vintertid).
+    #
+    # NB: minuttene er bevisst forskjøvet vekk fra :00/:30. GitHub kjører
+    # schedule-triggere på "best effort" og nedprioriterer / dropper kjøringer
+    # som ligger på hele og halve timen (de mest belastede tidspunktene på
+    # den delte cron-planleggeren). Odde offset som :07/:37 kjører langt mer
+    # pålitelig. Timene er også begrenset til 2-20 UTC, som dekker hele det
+    # norske dagvinduet (04:00-22:00) både sommer og vinter, slik at vi ikke
+    # køer opp unødvendige nattkjøringer.
+    - cron: "7,37 2-20 * * *"
   workflow_dispatch:  # lar deg trykke "Run workflow" manuelt på GitHub
     inputs:
       send_test_notification:
