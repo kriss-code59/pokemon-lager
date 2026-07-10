@@ -9,12 +9,12 @@ on:
     # treffer :00/:30. Eneste praktiske avbøtning er å oppgi mange
     # forskjøvne tidspunkt per time, slik at selv med en høy drop-rate
     # overlever nok tikk til å gi rimelig hyppige faktiske kjøringer.
-    # Hvert 10. minutt (forskjøvet 3 min unna runde 10-tall), ikke mellom
+    # Hvert 5. minutt (maks tillatt frekvens hos GitHub), ikke mellom
     # 22:00-04:00 norsk tid (nattsjekken i "time_check"-steget under
     # håndterer den nøyaktige Oslo-grensen, inkl. sommer-/vintertid).
     # Timene er begrenset til 2-20 UTC, som dekker hele det norske
     # dagvinduet (04:00-22:00) både sommer og vinter.
-    - cron: "3,13,23,33,43,53 2-20 * * *"
+    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 2-20 * * *"
   workflow_dispatch:  # lar deg trykke "Run workflow" manuelt på GitHub
     inputs:
       send_test_notification:
