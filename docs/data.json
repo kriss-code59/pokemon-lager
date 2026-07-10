@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10T07:55:20+00:00",
+  "last_updated": "2026-07-10T08:40:54+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1733,7 +1733,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Jet Black Koreansk Boosterpakke",
       "price": "39.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-jet-black-koreansk-boosterpakke",
       "store_count": null
     },
@@ -3211,6 +3211,30 @@
     },
     {
       "store": "PokeShop",
+      "name": "POKÉMON - CHAOS RISING BOOSTER BUNDLE",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-chaos-rising-booster-bundle",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - CHAOS RISING BOOSTER BOX",
+      "price": "2 399,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-chaos-rising-booster-box",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PERFECT ORDER BOOSTER BOX",
+      "price": "2 299,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-perfect-order-booster-box",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
       "name": "POKÉMON - DESTINED RIVALS BOOSTER PACK",
       "price": "129,00 kr",
       "in_stock": false,
@@ -3331,6 +3355,118 @@
     },
     {
       "store": "PokeShop",
+      "name": "POKÉMON - FIRST PARTNER ILLUSTRATION COLLECTION - SERIES 2",
+      "price": "299,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-first-partner-illustration-collection-series-2",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MEGA ZYGARDE EX PREMIUM COLLECTION",
+      "price": "899,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-mega-zygarde-ex-premium-collection",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PERFECT ORDER BOOSTER BUNDLE",
+      "price": "399,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-perfect-order-booster-bundle",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - ASCENDED HEROES PREMIUM POSTER COLLECTION - MEGA GARDEVOIR",
+      "price": "949,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-ascended-heroes-premium-poster-collection-mega-gardevoir",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - ASCENDED HEROES PREMIUM POSTER COLLECTION - MEGA LUCARIO",
+      "price": "949,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-ascended-heroes-premium-poster-collection-mega-lucario",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - ASCENDED HEROES MEGA FERALIGATR EX BOX",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-ascended-heroes-mega-feraligatr-ex-box",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - ASCENDED HEROES MEGA EMBOAR EX BOX",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-ascended-heroes-mega-emboar-ex-box",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - ASCENDED HEROES MEGA MEGANIUM EX BOX",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-ascended-heroes-mega-meganium-ex-box",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - DRAGON MAJESTY PIN COLLECTION LATIOS",
+      "price": "3 499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-dragon-majesty-pin-collection-latios",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - DRAGON MAJESTY PIN COLLECTION LATIAS",
+      "price": "3 499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-dragon-majesty-pin-collection-latias",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MEGA KANGASKHAN EX BOX",
+      "price": "399,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-mega-kangaskhan-ex-box",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MEGA LUCARIO EX FIGURE COLLECTION",
+      "price": "599,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-mega-lucario-ex-figure-collection",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MEGA VENUSAUR EX PREMIUM COLLECTION",
+      "price": "799,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-mega-venusaur-ex-premium-collection",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - TRAINERS TOOLKIT 2025",
+      "price": "639,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-trainers-toolkit-2025",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
       "name": "POKÉMON - CHAOS RISING PREMIUM CHECKLANE BLISTER - PAWMOT",
       "price": "119,00 kr",
       "in_stock": false,
@@ -3375,6 +3511,54 @@
       "price": "549,00 kr",
       "in_stock": true,
       "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "MYSTERYBOX - POKÉ BALL EDITION",
+      "price": "500,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/mystery-box/mysterybox-poke-ball-edition",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "MYSTERYBOX - GREAT BALL EDITION",
+      "price": "1 000,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/mystery-box/mysterybox-great-ball-edition",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "MYSTERYBOX - ULTRA BALL EDITION",
+      "price": "2 500,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/mystery-box/mysterybox-ultra-ball-edition",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "MYSTERYBOX - MASTER BALL EDITION",
+      "price": "5 000,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/mystery-box/mysterybox-master-ball-edition",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "MYSTERYBOX - LUXURY BALL EDITION",
+      "price": "10 000,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/mystery-box/mysterybox-luxury-ball-edition",
+      "store_count": null
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MONOPOLY",
+      "price": "499,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/spill/pokemon-monopoly-1",
       "store_count": null
     },
     {
