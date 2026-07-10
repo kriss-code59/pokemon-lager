@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utforsk - Pokemon Lagerstatus</title>
+<meta name="description" content="Utforsk Pokemon TCG-produkter pa tvers av alle norske butikker, gruppert per produkt og sortert etter storst prisforskjell -- rask maate a finne de beste kjopene pa.">
+<link rel="canonical" href="https://kriss-code59.github.io/pokemon-lager/explorer.html">
+<meta name="theme-color" content="#ffcb05">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Utforsk - Pokemon Lagerstatus">
+<meta property="og:description" content="Sammenlign priser pa tvers av butikker, gruppert per produkt. Se hvor prisforskjellen er storst.">
+<meta property="og:url" content="https://kriss-code59.github.io/pokemon-lager/explorer.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Hopp til innhold</a>
+<header class="topnav">
+  <a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
+  <div class="navRight">
+    <div class="navlinks">
+      <a href="index.html">Hjem</a>
+      <a href="explorer.html" class="active">Utforsk</a>
+      <a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
+      <a href="statistics.html">Statistikk</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <h1>Utforsk produkter pa tvers av butikker</h1>
+  <p class="sub" id="updated">Laster data...</p>
+</section>
+
+<section class="toolbar">
+  <div class="search-row">
+    <input type="text" id="searchBox" placeholder="Sok etter produkt...">
+    <select id="sortSelect">
+      <option value="variance">Sorter: Storst prisforskjell</option>
+      <option value="stores">Sorter: Flest butikker</option>
+      <option value="price">Sorter: Lavest pris</option>
+      <option value="updated">Sorter: Nylig restocket</option>
+      <option value="name">Sorter: Navn (A-A)</option>
+    </select>
+  </div>
+  <div class="chip-row" id="statusChips">
+    <button class="chip" data-status="instock">🟢 Pa lager</button>
+    <button class="chip" data-status="all">Vis alle</button>
+  </div>
+  <div class="chip-row">
+    <button class="chip" id="multiStoreChip">🔗 Kun flere butikker</button>
+  </div>
+  <div class="chip-row" id="categoryChips"></div>
+</section>
+
+<div id="resultCount"></div>
+
+<div class="grid" id="skeletonGrid"></div>
+<div class="state-block" id="errorState" style="display:none">
+  <div class="icon">⚠️</div>
+  <div>Kunne ikke laste data.json. Prov igjen senere.</div>
+  <button id="retryBtn">Prov igjen</button>
+</div>
+<div class="state-block" id="emptyState" style="display:none">
+  <div class="icon">🔎</div>
+  <div>Ingen produkter matcher filteret ditt.</div>
+</div>
+<div class="explorer-grid" id="grid"></div>
+
+</main>
+
+<footer class="sitefoot">Ett produkt kan matches feilaktig pa tvers av butikker basert pa navn -- sjekk alltid produktsiden for detaljer for du kjoper.</footer>
+
+<script>
+var DIACRITICS_RE = new RegExp('[' + String.fromCharCode(0x300) + '-' + String.fromCharCode(0x36f) + ']', 'g');
+function normalize(s) {
+  return (s || '').toString().toLowerCase().normalize('NFD').replace(DIACRITICS_RE, '');
+}
+
+function levenshtein(a, b) {
+  var m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  var dp = new Array(n + 1);
+  for (var j = 0; j <= n; j++) dp[j] = j;
+  for (var i = 1; i <= m; i++) {
+    var prev = dp[0];
+    dp[0] = i;
+    for (j = 1; j <= n; j++) {
+      var tmp = dp[j];
+      dp[j] = Math.min(dp[j] + 1, dp[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = tmp;
+    }
+  }
+  return dp[n];
+}
+
+function fuzzyMatch(text, term) {
+  var t = normalize(text);
+  var words = normalize(term).trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return true;
+  var tokens = t.split(/\s+/);
+  return words.every(function (w) {
+    if (t.indexOf(w) !== -1) return true;
+    var maxDist = w.length > 5 ? 2 : 1;
+    return tokens.some(function (tok) { return Math.abs(tok.length - w.length) <= maxDist && levenshtein(tok, w) <= maxDist; });
+  });
+}
+
+var STOPWORDS = ['pokemon', 'tcg', 'the', 'a', 'an', 'og', 'med', 'norsk', 'engelsk', 'kort', 'trading', 'card', 'game', 'samlekort', 'norge', 'ns'];
+function canonicalKey(name) {
+  var n = normalize(name).replace(/[^a-z0-9\s]/g, ' ');
+  var words = n.split(/\s+/).filter(function (w) { return w && STOPWORDS.indexOf(w) === -1; });
+  words.sort();
+  return words.join('');
+}
+
+var CATEGORY_ORDER = [
+  { key: 'Elite Trainer Box', test: /elite trainer|etb\b/ },
+  { key: 'Booster Box / Display', test: /booster box|booster display|boosterboks|display\b/ },
+  { key: 'Boosterpakke', test: /booster pack|boosterpakke/ },
+  { key: 'Tin', test: /tin\b/ },
+  { key: 'Blister', test: /blister/ },
+  { key: 'Deck', test: /theme deck|deck boks|deck\b/ },
+  { key: 'Samleboks / Bundle', test: /mystery box|bundle|premium collection|collection box/ },
+];
+function categoryOf(name) {
+  var n = (name || '').toLowerCase();
+  for (var i = 0; i < CATEGORY_ORDER.length; i++) {
+    if (CATEGORY_ORDER[i].test.test(n)) return CATEGORY_ORDER[i].key;
+  }
+  return 'Annet';
+}
+
+function parsePrice(price) {
+  if (!price) return Infinity;
+  var cleaned = price.replace(/[^0-9.,]/g, '');
+  if (!cleaned) return Infinity;
+  var normalized = cleaned.replace(/[.,](?=\d{3}(\D|$))/g, '').replace(',', '.');
+  var val = parseFloat(normalized);
+  return isNaN(val) ? Infinity : val;
+}
+
+function parseServerDate(value) {
+  if (!value) return new Date(NaN);
+  var hasTimezone = /[Zz]$/.test(value) || /[+-]\d{2}:?\d{2}$/.test(value);
+  return new Date(hasTimezone ? value : value + 'Z');
+}
+
+function updateUpdatesBadge(events) {
+  var today = new Date().toISOString().slice(0, 10);
+  var count = events.filter(function (e) {
+    return (e.event === 'ny' || e.event === 'restock') && (e.detected_at || '').slice(0, 10) === today;
+  }).length;
+  var badge = document.getElementById('updatesBadge');
+  badge.innerHTML = count > 0 ? ('<span class="badge-count">' + count + '</span>') : '';
+}
+
+var allGroups = [];
+var latestEventByKey = {};
+var statusFilter = 'instock';
+var sortMode = 'variance';
+var searchTerm = '';
+var categoryFilter = null;
+var multiStoreOnly = false;
+
+function buildGroups(products) {
+  var byKey = {};
+  products.forEach(function (p) {
+    var k = canonicalKey(p.name);
+    if (!byKey[k]) byKey[k] = [];
+    byKey[k].push(p);
+  });
+  return Object.keys(byKey).map(function (k) {
+    var items = byKey[k];
+    var inStockItems = items.filter(function (p) { return p.in_stock === true; });
+    var relevant = inStockItems.length ? inStockItems : items;
+    var pricedItems = relevant.filter(function (p) { return isFinite(parsePrice(p.price)); });
+    var minPrice = null, maxPrice = null, cheapest = null;
+    if (pricedItems.length) {
+      var sorted = pricedItems.slice().sort(function (a, b) { return parsePrice(a.price) - parsePrice(b.price); });
+      minPrice = parsePrice(sorted[0].price);
+      maxPrice = parsePrice(sorted[sorted.length - 1].price);
+      cheapest = inStockItems.length ? sorted[0] : null;
+    }
+    var variancePct = (minPrice !== null && minPrice > 0) ? ((maxPrice - minPrice) / minPrice * 100) : 0;
+    var name = items.slice().sort(function (a, b) { return a.name.length - b.name.length; })[0].name;
+    return {
+      key: k,
+      name: name,
+      category: categoryOf(name),
+      storeCount: items.length,
+      inStockCount: inStockItems.length,
+      minPrice: minPrice,
+      maxPrice: maxPrice,
+      variancePct: variancePct,
+      cheapest: cheapest,
+      anchorUrl: (cheapest || items[0]).url,
+    };
+  });
+}
+
+function renderSkeleton() {
+  var el = document.getElementById('skeletonGrid');
+  el.innerHTML = '';
+  for (var i = 0; i < 8; i++) {
+    var d = document.createElement('div');
+    d.className = 'skeleton-card';
+    el.appendChild(d);
+  }
+}
+
+async function loadData() {
+  renderSkeleton();
+  try {
+    var results = await Promise.all([
+      fetch('data.json?_=' + Date.now()),
+      fetch('history.json?_=' + Date.now()).catch(function () { return null; }),
+    ]);
+    var data = await results[0].json();
+    var products = data.products || [];
+
+    if (results[1] && results[1].ok) {
+      var historyData = await results[1].json();
+      var events = historyData.events || [];
+      updateUpdatesBadge(events);
+      var restocks = events.filter(function (e) { return e.event === 'restock' || e.event === 'ny'; });
+      restocks.forEach(function (e) {
+        var k = canonicalKey(e.name);
+        if (!latestEventByKey[k] || e.detected_at > latestEventByKey[k]) latestEventByKey[k] = e.detected_at;
+      });
+    }
+
+    allGroups = buildGroups(products);
+
+    document.getElementById('updated').textContent =
+      allGroups.length + ' unike produkter fordelt pa ' + products.length + ' oppforinger fra alle butikker. Sist oppdatert: ' +
+      parseServerDate(data.last_updated).toLocaleString('nb-NO');
+    document.getElementById('skeletonGrid').style.display = 'none';
+    document.getElementById('errorState').style.display = 'none';
+
+    buildCategoryChips();
+    render();
+  } catch (e) {
+    document.getElementById('skeletonGrid').style.display = 'none';
+    document.getElementById('errorState').style.display = 'block';
+  }
+}
+
+function buildCategoryChips() {
+  var cats = [];
+  allGroups.forEach(function (g) { if (cats.indexOf(g.category) === -1) cats.push(g.category); });
+  cats.sort();
+  var container = document.getElementById('categoryChips');
+  container.innerHTML = '';
+  var allBtn = document.createElement('button');
+  allBtn.textContent = 'Alle typer';
+  allBtn.className = 'chip' + (categoryFilter === null ? ' active' : '');
+  allBtn.onclick = function () { categoryFilter = null; buildCategoryChips(); render(); };
+  container.appendChild(allBtn);
+  cats.forEach(function (cat) {
+    var btn = document.createElement('button');
+    btn.textContent = cat;
+    btn.className = 'chip' + (categoryFilter === cat ? ' active' : '');
+    btn.onclick = function () { categoryFilter = cat; buildCategoryChips(); render(); };
+    container.appendChild(btn);
+  });
+}
+
+document.querySelectorAll('#statusChips .chip').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    statusFilter = btn.dataset.status;
+    document.querySelectorAll('#statusChips .chip').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    render();
+  });
+  if (btn.dataset.status === statusFilter) btn.classList.add('active');
+});
+
+document.getElementById('multiStoreChip').addEventListener('click', function () {
+  multiStoreOnly = !multiStoreOnly;
+  document.getElementById('multiStoreChip').classList.toggle('active', multiStoreOnly);
+  render();
+});
+
+var searchDebounce = null;
+document.getElementById('searchBox').addEventListener('input', function (e) {
+  var value = e.target.value;
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(function () { searchTerm = value.trim(); render(); }, 250);
+});
+
+document.getElementById('sortSelect').addEventListener('change', function (e) {
+  sortMode = e.target.value;
+  render();
+});
+
+function sortGroups(list) {
+  var sorted = list.slice();
+  if (sortMode === 'stores') {
+    sorted.sort(function (a, b) { return b.storeCount - a.storeCount || b.variancePct - a.variancePct; });
+  } else if (sortMode === 'price') {
+    sorted.sort(function (a, b) { return (a.minPrice === null ? Infinity : a.minPrice) - (b.minPrice === null ? Infinity : b.minPrice); });
+  } else if (sortMode === 'name') {
+    sorted.sort(function (a, b) { return a.name.localeCompare(b.name); });
+  } else if (sortMode === 'updated') {
+    sorted.sort(function (a, b) {
+      var ta = latestEventByKey[a.key] || '';
+      var tb = latestEventByKey[b.key] || '';
+      if (ta !== tb) return tb.localeCompare(ta);
+      return b.variancePct - a.variancePct;
+    });
+  } else {
+    sorted.sort(function (a, b) { return b.variancePct - a.variancePct || b.storeCount - a.storeCount; });
+  }
+  return sorted;
+}
+
+function render() {
+  var list = allGroups;
+  if (statusFilter === 'instock') list = list.filter(function (g) { return g.inStockCount > 0; });
+  if (multiStoreOnly) list = list.filter(function (g) { return g.storeCount > 1; });
+  if (categoryFilter) list = list.filter(function (g) { return g.category === categoryFilter; });
+  if (searchTerm) list = list.filter(function (g) { return fuzzyMatch(g.name, searchTerm); });
+
+  list = sortGroups(list);
+
+  var grid = document.getElementById('grid');
+  var empty = document.getElementById('emptyState');
+  var resultCount = document.getElementById('resultCount');
+  grid.innerHTML = '';
+
+  resultCount.textContent = list.length + ' produkt' + (list.length === 1 ? '' : 'er') + ' funnet';
+
+  if (list.length === 0) {
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  list.forEach(function (g) {
+    var card = document.createElement('div');
+    card.className = 'explorer-card' + (g.inStockCount === 0 ? ' outstock' : '');
+
+    var topRow = document.createElement('div');
+    topRow.className = 'explorer-top-row';
+    var catSpan = document.createElement('span');
+    catSpan.className = 'explorer-cat';
+    catSpan.textContent = g.category;
+    var storeSpan = document.createElement('span');
+    storeSpan.className = 'explorer-storecount';
+    storeSpan.textContent = '🏪 ' + g.storeCount + ' butikk' + (g.storeCount === 1 ? '' : 'er');
+    topRow.appendChild(catSpan);
+    topRow.appendChild(storeSpan);
+
+    var nameEl = document.createElement('div');
+    nameEl.className = 'explorer-name';
+    var link = document.createElement('a');
+    link.href = 'product.html?url=' + encodeURIComponent(g.anchorUrl);
+    link.textContent = g.name;
+    nameEl.appendChild(link);
+
+    var priceRow = document.createElement('div');
+    priceRow.className = 'explorer-price-row';
+    if (g.minPrice !== null) {
+      var priceText = g.minPrice === g.maxPrice
+        ? g.minPrice.toFixed(0) + ' kr'
+        : g.minPrice.toFixed(0) + '–' + g.maxPrice.toFixed(0) + ' kr';
+      var priceSpan = document.createElement('span');
+      priceSpan.className = 'explorer-price';
+      priceSpan.textContent = priceText;
+      priceRow.appendChild(priceSpan);
+      if (g.variancePct >= 5 && g.storeCount > 1) {
+        var dealBadge = document.createElement('span');
+        dealBadge.className = 'explorer-deal-badge';
+        dealBadge.textContent = 'Spar opptil ' + g.variancePct.toFixed(0) + '%';
+        priceRow.appendChild(dealBadge);
+      }
+    } else {
+      priceRow.appendChild(document.createTextNode('Pris ukjent'));
+    }
+
+    var stockRow = document.createElement('div');
+    stockRow.className = 'explorer-stock-row';
+    stockRow.textContent = g.inStockCount + ' av ' + g.storeCount + ' pa lager';
+    if (g.cheapest) {
+      stockRow.textContent += ' · billigst hos ' + g.cheapest.store;
+    }
+
+    card.appendChild(topRow);
+    card.appendChild(nameEl);
+    card.appendChild(priceRow);
+    card.appendChild(stockRow);
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById('retryBtn').addEventListener('click', function () {
+  document.getElementById('errorState').style.display = 'none';
+  loadData();
+});
+
+loadData();
+setInterval(function () {
+  if (isNorwegianQuietHours()) return;
+  loadData();
+}, 20 * 60 * 1000);
+</script>
+</body>
+</html>

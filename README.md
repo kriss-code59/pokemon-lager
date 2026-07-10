@@ -1,7 +1,27 @@
 # Pokemon Lagerbot 🔍
 
-Scanner Norli, Ark, Cardcenter og PokeMadness for Pokemon-produkter og viser
-resultatet i et enkelt dashboard.
+Scanner Ark, Cardcenter, Nille, PokeShop, Outland og Pokelageret for
+Pokemon-produkter og viser resultatet i et enkelt dashboard (Norli og
+PokeMadness blokkerer automatiske besøk, se "Sjekk manuelt" i dashboardet).
+
+## Sider i dashboardet
+
+- **Hjem** (`index.html`) — full oversikt over alle produkter, med søk,
+  filtrering og sortering.
+- **Utforsk** (`explorer.html`) — produkter gruppert på tvers av butikker og
+  sortert etter størst prisforskjell, for rask "beste kjøp"-jakt.
+- **Nyheter** (`updates.html`) — nye produkter, restock, utsolgt-hendelser og
+  prisendringer, med filtrering på type og butikk.
+- **Statistikk** (`statistics.html`) — restocks over tid, mest restockede
+  produkter, gjennomsnittlig restock-intervall, butikkaktivitet og
+  pristrender.
+- **Produktside** (`product.html`) — sammenligning på tvers av butikker,
+  prishistorikk-graf og en enkel restock-prognose basert på tidligere
+  intervaller.
+
+All historikk (lagerstatus, pris, tidspunkt, butikk) lagres hendelsesbasert i
+`docs/history.json` (opptil 400 dager) — se `compute_extra_events()` og
+`update_history_log()` i `scrape.py`.
 
 ## Slik kommer du i gang (5 minutter)
 
@@ -11,8 +31,9 @@ resultatet i et enkelt dashboard.
 3. Gå til **Settings → Actions → General** og sørg for at "Read and write permissions"
    er slått på for GITHUB_TOKEN (trengs for at boten kan committe oppdatert data).
 4. Det er det! Workflowen (`.github/workflows/scrape.yml`) kjører automatisk
-   hvert 30. minutt (unntatt 22:00-04:00 norsk tid) og oppdaterer
-   `docs/data.json`, som dashboardet leser.
+   ca. hvert 5. minutt (unntatt 22:00-04:00 norsk tid) og oppdaterer
+   `docs/data.json`, `docs/changes.json` og `docs/history.json`, som
+   dashboardet leser.
 
 Du kan også trigge en kjøring manuelt: gå til **Actions**-fanen → "Scan Pokemon-lager" → "Run workflow".
 
@@ -50,8 +71,8 @@ python scrape.py
 
 ## Viktig: selektorene må vedlikeholdes
 
-- **Cardcenter** bruker Shopifys offentlige `products.json`-API — dette er
-  stabilt og bør fungere uten endringer.
+- **Cardcenter og Pokelageret** bruker Shopifys offentlige `products.json`-API
+  — dette er stabilt og bør fungere uten endringer.
 - **Ark, Norli, Nille og PokeMadness** scrapes ved å lese HTML-en med en nettleser
   (Playwright). Disse sidene endrer struktur fra tid til annen. Hvis boten
   plutselig finner 0 produkter på en side (sjekk loggen i Actions-kjøringen),

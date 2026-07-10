@@ -112,6 +112,6 @@ jobs:
         run: |
           git config user.name "pokemon-lagerbot"
           git config user.email "actions@github.com"
-          git add docs/data.json docs/changes.json
+          git add docs/data.json docs/changes.json docs/history.json
           git diff --quiet --cached || git commit -m "Oppdater lagerstatus [automatisk]"
           git push

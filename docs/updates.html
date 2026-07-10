@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nyheter - Pokemon Lagerstatus</title>
-<meta name="description" content="Nye Pokemon TCG-produkter og restock oppdaget hos norske nettbutikker, sortert etter nyeste forst.">
+<meta name="description" content="Nye Pokemon TCG-produkter, restock, utsolgt-hendelser og prisendringer oppdaget hos norske nettbutikker, med filtrering.">
 <link rel="canonical" href="https://kriss-code59.github.io/pokemon-lager/updates.html">
 <meta name="theme-color" content="#ffcb05">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nyheter - Pokemon Lagerstatus">
-<meta property="og:description" content="Se hvilke Pokemon-produkter som nettopp kom pa lager eller ble restocket hos norske butikker.">
+<meta property="og:description" content="Se hvilke Pokemon-produkter som nettopp kom pa lager, ble restocket, ble utsolgt eller endret pris hos norske butikker.">
 <meta property="og:url" content="https://kriss-code59.github.io/pokemon-lager/updates.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="style.css">
@@ -23,7 +23,9 @@
   <div class="navRight">
     <div class="navlinks">
       <a href="index.html">Hjem</a>
+      <a href="explorer.html">Utforsk</a>
       <a href="updates.html" class="active">Nyheter</a>
+      <a href="statistics.html">Statistikk</a>
     </div>
     <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
   </div>
@@ -32,7 +34,21 @@
 <main id="main">
 <section class="hero">
   <h1>Nytt siden sist</h1>
-  <p class="sub">Nye produkter og restock oppdaget av boten, nyeste forst. Listen oppdateres automatisk ca. hvert 20. minutt.</p>
+  <p class="sub">Nye produkter, restock, utsolgt-hendelser og prisendringer oppdaget av boten, nyeste forst.</p>
+</section>
+
+<section class="toolbar">
+  <div class="search-row">
+    <input type="text" id="searchBox" placeholder="Sok etter produkt...">
+  </div>
+  <div class="chip-row" id="typeChips">
+    <button class="chip" data-type="all">Alle hendelser</button>
+    <button class="chip" data-type="ny">🆕 Nye produkter</button>
+    <button class="chip" data-type="restock">🔁 Restock</button>
+    <button class="chip" data-type="utsolgt">🔴 Utsolgt</button>
+    <button class="chip" data-type="prisendring">💰 Prisendring</button>
+  </div>
+  <div class="chip-row" id="storeChips"></div>
 </section>
 
 <div id="resultCount"></div>
@@ -40,20 +56,25 @@
 <div class="updates-list" id="skeletonList"></div>
 <div class="state-block" id="errorState" style="display:none">
   <div class="icon">⚠️</div>
-  <div>Kunne ikke laste changes.json. Prov igjen senere.</div>
+  <div>Kunne ikke laste history.json. Prov igjen senere.</div>
   <button id="retryBtn">Prov igjen</button>
 </div>
 <div class="state-block" id="emptyState" style="display:none">
   <div class="icon">📭</div>
-  <div>Ingen nye hendelser er oppdaget ennaa. Sjekk igjen senere.</div>
+  <div>Ingen hendelser matcher filteret ditt.</div>
 </div>
 <div class="updates-list" id="updatesList"></div>
 
 </main>
 
-<footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions.</footer>
+<footer class="sitefoot">Data hentes automatisk via GitHub Actions. Historikk lagres i opptil 400 dager.</footer>
 
 <script>
+let allEvents = [];
+let typeFilter = 'all';
+let storeFilter = null;
+let searchTerm = '';
+
 function renderSkeleton() {
   const el = document.getElementById('skeletonList');
   el.innerHTML = '';
@@ -62,6 +83,11 @@ function renderSkeleton() {
     d.className = 'skeleton-card';
     el.appendChild(d);
   }
+}
+
+var DIACRITICS_RE = new RegExp('[' + String.fromCharCode(0x300) + '-' + String.fromCharCode(0x36f) + ']', 'g');
+function normalize(s) {
+  return (s || '').toString().toLowerCase().normalize('NFD').replace(DIACRITICS_RE, '');
 }
 
 function parseServerDate(value) {
@@ -91,97 +117,164 @@ function timeLabel(dateStr) {
   return d.toLocaleTimeString('nb-NO', { hour: '2-digit', minute: '2-digit' });
 }
 
-async function loadChanges() {
+const EVENT_META = {
+  ny: { tag: '🆕 Nytt produkt', cls: 'ny' },
+  restock: { tag: '🔁 Restock', cls: 'restock' },
+  utsolgt: { tag: '🔴 Utsolgt', cls: 'utsolgt' },
+  prisendring: { tag: '💰 Prisendring', cls: 'prisendring' },
+};
+
+function buildStoreChips() {
+  const stores = [...new Set(allEvents.map(e => e.store))].sort();
+  const container = document.getElementById('storeChips');
+  container.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.textContent = 'Alle butikker';
+  allBtn.className = 'chip' + (storeFilter === null ? ' active' : '');
+  allBtn.onclick = () => { storeFilter = null; buildStoreChips(); render(); };
+  container.appendChild(allBtn);
+
+  stores.forEach(store => {
+    const btn = document.createElement('button');
+    btn.textContent = store;
+    btn.className = 'chip' + (storeFilter === store ? ' active' : '');
+    btn.onclick = () => { storeFilter = store; buildStoreChips(); render(); };
+    container.appendChild(btn);
+  });
+}
+
+function setupTypeChips() {
+  document.querySelectorAll('#typeChips .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeFilter = btn.dataset.type;
+      document.querySelectorAll('#typeChips .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    });
+    if (btn.dataset.type === typeFilter) btn.classList.add('active');
+  });
+}
+
+let searchDebounce = null;
+document.getElementById('searchBox').addEventListener('input', (e) => {
+  const value = e.target.value;
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(() => {
+    searchTerm = normalize(value.trim());
+    render();
+  }, 250);
+});
+
+async function loadEvents() {
   renderSkeleton();
   try {
-    const res = await fetch('changes.json?_=' + Date.now());
+    const res = await fetch('history.json?_=' + Date.now());
     if (!res.ok) throw new Error('bad response');
     const data = await res.json();
-    const changes = data.changes || [];
+    allEvents = (data.events || []).slice().sort((a, b) => b.detected_at.localeCompare(a.detected_at));
 
     document.getElementById('skeletonList').style.display = 'none';
     document.getElementById('errorState').style.display = 'none';
-    document.getElementById('resultCount').textContent =
-      changes.length + ' hendelse' + (changes.length === 1 ? '' : 'r') + ' siste 14 dager';
 
-    if (changes.length === 0) {
-      document.getElementById('emptyState').style.display = 'block';
-      return;
-    }
-    document.getElementById('emptyState').style.display = 'none';
-
-    const list = document.getElementById('updatesList');
-    list.innerHTML = '';
-    let lastDay = null;
-
-    changes.forEach(c => {
-      const label = dayLabel(c.detected_at);
-      if (label !== lastDay) {
-        const heading = document.createElement('div');
-        heading.className = 'day-heading';
-        heading.textContent = label;
-        list.appendChild(heading);
-        lastDay = label;
-      }
-
-      const item = document.createElement('div');
-      item.className = 'update-item';
-
-      const timeDiv = document.createElement('div');
-      timeDiv.className = 'update-time';
-      timeDiv.textContent = timeLabel(c.detected_at);
-
-      const bodyDiv = document.createElement('div');
-      bodyDiv.className = 'update-body';
-
-      const titleDiv = document.createElement('div');
-      titleDiv.className = 'title';
-      const link = document.createElement('a');
-      link.href = c.url;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.textContent = c.name;
-      titleDiv.appendChild(link);
-
-      const metaDiv = document.createElement('div');
-      metaDiv.className = 'update-meta';
-
-      const eventTag = document.createElement('span');
-      eventTag.className = 'event-tag ' + (c.event === 'ny' ? 'ny' : 'restock');
-      eventTag.textContent = c.event === 'ny' ? '🆕 Nytt produkt' : '🔁 Restock';
-
-      const storeSpan = document.createElement('span');
-      storeSpan.textContent = c.store;
-
-      const priceSpan = document.createElement('span');
-      priceSpan.textContent = c.price || '';
-
-      metaDiv.appendChild(eventTag);
-      metaDiv.appendChild(storeSpan);
-      metaDiv.appendChild(priceSpan);
-
-      bodyDiv.appendChild(titleDiv);
-      bodyDiv.appendChild(metaDiv);
-
-      item.appendChild(timeDiv);
-      item.appendChild(bodyDiv);
-      list.appendChild(item);
-    });
+    buildStoreChips();
+    render();
   } catch (e) {
     document.getElementById('skeletonList').style.display = 'none';
     document.getElementById('errorState').style.display = 'block';
   }
 }
 
+function render() {
+  let list = allEvents;
+  if (typeFilter !== 'all') list = list.filter(e => e.event === typeFilter);
+  if (storeFilter) list = list.filter(e => e.store === storeFilter);
+  if (searchTerm) list = list.filter(e => normalize(e.name).includes(searchTerm));
+
+  document.getElementById('resultCount').textContent =
+    list.length + ' hendelse' + (list.length === 1 ? '' : 'r');
+
+  if (list.length === 0) {
+    document.getElementById('emptyState').style.display = 'block';
+    document.getElementById('updatesList').innerHTML = '';
+    return;
+  }
+  document.getElementById('emptyState').style.display = 'none';
+
+  const listEl = document.getElementById('updatesList');
+  listEl.innerHTML = '';
+  let lastDay = null;
+
+  list.forEach(c => {
+    const label = dayLabel(c.detected_at);
+    if (label !== lastDay) {
+      const heading = document.createElement('div');
+      heading.className = 'day-heading';
+      heading.textContent = label;
+      listEl.appendChild(heading);
+      lastDay = label;
+    }
+
+    const item = document.createElement('div');
+    item.className = 'update-item';
+
+    const timeDiv = document.createElement('div');
+    timeDiv.className = 'update-time';
+    timeDiv.textContent = timeLabel(c.detected_at);
+
+    const bodyDiv = document.createElement('div');
+    bodyDiv.className = 'update-body';
+
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'title';
+    const link = document.createElement('a');
+    link.href = c.url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = c.name;
+    titleDiv.appendChild(link);
+
+    const metaDiv = document.createElement('div');
+    metaDiv.className = 'update-meta';
+
+    const meta = EVENT_META[c.event] || { tag: c.event, cls: '' };
+    const eventTag = document.createElement('span');
+    eventTag.className = 'event-tag ' + meta.cls;
+    eventTag.textContent = meta.tag;
+
+    const storeSpan = document.createElement('span');
+    storeSpan.textContent = c.store;
+
+    const priceSpan = document.createElement('span');
+    if (c.event === 'prisendring' && c.previous_price) {
+      priceSpan.textContent = c.previous_price + ' → ' + (c.price || '');
+    } else {
+      priceSpan.textContent = c.price || '';
+    }
+
+    metaDiv.appendChild(eventTag);
+    metaDiv.appendChild(storeSpan);
+    metaDiv.appendChild(priceSpan);
+
+    bodyDiv.appendChild(titleDiv);
+    bodyDiv.appendChild(metaDiv);
+
+    item.appendChild(timeDiv);
+    item.appendChild(bodyDiv);
+    listEl.appendChild(item);
+  });
+}
+
+setupTypeChips();
+
 document.getElementById('retryBtn').addEventListener('click', () => {
   document.getElementById('errorState').style.display = 'none';
-  loadChanges();
+  loadEvents();
 });
 
-loadChanges();
+loadEvents();
 setInterval(function () {
   if (isNorwegianQuietHours()) return;
-  loadChanges();
+  loadEvents();
 }, 20 * 60 * 1000);
 </script>
 </body>

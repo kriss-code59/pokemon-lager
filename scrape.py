@@ -1,11 +1,13 @@
 """
 Pokemon-lagerscanner for norske nettbutikker.
 
-Scanner automatisk Ark, Cardcenter, Nille, PokeShop (poke-shop.no) og
-Outland for Pokemon-produkter og lagrer resultatet som JSON (docs/data.json)
-som dashboardet leser. I tillegg lagres nye lagerhendelser (restock / nye
-varer) i docs/changes.json, som brukes av "Nytt siden sist"-siden i
-dashboardet.
+Scanner automatisk Ark, Cardcenter, Nille, PokeShop (poke-shop.no),
+Outland og Pokelageret for Pokemon-produkter og lagrer resultatet som JSON
+(docs/data.json) som dashboardet leser. I tillegg lagres alle
+lagerhendelser (nye varer, restock, utsolgt, prisendring) i docs/history.json
+(brukes av statistikk-/nyheter-sidene), og de enkleste hendelsene (restock/
+nye varer, siste 14 dager) i docs/changes.json (brukes av forsidens
+"Nylig restocket"-seksjon).
 
 Norli og PokeMadness blokkerer automatiske nettleserbesok (Norli svarer med
 HTTP 403, PokeMadness viser en Cloudflare-utfordring). Vi bygger ikke inn
@@ -172,6 +174,58 @@ def scrape_cardcenter() -> list[Product]:
                 )
             )
         time.sleep(1)
+    return products
+
+
+# ---------------------------------------------------------------------------
+# POKELAGERET.NO -- ogsa en Shopify-butikk med offentlig products.json-API
+# (samme tilnaerming som Cardcenter). "pokemon"-samlingen alene dekker alle
+# TCG-produktene deres (boosterbokser, ETB, tin, boosterpakker osv.) uten
+# paginering (under 250-grensen), sa vi trenger ikke flere samlinger slik
+# Cardcenter gjor.
+#
+# VIKTIG forskjell fra Cardcenter: mange produkter her har flere variants
+# som er reelt ULIKE produkter (f.eks. "Booster Box" og "Booster Pack" pa
+# samme produktoppforing, eller ulike fargevalg av samme ETB), ikke bare
+# stoerrelse/farge-varianter av EN vare. Vi kan derfor ikke bruke
+# Cardcenter-monsteret (variants[0]-pris + "any available") uten aa blande
+# sammen pris/lagerstatus for helt ulike produkter. Vi lager i stedet en
+# egen Product PER variant, med variant-id i URL-en (Shopify sitt
+# ?variant=-format) sa hver variant far en unik URL -- ellers ville flere
+# variants av samme produkt kollidert i "url"-nokkelen som resten av koden
+# (lagerhendelser, produktside-oppslag) bruker til aa identifisere varer.
+# ---------------------------------------------------------------------------
+POKELAGERET_COLLECTIONS = ["pokemon"]
+
+
+def scrape_pokelageret() -> list[Product]:
+    products = []
+    for handle in POKELAGERET_COLLECTIONS:
+        url = f"https://pokelageret.no/collections/{handle}/products.json?limit=250"
+        try:
+            req = Request(url, headers={"User-Agent": USER_AGENT})
+            with urlopen(req, timeout=20) as resp:
+                data = json.loads(resp.read())
+        except Exception as e:
+            print(f"[pokelageret] Feil ved henting av {handle}: {e}")
+            continue
+
+        for p in data.get("products", []):
+            for v in p.get("variants", []):
+                variant_title = (v.get("title") or "").strip()
+                name = p["title"] if variant_title in ("", "Default Title") else f"{p['title']} - {variant_title}"
+                product_url = f"https://pokelageret.no/products/{p['handle']}?variant={v['id']}"
+                products.append(
+                    Product(
+                        store="Pokelageret",
+                        name=name,
+                        price=f"{v.get('price', '?')} kr",
+                        in_stock=v.get("available"),
+                        url=product_url,
+                    )
+                )
+        time.sleep(1)
+    print(f"[pokelageret] Fant {len(products)} produkter totalt.")
     return products
 
 
@@ -800,6 +854,57 @@ def compute_new_stock_events(all_products: list, previous_by_url: dict) -> list:
     return events
 
 
+def compute_extra_events(all_products: list, previous_by_url: dict) -> list:
+    """Hendelsestyper utover ny/restock (se compute_new_stock_events): en vare
+    som gar fra pa lager til utsolgt, og prisendringer. Disse driver IKKE
+    ntfy-varsler eller forsidens "Nylig restocket"-seksjon (kun docs/history.json,
+    se update_history_log), sa vi holder dem i en egen funksjon i stedet for
+    a utvide compute_new_stock_events sin oppforsel."""
+    events = []
+    now = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+    for p in all_products:
+        prev = previous_by_url.get(p.url)
+        if prev is None:
+            continue
+
+        was_in_stock = bool(prev.get("in_stock") is True)
+        if p.in_stock is False and was_in_stock:
+            events.append({
+                "detected_at": now,
+                "store": p.store,
+                "name": p.name,
+                "price": p.price,
+                "url": p.url,
+                "event": "utsolgt",
+            })
+
+        prev_price = prev.get("price")
+        if prev_price and p.price and p.price != prev_price:
+            events.append({
+                "detected_at": now,
+                "store": p.store,
+                "name": p.name,
+                "price": p.price,
+                "previous_price": prev_price,
+                "url": p.url,
+                "event": "prisendring",
+            })
+    return events
+
+
+def _parse_iso_utc(value: str) -> datetime.datetime:
+    try:
+        dt = datetime.datetime.fromisoformat(value)
+    except Exception:
+        return datetime.datetime.now(datetime.timezone.utc)
+    if dt.tzinfo is None:
+        # Eldre oppforinger ble lagret uten tidssone (naiv UTC-tid fra
+        # GitHub Actions-serveren). Vi antar UTC her slik at
+        # sammenligningen mot cutoff blir korrekt.
+        dt = dt.replace(tzinfo=datetime.timezone.utc)
+    return dt
+
+
 def update_changes_log(new_events: list, max_entries: int = 300, max_age_days: int = 14) -> list:
     path = "docs/changes.json"
     try:
@@ -810,29 +915,42 @@ def update_changes_log(new_events: list, max_entries: int = 300, max_age_days: i
 
     combined = new_events + existing
     cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=max_age_days)
-
-    def _parse_when(value):
-        try:
-            dt = datetime.datetime.fromisoformat(value)
-        except Exception:
-            return datetime.datetime.now(datetime.timezone.utc)
-        if dt.tzinfo is None:
-            # Eldre oppforinger ble lagret uten tidssone (naiv UTC-tid fra
-            # GitHub Actions-serveren). Vi antar UTC her slik at
-            # sammenligningen mot cutoff blir korrekt.
-            dt = dt.replace(tzinfo=datetime.timezone.utc)
-        return dt
-
-    filtered = []
-    for e in combined:
-        when = _parse_when(e.get("detected_at", ""))
-        if when >= cutoff:
-            filtered.append(e)
-
+    filtered = [e for e in combined if _parse_iso_utc(e.get("detected_at", "")) >= cutoff]
     filtered = filtered[:max_entries]
 
     with open(path, "w", encoding="utf-8") as f:
         json.dump({"changes": filtered}, f, ensure_ascii=False, indent=2)
+
+    return filtered
+
+
+def update_history_log(new_events: list, max_entries: int = 20000, max_age_days: int = 400) -> list:
+    """Fullstendig hendelseslogg (ny, restock, utsolgt, prisendring) med mye
+    lengre levetid enn changes.json -- brukes til lagerhistorikk,
+    prishistorikk, restock-statistikk og enkle restock-prediksjoner (se
+    docs/statistics.html, docs/updates.html og "Historikk"-seksjonen i
+    docs/product.html)."""
+    path = "docs/history.json"
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            existing = json.load(f).get("events", [])
+    except Exception:
+        # Forste gang history.json opprettes: bruk eksisterende changes.json
+        # som utgangspunkt (ny/restock siste 14 dager) sa vi ikke mister
+        # allerede innsamlet historikk.
+        try:
+            with open("docs/changes.json", "r", encoding="utf-8") as f:
+                existing = json.load(f).get("changes", [])
+        except Exception:
+            existing = []
+
+    combined = new_events + existing
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=max_age_days)
+    filtered = [e for e in combined if _parse_iso_utc(e.get("detected_at", "")) >= cutoff]
+    filtered = filtered[:max_entries]
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"events": filtered}, f, ensure_ascii=False, indent=2)
 
     return filtered
 
@@ -885,6 +1003,9 @@ def main():
     print("Scanner Cardcenter (via API)...")
     all_products += scrape_cardcenter()
 
+    print("Scanner Pokelageret (via API)...")
+    all_products += scrape_pokelageret()
+
     with sync_playwright() as p:
         # --disable-*-throttling/backgrounding: uten disse behandler Chromium
         # headless-fanen som en "bakgrunnsfane" og nedprioriterer timere/
@@ -917,7 +1038,9 @@ def main():
         browser.close()
 
     new_events = compute_new_stock_events(all_products, previous_by_url)
+    extra_events = compute_extra_events(all_products, previous_by_url)
     changes = update_changes_log(new_events)
+    history = update_history_log(new_events + extra_events)
     send_ntfy_notification(new_events)
 
     output = {
@@ -934,6 +1057,8 @@ def main():
           f"{in_stock_count} pa lager. Lagret til docs/data.json")
     print(f"{len(new_events)} nye lagerhendelser siden forrige kjoring "
           f"(totalt {len(changes)} lagret i docs/changes.json).")
+    print(f"{len(new_events) + len(extra_events)} hendelser totalt denne kjoringen "
+          f"(totalt {len(history)} lagret i docs/history.json).")
     print(f"{len(MANUAL_CHECK_STORES)} butikker ma sjekkes manuelt (blokkerer automatiske besok): "
           + ", ".join(s["store"] for s in MANUAL_CHECK_STORES))
 

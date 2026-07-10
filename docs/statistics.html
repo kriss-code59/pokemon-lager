@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistikk - Pokemon Lagerstatus</title>
+<meta name="description" content="Restocks over tid, mest restockede produkter, gjennomsnittlig restock-intervall, butikkaktivitet og pristrender for Pokemon TCG-produkter i norske nettbutikker.">
+<link rel="canonical" href="https://kriss-code59.github.io/pokemon-lager/statistics.html">
+<meta name="theme-color" content="#ffcb05">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Statistikk - Pokemon Lagerstatus">
+<meta property="og:description" content="Analyser av restock-monstre, butikkaktivitet og pristrender basert pa historiske data fra norske Pokemon-butikker.">
+<meta property="og:url" content="https://kriss-code59.github.io/pokemon-lager/statistics.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Hopp til innhold</a>
+<header class="topnav">
+  <a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
+  <div class="navRight">
+    <div class="navlinks">
+      <a href="index.html">Hjem</a>
+      <a href="explorer.html">Utforsk</a>
+      <a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
+      <a href="statistics.html" class="active">Statistikk</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <h1>Statistikk</h1>
+  <p class="sub">Analyser basert pa historiske lagerhendelser (opptil 400 dager tilbake).</p>
+</section>
+
+<section class="stats-grid" id="summaryGrid" style="display:none"></section>
+
+<div class="state-block" id="errorState" style="display:none">
+  <div class="icon">⚠️</div>
+  <div>Kunne ikke laste statistikk-data. Prov igjen senere.</div>
+  <button id="retryBtn">Prov igjen</button>
+</div>
+<div class="state-block" id="emptyState" style="display:none">
+  <div class="icon">📊</div>
+  <div>Ingen hendelser er registrert enna. Statistikk bygges opp etter hvert som boten samler data.</div>
+</div>
+
+<div id="statsContent" style="display:none">
+
+<section class="stat-section">
+  <h2>Restocks siste 30 dager</h2>
+  <p class="hint" id="restockChartHint"></p>
+  <div id="restockChart"></div>
+</section>
+
+<section class="stat-section">
+  <h2>Butikkaktivitet</h2>
+  <p class="hint">Antall registrerte hendelser (nytt, restock, utsolgt, prisendring) per butikk, hele perioden.</p>
+  <div id="storeChart"></div>
+</section>
+
+<section class="stat-section">
+  <h2>Mest restockede produkter</h2>
+  <p class="hint">Rangert etter antall registrerte restocks. Snitt-intervall vises nar vi har nok data (minst 2 restocks).</p>
+  <div class="stat-table" id="topRestockTable"></div>
+</section>
+
+<section class="stat-section">
+  <h2>Pristrender</h2>
+  <div class="stats-grid" id="priceTrendGrid"></div>
+  <p class="hint" id="priceDropsHint" style="margin-top:18px"></p>
+  <div class="stat-table" id="priceDropsTable"></div>
+</section>
+
+</div>
+
+</main>
+
+<footer class="sitefoot">Data hentes automatisk via GitHub Actions. Statistikken oppdateres ved hver kjoring.</footer>
+
+<script>
+var DIACRITICS_RE = new RegExp('[' + String.fromCharCode(0x300) + '-' + String.fromCharCode(0x36f) + ']', 'g');
+function normalize(s) {
+  return (s || '').toString().toLowerCase().normalize('NFD').replace(DIACRITICS_RE, '');
+}
+
+var STOPWORDS = ['pokemon', 'tcg', 'the', 'a', 'an', 'og', 'med', 'norsk', 'engelsk', 'kort', 'trading', 'card', 'game', 'samlekort', 'norge', 'ns'];
+function canonicalKey(name) {
+  var n = normalize(name).replace(/[^a-z0-9\s]/g, ' ');
+  var words = n.split(/\s+/).filter(function (w) { return w && STOPWORDS.indexOf(w) === -1; });
+  words.sort();
+  return words.join('');
+}
+
+function parseServerDate(value) {
+  if (!value) return new Date(NaN);
+  var hasTimezone = /[Zz]$/.test(value) || /[+-]\d{2}:?\d{2}$/.test(value);
+  return new Date(hasTimezone ? value : value + 'Z');
+}
+
+function parsePrice(price) {
+  if (!price) return NaN;
+  var cleaned = price.replace(/[^0-9.,]/g, '');
+  if (!cleaned) return NaN;
+  var normalized = cleaned.replace(/[.,](?=\d{3}(\D|$))/g, '').replace(',', '.');
+  return parseFloat(normalized);
+}
+
+function updateUpdatesBadge(events) {
+  var today = new Date().toISOString().slice(0, 10);
+  var count = events.filter(function (e) {
+    return (e.event === 'ny' || e.event === 'restock') && (e.detected_at || '').slice(0, 10) === today;
+  }).length;
+  var badge = document.getElementById('updatesBadge');
+  badge.innerHTML = count > 0 ? ('<span class="badge-count">' + count + '</span>') : '';
+}
+
+function buildVerticalBarChart(series) {
+  var width = 760, height = 180, pad = 30, gap = 2;
+  var maxVal = Math.max.apply(null, series.map(function (s) { return s.value; }).concat([1]));
+  var barWidth = (width - pad * 2) / series.length - gap;
+  var bars = series.map(function (s, i) {
+    var h = (s.value / maxVal) * (height - pad * 2);
+    var x = pad + i * ((width - pad * 2) / series.length);
+    var y = height - pad - h;
+    var title = s.label + ': ' + s.value;
+    return '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + Math.max(1, barWidth).toFixed(1) +
+      '" height="' + Math.max(0.5, h).toFixed(1) + '" fill="var(--accent)" rx="1.5"><title>' + title + '</title></rect>';
+  }).join('');
+  var baseline = '<line x1="' + pad + '" y1="' + (height - pad) + '" x2="' + (width - pad) + '" y2="' + (height - pad) + '" stroke="var(--border)" stroke-width="1" />';
+  var maxLabel = '<text x="' + pad + '" y="16" class="spark-label">' + maxVal + '</text>';
+  return '<svg viewBox="0 0 ' + width + ' ' + height + '" class="barchart" preserveAspectRatio="none">' + baseline + bars + maxLabel + '</svg>';
+}
+
+function buildHorizontalBarChart(rows) {
+  var width = 760, rowHeight = 30, pad = 6;
+  var maxVal = Math.max.apply(null, rows.map(function (r) { return r.value; }).concat([1]));
+  var height = rows.length * rowHeight + pad * 2;
+  var labelWidth = 110;
+  var barsAreaWidth = width - labelWidth - 60;
+  var parts = rows.map(function (r, i) {
+    var y = pad + i * rowHeight;
+    var w = (r.value / maxVal) * barsAreaWidth;
+    var label = r.label.length > 14 ? r.label.slice(0, 13) + '…' : r.label;
+    return '<text x="0" y="' + (y + rowHeight / 2 + 4) + '" class="bar-row-label">' + label + '</text>' +
+      '<rect x="' + labelWidth + '" y="' + (y + 5) + '" width="' + Math.max(1, w).toFixed(1) + '" height="' + (rowHeight - 10) + '" fill="var(--accent)" rx="4"><title>' + r.label + ': ' + r.value + '</title></rect>' +
+      '<text x="' + (labelWidth + w + 8) + '" y="' + (y + rowHeight / 2 + 4) + '" class="bar-row-value">' + r.value + '</text>';
+  }).join('');
+  return '<svg viewBox="0 0 ' + width + ' ' + height + '" class="barchart barchart-h">' + parts + '</svg>';
+}
+
+function el(tag, cls, text) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+function addStat(container, num, label) {
+  var card = el('div', 'stat-card');
+  card.appendChild(el('div', 'num', num));
+  card.appendChild(el('div', 'label', label));
+  container.appendChild(card);
+}
+
+async function loadStats() {
+  try {
+    var results = await Promise.all([
+      fetch('data.json?_=' + Date.now()),
+      fetch('history.json?_=' + Date.now()),
+    ]);
+    var data = await results[0].json();
+    var historyData = await results[1].json();
+    var products = data.products || [];
+    var events = historyData.events || [];
+
+    document.getElementById('errorState').style.display = 'none';
+    updateUpdatesBadge(events);
+
+    if (events.length === 0) {
+      document.getElementById('emptyState').style.display = 'block';
+      return;
+    }
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('statsContent').style.display = 'block';
+
+    var currentByKey = {};
+    products.forEach(function (p) {
+      var k = canonicalKey(p.name);
+      if (!currentByKey[k]) currentByKey[k] = p;
+    });
+
+    var restockEvents = events.filter(function (e) { return e.event === 'restock'; });
+    var storeSet = new Set(events.map(function (e) { return e.store; }));
+
+    // --- Sammendrag ---
+    var summaryGrid = document.getElementById('summaryGrid');
+    summaryGrid.innerHTML = '';
+    summaryGrid.style.display = 'grid';
+    var thirtyDaysAgo = Date.now() - 30 * 86400000;
+    var restocks30d = restockEvents.filter(function (e) { return parseServerDate(e.detected_at).getTime() >= thirtyDaysAgo; }).length;
+    addStat(summaryGrid, events.length, 'Hendelser registrert totalt');
+    addStat(summaryGrid, restocks30d, 'Restocks siste 30 dager');
+    addStat(summaryGrid, storeSet.size, 'Butikker med aktivitet');
+    addStat(summaryGrid, products.length, 'Produkter sporet na');
+
+    // --- Restocks over tid (siste 30 dager) ---
+    var days = [];
+    for (var i = 29; i >= 0; i--) {
+      days.push(new Date(Date.now() - i * 86400000).toISOString().slice(0, 10));
+    }
+    var countByDay = {};
+    days.forEach(function (d) { countByDay[d] = 0; });
+    restockEvents.forEach(function (e) {
+      var dk = (e.detected_at || '').slice(0, 10);
+      if (countByDay.hasOwnProperty(dk)) countByDay[dk]++;
+    });
+    var series = days.map(function (d) { return { label: d, value: countByDay[d] }; });
+    document.getElementById('restockChartHint').textContent =
+      restocks30d + ' restocks registrert de siste 30 dagene.';
+    document.getElementById('restockChart').innerHTML = series.some(function (s) { return s.value > 0; })
+      ? buildVerticalBarChart(series)
+      : '<p class="hint">Ingen restocks registrert siste 30 dager enna.</p>';
+
+    // --- Butikkaktivitet ---
+    var storeCounts = {};
+    events.forEach(function (e) { storeCounts[e.store] = (storeCounts[e.store] || 0) + 1; });
+    var storeRows = Object.keys(storeCounts)
+      .map(function (s) { return { label: s, value: storeCounts[s] }; })
+      .sort(function (a, b) { return b.value - a.value; });
+    document.getElementById('storeChart').innerHTML = buildHorizontalBarChart(storeRows);
+
+    // --- Mest restockede produkter + snitt-intervall ---
+    var byKey = {};
+    restockEvents.forEach(function (e) {
+      var k = canonicalKey(e.name);
+      if (!byKey[k]) byKey[k] = { name: e.name, times: [] };
+      byKey[k].times.push(parseServerDate(e.detected_at).getTime());
+    });
+    var topRows = Object.keys(byKey).map(function (k) {
+      var times = byKey[k].times.slice().sort(function (a, b) { return a - b; });
+      var intervals = [];
+      for (var j = 1; j < times.length; j++) intervals.push(times[j] - times[j - 1]);
+      var avgDays = intervals.length ? (intervals.reduce(function (a, b) { return a + b; }, 0) / intervals.length) / 86400000 : null;
+      var current = currentByKey[k];
+      return {
+        name: current ? current.name : byKey[k].name,
+        url: current ? current.url : null,
+        count: times.length,
+        avgDays: avgDays,
+      };
+    }).sort(function (a, b) { return b.count - a.count; }).slice(0, 12);
+
+    var topTable = document.getElementById('topRestockTable');
+    topTable.innerHTML = '';
+    if (topRows.length === 0) {
+      topTable.appendChild(el('p', 'hint', 'Ingen restocks registrert enna.'));
+    }
+    topRows.forEach(function (r) {
+      var row = el('div', 'stat-table-row');
+      var nameCell = el('div', 'stat-table-name');
+      if (r.url) {
+        var a = document.createElement('a');
+        a.href = 'product.html?url=' + encodeURIComponent(r.url);
+        a.textContent = r.name;
+        nameCell.appendChild(a);
+      } else {
+        nameCell.textContent = r.name;
+      }
+      var countCell = el('div', 'stat-table-count', r.count + ' restock' + (r.count === 1 ? '' : 's'));
+      var intervalCell = el('div', 'stat-table-interval', r.avgDays ? '~' + r.avgDays.toFixed(1) + ' dager mellom' : '—');
+      row.appendChild(nameCell);
+      row.appendChild(countCell);
+      row.appendChild(intervalCell);
+      topTable.appendChild(row);
+    });
+
+    // --- Pristrender ---
+    var priceEvents = events.filter(function (e) { return e.event === 'prisendring' && e.previous_price; });
+    var increases = 0, decreases = 0;
+    var changes = [];
+    priceEvents.forEach(function (e) {
+      var prev = parsePrice(e.previous_price), now = parsePrice(e.price);
+      if (!isFinite(prev) || !isFinite(now) || prev === 0) return;
+      var pct = (now - prev) / prev * 100;
+      if (pct > 0.01) increases++;
+      else if (pct < -0.01) decreases++;
+      changes.push({ name: e.name, store: e.store, prev: e.previous_price, now: e.price, pct: pct, detected_at: e.detected_at, url: e.url });
+    });
+    var priceTrendGrid = document.getElementById('priceTrendGrid');
+    priceTrendGrid.innerHTML = '';
+    addStat(priceTrendGrid, priceEvents.length, 'Registrerte prisendringer');
+    addStat(priceTrendGrid, increases, 'Prisøkninger');
+    addStat(priceTrendGrid, decreases, 'Prisreduksjoner');
+
+    var biggestDrops = changes.filter(function (c) { return c.pct < 0; })
+      .sort(function (a, b) { return a.pct - b.pct; }).slice(0, 8);
+
+    document.getElementById('priceDropsHint').textContent = biggestDrops.length > 0
+      ? 'Storste prisreduksjoner registrert:'
+      : 'Ingen prisreduksjoner registrert enna.';
+
+    var dropsTable = document.getElementById('priceDropsTable');
+    dropsTable.innerHTML = '';
+    biggestDrops.forEach(function (c) {
+      var row = el('div', 'stat-table-row');
+      var nameCell = el('div', 'stat-table-name');
+      var a = document.createElement('a');
+      a.href = c.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = c.name + ' (' + c.store + ')';
+      nameCell.appendChild(a);
+      var priceCell = el('div', 'stat-table-count', c.prev + ' → ' + c.now);
+      var pctCell = el('div', 'stat-table-interval price-drop', c.pct.toFixed(1) + ' %');
+      row.appendChild(nameCell);
+      row.appendChild(priceCell);
+      row.appendChild(pctCell);
+      dropsTable.appendChild(row);
+    });
+  } catch (e) {
+    document.getElementById('errorState').style.display = 'block';
+  }
+}
+
+document.getElementById('retryBtn').addEventListener('click', () => {
+  document.getElementById('errorState').style.display = 'none';
+  loadStats();
+});
+
+loadStats();
+setInterval(function () {
+  if (isNorwegianQuietHours()) return;
+  loadStats();
+}, 20 * 60 * 1000);
+</script>
+</body>
+</html>

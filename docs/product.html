@@ -20,7 +20,9 @@
 <div class="navRight">
 <div class="navlinks">
 <a href="index.html">Hjem</a>
+<a href="explorer.html">Utforsk</a>
 <a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
+<a href="statistics.html">Statistikk</a>
 </div>
 <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
 </div>
@@ -47,6 +49,17 @@
 <h2>Sammenlign butikker</h2>
 <p class="hint" id="compareHint"></p>
 <div class="compare-list" id="compareList"></div>
+</section>
+
+<section class="price-history-section" id="priceHistorySection" style="display:none">
+<h2>Prishistorikk</h2>
+<p class="hint" id="priceHistoryHint"></p>
+<div id="priceHistoryChart"></div>
+</section>
+
+<section class="restock-stats-section" id="restockStatsSection" style="display:none">
+<h2>Restock-statistikk</h2>
+<div class="restock-stats" id="restockStats"></div>
 </section>
 
 <section class="history-section" id="historySection" style="display:none">
@@ -127,6 +140,104 @@ function updateUpdatesBadge(allChanges) {
   badge.innerHTML = count > 0 ? ('<span class="badge-count">' + count + '</span>') : '';
 }
 
+var EVENT_META = {
+  ny: { tag: '🆕 Nytt produkt', cls: 'ny' },
+  restock: { tag: '🔁 Restock', cls: 'restock' },
+  utsolgt: { tag: '🔴 Utsolgt', cls: 'utsolgt' },
+  prisendring: { tag: '💰 Prisendring', cls: 'prisendring' },
+};
+
+function buildSparklineSvg(points) {
+  var width = 640, height = 140, pad = 28;
+  if (points.length === 0) return '';
+  if (points.length === 1) points = [points[0], { x: points[0].x + 1, y: points[0].y }];
+  var xs = points.map(function (p) { return p.x; });
+  var ys = points.map(function (p) { return p.y; });
+  var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
+  var minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
+  if (minY === maxY) { minY -= Math.max(1, minY * 0.05); maxY += Math.max(1, maxY * 0.05); }
+  function sx(x) { return maxX === minX ? pad : pad + (x - minX) / (maxX - minX) * (width - pad * 2); }
+  function sy(y) { return height - pad - (y - minY) / (maxY - minY) * (height - pad * 2); }
+  var d = points.map(function (p, i) { return (i === 0 ? 'M' : 'L') + sx(p.x).toFixed(1) + ',' + sy(p.y).toFixed(1); }).join(' ');
+  var dots = points.map(function (p) {
+    return '<circle cx="' + sx(p.x).toFixed(1) + '" cy="' + sy(p.y).toFixed(1) + '" r="3.5" fill="var(--accent)" />';
+  }).join('');
+  var labelMin = '<text x="' + pad + '" y="14" class="spark-label">' + minY.toFixed(0) + ' kr</text>';
+  var labelMax = '<text x="' + (width - pad) + '" y="14" class="spark-label" text-anchor="end">' + maxY.toFixed(0) + ' kr</text>';
+  return '<svg viewBox="0 0 ' + width + ' ' + height + '" class="sparkline" preserveAspectRatio="none">' +
+    '<path d="' + d + '" fill="none" stroke="var(--accent)" stroke-width="2.5" />' + dots + labelMin + labelMax + '</svg>';
+}
+
+function renderPriceHistory(anchor, groupEvents) {
+  var points = groupEvents
+    .filter(function (e) { return e.url === anchor.url && e.price; })
+    .map(function (e) { return { x: parseServerDate(e.detected_at).getTime(), y: parsePrice(e.price) }; })
+    .filter(function (p) { return isFinite(p.y); })
+    .sort(function (a, b) { return a.x - b.x; });
+
+  var section = document.getElementById('priceHistorySection');
+  if (points.length === 0) { section.style.display = 'none'; return; }
+  section.style.display = 'block';
+  document.getElementById('priceHistoryHint').textContent =
+    'Prisendringer registrert hos ' + anchor.store + ' (' + points.length + ' registrerte punkt).';
+  document.getElementById('priceHistoryChart').innerHTML = buildSparklineSvg(points);
+}
+
+function computeRestockPrediction(groupEvents) {
+  var restockTimes = groupEvents
+    .filter(function (e) { return e.event === 'restock'; })
+    .map(function (e) { return parseServerDate(e.detected_at).getTime(); })
+    .sort(function (a, b) { return a - b; });
+  if (restockTimes.length < 2) return { count: restockTimes.length };
+  var intervals = [];
+  for (var i = 1; i < restockTimes.length; i++) intervals.push(restockTimes[i] - restockTimes[i - 1]);
+  var avgMs = intervals.reduce(function (a, b) { return a + b; }, 0) / intervals.length;
+  var lastRestock = restockTimes[restockTimes.length - 1];
+  return {
+    count: restockTimes.length,
+    avgDays: avgMs / 86400000,
+    predictedNext: lastRestock + avgMs,
+  };
+}
+
+function renderRestockStats(groupEvents) {
+  var restockCount = groupEvents.filter(function (e) { return e.event === 'restock'; }).length;
+  var soldOutCount = groupEvents.filter(function (e) { return e.event === 'utsolgt'; }).length;
+  if (restockCount === 0 && soldOutCount === 0) {
+    document.getElementById('restockStatsSection').style.display = 'none';
+    return;
+  }
+  document.getElementById('restockStatsSection').style.display = 'block';
+  var box = document.getElementById('restockStats');
+  box.innerHTML = '';
+
+  function addStat(num, label) {
+    var d = document.createElement('div');
+    d.className = 'stat-card';
+    var n = document.createElement('div'); n.className = 'num'; n.textContent = num;
+    var l = document.createElement('div'); l.className = 'label'; l.textContent = label;
+    d.appendChild(n); d.appendChild(l);
+    box.appendChild(d);
+  }
+
+  addStat(restockCount, 'Registrerte restocks');
+  addStat(soldOutCount, 'Ganger utsolgt');
+
+  var prediction = computeRestockPrediction(groupEvents);
+  if (prediction.avgDays) {
+    addStat(prediction.avgDays.toFixed(1) + ' dager', 'Snitt mellom restocks');
+    var predDate = new Date(prediction.predictedNext);
+    var predEl = document.createElement('div');
+    predEl.className = 'stat-card prediction-card';
+    var predNum = document.createElement('div'); predNum.className = 'num';
+    predNum.textContent = predDate.toLocaleDateString('nb-NO', { day: 'numeric', month: 'short' });
+    var predLabel = document.createElement('div'); predLabel.className = 'label';
+    predLabel.textContent = 'Anslått neste restock (grov prognose, basert på ' + prediction.count + ' tidligere)';
+    predEl.appendChild(predNum); predEl.appendChild(predLabel);
+    box.appendChild(predEl);
+  }
+}
+
 async function loadProduct() {
   var params = new URLSearchParams(location.search);
   var targetUrl = params.get('url');
@@ -136,15 +247,15 @@ async function loadProduct() {
     var data = await dataRes.json();
     var allProducts = data.products || [];
 
-    var allChanges = [];
+    var allEvents = [];
     try {
-      var changesRes = await fetch('changes.json?_=' + Date.now());
-      if (changesRes.ok) {
-        var changesData = await changesRes.json();
-        allChanges = changesData.changes || [];
+      var historyRes = await fetch('history.json?_=' + Date.now());
+      if (historyRes.ok) {
+        var historyData = await historyRes.json();
+        allEvents = historyData.events || [];
       }
     } catch (e) {}
-    updateUpdatesBadge(allChanges);
+    updateUpdatesBadge(allEvents.filter(function (e) { return e.event === 'ny' || e.event === 'restock'; }));
 
     var anchor = allProducts.find(function (p) { return p.url === targetUrl; });
     if (!anchor) {
@@ -270,8 +381,8 @@ async function loadProduct() {
 
     var groupUrls = {};
     group.forEach(function (p) { groupUrls[p.url] = true; });
-    var history = allChanges.filter(function (c) { return groupUrls[c.url]; })
-      .sort(function (a, b) { return b.detected_at.localeCompare(a.detected_at); });
+    var groupEvents = allEvents.filter(function (c) { return groupUrls[c.url]; });
+    var history = groupEvents.slice().sort(function (a, b) { return b.detected_at.localeCompare(a.detected_at); });
 
     if (history.length > 0) {
       document.getElementById('historySection').style.display = 'block';
@@ -296,11 +407,16 @@ async function loadProduct() {
         bodyDiv.className = 'update-body';
         var titleDiv = document.createElement('div');
         titleDiv.className = 'title';
-        titleDiv.textContent = c.store + ' - ' + (c.event === 'ny' ? '🆕 Nytt produkt' : '🔁 Restock');
+        var meta = EVENT_META[c.event] || { tag: c.event, cls: '' };
+        titleDiv.textContent = c.store + ' - ' + meta.tag;
         var metaDiv = document.createElement('div');
         metaDiv.className = 'update-meta';
         var priceSpan = document.createElement('span');
-        priceSpan.textContent = c.price || '';
+        if (c.event === 'prisendring' && c.previous_price) {
+          priceSpan.textContent = c.previous_price + ' → ' + (c.price || '');
+        } else {
+          priceSpan.textContent = c.price || '';
+        }
         metaDiv.appendChild(priceSpan);
         bodyDiv.appendChild(titleDiv);
         bodyDiv.appendChild(metaDiv);
@@ -309,6 +425,9 @@ async function loadProduct() {
         historyList.appendChild(item);
       });
     }
+
+    renderPriceHistory(anchor, groupEvents);
+    renderRestockStats(groupEvents);
 
     document.getElementById('loadingState').style.display = 'none';
     document.getElementById('productPage').style.display = 'block';
