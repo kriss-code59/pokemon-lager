@@ -14,7 +14,23 @@ on:
     # håndterer den nøyaktige Oslo-grensen, inkl. sommer-/vintertid).
     # Timene er begrenset til 2-20 UTC, som dekker hele det norske
     # dagvinduet (04:00-22:00) både sommer og vinter.
-    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 2-20 * * *"
+    #
+    # Skrevet som separate "- cron:"-oppføringer i stedet for én
+    # kommaseparert streng, som et forsøk på å se om GitHub sin
+    # planlegger behandler disse ulikt (ren empirisk test, siden komma-
+    # separert liste ikke ga noen bekreftede kjøringer i løpet av 20+ min).
+    - cron: "2 2-20 * * *"
+    - cron: "7 2-20 * * *"
+    - cron: "12 2-20 * * *"
+    - cron: "17 2-20 * * *"
+    - cron: "22 2-20 * * *"
+    - cron: "27 2-20 * * *"
+    - cron: "32 2-20 * * *"
+    - cron: "37 2-20 * * *"
+    - cron: "42 2-20 * * *"
+    - cron: "47 2-20 * * *"
+    - cron: "52 2-20 * * *"
+    - cron: "57 2-20 * * *"
   workflow_dispatch:  # lar deg trykke "Run workflow" manuelt på GitHub
     inputs:
       send_test_notification:
