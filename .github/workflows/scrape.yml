@@ -2,18 +2,19 @@ name: Scan Pokemon-lager
 
 on:
   schedule:
-    # Kjører hvert 30. minutt (på :07 og :37), men ikke mellom 22:00-04:00
-    # norsk tid (nattsjekken i "time_check"-steget under håndterer den
-    # nøyaktige Oslo-grensen, inkl. sommer-/vintertid).
-    #
-    # NB: minuttene er bevisst forskjøvet vekk fra :00/:30. GitHub kjører
-    # schedule-triggere på "best effort" og nedprioriterer / dropper kjøringer
-    # som ligger på hele og halve timen (de mest belastede tidspunktene på
-    # den delte cron-planleggeren). Odde offset som :07/:37 kjører langt mer
-    # pålitelig. Timene er også begrenset til 2-20 UTC, som dekker hele det
-    # norske dagvinduet (04:00-22:00) både sommer og vinter, slik at vi ikke
-    # køer opp unødvendige nattkjøringer.
-    - cron: "7,37 2-20 * * *"
+    # GitHub sin "schedule"-trigger er i praksis svært upålitelig: målinger
+    # over 58+ timer med "*/20", "*/30" og forskjøvet "7,37" ga bare 6
+    # faktiske kjøringer totalt (forventet 50-150+). GitHub dropper altså
+    # de aller fleste tikkene uansett frekvens/forskyvning, ikke bare de som
+    # treffer :00/:30. Eneste praktiske avbøtning er å oppgi mange
+    # forskjøvne tidspunkt per time, slik at selv med en høy drop-rate
+    # overlever nok tikk til å gi rimelig hyppige faktiske kjøringer.
+    # Hvert 10. minutt (forskjøvet 3 min unna runde 10-tall), ikke mellom
+    # 22:00-04:00 norsk tid (nattsjekken i "time_check"-steget under
+    # håndterer den nøyaktige Oslo-grensen, inkl. sommer-/vintertid).
+    # Timene er begrenset til 2-20 UTC, som dekker hele det norske
+    # dagvinduet (04:00-22:00) både sommer og vinter.
+    - cron: "3,13,23,33,43,53 2-20 * * *"
   workflow_dispatch:  # lar deg trykke "Run workflow" manuelt på GitHub
     inputs:
       send_test_notification:
