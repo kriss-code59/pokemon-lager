@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-11T16:23:55+00:00",
+  "last_updated": "2026-07-11T16:42:58+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -4451,6 +4451,14 @@
     },
     {
       "store": "Ark",
+      "name": "Pokemon: Scarlet & Violet Handbook",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-scarlet-violet-handbook-9781338871371",
+      "store_count": null
+    },
+    {
+      "store": "Ark",
       "name": "Puslespill 200 Må fange dem alle",
       "price": "?",
       "in_stock": true,
@@ -4523,18 +4531,18 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Adventures FireRed & LeafGreen / Emerald Box Set",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-adventures-firered-leafgreen-emerald-box-set-9781421582788",
-      "store_count": null
-    },
-    {
-      "store": "Ark",
       "name": "Puslespill 300 Wild Pokémon",
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/puslespill-300-wild-pokemon-4005556132454",
+      "store_count": null
+    },
+    {
+      "store": "Ark",
+      "name": "Pokemon Adventures FireRed & LeafGreen / Emerald Box Set",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-adventures-firered-leafgreen-emerald-box-set-9781421582788",
       "store_count": null
     },
     {
@@ -4563,14 +4571,6 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Adventures Ruby & Sapphire Box Set",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-adventures-ruby-sapphire-box-set-9781421577760",
-      "store_count": null
-    },
-    {
-      "store": "Ark",
       "name": "Malebok Pokémon",
       "price": "?",
       "in_stock": true,
@@ -4579,18 +4579,10 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Super Special Box Set (Pokemon)",
+      "name": "Pokemon Adventures Ruby & Sapphire Box Set",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-super-special-box-set-pokemon-9781338791532",
-      "store_count": null
-    },
-    {
-      "store": "Ark",
-      "name": "Pokemon: Scarlet & Violet Handbook",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-scarlet-violet-handbook-9781338871371",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-adventures-ruby-sapphire-box-set-9781421577760",
       "store_count": null
     },
     {
@@ -4599,6 +4591,14 @@
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/memory-collectors-pokemon-4005556249541",
+      "store_count": null
+    },
+    {
+      "store": "Ark",
+      "name": "Pokemon Super Special Box Set (Pokemon)",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-super-special-box-set-pokemon-9781338791532",
       "store_count": null
     },
     {
