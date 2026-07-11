@@ -1,6 +1,213 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Inferno X - Booster Box",
+      "price": "2319.00 kr",
+      "previous_price": "2439.00 kr",
+      "url": "https://pokelageret.no/products/inferno-x-booster-box?variant=47537582014715",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Inferno X - Booster Pack",
+      "price": "89.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://pokelageret.no/products/inferno-x-booster-box?variant=47903025103099",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Symphonia - Booster Box",
+      "price": "1069.00 kr",
+      "previous_price": "1019.00 kr",
+      "url": "https://pokelageret.no/products/mega-symphonia?variant=47515868168443",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Symphonia - Booster Pack",
+      "price": "49.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/mega-symphonia?variant=47903025496315",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Nullifying Zero - Booster Box",
+      "price": "879.00 kr",
+      "previous_price": "849.00 kr",
+      "url": "https://pokelageret.no/products/nullifying-zero-booster-box?variant=47876438098171",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Brave - Booster Box",
+      "price": "1119.00 kr",
+      "previous_price": "1149.00 kr",
+      "url": "https://pokelageret.no/products/mega-brave?variant=47515891728635",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "The Glory of Team Rocket - Booster Box",
+      "price": "2599.00 kr",
+      "previous_price": "2699.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket?variant=47515173191931",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "White Flare - Booster Box",
+      "price": "2079.00 kr",
+      "previous_price": "2039.00 kr",
+      "url": "https://pokelageret.no/products/white-flare-booster-box?variant=47515903459579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Black Bolt - Booster Box",
+      "price": "2349.00 kr",
+      "previous_price": "2259.00 kr",
+      "url": "https://pokelageret.no/products/black-bolt-booster-box?variant=47515907096827",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Black Bolt - Booster Pack",
+      "price": "139.00 kr",
+      "previous_price": "129.00 kr",
+      "url": "https://pokelageret.no/products/black-bolt-booster-box?variant=47903025201403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Ancient Roar - Booster Box",
+      "price": "1119.00 kr",
+      "previous_price": "1069.00 kr",
+      "url": "https://pokelageret.no/products/ancient-roar-booster-box?variant=47517562863867",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Night Wanderer - Booster Box",
+      "price": "1099.00 kr",
+      "previous_price": "1069.00 kr",
+      "url": "https://pokelageret.no/products/night-wanderer-booster-box?variant=47516204990715",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Ruler of the Black Flame - Booster Box",
+      "price": "1949.00 kr",
+      "previous_price": "1819.00 kr",
+      "url": "https://pokelageret.no/products/ruler-of-the-black-flame?variant=47535773843707",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Ruler of the Black Flame - Booster Pack",
+      "price": "79.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/ruler-of-the-black-flame?variant=47903027396859",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Heat Wave Arena - Booster Box",
+      "price": "1989.00 kr",
+      "previous_price": "1919.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket-copy?variant=47515909325051",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Violet ex - Booster Box",
+      "price": "1059.00 kr",
+      "previous_price": "999.00 kr",
+      "url": "https://pokelageret.no/products/violet-ex-booster-box?variant=47518051434747",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Future Flash - Booster Box",
+      "price": "1149.00 kr",
+      "previous_price": "1099.00 kr",
+      "url": "https://pokelageret.no/products/future-flash-booster-box?variant=47517558243579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Supercharged Breaker - Booster Box",
+      "price": "3139.00 kr",
+      "previous_price": "3099.00 kr",
+      "url": "https://pokelageret.no/products/supercharged-breaker-booster-box?variant=47515920564475",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Pokemon 151",
+      "price": "5659.00 kr",
+      "previous_price": "5619.00 kr",
+      "url": "https://pokelageret.no/products/pokemon-151?variant=48845756858619",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Triplet Beat - Booster Box",
+      "price": "1769.00 kr",
+      "previous_price": "1639.00 kr",
+      "url": "https://pokelageret.no/products/triplet-beat-booster-box?variant=47518029775099",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Scarlet ex - Booster Box",
+      "price": "1349.00 kr",
+      "previous_price": "1319.00 kr",
+      "url": "https://pokelageret.no/products/scarlet-ex-booster-box?variant=47517598089467",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Scarlet ex - Booster Pack",
+      "price": "59.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/scarlet-ex-booster-box?variant=47903026938107",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-11T12:08:39+00:00",
+      "store": "Pokelageret",
+      "name": "Paradise Dragona - Booster Box",
+      "price": "1519.00 kr",
+      "previous_price": "1449.00 kr",
+      "url": "https://pokelageret.no/products/paradise-dragona-booster-box?variant=47515924234491",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-11T10:02:39+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Nine Colors Gathering Set B (Fusion Strike) Kinesisk Boosterpakke",
