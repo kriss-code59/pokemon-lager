@@ -124,12 +124,16 @@ function buildVerticalBarChart(series) {
   var maxVal = Math.max.apply(null, series.map(function (s) { return s.value; }).concat([1]));
   var barWidth = (width - pad * 2) / series.length - gap;
   var bars = series.map(function (s, i) {
+    // Dager uten restocks tegnes ikke som stolpe -- den vannrette
+    // "baseline"-linjen under dekker nullpunktet, sa vi trenger ikke en
+    // ekstra tynn stolpe oppa den (det ga tidligere et "stiplet"-utseende).
+    if (s.value <= 0) return '';
     var h = (s.value / maxVal) * (height - pad * 2);
     var x = pad + i * ((width - pad * 2) / series.length);
     var y = height - pad - h;
     var title = s.label + ': ' + s.value;
     return '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + Math.max(1, barWidth).toFixed(1) +
-      '" height="' + Math.max(0.5, h).toFixed(1) + '" fill="var(--accent)" rx="1.5"><title>' + title + '</title></rect>';
+      '" height="' + h.toFixed(1) + '" fill="var(--accent)" rx="1.5"><title>' + title + '</title></rect>';
   }).join('');
   var baseline = '<line x1="' + pad + '" y1="' + (height - pad) + '" x2="' + (width - pad) + '" y2="' + (height - pad) + '" stroke="var(--border)" stroke-width="1" />';
   var maxLabel = '<text x="' + pad + '" y="16" class="spark-label">' + maxVal + '</text>';
@@ -272,7 +276,7 @@ async function loadStats() {
         nameCell.textContent = r.name;
       }
       var countCell = el('div', 'stat-table-count', r.count + ' restock' + (r.count === 1 ? '' : 's'));
-      var intervalCell = el('div', 'stat-table-interval', r.avgDays ? '~' + r.avgDays.toFixed(1) + ' dager mellom' : '—');
+      var intervalCell = el('div', 'stat-table-interval', r.avgDays ? '~' + r.avgDays.toFixed(1) + ' dager mellom' : 'Ikke nok data enna');
       row.appendChild(nameCell);
       row.appendChild(countCell);
       row.appendChild(intervalCell);
@@ -332,11 +336,7 @@ document.getElementById('retryBtn').addEventListener('click', () => {
   loadStats();
 });
 
-loadStats();
-setInterval(function () {
-  if (isNorwegianQuietHours()) return;
-  loadStats();
-}, 20 * 60 * 1000);
+registerAutoRefresh(loadStats);
 </script>
 </body>
 </html>

@@ -171,6 +171,7 @@ a { color: inherit; }
 .event-tag.restock { background: rgba(61,220,132,0.15); color: var(--green); }
 .event-tag.utsolgt { background: rgba(239,91,91,0.15); color: var(--red); }
 .event-tag.prisendring { background: rgba(244,201,93,0.18); color: var(--yellow); }
+.lang-tag { font-size: 12px; color: var(--muted); }
 
 footer.sitefoot { padding: 20px 24px 48px; color: var(--muted); font-size: 12px; text-align: center; }
 
@@ -178,7 +179,14 @@ footer.sitefoot { padding: 20px 24px 48px; color: var(--muted); font-size: 12px;
   .hero h1 { font-size: 21px; }
   .grid { grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 14px 40px; }
   .topnav, .toolbar, .stats-grid, .manual-section, .updates-list, .hero { padding-left: 14px; padding-right: 14px; }
-  .topnav .navlinks a { padding: 7px 10px; font-size: 13px; }
+  /* Med 4 navlinker + tema-knapp faar ikke topnav plass pa en linje pa smale
+     skjermer -- uten flex-wrap her overflowet hele siden horisontalt (alt
+     under fremstod som "avkuttet" i stedet for a bryte om paa nytt). */
+  .topnav { flex-wrap: wrap; row-gap: 8px; }
+  .topnav .brand { font-size: 15px; }
+  .navRight { width: 100%; justify-content: space-between; }
+  .topnav .navlinks { flex-wrap: wrap; gap: 4px 6px; }
+  .topnav .navlinks a { padding: 6px 9px; font-size: 12.5px; }
 }
 @media (max-width: 420px) {
   .grid { grid-template-columns: 1fr; }

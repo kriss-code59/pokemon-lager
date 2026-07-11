@@ -48,6 +48,13 @@
     <button class="chip" data-type="utsolgt">🔴 Utsolgt</button>
     <button class="chip" data-type="prisendring">💰 Prisendring</button>
   </div>
+  <div class="chip-row" id="languageChips">
+    <button class="chip" data-lang="all">Alle sprak</button>
+    <button class="chip" data-lang="Engelsk">🇬🇧 Engelsk</button>
+    <button class="chip" data-lang="Japansk">🇯🇵 Japansk</button>
+    <button class="chip" data-lang="Kinesisk">🇨🇳 Kinesisk</button>
+    <button class="chip" data-lang="Koreansk">🇰🇷 Koreansk</button>
+  </div>
   <div class="chip-row" id="storeChips"></div>
 </section>
 
@@ -73,7 +80,22 @@
 let allEvents = [];
 let typeFilter = 'all';
 let storeFilter = null;
+let languageFilter = 'all';
 let searchTerm = '';
+
+// Norske nettbutikker merker importvarer eksplisitt med "Japansk"/"Kinesisk"/
+// "Koreansk" i produktnavnet (og noen ganger "Engelsk"). Uten slik merking
+// antar vi engelsk, siden det er standardspraket for TCG-produkter i disse
+// butikkene.
+function detectLanguage(name) {
+  const n = (name || '').toLowerCase();
+  if (n.includes('japansk')) return 'Japansk';
+  if (n.includes('kinesisk')) return 'Kinesisk';
+  if (n.includes('koreansk')) return 'Koreansk';
+  return 'Engelsk';
+}
+
+const LANG_FLAG = { Engelsk: '🇬🇧', Japansk: '🇯🇵', Kinesisk: '🇨🇳', Koreansk: '🇰🇷' };
 
 function renderSkeleton() {
   const el = document.getElementById('skeletonList');
@@ -155,6 +177,18 @@ function setupTypeChips() {
   });
 }
 
+function setupLanguageChips() {
+  document.querySelectorAll('#languageChips .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      languageFilter = btn.dataset.lang;
+      document.querySelectorAll('#languageChips .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    });
+    if (btn.dataset.lang === languageFilter) btn.classList.add('active');
+  });
+}
+
 let searchDebounce = null;
 document.getElementById('searchBox').addEventListener('input', (e) => {
   const value = e.target.value;
@@ -188,6 +222,7 @@ function render() {
   let list = allEvents;
   if (typeFilter !== 'all') list = list.filter(e => e.event === typeFilter);
   if (storeFilter) list = list.filter(e => e.store === storeFilter);
+  if (languageFilter !== 'all') list = list.filter(e => detectLanguage(e.name) === languageFilter);
   if (searchTerm) list = list.filter(e => normalize(e.name).includes(searchTerm));
 
   document.getElementById('resultCount').textContent =
@@ -255,6 +290,14 @@ function render() {
     metaDiv.appendChild(storeSpan);
     metaDiv.appendChild(priceSpan);
 
+    const lang = detectLanguage(c.name);
+    if (lang !== 'Engelsk') {
+      const langSpan = document.createElement('span');
+      langSpan.className = 'lang-tag';
+      langSpan.textContent = LANG_FLAG[lang] + ' ' + lang;
+      metaDiv.appendChild(langSpan);
+    }
+
     bodyDiv.appendChild(titleDiv);
     bodyDiv.appendChild(metaDiv);
 
@@ -265,17 +308,14 @@ function render() {
 }
 
 setupTypeChips();
+setupLanguageChips();
 
 document.getElementById('retryBtn').addEventListener('click', () => {
   document.getElementById('errorState').style.display = 'none';
   loadEvents();
 });
 
-loadEvents();
-setInterval(function () {
-  if (isNorwegianQuietHours()) return;
-  loadEvents();
-}, 20 * 60 * 1000);
+registerAutoRefresh(loadEvents);
 </script>
 </body>
 </html>

@@ -16,6 +16,33 @@ function isNorwegianQuietHours() {
   return osloHour >= 22 || osloHour < 4;
 }
 
+// Felles auto-oppdatering for alle sider. Ren setInterval er ikke nok: de
+// fleste nettlesere strupe/pauser timere i bakgrunnsfaner (spesielt pa
+// mobil, eller nar fanen ikke er aktiv), sa en side som har staett urort i
+// bakgrunnen en stund kan fremstaa som at den "ikke oppdaterer seg selv"
+// naar brukeren kommer tilbake til den. Vi dekker derfor to tilfeller: et
+// vanlig intervall (for aktive faner), OG en umiddelbar oppdatering nar
+// fanen blir synlig igjen etter aa ha vaert skjult.
+function registerAutoRefresh(loadFn, intervalMs) {
+  intervalMs = intervalMs || 5 * 60 * 1000;
+  var lastRun = Date.now();
+  loadFn();
+
+  function maybeRun() {
+    if (isNorwegianQuietHours()) return;
+    lastRun = Date.now();
+    loadFn();
+  }
+
+  setInterval(maybeRun, intervalMs);
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && Date.now() - lastRun > 30 * 1000) {
+      maybeRun();
+    }
+  });
+}
+
 // Delt tema-logikk (mork/lys modus) for alle sider i dashboardet.
 (function () {
   var stored = localStorage.getItem('theme');

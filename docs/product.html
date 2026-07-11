@@ -81,7 +81,7 @@
 
 </main>
 
-<footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions.</footer>
+<footer class="sitefoot">Data hentes automatisk via GitHub Actions.</footer>
 
 <script>
 function normalize(s) {
@@ -437,11 +437,7 @@ async function loadProduct() {
   }
 }
 
-loadProduct();
-setInterval(function () {
-  if (isNorwegianQuietHours()) return;
-  loadProduct();
-}, 20 * 60 * 1000);
+registerAutoRefresh(loadProduct);
 </script>
 </body>
 </html>

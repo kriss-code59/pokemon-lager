@@ -405,11 +405,7 @@ document.getElementById('retryBtn').addEventListener('click', function () {
   loadData();
 });
 
-loadData();
-setInterval(function () {
-  if (isNorwegianQuietHours()) return;
-  loadData();
-}, 20 * 60 * 1000);
+registerAutoRefresh(loadData);
 </script>
 </body>
 </html>

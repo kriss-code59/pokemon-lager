@@ -102,7 +102,7 @@
 
 </main>
 
-<footer class="sitefoot">Data hentes automatisk ca. hvert 20. minutt via GitHub Actions. Bygget for a holde oversikt over Pokemon-varer i norske nettbutikker.</footer>
+<footer class="sitefoot">Data hentes automatisk via GitHub Actions. Bygget for a holde oversikt over Pokemon-varer i norske nettbutikker.</footer>
 
 <script>
 let allProducts = [];
@@ -578,11 +578,7 @@ function render() {
 }
 
 setupChips();
-loadData();
-setInterval(function () {
-  if (isNorwegianQuietHours()) return;
-  loadData();
-}, 20 * 60 * 1000);
+registerAutoRefresh(loadData);
 </script>
 </body>
 </html>
