@@ -1,6 +1,84 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Crystal Gathering Sylveon Tin Set",
+      "price": "349.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-sylveon-tin-set",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Lunar New Year 2026 Gaveboks",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-2026-lunar-new-year-gaveboks",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blue Sky Stream Koreansk Booster Box",
+      "price": "2299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blue-sky-stream-koreansk-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Dream ex - Booster Box",
+      "price": "1519.00 kr",
+      "previous_price": "1459.00 kr",
+      "url": "https://pokelageret.no/products/mega-dream-ex-booster-box?variant=47713374109947",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Pokelageret",
+      "name": "The Glory of Team Rocket - Booster Box",
+      "price": "2569.00 kr",
+      "previous_price": "2599.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket?variant=47515173191931",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Pokelageret",
+      "name": "White Flare - Booster Box",
+      "price": "2039.00 kr",
+      "previous_price": "2079.00 kr",
+      "url": "https://pokelageret.no/products/white-flare-booster-box?variant=47515903459579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Pokelageret",
+      "name": "Black Bolt - Booster Pack",
+      "price": "129.00 kr",
+      "previous_price": "139.00 kr",
+      "url": "https://pokelageret.no/products/black-bolt-booster-box?variant=47903025201403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Pokelageret",
+      "name": "Violet ex - Booster Box",
+      "price": "1019.00 kr",
+      "previous_price": "1059.00 kr",
+      "url": "https://pokelageret.no/products/violet-ex-booster-box?variant=47518051434747",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-12T02:02:58+00:00",
+      "store": "Pokelageret",
+      "name": "Pokemon 151",
+      "price": "5699.00 kr",
+      "previous_price": "5659.00 kr",
+      "url": "https://pokelageret.no/products/pokemon-151?variant=48845756858619",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-11T18:02:58+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Abyss Eye Japansk Boosterpakke",
