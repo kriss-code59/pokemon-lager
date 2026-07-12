@@ -1,8 +1,17 @@
 # Pokemon Lagerbot 🔍
 
-Scanner Ark, Cardcenter, Nille, PokeShop, Outland og Pokelageret for
-Pokemon-produkter og viser resultatet i et enkelt dashboard (Norli og
-PokeMadness blokkerer automatiske besøk, se "Sjekk manuelt" i dashboardet).
+Scanner ~36 norske nettbutikker for Pokemon-produkter og viser resultatet i
+et enkelt dashboard. Butikklisten er kuratert fra pokejakt.no sin
+butikkoversikt pluss et par ekstra (Nille, Norli) — se `SHOPIFY_STORES` og
+`PLAYWRIGHT_SITES` i `scrape.py` for den fullstendige listen. Ark, Cardcenter,
+Nille, PokeShop, Outland, Pokelageret, Arcticloot, BoosterKongen,
+Boosterpakker, Braspill, Card Kings, Cardhouse, Cardstore, Collectible,
+Emken, EpiCards, Gameninja, Kanoncon, LABOGE, Lekekassen, Maxgaming, Mystic
+Trades, Neo Tokyo, NorthTCG, Packs of Norway, Playlot, PokeNordic, Pokebua,
+Pokecandy, Pokefriends, Pokelink, Pokesingles, Pokestore, RetroWorld,
+Spillbua og Spillmonster scrapes automatisk (Norli, PokeMadness og
+CardCollect blokkerer automatiske besøk eller krever mer arbeid — se "Sjekk
+manuelt" i dashboardet).
 
 ## Sider i dashboardet
 
@@ -71,16 +80,40 @@ python scrape.py
 
 ## Viktig: selektorene må vedlikeholdes
 
-- **Cardcenter og Pokelageret** bruker Shopifys offentlige `products.json`-API
-  — dette er stabilt og bør fungere uten endringer.
-- **Ark, Norli, Nille og PokeMadness** scrapes ved å lese HTML-en med en nettleser
-  (Playwright). Disse sidene endrer struktur fra tid til annen. Hvis boten
-  plutselig finner 0 produkter på en side (sjekk loggen i Actions-kjøringen),
-  må du:
+De fleste butikkene bruker en av fire kjente plattformer, så vi bruker
+generiske scrapere i stedet for å skreddersy én funksjon per butikk:
+
+- **Shopify** (`SHOPIFY_STORES` i `scrape.py`) — offentlig `products.json`-API
+  per samling. Dette er stabilt og bør fungere uten endringer. Dekker bl.a.
+  Cardcenter, Pokelageret, Arcticloot, BoosterKongen, Braspill, Cardstore,
+  EpiCards, LABOGE, NorthTCG, Packs of Norway, PokeNordic, Pokebua,
+  Pokefriends, Pokelink, Pokesingles, Pokestore, RetroWorld og Spillbua.
+- **"24Nettbutikk"** (`scrape_nettbutikk24()`) — norsk plattform med
+  schema.org-markup for lagerstatus. Dekker PokeShop, Boosterpakker, Card
+  Kings og Emken.
+- **QuickButik** (`scrape_quickbutik()`) — nordisk plattform som skriver
+  navn/pris direkte som `data-s-title`/`data-s-price`-attributter. Dekker
+  Cardhouse, Mystic Trades og Pokecandy.
+- **WooCommerce** (`scrape_woocommerce()`) — leser `instock`/`outofstock`-
+  klassen som WooCommerce alltid legger på produktkortet, uavhengig av tema.
+  Dekker Collectible, Gameninja, Kanoncon, Neo Tokyo, Playlot og Spillmonster.
+
+Butikker med egne/uvanlige plattformer (**Ark, Nille, Outland, Lekekassen,
+Maxgaming**) scrapes ved å lese HTML-en direkte med en nettleser (Playwright,
+generisk `card_selector`/`name_selector`/`price_selector` i
+`PLAYWRIGHT_SITES`, eller en egen funksjon som `scrape_nille()`/
+`scrape_outland()` for butikker med spesielle behov som scrolling). Disse
+sidene endrer struktur fra tid til annen. Hvis boten plutselig finner 0
+produkter på en side (sjekk loggen i Actions-kjøringen), må du:
   1. Åpne siden i nettleseren din
   2. Høyreklikk på et produktkort → "Inspiser"
   3. Finn riktig CSS-klasse/selector og oppdater `card_selector`,
      `name_selector` og `price_selector` i `scrape.py`
+
+**Norli og PokeMadness** blokkerer automatiske besøk (403/Cloudflare), og
+**CardCollect** er en klientrendret Nuxt-app der vi ikke har verifisert en
+stabil nok datakilde ennå — alle tre vises som "Sjekk manuelt" i
+dashboardet (`MANUAL_CHECK_STORES`) i stedet.
 
 **Spesielt om Nille:** Nille er primært en fysisk butikkjede, og noen produktsider
 viser tilgjengelighet per butikk ("finn i butikk") i stedet for ren nettlagerstatus.
@@ -100,7 +133,16 @@ om nødvendig.
 
 ## Legge til flere butikker
 
-Åpne `scrape.py` og legg til et nytt objekt i `PLAYWRIGHT_SITES`-listen med
-riktig URL og selektorer, eller skriv en egen funksjon som for Cardcenter
-hvis butikken har et offentlig API (Shopify-butikker gjenkjennes ofte på at
-URL-ene inneholder `/collections/` og `/products/`).
+1. Sjekk om `<butikk>/products.json` svarer med gyldig JSON — da er det en
+   Shopify-butikk, og du legger den bare til i `SHOPIFY_STORES` i `scrape.py`
+   (finn riktig samlings-handle via `<butikk>/collections/<handle>/products.json`
+   eller `<butikk>/collections.json`).
+2. Hvis ikke: sjekk om siden er WooCommerce (klasser som `woocommerce-Price-amount`,
+   `instock`/`outofstock` i HTML-en) eller viser tegn til "24Nettbutikk"
+   (`productlist__product`-klasser) / QuickButik (`data-s-title`/`data-s-price`-
+   attributter) — legg da butikken til i `WOOCOMMERCE_SITES`, `NETTBUTIKK24_SITES`
+   eller `QUICKBUTIK_SITES`, som gjenbruker en eksisterende generisk scraper.
+3. Ellers: legg til et nytt objekt i `PLAYWRIGHT_SITES`-listen med riktig URL
+   og `card_selector`/`name_selector`/`price_selector` (se Ark-oppføringen som
+   mal), eller skriv en egen funksjon som `scrape_nille()` hvis butikken har
+   uvanlige behov (f.eks. scrolling for å laste inn flere produkter).

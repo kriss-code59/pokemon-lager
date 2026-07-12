@@ -1,19 +1,32 @@
 """
 Pokemon-lagerscanner for norske nettbutikker.
 
-Scanner automatisk Ark, Cardcenter, Nille, PokeShop (poke-shop.no),
-Outland og Pokelageret for Pokemon-produkter og lagrer resultatet som JSON
-(docs/data.json) som dashboardet leser. I tillegg lagres alle
-lagerhendelser (nye varer, restock, utsolgt, prisendring) i docs/history.json
-(brukes av statistikk-/nyheter-sidene), og de enkleste hendelsene (restock/
-nye varer, siste 14 dager) i docs/changes.json (brukes av forsidens
-"Nylig restocket"-seksjon).
+Scanner ca. 35 norske nettbutikker (se SHOPIFY_STORES og PLAYWRIGHT_SITES) for
+Pokemon-produkter og lagrer resultatet som JSON (docs/data.json) som
+dashboardet leser. I tillegg lagres alle lagerhendelser (nye varer, restock,
+utsolgt, prisendring) i docs/history.json (brukes av statistikk-/
+nyheter-sidene), og de enkleste hendelsene (restock/nye varer, siste 14
+dager) i docs/changes.json (brukes av forsidens "Nylig restocket"-seksjon).
 
-Norli og PokeMadness blokkerer automatiske nettleserbesok (Norli svarer med
-HTTP 403, PokeMadness viser en Cloudflare-utfordring). Vi bygger ikke inn
-teknikker for a omga slike blokkeringer (ingen fingerprint-triksing e.l.),
-sa disse to butikkene vises i stedet som "sjekk manuelt" i dashboardet, med
-en direkte lenke til butikkens Pokemon-side -- se MANUAL_CHECK_STORES.
+De fleste butikkene bruker en av fire kjente plattformer, som lar oss bruke
+generiske scrapere i stedet for a skreddersy en per butikk:
+  - Shopify (offentlig products.json-API) -- se scrape_shopify_store()
+  - "24Nettbutikk" (norsk plattform, schema.org-markup) -- se scrape_nettbutikk24()
+  - QuickButik (norsk/nordisk plattform, data-s-title/data-s-price-attributter
+    direkte pa produktkortet) -- se scrape_quickbutik()
+  - WooCommerce (instock/outofstock-klasser direkte pa produktkortet,
+    uavhengig av tema) -- se scrape_woocommerce()
+Butikker med egne/uvanlige plattformer (Ark, Nille, Outland, Lekekassen,
+Maxgaming) bruker enten en egen funksjon eller generiske CSS-selektorer i
+PLAYWRIGHT_SITES (card_selector/name_selector/price_selector).
+
+Norli, PokeMadness og CardCollect blokkerer automatiske nettleserbesok, eller
+krever mer arbeid enn de andre (Norli: HTTP 403, PokeMadness:
+Cloudflare-utfordring, CardCollect: klientrendret Nuxt-app uten
+skrapbar HTML/API vi har verifisert). Vi bygger ikke inn teknikker for a
+omga blokkeringer (ingen fingerprint-triksing e.l.), sa disse butikkene
+vises i stedet som "sjekk manuelt" i dashboardet, med en direkte lenke til
+butikkens Pokemon-side -- se MANUAL_CHECK_STORES.
 
 Kjor lokalt:
     pip install -r requirements.txt
@@ -25,6 +38,7 @@ import json
 import re
 import time
 import datetime
+import unicodedata
 from dataclasses import dataclass, asdict
 from urllib.request import urlopen, Request
 
@@ -60,9 +74,27 @@ class Product:
     store_count: int | None = None  # antall fysiske butikker med varen (kun noen butikker oppgir dette)
 
 
+_NORWEGIAN_LETTER_MAP = str.maketrans({
+    "æ": "ae", "Æ": "AE",  # ae-ligatur
+    "ø": "o", "Ø": "O",  # o-skra (dekomponeres ikke av NFKD)
+})
+
+
+def strip_diacritics(text: str) -> str:
+    """Fjerner norske diakritiske tegn (bl.a. a-ring, o-skra, ae-ligatur) sa vi
+    kan matche mot IN_STOCK_WORDS/OUT_OF_STOCK_WORDS, som er skrevet uten dem
+    (denne fila er ren ASCII av design). Uten dette ville f.eks. ekte
+    sidetekst "Pa lager" (med a-ring) aldri matche monsteret "pa lager" (uten).
+    ae og o-skra dekomponeres ikke av NFKD (de er egne bokstaver, ikke
+    grunnbokstav+aksent i Unicode), sa de ma erstattes eksplisitt."""
+    text = text.translate(_NORWEGIAN_LETTER_MAP)
+    normalized = unicodedata.normalize("NFKD", text)
+    return "".join(c for c in normalized if not unicodedata.combining(c))
+
+
 def classify_stock(text: str) -> bool | None:
     """Gir True (pa lager), False (utsolgt) eller None (usikker) basert pa tekst."""
-    t = text.lower()
+    t = strip_diacritics(text.lower())
     has_out = any(w in t for w in OUT_OF_STOCK_WORDS)
     has_in = any(w in t for w in IN_STOCK_WORDS)
     if has_out and not has_in:
@@ -131,101 +163,227 @@ def diagnose_possible_block(page) -> str | None:
 
 
 # ---------------------------------------------------------------------------
-# CARDCENTER.NO -- Shopify har et offentlig produkt-API, mye mer robust enn
-# a scrape HTML. Vi bruker det direkte i stedet for Playwright her.
+# SHOPIFY-BUTIKKER -- alle Shopify-butikker har et offentlig products.json-API
+# per samling, mye mer robust enn a scrape HTML. Vi bruker det direkte i
+# stedet for Playwright for alle disse butikkene.
+#
+# "variant_mode" styrer hvordan vi haandterer produkter med flere Shopify-
+# varianter:
+#   - "each": hver variant blir en egen Product med variant-id i URL-en
+#     (Shopify sitt ?variant=-format). Naadvendig naar varianter kan vaere
+#     reelt ULIKE produkter (f.eks. "Booster Box" og "Booster Pack" paa
+#     samme produktoppfoering, eller ulike sett/tilstander for loskort) --
+#     ellers ville vi blande sammen pris/lagerstatus for ulike varer, og
+#     flere varianter ville kollidert i "url"-noekkelen som resten av koden
+#     (lagerhendelser, produktside-oppslag) bruker til aa identifisere varer.
+#   - "first": kun variants[0] sin pris brukes, og lagerstatus er "noen
+#     variant tilgjengelig". Egnet naar variantene kun er stoerrelse/farge
+#     av samme vare (Cardcenter sitt opprinnelige oppsett).
+#
+# "require_pokemon_title" brukes for butikker der samlingene ogsaa inneholder
+# andre spill/tilbehoer (f.eks. Braspill er en generell brettspillbutikk) --
+# da hopper vi over produkter som ikke har "pokemon" i tittelen.
 # ---------------------------------------------------------------------------
-CARDCENTER_COLLECTIONS = [
-    "pokemon",
-    "pokemon-booster-pakker",
-    "booster-boxer",
-    "elite-trainer-boxer",
-    "collection-bokser",
+SHOPIFY_STORES = [
+    {
+        "store": "Cardcenter",
+        "base_url": "https://cardcenter.no",
+        "collections": ["pokemon", "pokemon-booster-pakker", "booster-boxer", "elite-trainer-boxer", "collection-bokser"],
+        "variant_mode": "first",
+    },
+    {
+        "store": "Pokelageret",
+        "base_url": "https://pokelageret.no",
+        "collections": ["pokemon"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Arcticloot",
+        "base_url": "https://arcticloot.no",
+        "collections": ["pokemon-tcg", "pokemon-single-kort", "japansk-pokemon", "mega-pokemon"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "BoosterKongen",
+        "base_url": "https://boosterkongen.no",
+        "collections": ["engelske-pokemon-produkter", "japanske-pokemon-produkter", "kinesiske-pokemon-produkter"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Braspill",
+        "base_url": "https://braspill.no",
+        "collections": ["engelsk", "japansk", "kinesisk-pokemon", "singles"],
+        "variant_mode": "each",
+        # Braspill er en generell brettspill-/TCG-butikk -- disse samlingene
+        # inneholder ogsaa andre spill (bl.a. One Piece) og tilbehoer/frakt.
+        "require_pokemon_title": True,
+    },
+    {
+        "store": "Cardstore",
+        # OBS: www.cardstore.no er en separat "headless" Shopify Hydrogen-
+        # butikk der /products.json ikke virker -- den klassiske butikken
+        # med API ligger paa store.cardstore.no.
+        "base_url": "https://store.cardstore.no",
+        "collections": ["pokemon"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "EpiCards",
+        "base_url": "https://epicards.no",
+        "collections": ["pokemon-kort"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "LABOGE",
+        "base_url": "https://laboge.no",
+        "collections": [""],  # hele butikken er Pokemon-fokusert
+        "variant_mode": "each",
+    },
+    {
+        "store": "NorthTCG",
+        "base_url": "https://northtcg.no",
+        "collections": ["pokemon-page"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Packs of Norway",
+        "base_url": "https://packsofnorway.no",
+        "collections": [""],  # hele butikken er (semi-)vintage Pokemon-pakker
+        "variant_mode": "each",
+    },
+    {
+        "store": "PokeNordic",
+        "base_url": "https://pokenordic.no",
+        "collections": ["engelsk-japanske-produkter"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Pokebua",
+        "base_url": "https://pokebua.no",
+        "collections": [""],  # hele butikken er Pokemon (sealed + graderte kort)
+        "variant_mode": "each",
+    },
+    {
+        "store": "Pokefriends",
+        "base_url": "https://pokefriends.no",
+        "collections": ["all"],  # hele butikken er Pokemon-fokusert
+        "variant_mode": "each",
+    },
+    {
+        "store": "Pokelink",
+        "base_url": "https://pokelink.no",
+        "collections": ["alle"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Pokesingles",
+        "base_url": "https://pokesingles.no",
+        "collections": ["all"],  # loskort-marked, hele butikken er Pokemon
+        "variant_mode": "each",
+    },
+    {
+        "store": "Pokestore",
+        "base_url": "https://pokestore.no",
+        # Pokestore selger ogsaa Magic/One Piece/Yu-Gi-Oh/Weiss Schwarz --
+        # "alt-pokemon" er samlingen som samler alt Pokemon-relatert.
+        "collections": ["alt-pokemon"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "RetroWorld",
+        "base_url": "https://retroworld.no",
+        "collections": ["pokemon-tcg"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Spillbua",
+        "base_url": "https://spillbua.no",
+        "collections": ["pokemon-tcg"],
+        "variant_mode": "each",
+    },
 ]
 
 
-def scrape_cardcenter() -> list[Product]:
+def scrape_shopify_collection(
+    store: str, base_url: str, handle: str, variant_mode: str, require_pokemon_title: bool = False
+) -> list[Product]:
+    """Henter alle produkter i en Shopify-samling via det offentlige
+    products.json-APIet, med paginering (viktig for store kataloger som
+    Pokesingles). Tom handle ("") betyr "hele butikken" (products.json paa
+    rot-nivaa) for butikker der ALT de selger er Pokemon."""
     products = []
-    seen_urls = set()
-    for handle in CARDCENTER_COLLECTIONS:
-        url = f"https://cardcenter.no/collections/{handle}/products.json?limit=250"
+    page_num = 1
+    while True:
+        collection_part = f"collections/{handle}/" if handle else ""
+        url = f"{base_url}/{collection_part}products.json?limit=250&page={page_num}"
         try:
             req = Request(url, headers={"User-Agent": USER_AGENT})
             with urlopen(req, timeout=20) as resp:
                 data = json.loads(resp.read())
         except Exception as e:
-            print(f"[cardcenter] Feil ved henting av {handle}: {e}")
-            continue
+            print(f"[{store}] Feil ved henting av {handle or 'produkter'} (side {page_num}): {e}")
+            break
 
-        for p in data.get("products", []):
-            product_url = f"https://cardcenter.no/products/{p['handle']}"
-            if product_url in seen_urls:
+        page_products = data.get("products", [])
+        if not page_products:
+            break
+
+        for p in page_products:
+            title = p.get("title", "")
+            if require_pokemon_title and "pokemon" not in title.lower() and "pokémon" not in title.lower():
                 continue
-            seen_urls.add(product_url)
+
             variants = p.get("variants", [])
-            available = any(v.get("available") for v in variants)
-            price = variants[0]["price"] if variants else "?"
-            products.append(
-                Product(
-                    store="Cardcenter",
-                    name=p["title"],
-                    price=f"{price} kr",
-                    in_stock=available,
-                    url=product_url,
+            if variant_mode == "each":
+                for v in variants:
+                    variant_title = (v.get("title") or "").strip()
+                    name = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
+                    product_url = f"{base_url}/products/{p['handle']}?variant={v['id']}"
+                    products.append(
+                        Product(
+                            store=store,
+                            name=name,
+                            price=f"{v.get('price', '?')} kr",
+                            in_stock=v.get("available"),
+                            url=product_url,
+                        )
+                    )
+            else:
+                product_url = f"{base_url}/products/{p['handle']}"
+                available = any(v.get("available") for v in variants)
+                price = variants[0]["price"] if variants else "?"
+                products.append(
+                    Product(store=store, name=title, price=f"{price} kr", in_stock=available, url=product_url)
                 )
-            )
-        time.sleep(1)
+
+        if len(page_products) < 250:
+            break
+        page_num += 1
+        if page_num > 20:  # sikkerhetsgrense (5000 produkter i én samling)
+            break
+        time.sleep(0.5)
+
     return products
 
 
-# ---------------------------------------------------------------------------
-# POKELAGERET.NO -- ogsa en Shopify-butikk med offentlig products.json-API
-# (samme tilnaerming som Cardcenter). "pokemon"-samlingen alene dekker alle
-# TCG-produktene deres (boosterbokser, ETB, tin, boosterpakker osv.) uten
-# paginering (under 250-grensen), sa vi trenger ikke flere samlinger slik
-# Cardcenter gjor.
-#
-# VIKTIG forskjell fra Cardcenter: mange produkter her har flere variants
-# som er reelt ULIKE produkter (f.eks. "Booster Box" og "Booster Pack" pa
-# samme produktoppforing, eller ulike fargevalg av samme ETB), ikke bare
-# stoerrelse/farge-varianter av EN vare. Vi kan derfor ikke bruke
-# Cardcenter-monsteret (variants[0]-pris + "any available") uten aa blande
-# sammen pris/lagerstatus for helt ulike produkter. Vi lager i stedet en
-# egen Product PER variant, med variant-id i URL-en (Shopify sitt
-# ?variant=-format) sa hver variant far en unik URL -- ellers ville flere
-# variants av samme produkt kollidert i "url"-nokkelen som resten av koden
-# (lagerhendelser, produktside-oppslag) bruker til aa identifisere varer.
-# ---------------------------------------------------------------------------
-POKELAGERET_COLLECTIONS = ["pokemon"]
+def scrape_shopify_store(config: dict) -> list[Product]:
+    store = config["store"]
+    base_url = config["base_url"]
+    variant_mode = config.get("variant_mode", "each")
+    require_pokemon_title = config.get("require_pokemon_title", False)
+    products: list[Product] = []
+    seen_urls = set()
 
-
-def scrape_pokelageret() -> list[Product]:
-    products = []
-    for handle in POKELAGERET_COLLECTIONS:
-        url = f"https://pokelageret.no/collections/{handle}/products.json?limit=250"
-        try:
-            req = Request(url, headers={"User-Agent": USER_AGENT})
-            with urlopen(req, timeout=20) as resp:
-                data = json.loads(resp.read())
-        except Exception as e:
-            print(f"[pokelageret] Feil ved henting av {handle}: {e}")
-            continue
-
-        for p in data.get("products", []):
-            for v in p.get("variants", []):
-                variant_title = (v.get("title") or "").strip()
-                name = p["title"] if variant_title in ("", "Default Title") else f"{p['title']} - {variant_title}"
-                product_url = f"https://pokelageret.no/products/{p['handle']}?variant={v['id']}"
-                products.append(
-                    Product(
-                        store="Pokelageret",
-                        name=name,
-                        price=f"{v.get('price', '?')} kr",
-                        in_stock=v.get("available"),
-                        url=product_url,
-                    )
-                )
+    for handle in config["collections"]:
+        batch = scrape_shopify_collection(store, base_url, handle, variant_mode, require_pokemon_title)
+        for prod in batch:
+            if prod.url in seen_urls:
+                continue
+            seen_urls.add(prod.url)
+            products.append(prod)
         time.sleep(1)
-    print(f"[pokelageret] Fant {len(products)} produkter totalt.")
+
+    print(f"[{store}] Fant {len(products)} produkter totalt.")
     return products
 
 
@@ -287,13 +445,6 @@ PLAYWRIGHT_SITES = [
         "custom_scraper": "nille",
     },
     {
-        "store": "PokeShop",
-        "urls": POKE_SHOP_CATEGORIES,
-        # poke-shop.no bruker schema.org-markup (itemprop="availability") for
-        # lagerstatus direkte i kategorikortene -- se scrape_poke_shop().
-        "custom_scraper": "poke_shop",
-    },
-    {
         "store": "Outland",
         "urls": [OUTLAND_URL],
         # Outland viser bade nettlager-status og antall fysiske butikker
@@ -302,7 +453,130 @@ PLAYWRIGHT_SITES = [
         # utfordring som Nille) -- se scrape_outland().
         "custom_scraper": "outland",
     },
+    {
+        "store": "Lekekassen",
+        "urls": ["https://lekekassen.no/samlekort/pokemon-kort"],
+        # Magento -- server-rendret HTML, standard Magento-klassenavn.
+        "card_selector": "li.product.product-item, div.product-item-info",
+        "name_selector": "a.product-item-link",
+        "price_selector": ".price-wrapper .price, .price-box .price",
+    },
+    {
+        "store": "Maxgaming",
+        "urls": ["https://www.maxgaming.no/no/hjem-fritid/samlekortspill/pokemon"],
+        # Egen/proprietaer plattform -- se scrape_maxgaming() (lagerstatus-
+        # teksten er usynlig for Playwright sin inner_text(), sa vi trenger
+        # en egen funksjon som bruker text_content() i stedet).
+        "custom_scraper": "maxgaming",
+    },
 ]
+
+# ---------------------------------------------------------------------------
+# "24NETTBUTIKK" -- en norsk nettbutikkplattform (bl.a. poke-shop.no,
+# boosterpakker.no, cardkings.no, emken.no) som bruker schema.org-markup
+# (itemprop="availability") for lagerstatus direkte i kategorikortene -- se
+# scrape_nettbutikk24(). Samme funksjon dekker alle butikker paa plattformen.
+# ---------------------------------------------------------------------------
+NETTBUTIKK24_SITES = [
+    {
+        "store": "PokeShop",
+        "urls": POKE_SHOP_CATEGORIES,
+        "custom_scraper": "nettbutikk24",
+    },
+    {
+        "store": "Boosterpakker",
+        "urls": [
+            "https://boosterpakker.no/butikk/boosterpakker",
+            "https://boosterpakker.no/butikk/booster-bokser",
+            "https://boosterpakker.no/butikk/collection-bokser",
+            "https://boosterpakker.no/butikk/japanske-enkeltkort",
+            "https://boosterpakker.no/butikk/graderte-kort",
+        ],
+        "custom_scraper": "nettbutikk24",
+    },
+    {
+        "store": "Card Kings",
+        "urls": [
+            "https://cardkings.no/butikk/pokemon",
+            "https://cardkings.no/butikk/japansk-pokemon",
+            "https://cardkings.no/butikk/kinesisk-pokemon",
+            "https://cardkings.no/butikk/single-kort",
+        ],
+        "custom_scraper": "nettbutikk24",
+    },
+    {
+        "store": "Emken",
+        "urls": [
+            "https://www.emken.no/butikk/spill-samling/pokemon/kort/boosterpakker",
+            "https://www.emken.no/butikk/spill-samling/pokemon/kort/collection-bokser",
+            "https://www.emken.no/butikk/spill-samling/pokemon/kort/elite-trainer-box",
+            "https://www.emken.no/butikk/spill-samling/pokemon/kort/single-kort/alle-kort",
+        ],
+        "custom_scraper": "nettbutikk24",
+    },
+]
+
+# ---------------------------------------------------------------------------
+# QUICKBUTIK -- en nordisk nettbutikkplattform (Cardhouse, Mystic Trades,
+# Pokecandy) som skriver produktnavn/pris direkte som data-attributter
+# (data-s-title/data-s-price) paa kortelementet, uavhengig av tema -- se
+# scrape_quickbutik().
+# ---------------------------------------------------------------------------
+QUICKBUTIK_SITES = [
+    {
+        "store": "Cardhouse",
+        "urls": [
+            "https://cardhouse.no/engelsk/pokemon-booster-pakker",
+            "https://cardhouse.no/engelsk/pokemon-elite-trainer-box",
+            "https://cardhouse.no/engelsk/pokemon-bundles",
+            "https://cardhouse.no/japansk/pokemon-japanske-booster-bokser",
+        ],
+    },
+    {
+        "store": "Mystic Trades",
+        "urls": [
+            "https://mystictrades.no/pokemon",
+            "https://mystictrades.no/pokemon/display-booster-box",
+            "https://mystictrades.no/pokemon/booster-packs-bundles",
+            "https://mystictrades.no/pokemon/premium-collections-etb-upc",
+        ],
+    },
+    {
+        "store": "Pokecandy",
+        "urls": [
+            "https://pokecandy.no/pokemon-engelsk",
+            "https://pokecandy.no/pokemon-japansk",
+            "https://pokecandy.no/pokemon-kinesisk",
+            "https://pokecandy.no/pokemon-etbupccollections",
+        ],
+    },
+]
+
+# ---------------------------------------------------------------------------
+# WOOCOMMERCE -- WordPress-baserte butikker (Collectible, Gameninja,
+# Kanoncon, Neo Tokyo, Playlot, Spillmonster). WooCommerce legger alltid til
+# klassen "instock"/"outofstock" direkte paa produktkortet uavhengig av
+# tema, sa vi leser lagerstatus derfra i stedet for temaspesifikk norsk
+# tekst -- se scrape_woocommerce().
+# ---------------------------------------------------------------------------
+WOOCOMMERCE_SITES = [
+    {"store": "Collectible", "urls": ["https://collectible.no/pokemon-kort/"]},
+    {"store": "Gameninja", "urls": ["https://www.gameninja.no/produktkategori/samlekortspill/pokemon/"]},
+    {"store": "Kanoncon", "urls": ["https://www.kanoncon.no/avdeling/tcg/pokemon/"]},
+    # Bruker den brede foreldrekategorien ("pokemon"), ikke den smale
+    # "pokemon-tcg"-underkategorien -- underkategorien har bare ~8 produkter,
+    # mens foreldrekategorien dekker det meste av Neo Tokyo sitt Pokemon-utvalg.
+    {"store": "Neo Tokyo", "urls": ["https://www.neo-tokyo.no/produktkategori/pokemon/"]},
+    {"store": "Playlot", "urls": ["https://playlot.no/produktkategori/pokemon/"]},
+    {"store": "Spillmonster", "urls": ["https://spillmonster.no/product-category/pokemon-tcg/"]},
+]
+
+PLAYWRIGHT_SITES = (
+    PLAYWRIGHT_SITES
+    + NETTBUTIKK24_SITES
+    + [{**site, "custom_scraper": "quickbutik"} for site in QUICKBUTIK_SITES]
+    + [{**site, "custom_scraper": "woocommerce"} for site in WOOCOMMERCE_SITES]
+)
 
 # Norli og PokeMadness blokkerer automatiserte besok (se docstring ovenfor).
 # Vi lister dem her med en direkte lenke, slik at dashboardet kan vise dem
@@ -318,6 +592,13 @@ MANUAL_CHECK_STORES = [
         "store": "PokeMadness",
         "url": "https://www.pokemadness.no/",
         "reason": "PokeMadness viser en Cloudflare-utfordring (\"Vent litt...\") til automatiske besok.",
+    },
+    {
+        "store": "CardCollect",
+        "url": "https://www.cardcollect.no/pokemon",
+        "reason": "Klientrendret Nuxt-app -- data lastes via en intern GraphQL-lignende "
+                  "API med markorbasert paginering (909+ produkter) som ikke er "
+                  "verifisert stabil nok til automatisk scraping enna.",
     },
 ]
 
@@ -478,12 +759,16 @@ def scrape_nille(page, site: dict) -> list[Product]:
     return list(collected.values())
 
 
-def scrape_poke_shop(page, site: dict) -> list[Product]:
-    """poke-shop.no viser pris og lagerstatus direkte i produktkortene pa
-    hver kategoriside, ved hjelp av standard schema.org-markup
+def scrape_nettbutikk24(page, site: dict) -> list[Product]:
+    """"24Nettbutikk" er en norsk nettbutikkplattform som flere butikker
+    bruker (poke-shop.no, boosterpakker.no, cardkings.no, emken.no m.fl.) --
+    samme CSS-klasser og markup uansett butikk, sa denne funksjonen er
+    stedsuavhengig (site["store"]/site["urls"] styrer hvilken butikk).
+    Plattformen viser pris og lagerstatus direkte i produktkortene pa hver
+    kategoriside, ved hjelp av standard schema.org-markup
     (<link itemprop="availability" href=".../InStock" eller ".../SoldOut">).
     Dette er mer palitelig enn a lete etter norsk tekst, og kategoriene her
-    er sma nok (under 15 produkter hver) til at vi ikke trenger scrolling
+    er sma nok (under 60 produkter hver) til at vi ikke trenger scrolling
     eller paginering."""
     store = site["store"]
     products: dict[str, Product] = {}
@@ -540,6 +825,216 @@ def scrape_poke_shop(page, site: dict) -> list[Product]:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
 
         time.sleep(1)
+
+    print(f"[{store}] Fant {len(products)} produkter totalt.")
+    return list(products.values())
+
+
+def scrape_quickbutik(page, site: dict) -> list[Product]:
+    """QuickButik er en nordisk nettbutikkplattform (bl.a. Cardhouse, Mystic
+    Trades og Pokecandy) som skriver produktnavn og pris direkte som
+    data-attributter (data-s-title/data-s-price) paa selve
+    produktkort-elementet, uavhengig av hvilket tema butikken bruker -- vi
+    kan derfor lese dem direkte i stedet for a matche temaspesifikke
+    CSS-klasser."""
+    store = site["store"]
+    products: dict[str, Product] = {}
+
+    for url in site["urls"]:
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(1500)
+            dismiss_cookie_banner(page)
+        except Exception as e:
+            print(f"[{store}] Kunne ikke laste {url}: {e}")
+            continue
+
+        cards = page.query_selector_all("[data-s-title][data-s-price]")
+        if not cards:
+            diag = diagnose_possible_block(page)
+            if diag:
+                print(f"[{store}] Fant ingen produktkort pa {url}. Mulig blokkering: {diag}")
+            else:
+                print(f"[{store}] Fant ingen produktkort pa {url} -- selektorene ma sjekkes.")
+            safe_screenshot(page, store, "_" + url.rstrip("/").split("/")[-1])
+
+        for card in cards:
+            try:
+                name = card.get_attribute("data-s-title")
+                price_raw = card.get_attribute("data-s-price")
+                if not name or not price_raw:
+                    continue
+
+                href = extract_href(card, url)
+                if not href or href in products:
+                    continue
+
+                # text_content() (rat DOM-tekstinnhold) i stedet for inner_text()
+                # (kun det Playwright regner som synlig rendret tekst) -- enkelte
+                # QuickButik-tema (som Cardhouse) skjuler "Sold out"/"Pa lager"-
+                # merket for inner_text() pa samme mate som Maxgaming (se
+                # scrape_maxgaming()).
+                in_stock = classify_stock(card.text_content())
+
+                products[href] = Product(
+                    store=store, name=name.strip(), price=f"{price_raw} kr", in_stock=in_stock, url=href,
+                )
+            except Exception as e:
+                print(f"[{store}] Feil ved lesing av produktkort: {e}")
+
+        time.sleep(1)
+
+    print(f"[{store}] Fant {len(products)} produkter totalt.")
+    return list(products.values())
+
+
+WOOCOMMERCE_NAME_SELECTOR = (
+    ".woocommerce-loop-product__title a, .wd-entities-title a, "
+    "a.woocommerce-LoopProduct-link, h2.woocommerce-loop-product__title a, "
+    ".product-title a, .elementor-heading-title a"
+)
+WOOCOMMERCE_PRICE_SELECTOR = ".price ins .woocommerce-Price-amount, .price .woocommerce-Price-amount"
+
+
+def scrape_woocommerce(page, site: dict) -> list[Product]:
+    """Generisk scraper for WooCommerce-baserte butikker (Collectible,
+    Gameninja, Kanoncon, Neo Tokyo, Playlot, Spillmonster). WooCommerce
+    legger alltid til klassen "instock" eller "outofstock" direkte pa
+    produktkort-elementet uavhengig av tema, sa vi leser lagerstatus derfra
+    i stedet for a lete etter temaspesifikk norsk tekst. Kategorisidene
+    paginerer med standard WordPress-URLer (/page/2/, /page/3/ osv.), som vi
+    folger til en side ikke gir nye produkter."""
+    store = site["store"]
+    products: dict[str, Product] = {}
+
+    for base_url in site["urls"]:
+        for page_num in range(1, 16):
+            url = base_url if page_num == 1 else f"{base_url.rstrip('/')}/page/{page_num}/"
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=45000)
+                page.wait_for_timeout(1500)
+                if page_num == 1:
+                    dismiss_cookie_banner(page)
+            except Exception as e:
+                print(f"[{store}] Kunne ikke laste {url}: {e}")
+                break
+
+            try:
+                page.wait_for_selector("li.product, div.product.type-product", timeout=15000)
+            except Exception:
+                pass
+            cards = page.query_selector_all("li.product, div.product.type-product")
+
+            if not cards and page_num == 1:
+                # Elementor-baserte tema (som Gameninja) kan bruke litt tid pa
+                # a rendre inn produktgrid-widgeten -- prov en gang til.
+                print(f"[{store}] Fant ingen produktkort ved forste forsok pa {url}, provver pa nytt...")
+                try:
+                    page.reload(wait_until="domcontentloaded", timeout=45000)
+                    page.wait_for_timeout(3000)
+                    dismiss_cookie_banner(page)
+                    page.wait_for_selector("li.product, div.product.type-product", timeout=15000)
+                except Exception:
+                    pass
+                cards = page.query_selector_all("li.product, div.product.type-product")
+
+            if not cards:
+                if page_num == 1:
+                    diag = diagnose_possible_block(page)
+                    if diag:
+                        print(f"[{store}] Fant ingen produktkort pa {url}. Mulig blokkering: {diag}")
+                    else:
+                        print(f"[{store}] Fant ingen produktkort pa {url} -- selektorene ma sjekkes.")
+                    safe_screenshot(page, store, "_" + url.rstrip("/").split("/")[-1])
+                break
+
+            new_found = 0
+            for card in cards:
+                try:
+                    link_el = card.query_selector(WOOCOMMERCE_NAME_SELECTOR)
+                    if not link_el:
+                        continue
+                    name = link_el.inner_text().strip()
+                    href = link_el.get_attribute("href")
+                    if not name or not href or href in products:
+                        continue
+
+                    price_el = card.query_selector(WOOCOMMERCE_PRICE_SELECTOR)
+                    if price_el:
+                        price = price_el.inner_text().strip()
+                    else:
+                        # Enkelte Elementor-baserte tema (som Gameninja) rendrer
+                        # prisen som ren tekst uten standard WooCommerce-klasser.
+                        price = extract_price_fallback(card.inner_text()) or "?"
+
+                    card_class = card.get_attribute("class") or ""
+                    if "outofstock" in card_class:
+                        in_stock = False
+                    elif "instock" in card_class:
+                        in_stock = True
+                    else:
+                        in_stock = None
+
+                    products[href] = Product(store=store, name=name, price=price, in_stock=in_stock, url=href)
+                    new_found += 1
+                except Exception as e:
+                    print(f"[{store}] Feil ved lesing av produktkort: {e}")
+
+            if new_found == 0:
+                break
+            time.sleep(1)
+
+    print(f"[{store}] Fant {len(products)} produkter totalt.")
+    return list(products.values())
+
+
+def scrape_maxgaming(page, site: dict) -> list[Product]:
+    """Maxgaming sin lagerstatus-tekst ("Pa lager") ligger i DOM-en, men
+    Playwright sin inner_text() -- som kun tar med det den regner som synlig
+    rendret tekst -- plukker den ikke opp her (sannsynligvis en CSS-detalj i
+    temaet deres). Vi bruker derfor text_content() (rene DOM-tekstinnhold,
+    uavhengig av synlighet) for a lese lagerstatus paalitelig."""
+    store = site["store"]
+    products: dict[str, Product] = {}
+    url = site["urls"][0]
+
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        page.wait_for_timeout(2500)
+        dismiss_cookie_banner(page)
+    except Exception as e:
+        print(f"[{store}] Kunne ikke laste {url}: {e}")
+        return []
+
+    cards = page.query_selector_all("div.PT_Wrapper")
+    if not cards:
+        diag = diagnose_possible_block(page)
+        if diag:
+            print(f"[{store}] Fant ingen produktkort pa {url}. Mulig blokkering: {diag}")
+        else:
+            print(f"[{store}] Fant ingen produktkort pa {url} -- selektorene ma sjekkes.")
+        safe_screenshot(page, store)
+
+    for card in cards:
+        try:
+            href = extract_href(card, url)
+            if not href or href in products:
+                continue
+
+            name_el = card.query_selector("div.PT_Beskr")
+            name = " ".join(name_el.text_content().split()) if name_el else None
+            if not name:
+                continue
+
+            price_el = card.query_selector("span.PT_PrisNormal")
+            price = price_el.text_content().strip() if price_el else "?"
+
+            status_el = card.query_selector("[class*='PT_text_Lagerstatus']")
+            in_stock = classify_stock(status_el.text_content()) if status_el else None
+
+            products[href] = Product(store=store, name=name, price=price, in_stock=in_stock, url=href)
+        except Exception as e:
+            print(f"[{store}] Feil ved lesing av produktkort: {e}")
 
     print(f"[{store}] Fant {len(products)} produkter totalt.")
     return list(products.values())
@@ -1000,11 +1495,9 @@ def main():
     all_products: list = []
     previous_by_url = load_previous_products()
 
-    print("Scanner Cardcenter (via API)...")
-    all_products += scrape_cardcenter()
-
-    print("Scanner Pokelageret (via API)...")
-    all_products += scrape_pokelageret()
+    for config in SHOPIFY_STORES:
+        print(f"Scanner {config['store']} (via Shopify-API)...")
+        all_products += scrape_shopify_store(config)
 
     with sync_playwright() as p:
         # --disable-*-throttling/backgrounding: uten disse behandler Chromium
@@ -1028,10 +1521,16 @@ def main():
             custom = site.get("custom_scraper")
             if custom == "nille":
                 all_products += scrape_nille(page, site)
-            elif custom == "poke_shop":
-                all_products += scrape_poke_shop(page, site)
+            elif custom == "nettbutikk24":
+                all_products += scrape_nettbutikk24(page, site)
             elif custom == "outland":
                 all_products += scrape_outland(page, site)
+            elif custom == "maxgaming":
+                all_products += scrape_maxgaming(page, site)
+            elif custom == "quickbutik":
+                all_products += scrape_quickbutik(page, site)
+            elif custom == "woocommerce":
+                all_products += scrape_woocommerce(page, site)
             else:
                 all_products += scrape_with_browser(page, site)
 
