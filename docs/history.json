@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-13T11:18:18+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon TCG Gem Pack Vol. 5 Booster Box (Kinesisk)",
+      "price": "kr699,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-gem-pack-vol-5/",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-13T11:18:18+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon TCG Gem Pack Vol. 5 Booster Box (Kinesisk)",
+      "price": "kr699,00",
+      "previous_price": "kr649,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-gem-pack-vol-5/",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-13T10:58:20+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Lucario Kort Display Ramme",
