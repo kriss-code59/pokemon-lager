@@ -64,6 +64,45 @@ def extract_price_fallback(text: str) -> str | None:
     return None
 
 
+# Kjente tilbehors-/samleobjekt-nokkelord (ikke selve TCG-kortproduktet) --
+# brukt av classify_product_class() til a skille kortprodukter (boosterpakker,
+# bokser, ETB, tin, blister, deck, enkeltkort osv.) fra tilbehor (ermer,
+# oppbevaring, leker, klaer osv.), sa varslingsinnstillingene kan filtrere
+# pa "kun kortprodukter". Standardverdien er "card" siden kildene her
+# allerede er Pokemon-TCG-fokuserte kategorisider -- de aller fleste
+# produktene ER kortprodukter, sa vi ser etter kjente tilbehors-nokkelord i
+# stedet for a kreve en positiv kort-match (som lett ville utelatt
+# legitime kortprodukter med uvante navn). NB: dette er en heuristikk --
+# nokkelordlisten kan trenge justering etter hvert som nye produkttyper
+# dukker opp (samme vedlikeholdsbehov som selektorene, se README).
+ACCESSORY_KEYWORD_PATTERN = re.compile(
+    r"\b("
+    r"sleeves?|toploaders?|top loader|binder|portfolio|album|"
+    r"deck ?box(?:es)?|deck boks(?:er)?|kortbeskytter(?:e)?|"
+    r"oppbevaringsboks(?:er)?|storage box(?:es)?|dividers?|sortering(?:sboks)?|"
+    r"playmats?|play mat|spillmatte(?:r)?|dice|terninger?|coins?|mynter?|"
+    r"pins?|buttons?|kortholder(?:e)?|card holders?|life counters?|"
+    r"plush|bamse(?:r)?|actionfigur(?:er)?|samlefigur(?:er)?|action figures?|funko|"
+    r"byggesett|puslespill|puzzles?|"
+    r"klaer|klær|genser(?:e)?|hettegenser(?:e)?|t-skjorte(?:r)?|tskjorte(?:r)?|caps?|"
+    r"luer?|beanies?|ryggsekk(?:er)?|backpacks?|vesker?|bags?|"
+    r"nokkelring(?:er)?|keychains?|"
+    r"candy|godteri|bubble ?gum|tyggegummi|kopper?|mugs?|"
+    r"vannflaske(?:r)?|water bottles?|kalender(?:e)?|calendars?|notatbok|"
+    r"notebooks?|klistremerkesett|sticker ?sets?|posters?"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def classify_product_class(name: str) -> str:
+    """Se ACCESSORY_KEYWORD_PATTERN. Returnerer "accessory" hvis navnet
+    inneholder et kjent tilbehors-nokkelord, ellers "card"."""
+    if ACCESSORY_KEYWORD_PATTERN.search(name or ""):
+        return "accessory"
+    return "card"
+
+
 @dataclass
 class Product:
     store: str
@@ -72,6 +111,11 @@ class Product:
     in_stock: bool | None  # None = vi klarte ikke a avgjore lagerstatus
     url: str
     store_count: int | None = None  # antall fysiske butikker med varen (kun noen butikker oppgir dette)
+    product_class: str = ""  # "card" eller "accessory" -- se classify_product_class()
+
+    def __post_init__(self):
+        if not self.product_class:
+            self.product_class = classify_product_class(self.name)
 
 
 _NORWEGIAN_LETTER_MAP = str.maketrans({
@@ -104,37 +148,6 @@ def classify_stock(text: str) -> bool | None:
     if has_out:
         return False
     return None
-
-
-def get_norli_online_stock(page) -> bool | None:
-    """Norli skiller mellom nettlager og lager i fysiske butikker (klikk-og-hent).
-    Vi vil kun vite om varen kan kjopes pa nett akkurat na, sa vi leter
-    spesifikt etter nettlager-teksten ("Pa lager" / "Ikke pa lager") og
-    ignorerer klikk-og-hent-status for fysiske butikker (som har klassenavn
-    som inneholder "clickPickup")."""
-    try:
-        text = page.evaluate(
-            """
-            () => {
-                const els = [...document.querySelectorAll('b, strong, span, div')];
-                for (const el of els) {
-                    if (el.children.length > 0) continue;
-                    const t = el.textContent.trim();
-                    if ((t === 'Pa lager' || t === 'Ikke pa lager') && !el.className.includes('clickPickup')) {
-                        return t;
-                    }
-                }
-                return null;
-            }
-            """
-        )
-    except Exception:
-        return None
-    if text == "Pa lager":
-        return True
-    if text == "Ikke pa lager":
-        return False
-    return False
 
 
 def diagnose_possible_block(page) -> str | None:
@@ -454,6 +467,14 @@ PLAYWRIGHT_SITES = [
         "custom_scraper": "outland",
     },
     {
+        "store": "Norli",
+        "urls": ["https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort"],
+        # Kategorisiden viser ikke ekte nettlagerstatus -- vi besoker hver
+        # produktside og leser schema.org-JSON-LD (langt mer robust enn CSS-
+        # klasser eller norsk statustekst) -- se scrape_norli().
+        "custom_scraper": "norli",
+    },
+    {
         "store": "Lekekassen",
         "urls": ["https://lekekassen.no/samlekort/pokemon-kort"],
         # Magento -- server-rendret HTML, standard Magento-klassenavn.
@@ -583,11 +604,6 @@ PLAYWRIGHT_SITES = (
 # under "Sjekk manuelt" i stedet for a late som om vi har fersk lagerdata
 # fra dem.
 MANUAL_CHECK_STORES = [
-    {
-        "store": "Norli",
-        "url": "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
-        "reason": "Norli svarer med HTTP 403 Forbidden til automatiske besok.",
-    },
     {
         "store": "PokeMadness",
         "url": "https://www.pokemadness.no/",
@@ -1040,6 +1056,148 @@ def scrape_maxgaming(page, site: dict) -> list[Product]:
     return list(products.values())
 
 
+# schema.org sitt Offer.availability-felt (https://schema.org/ItemAvailability)
+# -- vi bryr oss kun om varen faktisk kan kjopes pa nett akkurat na.
+NORLI_AVAILABILITY_MAP = {
+    "instock": True,
+    "limitedavailability": True,
+    "outofstock": False,
+    "soldout": False,
+    "discontinued": False,
+    "preorder": False,  # ikke i salg enna
+    "backorder": False,
+}
+
+
+def scrape_norli_product_page(page, store: str, url: str) -> Product | None:
+    """Leser navn/pris/lagerstatus fra schema.org Product-JSON-LD-en
+    (<script type="application/ld+json">) som Norli sin produktside
+    injiserer med JavaScript. Dette er en stabil, SEO-drevet standard
+    (Google krever den for rich snippets i sok), og dermed langt mer robust
+    mot design-/tekstendringer enn a matche CSS-klassenavn eller norsk
+    statustekst -- se scrape_norli() for bakgrunnen om hvorfor forrige
+    versjon av denne scraperen sluttet a fungere palitelig."""
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        page.wait_for_timeout(1500)
+    except Exception as e:
+        print(f"[{store}] Kunne ikke laste produktside {url}: {e}")
+        return None
+
+    try:
+        data = None
+        for script_el in page.query_selector_all('script[type="application/ld+json"]'):
+            try:
+                parsed = json.loads(script_el.inner_text())
+            except Exception:
+                continue
+            if parsed.get("@type") == "Product":
+                data = parsed
+                break
+
+        if not data:
+            print(f"[{store}] Fant ingen Product-JSON-LD pa {url} -- siden har kanskje endret struktur.")
+            safe_screenshot(page, store, "_produktside")
+            return None
+
+        name = data.get("name")
+        offers = data.get("offers") or {}
+        if isinstance(offers, list):  # noen produkter har flere "offers" (varianter)
+            offers = offers[0] if offers else {}
+        price = offers.get("price")
+        availability = (offers.get("availability") or "").rsplit("/", 1)[-1].lower()
+        in_stock = NORLI_AVAILABILITY_MAP.get(availability)
+
+        if not name or price is None:
+            return None
+
+        if isinstance(price, float) and price.is_integer():
+            price = int(price)
+
+        return Product(store=store, name=name, price=f"{price} kr", in_stock=in_stock, url=url)
+    except Exception as e:
+        print(f"[{store}] Feil ved lesing av produktside {url}: {e}")
+        return None
+
+
+def scrape_norli(page, site: dict) -> list[Product]:
+    """Norli bruker en klientrendret SPA for kategorisiden, med Algolia
+    InstantSearch for produktlisten. "li.ais-Hits-item" er Algolia sin egen,
+    stabile klasse -- ikke Norli sine egne CSS-modul-klasser (som
+    "itemNorli-name-EIs"), som far et nytt tilfeldig hash-suffiks ved hver
+    deploy og derfor er skjore a scrape mot over tid.
+
+    Kategorisiden viser IKKE ekte nettlagerstatus (kun "klikk og hent" for
+    fysiske butikker, som er noe helt annet) -- ekte nettlagerstatus hentes
+    i stedet fra hver produktside, se scrape_norli_product_page(). Siden
+    endrer bade blokkeringspolicy og norsk statustekst fra tid til annen
+    (forrige versjon av denne scraperen brukte en eksakt tekstsjekk mot
+    "Pa lager" som sluttet a matche etter at Norli endret ordlyden til
+    "Pa lager - Forventes sendt innen 1-2 virkedager" / "Ikke tilgjengelig
+    pa nettlager"), sa vi unngar bade CSS-klassenavn og norsk fritekst helt
+    her og bruker schema.org-JSON-LD i stedet.
+
+    Kategorisiden paginerer med standard "?page=N"-URLer (samme monster som
+    "paginate"-flagget i scrape_with_browser)."""
+    store = site["store"]
+    base_url = site["urls"][0]
+    product_urls: list[str] = []
+    seen: set[str] = set()
+
+    for page_num in range(1, MAX_PAGES_PER_CATEGORY + 1):
+        url = base_url if page_num == 1 else f"{base_url}?page={page_num}"
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(2000)
+            if page_num == 1:
+                dismiss_cookie_banner(page)
+                page.wait_for_timeout(500)
+        except Exception as e:
+            print(f"[{store}] Kunne ikke laste {url}: {e}")
+            break
+
+        try:
+            page.wait_for_selector("li.ais-Hits-item", timeout=15000)
+        except Exception:
+            pass
+        cards = page.query_selector_all("li.ais-Hits-item")
+
+        if not cards:
+            if page_num == 1:
+                diag = diagnose_possible_block(page)
+                if diag:
+                    print(f"[{store}] Fant ingen produktkort pa {url}. Mulig blokkering: {diag}")
+                else:
+                    print(f"[{store}] Fant ingen produktkort pa {url} -- selektorene ma sjekkes.")
+                safe_screenshot(page, store)
+            break
+
+        new_found = 0
+        for card in cards:
+            href = extract_href(card, url)
+            if not href or href in seen:
+                continue
+            seen.add(href)
+            product_urls.append(href)
+            new_found += 1
+
+        if new_found == 0:
+            break
+        time.sleep(1)
+
+    print(f"[{store}] Fant {len(product_urls)} produktlenker, besoker hver produktside...")
+
+    products = []
+    for url in product_urls:
+        product = scrape_norli_product_page(page, store, url)
+        if product:
+            products.append(product)
+        time.sleep(1)
+
+    print(f"[{store}] Fant {len(products)} produkter totalt.")
+    return products
+
+
 def scrape_outland(page, site: dict) -> list[Product]:
     """Outland viser nettlager-status og antall fysiske butikker direkte i
     kategorikortene (f.eks. "Pa nettlager" + "Tilgjengelig i 5 butikker"),
@@ -1180,16 +1338,13 @@ def scrape_product_detail_pages(page, site: dict, product_urls: list[str]) -> li
             if not price:
                 price = extract_price_fallback(full_text) or "?"
 
-            if site.get("stock_mode") == "norli":
-                in_stock = get_norli_online_stock(page)
+            stock_selector = site.get("detail_stock_selector")
+            if stock_selector:
+                stock_el = page.query_selector(stock_selector)
+                stock_text = stock_el.inner_text() if stock_el else full_text
             else:
-                stock_selector = site.get("detail_stock_selector")
-                if stock_selector:
-                    stock_el = page.query_selector(stock_selector)
-                    stock_text = stock_el.inner_text() if stock_el else full_text
-                else:
-                    stock_text = full_text
-                in_stock = classify_stock(stock_text)
+                stock_text = full_text
+            in_stock = classify_stock(stock_text)
 
             results.append(
                 Product(
@@ -1344,6 +1499,7 @@ def compute_new_stock_events(all_products: list, previous_by_url: dict) -> list:
                 "name": p.name,
                 "price": p.price,
                 "url": p.url,
+                "product_class": p.product_class,
                 "event": "restock" if prev is not None else "ny",
             })
     return events
@@ -1450,45 +1606,146 @@ def update_history_log(new_events: list, max_entries: int = 20000, max_age_days:
     return filtered
 
 
-def send_ntfy_notification(events: list) -> None:
-    """Sender push-varsel via ntfy.sh nar nye lagerhendelser (restock / nye
-    produkter) er oppdaget. Krever miljovariabelen NTFY_TOPIC (satt i
-    .github/workflows/scrape.yml). Gjor ingenting hvis den mangler eller det
-    ikke er noen nye hendelser denne kjoringen."""
-    topic = os.environ.get("NTFY_TOPIC")
-    if not topic or not events:
-        return
+NOTIFICATION_SETTINGS_PATH = "docs/notification_settings.json"
 
-    lines = []
-    for e in events[:10]:
-        tag = "NY" if e["event"] == "ny" else "RESTOCK"
-        lines.append(f"[{tag}] {e['store']}: {e['name']} ({e['price']})")
-    if len(events) > 10:
-        lines.append(f"... og {len(events) - 10} til")
-    message = "\n".join(lines)
+# Se docs/settings.html for en enkel oversikt over disse innstillingene, og
+# README.md for full dokumentasjon av feltene.
+DEFAULT_NOTIFICATION_SETTINGS = {
+    "enabled": True,
+    # Hvilke produktklasser det skal varsles for -- se classify_product_class().
+    # Standard: kun ekte kortprodukter (boosterpakker, bokser, ETB, tin,
+    # blister, enkeltkort osv.), ikke tilbehor/samleobjekter.
+    "product_classes": ["card"],
+    "new_product_alert": {"enabled": True},
+    "restock_alert": {"enabled": True, "priority": "high"},
+    "store_allowlist": [],  # tom liste = alle butikker
+    "store_blocklist": [],
+    "keyword_blocklist": [],  # ekstra manuell utelukkelse pa delstreng i produktnavn (store-ufolsomt)
+}
 
-    title = (
-        f"Pokemon Lager: {len(events)} ny hendelse"
-        if len(events) == 1
-        else f"Pokemon Lager: {len(events)} nye hendelser"
-    )
 
+def load_notification_settings() -> dict:
+    """Leser varslingsinnstillinger fra notification_settings.json
+    (repo-rot). Manglende felt fylles inn med DEFAULT_NOTIFICATION_SETTINGS,
+    sa en delvis utfylt fil (eller ingen fil i det hele tatt) fortsatt gir
+    fornuftig oppforsel som matcher standardpreferansen (kun kortprodukter,
+    begge varslingstyper pa)."""
+    settings = json.loads(json.dumps(DEFAULT_NOTIFICATION_SETTINGS))  # dyp kopi
+    try:
+        with open(NOTIFICATION_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            user_settings = json.load(f)
+        for key, value in user_settings.items():
+            if key in ("new_product_alert", "restock_alert") and isinstance(value, dict):
+                settings[key].update(value)
+            else:
+                settings[key] = value
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        print(f"Klarte ikke lese {NOTIFICATION_SETTINGS_PATH}, bruker standardverdier: {e}")
+    return settings
+
+
+def event_matches_settings(event: dict, settings: dict) -> bool:
+    if event.get("product_class") not in settings["product_classes"]:
+        return False
+
+    store = event.get("store", "")
+    allowlist = settings.get("store_allowlist") or []
+    if allowlist and store not in allowlist:
+        return False
+    if store in (settings.get("store_blocklist") or []):
+        return False
+
+    name = (event.get("name") or "").lower()
+    for keyword in settings.get("keyword_blocklist") or []:
+        if keyword and keyword.lower() in name:
+            return False
+
+    return True
+
+
+def _send_ntfy_request(topic: str, title: str, message: str, priority: str, tags: str) -> bool:
     try:
         req = Request(
             f"https://ntfy.sh/{topic}",
             data=message.encode("utf-8"),
             method="POST",
-            headers={
-                "Title": title,
-                "Priority": "default",
-                "Tags": "tada",
-            },
+            headers={"Title": title, "Priority": priority, "Tags": tags},
         )
         with urlopen(req, timeout=10) as resp:
             resp.read()
-        print(f"Sendte ntfy-varsel til topic '{topic}' ({len(events)} hendelser).")
+        return True
     except Exception as e:
-        print(f"Klarte ikke sende ntfy-varsel: {e}")
+        print(f"Klarte ikke sende ntfy-varsel ('{title}'): {e}")
+        return False
+
+
+def _format_event_lines(events: list) -> str:
+    lines = [f"{e['store']}: {e['name']} ({e['price']})" for e in events[:10]]
+    if len(events) > 10:
+        lines.append(f"... og {len(events) - 10} til")
+    return "\n".join(lines)
+
+
+def send_ntfy_notification(events: list) -> None:
+    """Sender push-varsel via ntfy.sh nar nye lagerhendelser (restock / nye
+    produkter) er oppdaget. Krever miljovariabelen NTFY_TOPIC (satt i
+    .github/workflows/scrape.yml). Gjor ingenting hvis den mangler eller det
+    ikke er noen nye hendelser denne kjoringen.
+
+    Hendelsene filtreres forst mot notification_settings.json (se
+    load_notification_settings() og event_matches_settings()) -- kun
+    hendelser som matcher produktklasse/butikk/nokkelord-innstillingene
+    sendes videre. Nye produkter og restock sendes deretter som to
+    SEPARATE varsler: restock far hoy prioritet og et tydelig
+    "RESTOCK"-merke i tittelen (siden produktet ofte kan bli utsolgt igjen
+    raskt -- det haster mer enn et helt nytt produkt som nettopp ble
+    lagt ut), mens nye produkter sendes med normal prioritet."""
+    topic = os.environ.get("NTFY_TOPIC")
+    if not topic or not events:
+        return
+
+    settings = load_notification_settings()
+    if not settings.get("enabled", True):
+        return
+
+    matching = [e for e in events if event_matches_settings(e, settings)]
+    if not matching:
+        print(f"{len(events)} lagerhendelser oppdaget, men ingen matcher "
+              f"notification_settings.json -- ingen ntfy-varsel sendt.")
+        return
+
+    new_events = [e for e in matching if e["event"] == "ny"]
+    restock_events = [e for e in matching if e["event"] == "restock"]
+    sent_count = 0
+
+    if new_events and settings["new_product_alert"].get("enabled", True):
+        # NB: HTTP-headere (Title/Tags) ma vaere ASCII -- ntfy sin "Tags"-liste
+        # (her "sparkles") tolkes av ntfy-klienten som emoji-ikoner, sa vi
+        # trenger ikke rå emoji-tegn i selve Title-headeren (som ville krasje
+        # med UnicodeEncodeError siden urllib koder headere som latin-1).
+        title = (
+            f"NYTT PRODUKT: {len(new_events)} treff"
+            if len(new_events) == 1
+            else f"NYE PRODUKTER: {len(new_events)} treff"
+        )
+        if _send_ntfy_request(topic, title, _format_event_lines(new_events), "default", "sparkles"):
+            sent_count += len(new_events)
+
+    if restock_events and settings["restock_alert"].get("enabled", True):
+        priority = settings["restock_alert"].get("priority", "high")
+        title = (
+            f"RESTOCK: {len(restock_events)} produkt tilbake pa lager"
+            if len(restock_events) == 1
+            else f"RESTOCK: {len(restock_events)} produkter tilbake pa lager"
+        )
+        if _send_ntfy_request(topic, title, _format_event_lines(restock_events), priority, "rotating_light,warning"):
+            sent_count += len(restock_events)
+
+    skipped = len(events) - len(matching)
+    print(f"Sendte ntfy-varsel til topic '{topic}' ({sent_count} hendelser sendt, "
+          f"{skipped} filtrert bort av notification_settings.json, {len(events)} totalt).")
 
 
 def main():
@@ -1525,6 +1782,8 @@ def main():
                 all_products += scrape_nettbutikk24(page, site)
             elif custom == "outland":
                 all_products += scrape_outland(page, site)
+            elif custom == "norli":
+                all_products += scrape_norli(page, site)
             elif custom == "maxgaming":
                 all_products += scrape_maxgaming(page, site)
             elif custom == "quickbutik":
@@ -1566,14 +1825,26 @@ if __name__ == "__main__":
     import sys
 
     if "--test-notification" in sys.argv:
-        # Sender en enkelt test-hendelse via ntfy uten a skanne butikkene --
-        # brukes for a verifisere at NTFY_TOPIC/ntfy-oppsettet fungerer (se
-        # "Send test-varsel (ntfy)"-steget i .github/workflows/scrape.yml).
+        # Sender en enkelt test-hendelse (nytt produkt) via ntfy uten a skanne
+        # butikkene -- brukes for a verifisere at NTFY_TOPIC/ntfy-oppsettet
+        # fungerer (se "Send test-varsel (ntfy)"-steget i
+        # .github/workflows/scrape.yml).
         send_ntfy_notification([{
             "event": "ny",
             "store": "Testbutikk",
             "name": "Dette er en test-varsel fra Pokemon Lagerbot",
             "price": "0 kr",
+            "product_class": "card",
+        }])
+    elif "--test-restock-notification" in sys.argv:
+        # Sender en enkelt restock-test-hendelse -- brukes for a verifisere
+        # at restock-varsler far riktig hoy prioritet og "RESTOCK"-merking.
+        send_ntfy_notification([{
+            "event": "restock",
+            "store": "Testbutikk",
+            "name": "Dette er en restock-test-varsel fra Pokemon Lagerbot",
+            "price": "0 kr",
+            "product_class": "card",
         }])
     else:
         main()

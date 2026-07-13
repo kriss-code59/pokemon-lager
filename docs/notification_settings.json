@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "product_classes": ["card"],
+  "new_product_alert": {
+    "enabled": true
+  },
+  "restock_alert": {
+    "enabled": true,
+    "priority": "high"
+  },
+  "store_allowlist": [],
+  "store_blocklist": [],
+  "keyword_blocklist": []
+}

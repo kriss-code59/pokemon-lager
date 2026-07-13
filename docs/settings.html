@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varslingsinnstillinger - Pokemon Lagerstatus</title>
+<meta name="description" content="Velg hvilke produkter og butikker du vil ha push-varsler for -- nye produkter og restock -- og last ned oppdaterte innstillinger.">
+<link rel="canonical" href="https://kriss-code59.github.io/pokemon-lager/settings.html">
+<meta name="theme-color" content="#ffcb05">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Hopp til innhold</a>
+<header class="topnav">
+  <a class="brand" href="index.html">🔍 Pokemon Lagerstatus</a>
+  <div class="navRight">
+    <div class="navlinks">
+      <a href="index.html">Hjem</a>
+      <a href="explorer.html">Utforsk</a>
+      <a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
+      <a href="statistics.html">Statistikk</a>
+      <a href="settings.html" class="active">Varsler</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <h1>Varslingsinnstillinger</h1>
+  <p class="sub">Velg nøyaktig hvilke produkter du vil ha push-varsler for via ntfy. Endringene her lagres <strong>ikke automatisk</strong> — se "Slik lagrer du endringene" nederst.</p>
+</section>
+
+<section class="settings-section">
+  <div class="settings-card">
+    <h2>Varslingstyper</h2>
+    <label class="settings-toggle">
+      <input type="checkbox" id="setEnabled" checked>
+      <span>Varsler er skrudd på (av/på-bryter for alt sammen)</span>
+    </label>
+    <label class="settings-toggle">
+      <input type="checkbox" id="setNewEnabled" checked>
+      <span><strong>Nytt produkt-varsel</strong> — når et nytt matchende produkt dukker opp</span>
+    </label>
+    <label class="settings-toggle">
+      <input type="checkbox" id="setRestockEnabled" checked>
+      <span><strong>Restock-varsel</strong> — når et utsolgt produkt kommer tilbake på lager</span>
+    </label>
+    <div class="settings-field">
+      <label for="setRestockPriority">Prioritet på restock-varsler</label>
+      <select id="setRestockPriority">
+        <option value="urgent">Akutt (vibrerer/lyder selv i "ikke forstyrr")</option>
+        <option value="high" selected>Høy (anbefalt)</option>
+        <option value="default">Normal</option>
+      </select>
+      <p class="hint">Restock-varsler er høy prioritet som standard og merkes tydelig med "RESTOCK" i tittelen, siden produktet ofte blir utsolgt igjen raskt.</p>
+    </div>
+  </div>
+
+  <div class="settings-card">
+    <h2>Produkttype</h2>
+    <p class="hint">Boten klassifiserer hvert produkt automatisk som «kortprodukt» (boosterpakker, bokser, ETB, tin, blister, enkeltkort osv.) eller «tilbehør» (ermer, oppbevaring, leker, klær, godteri osv.) basert på produktnavnet.</p>
+    <label class="settings-toggle">
+      <input type="checkbox" id="setClassCard" checked>
+      <span>Kortprodukter</span>
+    </label>
+    <label class="settings-toggle">
+      <input type="checkbox" id="setClassAccessory">
+      <span>Tilbehør / samleobjekter</span>
+    </label>
+  </div>
+
+  <div class="settings-card">
+    <h2>Butikker</h2>
+    <div class="settings-field">
+      <label for="setStoreMode">Hvilke butikker skal varsles for?</label>
+      <select id="setStoreMode">
+        <option value="all" selected>Alle butikker</option>
+        <option value="allowlist">Kun de valgte under</option>
+        <option value="blocklist">Alle unntatt de valgte under</option>
+      </select>
+    </div>
+    <div class="chip-row" id="storeChipsSettings"></div>
+  </div>
+
+  <div class="settings-card">
+    <h2>Nøkkelord-utelukkelse</h2>
+    <p class="hint">Ett nøkkelord per linje. Produkter med et av disse ordene i navnet blir aldri varslet om, uansett kategori/butikk (f.eks. for å utelukke spesifikke serier eller enkeltord som "sticker" boten ikke fanger opp automatisk).</p>
+    <textarea id="setKeywords" rows="4" placeholder="f.eks.&#10;jumbo kort&#10;proxy"></textarea>
+  </div>
+
+  <div class="settings-card">
+    <h2>Forhåndsvisning</h2>
+    <pre id="jsonPreview" class="json-preview"></pre>
+    <div class="settings-actions">
+      <button id="downloadBtn" class="btn-primary">⬇ Last ned notification_settings.json</button>
+      <button id="copyBtn">📋 Kopier JSON</button>
+      <span id="copyFeedback" class="hint"></span>
+    </div>
+  </div>
+
+  <div class="settings-card">
+    <h2>Slik lagrer du endringene</h2>
+    <p class="hint">
+      Dette dashboardet er en statisk nettside uten egen server, så innstillingene kan ikke lagres direkte herfra.
+      Last ned filen over, og last den opp til <code>docs/notification_settings.json</code> i GitHub-repoet ditt
+      (Fil → Last opp filer på github.com, eller be Claude Code gjøre det for deg) — deretter erstatter den den
+      eksisterende filen, og boten bruker de nye innstillingene fra neste kjøring.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="sitefoot">Data hentes automatisk via GitHub Actions. Bygget for a holde oversikt over Pokemon-varer i norske nettbutikker.</footer>
+
+<script>
+let currentSettings = null;
+let knownStores = [];
+let selectedStores = new Set();
+
+async function init() {
+  try {
+    const [settingsRes, dataRes] = await Promise.all([
+      fetch('notification_settings.json').catch(() => null),
+      fetch('data.json').catch(() => null),
+    ]);
+    currentSettings = settingsRes && settingsRes.ok ? await settingsRes.json() : defaultSettings();
+    if (dataRes && dataRes.ok) {
+      const data = await dataRes.json();
+      knownStores = [...new Set((data.products || []).map(p => p.store))].sort();
+    }
+  } catch (e) {
+    currentSettings = defaultSettings();
+  }
+  applySettingsToForm(currentSettings);
+  buildStoreChips();
+  updatePreview();
+}
+
+function defaultSettings() {
+  return {
+    enabled: true,
+    product_classes: ['card'],
+    new_product_alert: { enabled: true },
+    restock_alert: { enabled: true, priority: 'high' },
+    store_allowlist: [],
+    store_blocklist: [],
+    keyword_blocklist: [],
+  };
+}
+
+function applySettingsToForm(s) {
+  document.getElementById('setEnabled').checked = s.enabled !== false;
+  document.getElementById('setNewEnabled').checked = s.new_product_alert?.enabled !== false;
+  document.getElementById('setRestockEnabled').checked = s.restock_alert?.enabled !== false;
+  document.getElementById('setRestockPriority').value = s.restock_alert?.priority || 'high';
+  const classes = s.product_classes || ['card'];
+  document.getElementById('setClassCard').checked = classes.includes('card');
+  document.getElementById('setClassAccessory').checked = classes.includes('accessory');
+  document.getElementById('setKeywords').value = (s.keyword_blocklist || []).join('\n');
+
+  if ((s.store_allowlist || []).length) {
+    document.getElementById('setStoreMode').value = 'allowlist';
+    selectedStores = new Set(s.store_allowlist);
+  } else if ((s.store_blocklist || []).length) {
+    document.getElementById('setStoreMode').value = 'blocklist';
+    selectedStores = new Set(s.store_blocklist);
+  } else {
+    document.getElementById('setStoreMode').value = 'all';
+    selectedStores = new Set();
+  }
+}
+
+function buildStoreChips() {
+  const container = document.getElementById('storeChipsSettings');
+  container.innerHTML = '';
+  const mode = document.getElementById('setStoreMode').value;
+  container.style.display = mode === 'all' ? 'none' : 'flex';
+  for (const store of knownStores) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'chip' + (selectedStores.has(store) ? ' active' : '');
+    btn.textContent = store;
+    btn.onclick = () => {
+      if (selectedStores.has(store)) selectedStores.delete(store); else selectedStores.add(store);
+      buildStoreChips();
+      updatePreview();
+    };
+    container.appendChild(btn);
+  }
+}
+
+function collectSettingsFromForm() {
+  const classes = [];
+  if (document.getElementById('setClassCard').checked) classes.push('card');
+  if (document.getElementById('setClassAccessory').checked) classes.push('accessory');
+
+  const mode = document.getElementById('setStoreMode').value;
+  const keywordLines = document.getElementById('setKeywords').value
+    .split('\n').map(s => s.trim()).filter(Boolean);
+
+  return {
+    enabled: document.getElementById('setEnabled').checked,
+    product_classes: classes,
+    new_product_alert: { enabled: document.getElementById('setNewEnabled').checked },
+    restock_alert: {
+      enabled: document.getElementById('setRestockEnabled').checked,
+      priority: document.getElementById('setRestockPriority').value,
+    },
+    store_allowlist: mode === 'allowlist' ? [...selectedStores] : [],
+    store_blocklist: mode === 'blocklist' ? [...selectedStores] : [],
+    keyword_blocklist: keywordLines,
+  };
+}
+
+function updatePreview() {
+  const settings = collectSettingsFromForm();
+  document.getElementById('jsonPreview').textContent = JSON.stringify(settings, null, 2);
+}
+
+document.getElementById('setStoreMode').addEventListener('change', () => { buildStoreChips(); updatePreview(); });
+for (const id of ['setEnabled', 'setNewEnabled', 'setRestockEnabled', 'setRestockPriority', 'setClassCard', 'setClassAccessory', 'setKeywords']) {
+  document.getElementById(id).addEventListener('input', updatePreview);
+  document.getElementById(id).addEventListener('change', updatePreview);
+}
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  const json = document.getElementById('jsonPreview').textContent;
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'notification_settings.json';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  const json = document.getElementById('jsonPreview').textContent;
+  try {
+    await navigator.clipboard.writeText(json);
+    document.getElementById('copyFeedback').textContent = 'Kopiert!';
+    setTimeout(() => { document.getElementById('copyFeedback').textContent = ''; }, 2000);
+  } catch (e) {
+    document.getElementById('copyFeedback').textContent = 'Kunne ikke kopiere automatisk — marker teksten manuelt.';
+  }
+});
+
+init();
+</script>
+</body>
+</html>
