@@ -1,6 +1,14 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-13T08:18:14+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Funko POP! Leafeon",
+      "price": "189.00 kr",
+      "url": "https://pokestore.no/products/pokemon-funko-pop-leafeon?variant=50899159351527",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-13T07:58:14+00:00",
       "store": "LABOGE",
       "name": "Gholdengo 099/132 - Mega Evolution Base - NM (ID: 53278375530336)",
@@ -2390,14 +2398,6 @@
       "name": "Pokemon Eevee Mynt",
       "price": "19.00 kr",
       "url": "https://cardcenter.no/products/pokemon-eevee-mynt",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-12T04:18:13+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Magnetic Coin Set Paldea Vol. 2",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-magnetic-coin-set-paldea-vol-2",
       "event": "ny"
     }
   ]
