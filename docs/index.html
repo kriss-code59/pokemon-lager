@@ -29,6 +29,7 @@
       <a href="explorer.html">Utforsk</a>
       <a href="updates.html">Nyheter<span id="updatesBadge"></span></a>
       <a href="statistics.html">Statistikk</a>
+      <a href="settings.html">Varsler</a>
     </div>
     <button class="theme-toggle" id="themeToggle" title="Bytt mellom mork/lys modus" aria-label="Bytt mellom mork og lys modus"></button>
   </div>
@@ -75,6 +76,7 @@
     <button class="chip" data-status="outstock">🔴 Utsolgt</button>
     <button class="chip" data-status="unknown">⚪ Ukjent</button>
   <button class="chip" id="favChip">⭐ Favoritter</button>
+  <button class="chip" id="hideAccessoriesChip" title="Skjul ermer, oppbevaring, leker og annet tilbehor -- vis kun kortprodukter">🃏 Kun kortprodukter</button>
 </div>
   <div class="chip-row" id="storeChips"></div>
   <div class="chip-row" id="categoryChips"></div>
@@ -119,6 +121,7 @@ let categoryFilter = null;
 let groupsByKey = {};
 let favoritesOnly = false;
 let favorites = new Set(JSON.parse(localStorage.getItem('favoriteProducts') || '[]'));
+let hideAccessories = false;
 
 function normalize(s) {
   return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -395,6 +398,12 @@ document.getElementById('favChip').addEventListener('click', () => {
   render();
 });
 
+document.getElementById('hideAccessoriesChip').addEventListener('click', () => {
+  hideAccessories = !hideAccessories;
+  document.getElementById('hideAccessoriesChip').classList.toggle('active', hideAccessories);
+  render();
+});
+
 let searchDebounce = null;
 document.getElementById('searchBox').addEventListener('input', (e) => {
   const value = e.target.value;
@@ -480,6 +489,7 @@ function render() {
 
   if (categoryFilter) list = list.filter(p => categoryOf(p.name) === categoryFilter);
   if (favoritesOnly) list = list.filter(p => favorites.has(p.url));
+  if (hideAccessories) list = list.filter(p => p.product_class !== 'accessory');
   if (minPriceFilter !== null) list = list.filter(p => parsePrice(p.price) >= minPriceFilter);
   if (maxPriceFilter !== null) list = list.filter(p => parsePrice(p.price) <= maxPriceFilter);
 

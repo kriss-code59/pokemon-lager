@@ -1,17 +1,19 @@
 # Pokemon Lagerbot 🔍
 
-Scanner ~36 norske nettbutikker for Pokemon-produkter og viser resultatet i
-et enkelt dashboard. Butikklisten er kuratert fra pokejakt.no sin
-butikkoversikt pluss et par ekstra (Nille, Norli) — se `SHOPIFY_STORES` og
-`PLAYWRIGHT_SITES` i `scrape.py` for den fullstendige listen. Ark, Cardcenter,
-Nille, PokeShop, Outland, Pokelageret, Arcticloot, BoosterKongen,
-Boosterpakker, Braspill, Card Kings, Cardhouse, Cardstore, Collectible,
-Emken, EpiCards, Gameninja, Kanoncon, LABOGE, Lekekassen, Maxgaming, Mystic
-Trades, Neo Tokyo, NorthTCG, Packs of Norway, Playlot, PokeNordic, Pokebua,
-Pokecandy, Pokefriends, Pokelink, Pokesingles, Pokestore, RetroWorld,
-Spillbua og Spillmonster scrapes automatisk (Norli, PokeMadness og
-CardCollect blokkerer automatiske besøk eller krever mer arbeid — se "Sjekk
-manuelt" i dashboardet).
+Scanner ~37 norske nettbutikker for Pokemon-produkter og viser resultatet i
+et enkelt dashboard, med push-varsler (ntfy) for nye produkter og restock —
+se "Varsler"-siden i dashboardet for å velge nøyaktig hva du vil varsles om.
+Butikklisten er kuratert fra pokejakt.no sin butikkoversikt pluss et par
+ekstra (Nille, Norli) — se `SHOPIFY_STORES` og `PLAYWRIGHT_SITES` i
+`scrape.py` for den fullstendige listen. Ark, Cardcenter, Nille, Norli,
+PokeShop, Outland, Pokelageret, Arcticloot, BoosterKongen, Boosterpakker,
+Braspill, Card Kings, Cardhouse, Cardstore, Collectible, Emken, EpiCards,
+Gameninja, Kanoncon, LABOGE, Lekekassen, Maxgaming, Mystic Trades, Neo
+Tokyo, NorthTCG, Packs of Norway, Playlot, PokeNordic, Pokebua, Pokecandy,
+Pokefriends, Pokelink, Pokesingles, Pokestore, RetroWorld, Spillbua og
+Spillmonster scrapes automatisk (PokeMadness og CardCollect blokkerer
+automatiske besøk eller krever mer arbeid — se "Sjekk manuelt" i
+dashboardet).
 
 ## Sider i dashboardet
 
@@ -27,6 +29,8 @@ manuelt" i dashboardet).
 - **Produktside** (`product.html`) — sammenligning på tvers av butikker,
   prishistorikk-graf og en enkel restock-prognose basert på tidligere
   intervaller.
+- **Varsler** (`settings.html`) — velg nøyaktig hvilke produkter/butikker du
+  vil ha push-varsler for, se "Varslingsinnstillinger" under.
 
 All historikk (lagerstatus, pris, tidspunkt, butikk) lagres hendelsesbasert i
 `docs/history.json` (opptil 400 dager) — se `compute_extra_events()` og
@@ -48,10 +52,18 @@ Du kan også trigge en kjøring manuelt: gå til **Actions**-fanen → "Scan Pok
 
 ## Push-varsler (ntfy)
 
-Boten sender et push-varsel via [ntfy.sh](https://ntfy.sh) hver gang den finner
-et nytt produkt eller en restock. Standard-topic er `pokemon-lager-sk82sw9vyl`
-(generert tilfeldig) — installer ntfy-appen (iOS/Android/nettleser) og
-abonner på det topic-navnet, så får du varsler med en gang.
+Boten sender push-varsler via [ntfy.sh](https://ntfy.sh) når den finner et
+nytt produkt eller en restock — installer ntfy-appen (iOS/Android/nettleser)
+og abonner på topic-navnet ditt, så får du varsler med en gang. Standard-topic
+er `pokemon-lager-sk82sw9vyl` (generert tilfeldig).
+
+Det sendes to ulike varseltyper (se `send_ntfy_notification()` i `scrape.py`):
+
+- **Nytt produkt-varsel** — normal prioritet, sendes når et helt nytt
+  matchende produkt dukker opp i en butikk for første gang.
+- **Restock-varsel** — høy prioritet med et tydelig "RESTOCK" i tittelen,
+  sendes når et produkt som var utsolgt kommer tilbake på lager (siden
+  populære restocks ofte blir utsolgt igjen raskt, haster dette varselet mer).
 
 **Merk:** ntfy-topics er offentlige med mindre du selv setter opp autentisering
 — alle som gjetter/finner topic-navnet kan abonnere på det samme varselet.
@@ -60,6 +72,44 @@ offentlig synlig i repoet. Vil du ha et privat topic-navn, sett en
 repo-secret kalt `NTFY_TOPIC` (Settings → Secrets and variables → Actions)
 med ditt eget, hemmelige topic-navn — den overstyrer standardverdien
 automatisk uten at du trenger å endre kode.
+
+### Varslingsinnstillinger
+
+Gå til **Varsler**-siden i dashboardet (`settings.html`) for å velge nøyaktig
+hva du vil varsles om: produkttype (kortprodukter og/eller tilbehør),
+hvilke butikker, og et fritt nøkkelord-utelukkelsesfilter. Siden er statisk
+(ingen backend), så endringer lagres ikke automatisk — siden bygger en
+oppdatert `notification_settings.json` du laster ned/kopierer og legger inn
+i repoet (erstatter `docs/notification_settings.json`), så bruker boten de
+nye innstillingene fra neste kjøring.
+
+Innstillingene styrer `send_ntfy_notification()` i `scrape.py`:
+
+```json
+{
+  "enabled": true,
+  "product_classes": ["card"],
+  "new_product_alert": { "enabled": true },
+  "restock_alert": { "enabled": true, "priority": "high" },
+  "store_allowlist": [],
+  "store_blocklist": [],
+  "keyword_blocklist": []
+}
+```
+
+- **`product_classes`** — `"card"` og/eller `"accessory"`. Hvert produkt
+  klassifiseres automatisk av `classify_product_class()` basert på
+  produktnavnet (kjente tilbehørs-nøkkelord som "sleeve"/"toploader"/
+  "plush"/"figur"/"godteri" gir `"accessory"`, alt annet er `"card"`).
+  Standard er kun `"card"` — ingen varsler for tilbehør/samleobjekter.
+- **`store_allowlist`/`store_blocklist`** — tom liste betyr "alle butikker"
+  for allowlist. Har du satt en allowlist, brukes ikke blocklist.
+- **`keyword_blocklist`** — ekstra manuell utelukkelse på delstreng i
+  produktnavnet (store-ufølsomt), for tilfeller den automatiske
+  produktklassifiseringen ikke fanger opp.
+
+Manglende fil eller manglende felt faller tilbake til standardverdiene over
+(se `DEFAULT_NOTIFICATION_SETTINGS` i `scrape.py`).
 
 ## Nattemodus (22:00–04:00)
 
@@ -110,10 +160,23 @@ produkter på en side (sjekk loggen i Actions-kjøringen), må du:
   3. Finn riktig CSS-klasse/selector og oppdater `card_selector`,
      `name_selector` og `price_selector` i `scrape.py`
 
-**Norli og PokeMadness** blokkerer automatiske besøk (403/Cloudflare), og
+**Norli** (`scrape_norli()`) er et eget tilfelle: kategorisiden bruker Algolia
+InstantSearch (`li.ais-Hits-item` er Algolia sin egen, stabile klasse — ikke
+Norli sine egne CSS-modul-klasser, som får et nytt tilfeldig hash-suffiks ved
+hver deploy). Kategorisiden viser ikke ekte nettlagerstatus (kun "klikk og
+hent" for fysiske butikker), så vi besøker hver produktside og leser
+schema.org Product-JSON-LD-en (`<script type="application/ld+json">`) for
+navn/pris/lagerstatus — en stabil, SEO-drevet standard som er langt mer
+robust mot design-/tekstendringer enn CSS-klasser eller norsk statustekst.
+(Forrige versjon av denne scraperen sluttet å fungere fordi den lette etter
+en eksakt tekst — "Pa lager" — som Norli siden endret ordlyden på; det
+problemet kan ikke oppstå her siden `offers.availability` er et fast
+schema.org-verdisett, ikke fritekst.)
+
+**PokeMadness** blokkerer automatiske besøk (Cloudflare-utfordring), og
 **CardCollect** er en klientrendret Nuxt-app der vi ikke har verifisert en
-stabil nok datakilde ennå — alle tre vises som "Sjekk manuelt" i
-dashboardet (`MANUAL_CHECK_STORES`) i stedet.
+stabil nok datakilde ennå — begge vises som "Sjekk manuelt" i dashboardet
+(`MANUAL_CHECK_STORES`) i stedet.
 
 **Spesielt om Nille:** Nille er primært en fysisk butikkjede, og noen produktsider
 viser tilgjengelighet per butikk ("finn i butikk") i stedet for ren nettlagerstatus.
