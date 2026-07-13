@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-13T10:38:16+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK 30TH ANNIVERSARY FIRST PARTNER VOL. 2",
+      "price": "129,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/kinesisk-30th-anniversary-first-partner-vol-2",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-13T10:38:16+00:00",
+      "store": "Playlot",
+      "name": "151 Boosterpack JPN",
+      "price": "kr 299,00",
+      "previous_price": "kr 249,00",
+      "url": "https://playlot.no/produkt/151-boosterpack-jpn/",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-13T10:18:42+00:00",
       "store": "Cardcenter",
       "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
