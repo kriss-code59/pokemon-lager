@@ -1,6 +1,474 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Toedscool 080/078 - Violet ex - NM (ID: 53360415615333)",
+      "price": "28.90 kr",
+      "url": "https://laboge.no/products/toedscool-080-078-violet-ex?variant=54153439248683",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Slowpoke 082/078 - Violet ex - NM (ID: 53361783157971)",
+      "price": "261.90 kr",
+      "url": "https://laboge.no/products/slowpoke-082-078-violet-ex?variant=54153439215915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Shiftry 072/071 - Cyber Judge - NM (ID: 53360415423560)",
+      "price": "40.90 kr",
+      "url": "https://laboge.no/products/shiftry-072-071-cyber-judge?variant=54153439052075",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Pinsir 067/066 - Crimson Haze - NM (ID: 53360415371509)",
+      "price": "59.90 kr",
+      "url": "https://laboge.no/products/pinsir-067-066-crimson-haze?variant=54153439019307",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Pidgeotto 119/108 - Ruler of the Black Flame - NM (ID: 53361783106410)",
+      "price": "63.50 kr",
+      "url": "https://laboge.no/products/pidgeotto-119-108-ruler-of-the-black-flame?variant=54153438953771",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Phione 071/066 - Crimson Haze - NM (ID: 53361782865877)",
+      "price": "67.90 kr",
+      "url": "https://laboge.no/products/phione-071-066-crimson-haze?variant=54153438888235",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Phione 071/066 - Crimson Haze - NM (ID: 53361782932395)",
+      "price": "67.90 kr",
+      "url": "https://laboge.no/products/phione-071-066-crimson-haze?variant=54153438921003",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Grotle 072/071 - Wild Force - NM (ID: 53360415477513)",
+      "price": "94.50 kr",
+      "url": "https://laboge.no/products/grotle-072-071-wild-force?variant=54153438560555",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Chatot 081/071 - Wild Force - NM (ID: 53360415665166)",
+      "price": "39.00 kr",
+      "url": "https://laboge.no/products/chatot-081-071-wild-force?variant=54153438429483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Feebas 110/106 - Super Electric Breaker - NM (ID: 53361783004740)",
+      "price": "48.50 kr",
+      "url": "https://laboge.no/products/feebas-110-106-super-electric-breaker?variant=54153438363947",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Feebas 110/106 - Super Electric Breaker - NM (ID: 53361783059800)",
+      "price": "48.50 kr",
+      "url": "https://laboge.no/products/feebas-110-106-super-electric-breaker?variant=54153438396715",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Budew 196/193 - MEGA Dream ex - NM (ID: 53360415520217)",
+      "price": "37.50 kr",
+      "url": "https://laboge.no/products/budew-196-193-mega-dream-ex?variant=54153438298411",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Budew 196/193 - MEGA Dream ex - NM (ID: 53360415572745)",
+      "price": "37.50 kr",
+      "url": "https://laboge.no/products/budew-196-193-mega-dream-ex?variant=54153438331179",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Floragato 076/073 - Triplet Beat - NM (ID: 53360415186070)",
+      "price": "95.90 kr",
+      "url": "https://laboge.no/products/floragato-076-073-triplet-beat?variant=54153438265643",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415275018)",
+      "price": "36.50 kr",
+      "url": "https://laboge.no/products/parasect-dark-phantasma-072-071?variant=54153438789931",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "LABOGE",
+      "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415324073)",
+      "price": "36.50 kr",
+      "url": "https://laboge.no/products/parasect-dark-phantasma-072-071?variant=54153438822699",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "Pokesingles",
+      "name": "Alakazam EX (JP) Holo 326/190 - Shiny Treasure ex",
+      "price": "69.00 kr",
+      "url": "https://pokesingles.no/products/alakazam-ex-jp-holo-326190-shiny-treasure-ex-142738?variant=53829717721367",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 2025 World Championships Deck (Tilfeldig deck) 1stk",
+      "price": "499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-2025-world-championships-decks-tilfeldig-deck-1stk?variant=52221606068525",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Lucario ex League Battle Deck (Play Level 3)",
+      "price": "579.00 kr",
+      "url": "https://retroworld.no/products/pokemon-league-battle-deck-mega-lucario-ex-play-level-3?variant=52221538271533",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Lumiose City Mini Tin (Tilfeldig art) 1stk tin",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lumiose-city-mini-tin-tilfeldig-art-1stk-tin?variant=52221513072941",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Mega Moonlit Tin (Tilfeldig Gengar eller Clefable promo) 1stk tin",
+      "price": "449.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-moonlit-tin-tilfeldig-gengar-eller-clefable-promo?variant=52221508288813",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Greninja ex Premium Collection",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-greninja-ex-premium-collection?variant=52221499736365",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Chaos Rising - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-chaos-rising-booster-pack?variant=52066665955629",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Pack (Kinesisk)",
+      "price": "69.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-fusion-strike-booster-pack-kinesisk?variant=51802474250541",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Scarlet ex sv1s - Booster Pack (Japansk)",
+      "price": "49.00 kr",
+      "url": "https://retroworld.no/products/pokemon-scarlet-ex-sv1s-booster-pack-japansk?variant=51746939896109",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Ancient Roar sv4k - Booster Pack (Japansk)",
+      "price": "49.00 kr",
+      "url": "https://retroworld.no/products/pokemon-ancient-roar-sv4k-booster-pack-japansk?variant=51746926985517",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Matchless Fighters - Booster Pack (Japansk)",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-matchless-fighters-booster-pack-japansk?variant=51733028077869",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Venusaur ex Premium Collection",
+      "price": "899.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-venusaur-ex-premium-collection?variant=51641101320493",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Brave - Booster Box (Japansk)",
+      "price": "1449.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-brave-booster-box-japansk?variant=51426586427693",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Symphonia - Booster Box (Japansk)",
+      "price": "1170.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-symphonia-booster-box-japansk?variant=51426583937325",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
+      "price": "39.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-symphonia-booster-pack-japansk?variant=51254241034541",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Brave - Booster Pack (Japansk)",
+      "price": "49.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-brave-booster-pack-japansk?variant=51254240280877",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Destined Rivals - Booster Pack",
+      "price": "169.00 kr",
+      "url": "https://retroworld.no/products/pokemon-destined-rivals-booster-pack-butikk-copy?variant=50770354471213",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - 1 Pack Blister (Checklane)",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-1-pack-blister-checklane?variant=50599223591213",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - Sleeved Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-sleeved-booster-pack?variant=50599221297453",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradise Dragona - Booster Pack (Japansk)",
+      "price": "69.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paradise-dragona-booster-pack-japansk?variant=50449459872045",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - The Hunt for Gengar & Giratina (Hidden Potential Tin) Bounty",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/the-hunt-for-gengar-giratina-bounty-live-event?variant=50409287516461",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon - Terastal Festival - Booster Pack (Japansk)",
+      "price": "269.00 kr",
+      "url": "https://retroworld.no/products/pokemon-terastal-festival-booster-pack?variant=50380374802733",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lost-origin-booster-pack?variant=50380325454125",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Surging Sparks - Booster Pack",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-surging-sparks-booster-pack?variant=50183821951277",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - VSTAR Universe S12A - Booster Pack (Japansk)",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/vstar-universe-s12a-booster-pack-japansk?variant=50101593932077",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Temporal Forces - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/temporal-forces-booster-pack?variant=50101593014573",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Silver Tempest - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/silver-tempest-booster-pack?variant=50101591998765",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradox Rift - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/paradox-rift-booster-pack?variant=50101589573933",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/fusion-strike-booster-pack?variant=50101586493741",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/astral-radiance-booster-pack?variant=50101579055405",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION: LUMIOSE CITY MINI TIN (2 PACK) (ENG)",
+      "price": "299,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-lumiose-city-mini-tin-2-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION: CHAOS RISING BOOSTER BUNDLE (6 PACK) (ENG)",
+      "price": "999,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-chaos-rising-booster-bundle-6-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA EVOLUTION: ASCENDED HEROES BOOSTER BUNDLE (6 PACK) (ENG)",
+      "price": "1 499,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-ascended-heroes-booster-bundle-6-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: DESTINED RIVALS BOOSTER BUNDLE (6 PACK)",
+      "price": "1 199,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-destined-rivals-booster-bundle-6-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-14T15:27:33+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: 151 HOPE DEPARTURE BATTLE GIFT BOX (3 PACK) (KINESISK)",
+      "price": "329,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-151-hope-departure-battle-gift-box-3-pack-kinesisk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-14T13:10:19+00:00",
       "store": "LABOGE",
       "name": "Spoink 1/30 - XY Trainer Kit: Sylveon & Noivern - NM (ID: 53296717772512)",
@@ -2229,474 +2697,6 @@
       "name": "Pokemon - (Australian) Unlimited Jungle Booster Pack - PSA 8",
       "price": "4950.00 kr",
       "url": "https://packsofnorway.no/products/unlimited-jungle-booster-pack-tamper-sealed-1?variant=47465128394990",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon - Johto Series 1 Booster Pack",
-      "price": "2350.00 kr",
-      "url": "https://packsofnorway.no/products/pokemon-johto-trading-cards-series-1-booster-pack?variant=47130744488174",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon  - Johto Series 3 Booster Pack - Totodile Pack Art",
-      "price": "2450.00 kr",
-      "url": "https://packsofnorway.no/products/pokemon-johto-series-3-booster-pack?variant=47130740326638",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon  - Johto Series 3 Booster Pack - Cyndaquil Pack Art",
-      "price": "2450.00 kr",
-      "url": "https://packsofnorway.no/products/pokemon-johto-series-3-booster-pack?variant=47130740359406",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon - Dragon Vault 3 Pack Blister",
-      "price": "7999.00 kr",
-      "url": "https://packsofnorway.no/products/dragon-vault-3-pack-blister-1?variant=47125353988334",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon Advanced-serien Booster Pack - Pikachu Pack Art",
-      "price": "2300.00 kr",
-      "url": "https://packsofnorway.no/products/pokemon-advanced-serien-topps-2003?variant=47102289346798",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon Advanced-serien Booster Pack - Treecko Pack Art",
-      "price": "2300.00 kr",
-      "url": "https://packsofnorway.no/products/pokemon-advanced-serien-topps-2003?variant=47102289379566",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Pokemon - Southern Islands TOPSUN “VS Battle Gum” Booster Pack",
-      "price": "3950.00 kr",
-      "url": "https://packsofnorway.no/products/southern-islands-topsun-vs-battle-gum-booster-pack?variant=47082575888622",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Packs Of Norway Gavekort - 500 kr",
-      "price": "500.00 kr",
-      "url": "https://packsofnorway.no/products/packs-of-norway-gavekort?variant=46994084593902",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Packs Of Norway Gavekort - 1000 kr",
-      "price": "1000.00 kr",
-      "url": "https://packsofnorway.no/products/packs-of-norway-gavekort?variant=46994084626670",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Packs Of Norway Gavekort - 1500 kr",
-      "price": "1500.00 kr",
-      "url": "https://packsofnorway.no/products/packs-of-norway-gavekort?variant=46994084659438",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Packs of Norway",
-      "name": "Packs Of Norway Gavekort - 2000 kr",
-      "price": "2000.00 kr",
-      "url": "https://packsofnorway.no/products/packs-of-norway-gavekort?variant=46994139283694",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Dream Booster Box (Japansk)",
-      "price": "1399.00 kr",
-      "url": "https://pokenordic.no/products/mega-dream-booster-box?variant=47548038349054",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Nullifying Zero Booster Box (Japansk) [Ventes inn]",
-      "price": "899.00 kr",
-      "url": "https://pokenordic.no/products/nullifying-zero-booster-boks?variant=47759427928318",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon Abyss Eye Booster Box (Japansk) [Ventes inn]",
-      "price": "999.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-box-japansk?variant=48119593468158",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Prismatic Evolutions Booster Pack",
-      "price": "219.00 kr",
-      "url": "https://pokenordic.no/products/prismatic-evolution-booster-pack?variant=47546700693758",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon Pitch Black Booster Pack [Forhåndsbestilling]",
-      "price": "89.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-pitch-black-booster-pack-forhandsbestilling?variant=48406498607358",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Ninja Spinner Booster Box (Japansk)",
-      "price": "1099.00 kr",
-      "url": "https://pokenordic.no/products/ninja-spinner-booster-box?variant=47787676172542",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Destined Rivals Booster Pack",
-      "price": "135.00 kr",
-      "url": "https://pokenordic.no/products/destined-rivals-booster-pack?variant=47551356043518",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon 151 Booster Pack",
-      "price": "439.00 kr",
-      "url": "https://pokenordic.no/products/151-booster-pack?variant=47546615300350",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Nullifying Zero Booster Pack",
-      "price": "30.00 kr",
-      "url": "https://pokenordic.no/products/nullifying-zero-booster-pack?variant=47769215303934",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Paldean Fates Booster Pack",
-      "price": "319.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-paldean-fates-booster-pack?variant=48174457749758",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Paldean Fates Tin [Charizard]",
-      "price": "1699.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-paldean-fates-tin-charizard?variant=48140837552382",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Terastal Festival ex Booster Box (Japansk)",
-      "price": "1899.00 kr",
-      "url": "https://pokenordic.no/products/terastal-festival-ex-booster-box?variant=47772344549630",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Dream ex Booster Pack (Japansk)",
-      "price": "149.00 kr",
-      "url": "https://pokenordic.no/products/mega-dream-ex-booster-pack?variant=47752461975806",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Symphonia Booster Pack (Japansk)",
-      "price": "35.00 kr",
-      "url": "https://pokenordic.no/products/mega-symphonia-booster-pack?variant=47548038676734",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Brave Booster Pack (Japansk)",
-      "price": "45.00 kr",
-      "url": "https://pokenordic.no/products/mega-brave-booster-pack?variant=47548039266558",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Prismatic Evolution Mini Tin",
-      "price": "479.00 kr",
-      "url": "https://pokenordic.no/products/prismatic-evolution-mini-tin?variant=47548029436158",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Battle Partners Booster Pack",
-      "price": "39.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-battle-partners-booster-pack?variant=47878948585726",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "151 Booster Bundle",
-      "price": "2899.00 kr",
-      "url": "https://pokenordic.no/products/151-booster-bundle?variant=47561233760510",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon Abyss Eye Booster Pack (Japansk)",
-      "price": "49.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-packjapansk-forhandsbestilling?variant=48242231738622",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon Mega Gengar ex Starter Set (Japansk)",
-      "price": "399.00 kr",
-      "url": "https://pokenordic.no/products/starter-set-mega-gengar-ex?variant=48056439963902",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Ninja Spinner Booster Pack (Japansk)",
-      "price": "39.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-ninja-spinner-booster-pack-japansk?variant=48032201113854",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon 151 Mini Tin",
-      "price": "879.00 kr",
-      "url": "https://pokenordic.no/products/151-mini-tin?variant=47577788612862",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Brave Booster Box (Japansk)",
-      "price": "1299.00 kr",
-      "url": "https://pokenordic.no/products/mega-brave-booster-box?variant=47548038971646",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Prismatic Evolutions Elite Trainer Box",
-      "price": "2999.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-prismatic-evolutions-elite-trainer-box?variant=48119694852350",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Glory of Team Rocket Booster Pack (Japansk)",
-      "price": "99.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-glory-of-team-rocket-booster-pack-japansk?variant=48032196362494",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon Destined Rivals Booster Box Display",
-      "price": "5399.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-destined-rivals-booster-box-display?variant=47993265160446",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Mega Symphonia Booster Box (Japansk)",
-      "price": "999.00 kr",
-      "url": "https://pokenordic.no/products/mega-symphonia-booster-box?variant=47548038480126",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon First Partner Illustration Collection (Vol. 2)",
-      "price": "699.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-first-partner-illustration-collection-vol-2?variant=48546100379902",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Lumiose City Mini Tin",
-      "price": "199.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-lumiose-city-mini-tin?variant=48403214237950",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Terastal Festival Booster Pack (Japansk)",
-      "price": "199.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-terastal-festival-booster-pack-japansk?variant=47878950715646",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Mega Clefable ex Mega Moonlight Tin",
-      "price": "499.00 kr",
-      "url": "https://pokenordic.no/products/mega-clefable-ex-mega-moonlight-tin?variant=48331585421566",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Lost Origin Booster Pack",
-      "price": "219.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-lost-origin-booster-pack?variant=48226044641534",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Paldean Fates Tin [Great Tusk]",
-      "price": "1299.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-paldean-fates-tin-great-tusk?variant=48142959804670",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Glory of Team Rocket Booster Box (Japansk)",
-      "price": "2679.00 kr",
-      "url": "https://pokenordic.no/products/battle-partners-booster-box-kopi?variant=47772372107518",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Battle Partners Booster Box (Japansk)",
-      "price": "969.00 kr",
-      "url": "https://pokenordic.no/products/battle-partners-booster-box?variant=47772359721214",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Perfect Order Sleeved Booster Pack",
-      "price": "85.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-perfect-order-sleeved-booster-pack-1?variant=48403220988158",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokemon Mega Zygarde ex Premium Collection",
-      "price": "799.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-mega-zygarde-ex-premium-collection?variant=48361821241598",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Surging Sparks Elite Trainer Box",
-      "price": "2099.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-surging-sparks-elite-trainer-box?variant=48174449590526",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Paldean Fates Tin [Iron Treads]",
-      "price": "1299.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-paldean-fates-tin-iron-treads?variant=48142959771902",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon Incandescent Arcana Booster Pack (Japansk)",
-      "price": "59.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-incandescent-arcana-booster-pack-japansk?variant=48042002710782",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "PokeNordic",
-      "name": "Pokémon White Flare Booster Pack (Japansk)",
-      "price": "119.00 kr",
-      "url": "https://pokenordic.no/products/pokemon-white-flare-booster-pack-japansk?variant=48037509431550",
       "product_class": "card",
       "event": "ny"
     }
