@@ -1,19 +1,18 @@
 # Pokemon Lagerbot 🔍
 
-Scanner ~37 norske nettbutikker for Pokemon-produkter og viser resultatet i
+Scanner ~36 norske nettbutikker for Pokemon-produkter og viser resultatet i
 et enkelt dashboard, med push-varsler (ntfy) for nye produkter og restock —
 se "Varsler"-siden i dashboardet for å velge nøyaktig hva du vil varsles om.
 Butikklisten er kuratert fra pokejakt.no sin butikkoversikt pluss et par
 ekstra (Nille, Norli) — se `SHOPIFY_STORES` og `PLAYWRIGHT_SITES` i
-`scrape.py` for den fullstendige listen. Ark, Cardcenter, Nille, Norli,
-PokeShop, Outland, Pokelageret, Arcticloot, BoosterKongen, Boosterpakker,
-Braspill, Card Kings, Cardhouse, Cardstore, Collectible, Emken, EpiCards,
-Gameninja, Kanoncon, LABOGE, Lekekassen, Maxgaming, Mystic Trades, Neo
-Tokyo, NorthTCG, Packs of Norway, Playlot, PokeNordic, Pokebua, Pokecandy,
-Pokefriends, Pokelink, Pokesingles, Pokestore, RetroWorld, Spillbua og
-Spillmonster scrapes automatisk (PokeMadness og CardCollect blokkerer
-automatiske besøk eller krever mer arbeid — se "Sjekk manuelt" i
-dashboardet).
+`scrape.py` for den fullstendige listen. Ark, Cardcenter, Nille, PokeShop,
+Outland, Pokelageret, Arcticloot, BoosterKongen, Boosterpakker, Braspill,
+Card Kings, Cardhouse, Cardstore, Collectible, Emken, EpiCards, Gameninja,
+Kanoncon, LABOGE, Lekekassen, Maxgaming, Mystic Trades, Neo Tokyo, NorthTCG,
+Packs of Norway, Playlot, PokeNordic, Pokebua, Pokecandy, Pokefriends,
+Pokelink, Pokesingles, Pokestore, RetroWorld, Spillbua og Spillmonster
+scrapes automatisk (Norli, PokeMadness og CardCollect blokkerer automatiske
+besøk eller krever mer arbeid — se "Sjekk manuelt" i dashboardet).
 
 ## Sider i dashboardet
 
@@ -160,22 +159,24 @@ produkter på en side (sjekk loggen i Actions-kjøringen), må du:
   3. Finn riktig CSS-klasse/selector og oppdater `card_selector`,
      `name_selector` og `price_selector` i `scrape.py`
 
-**Norli** (`scrape_norli()`) er et eget tilfelle: kategorisiden bruker Algolia
-InstantSearch (`li.ais-Hits-item` er Algolia sin egen, stabile klasse — ikke
-Norli sine egne CSS-modul-klasser, som får et nytt tilfeldig hash-suffiks ved
-hver deploy). Kategorisiden viser ikke ekte nettlagerstatus (kun "klikk og
-hent" for fysiske butikker), så vi besøker hver produktside og leser
-schema.org Product-JSON-LD-en (`<script type="application/ld+json">`) for
-navn/pris/lagerstatus — en stabil, SEO-drevet standard som er langt mer
-robust mot design-/tekstendringer enn CSS-klasser eller norsk statustekst.
-(Forrige versjon av denne scraperen sluttet å fungere fordi den lette etter
-en eksakt tekst — "Pa lager" — som Norli siden endret ordlyden på; det
-problemet kan ikke oppstå her siden `offers.availability` er et fast
-schema.org-verdisett, ikke fritekst.)
+**Norli** (`scrape_norli()`, ikke koblet inn i `PLAYWRIGHT_SITES`) er et eget
+tilfelle: kategorisiden bruker Algolia InstantSearch (`li.ais-Hits-item` er
+Algolia sin egen, stabile klasse — ikke Norli sine egne CSS-modul-klasser,
+som får et nytt tilfeldig hash-suffiks ved hver deploy), og ekte
+nettlagerstatus hentes fra schema.org Product-JSON-LD-en
+(`<script type="application/ld+json">`) på hver produktside i stedet for
+CSS-klasser eller norsk statustekst — en langt mer robust tilnærming rent
+teknisk. Problemet er at Norli svarer med **HTTP 403 Forbidden til kjente
+sky-/datasenter-IP-områder** (bekreftet fra GitHub Actions sine byggere),
+mens den fungerer fint fra en vanlig privat/hjemme-IP. Siden vi ikke bygger
+inn teknikker for å omgå IP-baserte blokkeringer (se prinsippet under
+"Om lovlighet og god skikk"), er Norli satt tilbake til `MANUAL_CHECK_STORES`
+for automatisk kjøring — men `scrape_norli()` fungerer korrekt hvis du kjører
+`scrape.py` lokalt (se "Kjøre lokalt" over) fra en ikke-blokkert IP.
 
 **PokeMadness** blokkerer automatiske besøk (Cloudflare-utfordring), og
 **CardCollect** er en klientrendret Nuxt-app der vi ikke har verifisert en
-stabil nok datakilde ennå — begge vises som "Sjekk manuelt" i dashboardet
+stabil nok datakilde ennå — alle tre vises som "Sjekk manuelt" i dashboardet
 (`MANUAL_CHECK_STORES`) i stedet.
 
 **Spesielt om Nille:** Nille er primært en fysisk butikkjede, og noen produktsider

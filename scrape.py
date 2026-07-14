@@ -467,14 +467,6 @@ PLAYWRIGHT_SITES = [
         "custom_scraper": "outland",
     },
     {
-        "store": "Norli",
-        "urls": ["https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort"],
-        # Kategorisiden viser ikke ekte nettlagerstatus -- vi besoker hver
-        # produktside og leser schema.org-JSON-LD (langt mer robust enn CSS-
-        # klasser eller norsk statustekst) -- se scrape_norli().
-        "custom_scraper": "norli",
-    },
-    {
         "store": "Lekekassen",
         "urls": ["https://lekekassen.no/samlekort/pokemon-kort"],
         # Magento -- server-rendret HTML, standard Magento-klassenavn.
@@ -604,6 +596,17 @@ PLAYWRIGHT_SITES = (
 # under "Sjekk manuelt" i stedet for a late som om vi har fersk lagerdata
 # fra dem.
 MANUAL_CHECK_STORES = [
+    {
+        "store": "Norli",
+        "url": "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
+        "reason": "Norli svarer med HTTP 403 Forbidden til besok fra kjente"
+                  " sky-/datasenter-IP-omrader (bekreftet fra GitHub Actions'"
+                  " byggere) -- fungerer fra vanlige (private/hjemme-) IP-er,"
+                  " men vi bygger ikke inn teknikker for a omga IP-baserte"
+                  " blokkeringer. scrape_norli() i scrape.py er fortsatt"
+                  " tilgjengelig og fungerer korrekt for manuell kjoring"
+                  " fra en ikke-blokkert IP.",
+    },
     {
         "store": "PokeMadness",
         "url": "https://www.pokemadness.no/",
