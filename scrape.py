@@ -40,6 +40,7 @@ import time
 import datetime
 import unicodedata
 from dataclasses import dataclass, asdict
+from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, Request
 
 from playwright.sync_api import sync_playwright
@@ -317,6 +318,31 @@ SHOPIFY_STORES = [
 ]
 
 
+def fetch_json_with_retry(url: str, retries: int = 3, timeout: int = 20):
+    """Henter og parser JSON fra en URL, med noen fa nye forsok (med kort
+    pause mellom) ved forbigaende feil (429/503/tilkoblingsfeil). Skybaserte
+    kjoremiljoer (som GitHub Actions) deler IP-omrader med mange andre
+    samtidige jobber, sa Shopify o.l. rate-limiter dem oftere enn en vanlig
+    hjemme-IP -- uten nye forsok mister vi hele samlingen pa en forbigaende
+    503, selv om et nytt forsok et par sekunder senere ofte lykkes."""
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            req = Request(url, headers={"User-Agent": USER_AGENT})
+            with urlopen(req, timeout=timeout) as resp:
+                return json.loads(resp.read())
+        except HTTPError as e:
+            last_error = e
+            if e.code not in (429, 503) or attempt == retries:
+                raise
+        except URLError as e:
+            last_error = e
+            if attempt == retries:
+                raise
+        time.sleep(2 * attempt)
+    raise last_error
+
+
 def scrape_shopify_collection(
     store: str, base_url: str, handle: str, variant_mode: str, require_pokemon_title: bool = False
 ) -> list[Product]:
@@ -330,9 +356,7 @@ def scrape_shopify_collection(
         collection_part = f"collections/{handle}/" if handle else ""
         url = f"{base_url}/{collection_part}products.json?limit=250&page={page_num}"
         try:
-            req = Request(url, headers={"User-Agent": USER_AGENT})
-            with urlopen(req, timeout=20) as resp:
-                data = json.loads(resp.read())
+            data = fetch_json_with_retry(url)
         except Exception as e:
             print(f"[{store}] Feil ved henting av {handle or 'produkter'} (side {page_num}): {e}")
             break
@@ -467,14 +491,6 @@ PLAYWRIGHT_SITES = [
         "custom_scraper": "outland",
     },
     {
-        "store": "Norli",
-        "urls": ["https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort"],
-        # Kategorisiden viser ikke ekte nettlagerstatus -- vi besoker hver
-        # produktside og leser schema.org-JSON-LD (langt mer robust enn CSS-
-        # klasser eller norsk statustekst) -- se scrape_norli().
-        "custom_scraper": "norli",
-    },
-    {
         "store": "Lekekassen",
         "urls": ["https://lekekassen.no/samlekort/pokemon-kort"],
         # Magento -- server-rendret HTML, standard Magento-klassenavn.
@@ -604,6 +620,17 @@ PLAYWRIGHT_SITES = (
 # under "Sjekk manuelt" i stedet for a late som om vi har fersk lagerdata
 # fra dem.
 MANUAL_CHECK_STORES = [
+    {
+        "store": "Norli",
+        "url": "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
+        "reason": "Norli svarer med HTTP 403 Forbidden til besok fra kjente"
+                  " sky-/datasenter-IP-omrader (bekreftet fra GitHub Actions'"
+                  " byggere) -- fungerer fra vanlige (private/hjemme-) IP-er,"
+                  " men vi bygger ikke inn teknikker for a omga IP-baserte"
+                  " blokkeringer. scrape_norli() i scrape.py er fortsatt"
+                  " tilgjengelig og fungerer korrekt for manuell kjoring"
+                  " fra en ikke-blokkert IP.",
+    },
     {
         "store": "PokeMadness",
         "url": "https://www.pokemadness.no/",
