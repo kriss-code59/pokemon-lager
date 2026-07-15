@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-15T18:18:23+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Mega Greninja ex Premium Collection",
+      "price": "985.00 kr",
+      "url": "https://braspill.no/products/pokemon-mega-greninja-ex-premium-collection?variant=55740084322596",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-15T18:18:23+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Ascended Heroes Poster Coll #2\nPremium Poster Coll - Mega Gardevoir ex",
+      "price": "2490.00 kr",
+      "url": "https://braspill.no/products/forhandssalg-ventes-inn-29-april-pokemon-ascended-heroes-poster-coll-2-premium-poster-coll-mega-gardevoir-ex?variant=53345309851940",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-15T18:18:23+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Ascended Heroes Poster Coll #1\nPremium Poster Coll - Mega Lucario ex.",
+      "price": "2490.00 kr",
+      "url": "https://braspill.no/products/forhandssalg-pokemon-ascended-heroes-poster-coll-1-premium-poster-coll-mega-lucario-ex-kommer-inn-29-april?variant=53345307754788",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-15T18:18:23+00:00",
+      "store": "Pokefriends",
+      "name": "Chaos rising Booster pack",
+      "price": "99.00 kr",
+      "url": "https://pokefriends.no/products/chaos-rising-booster-pack?variant=45353462005869",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-15T18:18:23+00:00",
+      "store": "Pokefriends",
+      "name": "Julies Mystery Pack",
+      "price": "699.00 kr",
+      "url": "https://pokefriends.no/products/julies-mystery-pack?variant=45435772469357",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-15T18:18:23+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Destined Rivals – Booster Pack",
+      "price": "kr 139,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-destined-rivals-booster-pack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-15T16:38:24+00:00",
       "store": "Pokesingles",
       "name": "Canari (JP) 248 - MEGA Dream ex",
@@ -2643,60 +2697,6 @@
       "name": "Slashing Legends Tin",
       "price": "kr 499,00",
       "url": "https://playlot.no/produkt/slashing-legends-ex-metallboks-tin/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-15T15:38:20+00:00",
-      "store": "Playlot",
-      "name": "Star Birth Boosterbox JPN",
-      "price": "kr 2 999,00",
-      "url": "https://playlot.no/produkt/star-birth-boosterbox-jpn/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-15T15:38:20+00:00",
-      "store": "Playlot",
-      "name": "Star Birth Boosterpack JPN",
-      "price": "kr 99,00",
-      "url": "https://playlot.no/produkt/pokemon-star-birth-boosterpack-jpn/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-15T15:38:20+00:00",
-      "store": "Playlot",
-      "name": "Stellar Crown Elite Trainer Boks",
-      "price": "kr 1 499,00",
-      "url": "https://playlot.no/produkt/stellar-crown-elite-trainer-boks/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-15T15:38:20+00:00",
-      "store": "Playlot",
-      "name": "Surging Sparks – Boosterpack",
-      "price": "kr 129,00",
-      "url": "https://playlot.no/produkt/surging-sparks-boosterpakke/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-15T15:38:20+00:00",
-      "store": "Playlot",
-      "name": "Terastal Festival Boosterbox JPN",
-      "price": "kr 2 199,00",
-      "url": "https://playlot.no/produkt/terastal-festival-boosterbox-jpn/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-15T15:38:20+00:00",
-      "store": "Playlot",
-      "name": "Terastal Festival Boosterpack JPN",
-      "price": "kr 219,00",
-      "url": "https://playlot.no/produkt/terastal-festival-boosterpack-jpn/",
       "product_class": "card",
       "event": "ny"
     }
