@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-15T14:38:46+00:00",
+      "store": "Playlot",
+      "name": "151 Ultra Premium Collection",
+      "price": "kr 12 999,00",
+      "url": "https://playlot.no/produkt/151-ultra-premium-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-15T14:18:23+00:00",
       "store": "PokeNordic",
       "name": "Pokemon Collection file set N [Ventes inn]",
@@ -2688,15 +2697,6 @@
       "name": "POKÉMON SCARLET & VIOLET: DESTINED RIVALS BOOSTER BUNDLE (6 PACK)",
       "price": "1 199,00 kr",
       "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-destined-rivals-booster-bundle-6-pack",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T15:27:33+00:00",
-      "store": "Emken",
-      "name": "POKÉMON SCARLET & VIOLET: 151 HOPE DEPARTURE BATTLE GIFT BOX (3 PACK) (KINESISK)",
-      "price": "329,00 kr",
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-151-hope-departure-battle-gift-box-3-pack-kinesisk",
       "product_class": "card",
       "event": "ny"
     }
