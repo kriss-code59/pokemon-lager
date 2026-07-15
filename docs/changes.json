@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-15T13:18:31+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Pitch Black Checklane Blister",
+      "price": "119.00 kr",
+      "url": "https://pokestore.no/products/pokemon-pitch-black-checklane-blister-sett?variant=52266259153127",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-15T13:18:31+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Pitch Black Premium Checklane Blister Sett",
+      "price": "299.00 kr",
+      "url": "https://pokestore.no/products/pokemon-pitch-black-premium-checklane-blister-sett?variant=52266260332775",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-15T13:18:31+00:00",
+      "store": "Outland",
+      "name": "McDonald's Pikachu Promo Pack (Japansk)\nThe Pokemon Company\nBooster Pack · Japansk",
+      "price": "599,00 kr",
+      "url": "https://www.outland.no/p/p-mcdonalds-pikachu-promo-pack-japansk-pokemon-tcg-pokemon-22459",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-15T13:18:31+00:00",
+      "store": "Outland",
+      "name": "Abyss Eye Booster Display Boks (Japansk)\nThe Pokemon Company\nAbyss Eye Pokemon TCG\nBooster Display · Japansk",
+      "price": "1 599,00 kr",
+      "url": "https://www.outland.no/p/p-abyss-eye-booster-display-boks-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462127",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-15T12:58:24+00:00",
       "store": "LABOGE",
       "name": "Victreebel 071/165 - SV2a 151 - NM (ID: 53060596235350)",
@@ -2661,42 +2697,6 @@
       "name": "Pikachu Blinking Plush (30cm)",
       "price": "349.00 kr",
       "url": "https://store.cardstore.no/products/pikachu-blinking-plush-30cm?variant=52607427019075",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Cardstore",
-      "name": "Bulbasaur Funko POP",
-      "price": "169.00 kr",
-      "url": "https://store.cardstore.no/products/bulbasaur-funko-pop?variant=51695788523843",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Cardstore",
-      "name": "Lucario Funko POP",
-      "price": "169.00 kr",
-      "url": "https://store.cardstore.no/products/lucario-funko-pop?variant=51695766831427",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Cardstore",
-      "name": "Teddiursa Funko POP",
-      "price": "149.00 kr",
-      "url": "https://store.cardstore.no/products/teddiursa-funko-pop?variant=51695705751875",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-14T09:38:00+00:00",
-      "store": "Cardstore",
-      "name": "Fidough Plush (20cm)",
-      "price": "249.00 kr",
-      "url": "https://store.cardstore.no/products/fidough-plush-20cm?variant=51695295496515",
       "product_class": "accessory",
       "event": "ny"
     }
