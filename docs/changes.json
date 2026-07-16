@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-16T08:14:44+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-16T07:38:41+00:00",
       "store": "Pokelink",
       "name": "#129 Spiritomb 129/198 Uncommon",
@@ -2689,15 +2698,6 @@
       "price": "69.00 kr",
       "url": "https://cardcenter.no/products/pokemon-lost-abyss-koreansk-boosterpakke",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T04:18:47+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mystery Sleeve Box Vol. 2",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mystery-sleeve-box-vol-2",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
