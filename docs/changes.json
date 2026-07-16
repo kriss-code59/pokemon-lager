@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-16T17:38:25+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Pitch Black – Booster Pack",
+      "price": "kr 99,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-booster-pack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-16T17:18:32+00:00",
       "store": "LABOGE",
       "name": "Electrode 27/106 - Emerald - LP (ID: 53933939255007)",
@@ -2688,15 +2697,6 @@
       "name": "#106 Hitmonlee 106/165 Uncommon",
       "price": "10.00 kr",
       "url": "https://pokelink.no/products/106-hitmonlee-106-165-uncommon?variant=41750048505939",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T17:18:32+00:00",
-      "store": "Pokelink",
-      "name": "#099 Kingler 099/165 Uncommon",
-      "price": "12.00 kr",
-      "url": "https://pokelink.no/products/099-kingler-099-165-uncommon?variant=41750044868691",
       "product_class": "card",
       "event": "ny"
     }
