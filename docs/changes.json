@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-16T10:18:32+00:00",
+      "store": "Cardcenter",
+      "name": "Battle Partners Japansk Booster Display Box",
+      "price": "1299.00 kr",
+      "url": "https://cardcenter.no/products/battle-partners-japansk-booster-display-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-16T10:18:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Raging Surf Japansk Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-raging-surf-japansk-booster-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-16T09:58:58+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Nihil Zero Japansk Display Booster Box",
@@ -2679,24 +2697,6 @@
       "name": "#050 Diglett 050/165 Common Reverse Holo",
       "price": "10.00 kr",
       "url": "https://pokelink.no/products/050-diglett-050-165-common-reverse-holo?variant=41750345777235",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T09:38:37+00:00",
-      "store": "Pokelink",
-      "name": "#057 Primape 057/165 Uncommon Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/057-primape-057-165-uncommon-reverse-holo?variant=41750349316179",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T09:38:37+00:00",
-      "store": "Pokelink",
-      "name": "#066 Machop 066/165 Common Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/066-machop-066-165-common-reverse-holo?variant=41750395617363",
       "product_class": "card",
       "event": "ny"
     }
