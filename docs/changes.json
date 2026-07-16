@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-16T06:18:51+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Mega Moonlit Tin Sett",
+      "price": "999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-tcg-mega-moonlit-tins-assortment?variant=52181694709991",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-16T04:18:47+00:00",
       "store": "Cardcenter",
       "name": "Pokémon TCG Poke Ball Gaveboks Kinesisk",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon Lost Origin Booster Pakke",
       "price": "259.00 kr",
       "url": "https://pokestore.no/products/pokemon-lost-origin-booster-pakke?variant=50624525730023",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T04:18:47+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crown Zenith Booster Pakke",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crown-zenith-booster?variant=50624529367271",
       "product_class": "card",
       "event": "ny"
     }
