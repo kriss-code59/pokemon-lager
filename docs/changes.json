@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-17T12:19:12+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Ascended Heroes Booster Bundle",
+      "price": "599 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-ascended-heroes-booster-bundle",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-17T12:19:12+00:00",
+      "store": "Playlot",
+      "name": "White Flare Boosterpack JPN",
+      "price": "kr 149,00",
+      "url": "https://playlot.no/produkt/white-flare-boosterbox-japansk/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-17T12:19:12+00:00",
+      "store": "Playlot",
+      "name": "XY Mega Charizard EX Battle Deck JPN",
+      "price": "kr 4 299,00",
+      "url": "https://playlot.no/produkt/xy-mega-charizard-ex-battle-deck-jpn/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-17T11:38:42+00:00",
       "store": "Playlot",
       "name": "Black Bolt Boosterpack JPN",
@@ -2671,33 +2698,6 @@
       "price": "329.00 kr",
       "url": "https://pokestore.no/products/pokemon-9-pocket-pro-binder-pikachu-album?variant=51072251625703",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-17T10:18:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lost Origin Booster Box - Booster Box",
-      "price": "9999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lost-origin-booster-box?variant=50643819790567",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-17T10:18:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lost Origin Booster Box - Case",
-      "price": "59994.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lost-origin-booster-box?variant=50643819823335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-17T10:18:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Journey Together 3pk Blister Sett",
-      "price": "679.00 kr",
-      "url": "https://pokestore.no/products/pokemon-journey-together-3pk-blister-sett?variant=50802502009063",
-      "product_class": "card",
       "event": "ny"
     }
   ]
