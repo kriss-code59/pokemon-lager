@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-17T05:38:26+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Pitch Black Elite Trainer Box",
+      "price": "1499.00 kr",
+      "url": "https://braspill.no/products/pokemon-pitch-black-elite-trainer-box?variant=55369536340260",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-17T05:38:26+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Pitch Black – Booster Bundle",
+      "price": "kr 699,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-booster-bundle/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-17T04:38:24+00:00",
       "store": "LABOGE",
       "name": "Pokemon Mega Dream EX (Japansk) (Live) - Boosterboks (10 pakker)",
@@ -2679,24 +2697,6 @@
       "name": "#048 Venonat 048/165 Common Reverse Holo",
       "price": "10.00 kr",
       "url": "https://pokelink.no/products/048-venonat-048-165-common-reverse-holo?variant=41750344826963",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T17:18:32+00:00",
-      "store": "Pokelink",
-      "name": "#069 Bellsprout 069/165 Common Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/069-bellsprout-069-165-common-reverse-holo?variant=41750397026387",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-16T17:18:32+00:00",
-      "store": "Pokelink",
-      "name": "#044 Gloom 044/165 Uncommon Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/044-gloom-044-165-uncommon-reverse-holo?variant=41750343123027",
       "product_class": "card",
       "event": "ny"
     }
