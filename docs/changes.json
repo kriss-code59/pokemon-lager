@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-17T18:58:31+00:00",
+      "store": "Pokefriends",
+      "name": "Ninja Spinner Booster Box (Japansk)",
+      "price": "1379.00 kr",
+      "url": "https://pokefriends.no/products/ninja-spinner-booster-box-japansk?variant=45186845835373",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-17T18:58:31+00:00",
+      "store": "Pokefriends",
+      "name": "Pokemon Ninja Spinner japansk booster pakke",
+      "price": "49.00 kr",
+      "url": "https://pokefriends.no/products/pokemon-ninja-spinner-japansk-booster-pakke?variant=45143867424877",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-17T18:38:31+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Surging Sparks - Booster Pack",
@@ -2681,24 +2699,6 @@
       "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-checklane?variant=52244115882285",
       "product_class": "card",
       "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-17T15:58:24+00:00",
-      "store": "RetroWorld",
-      "name": "Pokemon - ME05 Mega Evolution Pitch Black - 3 Pack Blister",
-      "price": "329.00 kr",
-      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-3-pack-blister?variant=52244102971693",
-      "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-17T15:58:24+00:00",
-      "store": "Outland",
-      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
-      "price": "45,00 kr",
-      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
-      "product_class": "accessory",
-      "event": "ny"
     }
   ]
 }
