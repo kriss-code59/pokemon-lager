@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-17T16:58:39+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon ME05: Pitch Black Elite Trainer Box (Max 1 pr kunde)",
+      "price": "929.00 kr",
+      "url": "https://epicards.no/products/pokemon-me04-chaos-rising-elite-trainer-box-max-1-pr-kunde-kopi?variant=56794551058598",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-17T16:58:39+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon ME05: Pitch Black Boosterpakke ( Max 8 Pr Kunde)",
+      "price": "79.00 kr",
+      "url": "https://epicards.no/products/pokemon-me05-pitch-black-boosterpakke?variant=56794778435750",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-17T16:58:39+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Pitch Black – Elite Trainer Box",
+      "price": "kr 1 199,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-elite-trainer-box/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-17T16:38:50+00:00",
       "store": "Pokesingles",
       "name": "Armarouge 012/084 (Reverse Holo) - Pitch Black",
@@ -2670,33 +2697,6 @@
       "name": "Scorbunny 026/132 - Mega Evolution Base - NM (ID: 53875845875101)",
       "price": "7.90 kr",
       "url": "https://laboge.no/products/scorbunny-026-132-mega-evolution-base-rh?variant=54137188057387",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-17T12:38:32+00:00",
-      "store": "LABOGE",
-      "name": "Volcanion 025/132 - Mega Evolution Base - NM (ID: 53875845815054)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/volcanion-025-132-mega-evolution-base-rh?variant=54137189957931",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-17T12:38:32+00:00",
-      "store": "LABOGE",
-      "name": "Pyroar 024/132 - Mega Evolution Base - NM (ID: 53875845766146)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/pyroar-024-132-mega-evolution-base-rh?variant=54137187402027",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-17T12:38:32+00:00",
-      "store": "LABOGE",
-      "name": "Pyroar 024/132 - Mega Evolution Base - NM (ID: 53888961081943)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/pyroar-024-132-mega-evolution-base-rh?variant=54137187434795",
       "product_class": "card",
       "event": "ny"
     }
