@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-18T10:38:51+00:00",
+      "store": "Cardstore",
+      "name": "Mega Greninja ex Premium Collection",
+      "price": "999.00 kr",
+      "url": "https://store.cardstore.no/products/mega-greninja-ex-premium-collection?variant=54642789581123",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:38:51+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Elite Trainer Box (ETB)",
+      "price": "1149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-elite-trainer-box-etb?variant=54642789482819",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:38:51+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Booster Bundle",
+      "price": "799.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-bundle?variant=54642789056835",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:38:51+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Booster Display",
+      "price": "3199.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-display?variant=54642789024067",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:38:51+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-pack?variant=54642788991299",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-18T09:58:13+00:00",
       "store": "Spillmonster",
       "name": "Pokemon Shiny Treasure EX – Booster Box (Japansk)",
@@ -2653,51 +2698,6 @@
       "price": "179.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-pikachu-9-pocket-portfolio-album?variant=51151536783591",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Sylveon Plush (23cm)",
-      "price": "429.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-sylveon-plush-23cm?variant=50746108510439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Shadow Rider & Ice Rider Calyrex VMAX League Battle Decks (2 stk!)",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-shadow-rider-ice-rider-calyrex-vmax-league-battle-decks-2-stk?variant=50624536412391",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Violet Booster Box",
-      "price": "1649.00 kr",
-      "url": "https://pokestore.no/products/pokemon-violet-booster-box?variant=50624530120935",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lycanroc vs Corviknight V Battle Deck Bundle",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lycanroc-vs-corviknight-v-battle-deck-bundle?variant=50624517832935",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lost Origin 3pk Blister Regigigas",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lost-origin-3pk-blister-regigigas?variant=50624514195687",
-      "product_class": "card",
       "event": "ny"
     }
   ]
