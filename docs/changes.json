@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-18T10:59:21+00:00",
+      "store": "Cardstore",
+      "name": "First Partner Illustration Collection Series 2",
+      "price": "749.00 kr",
+      "url": "https://store.cardstore.no/products/first-partner-illustration-collection-series-2?variant=54604877267267",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:59:21+00:00",
+      "store": "Cardstore",
+      "name": "Lumiose City Mini Tin",
+      "price": "199.00 kr",
+      "url": "https://store.cardstore.no/products/lumiose-city-mini-tin?variant=54604877103427",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:59:21+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:59:21+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Luxray)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-luxray?variant=54642789187907",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:59:21+00:00",
+      "store": "Cardstore",
+      "name": "Mega Moonlit Tin – Mega Gengar ex",
+      "price": "449.00 kr",
+      "url": "https://store.cardstore.no/products/mega-moonlit-tin-mega-gengar-ex?variant=54604877037891",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-18T10:59:21+00:00",
+      "store": "Cardstore",
+      "name": "Mega Moonlit Tin – Mega Clefable ex",
+      "price": "449.00 kr",
+      "url": "https://store.cardstore.no/products/mega-moonlit-tin-mega-clefable-ex?variant=54604874449219",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-18T10:38:51+00:00",
       "store": "Cardstore",
       "name": "Mega Greninja ex Premium Collection",
@@ -2644,60 +2698,6 @@
       "price": "67.00 kr",
       "url": "https://pokestore.no/products/pokemon-incandescent-arcana-booster-pakke?variant=50624527139047",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Thunderclap Spark Booster Pakke",
-      "price": "100.00 kr",
-      "url": "https://pokestore.no/products/pokemon-thunderclap-spark-booster-pakke?variant=50624493551847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Prismatic Evolutions 4-Pocket Portfolio",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-prismatic-evolutions-4-pocket-album?variant=50734526431463",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance Booster (36 stk uten booster box)",
-      "price": "3799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-booster-36-stk-uten-booster-box?variant=51637723529447",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X ex Mynt",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-ex-mynt?variant=51582574330087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Tepig 011/086 Foil Promo",
-      "price": "10.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tepig-011-086-foil-promo?variant=51241073344743",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T08:18:13+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu 9-Pocket Portfolio",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-pikachu-9-pocket-portfolio-album?variant=51151536783591",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
