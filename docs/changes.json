@@ -1,2702 +1,2702 @@
 {
   "changes": [
     {
-      "detected_at": "2026-07-19T10:18:28+00:00",
-      "store": "Cardstore",
-      "name": "Pitch Black Premium Checklane (Gengar)",
-      "price": "149.00 kr",
-      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#033 Nidorino 033/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/033-nidorino-033-165-uncommon?variant=41749936046163",
       "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Vaporeon",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-vaporeon",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Eevee",
-      "price": "1599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-eevee",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Monopol Pokemon Edition Brettspill",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/monopol-pokemon-edition-brettspill",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokémon TCG Poke Ball Gaveboks Kinesisk",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-tcg-poke-ball-gaveboks-kinesisk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Leafeon Tin Set",
-      "price": "349.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-leafeon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Lunar New Year 2026 Gaveboks",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-2026-lunar-new-year-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Eksklusiv Pikachu Keychain Gaveboks Kinesisk",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pikachu-eevee-keychain-gaveboks-kinesisk",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Vaporeon Tin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-vaporeon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Eevee",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Sitting Gengar",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-sitting-gengar",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Sword & Shield Primordial Arts: Venusaur Kinesisk Jumbo Boosterpakke",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/sword-shield-primordial-arts-venusaur-kinesisk-jumbo-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Collection File Lillie - Battle Partners",
-      "price": "849.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-collection-file-lillie-battle-partners",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Silver Lance Koreansk Boosterpakke",
-      "price": "35.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-silver-lance-koreansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Mynt",
-      "price": "29.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Dragonite Mynt",
-      "price": "29.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-dragonite-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Ice Rider Calyrex Black Gold Elite Trainer Box Kinesisk",
-      "price": "1179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-ice-rider-calyrex-black-gold-elite-trainer-box-kinesisk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mystery Trainer Tin Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mystery-trainer-tin-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Reward Round Kinesisk Jumbo Boosterpack",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-reward-round-kinesisk-jumbo-boosterpack",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon - Battle Deck Melmetal Ex",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-battle-deck-melmetal-ex",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk 30th Anniversary Celebration First Partner Box Vol. 2",
-      "price": "189.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-30th-anniversary-celebration-first-partner-box-vol-2",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Glaceon Tin Set",
-      "price": "319.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-glaceon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Espeon Tin Set",
-      "price": "319.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-espeon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Bulbasaur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Bright Fantasy Jumbo Boosterpakke",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-bright-fantasy-jumbo-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Jumbo Boosterpakke - Lost Origin",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-jumbo-boosterpakke-lost-origin",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Kinesisk Pokemon 151 Hope Coin Set ex Mystery Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/kinesisk-pokemon-151-hope-coin-set-ex-mystery-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Sleeping Eeveelution Figur Mystery Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-sleeping-eeveelution-figur-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Flareon",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-flareon",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mugen Zone Koreansk Boosterpakke",
-      "price": "45.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mugen-zone-koreansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Pikachu",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Magnetic Coin Set Paldea Vol. 2",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-magnetic-coin-set-paldea-vol-2",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mewtwo V-Union Special Collection Box",
-      "price": "349.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mewtwo-v-union-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Center Japan - Taruka Kortspill",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-center-japan-taruka-kortspill",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Eevee Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-eevee-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Dancing Psyduck",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-dancing-psyduck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Stellar Crystal Slim Boosterpakke",
-      "price": "39.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-stellar-crystal-slim-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Kinesisk Pokemon 151 Gathering Coin Set Mystery Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/kinesisk-pokemon-151-gathering-coin-set-mystery-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Espeon & Umbreon Pin",
-      "price": "49.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-espeon-umbreon-pin",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Sylveon Deck",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-sylveon-deck-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Marnies Grimmsnarl Ex Starter Set Koreansk",
-      "price": "449.00 kr",
-      "url": "https://cardcenter.no/products/marnies-grimmsnarl-ex-starter-set-koreansk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Squirtle",
-      "price": "1999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Metal Energy Kinesisk Special Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-metal-energy-kinesisk-special-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Dark Energy Kinesisk Special Box",
-      "price": "899.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-dark-type-binder-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Greninja V-Union Special Collection Box",
-      "price": "329.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-greninja-v-union-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Battle Region Koreansk Boosterpakke",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-battle-region-koreansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Start Deck 100 Battle Collection",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-start-deck-100-battle-collection",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Charizard X Mynt",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-charizard-x-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Klara Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-klara-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Charizard X UPC Playmat",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-charizard-x-upc-playmat",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Natural Wilderness Diorama Figure - Psyduck",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-natural-wilderness-diorama-figure-psyduck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Lost Abyss Koreansk Boosterpakke",
-      "price": "69.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-lost-abyss-koreansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Blade Awakened Jumbo Boosterpakke",
-      "price": "139.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-jumbo-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mystery Sleeve Box Vol. 2",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mystery-sleeve-box-vol-2",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Greninja Elite Trainer Collection Box",
-      "price": "1799.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-greninja-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Bulbasaur",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Magnetic Coin Set Paldea",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-magnetic-coin-set-paldea",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gardevoir Elite Trainer Collection Box",
-      "price": "1799.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gardevoir-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Trading Card Game Classic Collection Spillbrett (uten kort)",
-      "price": "799.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-trading-card-game-classic-collection-spillbrett",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Leafeon Coin Set",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-leafeon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Espeon Coin Set",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-espeon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Jolteon Coin Set",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-jolteon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Vaporeon Coin Set",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-vaporeon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Flareon Tin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-flareon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Pikachu",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Eevee Tin Set",
-      "price": "329.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-mystery-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Eevee Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-mystery-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Charizard",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-charizard",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Entei Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-entei-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Delibird Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-delibird-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Eiscue Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-eiscue-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Ceruledge",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-ceruledge",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Re-Ment Japanese Style Figur Mystery Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-re-ment-japanese-style-figur-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Raichu",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-raichu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Eksklusiv Mid-Autumn Festival Gaveboks",
-      "price": "1299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-eksklusiv-mid-autumn-festival-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Charmander",
-      "price": "2399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-charmander",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Japansk Mega Diancie ex Starter Set",
-      "price": "449.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-japansk-mega-diancie-ex-starter-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Electric Energy Kinesisk Special Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-electric-type-binder-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Marnie's Determination Special Collection Box",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-marnies-determination-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Happy Combo Vol. 2 Gift Box",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-happy-combo-vol-2-gift-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Brave Stars Trainer Box",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-brave-stars-trainer-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon TCG Clip On Card Holder Set 151 Journey Kinesisk",
-      "price": "329.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-tcg-clip-on-card-holder-set-151-journey-kinesisk",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Glaceon Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-glaceon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Umbreon Coin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-umbreon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Jolteon Tin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-jolteon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Espeon & Umbreon Figur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-espeon-umbreon-figur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Cyrus Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-cyrus-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Bright Fantasy Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-bright-fantasy-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Ash's Greninja",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-ashs-greninja",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Mewtwo & Mew",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-mewtwo-mew",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Pikachu & Friends Figure Mystery Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-pikachu-friends-figure-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Water Energy Special Box",
-      "price": "1699.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-water-energy-kinesisk-special-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Travel Journey Gift Box",
-      "price": "4999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-travel-journey-gift-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Charizard Elite Trainer Collection Box",
-      "price": "2199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-charizard-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Pikachu",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Grass Energy Kinesisk Special Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-grass-energy-kinesisk-special-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Blastoise Elite Trainer Collection Box",
-      "price": "2299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-blastoise-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Sylveon Coin Set",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-sylveon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Jirachi",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-jirachi",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Snorlax",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-snorlax",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Stellar Crystal Jumbo Booster Box",
-      "price": "899.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-stellar-crystal-jumbo-booster-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Dragon Boat Festival 2026 Gaveboks",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-dragon-boat-festival-2026-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Gengar",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-gengar",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Dream Painting Water Figure Mystery Box",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-dream-painting-water-figure-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Sobble Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-sobble-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Natural Wilderness Diorama Figure - Eevee",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-natural-wilderness-diorama-figure-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mew Elite Trainer Collection Box",
-      "price": "2199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mew-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Meowth",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-meowth",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Bulbasaur",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Fireworks Pikachu",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-fireworks-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Primordial Arts Blastoise Trainer Box",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-primordial-arts-blastoise-trainer-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Alolan Exeggutor Gaveboks",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-alolan-exeggutor-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon TCG Starter Deck Generations Special Battle Set",
-      "price": "1999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-tcg-starter-deck-generations-special-battle-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Towering Perfection Japansk Boosterpakke",
-      "price": "109.00 kr",
-      "url": "https://cardcenter.no/products/towering-perfection-japansk-booster-display-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Stellar Crystal Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-stellar-crystal-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mystery Magnet",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mystery-magnet",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Collection File N - Battle Partners",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-collection-file-n-battle-partners",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Meowth",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-meowth",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Blastoise",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-blastoise",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Bulbasaur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Squirtle",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Charmander",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-charmander",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Charizard X UPC Deckbox",
-      "price": "79.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-charizard-x-upc-deckbox",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Blade Awakened Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-blade-awakened-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Sylveon",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-sylveon",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Gengar & Mimikyu",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gengar-mimikyu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Re-Ment Peaceful Moments Figur Mystery Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-re-ment-peaceful-moments-figur-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Paradox Veil Kinesisk Jumbo Boosterpakke",
-      "price": "109.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-paradox-veil-kinesisk-jumbo-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Togedemaru",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-togedemaru",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Alolan Raichu",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-alolan-raichu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Pichu",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-pichu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lugia Kort Display Ramme",
-      "price": "349.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lugia-kort-display-ramme",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 2024 World Championship Decks - Fernando Cifuentes",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-2024-world-championship-decks-fernando-cifuentes",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 2024 World Championship Decks - Sakuya Ota",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-2024-world-championship-decks-sakuya-ota",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Raging Bolt",
-      "price": "79.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-raging-bolt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Suicune",
-      "price": "69.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-suicune",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Flareon Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-flareon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Jolteon",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-jolteon",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk MEGA Premium Trainer Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-mega-premium-trainer-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Single Strike Master Japansk Boosterpakke",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-single-strike-master-japansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Galarian Farfetch'd Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-galarian-farfetchd-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Classic Collection Black Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-classic-collection-black-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Black Bolt ETB Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-black-bolt-etb-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Charizard X UPC Sleeves",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-charizard-x-upc-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Paldea Trainer Mystery Sleeve Box",
-      "price": "189.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-paldea-trainer-mystery-sleeve-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Figur - Mega Lucario",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-figur-mega-lucario",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Eevee Figure Vol. 3 Display",
-      "price": "2999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-eevee-figure-vol-3-display",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Pikachu",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Lucario",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-lucario",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Mimikyu",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-mimikyu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Eevee",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Kinesisk 25th Anniversary Gardevoir Collection Box",
-      "price": "1699.00 kr",
-      "url": "https://cardcenter.no/products/kinesisk-25th-anniversary-gardevoir-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Kinesisk 25th Anniversary Venusaur Collection Box",
-      "price": "1699.00 kr",
-      "url": "https://cardcenter.no/products/kinesisk-25th-anniversary-venusaur-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Japansk 30th Anniversary PokeBall Ornament Set",
-      "price": "4799.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-japansk-30th-anniversary-pokeball-ornament-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Charmander",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-charmander",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Pikachu",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Glowing Pikachu",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-glowing-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Typhlosion Kort Display Ramme",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-typhlosion-kort-display-ramme",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Valiant",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-valiant",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Thorns",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-thorns",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Quaxly Quaxwell Quaquaval",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-quaxly-quaxwell-quaquaval",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Gouging Fire",
-      "price": "79.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-raging-fire",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Trading Card Game Classic Collection (Kun brett)",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-trading-card-game-classic-collection-kun-brett",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Cornerstone Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-cornerstone-mask-ogerpon-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Fuecoco & Ampharos Starter Deck",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-fuecoco-ampharos-starter-deck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Ceruledge",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-ceruledge",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Chandelure",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-chandelure",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Cubone",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-cubone",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Paldea Trainer Mystery Keychain Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-paldea-trainer-mystery-keychain-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Rapid Strike Master Japansk Boosterpakke",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-rapid-strike-master-japansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Matchless Fighters Japansk Boosterpakke",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-matchless-fighters-japansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Venusaur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-venusaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Figur - Mega Scizor",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-figur-mega-scizor",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Gengar",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-gengar",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Meowth",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-meowth",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Gengar",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-gengar",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Charmander",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-charmander",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Natural Wilderness Diorama Figure - Meowth",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-natural-wilderness-diorama-figure-meowth",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lillie's Support Gift Box",
-      "price": "4999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lillies-support-gift-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Stevens Metagross ex Starter Set Koreansk",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/stevens-beldum-ex-starter-set-koreansk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Pawmi",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-pawmi",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Squirtle",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Zacian V-Union Special Collection Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-zacian-v-union-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Center - Glory of Team Rocket Deck Case",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-center-glory-of-team-rocket-deck-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle amurott (Hisuian Form)",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-amurott-hisuian-form",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Koraidon",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-koraidon",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Miraidon",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-miraidon",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Crown",
-      "price": "69.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-crown",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon - Rubber Playmat Set Victor & Gloria",
-      "price": "699.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-rubber-playmat-set-victor-gloria",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Komala",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-komala",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Wellspring Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-wellspring-mask-ogerpon-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Hearthflame Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-hearthflame-mask-ogerpon-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Teal Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-teal-mask-ogerpon-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Silver Lance Koreansk Booster Box",
-      "price": "899.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-silver-lance-koreansk-booster-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Mega Gengar ex Starter Set",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-mega-gengar-ex-starter-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Quaxly & Mimikyu Starter Deck",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-quaxly-mimikyu-starter-deck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Sprigatito & Lucario Starter Deck",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-sprigatito-lucario-starter-deck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Classic Collection Light Gray Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-classic-collection-light-gray-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Classic Collection Dark Gray Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-classic-collection-dark-gray-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Klara Premium Collection Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-klara-premium-collection-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Cyrus Premium Collection Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-cyrus-premium-collection-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon GO ETB Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-go-etb-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Shiny Zacian & Zamazenta Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-shiny-zacian-zamazenta-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Shrouded Fable ETB Sleeves",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-shrouded-fable-etb-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Figur - Mega Gardevoir",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-figur-mega-gardevoir",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Mewtwo",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-mewtwo",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Togepi",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-togepi",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Charizard & Pikachu",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-charizard-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Pikachu",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Charizard",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-charizard",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Eevee",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Pikachu",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Bulbasaur",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Squirtle",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Starter Deck Generations Special Battle Set",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-starter-deck-generations-special-battle-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Iron Hands Elite Trainer Collection Box",
-      "price": "1799.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-iron-hands-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Jigglypuff",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-jigglypuff",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Center - Glory of Team Rocket Sleeves",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-center-glory-of-team-rocket-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle Great Ball",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-great-ball",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle Baxcalibur",
-      "price": "135.00 kr",
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-baxcalibur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Boulder",
-      "price": "69.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-boulder",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Pokedex Metal Charm 1014",
-      "price": "55.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-pokedex-metal-charm-1014",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Leaf",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-leaf",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Base set sealed light booster pack - Venusaur",
-      "price": "9999.00 kr",
-      "url": "https://cardcenter.no/products/base-set-sealed-light-booster-pack-venusaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "Cardcenter",
-      "name": "Base set sealed booster pack - Venusaur 1st ED. (shadowless) PSA 9",
-      "price": "74999.00 kr",
-      "url": "https://cardcenter.no/products/base-set-sealed-booster-pack-venusaur-1st-ed-shadowless-psa-9",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Zoroark - 91/162 (XY BREAKthrough) 91/162 - Deck Exclusives - NM (ID: 53215028892341)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0188-43-zoroark-91-162-xy-breakthrough-091-162-deck-exclusives-0n77evd?variant=54158648312107",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Zoroark - 91/162 (XY BREAKthrough) 91/162 - Deck Exclusives - NM (ID: 53215028829937)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0188-42-zoroark-91-162-xy-breakthrough-091-162-deck-exclusives-00oto1c?variant=54158648279339",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Rød",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617411883",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Sort",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617444651",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Grønn",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617477419",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Lilla",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617510187",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Lime",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617542955",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Oransje",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617575723",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gamegenic Prime Sleeves (100 stk) - Rosa",
-      "price": "75.00 kr",
-      "url": "https://laboge.no/products/gamegenic-prime-sleeves-100-stk?variant=54158617608491",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Here Comes Team Rocket! 15/82 - Celebrations - NM",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/here-comes-team-rocket-15-82-celebrations-holo-foil?variant=54157893304619",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Dark Sylveon V SWSH134 - Sword & Shield Promo - LP",
-      "price": "105.00 kr",
-      "url": "https://laboge.no/products/dark-sylveon-v-swsh134-sword-shield-promo-holo-foil?variant=54157892845867",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Imposter Professor Oak 4/25 - s8a-P: Promo Card Pack 25th Anniversary Edition - NM (ID: 53054520263751)",
-      "price": "49.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-10-imposter-professor-oak-004-025-p-17emyyi?variant=54157892419883",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Pikachu 1/28 - S8a: 25th Anniversary Collection - NM (ID: 53054520186178)",
-      "price": "139.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-9-pikachu-001-028-s8a-1ucvaxr?variant=54157892321579",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Pikachu 1/28 - S8a: 25th Anniversary Collection - NM (ID: 53054520100752)",
-      "price": "139.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-8-pikachu-001-028-s8a-1ceq6u2?variant=54157892288811",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Xerneas EX 23/25 - s8a-P: Promo Card Pack 25th Anniversary Edition - NM (ID: 53054519950123)",
-      "price": "79.90 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-6-xerneas-ex-023-025-p-0apiuh4?variant=54157892256043",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Tapu Lele GX 25/25 - s8a-P: Promo Card Pack 25th Anniversary Edition - NM (ID: 53054519876320)",
-      "price": "59.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-5-tapu-lele-gx-025-025-p-1wbb915?variant=54157892223275",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Imposter Professor Oak 4/25 - s8a-P: Promo Card Pack 25th Anniversary Edition - NM (ID: 53054519670409)",
-      "price": "49.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-3-imposter-professor-oak-004-025-p-1nr9y16?variant=54157891895595",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Rocket's Zapdos 8/25 - s8a-P: Promo Card Pack 25th Anniversary Edition - NM (ID: 53054519774646)",
-      "price": "249.00 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0154-4-rockets-zapdos-008-025-p-1jp97nf?variant=54157891862827",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Toedscool 080/078 - Violet ex - NM (ID: 53360415615333)",
-      "price": "28.90 kr",
-      "url": "https://laboge.no/products/toedscool-080-078-violet-ex?variant=54153439248683",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Slowpoke 082/078 - Violet ex - NM (ID: 53361783157971)",
-      "price": "261.90 kr",
-      "url": "https://laboge.no/products/slowpoke-082-078-violet-ex?variant=54153439215915",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Shiftry 072/071 - Cyber Judge - NM (ID: 53360415423560)",
-      "price": "40.90 kr",
-      "url": "https://laboge.no/products/shiftry-072-071-cyber-judge?variant=54153439052075",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Pinsir 067/066 - Crimson Haze - NM (ID: 53360415371509)",
-      "price": "59.90 kr",
-      "url": "https://laboge.no/products/pinsir-067-066-crimson-haze?variant=54153439019307",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Pidgeotto 119/108 - Ruler of the Black Flame - NM (ID: 53361783106410)",
-      "price": "63.50 kr",
-      "url": "https://laboge.no/products/pidgeotto-119-108-ruler-of-the-black-flame?variant=54153438953771",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Phione 071/066 - Crimson Haze - NM (ID: 53361782865877)",
-      "price": "67.90 kr",
-      "url": "https://laboge.no/products/phione-071-066-crimson-haze?variant=54153438888235",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Phione 071/066 - Crimson Haze - NM (ID: 53361782932395)",
-      "price": "67.90 kr",
-      "url": "https://laboge.no/products/phione-071-066-crimson-haze?variant=54153438921003",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Grotle 072/071 - Wild Force - NM (ID: 53360415477513)",
-      "price": "94.50 kr",
-      "url": "https://laboge.no/products/grotle-072-071-wild-force?variant=54153438560555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Chatot 081/071 - Wild Force - NM (ID: 53360415665166)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/chatot-081-071-wild-force?variant=54153438429483",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Feebas 110/106 - Super Electric Breaker - NM (ID: 53361783004740)",
-      "price": "48.50 kr",
-      "url": "https://laboge.no/products/feebas-110-106-super-electric-breaker?variant=54153438363947",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Feebas 110/106 - Super Electric Breaker - NM (ID: 53361783059800)",
-      "price": "48.50 kr",
-      "url": "https://laboge.no/products/feebas-110-106-super-electric-breaker?variant=54153438396715",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Budew 196/193 - MEGA Dream ex - NM (ID: 53360415520217)",
-      "price": "37.50 kr",
-      "url": "https://laboge.no/products/budew-196-193-mega-dream-ex?variant=54153438298411",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Budew 196/193 - MEGA Dream ex - NM (ID: 53360415572745)",
-      "price": "37.50 kr",
-      "url": "https://laboge.no/products/budew-196-193-mega-dream-ex?variant=54153438331179",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Floragato 076/073 - Triplet Beat - NM (ID: 53360415186070)",
-      "price": "95.90 kr",
-      "url": "https://laboge.no/products/floragato-076-073-triplet-beat?variant=54153438265643",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Spoink 1/30 - XY Trainer Kit: Sylveon & Noivern - NM (ID: 53296717772512)",
-      "price": "6.50 kr",
-      "url": "https://laboge.no/products/chaos-sort-cs-0179-51-spoink-1-30-kit-0vgfy5j?variant=54153130180907",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Rillaboom V 304/190 - Shiny Star V - NM (ID: 53949875674834)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/rillaboom-v-304-190-shiny-star-v?variant=54137397215531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Raging Bolt ex 089/071 - Wild Force - NM (ID: 53949875919555)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/raging-bolt-ex-089-071-wild-force?variant=54137397051691",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Lapras V 311/190 - Shiny Star V - NM (ID: 53949875878557)",
-      "price": "79.00 kr",
-      "url": "https://laboge.no/products/lapras-v-311-190-shiny-star-v?variant=54137396953387",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Flutter Mane 076/071 - Wild Force - NM (ID: 53949875996933)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/flutter-mane-076-071-wild-force?variant=54137396920619",
-      "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Eri 091/071 - Wild Force - NM (ID: 53949875959113)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/eri-091-071-wild-force?variant=54137396887851",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#039 Jigglypuff 039/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/039-jigglypuff-039-165-common?variant=41749851504723",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Ditto V 323/190 - Shiny Star V - NM (ID: 53949875533068)",
-      "price": "120.00 kr",
-      "url": "https://laboge.no/products/ditto-v-323-190-shiny-star-v?variant=54137396625707",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#030 Nidorina 030/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/030-nidorina-030-165-uncommon?variant=41749933424723",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Ditto V 323/190 - Shiny Star V - NM (ID: 53949875619856)",
-      "price": "120.00 kr",
-      "url": "https://laboge.no/products/ditto-v-323-190-shiny-star-v?variant=54137396658475",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#017 Pidgeotto 017/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/017-pidgeotto-017-165-common?variant=41749840265299",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Ditto VMAX 324/190 - Shiny Star V - NM (ID: 53949875839447)",
-      "price": "179.00 kr",
-      "url": "https://laboge.no/products/ditto-vmax-324-190-shiny-star-v?variant=54137396592939",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#014 Kakuna 014/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/014-kakuna-014-165-common?variant=41749836660819",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Cramorant V 326/190 - Shiny Star V - NM (ID: 53949875741466)",
-      "price": "25.00 kr",
-      "url": "https://laboge.no/products/cramorant-v-326-190-shiny-star-v?variant=54137396560171",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#004 Charmander 004/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/004-charmander-004-165-common?variant=41749832532051",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Centiskorch VMAX 310/190 - Shiny Star V - NM (ID: 53949875787702)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/centiskorch-vmax-310-190-shiny-star-v?variant=54137396527403",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#002 Ivysaur 002/165 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/002-ivysaur-002-165-uncommon?variant=41749902065747",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Xerneas 064/132 - Mega Evolution Base - NM (ID: 53875847158547)",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#015 Beedrill 015/165 Rare Holo",
       "price": "12.00 kr",
-      "url": "https://laboge.no/products/xerneas-064-132-mega-evolution-base-rh?variant=54137190089003",
+      "url": "https://pokelink.no/products/015-beedrill-015-165-rare-holo?variant=41750107324499",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Xerneas 064/132 - Mega Evolution Base - NM (ID: 53881962773544)",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#045 Vileplume 045/165 Rare Holo",
       "price": "12.00 kr",
-      "url": "https://laboge.no/products/xerneas-064-132-mega-evolution-base-rh?variant=54137190121771",
+      "url": "https://pokelink.no/products/045-vileplume-045-165-rare-holo?variant=41750119972947",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Xerneas 064/132 - Mega Evolution Base - NM (ID: 53881963015987)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/xerneas-064-132-mega-evolution-base-rh?variant=54137190154539",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Wally's Compassion 132/132 - Mega Evolution Base - NM (ID: 53879501210596)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/wallys-compassion-132-132-mega-evolution-base-rh?variant=54137190023467",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Ultra Ball 131/132 - Mega Evolution Base - NM (ID: 53881961000610)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/ultra-ball-131-132-mega-evolution-base-rh?variant=54137189925163",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Switch 130/132 - Mega Evolution Base - NM (ID: 53881960962073)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/switch-130-132-mega-evolution-base-rh?variant=54137189433643",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Surfing Beach 129/132 - Mega Evolution Base - NM (ID: 53881960915428)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/surfing-beach-129-132-mega-evolution-base-rh?variant=54137189368107",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Strange Timepiece 128/132 - Mega Evolution Base - NM (ID: 53881960859982)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/strange-timepiece-128-132-mega-evolution-base-rh?variant=54137189335339",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Risky Ruins 127/132 - Mega Evolution Base - NM (ID: 53881960802590)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/risky-ruins-127-132-mega-evolution-base-rh?variant=54137187795243",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Repel 126/132 - Mega Evolution Base - NM (ID: 53879501178300)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/repel-126-132-mega-evolution-base-rh?variant=54137187631403",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Rare Candy 125/132 - Mega Evolution Base - NM (ID: 53881960742966)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/rare-candy-125-132-mega-evolution-base-rh?variant=54137187598635",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Premium Power Pro 124/132 - Mega Evolution Base - NM (ID: 53879501134408)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/premium-power-pro-124-132-mega-evolution-base-rh?variant=54137187369259",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Pokémon Center Lady 123/132 - Mega Evolution Base - NM (ID: 53881960677800)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/pokmon-center-lady-123-132-mega-evolution-base-rh?variant=54137187336491",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Mystery Garden 122/132 - Mega Evolution Base - NM (ID: 53879501088690)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/mystery-garden-122-132-mega-evolution-base-rh?variant=54137186844971",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Mega Signal 121/132 - Mega Evolution Base - NM (ID: 53881960611890)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/mega-signal-121-132-mega-evolution-base-rh?variant=54137186713899",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Lt. Surge's Bargain 120/132 - Mega Evolution Base - NM (ID: 53881960534398)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/lt-surges-bargain-120-132-mega-evolution-base-rh?variant=54137186320683",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Lillie's Determination 119/132 - Mega Evolution Base - NM (ID: 53879502010207)",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#121 Starmie 121/165 Rare Holo",
       "price": "15.00 kr",
-      "url": "https://laboge.no/products/lillies-determination-119-132-mega-evolution-base-rh?variant=54137186091307",
+      "url": "https://pokelink.no/products/121-starmie-121-165-rare-holo?variant=41750135898195",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Iron Defender 118/132 - Mega Evolution Base - NM (ID: 53879501972381)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/iron-defender-118-132-mega-evolution-base-rh?variant=54137185698091",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#004 Mega Heracross EX 004/094 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/004-mega-heracross-ex-004-094-double-rare?variant=44168918237267",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Forest of Vitality 117/132 - Mega Evolution Base - NM (ID: 53879501046734)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/forest-of-vitality-117-132-mega-evolution-base-rh?variant=54137184813355",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#070 Empoleon EX 070/094 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/070-empoleon-ex-070-094-double-rare?variant=44168918859859",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Fighting Gong 116/132 - Mega Evolution Base - NM (ID: 53879501936886)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/fighting-gong-116-132-mega-evolution-base-rh?variant=54137184780587",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#104 Mega Kangaskhan EX 104/132 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/104-mega-kangaskhan-ex-104-132-double-rare?variant=44168911355987",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Boss's Orders 114/132 - Mega Evolution Base - NM (ID: 53879500992199)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/bosss-orders-114-132-mega-evolution-base-rh?variant=54137183535403",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#050 Mega Manectric EX 050/132 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/050-mega-manectric-ex-050-132-double-rare?variant=44168912306259",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Acerola's Mischief 113/132 - Mega Evolution Base - NM (ID: 53879500946069)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/acerolas-mischief-113-132-mega-evolution-base-rh?variant=54137183306027",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#077 Mega Lucario EX 077/132 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/077-mega-lucario-ex-077-132-double-rare?variant=44168907161683",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Bewear 112/132 - Mega Evolution Base - NM (ID: 53888961539999)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/bewear-112-132-mega-evolution-base-rh?variant=54137183502635",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#066 Dondozo EX 066/182 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/066-dondozo-ex-066-182-double-rare?variant=42837255618643",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Stufful 111/132 - Mega Evolution Base - NM (ID: 53879501836954)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/stufful-111-132-mega-evolution-base-rh?variant=54137189400875",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#186 Scramble Switch 186/191 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/186-scramble-switch-186-191-acespec-rare?variant=42632513192019",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gumshoos 110/132 - Mega Evolution Base - NM (ID: 53879501791083)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/gumshoos-110-132-mega-evolution-base-rh?variant=54137185239339",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#041 Wailord 041/159 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/041-wailord-041-159-rare-holo?variant=42621402513491",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Gumshoos 110/132 - Mega Evolution Base - NM (ID: 53888961923012)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/gumshoos-110-132-mega-evolution-base-rh?variant=54137185272107",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#048 Iono's Electrode 048/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/048-ionos-electrode-048-159-uncommon?variant=42622093852755",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Yungoos 109/132 - Mega Evolution Base - NM (ID: 53879501755977)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/yungoos-109-132-mega-evolution-base-rh?variant=54137190056235",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#100 Lokix 100/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/100-lokix-100-159-uncommon?variant=42622099390547",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Lopunny 108/132 - Mega Evolution Base - NM (ID: 53879501703453)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/lopunny-108-132-mega-evolution-base-rh?variant=54137186255147",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#032 Articuno 032/159 Uncommon",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/032-articuno-032-159-uncommon?variant=42622091493459",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Lopunny 108/132 - Mega Evolution Base - NM (ID: 53888961457748)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/lopunny-108-132-mega-evolution-base-rh?variant=54137186287915",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#045 Alolan Graveler 045/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/045-alolan-graveler-045-159-common?variant=42621239263315",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Buneary 107/132 - Mega Evolution Base - NM (ID: 53879501617105)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/buneary-107-132-mega-evolution-base-rh?variant=54137183600939",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#052 Iono's Tadbulb 052/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/052-ionos-tadbulb-052-159-common?variant=42621242638419",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Buneary 107/132 - Mega Evolution Base - NM (ID: 53888962002048)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/buneary-107-132-mega-evolution-base-rh?variant=54137183633707",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#014 Durant 014/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/014-durant-014-159-common?variant=42621211213907",
       "product_class": "card",
       "event": "ny"
     },
     {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Buneary 107/132 - Mega Evolution Base - NM (ID: 53888962080707)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/buneary-107-132-mega-evolution-base-rh?variant=54137183666475",
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#009 Karrablast 009/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/009-karrablast-009-159-common?variant=42621207674963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#002 Metapod 002/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/002-metapod-002-159-common?variant=42621196271699",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#141 Squawkabilly 141/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/141-squawkabilly-141-159-common?variant=42621346381907",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#104 N's Klang 104/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/104-ns-klang-104-159-common?variant=42621288251475",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#122 Kecleon 122/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/122-kecleon-122-159-common?variant=42621300736083",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#080 Larvitar 080/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/080-larvitar-080-159-common?variant=42621267607635",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#058 Mr. Mime 058/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/058-mr-mime-058-159-common?variant=42621244506195",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#076 Cubone 076/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/076-cubone-076-159-common?variant=42621265707091",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#066 Lillie's Cutiefly 066/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/066-lillies-cutiefly-066-159-common?variant=42621251485779",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#158 Super Potion 158/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/158-super-potion-158-159-uncommon?variant=42621386555475",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#154 Postwick 154/159 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/154-postwick-154-159-uncommon?variant=42599301513299",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#008 Maractus 008/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/008-maractus-008-159-uncommon?variant=42599300497491",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#136 Grand Tree 136/142 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/136-grand-tree-136-142-acespec-rare?variant=42220832718931",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#158 Reboot Pod 158/162 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/158-reboot-pod-158-162-acespec-rare?variant=42144432914515",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#043 Oddish 043/165 Common Reverse Holo",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/043-oddish-043-165-common-reverse-holo?variant=41750342893651",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#089 Muk 089/165 Uncommon Reverse Holo",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/089-muk-089-165-uncommon-reverse-holo?variant=41750412623955",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#125 Koraidon EX 125/198 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/125-koraidon-ex-125-198-double-rare?variant=40594212913235",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#015 Meowscarada EX 015/193 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/015-meowscarada-ex-015-193-double-rare?variant=40819024429139",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#170 Professor Sada's Vitality 170/182 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/170-professor-sadas-vitality-170-182-uncommon?variant=41720995151955",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#153 Noivern EX 153/193 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/015-noivern-ex-015-193-double-rare?variant=40819024855123",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#087 Professor's Research 087/091 Rare Reverse Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/087-professors-research-087-091-rare-reverse-holo?variant=41491170918483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#189 Professor's Research 189/198 Rare Holo",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/189-professors-research-189-198-uncommon?variant=40584120139859",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#047 Annihilape 047/091 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/047-annihilape-047-091-rare-holo?variant=41327241560147",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#063 Mabosstiff 063/091 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/063-mabosstiff-063-091-rare-holo?variant=41327242444883",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#013 Heat Rotom 013/091 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/013-heat-rotom-013-091-rare-holo?variant=41327237595219",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#024 Exxeggutor 024/091 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/024-exxeggutor-024-091-rare-holo?variant=41327239168083",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#055 Gastly 055/091 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/055-gastly-055-091-common?variant=41327027978323",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#036 Dedenne 036/091 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/036-dedenne-036-091-common?variant=41327016247379",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#020 Chinchou 020/091 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/020-chinchou-020-091-common?variant=41327001501779",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#014 Charcadet 014/091 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/014-charcadet-014-091-common?variant=41326994620499",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#053 Great Tusk Ex 053/091 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/053-great-tusk-ex-053-091-double-rare?variant=41327245394003",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#069 Noivern Ex 069/091 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/069-noivern-ex-069-091-double-rare?variant=41327247654995",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#105 Tinkaton 105/193 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/105-tinkaton-105-193-rare-holo?variant=40819070271571",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#098 Ceruledge 098/193 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/098-ceruledge-098-193-rare-holo?variant=40819064930387",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#071 Luxray 071/193 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/071-luxray-071-193-rare-holo?variant=40819066798163",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#056 Veluza 056/193 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/056-veluza-056-193-rare-holo?variant=40819070533715",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#193 Therapeutic Energy 193/193 Uncommon",
+      "price": "8.00 kr",
+      "url": "https://pokelink.no/products/193-therapeutic-energy-193-193-uncommon?variant=40819458113619",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#157 Dudunsparce 157/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/157-dudunsparce-157-193-uncommon?variant=40819451691091",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#133 Sneasel 133/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/133-sneasel-133-193-common?variant=40818990973011",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#125 Glimmet 125/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/125-glimmet-125-193-common?variant=40818976030803",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#116 Rockruff 116/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/116-rockruff-116-193-common?variant=40818988482643",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#128 Paldean Wooper 128/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/128-paldean-wooper-128-193-common?variant=40818984878163",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#107 Primeape 107/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/107-primeape-107-193-uncommon?variant=40819455524947",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#102 Tinkatink 102/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/102-tinkatink-102-193-common?variant=40818995265619",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#087 Misdreavus 087/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/087-misdreavus-087-193-common?variant=40818981437523",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#096 Palossand 096/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/096-palossand-096-193-uncommon?variant=40819455197267",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#100 Tinkatink 100/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/100-tinkatink-100-193-common?variant=40818994315347",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#075 Pawmon 075/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/075-pawmon-075-193-uncommon?variant=40819455262803",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#070 Luxio 070/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/070-luxio-070-193-uncommon?variant=40819452313683",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#088 Mismagius 088/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/088-mismagius-088-193-uncommon?variant=40819452575827",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#055 Cetitan 055/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/055-cetitan-055-193-uncommon?variant=40819451396179",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#047 Luvdisc 047/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/047-luvdisc-047-193-common?variant=40818978619475",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#045 Azumarill 045/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/045-azumarill-045-193-uncommon?variant=40819450642515",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#038 Charcadet 038/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/038-charcadet-038-193-common?variant=40818965446739",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#009 Vespiquen 009/193 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/009-vespiquen-009-193-uncommon?variant=40819456933971",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#008 Combee 008/193 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/008-combee-008-193-common?variant=40818969804883",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#146 Zangoose 146/198 Common Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/146-zangoose-146-198-common-reverse-holo?variant=40620994986067",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#064 Magneton 064/198 Common Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/064-magneton-064-198-common-reverse-holo?variant=40620981059667",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#034 Houndoom 034/198 Common Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/034-houndoom-034-198-common-reverse-holo?variant=40620973883475",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#003 Shroomish 003/198 Common Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/003-shroomish-003-198-common-reverse-holo?variant=40620968542291",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#153 Indeedee 153/198 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/153-indeedee-153-198-rare-holo?variant=40594383962195",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#061 Dondozo 061/198 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/061-dondozo-061-198-rare-holo?variant=40594379276371",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#015 Meowscarada 015/198 Rare Holo",
+      "price": "14.99 kr",
+      "url": "https://pokelink.no/products/015-meowscarada-015-198-rare-holo?variant=40594388811859",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#163 Cyclizar 163/198 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/163-cyclizar-163-198-uncommon?variant=40594447106131",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#160 Tandemaus 160/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/160-tandemaus-160-198-common?variant=40594200887379",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#161 Maushold 161/198 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/161-maushold-161-198-uncommon?variant=40594457919571",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#144 Chansey 144/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/144-chansey-144-198-common?variant=40593935958099",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#001 Basic Grass Energy 001 S&V Common",
+      "price": "2.00 kr",
+      "url": "https://pokelink.no/products/001-basic-grass-energy-001-s-v-uncommon?variant=40593692917843",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#138 Bombirdier 138/198 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/138-bombirdier-138-198-uncommon?variant=40594443436115",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#112 Riolu 112/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/112-riolu-112-198-common?variant=40594189353043",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#098 Fidough 098/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/098-fidough-098-198-common?variant=40594175754323",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#094 Dedenne 094/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/094-dedenne-094-198-common?variant=40594001657939",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#082 Drowzee 082/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/082-drowzee-082-198-common?variant=40594112806995",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#073 Pawmi 073/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/073-pawmi-073-198-common?variant=40594182406227",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#049 Clauncher 049/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/049-clauncher-049-198-common?variant=40593960861779",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#052 Quaxly 052/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/052-quaxly-052-198-common?variant=40594188697683",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#034 Houndoom 034/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/034-houndoom-034-198-common?variant=40594178637907",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#013 Sprigatito 013/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/013-sprigatito-013-198-common?variant=40594195251283",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#007 Tropius 007/198 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/007-tropius-007-198-common?variant=40594201477203",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#174 Exp. Share 174/198 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/174-exp-share-174-198-uncommon?variant=40584121974867",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#198 Youngster 198/198 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/198-youngster-198-198-uncommon?variant=40584118173779",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#013 Nincada 013/185 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/013-nincada-013-185-common?variant=40489113092179",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#008 Pineco 008/185 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/008-pineco-008-185-common?variant=40489110241363",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#144 Buneary 144/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/144-buneary-144-195-common?variant=40476684943443",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#141 Spinda 141/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/141-spinda-141-195-common?variant=40476684746835",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#100 Palossand 100/195 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/100-palossand-100-195-uncommon?variant=40476649029715",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#083 Swirlix 083/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/083-swirlix-083-195-common?variant=40476634644563",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#047 Dewpider 047/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/047-dewpider-047-195-common?variant=40476110323795",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#030 Litten 030/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/030-litten-030-195-common?variant=40476069560403",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#025 Fennekin 025/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/025-fennekin-025-195-common?variant=40476066807891",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#021 Ponyta 021/195 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/021-ponyta-021-195-common?variant=40476065398867",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#006 Sunflora 006/195 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/002-sunflora-002-195-common?variant=40476025454675",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#007 Silcoon 007/196 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/007-silcoon-007-196-uncommon?variant=40447628673107",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#141 Porygon2 141/196 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/141-porygon2-141-196-uncommon?variant=40447624675411",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#031 Poliwhirl 031/196 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/031-poliwhirl-031-196-uncommon?variant=40447624216659",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#171 Gift Energy 171/196 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/171-gift-energy-171-196-uncommon?variant=40447613927507",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#016 Phantump 016/196 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/016-phantump-016-196-common?variant=40444260384851",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#071 Mawile 071/196 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/071-mawile-071-196-common?variant=40444256288851",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#075 Hisuian Zorua 075/196 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/075-hisuian-zorua-075-196-common?variant=40444243738707",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#095 Gligar 095/196 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/095-gligar-095-196-common?variant=40444240068691",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#125 Bronzor 125/196 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/125-bronzor-125-196-common?variant=40444231614547",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#018 Blipbug 018/196 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/018-blipbug-018-196-common?variant=40444230303827",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#148 Full Face Guard 148/203 Uncommon Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/148-full-face-guard-148-203-uncommon-reverse-holo?variant=40330741612627",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#156 Rubber Gloves 156/203 Uncommon Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/156-rubber-gloves-156-203-uncommon-reverse-holo?variant=40330740400211",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#164 Zinnia's Resolve 164/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/164-zinnias-resolve-164-203-uncommon?variant=40328447721555",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#155 Ribbon Badge 155/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/155-ribbon-badge-155-203-uncommon?variant=40328440512595",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#141 Aroma Lady 141/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/141-aroma-lady-141-203-uncommon?variant=40328433238099",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#062 Hypno 062/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/062-hypno-062-203-uncommon?variant=40328399323219",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#079 Ribombee 079/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/079-ribombee-079-203-uncommon?variant=40328398209107",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#061 Drowzee 061/203 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/061-drowzee-061-203-common?variant=40328386084947",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#054 Mareep 054/203 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/054-mareep-054-203-common?variant=40328381235283",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#033 Lombre 033/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/033-lombre-033-203-uncommon?variant=40325568299091",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#045 Avalugg 045/203 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/045-avalugg-045-203-uncommon?variant=40325566791763",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#071 Alcremie 071/172 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/071-alcremie-071-172-rare?variant=40321249771603",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#020 Magmortar 020/172 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/020-magmortar-020-172-rare?variant=40321241546835",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#010 Wormadam 010/172 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/010-wormadam-010-172-rare?variant=40321240498259",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#011 Mothim 011/172 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/011-mothim-011-172-rare?variant=40321237876819",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#128 Smeargle 128/203 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/128-smeargle-128-203-rare?variant=40309627912275",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#105 Thievul 105/203 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/105-thievul-105-203-rare?variant=40309623226451",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#038 Milotic 038/203 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/038-milotic-038-203-rare?variant=40309612937299",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#124 Meloetta 124/264 Rare",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/124-meloetta-124-264-rare?variant=40298651287635",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#069 Rare Candy  069/078 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/069-rare-candy-069-078-uncommon?variant=40262373408851",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#060 Bibarel  060/078 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/060-bibarel-060-078-common?variant=40262255738963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#052 Blissey  052/078 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/052-blissey-052-078-rare-holo?variant=40262157860947",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#046 Melmetal 046/078 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/046-melmetal-046-078-rare-holo?variant=40262100582483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#044 Steelix  044/078 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/044-steelix-044-078-common?variant=40262083346515",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#039 Solrock 039/078 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/039-solrock-039-078-uncommon?variant=40261883396179",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#034 Lunatone  034/078 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/034-lunatone-034-078-uncommon?variant=40261757173843",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#033 Xatu  033/078 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/033-xatu-033-078-uncommon?variant=40261750456403",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Custom Nerds Pokédex Perm m/glidelås 32-lommer Svart",
+      "price": "799.00 kr",
+      "url": "https://pokelink.no/products/custom-nerds-pokedex-perm-m-glidelas-32-lommer-svart?variant=45705733570643",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Custom Nerds Toploader Perm m/glidelås 18-lommer Blå",
+      "price": "499.00 kr",
+      "url": "https://pokelink.no/products/custom-nerds-toploader-perm-m-glidelas-18-lommer-bla?variant=45705695658067",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Custom Nerds Toploader Perm m/glidelås 18-lommer Grønn",
+      "price": "499.00 kr",
+      "url": "https://pokelink.no/products/custom-nerds-toploader-perm-m-glidelas-18-lommer-gronn?variant=45705693266003",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "(Max 1 pr kunde, åpnes på stream) Chaos Rising Elite Trainer Box",
+      "price": "3400.00 kr",
+      "url": "https://pokelink.no/products/max-1-pr-kunde-apnes-pa-stream-chaos-rising-elite-trainer-box?variant=44654411415635",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "(Max 10 pr kunde, åpnes på stream) Chaos Rising Booster",
+      "price": "300.00 kr",
+      "url": "https://pokelink.no/products/max-10-pr-kunde-apnes-pa-stream-chaos-rising-booster?variant=44654410924115",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Clear - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-clear-matte-sleeves?variant=44578199601235",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Orange - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-orange-matte-sleeves?variant=44578198487123",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Gold - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-gold-matte-sleeves?variant=44578197504083",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Sapphire - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-sapphire-matte-sleeves?variant=44578196586579",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Crimson - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-crimson-matte-sleeves?variant=44578188951635",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Jet - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-jet-matte-sleeves?variant=44578160640083",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Emerald - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-emerald-matte-sleeves?variant=44578157494355",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Dragon Shield Amber - Matte Sleeves",
+      "price": "119.00 kr",
+      "url": "https://pokelink.no/products/dragon-shield-amber-matte-sleeves?variant=44578155659347",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "CGC 10 Lisia's Appeal 246/191",
+      "price": "899.00 kr",
+      "url": "https://pokelink.no/products/cgc-10-lisias-appeal-246-191?variant=42953293660243",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#078 Team Rocket's exeggutor 078/217 Rare Holo",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/078-team-rockets-exeggutor-078-217-rare-holo?variant=44257428963411",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#006 Erika's Victreebel 006/217 Rare Holo",
+      "price": "12.00 kr",
+      "url": "https://pokelink.no/products/006-erikas-victreebel-006-217-rare-holo?variant=44257420476499",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#025 Entei 025/217 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/025-entei-025-217-rare-holo?variant=44257427095635",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#099 Munkidori 099/217 Rare Holo",
+      "price": "12.00 kr",
+      "url": "https://pokelink.no/products/099-munkidori-099-217-rare-holo?variant=44257433157715",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#108 Groudon 108/217 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/108-groudon-108-217-rare-holo?variant=44257434763347",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#153 Rayquaza 153/217 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/153-rayquaza-153-217-rare-holo?variant=44257441448019",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#143 Pecharunt 143/217 Rare Holo",
+      "price": "12.00 kr",
+      "url": "https://pokelink.no/products/143-pecharunt-143-217-rare-holo?variant=44257439547475",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#198 Poké Pad 198/217 Common",
+      "price": "25.00 kr",
+      "url": "https://pokelink.no/products/198-poke-pad-198-217-common?variant=44238480506963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#156 Bill's Transfer 156/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/156-bills-transfer-156-165-uncommon?variant=41749892202579",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#163 Leftovers 163/165 Uncommon",
+      "price": "6.00 kr",
+      "url": "https://pokelink.no/products/163-leftovers-163-165-uncommon?variant=41749897543763",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#155 Big Air Ballon 155/165 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/155-big-air-ballon-155-165-uncommon?variant=41749891776595",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#143 Snorlax 143/165 Uncommon",
+      "price": "12.00 kr",
+      "url": "https://pokelink.no/products/143-snorlax-143-165-uncommon?variant=41750097920083",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#133 Eevee 133/165 Common",
+      "price": "8.00 kr",
+      "url": "https://pokelink.no/products/133-eevee-133-165-common?variant=41749884993619",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#131 Lapras 131/165 Uncommon",
+      "price": "12.00 kr",
+      "url": "https://pokelink.no/products/131-lapras-131-165-uncommon?variant=41750094544979",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#117 Seadra 117/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/117-seadra-117-165-uncommon?variant=41750052044883",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#116 Horsea 116/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/116-horsea-116-165-common?variant=41749878374483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#118 Goldeen 118/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/118-goldeen-118-165-common?variant=41749878931539",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#098 Krabby 098/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/098-krabby-098-165-common?variant=41749871067219",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#075 Graveler 075/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/075-graveler-075-165-uncommon?variant=41750035005523",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#081 Magnemite 081/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/081-magnemite-081-165-common?variant=41749866938451",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#107 Hitmonchan 107/165 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/107-hitmonchan-107-165-uncommon?variant=41750049488979",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#090 Shellder 090/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/090-shellder-090-165-common?variant=41749869068371",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#088 Grimer 088/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/088-grimer-088-165-common?variant=41749868576851",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#083 Farfetch'd 083/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/083-farfetchd-083-165-common?variant=41749867397203",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#084 Doduo 084/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/084-doduo-084-165-common?variant=41749867921491",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#074 Geodude 074/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/074-geodude-074-165-common?variant=41749865005139",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#073 Tentacruel 073/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/073-tentacruel-073-165-uncommon?variant=41750034710611",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#066 Machop 066/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/066-machop-066-165-common?variant=41749861990483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#062 Poliwrath 062/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/062-poliwrath-062-165-uncommon?variant=41750032482387",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#067 Machoke 067/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/067-machoke-067-165-uncommon?variant=41750033858643",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#092 Gastly 092/165 Common",
+      "price": "6.00 kr",
+      "url": "https://pokelink.no/products/092-gastly-092-165-common?variant=41749869953107",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#093 Haunter 093/165 Uncommon",
+      "price": "8.00 kr",
+      "url": "https://pokelink.no/products/093-haunter-093-165-uncommon?variant=41750039953491",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#095 Onix 095/165 Uncommon",
+      "price": "8.00 kr",
+      "url": "https://pokelink.no/products/095-onix-095-165-uncommon?variant=41750040674387",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#061 Poliwhirl 061/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/061-poliwhirl-061-165-common?variant=41749861236819",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#048 Venonat 048/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/048-venonat-048-165-common?variant=41749853667411",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#053 Persian 053/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/053-dugtrio-053-165-uncommon?variant=41750024912979",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#036 Clefable 036/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/036-clefable-036-165-uncommon?variant=41750018818131",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#028 Sandslash 028/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/028-sandslash-028-165-uncommon?variant=41749932277843",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#035 Clefairy 035/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/035-clefairy-035-165-common?variant=41749848555603",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#022 Fearow 022/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/022-fearow-022-165-uncommon?variant=41749930344531",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#010 Caterpie 010/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/010-caterpie-010-165-common?variant=41749835546707",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#016 Pidgey 016/165 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/016-pidgey-016-165-common?variant=41749839904851",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#012 Butterfree 012/165 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/012-butterfree-012-165-uncommon?variant=41749925068883",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#032 Nidoran 032/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/032-nidoran-032-165-common?variant=41749848162387",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#021 Spearow 021/165 Common",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/021-spearow-021-165-common?variant=41749841215571",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#007 Squirtle 007/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/007-squirtle-007-165-common?variant=41749834989651",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#011 Metapod 011/165 Common",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/011-metapod-011-165-common?variant=41749835939923",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#001 Bulbasaur 001/165 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/001-bulbasaur-001-165-common?variant=41749830402131",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#005 Charmeleon 005/165 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/005-charmeleon-005-165-uncommon?variant=41749924085843",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#166 Arven 166/198 Uncommon Reverse Holo",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/166-arven-166-198-uncommon-reverse-holo?variant=40719858794579",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#186 Arven 186/197 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/186-arven-186-197-uncommon?variant=41950034067539",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#154 Maximum Belt 154/162 ACESPEC Rare",
+      "price": "49.00 kr",
+      "url": "https://pokelink.no/products/154-maximum-belt-154-162-acespec-rare?variant=42144431013971",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#152 Hyper Aroma 152/167 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/152-hyper-aroma-152-167-acespec-rare?variant=42144442908755",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#164 Brilliant Blender 164/191 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/164-brilliant-blender-164-191-acespec-rare?variant=42632517222483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#061 Mega Sharpedo EX 061/094 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/061-mega-sharpedo-ex-061-094-double-rare?variant=44168918138963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#060 Mega Gardevoir EX 060/132 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/060-mega-gardevoir-ex-060-132-double-rare?variant=44168911945811",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#036 Mega Abomasnow EX 036/132 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/036-mega-abomasnow-ex-036-132-double-rare?variant=44168912732243",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#160 Counter Catcher 160/182 Uncommon Reverse Holo",
+      "price": "30.00 kr",
+      "url": "https://pokelink.no/products/160-counter-catcher-160-182-uncommon-reverse-holo?variant=41491051839571",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#003 Yanmega EX 003/182 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/003-yanmega-ex-003-182-double-rare?variant=42837250506835",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "CGC Pristine 10 Origin Forme Dialga Vstar GG68/GG70 (french)",
+      "price": "2799.00 kr",
+      "url": "https://pokelink.no/products/cgc-pristine-10-origin-forme-dialga-vstar-gg68-gg70-french?variant=43163873181779",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Custom Nerds perm m/glidelås 32-lommer Grønn",
+      "price": "699.00 kr",
+      "url": "https://pokelink.no/products/custom-nerds-perm-m-glidelas-32-lommer-green?variant=43129937559635",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "Custom Nerds perm m/glidelås 32-lommer Rød",
+      "price": "699.00 kr",
+      "url": "https://pokelink.no/products/custom-nerds-perm-m-glidelas-32-lommer-rod?variant=43129943162963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#147 Professor's Research 147/172 Rare Holo",
+      "price": "19.00 kr",
+      "url": "https://pokelink.no/products/147-professors-research-147-172-rare-holo?variant=40315472511059",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#032 Iron Thorns EX 032/131 Double Rare",
+      "price": "49.00 kr",
+      "url": "https://pokelink.no/products/032-iron-thorns-ex-032-167-double-rare?variant=42632519450707",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#183 Miracle Headset 183/191 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/183-miracle-headset-183-191-acespec-rare?variant=42632513683539",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#128 Scoop Up Cyclone 128/131 ACESPEC Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/128-scoop-up-cyclone-128-131-acespec-rare?variant=42632497037395",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#136 Hop's Dubwool 136/159 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/136-hops-dubwool-136-159-rare-holo?variant=42621420404819",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#037 Ludicolo 037/159 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/037-ludicolo-037-159-rare-holo?variant=42621402185811",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#018 Meowscarada 018/159 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/018-meowscarada-018-159-rare-holo?variant=42621396910163",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#021 Magmortar 021/159 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/021-magmortar-021-159-rare-holo?variant=42621401006163",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#063 Metagross 063/159 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/063-metagross-063-159-rare-holo?variant=42621405986899",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#087 Hop's Sandaconda 087/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/087-hops-sandaconda-087-159-uncommon?variant=42622098145363",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#108 Hop's Corviknight 108/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/108-hops-corviknight-108-159-uncommon?variant=42622100242515",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#042 Regice 042/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/042-regice-042-159-uncommon?variant=42622093066323",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#092 Weezing 092/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/092-weezing-092-159-uncommon?variant=42622098899027",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#132 Greedent 132/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/132-greedent-132-159-uncommon?variant=42622101454931",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#105 N's Klinklang 105/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/105-ns-klinklang-105-159-uncommon?variant=42622099849299",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#034 Octillery 034/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/034-octillery-034-159-uncommon?variant=42622091722835",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#023 Combusken 023/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/023-combusken-023-159-uncommon?variant=42622089723987",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#057 Alolan Marowak 057/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/057-alolan-marowak-057-159-uncommon?variant=42622096408659",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#039 Pelipper 039/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/039-pelipper-039-159-uncommon?variant=42622091788371",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#047 Iono's Voltorb 047/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/047-ionos-voltorb-047-159-common?variant=42621239787603",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#050 Togedemaru 050/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/050-togedemaru-050-159-common?variant=42621241131091",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#017 Floragato 017/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/017-floragato-017-159-common?variant=42621213409363",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#020 Magmar 020/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/020-magmar-020-159-common?variant=42621215735891",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#035 Lotad 035/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/035-lotad-035-159-common?variant=42621232119891",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#012 Shelmet 012/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/012-shelmet-012-159-common?variant=42621210558547",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#016 Sprigatito 016/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/016-sprigatito-016-159-common?variant=42621211770963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#007 Liligant 007/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/007-liligant-007-159-common?variant=42621204955219",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#010 Foongus 010/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/010-foongus-010-159-common?variant=42621209411667",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#004 Paras 004/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/004-paras-004-159-common?variant=42621200138323",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#133 Hop's Rookidee 133/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/133-hops-rookidee-133-159-common?variant=42621331046483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#106 Galarian Stunfisk 106/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/106-galarian-stunfisk-106-159-common?variant=42621289529427",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#131 Skwovet 131/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/131-skwovet-131-159-common?variant=42621327736915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#103 N's Klink 103/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/103-ns-klink-103-159-common?variant=42621286744147",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#101 Bombirdier  101/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/101-bombirdier-101-159-common?variant=42621285695571",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#124 Audino 124/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/124-audino-124-159-common?variant=42621304963155",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#096 N's Purrloin 096/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/096-ns-purrloin-096-159-common?variant=42621282877523",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#129 Komala 129/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/129-komala-129-159-common?variant=42621315907667",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#123 Tropius 123/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/123-tropius-123-159-common?variant=42621301981267",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#125 Minccino 125/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/125-minccino-125-159-common?variant=42621309288531",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#115 Druddigon 115/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/115-shelgon-115-159-common?variant=42621292478547",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#093 Paldean Wooper 093/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/093-paldean-wooper-093-159-common?variant=42621275832403",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#097 N's Zorua 097/159 Common",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/097-ns-zorua-097-159-common?variant=42621284581459",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#068 Lillie's Comfey 068/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/068-lillies-comfey-068-159-common?variant=42621257875539",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#059 Shuppet 059/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/059-shuppet-059-159-common?variant=42621244899411",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#070 Dhelmise 070/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/070-dhelmise-070-159-common?variant=42621259710547",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#088 Toedscool 088/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/088-toedscool-088-159-common?variant=42621273702483",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#072 Morgrem 072/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/072-morgrem-072-159-common?variant=42621261807699",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#077 Swinub 077/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/077-swinub-077-159-common?variant=42621266362451",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#062 Metang 062/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/062-metang-062-159-common?variant=42621246668883",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#078 Piloswine 078/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/078-piloswine-078-159-common?variant=42621266755667",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#084 Rockruff 084/159 Common",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/084-rockruff-084-159-common?variant=42621270360147",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#157 Ruffian 157/159 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/157-ruffian-157-159-uncommon?variant=42621385244755",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#151 Lillie's Pearl 151/159 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/151-lillies-pearl-151-159-uncommon?variant=42621378396243",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#152 N's Castle 152/159 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/152-ns-castle-152-159-uncommon?variant=42621379084371",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#148 Hop's Choice Band 148/159 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/148-hops-choice-band-148-159-uncommon?variant=42599302496339",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#147 Hop's Bag 147/159 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/147-hops-bag-147-159-uncommon?variant=42599302660179",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#138 Hop's Cramorant 138/159 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/138-hops-cramorant-138-159-uncommon?variant=42599300268115",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#078 Malamar 078/196 Rare Reverse Holo",
+      "price": "19.00 kr",
+      "url": "https://pokelink.no/products/078-malamar-078-196-rare-reverse-holo?variant=40374304637011",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#139 Dark Patch 139/189 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/139-dark-patch-139-189-uncommon?variant=42159121268819",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#144 Buddy-Buddy Poffin  144/162 Uncommon Reverse Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/144-buddy-buddy-poffin-144-162-uncommon-reverse-holo?variant=42000041934931",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#157 Prime Catcher 157/162 ACESPEC Rare",
+      "price": "49.00 kr",
+      "url": "https://pokelink.no/products/157-prime-catcher-157-162-acespec-rare?variant=42144431898707",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#027 Wo-Chien EX 027/193 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/027-wo-chien-ex-027-193-double-rare?variant=40819033210963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#005 Forretress Ex 005/193 Double Rare",
+      "price": "35.00 kr",
+      "url": "https://pokelink.no/products/005-foretress-ex-005-193-double-rare?variant=40819020660819",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#080 Iono 080/091 Uncommon Reverse Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/080-iono-080-091-uncommon-reverse-holo?variant=41491108266067",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#176 Choice Belt 176/193 Uncommon Reverse Holo",
+      "price": "8.00 kr",
+      "url": "https://pokelink.no/products/176-choice-belt-176-193-uncommon-reverse-holo?variant=41491047972947",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#088 Professor's Research 088/091 Rare Holo",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/088-professors-research-088-091-rare-holo?variant=41327243329619",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#070 Cyclizar 070/091 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/070-cyclizar-070-091-rare-holo?variant=41327242248275",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#043 Houndstone 043/091 Rare Holo",
+      "price": "15.00 kr",
+      "url": "https://pokelink.no/products/043-houndstone-043-091-rare-holo?variant=41327240708179",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#081 Moonlit Hill 081/091 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/081-moonlit-hill-081-091-uncommon?variant=41327231008851",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#083 Nemona's Backpack 083/091 Uncommon",
+      "price": "5.00 kr",
+      "url": "https://pokelink.no/products/083-nemonas-backpack-083-091-uncommon?variant=41327231696979",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T10:38:20+00:00",
+      "store": "Pokelink",
+      "name": "#076 Artazon 076/091 Uncommon",
+      "price": "10.00 kr",
+      "url": "https://pokelink.no/products/076-artazon-076-091-uncommon?variant=41327205056595",
       "product_class": "card",
       "event": "ny"
     }
