@@ -1,6 +1,933 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gym Heroes 1. Edition (2000) - Booster Pack - TAMPER SEALED (Fra Box Break 02.01.26)",
+      "price": "7999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gym-heroes-1-edition-2000-booster-pack-tamper-sealed-fra-box-break-03-10-25?variant=51522409955629",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Generations - Blastoise EX Red & Blue Collection",
+      "price": "14999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-generations-blastoise-ex-red-blue-collection-skip-the-line?variant=51492026614061",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Generations - Venusaur EX Red & Blue Collection",
+      "price": "14999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-generations-venusaur-ex-red-blue-collection?variant=51492025467181",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Julekalender 2025",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-julekalender-2025?variant=51407258124589",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - XY Furious Fists - Sleeved Booster Pack (Tilfeldig art)",
+      "price": "1299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-xy-furious-fists-sleeved-booster-pack?variant=51337908257069",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - McDonald's Pikachu Promo",
+      "price": "499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mcdonalds-pikachu-promo?variant=51288067014957",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Brave - Booster Pack (Japansk)",
+      "price": "49.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-brave-booster-pack-japansk?variant=51254240280877",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
+      "price": "1390.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldea-evolved-sleeved-pack?variant=51130511753517",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Mini Tin (2 Booster Packs) Tilfeldig Art",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-mini-tin-2-booster-packs-tilfeldig-art?variant=51096402559277",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Destined Rivals - Booster Bundle (6 Booster Packs)",
+      "price": "1299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-destined-rivals-booster-bundle-6-booster-packs?variant=51062133195053",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon - Cynthia's Garchomp ex Premium Collection",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-cynthias-garchomp-ex-premium-collection?variant=50943227494701",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Charmander Plush Figur 20cm",
+      "price": "399.00 kr",
+      "url": "https://retroworld.no/products/pokemon-charmander-plush-figur-20cm-1?variant=50867275727149",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon Plush Figure Treecko 20cm",
+      "price": "349.00 kr",
+      "url": "https://retroworld.no/products/pokemon-treecko-plush-figur-20cm?variant=50867204587821",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Quaxly Plush Figur 20cm",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-quaxly-plush-figur-20cm?variant=50867186204973",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon Plush Figure Mimikyu 20 cm",
+      "price": "349.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mimikyu-plush-figur-20cm?variant=50867182764333",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Eevee Plush Figur 20cm",
+      "price": "399.00 kr",
+      "url": "https://retroworld.no/products/pokemon-sylveon-plush-figur-20cm-copy-1?variant=50867133415725",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon Plush Figure Sylveon 20 cm",
+      "price": "379.00 kr",
+      "url": "https://retroworld.no/products/pikachu-bamse?variant=50866992349485",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - GX Ultra Shiny (Sun & Moon) - Booster Pack (Japansk)",
+      "price": "1099.00 kr",
+      "url": "https://retroworld.no/products/pokemon-high-class-gx-ultra-shiny-sun-moon-booster-pack-japansk?variant=50845933371693",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - Build & Battle Stadium",
+      "price": "1499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-astral-radiance-build-battle-stadium?variant=50840304615725",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - XY Breakpoint - Booster Pack (Tilfeldig art)",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-xy-breakpoint-booster-pack-tilfeldig-art?variant=50834381013293",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - BW Legendary Treasures (2013) - Booster Pack (Genesect art)",
+      "price": "2999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-bw-legendary-treasures-2013-booster-pack-genesect-art?variant=50833277485357",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - BW Dark Explorers (2012) - Booster Pack (Darkrai art)",
+      "price": "2799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-bw-dark-explorers-2012-booster-pack-darkrai-art?variant=50833254842669",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - BW Next Destinies (2012) - Booster Pack (Reshiram art)",
+      "price": "2499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-bw-next-destinies-2012-booster-pack-reshiram-art?variant=50833247207725",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - BW Next Destinies (2012) - Booster Pack (Regigigas art)",
+      "price": "2499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-bw-next-destinies-2012-booster-pack-regigigas-art?variant=50833243177261",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Black & White Base Set (2011) - Booster Pack (Zebstrika art)",
+      "price": "1799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-black-white-base-set-2011-booster-pack-zebstrika-art?variant=50833234493741",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon -  Iono's Bellibolt EX Premium Collection",
+      "price": "749.00 kr",
+      "url": "https://retroworld.no/products/pokemon-ionos-bellibolt-ex-premium-collection?variant=50780309389613",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Destined Rivals - Sleeved Booster Pack",
+      "price": "169.00 kr",
+      "url": "https://retroworld.no/products/pokemon-destined-rivals-sleeved-booster-pack-apnes-live-maks-4-per-kunde?variant=50770357977389",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Destined Rivals - Booster Pack",
+      "price": "169.00 kr",
+      "url": "https://retroworld.no/products/pokemon-destined-rivals-booster-pack-butikk-copy?variant=50770354471213",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - True Steel Premium Collection (Zamazenta)",
+      "price": "4799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-true-steel-premium-collection-zacian-copy?variant=50713107333421",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - Booster Box Inkl. Akryl (Case fresh 06.02)",
+      "price": "9999.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-steam-siege-booster-box-sealed?variant=50704516743469",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Meowth VMax Special Collection",
+      "price": "3999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-meowth-vmax-special-collection?variant=50674190975277",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Blooming Waters Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-blooming-waters-papp-litt-most-i-hjornet-alt-innhold-good-apnes-live?variant=50652332884269",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Evolving Skies - 3 Pack Blister (Med Umbreon Promo)",
+      "price": "3199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-evolving-skies-3-pack-blister?variant=50632386412845",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - 1 Pack Blister (Checklane)",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-1-pack-blister-checklane?variant=50599223591213",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - Sleeved Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-sleeved-booster-pack?variant=50599221297453",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-booster-pack?variant=50599214121261",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Legends of Johto GX Collection",
+      "price": "3999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-legends-of-johto-gx-collection?variant=50585258426669",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fossil Unlimited - SEALED - 3 Booster Pack (Art Set) Box Break 23.5.26",
+      "price": "15999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-fossil-unlimited-apnet-live-booster-pack-tilfeldig-art-skip-the-line?variant=50556076130605",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fossil Unlimited - ÅPNET LIVE - Booster Pack (Tilfeldig Art) Box Break 23.5.26",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-fossil-unlimited-apnet-live-booster-pack-tilfeldig-art?variant=50556070297901",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fossil Unlimited - Tamper Sealed Booster Pack (Tilfeldig Art) Box Break 23.5.26",
+      "price": "5499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-fossil-unlimited-booster-pack-1?variant=50556068036909",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Silver Tempest - Booster Box Inkl. akryl (Case fresh 06.02)",
+      "price": "7499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-silver-tempest-booster-box-skip-the-line?variant=50536662565165",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Champion's Path - Elite Trainer Box",
+      "price": "2699.00 kr",
+      "url": "https://retroworld.no/products/pokemon-champions-path-elite-trainer-box?variant=50534751830317",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Remix Bout (Sun & Moon) - Booster Pack (Japansk) Box Break 17/7",
+      "price": "399.00 kr",
+      "url": "https://retroworld.no/products/pokemon-remix-bout-sun-moon-booster-pack-japansk?variant=50531602465069",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Legends of Justice Box (Black & White)",
+      "price": "9999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-legends-of-justice-box-black-white?variant=50523127578925",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Evolving Skies - Booster Box",
+      "price": "34999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-evolving-skies-booster-box?variant=50518312288557",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Burning Shadows - Booster Box (Bounty på top hit)",
+      "price": "16999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-burning-shadows-booster-box?variant=50509628735789",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 25th Anniversary Golden Box",
+      "price": "17999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-25th-anniversary-golden-box?variant=50481787896109",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Battle Partners - Booster Pack (Japansk)",
+      "price": "49.00 kr",
+      "url": "https://retroworld.no/products/pokemon-battle-partners-booster-pack-japansk?variant=50449488314669",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradise Dragona - Booster Pack (Japansk)",
+      "price": "69.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paradise-dragona-booster-pack-japansk?variant=50449459872045",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - ETB",
+      "price": "2999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-etb-apnes-live-pa-stream-kun-1stk-per-kunde?variant=50420445511981",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 UPC Ultra Premium Collection",
+      "price": "12999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-ultra-premium-collection?variant=50409429401901",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - The Hunt for Gengar & Giratina (Hidden Potential Tin) Bounty",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/the-hunt-for-gengar-giratina-bounty-live-event?variant=50409287516461",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Eevee Heroes Gym Box (Japansk",
+      "price": "29999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-eevee-heroes-gym-box?variant=50383815377197",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldean Fates - Meowscarada Ex Premium Collection",
+      "price": "2999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldean-fates-meowscarada-ex-premium-collection?variant=50380656279853",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates Tin (Tilfeldig art)",
+      "price": "2499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-hidden-fates-tin-charizard-gx?variant=50380636487981",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldean Fates - Booster Pack",
+      "price": "379.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldean-fates-booster-pack?variant=50380427919661",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon - Terastal Festival - Booster Box (Japansk)",
+      "price": "2499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-terastal-festival-booster-box-japansk?variant=50380379390253",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon - Terastal Festival - Booster Pack (Japansk)",
+      "price": "269.00 kr",
+      "url": "https://retroworld.no/products/pokemon-terastal-festival-booster-pack?variant=50380374802733",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lost-origin-booster-pack?variant=50380325454125",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - XY Primal Clash - Booster Pack (Box Break 9.1.26)",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-primal-clash-booster-pack?variant=50380324208941",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Unbroken Bonds - Booster Pack (BOX BREAK 02.01)",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-unbroken-bonds-booster-pack?variant=50380322341165",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - \"The Bird is the Word\" - 2-Pack Blister Galarian Birds",
+      "price": "329.00 kr",
+      "url": "https://retroworld.no/products/pokemon-fusion-strike-3-pack-blister?variant=50380303794477",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Brilliant Stars - 3 Pack Blister (tilfeldig promo)",
+      "price": "699.00 kr",
+      "url": "https://retroworld.no/products/pokemon-brilliant-stars-3-pack-blister?variant=50380300222765",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - 3 Pack Blister",
+      "price": "599.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lost-origin-3-pack-blister?variant=50380289966381",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Cosmic Eclipse - Sleeved Pack (tilfeldig art på pakken)",
+      "price": "1499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-cosmic-eclipse-sleeved-pack?variant=50380273385773",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Mystery Box 500kr",
+      "price": "500.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mystery-box-500kr?variant=50378060431661",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Mystery Box 1000kr",
+      "price": "1000.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mystery-box-1000kr?variant=50378058236205",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Mystery Box 5000kr",
+      "price": "5000.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mystery-box-5000kr?variant=50378055581997",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Mystery Box 2500kr",
+      "price": "2500.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mystery-box-2500kr?variant=50378053026093",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 Engelsk - Booster Pack",
+      "price": "499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-engelsk-booster-pack?variant=50183832207661",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Surging Sparks - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/pokemon-surging-sparks-booster-pack?variant=50183821951277",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Unified Minds - Booster Pack (BOX BREAK 23.05)",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/unified-minds-booster-pack?variant=50101593440557",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Twilight Masquerade - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/twilight-masquerade-booster-pack?variant=50101593178413",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Temporal Forces - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/temporal-forces-booster-pack?variant=50101593014573",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Silver Tempest - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/silver-tempest-booster-pack?variant=50101591998765",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Shining Fates - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/shining-fates-booster-pack?variant=50101591736621",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Roaring Skies - Sleeved Pack (Tilfeldig art)",
+      "price": "1499.00 kr",
+      "url": "https://retroworld.no/products/roaring-skies-sleeved-pack?variant=50101591507245",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Pokemon Go - Booster Pack",
+      "price": "149.00 kr",
+      "url": "https://retroworld.no/products/pokemon-go-booster-pack?variant=50101590524205",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradox Rift - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/paradox-rift-booster-pack?variant=50101589573933",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldean Fates - Quaquaval Ex Premium Collection",
+      "price": "2999.00 kr",
+      "url": "https://retroworld.no/products/paldean-fates-quaquaval-ex-premium-collection?variant=50101589377325",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - Sleeved Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/paldea-evolved-sleeved-pack?variant=50101589049645",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/paldea-evolved-booster-pack?variant=50101588820269",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates - Elite Trainer Box (ETB)",
+      "price": "7499.00 kr",
+      "url": "https://retroworld.no/products/hidden-fates-elite-trainer-box?variant=50101587378477",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates - Booster Pack",
+      "price": "599.00 kr",
+      "url": "https://retroworld.no/products/hidden-fates-booster-pack-fra-2019?variant=50101587312941",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Guardians Rising - 3-Pack Blister",
+      "price": "1199.00 kr",
+      "url": "https://retroworld.no/products/guardians-rising-3-pack-blister?variant=50101586952493",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Sleeved Pack",
+      "price": "249.00 kr",
+      "url": "https://retroworld.no/products/fusion-strike-sleeved-pack?variant=50101586559277",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/fusion-strike-booster-pack?variant=50101586493741",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Forbidden Light - Blister / Checklane",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/forbidden-light-blister-checklane?variant=50101586166061",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fates Collide - Sleeved Pack",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/fates-collide-sleeved-pack?variant=50101586100525",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - SWSH07 Evolving Skies - Booster Pack (Box Break 07.06.26)",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/evolving-skies-booster-pack?variant=50101585936685",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Dragon Majesty - Booster Pack (tilfeldig art)",
+      "price": "1199.00 kr",
+      "url": "https://retroworld.no/products/dragon-majesty-booster-pack?variant=50101584986413",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crown Zenith - Booster Pack",
+      "price": "479.00 kr",
+      "url": "https://retroworld.no/products/crown-zenith-booster-pack?variant=50101584265517",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crimson Invasion - Booster Pack",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/crimson-invasion-booster-pack?variant=50101584167213",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "BOX BREAK 05.06 Pokemon - Cosmic Eclipse - Booster Pack",
+      "price": "1399.00 kr",
+      "url": "https://retroworld.no/products/cosmic-eclipse-booster-pack?variant=50101583937837",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "BOX BREAK 10.JULI! Pokemon - Chilling Reign - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/chilling-reign-booster-pack?variant=50101583544621",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Celestial Storm - Booster Pack",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/celestial-storm-booster-pack?variant=50101583118637",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Celebrations - Mini Tin",
+      "price": "1099.00 kr",
+      "url": "https://retroworld.no/products/celebrations-mini-tin?variant=50101582594349",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Burning Shadows - Sleeved Pack",
+      "price": "479.00 kr",
+      "url": "https://retroworld.no/products/burning-shadows-sleeved-pack?variant=50101582463277",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "BOX BREAK 10.JULI! Pokemon - Brilliant Stars - Booster Pack (36 spots tilgjengelig)",
+      "price": "219.00 kr",
+      "url": "https://retroworld.no/products/brilliant-stars-booster-pack?variant=50101582299437",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Breakpoint - Sleeved Pack (Tilfeldig art)",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/breakpoint-sleeved-pack?variant=50101580562733",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Break Through - Booster Pack (Box break 13.01.26)",
+      "price": "1499.00 kr",
+      "url": "https://retroworld.no/products/break-through-booster-pack?variant=50101580529965",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/astral-radiance-booster-pack?variant=50101579055405",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-19T04:58:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - XY Ancient Origins - Tamper sealed Booster Pack (Box Break 9.1.26)",
+      "price": "2499.00 kr",
+      "url": "https://retroworld.no/products/ancient-origins-booster-pack?variant=50101578858797",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-19T02:38:01+00:00",
       "store": "Maxgaming",
       "name": "Pokémon Premium Green Snap 4-pocket Binder",
@@ -1770,933 +2697,6 @@
       "name": "Thievul 090/132 - Mega Evolution Base - NM (ID: 53278377028862)",
       "price": "7.90 kr",
       "url": "https://laboge.no/products/thievul-090-132-mega-evolution-base-rh?variant=54145387004203",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nickit 089/132 - Mega Evolution Base - NM (ID: 53881961485414)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nickit-089-132-mega-evolution-base-rh?variant=54137186943275",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nickit 089/132 - Mega Evolution Base - NM (ID: 53888960478639)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nickit-089-132-mega-evolution-base-rh?variant=54137186976043",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nickit 089/132 - Mega Evolution Base - NM (ID: 53888961696784)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nickit-089-132-mega-evolution-base-rh?variant=54137187008811",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nickit 089/132 - Mega Evolution Base - NM (ID: 53278375445780)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nickit-089-132-mega-evolution-base-rh?variant=54145386250539",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nickit 089/132 - Mega Evolution Base - NM (ID: 53278376273027)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nickit-089-132-mega-evolution-base-rh?variant=54145386283307",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nickit 089/132 - Mega Evolution Base - NM (ID: 53278376909748)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nickit-089-132-mega-evolution-base-rh?variant=54145386316075",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Yveltal 088/132 - Mega Evolution Base - NM (ID: 53879500192928)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/yveltal-088-132-mega-evolution-base-rh?variant=54137190187307",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Yveltal 088/132 - Mega Evolution Base - NM (ID: 53888960837816)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/yveltal-088-132-mega-evolution-base-rh?variant=54137190220075",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Yveltal 088/132 - Mega Evolution Base - NM (ID: 53888961418193)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/yveltal-088-132-mega-evolution-base-rh?variant=54137190252843",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Yveltal 088/132 - Mega Evolution Base - NM (ID: 53278376403444)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/yveltal-088-132-mega-evolution-base-rh?variant=54145387430187",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Yveltal 088/132 - Mega Evolution Base - NM (ID: 53278376602485)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/yveltal-088-132-mega-evolution-base-rh?variant=54145387462955",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Yveltal 088/132 - Mega Evolution Base - NM (ID: 53278376982974)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/yveltal-088-132-mega-evolution-base-rh?variant=54145387495723",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Spiritomb 087/132 - Mega Evolution Base - NM (ID: 53879500167059)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/spiritomb-087-132-mega-evolution-base-rh?variant=54137189007659",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Spiritomb 087/132 - Mega Evolution Base - NM (ID: 53888962406031)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/spiritomb-087-132-mega-evolution-base-rh?variant=54137189040427",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Crawdaunt 085/132 - Mega Evolution Base - NM (ID: 53881961403714)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/crawdaunt-085-132-mega-evolution-base-rh?variant=54137184190763",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Garganacl 084/132 - Mega Evolution Base - NM (ID: 53881961310458)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/garganacl-084-132-mega-evolution-base-rh?variant=54137184878891",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Garganacl 084/132 - Mega Evolution Base - NM (ID: 53278377066623)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/garganacl-084-132-mega-evolution-base-rh?variant=54145385627947",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Naclstack 083/132 - Mega Evolution Base - NM (ID: 53881961121670)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/naclstack-083-132-mega-evolution-base-rh?variant=54137186910507",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Naclstack 083/132 - Mega Evolution Base - NM (ID: 53278375402232)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/naclstack-083-132-mega-evolution-base-rh?variant=54145386152235",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Nacli 082/132 - Mega Evolution Base - NM (ID: 53879500125734)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/nacli-082-132-mega-evolution-base-rh?variant=54137186877739",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Stonjourner 081/132 - Mega Evolution Base - NM (ID: 53879500079512)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/stonjourner-081-132-mega-evolution-base-rh?variant=54137189204267",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Stonjourner 081/132 - Mega Evolution Base - NM (ID: 53881962237148)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/stonjourner-081-132-mega-evolution-base-rh?variant=54137189237035",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Stonjourner 081/132 - Mega Evolution Base - NM (ID: 53881962412467)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/stonjourner-081-132-mega-evolution-base-rh?variant=54137189269803",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Stonjourner 081/132 - Mega Evolution Base - NM (ID: 53881962536730)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/stonjourner-081-132-mega-evolution-base-rh?variant=54137189302571",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Marshadow 080/132 - Mega Evolution Base - NM (ID: 53879500029792)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/marshadow-080-132-mega-evolution-base-rh?variant=54137186615595",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Marshadow 080/132 - Mega Evolution Base - NM (ID: 53888962219104)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/marshadow-080-132-mega-evolution-base-rh?variant=54137186648363",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Marshadow 080/132 - Mega Evolution Base - NM (ID: 53888962288566)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/marshadow-080-132-mega-evolution-base-rh?variant=54137186681131",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Toxicroak 079/132 - Mega Evolution Base - NM (ID: 53879499968075)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/toxicroak-079-132-mega-evolution-base-rh?variant=54137189663019",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Toxicroak 079/132 - Mega Evolution Base - NM (ID: 53881962375223)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/toxicroak-079-132-mega-evolution-base-rh?variant=54137189695787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Croagunk 078/132 - Mega Evolution Base - NM (ID: 53879499897952)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/croagunk-078-132-mega-evolution-base-rh?variant=54137184223531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Croagunk 078/132 - Mega Evolution Base - NM (ID: 53881962183603)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/croagunk-078-132-mega-evolution-base-rh?variant=54137184256299",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Croagunk 078/132 - Mega Evolution Base - NM (ID: 53881962693047)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/croagunk-078-132-mega-evolution-base-rh?variant=54137184289067",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Croagunk 078/132 - Mega Evolution Base - NM (ID: 53278375278011)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/croagunk-078-132-mega-evolution-base-rh?variant=54145385496875",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Riolu 076/132 - Mega Evolution Base - NM (ID: 53879499825324)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/riolu-076-132-mega-evolution-base-rh?variant=54137187664171",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Riolu 076/132 - Mega Evolution Base - NM (ID: 53881962288558)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/riolu-076-132-mega-evolution-base-rh?variant=54137187696939",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Riolu 076/132 - Mega Evolution Base - NM (ID: 53881962571612)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/riolu-076-132-mega-evolution-base-rh?variant=54137187729707",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Riolu 076/132 - Mega Evolution Base - NM (ID: 53881962652929)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/riolu-076-132-mega-evolution-base-rh?variant=54137187762475",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53875847502204)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54137188712747",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53881962468410)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54137188745515",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53278375319220)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54145386742059",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53278376327382)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54145386774827",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53278376779980)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54145386807595",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Lunatone 074/132 - Mega Evolution Base - NM (ID: 53875847453573)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/lunatone-074-132-mega-evolution-base-rh?variant=54137186353451",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Hariyama 073/132 - Mega Evolution Base - NM (ID: 53881961086800)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/hariyama-073-132-mega-evolution-base-rh?variant=54137185370411",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Hariyama 073/132 - Mega Evolution Base - NM (ID: 53881961997015)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/hariyama-073-132-mega-evolution-base-rh?variant=54137185403179",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Makuhita 072/132 - Mega Evolution Base - NM (ID: 53881961040391)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/makuhita-072-132-mega-evolution-base-rh?variant=54137186517291",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Makuhita 072/132 - Mega Evolution Base - NM (ID: 53881962053979)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/makuhita-072-132-mega-evolution-base-rh?variant=54137186550059",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Makuhita 072/132 - Mega Evolution Base - NM (ID: 53278376733370)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/makuhita-072-132-mega-evolution-base-rh?variant=54145386021163",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Tyrogue 071/132 - Mega Evolution Base - NM (ID: 53879500855937)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/tyrogue-071-132-mega-evolution-base-rh?variant=54137189728555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Tyrogue 071/132 - Mega Evolution Base - NM (ID: 53881962120254)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/tyrogue-071-132-mega-evolution-base-rh?variant=54137189761323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Tyrogue 071/132 - Mega Evolution Base - NM (ID: 53881962339724)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/tyrogue-071-132-mega-evolution-base-rh?variant=54137189794091",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Tyrogue 071/132 - Mega Evolution Base - NM (ID: 53881962616424)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/tyrogue-071-132-mega-evolution-base-rh?variant=54137189826859",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Tyrogue 071/132 - Mega Evolution Base - NM (ID: 53888962362196)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/tyrogue-071-132-mega-evolution-base-rh?variant=54137189859627",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Tyrogue 071/132 - Mega Evolution Base - NM (ID: 53888962481563)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/tyrogue-071-132-mega-evolution-base-rh?variant=54137189892395",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Onix 070/132 - Mega Evolution Base - NM (ID: 53875847397411)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/onix-070-132-mega-evolution-base-rh?variant=54137187238187",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Onix 070/132 - Mega Evolution Base - NM (ID: 53278375225816)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/onix-070-132-mega-evolution-base-rh?variant=54145386348843",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53875847339880)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54137187893547",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53881961923518)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54137187926315",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53881962493226)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54137187959083",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53888962160141)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54137187991851",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53888962252857)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54137188024619",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53278375078274)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54145386545451",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandslash 069/132 - Mega Evolution Base - NM (ID: 53278375362862)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandslash-069-132-mega-evolution-base-rh?variant=54145386578219",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandshrew 068/132 - Mega Evolution Base - NM (ID: 53875847277354)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandshrew-068-132-mega-evolution-base-rh?variant=54137187828011",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandshrew 068/132 - Mega Evolution Base - NM (ID: 53888962334509)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandshrew-068-132-mega-evolution-base-rh?variant=54137187860779",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Sandshrew 068/132 - Mega Evolution Base - NM (ID: 53278375155536)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/sandshrew-068-132-mega-evolution-base-rh?variant=54145386512683",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Gimmighoul 067/132 - Mega Evolution Base - NM (ID: 53879500798732)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/gimmighoul-067-132-mega-evolution-base-rh?variant=54137185075499",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Houndstone 066/132 - Mega Evolution Base - NM (ID: 53875847206178)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/houndstone-066-132-mega-evolution-base-rh?variant=54137185599787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Grumpig 063/132 - Mega Evolution Base - NM (ID: 53879500694403)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/grumpig-063-132-mega-evolution-base-rh?variant=54137185173803",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Grumpig 063/132 - Mega Evolution Base - NM (ID: 53881963298404)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/grumpig-063-132-mega-evolution-base-rh?variant=54137185206571",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Spoink 062/132 - Mega Evolution Base - NM (ID: 53879500661665)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/spoink-062-132-mega-evolution-base-rh?variant=54137189073195",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Spoink 062/132 - Mega Evolution Base - NM (ID: 53881962849887)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/spoink-062-132-mega-evolution-base-rh?variant=54137189105963",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Spoink 062/132 - Mega Evolution Base - NM (ID: 53881963251102)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/spoink-062-132-mega-evolution-base-rh?variant=54137189138731",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Kirlia 059/132 - Mega Evolution Base - NM (ID: 53879500580097)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/kirlia-059-132-mega-evolution-base-rh?variant=54137185861931",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Kirlia 059/132 - Mega Evolution Base - NM (ID: 53881962934948)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/kirlia-059-132-mega-evolution-base-rh?variant=54137185894699",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Shedinja 061/132 - Mega Evolution Base - NM (ID: 53879500624583)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/shedinja-061-132-mega-evolution-base-rh?variant=54137188090155",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Shedinja 061/132 - Mega Evolution Base - NM (ID: 53881962737604)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/shedinja-061-132-mega-evolution-base-rh?variant=54137188122923",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Shedinja 061/132 - Mega Evolution Base - NM (ID: 53881962895544)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/shedinja-061-132-mega-evolution-base-rh?variant=54137188155691",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Shedinja 061/132 - Mega Evolution Base - NM (ID: 53881963138417)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/shedinja-061-132-mega-evolution-base-rh?variant=54137188188459",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Shedinja 061/132 - Mega Evolution Base - NM (ID: 53881963178658)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/shedinja-061-132-mega-evolution-base-rh?variant=54137188221227",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Shedinja 061/132 - Mega Evolution Base - NM (ID: 53881963214260)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/shedinja-061-132-mega-evolution-base-rh?variant=54137188253995",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Ralts 058/132 - Mega Evolution Base - NM (ID: 53875847090432)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/ralts-058-132-mega-evolution-base-rh?variant=54137187565867",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Jynx 057/132 - Mega Evolution Base - NM (ID: 53875847029191)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/jynx-057-132-mega-evolution-base-rh?variant=54137185763627",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Alakazam 056/132 - Mega Evolution Base - NM (ID: 53879500545024)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/alakazam-056-132-mega-evolution-base-rh?variant=54137183338795",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Alakazam 056/132 - Mega Evolution Base - NM (ID: 53881963058186)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/alakazam-056-132-mega-evolution-base-rh?variant=54137183371563",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Alakazam 056/132 - Mega Evolution Base - NM (ID: 53881963099485)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/alakazam-056-132-mega-evolution-base-rh?variant=54137183404331",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Kadabra 055/132 - Mega Evolution Base - NM (ID: 53875846957921)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/kadabra-055-132-mega-evolution-base-rh?variant=54137185796395",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Kadabra 055/132 - Mega Evolution Base - NM (ID: 53881962814410)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/kadabra-055-132-mega-evolution-base-rh?variant=54137185829163",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Abra 054/132 - Mega Evolution Base - NM (ID: 53875846918344)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/abra-054-132-mega-evolution-base-rh?variant=54137183240491",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Abra 054/132 - Mega Evolution Base - NM (ID: 53881962979423)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/abra-054-132-mega-evolution-base-rh?variant=54137183273259",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Heliolisk 053/132 - Mega Evolution Base - NM (ID: 53879500515020)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/heliolisk-053-132-mega-evolution-base-rh?variant=54137185435947",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Heliolisk 053/132 - Mega Evolution Base - NM (ID: 53888960540330)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/heliolisk-053-132-mega-evolution-base-rh?variant=54137185468715",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Heliolisk 053/132 - Mega Evolution Base - NM (ID: 53888960912991)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/heliolisk-053-132-mega-evolution-base-rh?variant=54137185501483",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Heliolisk 053/132 - Mega Evolution Base - NM (ID: 53888961204094)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/heliolisk-053-132-mega-evolution-base-rh?variant=54137185534251",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Heliolisk 053/132 - Mega Evolution Base - NM (ID: 53278376949794)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/heliolisk-053-132-mega-evolution-base-rh?variant=54145385791787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Helioptile 052/132 - Mega Evolution Base - NM (ID: 53875846869158)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/helioptile-052-132-mega-evolution-base-rh?variant=54137185567019",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Helioptile 052/132 - Mega Evolution Base - NM (ID: 53278376562569)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/helioptile-052-132-mega-evolution-base-rh?variant=54145385759019",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Pachirisu 051/132 - Mega Evolution Base - NM (ID: 53875846824170)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/pachirisu-051-132-mega-evolution-base-rh?variant=54137187303723",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Electrike 049/132 - Mega Evolution Base - NM (ID: 53875846789533)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/electrike-049-132-mega-evolution-base-rh?variant=54137184649515",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Raikou 048/132 - Mega Evolution Base - NM (ID: 53879500470169)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/raikou-048-132-mega-evolution-base-rh?variant=54137187533099",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Raikou 048/132 - Mega Evolution Base - NM (ID: 53278376641059)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/raikou-048-132-mega-evolution-base-rh?variant=54145386447147",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Magnezone 047/132 - Mega Evolution Base - NM (ID: 53879500437004)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/magnezone-047-132-mega-evolution-base-rh?variant=54137186451755",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-18T18:18:20+00:00",
-      "store": "LABOGE",
-      "name": "Magnezone 047/132 - Mega Evolution Base - NM (ID: 53888960872828)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/magnezone-047-132-mega-evolution-base-rh?variant=54137186484523",
       "product_class": "card",
       "event": "ny"
     }
