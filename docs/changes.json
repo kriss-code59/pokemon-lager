@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-19T18:38:28+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-19T18:38:28+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Luxray)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-luxray?variant=54642789187907",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-19T18:38:28+00:00",
+      "store": "Card Kings",
+      "name": "CHASING GLORY TOGETHER BOOSTER BOKS",
+      "price": "0,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/chasing-glory-together-booster-boks",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-19T17:58:05+00:00",
       "store": "LABOGE",
       "name": "Pokemon Pitch Black Booster Bundle (Live)",
@@ -2670,33 +2697,6 @@
       "name": "Crabominable V 026/100 - Fusion Arts - NM (ID: 53906473192831)",
       "price": "15.00 kr",
       "url": "https://laboge.no/products/crabominable-v-026-100-fusion-arts?variant=54028805308715",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "LABOGE",
-      "name": "Crabominable 107/102 - Stellar Miracle - NM (ID: 53272649823138)",
-      "price": "25.00 kr",
-      "url": "https://laboge.no/products/crabominable-107-102-stellar-miracle?variant=54028805144875",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "LABOGE",
-      "name": "Colress's Experiment 235/172 - VSTAR Universe - NM (ID: 53272272744239)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/colresss-experiment-235-172-vstar-universe?variant=54028805112107",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "LABOGE",
-      "name": "Clive 344/190 - Shiny Treasure ex - NM (ID: 53272218745153)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/clive-344-190-shiny-treasure-ex?variant=54028805046571",
       "product_class": "card",
       "event": "ny"
     }
