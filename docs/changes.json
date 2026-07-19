@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-19T10:18:28+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-19T07:58:10+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Vaporeon",
@@ -2688,15 +2697,6 @@
       "name": "Buneary 107/132 - Mega Evolution Base - NM (ID: 53888962080707)",
       "price": "7.90 kr",
       "url": "https://laboge.no/products/buneary-107-132-mega-evolution-base-rh?variant=54137183666475",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T07:58:10+00:00",
-      "store": "LABOGE",
-      "name": "Buneary 107/132 - Mega Evolution Base - NM (ID: 53888962125694)",
-      "price": "7.90 kr",
-      "url": "https://laboge.no/products/buneary-107-132-mega-evolution-base-rh?variant=54137183699243",
       "product_class": "card",
       "event": "ny"
     }
