@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-20T14:58:25+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon Glory of Team Rocket Booster Boks (Japansk)",
+      "price": "kr2.899,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-glory-of-team-rocket-booster-pack-japansk/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-20T14:58:25+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon Scarlet EX Booster Pack (Japansk)",
+      "price": "kr49,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-scarlet-ex-booster-pack-japansk/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-20T14:38:14+00:00",
       "store": "Kanoncon",
       "name": "Pokemon Kinesisk Crystal Gathering Binder Set – Vaporeon",
@@ -2679,24 +2697,6 @@
       "name": "Ultra Pro Pokemon Mega Evolution 4-Pocket Portfolio",
       "price": "115.00 kr",
       "url": "https://pokestore.no/products/mega-evolution-4-pocket-portfolio-for-pok-mon?variant=51743186026727",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Plush Mudkip 20 cm",
-      "price": "369.00 kr",
-      "url": "https://pokestore.no/products/pokemon-plush-mudkip-20-cm?variant=51637866987751",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Litwick Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-litwick-plush?variant=51612637102311",
       "product_class": "accessory",
       "event": "ny"
     }
