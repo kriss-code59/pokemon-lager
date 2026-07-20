@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-20T06:38:19+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon TCG: Battle Partners SV9 Booster Pack (Japanese)",
+      "price": "kr 69.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-battle-partners-sv9-booster-pack-japanese/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-20T06:38:19+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon TCG: VStar Universe Booster Pack (SWSH S12a, Japanese)",
+      "price": "kr 419.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-vstar-universe-booster-pack-swsh-s12a-japanese/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-20T06:38:19+00:00",
+      "store": "Neo Tokyo",
+      "name": "One Piece TCG: Royal Blood Booster Pack (OP-10, Bandai, Japanese)",
+      "price": "kr 99.00",
+      "url": "https://www.neo-tokyo.no/product/one-piece-tcg-royal-blood-booster-pack-op-10-bandai-japanese/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-20T06:17:59+00:00",
       "store": "Braspill",
       "name": "Pokemon Crystal Samlermyntsett - Eevee",
@@ -2670,33 +2697,6 @@
       "name": "Pokemon Black Bolt & White Flare Tech Sticker Collection (2 stk)",
       "price": "1399.00 kr",
       "url": "https://pokestore.no/products/pokemon-black-bolt-white-flare-tech-sticker-collection-2-stk?variant=50939991589095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Hoopa SWSH176 JUMBO Black Star Promo",
-      "price": "12.00 kr",
-      "url": "https://pokestore.no/products/pokemon-hoopa-swsh176-jumbo-black-star-promo?variant=50624564953319",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crown Zenith Premium Figure Collection Shiny Zacian",
-      "price": "5799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crown-zenith-premium-figure-collection-shiny-zacian?variant=50624528810215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Brilliant Stars Booster (36 stk uten booster box)",
-      "price": "7699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-brilliant-stars-booster-36-stk-uten-display?variant=50624527171815",
       "product_class": "card",
       "event": "ny"
     }
