@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-21T13:38:24+00:00",
+      "store": "RetroWorld",
+      "name": "Åpnes live 21.07! Pokemon - Run of Chaos - 10 Packs Chaos Rising",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-run-of-chaos-10-packs-chaos-rising?variant=52066656747821",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T13:38:24+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - 10 Packathon",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-astral-radiance-10-packathon?variant=51731621970221",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T13:38:24+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Shining Fates - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/shining-fates-booster-pack?variant=50101591736621",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-21T13:18:48+00:00",
       "store": "Ark",
       "name": "Pokemon Diamond and Pearl Adventure!, Vol. 6",
@@ -2671,33 +2698,6 @@
       "price": "145.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-morning-meadow-4-pocket-binder-album?variant=51266886435047",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock DX Deluxe Mewtwo Figur",
-      "price": "389.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-mewtwo-figur?variant=51265507786983",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-05 Quaxly Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-quaxly-moncolle-figur?variant=51265497858279",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock RS Pawmi Figur",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-rs-pawmi-figur?variant=51245929562343",
-      "product_class": "card",
       "event": "ny"
     }
   ]
