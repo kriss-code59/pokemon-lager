@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-21T02:16:33+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 10 per pers. Pokemon Destined Rivals Boosterpakke",
+      "price": "139.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-destined-rivals-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T02:16:33+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 10 per pers. Pokemon Ascended Heroes Boosterpakke",
+      "price": "199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T02:16:33+00:00",
+      "store": "Braspill",
+      "name": "Pokémon Shrouded Fable Mini Tin 1 stk",
+      "price": "199.00 kr",
+      "url": "https://braspill.no/products/pokemon-shrouded-fable-mini-tin-1-stk?variant=51950743355684",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T02:16:33+00:00",
+      "store": "Braspill",
+      "name": "151c Coin set Pokemon Gengar",
+      "price": "369.00 kr",
+      "url": "https://braspill.no/products/151c-coin-set-pokemon-gengar?variant=55665981325604",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T02:16:33+00:00",
+      "store": "Ark",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 6",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-6-9781421531700",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T02:16:33+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Mew Acrylic Keychain",
+      "price": "kr 39.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-mew-acrylic-keychain/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-20T18:58:35+00:00",
       "store": "Outland",
       "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
@@ -2643,60 +2697,6 @@
       "name": "CGC 10 Chatot 181/162",
       "price": "999.00 kr",
       "url": "https://pokelink.no/products/cgc-10-chatot-181-162?variant=43211037704275",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokelink",
-      "name": "CGC 10 Lisia's Appeal 234/191",
-      "price": "599.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-lisias-appeal-234-191?variant=43210967744595",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokelink",
-      "name": "CGC 10 N's Zoroark EX 185/159",
-      "price": "1499.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-ns-zoroark-ex-185-159?variant=43211103010899",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokelink",
-      "name": "CGC Perfect 10 Pikachu 205/172 (japanese)",
-      "price": "7199.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-perfect-10-pikachu-205-172-japanese?variant=43210823172179",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokelink",
-      "name": "CGC Pristine 10 Kangaskhan 204/182",
-      "price": "1749.00 kr",
-      "url": "https://pokelink.no/products/cgc-pristine-10-kangaskhan-204-182?variant=43196879568979",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokelink",
-      "name": "CGC 10 Sylveon Vmax 212/203",
-      "price": "5499.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-sylveon-vmax-212-203?variant=43211189977171",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokelink",
-      "name": "CGC Pristine 10 Galarian Articuno V 170/198",
-      "price": "2699.00 kr",
-      "url": "https://pokelink.no/products/cgc-pristine-10-galarian-articuno-v-170-198?variant=43211016274003",
       "product_class": "card",
       "event": "ny"
     }
