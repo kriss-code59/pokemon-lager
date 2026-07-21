@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-21T17:19:05+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Surging Sparks Elite Trainer Box",
+      "price": "2249.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-surging-sparks-elite-trainer-box?variant=48174449590526",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T17:19:05+00:00",
+      "store": "PokeNordic",
+      "name": "Mega Charizard X Ultra Premium Collection (UPC)",
+      "price": "3299.00 kr",
+      "url": "https://pokenordic.no/products/mega-charizard-x-ultra-premium-collection?variant=47546777207038",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T17:19:05+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Pitch Black Elite Trainer Box",
+      "price": "1099.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-pitch-black-elite-trainer-box?variant=48624488841470",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T17:19:05+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Pitch Black Booster Bundle",
+      "price": "629.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-pitch-black-booster-bundle?variant=48624466166014",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T17:19:05+00:00",
+      "store": "Pokefriends",
+      "name": "Julies Mystery Pack",
+      "price": "699.00 kr",
+      "url": "https://pokefriends.no/products/julies-mystery-pack?variant=45435772469357",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-21T15:38:32+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Vaporeon Tin Set (Kinesisk)",
@@ -2653,51 +2698,6 @@
       "price": "239.00 kr",
       "url": "https://pokestore.no/products/pokemon-ho-oh-moncolle-figur?variant=51568762421479",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Altaria Moncolle Figur",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-altaria-moncolle-figur?variant=51568761536743",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Gardevoir Sleeves (64 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-gardevoir-sleeves?variant=51568668508391",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Reshiram Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-reshiram-sleeves?variant=51568667918567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Poke Ball & Energy Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-poke-ball-energy-sleeves?variant=51568666968295",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Zekrom Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-zecrom-sleeves?variant=51568664248551",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
