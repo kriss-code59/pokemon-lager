@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-21T10:59:42+00:00",
+      "store": "LABOGE",
+      "name": "Pokemon Pitch Black Booster Box",
+      "price": "2999.00 kr",
+      "url": "https://laboge.no/products/pokemon-pitch-black-booster-box?variant=54210470478123",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T10:59:42+00:00",
+      "store": "LABOGE",
+      "name": "Pokemon Pitch Black Elite Trainer Box",
+      "price": "999.00 kr",
+      "url": "https://laboge.no/products/pokemon-pitch-black-elite-trainer-box?variant=54210449047851",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T10:59:42+00:00",
+      "store": "Ark",
+      "name": "Puslespill 2x24 Pokémon",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/puslespill-2x24-pokemon-4005556056682",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-21T10:38:37+00:00",
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Pitch Black Elite Trainer Box",
@@ -2670,33 +2697,6 @@
       "name": "Pokemon Professor Juniper Deck Box",
       "price": "35.00 kr",
       "url": "https://pokestore.no/products/pokemon-professor-juniper-oppbevaringseske?variant=50923999428839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kirlia Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kirlia-plush?variant=50863559475431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Munchlax (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-munchlax-25cm?variant=50824915222759",
       "product_class": "accessory",
       "event": "ny"
     }
