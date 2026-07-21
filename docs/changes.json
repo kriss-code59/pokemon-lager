@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-21T12:59:15+00:00",
+      "store": "LABOGE",
+      "name": "Ultra Pro 9-Pocket Zippered Premium PRO-BINDER",
+      "price": "349.00 kr",
+      "url": "https://laboge.no/products/ultra-pro-9-pocket-zippered-premium-pro-binder?variant=54211057418539",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T12:59:15+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK CHASING GLORY TOGETHER BOOSTER PAKKE",
+      "price": "35,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/kinesisk-chasing-glory-together-booster-boks",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T12:59:15+00:00",
+      "store": "Boosterpakker",
+      "name": "COLLECT 151 VOL. 1 JOURNEY JUMBO BOOSTER BOKS",
+      "price": "1 549,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/collect-151-journey-kinesisk-booster-boks",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T12:59:15+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK BRAVE STARS BOOSTER BOKS CS5A",
+      "price": "599,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/kinesisk-154",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-21T12:38:38+00:00",
       "store": "LABOGE",
       "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 9-Pocket PRO-Binder",
@@ -2662,42 +2698,6 @@
       "price": "199.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-raichu-figur?variant=51235283960039",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Spewpa Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-spewpa-plush?variant=51189054505191",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Mesprit Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-mesprit-plush?variant=51188311195879",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Krickelot Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-krickelot-plush?variant=51188040073447",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kadabra Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kadabra-plush?variant=51188039123175",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
