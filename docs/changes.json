@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-21T19:18:30+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Fossil - Booster Pack (HEAVY) (SKIP THE LINE)",
+      "price": "4999.00 kr",
+      "url": "https://pokebua.no/products/pokemon-fossil-booster-pack-heavy-skip-the-line?variant=51552138264809",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-21T19:18:30+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Evolving Skies - Sleeved Pack",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-evolving-skies-sleeved-pack?variant=50380276826413",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-21T19:18:30+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Ascended Heroes – Booster Bundle",
+      "price": "kr 1 499,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-ascended-heroes-booster-bundle/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-21T18:18:34+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Ascended Heroes - Booster Bundle Box",
@@ -2671,33 +2698,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-tepig-moncolle-figur?variant=51568782311655",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Blaziken Moncolle Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-blaziken-moncolle-figur?variant=51568774906087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terastal Pikachu Moncolle Figur",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terastal-pikachu-moncolle-figur?variant=51568764158183",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Morpeko Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-morpeko-plush?variant=51568762683623",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
