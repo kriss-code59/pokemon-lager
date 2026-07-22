@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-22T07:38:45+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG Perfect Order – Booster Pack",
+      "price": "kr 109,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-perfect-order-booster-pack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-22T07:38:45+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG Phantasmal Flames – Booster Pack",
+      "price": "kr 189,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-phantasmal-flames-booster-pack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-22T07:18:25+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Sylveon",
@@ -2680,24 +2698,6 @@
       "price": "109.00 kr",
       "url": "https://pokestore.no/products/pokemon-pitch-black-booster-pakke?variant=52266255810791",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X Deck Protector Sleeves (65 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-65ct-deck-protectors-sleeves-mega-charizard-x?variant=52251775172839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T11:19:41+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard Y Deck Protector Sleeves (65 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-65ct-deck-protectors-sleeves-mega-charizard-y?variant=52251775140071",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
