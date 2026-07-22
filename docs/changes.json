@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-22T18:38:55+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Ascended Heroes Booster Pakke",
+      "price": "239.00 kr",
+      "url": "https://pokenordic.no/products/ascended-heroes-booster-pack?variant=47814083346686",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-22T18:38:55+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Ascended Heroes - Booster Bundle Box",
+      "price": "1399.00 kr",
+      "url": "https://pokebua.no/products/ascended-heroes-booster-bundle-les-beskrivelse-bot-killer?variant=50967401300201",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-22T18:18:32+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 288/217 – Fezandipiti ex",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon Pocket Comics: Classic",
       "price": "?",
       "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T13:18:48+00:00",
-      "store": "Ark",
-      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
-      "price": "?",
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T13:18:48+00:00",
-      "store": "Boosterpakker",
-      "name": "COLLECT 151 VOL. 1 JOURNEY JUMBO BOOSTER PAKKE",
-      "price": "269,00 kr",
-      "url": "https://boosterpakker.no/produkt/boosterpakker/collect-151-vol-1-journey-jumbo-booster",
       "product_class": "card",
       "event": "ny"
     }
