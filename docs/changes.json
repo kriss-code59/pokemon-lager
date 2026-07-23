@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-23T10:38:53+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Sylveon",
+      "price": "1599.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-sylveon",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-23T10:38:53+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Gem Pack Vol. 4 Kinesisk Booster Pakke",
+      "price": "29.00 kr",
+      "url": "https://pokestore.no/products/pokemon-gem-pack-vol-4-kinesisk-booster-pakke?variant=52372805517543",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-23T10:38:53+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Gem Pack Vol. 2 Kinesisk Booster Pakke",
+      "price": "79.00 kr",
+      "url": "https://pokestore.no/products/pokemon-gem-pack-vol-2-kinesisk-booster-pakke?variant=52372803846375",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-23T10:38:53+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Gem Pack Badge Set Kinesisk",
+      "price": "209.00 kr",
+      "url": "https://pokestore.no/products/pokemon-gem-pack-badge-set-kinesisk?variant=52372789788903",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-23T10:38:53+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Gem Pack Vol. 5 Kinesisk Booster Pakke",
+      "price": "35.00 kr",
+      "url": "https://pokestore.no/products/pokemon-gem-pack-vol-5-kinesisk-booster-pakke?variant=52372798243047",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-23T10:38:53+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon TCG Kinesisk Crystal Gathering Pin Badge Set",
+      "price": "kr229,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-crystal-gathering-badge-set/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-23T10:18:39+00:00",
       "store": "Kanoncon",
       "name": "Pokemon Crystal Gathering Glaceon Coin Set – Kinesisk",
@@ -2643,60 +2697,6 @@
       "name": "#064 Gastly 064/196 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/064-gastly-064-196-common?variant=40444239249491",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T08:38:29+00:00",
-      "store": "Pokelink",
-      "name": "#081 Hitmonchan 081/203 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/081-hitmonchan-081-203-common?variant=40328401158227",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T08:38:29+00:00",
-      "store": "Pokelink",
-      "name": "#076 Pumpkaboo 076/203 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/076-pumpkaboo-076-203-common?variant=40328385986643",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T08:38:29+00:00",
-      "store": "Pokelink",
-      "name": "#119 Drampa 119/203 Rare",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/119-drampa-119-203-rare?variant=40309625192531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T08:38:29+00:00",
-      "store": "Pokelink",
-      "name": "#088 Gigalith 088/203 Rare",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/088-gigalith-088-203-rare?variant=40309618507859",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T08:38:29+00:00",
-      "store": "Pokelink",
-      "name": "#054 Eevee  054/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/054-eevee-054-078-common?variant=40262203277395",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T08:38:29+00:00",
-      "store": "Pokelink",
-      "name": "#037 Larvitar  037/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/037-larvitar-037-078-common?variant=40261844140115",
       "product_class": "card",
       "event": "ny"
     }
