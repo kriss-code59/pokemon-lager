@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-23T14:58:51+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Cyber Judge Booster Box (Japansk)",
+      "price": "1049.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-cyber-judge-booster-box-japansk-kopi?variant=47851433066750",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-23T14:58:51+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Ancient Roar Booster Box (Japansk)",
+      "price": "1049.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-ancient-roar-booster-box-japansk?variant=47817331245310",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-23T14:18:47+00:00",
       "store": "Kanoncon",
       "name": "Pokemon – Glory of Team Rocket Booster Pack (Japansk)",
@@ -2679,24 +2697,6 @@
       "name": "Riolu 076/132 - Mega Evolution Base - NM (ID: 53881962652929)",
       "price": "7.90 kr",
       "url": "https://laboge.no/products/riolu-076-132-mega-evolution-base-rh?variant=54137187762475",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T13:38:38+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53875847502204)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54137188712747",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T13:38:38+00:00",
-      "store": "LABOGE",
-      "name": "Solrock 075/132 - Mega Evolution Base - NM (ID: 53881962468410)",
-      "price": "8.90 kr",
-      "url": "https://laboge.no/products/solrock-075-132-mega-evolution-base-rh?variant=54137188745515",
       "product_class": "card",
       "event": "ny"
     }
