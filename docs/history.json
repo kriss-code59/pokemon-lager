@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T13:58:42+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Pokémoncenter Chaos Rising Elite Trainer Boks",
+      "price": "2499.00 kr",
+      "previous_price": "2790.00 kr",
+      "url": "https://braspill.no/products/kommer-snart-pokemoncenter-chaos-rising-elite-trainer-boks?variant=54049736786212",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T13:38:58+00:00",
       "store": "RetroWorld",
       "name": "Pokemon Plush and Card Blind Box (Kinesisk)",
@@ -179858,15 +179867,6 @@
       "name": "#129 Magikarp 129/165 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/129-magikarp-129-165-common?variant=41749884403795",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#165 Rigid Band 165/165 Uncommon",
-      "price": "8.00 kr",
-      "url": "https://pokelink.no/products/165-rigid-band-165-165-uncommon?variant=41749900296275",
       "product_class": "card",
       "event": "ny"
     }
