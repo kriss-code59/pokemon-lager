@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T09:18:47+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Eevee Sleeves",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-eevee-sleeves",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T09:18:47+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Umbreon Sleeves",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-umbreon-sleeves",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T08:58:40+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Rayquaza Acrylic Keychain",
@@ -179831,24 +179849,6 @@
       "name": "Pokemon Professor Juniper Deck Box",
       "price": "35.00 kr",
       "url": "https://pokestore.no/products/pokemon-professor-juniper-oppbevaringseske?variant=50923999428839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kirlia Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kirlia-plush?variant=50863559475431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
       "product_class": "accessory",
       "event": "ny"
     }

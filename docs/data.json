@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T08:58:40+00:00",
+  "last_updated": "2026-07-24T09:18:47+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -2262,7 +2262,7 @@
     },
     {
       "store": "Cardcenter",
-      "name": "Pokemon - Mega Moonlit Tin - Mega Gengar ex",
+      "name": "Maks 1 per pers. Pokemon - Mega Moonlit Tin - Mega Gengar ex",
       "price": "449.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-mega-moonlight-tin-mega-gengar-ex",
@@ -5040,6 +5040,24 @@
       "url": "https://cardcenter.no/products/pokemon-towering-perfection-japansk-booster-box",
       "store_count": null,
       "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Eevee Sleeves",
+      "price": "99.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-eevee-sleeves",
+      "store_count": null,
+      "product_class": "accessory"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Umbreon Sleeves",
+      "price": "99.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-umbreon-sleeves",
+      "store_count": null,
+      "product_class": "accessory"
     },
     {
       "store": "Cardcenter",
@@ -163461,15 +163479,6 @@
     },
     {
       "store": "Playlot",
-      "name": "Crimson Haze Boosterbox JPN",
-      "price": "kr 1 699,00",
-      "in_stock": false,
-      "url": "https://playlot.no/produkt/crimson-haze-boosterbox-jpn/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Playlot",
       "name": "Cyclizar EX Collection Box",
       "price": "kr 649,00",
       "in_stock": true,
@@ -163708,15 +163717,6 @@
       "price": "kr 849,00",
       "in_stock": true,
       "url": "https://playlot.no/produkt/mega-zygarde-ex-premium-collection/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Playlot",
-      "name": "Ninja Spinner Boosterpack JPN",
-      "price": "kr 45,00",
-      "in_stock": false,
-      "url": "https://playlot.no/produkt/ninja-spinner-boosterpack-jpn/",
       "store_count": null,
       "product_class": "card"
     },

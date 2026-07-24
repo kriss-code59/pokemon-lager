@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T09:18:47+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Eevee Sleeves",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-eevee-sleeves",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T09:18:47+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Umbreon Sleeves",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-umbreon-sleeves",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T08:58:40+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Rayquaza Acrylic Keychain",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon MB-01 Poke Ball Moncolle Figur",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-mb-01-poke-ball-moncolle-figur?variant=51569130766567",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terastal Koraidon Moncolle Figur",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terastal-koraidon-figur?variant=51568808820967",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terastal Charizard Moncolle Figur",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terastal-charizard-moncolle-figur?variant=51568802693351",
       "product_class": "card",
       "event": "ny"
     }
