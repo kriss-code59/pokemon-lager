@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T08:58:40+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Rayquaza Acrylic Keychain",
+      "price": "kr 39.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-acrylic-keychain/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T08:58:40+00:00",
+      "store": "Mystic Trades",
+      "name": "​[BESTILLINGSVARE] – Pokémon S&V: Destined Rivals Booster Box (SV10)",
+      "price": "6399 kr",
+      "previous_price": "6499 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/forhandsbestilling-pokemon-sv-destined-rivals-booster-box-sv10",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T08:20:05+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Crystal Gathering Boosterpakke",
@@ -179831,24 +179849,6 @@
       "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Munchlax (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-munchlax-25cm?variant=50824915222759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Munchlax",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-munchlax?variant=50824914469095",
       "product_class": "accessory",
       "event": "ny"
     }
