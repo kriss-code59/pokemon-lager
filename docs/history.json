@@ -1,6 +1,41 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T17:38:46+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T17:38:46+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Prismatic Evolutions – Booster Pack",
+      "price": "kr 239,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-booster-pack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T17:38:46+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T17:38:46+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
+      "price": "1390.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldea-evolved-sleeved-pack?variant=51130511753517",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T16:58:39+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Eevee Heroes/Nine Colors Gathering/Flame Dance - Combo Deal (Kinesisk)(Bounty)",
@@ -179827,42 +179862,6 @@
       "name": "#026 Golisopod  026/078 Rare Holo",
       "price": "15.00 kr",
       "url": "https://pokelink.no/products/026-golisopod-024-078-rare-holo?variant=40261642846291",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#023 Lapras  023/078 Rare Holo",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/023-lapras-003-078-rare-holo?variant=40261594447955",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#013 Numel  013/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/013-numel-013-078-common?variant=40261348786259",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "(Max 1 pr kunde) Pokémon TCG: Mega Greninja EX Premium Collection",
-      "price": "849.00 kr",
-      "url": "https://pokelink.no/products/max-1-pr-kunde-pokemon-tcg-mega-greninja-ex-premium-collection?variant=45809235755091",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "CGC 10 Mega Venusaur EX 155/132",
-      "price": "499.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-mega-venusaur-ex-155-132?variant=45751516725331",
       "product_class": "card",
       "event": "ny"
     }

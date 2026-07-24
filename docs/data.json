@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T17:18:34+00:00",
+  "last_updated": "2026-07-24T17:38:47+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -139845,9 +139845,9 @@
     },
     {
       "store": "RetroWorld",
-      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack MAX 5 per kunde ÅPNES LIVE",
-      "price": "99.00 kr",
-      "in_stock": false,
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
       "store_count": null,
       "product_class": "card"
@@ -141998,7 +141998,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
       "price": "1390.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-paldea-evolved-sleeved-pack?variant=51130511753517",
       "store_count": null,
       "product_class": "card"
@@ -164226,6 +164226,15 @@
     },
     {
       "store": "Spillmonster",
+      "name": "Pokemon TCG – Prismatic Evolutions – Booster Pack",
+      "price": "kr 239,00",
+      "in_stock": true,
+      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-booster-pack/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Spillmonster",
       "name": "Pokemon TCG – VMAX Climax – Booster Box (Japansk)",
       "price": "kr 3 499,00",
       "in_stock": true,
@@ -164527,15 +164536,6 @@
       "price": "kr 699,00",
       "in_stock": false,
       "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-booster-bundle/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Spillmonster",
-      "name": "Pokemon TCG – Prismatic Evolutions – Booster Pack",
-      "price": "kr 239,00",
-      "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-booster-pack/",
       "store_count": null,
       "product_class": "card"
     },

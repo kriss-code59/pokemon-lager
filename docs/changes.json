@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T17:38:46+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T17:38:46+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Prismatic Evolutions – Booster Pack",
+      "price": "kr 239,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-booster-pack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T16:18:43+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Pencil Case (Med Evolving Skies)",
@@ -2680,24 +2698,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pikachu-9-pocket-pro-binder-for-pok-mon?variant=51766621864167",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Gastly 123/217 Cosmos Holo",
-      "price": "10.00 kr",
-      "url": "https://pokestore.no/products/pokemon-gastly-123-217-cosmos-holo?variant=51762289770727",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X ex MEP023 Black Star Promo",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-ex-mep013-black-star-promo?variant=51582580392167",
-      "product_class": "card",
       "event": "ny"
     }
   ]
