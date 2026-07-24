@@ -1,6 +1,78 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Alakazam ex 65 - 151",
+      "price": "35.00 kr",
+      "url": "https://pokesingles.no/products/alakazam-ex-65-151?variant=53024493338903",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Mabosstiff ex 139 - Destined Rivals",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/arvens-mabosstiff-ex-139-destined-rivals?variant=53024756433175",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Cetitan ex 65 - Destined Rivals",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cetitan-ex-65-destined-rivals?variant=53024743948567",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Charizard ex 6 - 151",
+      "price": "89.00 kr",
+      "url": "https://pokesingles.no/products/charizard-ex-6-151?variant=53024487670039",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Alakazam ex 65 - 151",
+      "price": "35.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokesingles.no/products/alakazam-ex-65-151?variant=53024493338903",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Mabosstiff ex 139 - Destined Rivals",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/arvens-mabosstiff-ex-139-destined-rivals?variant=53024756433175",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Cetitan ex 65 - Destined Rivals",
+      "price": "20.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/cetitan-ex-65-destined-rivals?variant=53024743948567",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T10:15:07+00:00",
+      "store": "Pokesingles",
+      "name": "Charizard ex 6 - 151",
+      "price": "89.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/charizard-ex-6-151?variant=53024487670039",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T09:59:48+00:00",
       "store": "Pokesingles",
       "name": "Arboliva ex 23 - Destined Rivals",
@@ -179776,78 +179848,6 @@
       "name": "Pokemon Center Japan Original Zweilous Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-zweilous-plush?variant=50992815735015",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Pawmo Plush",
-      "price": "269.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-pawmo-plush?variant=50992809246951",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kabutops Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kabutops-plush?variant=50991656141031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Pawniard Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-pawniard-plush?variant=50991653781735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Aerodactyl Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-aerodactyl-plush?variant=50991623766247",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Lapras Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-lapras-plush?variant=50991612985575",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Cobalion Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-cobalion-plush?variant=50983494222055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Infernape Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-infernape-plush?variant=50983387136231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Deerling Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-deerling-plush?variant=50983386382567",
       "product_class": "accessory",
       "event": "ny"
     }
