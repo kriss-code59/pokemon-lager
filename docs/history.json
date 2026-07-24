@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T16:58:39+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Eevee Heroes/Nine Colors Gathering/Flame Dance - Combo Deal (Kinesisk)(Bounty)",
+      "price": "699.00 kr",
+      "previous_price": "739.00 kr",
+      "url": "https://pokebua.no/products/pokemon-eevee-heroes-nine-colors-gathering-jumbo-booster-pack-kinesisk-garantert-hit-bounty?variant=51504652419305",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T16:58:39+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Eevee Heroes - Jumbo Booster Pack (Kinesisk) (Garantert Hit) (Bounty)",
+      "price": "399.00 kr",
+      "previous_price": "439.00 kr",
+      "url": "https://pokebua.no/products/pokemon?variant=50690694742249",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T16:58:39+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Twilight Masquerade - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/twilight-masquerade-booster-pack?variant=50101593178413",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T16:18:43+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Pencil Case (Med Evolving Skies)",
@@ -179837,33 +179863,6 @@
       "name": "CGC 10 Mega Venusaur EX 155/132",
       "price": "499.00 kr",
       "url": "https://pokelink.no/products/cgc-10-mega-venusaur-ex-155-132?variant=45751516725331",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "CGC Pristine 10 Mega Absol EX 086/132",
-      "price": "499.00 kr",
-      "url": "https://pokelink.no/products/cgc-pristine-10-mega-absol-ex-086-132?variant=45751513448531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "CGC 8 Team Rocket's Weezing 199/182",
-      "price": "249.00 kr",
-      "url": "https://pokelink.no/products/cgc-8-team-rockets-weezing-199-182?variant=45751443161171",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "CGC 10 Clobbopus 207/191",
-      "price": "499.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-clobbopus-207-191?variant=45751439556691",
       "product_class": "card",
       "event": "ny"
     }
