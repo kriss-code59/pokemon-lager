@@ -1,6 +1,41 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T12:57:19+00:00",
+      "store": "Pokesingles",
+      "name": "Charizard ex 54 - Paldean Fates",
+      "price": "65.00 kr",
+      "url": "https://pokesingles.no/products/charizard-ex-54-paldean-fates?variant=53024595902743",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T12:57:19+00:00",
+      "store": "Pokesingles",
+      "name": "Bouffalant ex 77 - White Flare",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/bouffalant-ex-77-white-flare?variant=53024804045079",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T12:57:19+00:00",
+      "store": "Pokesingles",
+      "name": "Charizard ex 54 - Paldean Fates",
+      "price": "65.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/charizard-ex-54-paldean-fates?variant=53024595902743",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T12:57:19+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Surging Sparks - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/pokemon-surging-sparks-booster-pack?variant=50183821951277",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T12:38:41+00:00",
       "store": "Pokesingles",
       "name": "Blissey ex 134 - Twilight Masquerade",
@@ -179835,42 +179870,6 @@
       "name": "#087 Dewgong 087/165 Uncommon",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/087-dewgong-087-165-uncommon?variant=41750037069907",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#103 Exxeggutor 103/165 Uncommon",
-      "price": "8.00 kr",
-      "url": "https://pokelink.no/products/103-exxeggutor-103-165-uncommon?variant=41750045687891",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#072 Tentacool 072/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/072-tentacool-072-165-common?variant=41749864251475",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#079 Slowpoke 079/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/079-slowpoke-079-165-common?variant=41749866217555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#096 Drowzee 096/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/096-drowzee-096-165-common?variant=41749870280787",
       "product_class": "card",
       "event": "ny"
     }
