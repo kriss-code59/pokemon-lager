@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T07:14:45+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Rayquaza Acrylic Keychain",
+      "price": "kr 39.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-acrylic-keychain/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T06:58:23+00:00",
       "store": "Pokestore",
       "name": "Pokemon Funko POP! Mew Vinyl Figure",
@@ -2689,15 +2698,6 @@
       "price": "139.00 kr",
       "url": "https://pokestore.no/products/pokemon-raging-bolt-moncolle-figur?variant=51058517213415",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Seviper Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-seviper-plush?variant=51045412241639",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
