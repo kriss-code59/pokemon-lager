@@ -1,6 +1,132 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk 30th Anniversary Celebration First Partner Box Vol. 1",
+      "price": "229.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-celebration-first-partner-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Espeon",
+      "price": "1499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-espeon",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Glaceon",
+      "price": "1499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-glaceon",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Pokesingles",
+      "name": "Cornerstone Mask Ogerpon ex 58 - Prismatic Evolutions",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cornerstone-mask-ogerpon-ex-58-prismatic-evolutions?variant=53024696598807",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 194/217 – Mystery Garden",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-194-217-mystery-garden/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 241/217 – Medicham",
+      "price": "89,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-241-217-medicham/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 037/217 – Raboot (Energy Symbol Pattern) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-037-217-raboot-energy-symbol-pattern-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "EX Delta Species – 21/113 – Holon’s Electrode – Reverse Holo",
+      "price": "229,00 kr",
+      "url": "https://collectible.no/home/ex-delta-species-21-113-holons-electrode-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 117/217 – Carbink",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-117-217-carbink/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 214/217 – Urbain",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-214-217-urbain/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 247/217 – Dreepy",
+      "price": "149,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-247-217-dreepy/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk 30th Anniversary Celebration First Partner Box Vol. 1",
+      "price": "229.00 kr",
+      "previous_price": "189.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-celebration-first-partner-box",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T10:37:16+00:00",
+      "store": "Pokesingles",
+      "name": "Cornerstone Mask Ogerpon ex 58 - Prismatic Evolutions",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/cornerstone-mask-ogerpon-ex-58-prismatic-evolutions?variant=53024696598807",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T10:15:07+00:00",
       "store": "Pokesingles",
       "name": "Alakazam ex 65 - 151",
@@ -179723,132 +179849,6 @@
       "price": "599.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-gallery-series-haunted-hollow-deluxe-gaming-trove?variant=51072447119591",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 12 Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-12-figur?variant=51058530451687",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Seviper Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-seviper-plush?variant=51045412241639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Luxray Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-luxray-plush?variant=51045410439399",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Meloetta Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-meloetta-plush?variant=51045386125543",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Mienshao Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-mienshao-plush?variant=51045376852199",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Floatzel Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-floatzel-plush?variant=51045106122983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Riolu Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-riolu-plush?variant=51021461061863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 14 Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-14-figur?variant=51014151930087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 14 Figurer (6 stk)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-14-figurer-6-stk?variant=51014116245735",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Garden- Sunlight Afternoon Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-garden-sunlight-afternoon-figur?variant=51014095306983",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Deep Green Forest Figurer (6 stk)",
-      "price": "889.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-deep-green-forest-figurer-6-stk?variant=51013789614311",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zoroark Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zoroark-plush?variant=50993329111271",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Crobat Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-crobat-plush?variant=50993285824743",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zweilous Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zweilous-plush?variant=50992815735015",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
