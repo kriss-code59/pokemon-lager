@@ -1,6 +1,50 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T15:19:08+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes 2-pk Blister",
+      "price": "419.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T15:19:08+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon White Flare Binder Collection",
+      "price": "969.00 kr",
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-white-flare-binder-collection?variant=52097219690807",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T15:19:08+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokémon TCG: Pitch Black 3-Pack Blister",
+      "price": "299.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-pitch-black-3-pack-blister?variant=52718528037175",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T15:19:08+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon White Flare Binder Collection",
+      "price": "969.00 kr",
+      "previous_price": "899.00 kr",
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-white-flare-binder-collection?variant=52097219690807",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T15:19:08+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Prismatic Evolutions – Booster Pack",
+      "price": "kr 239,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-booster-pack/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T14:58:38+00:00",
       "store": "BoosterKongen",
       "name": "Pokemon Ascended Heroes Premium Poster Collection boks (Case Tilgjengelige) - Gardevoir",
@@ -179820,51 +179864,6 @@
       "name": "Dragon Shield Ruby - Matte Sleeves",
       "price": "119.00 kr",
       "url": "https://pokelink.no/products/dragon-shield-ruby-matte-sleeves?variant=44578160246867",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "Dragon Shield Blood Red - Matte Sleeves",
-      "price": "119.00 kr",
-      "url": "https://pokelink.no/products/dragon-shield-blood-red-matte-sleeves?variant=44578160050259",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "Dragon Shield Silver - Matte Sleeves",
-      "price": "119.00 kr",
-      "url": "https://pokelink.no/products/dragon-shield-silver-matte-sleeves?variant=44578159951955",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "Dragon Shield Forest Green - Matte Sleeves",
-      "price": "119.00 kr",
-      "url": "https://pokelink.no/products/dragon-shield-forest-green-matte-sleeves?variant=44578158772307",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "Dragon Shield Purple - Matte Sleeves",
-      "price": "119.00 kr",
-      "url": "https://pokelink.no/products/dragon-shield-purple-matte-sleeves?variant=44578158674003",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "Dragon Shield Pink Sapphire - Matte Sleeves",
-      "price": "129.00 kr",
-      "url": "https://pokelink.no/products/dragon-shield-pink-sapphire-matte-sleeves?variant=44578138783827",
       "product_class": "accessory",
       "event": "ny"
     }
