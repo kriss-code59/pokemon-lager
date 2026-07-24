@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T19:18:37+00:00",
+      "store": "RetroWorld",
+      "name": "HAPPY HOUR Pokemon - The Hunt for Gengar & Giratina (Hidden Potential Tin) Bounty",
+      "price": "729.00 kr",
+      "previous_price": "799.00 kr",
+      "url": "https://retroworld.no/products/the-hunt-for-gengar-giratina-bounty-live-event?variant=50409287516461",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T18:58:47+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Trainer Gallery Hunt Night",
@@ -179852,15 +179861,6 @@
       "name": "#070 Spark 070/078 Uncommon",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/070-spark-070-078-uncommon?variant=40262379208787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#065 Blanche  065/078 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/065-blanche-065-078-uncommon?variant=40262310428755",
       "product_class": "card",
       "event": "ny"
     }
