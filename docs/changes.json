@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T05:38:37+00:00",
+      "store": "Ark",
+      "name": "Ultimate Sketch Challenge (Pokemon)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/ultimate-sketch-challenge-pokemon-9781338237566",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T05:38:37+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Rayquaza Acrylic Keychain",
+      "price": "kr 39.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-acrylic-keychain/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T05:18:31+00:00",
       "store": "Ark",
       "name": "Pokemon Origami: Fold Your Own Pokemon",
@@ -2680,24 +2698,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-miraidon-deck-protector-sleeves-65?variant=51016660680935",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 14 Figurer (6 stk)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-14-figurer-6-stk?variant=51014116245735",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Ovaltique Figurer (6 stk)",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-ovalitique-figurer-6-stk?variant=51013846237415",
-      "product_class": "card",
       "event": "ny"
     }
   ]
