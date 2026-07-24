@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T14:38:45+00:00",
+  "last_updated": "2026-07-24T14:58:39+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5422,8 +5422,8 @@
     {
       "store": "BoosterKongen",
       "name": "Pokemon Ascended Heroes Premium Poster Collection boks (Case Tilgjengelige) - Gardevoir",
-      "price": "2249.00 kr",
-      "in_stock": false,
+      "price": "2299.00 kr",
+      "in_stock": true,
       "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-ascended-heroes-premium-poster-collection-boks?variant=52437163737399",
       "store_count": null,
       "product_class": "accessory"
@@ -5431,8 +5431,8 @@
     {
       "store": "BoosterKongen",
       "name": "Pokemon Ascended Heroes Premium Poster Collection boks (Case Tilgjengelige) - Lucario",
-      "price": "2249.00 kr",
-      "in_stock": false,
+      "price": "2299.00 kr",
+      "in_stock": true,
       "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-ascended-heroes-premium-poster-collection-boks?variant=52437163770167",
       "store_count": null,
       "product_class": "accessory"
@@ -5539,8 +5539,8 @@
     {
       "store": "BoosterKongen",
       "name": "Pokemon TCG: 151 Mini Tin",
-      "price": "849.00 kr",
-      "in_stock": false,
+      "price": "869.00 kr",
+      "in_stock": true,
       "url": "https://boosterkongen.no/products/pokemon-tcg-151-mini-tin?variant=51380410974519",
       "store_count": null,
       "product_class": "card"
@@ -5602,7 +5602,7 @@
     {
       "store": "BoosterKongen",
       "name": "Pokemon Ascended Heroes 2-pk Blister - Larry’s Komala",
-      "price": "299.00 kr",
+      "price": "419.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=51827606716727",
       "store_count": null,
@@ -5611,9 +5611,18 @@
     {
       "store": "BoosterKongen",
       "name": "Pokemon Ascended Heroes 2-pk Blister - Erika’s Tangela",
-      "price": "299.00 kr",
+      "price": "419.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=51827606749495",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes 2-pk Blister - Random / Tilfeldig",
+      "price": "419.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718523810103",
       "store_count": null,
       "product_class": "card"
     },
@@ -5664,6 +5673,15 @@
     },
     {
       "store": "BoosterKongen",
+      "name": "Pokemon Brilliant Stars Booster Pakke",
+      "price": "199.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-brilliant-stars-booster-pakke?variant=52519546126647",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "BoosterKongen",
       "name": "Pokemon Ascended Heroes Mini Tin Display (Case Tilgjengelig)",
       "price": "4390.00 kr",
       "in_stock": true,
@@ -5693,7 +5711,7 @@
       "store": "BoosterKongen",
       "name": "Pokemon Perfect Order 3-pk Blister",
       "price": "299.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://boosterkongen.no/products/pokemon-perfect-order-3-pk-blister?variant=52067159769399",
       "store_count": null,
       "product_class": "card"
@@ -5711,7 +5729,7 @@
       "store": "BoosterKongen",
       "name": "Pokemon Phantasmal Flames Mini Portfolio (Display Tilgjengelig)",
       "price": "159.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-phantasmal-flames-mini-portfolio?variant=52215112696119",
       "store_count": null,
       "product_class": "accessory"
@@ -5881,8 +5899,8 @@
     {
       "store": "BoosterKongen",
       "name": "Pokemon 151 Mini Tin Sealed Display (10 Tins)",
-      "price": "8390.00 kr",
-      "in_stock": false,
+      "price": "8690.00 kr",
+      "in_stock": true,
       "url": "https://boosterkongen.no/products/151-mini-tin-sealed-display-10-tins?variant=52215022944567",
       "store_count": null,
       "product_class": "card"
@@ -5902,6 +5920,15 @@
       "price": "79.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/pokemon-tcg-surging-sparks-booster-pack?variant=51377649811767",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "BoosterKongen",
+      "name": "Pokémon TCG: Chaos Rising 3-Pack Blister",
+      "price": "299.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/pokemon-tcg-chaos-rising-3-pack-blister?variant=52718526234935",
       "store_count": null,
       "product_class": "card"
     },
@@ -161827,15 +161854,6 @@
       "price": "kr 299.00",
       "in_stock": true,
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-terastal-festival-ex-sv8a-booster-pack-japanese/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Bath Bomb Figure Collection – Soothing Forest Scent (75g, Bandai)",
-      "price": "kr 99.00",
-      "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-bath-bomb-figure-collection-soap-scent-75g-bandai/",
       "store_count": null,
       "product_class": "card"
     },
