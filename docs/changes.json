@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Bellibolt ex 79 - Paldea Evolved",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/bellibolt-ex-79-paldea-evolved?variant=53024463257879",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Chi-Yu ex 40 - Paldea Evolved",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/chi-yu-ex-40-paldea-evolved?variant=53024461160727",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Copperajah ex 150 - Paldea Evolved",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/copperajah-ex-150-paldea-evolved?variant=53024467976471",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T09:18:47+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Eevee Sleeves",
@@ -2671,33 +2698,6 @@
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-bulbasaur-plush-20cm?variant=51591216398567",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X ex Deck Box",
-      "price": "79.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-ex-deck-box?variant=51582575116519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Absol",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-absol?variant=51575441293543",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MB-01 Poke Ball Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mb-01-poke-ball-moncolle-figur?variant=51569130766567",
-      "product_class": "card",
       "event": "ny"
     }
   ]

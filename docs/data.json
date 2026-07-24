@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T09:18:47+00:00",
+  "last_updated": "2026-07-24T09:38:41+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -92812,8 +92812,8 @@
     {
       "store": "Pokesingles",
       "name": "Bellibolt ex 79 - Paldea Evolved",
-      "price": "15.00 kr",
-      "in_stock": false,
+      "price": "20.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/bellibolt-ex-79-paldea-evolved?variant=53024463257879",
       "store_count": null,
       "product_class": "card"
@@ -112072,8 +112072,8 @@
     {
       "store": "Pokesingles",
       "name": "Chi-Yu ex 40 - Paldea Evolved",
-      "price": "15.00 kr",
-      "in_stock": false,
+      "price": "20.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/chi-yu-ex-40-paldea-evolved?variant=53024461160727",
       "store_count": null,
       "product_class": "card"
@@ -112198,7 +112198,7 @@
     {
       "store": "Pokesingles",
       "name": "Chien-Pao ex 61 - Paldea Evolved",
-      "price": "15.00 kr",
+      "price": "20.00 kr",
       "in_stock": true,
       "url": "https://pokesingles.no/products/chien-pao-ex-61-paldea-evolved?variant=53024462373143",
       "store_count": null,
@@ -118066,8 +118066,8 @@
     {
       "store": "Pokesingles",
       "name": "Copperajah ex 150 - Paldea Evolved",
-      "price": "15.00 kr",
-      "in_stock": false,
+      "price": "20.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/copperajah-ex-150-paldea-evolved?variant=53024467976471",
       "store_count": null,
       "product_class": "card"
@@ -149137,7 +149137,7 @@
       "price": "1 599,00 kr",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-abyss-eye-booster-display-boks-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462127",
-      "store_count": 9,
+      "store_count": 10,
       "product_class": "card"
     },
     {
@@ -149475,20 +149475,20 @@
     },
     {
       "store": "Outland",
-      "name": "Mega Evolution 5 Pitch Black Booster Pack\nThe Pokemon Company\nMega Evolution 5 Pitch Black\nBooster Pack · Engelsk",
-      "price": "89,00 kr",
-      "in_stock": null,
-      "url": "https://www.outland.no/p/p-mega-evolution-5-pitch-black-booster-pack-mega-evolution-5-pitch-black-pokemon-196214142886",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Outland",
       "name": "Abyss Eye Booster Pack (Japansk)\nThe Pokemon Company\nAbyss Eye Pokemon TCG\nBooster Pack · Japansk",
       "price": "59,00 kr",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-abyss-eye-booster-pack-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462110",
       "store_count": 11,
+      "product_class": "card"
+    },
+    {
+      "store": "Outland",
+      "name": "Mega Evolution 5 Pitch Black Booster Pack\nThe Pokemon Company\nMega Evolution 5 Pitch Black\nBooster Pack · Engelsk",
+      "price": "89,00 kr",
+      "in_stock": null,
+      "url": "https://www.outland.no/p/p-mega-evolution-5-pitch-black-booster-pack-mega-evolution-5-pitch-black-pokemon-196214142886",
+      "store_count": null,
       "product_class": "card"
     },
     {
@@ -150125,7 +150125,7 @@
       "store": "Maxgaming",
       "name": "Pokémon Trainer Toolkit 25",
       "price": "549 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://www.maxgaming.no/no/pokemon/pokemon-trainer-toolkit-25",
       "store_count": null,
       "product_class": "card"

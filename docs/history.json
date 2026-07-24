@@ -1,6 +1,77 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Bellibolt ex 79 - Paldea Evolved",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/bellibolt-ex-79-paldea-evolved?variant=53024463257879",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Chi-Yu ex 40 - Paldea Evolved",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/chi-yu-ex-40-paldea-evolved?variant=53024461160727",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Copperajah ex 150 - Paldea Evolved",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/copperajah-ex-150-paldea-evolved?variant=53024467976471",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Bellibolt ex 79 - Paldea Evolved",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/bellibolt-ex-79-paldea-evolved?variant=53024463257879",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Chi-Yu ex 40 - Paldea Evolved",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/chi-yu-ex-40-paldea-evolved?variant=53024461160727",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Chien-Pao ex 61 - Paldea Evolved",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/chien-pao-ex-61-paldea-evolved?variant=53024462373143",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Pokesingles",
+      "name": "Copperajah ex 150 - Paldea Evolved",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/copperajah-ex-150-paldea-evolved?variant=53024467976471",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T09:38:40+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Trainer Toolkit 25",
+      "price": "549 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-trainer-toolkit-25",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T09:18:47+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Eevee Sleeves",
@@ -179777,78 +179848,6 @@
       "name": "Pokemon Center Japan Original Drapion Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-drapion-plush?variant=50983377535207",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zebstrika Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zebstrika-plush?variant=50983260389607",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kyurem Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kyurem-plush?variant=50982982844647",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Snivy Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-snivy-plush?variant=50982977863911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Registeel Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-registeel-plush?variant=50982976618727",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Anorith Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-anorith-plush?variant=50982968688871",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Rayquaza Legendary Foil Playmat",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-rayquaza-legendary-foil-playmat?variant=50976669073639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Magnezone Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-magnezone-plush?variant=50936754766055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Professor Juniper Deck Box",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-professor-juniper-oppbevaringseske?variant=50923999428839",
       "product_class": "accessory",
       "event": "ny"
     }
