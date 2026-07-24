@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T09:59:48+00:00",
+      "store": "Pokesingles",
+      "name": "Arboliva ex 23 - Destined Rivals",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/arboliva-ex-23-destined-rivals?variant=53024738410775",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:59:48+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Premium Checklane",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-premium-checklane?variant=52244116668717",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:59:48+00:00",
+      "store": "Pokesingles",
+      "name": "Arboliva ex 23 - Destined Rivals",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/arboliva-ex-23-destined-rivals?variant=53024738410775",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T09:38:40+00:00",
       "store": "Pokesingles",
       "name": "Bellibolt ex 79 - Paldea Evolved",
@@ -179821,33 +179848,6 @@
       "name": "Pokemon Center Japan Original Deerling Plush",
       "price": "289.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-deerling-plush?variant=50983386382567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Delcatty Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-delcatty-plush?variant=50983383072999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Stoutland Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-stoutland-plush?variant=50983381663975",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Drapion Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-drapion-plush?variant=50983377535207",
       "product_class": "accessory",
       "event": "ny"
     }

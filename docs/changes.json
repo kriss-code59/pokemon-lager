@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T09:59:48+00:00",
+      "store": "Pokesingles",
+      "name": "Arboliva ex 23 - Destined Rivals",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/arboliva-ex-23-destined-rivals?variant=53024738410775",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T09:59:48+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Premium Checklane",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-premium-checklane?variant=52244116668717",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T09:38:40+00:00",
       "store": "Pokesingles",
       "name": "Bellibolt ex 79 - Paldea Evolved",
@@ -2680,24 +2698,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-ms-09-zeraora-moncolle-figur?variant=51601321394407",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Charmander Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-charmander-plush?variant=51591216824551",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bulbasaur Plush (20cm)",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bulbasaur-plush-20cm?variant=51591216398567",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
