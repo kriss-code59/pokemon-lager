@@ -1,6 +1,123 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Alolan Exeggutor ex 133 - Surging Sparks",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/alolan-exeggutor-ex-133-surging-sparks?variant=53024680313111",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Archaludon ex 130 - Surging Sparks",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/archaludon-ex-130-surging-sparks?variant=53024680116503",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Blastoise ex 30 - Stellar Crown",
+      "price": "39.00 kr",
+      "url": "https://pokesingles.no/products/blastoise-ex-30-stellar-crown?variant=53024661995799",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Ceruledge ex 36 - Surging Sparks",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/ceruledge-ex-36-surging-sparks?variant=53024673235223",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Outland",
+      "name": "Abyss Eye Booster Display Boks (Japansk)\nThe Pokemon Company\nAbyss Eye Pokemon TCG\nBooster Display · Japansk",
+      "price": "1 599,00 kr",
+      "url": "https://www.outland.no/p/p-abyss-eye-booster-display-boks-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462127",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Outland",
+      "name": "Mega Charizard X & Mega Charizard Y Deck Box (100+)\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "69,00 kr",
+      "url": "https://www.outland.no/p/p-mega-charizard-x-mega-charizard-y-deck-box-100-deck-box-pokemon-pokemon-74427167325",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Outland",
+      "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "45,00 kr",
+      "url": "https://www.outland.no/p/p-gallery-series-morning-meadow-full-view-deck-box-deck-box-pokemon-pokemon-74427164676",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Outland",
+      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "45,00 kr",
+      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Alolan Exeggutor ex 133 - Surging Sparks",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/alolan-exeggutor-ex-133-surging-sparks?variant=53024680313111",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Archaludon ex 130 - Surging Sparks",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/archaludon-ex-130-surging-sparks?variant=53024680116503",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Black Kyurem ex 48 - Surging Sparks",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/black-kyurem-ex-48-surging-sparks?variant=53024674152727",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Blastoise ex 30 - Stellar Crown",
+      "price": "39.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/blastoise-ex-30-stellar-crown?variant=53024661995799",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T11:38:45+00:00",
+      "store": "Pokesingles",
+      "name": "Ceruledge ex 36 - Surging Sparks",
+      "price": "20.00 kr",
+      "previous_price": "18.00 kr",
+      "url": "https://pokesingles.no/products/ceruledge-ex-36-surging-sparks?variant=53024673235223",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T11:18:38+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - 151 Special Set Booster Box Japan",
@@ -179731,123 +179848,6 @@
       "name": "Pokemon Nanoblock DX Deluxe Charizard Figur",
       "price": "499.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-dx-charizard-figur?variant=51243607687399",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mini Normal Type (6 stk) Figurer",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mini-normal-type-6-stk?variant=51243367497959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Ho-Oh Plush (34cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-ho-oh-plush-34cm?variant=51243149066471",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Snivy Plush (22cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-snivy-plush-22cm?variant=51243129798887",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Circular Diorama Collection 1 Figurer (6 stk)",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-circular-diorama-collection-1-figurer-6-stk?variant=51237462933735",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Happiness Wreath Collection Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-happiness-wreath-collection-figur?variant=51237461033191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Espeon Figur",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-espeon-figur?variant=51237232804071",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Umbreon Figur",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-umbreon-figur?variant=51237224087783",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock RS Series Sprigatito Figur",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-rs-series-sprigatito-figur?variant=51237217665255",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Ho-Oh Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-ho-oh-figur?variant=51237212094695",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Gyarados Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-gyrados-figur?variant=51237055267047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Popplio Figur",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-popplio-figur?variant=51237050482919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Chansey Figur",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-chansey-figur?variant=51237047599335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Kyogre Figur",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-kyogre-figur?variant=51237014208743",
       "product_class": "card",
       "event": "ny"
     }
