@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T14:18:45+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon Kinesisk Crystal Gathering Gift Set",
+      "price": "kr4.649,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-crystal-gathering-kinesisk-gift-set/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T13:58:42+00:00",
       "store": "Braspill",
       "name": "Pokemon Pokémoncenter Chaos Rising Elite Trainer Boks",
@@ -179858,15 +179867,6 @@
       "name": "#137 Porygon 137/165 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/137-porygon-137-165-common?variant=41749885812819",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#129 Magikarp 129/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/129-magikarp-129-165-common?variant=41749884403795",
       "product_class": "card",
       "event": "ny"
     }
