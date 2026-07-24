@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T18:38:43+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T18:38:43+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Luxray)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-luxray?variant=54642789187907",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T18:38:43+00:00",
+      "store": "Cardstore",
+      "name": "Mega Zygarde ex Premium Collection",
+      "price": "899.00 kr",
+      "previous_price": "799.00 kr",
+      "url": "https://store.cardstore.no/products/mega-zygarde-ex-premium-collection?variant=54435770401091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T18:38:43+00:00",
+      "store": "Cardstore",
+      "name": "Mega Greninja ex Premium Collection",
+      "price": "899.00 kr",
+      "previous_price": "999.00 kr",
+      "url": "https://store.cardstore.no/products/mega-greninja-ex-premium-collection?variant=54642789581123",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T18:18:39+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Pitch Black - Booster Pack",
@@ -179825,42 +179861,6 @@
       "name": "#064 Blanche  064/078 Uncommon",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/064-blanche-064-078-uncommon?variant=40262299156563",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#063 Unfezant  063/078 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/063-unfezant-063-078-uncommon?variant=40262275661907",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#062 Tranquill  062/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/062-tranquill-062-078-common?variant=40262266781779",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#061 Pidove  061/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/061-pidove-061-078-common?variant=40262260162643",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#045 Meltan  045/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/045-meltan-045-078-common?variant=40262093537363",
       "product_class": "card",
       "event": "ny"
     }

@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T18:38:43+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T18:38:43+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Luxray)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-luxray?variant=54642789187907",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T18:18:39+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Pitch Black - Booster Pack",
@@ -2680,24 +2698,6 @@
       "price": "45.00 kr",
       "url": "https://pokestore.no/products/tilfeldig-tom-pokemon-etb-med-annet-innhold?variant=50624598048999",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon First Partner Illustration Collection Series 2",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tcg-first-partner-illustration-collection-series-2?variant=52209228349671",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Ascended Heroes 9-Pocket Portfolio",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-mega-evolution-ascended-heroes-9-pocket-portfolio-for-the-pok-mon-trading-card-game?variant=51966737514727",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
