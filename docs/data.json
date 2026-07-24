@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T07:38:25+00:00",
+  "last_updated": "2026-07-24T07:58:48+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -4503,55 +4503,28 @@
     },
     {
       "store": "Cardcenter",
-      "name": "Pokemon 30th Celebration Tech Sticker - Lucario",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-30th-celebration-tech-sticker-lucario",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Celebration Tech Sticker - Alolan Exeggutor",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-30th-celebration-tech-sticker-alolan-exeggutor",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Celebration Elite Trainer Box",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-30th-celebration-elite-trainer-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Japansk 30th Celebration Futuristic Box",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-japansk-30th-celebration-futuristic-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Japansk 30th Celebration Premium Deck Set - Espeon ex & Umbreon ex",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-japansk-30th-celebration-premium-deck-set-espeon-ex-umbreon-ex",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Boosterpakke",
-      "price": "159.00 kr",
+      "name": "Base set sealed light booster pack - Venusaur",
+      "price": "9999.00 kr",
       "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-boosterpakke",
+      "url": "https://cardcenter.no/products/base-set-sealed-light-booster-pack-venusaur",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Base set sealed booster pack - Venusaur 1st ED. (shadowless) PSA 9",
+      "price": "74999.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/base-set-sealed-booster-pack-venusaur-1st-ed-shadowless-psa-9",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Chaos Rising 1-Pack Blister - Toxel",
+      "price": "119.00 kr",
+      "in_stock": false,
+      "url": "https://cardcenter.no/products/pokemon-chaos-rising-1-pack-blister-toxel-1",
       "store_count": null,
       "product_class": "card"
     },
@@ -4566,82 +4539,10 @@
     },
     {
       "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Komala",
-      "price": "99.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-komala",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Wellspring Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-wellspring-mask-ogerpon-gaveboks",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Hearthflame Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-hearthflame-mask-ogerpon-gaveboks",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Teal Mask Ogerpon Gaveboks",
-      "price": "1199.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-teal-mask-ogerpon-gaveboks",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Celebration Kinesisk Booster Box",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-30th-celebration-kinesisk-booster-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Celebration Boosterpakke",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-30th-celebration-boosterpakke",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Celebration Japansk Display Booster Box",
-      "price": "1.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-30th-celebration-japansk-display-booster-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
       "name": "Pokemon Mugen Zone Koreansk Booster Box",
       "price": "1199.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-mugen-zone-koreansk-booster-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Silver Lance Koreansk Booster Box",
-      "price": "899.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-silver-lance-koreansk-booster-box",
       "store_count": null,
       "product_class": "card"
     },
@@ -4660,33 +4561,6 @@
       "price": "1199.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-dark-fantasma-koreansk-booster-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Mega Gengar ex Starter Set",
-      "price": "399.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-koreansk-mega-gengar-ex-starter-set",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Quaxly & Mimikyu Starter Deck",
-      "price": "249.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-koreansk-quaxly-mimikyu-starter-deck",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Sprigatito & Lucario Starter Deck",
-      "price": "249.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-koreansk-sprigatito-lucario-starter-deck",
       "store_count": null,
       "product_class": "card"
     },
@@ -4719,208 +4593,10 @@
     },
     {
       "store": "Cardcenter",
-      "name": "Pokemon Chaos Rising 1-Pack Blister - Toxel",
-      "price": "119.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-chaos-rising-1-pack-blister-toxel-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Classic Collection Light Gray Sleeves",
-      "price": "119.00 kr",
+      "name": "Pokemon Towering Perfection Japansk Booster Box",
+      "price": "2999.00 kr",
       "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-classic-collection-light-gray-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Classic Collection Dark Gray Sleeves",
-      "price": "119.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-classic-collection-dark-gray-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Klara Premium Collection Sleeves",
-      "price": "119.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-klara-premium-collection-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Cyrus Premium Collection Sleeves",
-      "price": "119.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-cyrus-premium-collection-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon GO ETB Sleeves",
-      "price": "119.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-go-etb-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Shiny Zacian & Zamazenta Sleeves",
-      "price": "119.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-shiny-zacian-zamazenta-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Shrouded Fable ETB Sleeves",
-      "price": "99.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-shrouded-fable-etb-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Figur - Mega Gardevoir",
-      "price": "499.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-figur-mega-gardevoir",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Mewtwo",
-      "price": "249.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-mewtwo",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Togepi",
-      "price": "249.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-togepi",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Charizard & Pikachu",
-      "price": "990.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-charizard-pikachu",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Pikachu",
-      "price": "499.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-pikachu",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Charizard",
-      "price": "499.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-charizard",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Gigantamax Eevee",
-      "price": "499.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-eevee",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Pikachu",
-      "price": "599.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-pikachu",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Bulbasaur",
-      "price": "599.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-bulbasaur",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Squirtle",
-      "price": "599.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-squirtle",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Starter Deck Generations Special Battle Set",
-      "price": "990.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-koreansk-starter-deck-generations-special-battle-set",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 2025 World Championship Decks - Jose Cruz Galindo Resendiz",
-      "price": "399.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-2025-world-championship-decks-jose-cruz-galindo-resendiz",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 2025 World Championship Decks - Yuya Okita",
-      "price": "399.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-2025-world-championship-decks-yuya-okita",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 2025 World Championship Decks - Fuguan Liao",
-      "price": "399.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-2025-world-championship-decks-fuguan-liao",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon 2025 World Championship Decks - Riley McKay",
-      "price": "399.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-2025-world-championship-decks-riley-mckay",
+      "url": "https://cardcenter.no/products/pokemon-towering-perfection-japansk-booster-box",
       "store_count": null,
       "product_class": "card"
     },
@@ -4935,127 +4611,37 @@
     },
     {
       "store": "Cardcenter",
-      "name": "Pokemon Ascended Heroes 2-Pack Blister - Erika",
-      "price": "219.00 kr",
+      "name": "Pokemon Kinesisk Teal Mask Ogerpon Gaveboks",
+      "price": "1199.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-teal-mask-ogerpon-gaveboks",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Hearthflame Mask Ogerpon Gaveboks",
+      "price": "1199.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-hearthflame-mask-ogerpon-gaveboks",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Wellspring Mask Ogerpon Gaveboks",
+      "price": "1199.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-wellspring-mask-ogerpon-gaveboks",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon 30th Celebration Elite Trainer Box",
+      "price": "1.00 kr",
       "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-2-pack-blister-erika",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Ascended Heroes 2-Pack Blister - Larry",
-      "price": "219.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-2-pack-blister",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Maks 1 per pers. Pokemon Ascended Heroes Tech Sticker - Gastly",
-      "price": "329.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-tech-sticker-gastly",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Maks 1 per pers. Pokemon Ascended Heroes Tech Sticker - Charmander",
-      "price": "329.00 kr",
-      "in_stock": false,
-      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-tech-sticker-charmander",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Jigglypuff",
-      "price": "199.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-jigglypuff",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Center - Glory of Team Rocket Sleeves",
-      "price": "299.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-center-glory-of-team-rocket-sleeves",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle Great Ball",
-      "price": "149.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-great-ball",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle Baxcalibur",
-      "price": "135.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-baxcalibur",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Boulder",
-      "price": "69.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-boulder",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Pokedex Metal Charm 1014",
-      "price": "55.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/japansk-nokkelring-pokedex-metal-charm-1014",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Leaf",
-      "price": "59.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-leaf",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Pokemon Towering Perfection Japansk Booster Box",
-      "price": "2999.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/pokemon-towering-perfection-japansk-booster-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Base set sealed light booster pack - Venusaur",
-      "price": "9999.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/base-set-sealed-light-booster-pack-venusaur",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardcenter",
-      "name": "Base set sealed booster pack - Venusaur 1st ED. (shadowless) PSA 9",
-      "price": "74999.00 kr",
-      "in_stock": true,
-      "url": "https://cardcenter.no/products/base-set-sealed-booster-pack-venusaur-1st-ed-shadowless-psa-9",
+      "url": "https://cardcenter.no/products/pokemon-30th-celebration-elite-trainer-box",
       "store_count": null,
       "product_class": "card"
     },
