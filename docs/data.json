@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T18:38:44+00:00",
+  "last_updated": "2026-07-24T18:58:48+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -138936,6 +138936,15 @@
     },
     {
       "store": "RetroWorld",
+      "name": "Pokemon - Trainer Gallery Hunt Night",
+      "price": "449.00 kr",
+      "in_stock": true,
+      "url": "https://retroworld.no/products/pokemon-trainer-gallery-hunt-night?variant=52256690864429",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Vaporeon Tin Set (Kinesisk)",
       "price": "369.00 kr",
       "in_stock": true,
@@ -148755,19 +148764,19 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Pocket Comics: Classic",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 6",
       "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-6-9781421531700",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Ark",
-      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 6",
+      "name": "Pokemon Pocket Comics: Classic",
       "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-6-9781421531700",
+      "in_stock": false,
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
       "store_count": null,
       "product_class": "card"
     },

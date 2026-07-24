@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T18:58:47+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Trainer Gallery Hunt Night",
+      "price": "449.00 kr",
+      "url": "https://retroworld.no/products/pokemon-trainer-gallery-hunt-night?variant=52256690864429",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T18:38:43+00:00",
       "store": "Cardstore",
       "name": "Pitch Black Premium Checklane (Gengar)",
@@ -2689,15 +2698,6 @@
       "price": "289.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-mew-plush?variant=50982978846951",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Tilfeldig Tom Pokemon ETB (med annet innhold)",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/tilfeldig-tom-pokemon-etb-med-annet-innhold?variant=50624598048999",
-      "product_class": "card",
       "event": "ny"
     }
   ]
