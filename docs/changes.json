@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T18:18:39+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Pitch Black - Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://pokebua.no/products/pokemon-pitch-black-booster-pack?variant=51577926320361",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-24T17:38:46+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
@@ -2688,15 +2697,6 @@
       "name": "Ultra Pro Pokemon Ascended Heroes 9-Pocket Portfolio",
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-mega-evolution-ascended-heroes-9-pocket-portfolio-for-the-pok-mon-trading-card-game?variant=51966737514727",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu 2019 9-Pocket PRO-Binder",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pikachu-9-pocket-pro-binder-for-pok-mon?variant=51766621864167",
       "product_class": "accessory",
       "event": "ny"
     }

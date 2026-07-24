@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T18:18:39+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Pitch Black - Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://pokebua.no/products/pokemon-pitch-black-booster-pack?variant=51577926320361",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T18:18:39+00:00",
+      "store": "Ark",
+      "name": "Pokemon Pocket Comics: Classic",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T17:38:46+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
@@ -179844,24 +179861,6 @@
       "name": "#045 Meltan  045/078 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/045-meltan-045-078-common?variant=40262093537363",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#042 Alolan Raticate  042/078 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/042-raticate-042-078-common?variant=40261933826131",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#026 Golisopod  026/078 Rare Holo",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/026-golisopod-024-078-rare-holo?variant=40261642846291",
       "product_class": "card",
       "event": "ny"
     }

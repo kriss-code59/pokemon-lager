@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T17:58:49+00:00",
+  "last_updated": "2026-07-24T18:18:39+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -62467,6 +62467,15 @@
       "price": "109.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/black-bolt-booster-pack?variant=47546844479742",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokebua",
+      "name": "Pokemon - Pitch Black - Booster Pack",
+      "price": "89.00 kr",
+      "in_stock": true,
+      "url": "https://pokebua.no/products/pokemon-pitch-black-booster-pack?variant=51577926320361",
       "store_count": null,
       "product_class": "card"
     },
@@ -148746,19 +148755,19 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 6",
+      "name": "Pokemon Pocket Comics: Classic",
       "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-6-9781421531700",
+      "in_stock": false,
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Ark",
-      "name": "Pokemon Pocket Comics: Classic",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 6",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-6-9781421531700",
       "store_count": null,
       "product_class": "card"
     },
