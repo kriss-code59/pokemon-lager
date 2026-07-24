@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T19:38:31+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon 151 Koreansk Booster Pakke",
+      "price": "189.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-koreansk-booster-pakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T19:18:37+00:00",
       "store": "RetroWorld",
       "name": "HAPPY HOUR Pokemon - The Hunt for Gengar & Giratina (Hidden Potential Tin) Bounty",
@@ -179852,15 +179861,6 @@
       "name": "#034 Dewgong 034/196 Rare",
       "price": "15.00 kr",
       "url": "https://pokelink.no/products/034-dewgong-034-196-rare?variant=40280722276435",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "#070 Spark 070/078 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/070-spark-070-078-uncommon?variant=40262379208787",
       "product_class": "card",
       "event": "ny"
     }

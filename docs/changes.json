@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T19:38:31+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon 151 Koreansk Booster Pakke",
+      "price": "189.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-koreansk-booster-pakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T18:58:47+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Trainer Gallery Hunt Night",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Mewtwo Plush (27.5cm)",
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-mewtwo-plush-27-5cm?variant=51243162468583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T15:38:47+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Mew Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-mew-plush?variant=50982978846951",
       "product_class": "accessory",
       "event": "ny"
     }
