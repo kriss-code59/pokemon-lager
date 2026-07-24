@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T13:38:58+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Plush and Card Blind Box (Kinesisk)",
+      "price": "399.00 kr",
+      "url": "https://retroworld.no/products/sleepy-eevee-blind-box-copy?variant=51996583952685",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T13:38:58+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Chinese Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-chinese-booster-pack?variant=51062127591725",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T13:38:58+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Blooming Waters Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-blooming-waters-papp-litt-most-i-hjornet-alt-innhold-good-apnes-live?variant=50652332884269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T13:18:48+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 182/217 – Anthea & Concordia",
@@ -2670,33 +2697,6 @@
       "name": "#043 Cryogonal 043/203 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/043-cryogonal-043-203-common?variant=40325559484499",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T12:18:43+00:00",
-      "store": "Pokelink",
-      "name": "#032 Lotad 032/203 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/032-lotad-032-203-common?variant=40325558304851",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T12:18:43+00:00",
-      "store": "Pokelink",
-      "name": "#022 Litleo 022/203 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/022-litleo-022-203-common?variant=40325490180179",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-24T12:18:43+00:00",
-      "store": "Pokelink",
-      "name": "#003 Skiploom 003/203 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/003-skiploom-003-203-uncommon?variant=40325482905683",
       "product_class": "card",
       "event": "ny"
     }
