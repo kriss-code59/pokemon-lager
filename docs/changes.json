@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-24T11:18:38+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - 151 Special Set Booster Box Japan",
+      "price": "5999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-booster-box-japan-1",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:18:38+00:00",
+      "store": "Pokesingles",
+      "name": "Alcremie ex 75 - Journey Together",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/alcremie-ex-75-journey-together?variant=53024725664023",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T10:59:12+00:00",
       "store": "Pokesingles",
       "name": "Bombirdier ex 156 - Paradox Rift",
@@ -2679,24 +2697,6 @@
       "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 9-Pocket PRO-Binder",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-9-pocket-pro-binder?variant=52251773468903",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon World Championship Decks 2025 Sett (4 stk)",
-      "price": "1299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tcg-world-championship-decks-2025-assortment?variant=52209228316903",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-23T19:58:40+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Poké Ball Full View Deck Box",
-      "price": "39.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-poke-ball-full-view-deck-box®-for-pokemon?variant=52112667508967",
       "product_class": "accessory",
       "event": "ny"
     }

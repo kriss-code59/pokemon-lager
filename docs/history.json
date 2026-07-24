@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T11:18:38+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - 151 Special Set Booster Box Japan",
+      "price": "5999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-booster-box-japan-1",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:18:38+00:00",
+      "store": "Pokesingles",
+      "name": "Alcremie ex 75 - Journey Together",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/alcremie-ex-75-journey-together?variant=53024725664023",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T11:18:38+00:00",
+      "store": "Pokesingles",
+      "name": "Alcremie ex 75 - Journey Together",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/alcremie-ex-75-journey-together?variant=53024725664023",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T10:59:12+00:00",
       "store": "Pokesingles",
       "name": "Bombirdier ex 156 - Paradox Rift",
@@ -179821,33 +179848,6 @@
       "name": "Pokemon Nanoblock Kyogre Figur",
       "price": "199.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-kyogre-figur?variant=51237014208743",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mini Dragon Type (6 stk) Figurer",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mini-dragon-type-6-stk?variant=51237000708327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Litten Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-litten-figur?variant=51236986093799",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-19T15:18:00+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mega Venusaur Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mega-venusaur-figur?variant=51235298869479",
       "product_class": "card",
       "event": "ny"
     }
