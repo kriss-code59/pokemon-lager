@@ -1,6 +1,40 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T14:38:43+00:00",
+      "store": "Ark",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T14:38:43+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon Kinesisk 30th Anniversary Celebration First Partner Box Vol. 2",
+      "price": "kr249,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-30th-anniversary-first-partner-vol-2/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-24T14:38:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-24T14:38:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Phantasmal Flames - Elite Trainer Box",
+      "price": "1999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-phantasmal-flames-elite-trainer-box-maks-1-per-kunde?variant=51639091527981",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-24T14:18:45+00:00",
       "store": "Kanoncon",
       "name": "Pokemon Kinesisk Crystal Gathering Gift Set",
@@ -179831,42 +179865,6 @@
       "name": "#098 Spectrier 098/217 Rare Holo",
       "price": "12.00 kr",
       "url": "https://pokelink.no/products/098-spectrier-098-217-rare-holo?variant=44257431453779",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#127 Team Rocket's Honchkrow 127/217 Rare Holo",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/127-team-rockets-honchkrow-127-217-rare-holo?variant=44257438105683",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#154 N's Reshiram 154/217 Rare Holo",
-      "price": "12.00 kr",
-      "url": "https://pokelink.no/products/154-ns-reshiram-154-217-rare-holo?variant=44257441546323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#155 N's Zekrom 155/217 Rare Holo",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/155-ns-zekrom-155-217-rare-holo?variant=44257441677395",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#137 Porygon 137/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/137-porygon-137-165-common?variant=41749885812819",
       "product_class": "card",
       "event": "ny"
     }

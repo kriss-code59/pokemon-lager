@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T14:18:45+00:00",
+  "last_updated": "2026-07-24T14:38:45+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5659,15 +5659,6 @@
       "price": "99.00 kr",
       "in_stock": true,
       "url": "https://boosterkongen.no/products/pokemon-paradox-rift-booster-pakke?variant=51803397161271",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "BoosterKongen",
-      "name": "Pokemon Brilliant Stars Booster Pakke",
-      "price": "199.00 kr",
-      "in_stock": false,
-      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-brilliant-stars-booster-pakke?variant=52519546126647",
       "store_count": null,
       "product_class": "card"
     },
@@ -139703,7 +139694,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Perfect Order - Booster Pack",
       "price": "89.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
       "store_count": null,
       "product_class": "card"
@@ -140855,7 +140846,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Phantasmal Flames - Elite Trainer Box",
       "price": "1999.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-phantasmal-flames-elite-trainer-box-maks-1-per-kunde?variant=51639091527981",
       "store_count": null,
       "product_class": "card"
@@ -148782,19 +148773,19 @@
     },
     {
       "store": "Ark",
-      "name": "Ultimate Sketch Challenge (Pokemon)",
+      "name": "Pokemon Origami: Fold Your Own Pokemon",
       "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/boker/barneboker/ultimate-sketch-challenge-pokemon-9781338237566",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-origami-fold-your-own-pokemon-9780702313356",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Ark",
-      "name": "Pokemon Origami: Fold Your Own Pokemon",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-origami-fold-your-own-pokemon-9780702313356",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
       "store_count": null,
       "product_class": "card"
     },
@@ -160666,6 +160657,15 @@
       "price": "1\n299,00 kr",
       "in_stock": false,
       "url": "https://www.gameninja.no/produkt/pokemon-svarlet-violet-sv1/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Kanoncon",
+      "name": "Pokemon Kinesisk 30th Anniversary Celebration First Partner Box Vol. 2",
+      "price": "kr249,00",
+      "in_stock": true,
+      "url": "https://www.kanoncon.no/produkt/pokemon-30th-anniversary-first-partner-vol-2/",
       "store_count": null,
       "product_class": "card"
     },
