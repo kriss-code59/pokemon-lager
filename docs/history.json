@@ -1,6 +1,69 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "Pokesingles",
+      "name": "Blissey ex 134 - Twilight Masquerade",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/blissey-ex-134-twilight-masquerade?variant=53024630964503",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "Pokesingles",
+      "name": "Bloodmoon Ursaluna ex 141 - Twilight Masquerade",
+      "price": "25.00 kr",
+      "url": "https://pokesingles.no/products/bloodmoon-ursaluna-ex-141-twilight-masquerade?variant=53024631259415",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "Pokesingles",
+      "name": "Cornerstone Mask Ogerpon ex 112 - Twilight Masquerade",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cornerstone-mask-ogerpon-ex-112-twilight-masquerade?variant=53024630210839",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Venusaur ex Premium Collection",
+      "price": "899.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-venusaur-ex-premium-collection?variant=51641101320493",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together - 10 Pack Run",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-100-packs-together-skip-the-line?variant=50602656268589",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "Pokesingles",
+      "name": "Blissey ex 134 - Twilight Masquerade",
+      "price": "20.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokesingles.no/products/blissey-ex-134-twilight-masquerade?variant=53024630964503",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-24T12:38:41+00:00",
+      "store": "Pokesingles",
+      "name": "Cornerstone Mask Ogerpon ex 112 - Twilight Masquerade",
+      "price": "20.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/cornerstone-mask-ogerpon-ex-112-twilight-masquerade?variant=53024630210839",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-24T12:18:43+00:00",
       "store": "Pokelink",
       "name": "#023 Combusken 023/159 Uncommon",
@@ -179808,69 +179871,6 @@
       "name": "#096 Drowzee 096/165 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/096-drowzee-096-165-common?variant=41749870280787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#089 Muk 089/165 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/089-muk-089-165-uncommon?variant=41750037758035",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#086 Seel 086/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/086-seel-086-165-common?variant=41749868281939",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#078 Rapidash 078/165 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/078-rapidash-078-165-uncommon?variant=41750035431507",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#071 Victreebel 071/165 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/071-victreebel-071-165-uncommon?variant=41750034382931",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#082 Magneton 082/165 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/082-magneton-082-165-uncommon?variant=41750036512851",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#091 Cloyster 091/165 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/091-cloyster-091-165-uncommon?variant=41750038446163",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T02:18:26+00:00",
-      "store": "Pokelink",
-      "name": "#077 Ponyta 077/165 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/077-ponyta-077-165-common?variant=41749865431123",
       "product_class": "card",
       "event": "ny"
     }
