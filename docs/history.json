@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-24T16:18:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Pencil Case (Med Evolving Skies)",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-pencil-case-med-evolving-skies?variant=52050659213613",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-24T15:58:57+00:00",
       "store": "Collectible",
       "name": "ACE 7 Near Mint – 2005 Pokemon Japanese Holon Research Tower Tyranitar #20",
@@ -179855,15 +179864,6 @@
       "name": "CGC 10 Clobbopus 207/191",
       "price": "499.00 kr",
       "url": "https://pokelink.no/products/cgc-10-clobbopus-207-191?variant=45751439556691",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T05:18:09+00:00",
-      "store": "Pokelink",
-      "name": "CGC 10 Sylveon Vmax TG15/TG30",
-      "price": "1299.00 kr",
-      "url": "https://pokelink.no/products/cgc-10-sylveon-vmax-tg15-tg30?variant=45751437361235",
       "product_class": "card",
       "event": "ny"
     }
