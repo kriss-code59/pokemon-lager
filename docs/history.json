@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T06:22:33+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 250/217 – Fan Rotom",
+      "price": "59,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T06:22:33+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 100/217 – Team Rocket’s Diglett",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-100-217-team-rockets-diglett/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T06:22:33+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 215/217 – Waitress",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T06:22:33+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: 30th Anniversary Pokemon Mini-Figure w/Bubble Gum (1.5g, Bandai)",
+      "price": "kr 69.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-30th-anniversary-pokemon-mini-figure-w-bubble-gum-1-5g-bandai/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-25T05:18:32+00:00",
       "store": "BoosterKongen",
       "name": "Pokemon Paldean Fates Mini Tin",
@@ -179820,42 +179856,6 @@
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-tropius-plush?variant=51045113987303",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection EX: The World of Paldea Figurer (6 stk)",
-      "price": "829.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-ex-the-world-of-paldea-figurer-6-stk?variant=51016013349095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Swing Vignette 2 Figurer (6 stk)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-swing-vignette-figurer-6-stk?variant=51016007155943",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Vintage Collection Type Steel Figurer (6 stk)",
-      "price": "839.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-vintage-collection-type-steel-figurer-6-stk?variant=51014173786343",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Garden- Sunlight Afternoon Figurer (6 stk)",
-      "price": "769.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-garden-sunlight-afternoon-figurer-6-stk?variant=51014079185127",
-      "product_class": "card",
       "event": "ny"
     }
   ]
