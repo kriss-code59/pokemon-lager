@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T19:18:20+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Brave Stars Typhlosion Kinesisk Jumbo Boosterpakke",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-brave-stars-typhlosion-kinesisk-jumbo-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T19:18:20+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Ascended Heroes Premium Poster Collection Mega Gardevoir",
+      "price": "2649.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ascended-heroes-premium-poster-collection-mega-gardevoir?variant=51580395028711",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T18:38:24+00:00",
       "store": "Cardcenter",
       "name": "Pokemon VMAX Climax Japansk Boosterpakke",
@@ -179802,24 +179818,6 @@
       "price": "799.00 kr",
       "url": "https://pokestore.no/products/pokemon-eevee-teddy-womens-hoodie?variant=51517099409639",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Dragonite Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-dragonite-plush?variant=51508364378343",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Lugia Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-lugia-plush?variant=51508361986279",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
