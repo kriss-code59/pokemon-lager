@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T16:34:50+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – VSTAR Universe – Booster Box (Japansk)",
+      "price": "kr 2 999,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-vstar-universe-booster-box-japansk/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T16:34:50+00:00",
+      "store": "Mystic Trades",
+      "name": "​[LAGER – Pokémon TCG: ME05: Pitch Black – Booster Bundle",
+      "price": "699 kr",
+      "previous_price": "799 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-me05-pitch-black-booster-bundle",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-25T16:34:50+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Prismatic Evolutions – Booster Pack",
+      "price": "kr 239,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-booster-pack/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T16:19:20+00:00",
       "store": "PokeShop",
       "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
@@ -179801,33 +179827,6 @@
       "price": "879.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-gemstone-collection-2-figurer-6-stk?variant=51016032059623",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Swing Vignette 2 Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-swing-vignette-2-figur?variant=51016009253095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Midnight's Mysterious Mansion 2 Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-midnights-mysterious-mansion-2-figur?variant=51013834080487",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kecleon Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kecleon-plush?variant=50992810524903",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
