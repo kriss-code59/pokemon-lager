@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T10:18:35+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Plush and Card Blind Box (Kinesisk)",
+      "price": "399.00 kr",
+      "url": "https://retroworld.no/products/sleepy-eevee-blind-box-copy?variant=51996583952685",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T09:58:38+00:00",
       "store": "Pokestore",
       "name": "Pokemon Paradox Rift 3pk Blister Cetitan",
@@ -179839,15 +179847,6 @@
       "name": "Pokemon PU-3 SU Sticker - You Did Great",
       "price": "29.00 kr",
       "url": "https://pokestore.no/products/pokemon-pu-3-su-sticker-you-did-great?variant=51989708407015",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-2 SU Sticker - Good Job",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-2-su-sticker-good-job?variant=51989708374247",
       "product_class": "card",
       "event": "ny"
     }
