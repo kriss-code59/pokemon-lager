@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T11:37:03+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Meowth VMax Special Collection",
+      "price": "3999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-meowth-vmax-special-collection?variant=50674190975277",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T11:18:43+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 250/217 – Fan Rotom",
@@ -179835,15 +179843,6 @@
       "name": "Pokemon Pokepeace Pikachu Plush",
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush-3?variant=51989708865767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Natu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-natu-plush?variant=51989708800231",
       "product_class": "accessory",
       "event": "ny"
     }
