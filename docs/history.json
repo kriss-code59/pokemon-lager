@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T12:39:14+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-ment Starrium Series: Dreamy Moonlight Figur",
+      "price": "149.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-starrium-series-dreamy-moonlight-figur?variant=51013113839847",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T12:39:14+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-ment Circular Diorama Collection 1 Figur",
+      "price": "159.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-circular-diorama-collection-1-figur?variant=51237463359719",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T12:18:28+00:00",
       "store": "Pokesingles",
       "name": "Alolan Exeggutor ex 133 - Surging Sparks",
@@ -179817,24 +179833,6 @@
       "name": "Pokemon Takara Tomy Sleeping Friends Relax at Home Pikachu Plush",
       "price": "1249.00 kr",
       "url": "https://pokestore.no/products/pokemon-sleeping-friends-large-size-pikachu?variant=51994854129895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Pancham Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-pancham-plush?variant=51994845216999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Luxray Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-luxray-plush?variant=51994845053159",
       "product_class": "accessory",
       "event": "ny"
     }
