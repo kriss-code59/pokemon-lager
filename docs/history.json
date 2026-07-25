@@ -1,6 +1,38 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T18:38:24+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon VMAX Climax Japansk Boosterpakke",
+      "price": "469.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-vmax-climax-japansk-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T18:38:24+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Dark Crystal Blaze Kinesisk Jumbo Boosterpakke",
+      "price": "159.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-dark-crystal-blaze-kinesisk-jumbo-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T18:38:24+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Kinesisk Crystal Gathering Tin Set - Vaporeon",
+      "price": "349.00 kr",
+      "url": "https://braspill.no/products/pokemon-kinesisk-crystal-gathering-leafeon-tin-set?variant=55599670198564",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T18:38:24+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Kinesisk Crystal Gathering Tin Set - Eevee",
+      "price": "349.00 kr",
+      "url": "https://braspill.no/products/pokemon-kinesisk-crystal-gathering-leafeon-tin-set?variant=55599670329636",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T18:18:27+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Sleepy Friend Plush Series – Eevee (28cm, Takara Tomy)",
@@ -179787,42 +179819,6 @@
       "name": "Pokemon All Star Collection Lugia Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-lugia-plush?variant=51508361986279",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Glaceon Plush (28cm)",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-glaceon-plush-28cm?variant=51508316602599",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Gengar Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-gengar-plush?variant=51508305461479",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Galarian Ponyta Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-ponyta-plush?variant=51508181958887",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Umbreon Plush (30cm)",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-umbreon-plush-30cm?variant=51507438452967",
       "product_class": "accessory",
       "event": "ny"
     }
