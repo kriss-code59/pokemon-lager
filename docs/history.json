@@ -1,6 +1,330 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Ark",
+      "name": "Ultimate Sketch Challenge (Pokemon)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/ultimate-sketch-challenge-pokemon-9781338237566",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Natural Wilderness Diorama Series – Bulbasaur",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-natural-wilderness-diorama-series-bulbasaur/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Natural Wilderness Diorama Series – Meowth",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-natural-wilderness-diorama-series-meowth/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Natural Wilderness Diorama Series – Eevee",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-natural-wilderness-diorama-series-eevee/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Natural Wilderness Diorama Series – Psyduck",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-natural-wilderness-diorama-series-psyduck/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Natural Wilderness Diorama Series – Slowpoke",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-natural-wilderness-diorama-series-slowpoke/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Funism Figure – Gengar & Mimikyu",
+      "price": "999,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-funism-figure-gengar-mimikyu/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Full Power Battle Series – Metagross",
+      "price": "699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-full-power-battle-series-metagross/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Full Power Battle Series – Gardevoir",
+      "price": "699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-full-power-battle-series-gardevoir/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Full Power Battle Series – Tyranitar",
+      "price": "699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-full-power-battle-series-tyranitar/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Full Power Battle Series – Lucario",
+      "price": "699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-full-power-battle-series-lucario/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Full Power Battle Series – Charizard",
+      "price": "749,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-full-power-battle-series-charizard/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Full Power Battle Series – Gengar",
+      "price": "699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-full-power-battle-series-gengar/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokémon Sleepy Eevee Figurines: Mystery Box",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-sleepy-eevee-figurines-mystery-box/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – Abyss Eye Japansk Display Booster Box",
+      "price": "599,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-abyss-eye-japansk-display-booster-box/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – ME03 – Perfect Order Booster Pack",
+      "price": "99,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-me03-perfect-order-booster-pack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – Ninja Spinner Japansk Booster Pack",
+      "price": "69,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-ninja-spinner-japansk-display-booster-pack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – Ninja Spinner Japansk Display Booster Box",
+      "price": "599,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-ninja-spinner-japansk-display-booster-box/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – League Battle Deck Mewtwo",
+      "price": "599,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-league-battle-deck-mewtwo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Center Hiroshima Special Box",
+      "price": "799,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-center-hiroshima-special-box/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Center Fukuoka Special Box",
+      "price": "499,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-center-fukuoka-special-box/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Trainer’s Toolkit 2025",
+      "price": "2025\n699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-trainers-toolkit-2025/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokémon – Pikachu – Umbrella",
+      "price": "299,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-pikachu-umbrella/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Figure Diglett/Bulbasaur",
+      "price": "179,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-diglett-bulbasaur/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Figure Sableye/Pikachu",
+      "price": "179,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-sableye-pikachu/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Figure 3 pack Pikachu/Gible/Ponyta",
+      "price": "249,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-3-pack-pikachu-gible-ponyta/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Figure Meowscarada",
+      "price": "249,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-meowscarada/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokémon Battle Figure Set – Single",
+      "price": "159,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-set-single-2/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokémon Battle Figure Set – 2-Pack",
+      "price": "169,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-set-2-pack-2/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokémon Battle Figure Set – 3-Pack",
+      "price": "249,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-set-3-pack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Feature Figure – Rowlet + Tatsugiri",
+      "price": "149,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-feature-figure-rowlet-tatsugiri/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Feature Figure – Zigzagoon + Togetic",
+      "price": "149,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-feature-figure-zigzagoon-togetic/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Feature Figure – Crocalor",
+      "price": "149,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-feature-figure-crocalor/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – Mega Symphonia Japansk Display Booster Box",
+      "price": "699,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-mega-symphonia-japansk-display-booster-box/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – SV9 Journey Together – Enhanced Booster Box – Hobby",
+      "price": "999,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-sv9-journey-together-enhanced-booster-box-hobby/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:18:40+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Figure 3",
+      "price": "3\n179,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-3/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-25T07:57:55+00:00",
       "store": "Spillmonster",
       "name": "Pokemon TCG – Chaos Rising – Elite Trainer Box",
@@ -179531,330 +179855,6 @@
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-tandemaus-plush?variant=51989704114407",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Scorbunny Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-scorbunny-plush?variant=51989704016103",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pichu Plush (Goodnight Ver.)",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pichu-plush?variant=51989703983335",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Emolga Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-emolga-plush?variant=51989703950567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Pikachu Face Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush-1?variant=51989703885031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Cherrim Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-cherrim-plush?variant=51989703852263",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Sprigatito Plush",
-      "price": "359.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-sprigatito-plush?variant=51989703557351",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pikachu Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush?variant=51989703491815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Omanyte Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-omanyte-plush?variant=51989703459047",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Mega Charizard Y Plush",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-mega-charizard-plush?variant=51989703393511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepiece Ball Chain Mascot - Mimikyu",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepiece-ball-chain-mascot-mimikyu?variant=51989703295207",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Fidough Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-fidough-plush?variant=51989703262439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Gothita Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-gothita-plush?variant=51989703098599",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mocchi-Mocchi-Style / Monster Ball",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mocchi-mocchi-style-monster-ball?variant=51989703033063",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Pawmi Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-pawmi-plush?variant=51989702967527",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ARTFXJ Statue 1/8 Serena & Fennekin 21 cm",
-      "price": "1999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-artfxj-statue-1-8-serena-fennekin-21-cm?variant=51939283271911",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Phantasmal Flames Booster Bundle Case (25)",
-      "price": "32475.00 kr",
-      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-bundle-case-26?variant=51938115616999",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Super Sized Jumbo Funko POP! Vinyl Figure Glaceon 25 cm",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-glaceon-emea-25-cm?variant=51780783571175",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Games Vinyl Figure Dratini 9 cm",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-dratini-9-cm?variant=51780783538407",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Koraidon & Miraidon 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/koraidon-miraidon-4-pocket-portfolio-for-pok-mon?variant=51766621896935",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Shimmering Skyline Playmat",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/gallery-series-shimmering-skyline-standard-gaming-playmat-for-pok-mon?variant=51766575136999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Lapras (25 cm)",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-lapras-emea-25-cm?variant=51741723951335",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Neon Kanto One-Touch Edge 3-Card Holder",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-neon-kanto-one-touch-edge-3-card-holder?variant=51720540160231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Wooloo (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-wooloo-emea-9-cm?variant=51704570380519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Charizard (25 cm)",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-charizard-emea-25-cm?variant=51704570314983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Gardevoir (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-gardevoir-9-cm?variant=51704570282215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Umbreon (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-umbreon-emea-9-cm?variant=51704570151143",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Umbreon (25 cm)",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-umbreon-emea-25-cm?variant=51704570020071",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-58 Quaquaval Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-58-quaquaval-moncolle-figur?variant=51685788647655",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Roy Trainer Moncolle Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-moncolle-figur?variant=51685788582119",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Iono and Bellibolt Playmat for Pokémon",
-      "price": "259.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-playmat-for-pok-mon?variant=51677139697895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt 2\" Album",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-2-album-for-pok-mon?variant=51677139665127",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt 9-Pocket Portfolio",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-9-pocket-portfolio-for-pok-mon?variant=51677139632359",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt 4-Pocket Portfolio",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-4-pocket-portfolio-for-pok-mon?variant=51677139566823",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Plush Espeon 20 cm",
-      "price": "369.00 kr",
-      "url": "https://pokestore.no/products/pokemon-plush-espeon-20-cm?variant=51637868527847",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt Deck Protector Sleeves (65 stk)",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-65ct-deck-protector-sleeves-for-pok-mon?variant=51630696726759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Black Bolt Booster Bundle Display Case (60 stk)",
-      "price": "82500.00 kr",
-      "url": "https://pokestore.no/products/pokemon-black-bolt-booster-bundle-display-case-60-stk?variant=51616871547111",
-      "product_class": "card",
       "event": "ny"
     }
   ]
