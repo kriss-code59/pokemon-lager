@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T09:18:59+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Gem Packs Volume 5 Kinesisk Booster Box",
+      "price": "589.00 kr",
+      "previous_price": "539.00 kr",
+      "url": "https://braspill.no/products/pokemon-gem-packs-volume-5-kinesisk-booster-box?variant=53373239427364",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-25T08:38:13+00:00",
       "store": "Ark",
       "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
@@ -179841,15 +179850,6 @@
       "name": "Pokemon PU-10 SU Medium Sticker - Pikachu",
       "price": "29.00 kr",
       "url": "https://pokestore.no/products/pokemon-pu-10-su-medium-sticker-pikachu?variant=51989705752807",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pyokorin Pikachu",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pyokorin-pikachu?variant=51989705687271",
       "product_class": "card",
       "event": "ny"
     }
