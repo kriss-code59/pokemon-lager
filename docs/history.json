@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T14:58:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] - Pokémon TCG: Pokémon GO – Booster-pakke (SWSH10.5)",
+      "price": "219 kr",
+      "previous_price": "199 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pokemon-tcg-pokemon-go-booster-pakke-swsh105",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-25T14:38:42+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Scarlet & Violet Base Set - Booster Pack",
@@ -179824,15 +179833,6 @@
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-plush-figure-venusaur-30-cm?variant=52097034911975",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Cinderace Model Kit",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-cinderace-model-kit?variant=52079395209447",
-      "product_class": "card",
       "event": "ny"
     }
   ]
