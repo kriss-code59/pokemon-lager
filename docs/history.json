@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T14:38:42+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Scarlet & Violet Base Set - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://pokebua.no/products/pokemon-scarlet-violet-base-set-booster-pack?variant=48543772901609",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-25T14:18:44+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Future Flash Booster Box (Japansk)",
@@ -179824,15 +179833,6 @@
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/pokemon-bandai-spirits-cinderace-model-kit?variant=52079395209447",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Toploader & Penny Sleeves Combo Pack (25 + 25 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pikachu-toploader®-and-penny-sleeves®-combo-pack-for-the-pokemon-trading-card-game-25-pack?variant=52067026698471",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
