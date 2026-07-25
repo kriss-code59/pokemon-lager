@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T15:18:41+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
+      "price": "39.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-symphonia-booster-pack-japansk?variant=51254241034541",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T14:58:33+00:00",
       "store": "Mystic Trades",
       "name": "[BESTILLINGSVARE] - Pokémon TCG: Pokémon GO – Booster-pakke (SWSH10.5)",
@@ -179823,15 +179831,6 @@
       "name": "Ultra Pro Pokemon Poké Ball Full View Deck Box",
       "price": "39.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-poke-ball-full-view-deck-box®-for-pokemon?variant=52112667508967",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Venusaur Plush 30 cm",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-plush-figure-venusaur-30-cm?variant=52097034911975",
       "product_class": "accessory",
       "event": "ny"
     }
