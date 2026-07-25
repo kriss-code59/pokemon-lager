@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T09:39:12+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T09:18:59+00:00",
       "store": "Braspill",
       "name": "Pokemon Gem Packs Volume 5 Kinesisk Booster Box",
@@ -179841,15 +179849,6 @@
       "name": "Pokemon PU-21 SU Sticker - Large",
       "price": "29.00 kr",
       "url": "https://pokestore.no/products/pokemon-pu-21-su-sticker-large?variant=51989708341479",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-10 SU Medium Sticker - Pikachu",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-10-su-medium-sticker-pikachu?variant=51989705752807",
       "product_class": "card",
       "event": "ny"
     }
