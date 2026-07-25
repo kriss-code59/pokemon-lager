@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T07:18:42+00:00",
+      "store": "Ark",
+      "name": "Meet the Friends",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/meet-the-friends-9781339007793",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-25T06:22:33+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 250/217 – Fan Rotom",
@@ -179846,15 +179855,6 @@
       "name": "Pokemon Center Japan Original Cresselia Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-cresselia-plush?variant=51045137645799",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Tropius Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-tropius-plush?variant=51045113987303",
       "product_class": "accessory",
       "event": "ny"
     }
