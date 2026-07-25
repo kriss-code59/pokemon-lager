@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T13:19:18+00:00",
+      "store": "Playlot",
+      "name": "Pokemon Mega Moonlit Tin",
+      "price": "kr 549,00",
+      "url": "https://playlot.no/produkt/pokemon-mega-moonlit-tin/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T13:19:18+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Glory of Team Rocket Booster Box (Japansk)",
+      "price": "2349.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://pokenordic.no/products/battle-partners-booster-box-kopi?variant=47772372107518",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-25T12:39:14+00:00",
       "store": "Pokestore",
       "name": "Pokemon Re-ment Starrium Series: Dreamy Moonlight Figur",
@@ -179816,24 +179834,6 @@
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-bandai-spirits-lugia-model-kit-figur?variant=52078224244967",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ascended Heroes Booster Bundle Case (6 sealed displays)",
-      "price": "119940.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ascended-heroes-booster-bundle-case-6-displays?variant=52006672204007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Relax at Home Pikachu Plush",
-      "price": "1249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-friends-large-size-pikachu?variant=51994854129895",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]

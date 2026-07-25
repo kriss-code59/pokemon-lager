@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-25T12:58:40+00:00",
+  "last_updated": "2026-07-25T13:19:18+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5565,15 +5565,6 @@
     },
     {
       "store": "BoosterKongen",
-      "name": "Pokemon Ascended Heroes 2-pk Blister",
-      "price": "419.00 kr",
-      "in_stock": true,
-      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "BoosterKongen",
       "name": "Pokemon TCG: Phantasmal Flames 3-pk Blister - Sneasel",
       "price": "319.00 kr",
       "in_stock": false,
@@ -5601,21 +5592,30 @@
     },
     {
       "store": "BoosterKongen",
-      "name": "Pokemon Ascended Heroes Mini Tin",
-      "price": "439.00 kr",
-      "in_stock": true,
-      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-ascended-heroes-mini-tin?variant=52519540097335",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "BoosterKongen",
       "name": "Pokemon Black Bolt Binder Collection",
       "price": "899.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-black-bolt-binder-collection?variant=52097215922487",
       "store_count": null,
       "product_class": "accessory"
+    },
+    {
+      "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes 2-pk Blister",
+      "price": "419.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes Mini Tin",
+      "price": "439.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-ascended-heroes-mini-tin?variant=52519540097335",
+      "store_count": null,
+      "product_class": "card"
     },
     {
       "store": "BoosterKongen",
@@ -61861,7 +61861,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Glory of Team Rocket Booster Box (Japansk)",
-      "price": "2399.00 kr",
+      "price": "2349.00 kr",
       "in_stock": true,
       "url": "https://pokenordic.no/products/battle-partners-booster-box-kopi?variant=47772372107518",
       "store_count": null,
@@ -163866,6 +163866,15 @@
     },
     {
       "store": "Playlot",
+      "name": "Pokemon Mega Moonlit Tin",
+      "price": "kr 549,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/pokemon-mega-moonlit-tin/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
       "name": "Pokemon World Champ Deck 2025",
       "price": "kr 449,00",
       "in_stock": true,
@@ -164032,15 +164041,6 @@
       "price": "kr 149,00",
       "in_stock": true,
       "url": "https://playlot.no/produkt/white-flare-boosterbox-japansk/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Playlot",
-      "name": "XY Mega Charizard EX Battle Deck JPN",
-      "price": "kr 4 299,00",
-      "in_stock": true,
-      "url": "https://playlot.no/produkt/xy-mega-charizard-ex-battle-deck-jpn/",
       "store_count": null,
       "product_class": "card"
     },
