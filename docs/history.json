@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T07:57:55+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Chaos Rising – Elite Trainer Box",
+      "price": "kr 1 199,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-chaos-rising-elite-trainer-box/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T07:38:33+00:00",
       "store": "Pokesingles",
       "name": "Air Balloon 181 - Ascended Heroes",
@@ -179847,15 +179855,6 @@
       "price": "82500.00 kr",
       "url": "https://pokestore.no/products/pokemon-black-bolt-booster-bundle-display-case-60-stk?variant=51616871547111",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Bidoof Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-bidoof-plush?variant=51612640772327",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
