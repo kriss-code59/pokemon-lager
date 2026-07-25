@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T13:34:11+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Mega Dream Booster Box (Japansk)",
+      "price": "1349.00 kr",
+      "previous_price": "1399.00 kr",
+      "url": "https://pokenordic.no/products/mega-dream-booster-box?variant=47548038349054",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-25T13:34:11+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Inferno X Booster Box (Japansk) [Ventes inn]",
+      "price": "2299.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://pokenordic.no/products/inferno-x-booster-box?variant=47548037497086",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-25T13:34:11+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon Battle Figure Diglett/Bulbasaur",
+      "price": "179,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-battle-figure-diglett-bulbasaur/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T13:19:18+00:00",
       "store": "Playlot",
       "name": "Pokemon Mega Moonlit Tin",
@@ -179806,33 +179832,6 @@
       "name": "Pokemon Bandai Spirits Quaxly Model Kit",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-bandai-spirits-quaxly-model-kit?variant=52078248886503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Scorbunny Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-scorbunny-model-kit?variant=52078244004071",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Charizard & Dragonite Model Kit Sett",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-charizard-dragonite-model-kit-sett?variant=52078239973607",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Lugia Model Kit",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-lugia-model-kit-figur?variant=52078224244967",
       "product_class": "card",
       "event": "ny"
     }
