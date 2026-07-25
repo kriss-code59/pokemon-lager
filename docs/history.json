@@ -1,6 +1,39 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T19:38:31+00:00",
+      "store": "Packs of Norway",
+      "name": "Pokemon - Mega Evolution – Chaos Rising Booster Pakke (Tilfeldig Pack Art)",
+      "price": "85.00 kr",
+      "url": "https://packsofnorway.no/products/pokemon-mega-evolution-chaos-rising-booster-pakke-tilfeldig-pack-art?variant=48387319234798",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T19:38:31+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Dream ex Japansk Boosterpakke",
+      "price": "199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T19:38:31+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon MS-26 Gengar Moncolle Figur",
+      "price": "99.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ms-26-gengar-moncolle-figur?variant=51685788680423",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T19:38:31+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Mega Gengar Moncolle Figur",
+      "price": "135.00 kr",
+      "url": "https://pokestore.no/products/pokemon-mega-gengar-moncolle-figur?variant=51055406481639",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T19:18:20+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Brave Stars Typhlosion Kinesisk Jumbo Boosterpakke",
@@ -179782,42 +179815,6 @@
       "price": "109.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-temporal-forces-4-pocket-album?variant=51537576329447",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lugia Pin",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lugia-pin?variant=51529329574119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Adjustable Charizard Caps",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-adjustable-charizard-caps?variant=51517143777511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Eevee Teddy Women's Hoodie - S",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-eevee-teddy-womens-hoodie?variant=51517101048039",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Eevee Teddy Women's Hoodie - 2XL",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-eevee-teddy-womens-hoodie?variant=51517099409639",
-      "product_class": "card",
       "event": "ny"
     }
   ]

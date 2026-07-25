@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-25T19:18:20+00:00",
+  "last_updated": "2026-07-25T19:38:32+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -284,7 +284,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Mega Dream ex Japansk Boosterpakke",
       "price": "199.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -60343,6 +60343,15 @@
       "price": "949.00 kr",
       "in_stock": false,
       "url": "https://northtcg.no/products/mega-brave-display-booster-box-japansk?variant=44267055612019",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Packs of Norway",
+      "name": "Pokemon - Mega Evolution – Chaos Rising Booster Pakke (Tilfeldig Pack Art)",
+      "price": "85.00 kr",
+      "in_stock": true,
+      "url": "https://packsofnorway.no/products/pokemon-mega-evolution-chaos-rising-booster-pakke-tilfeldig-pack-art?variant=48387319234798",
       "store_count": null,
       "product_class": "card"
     },
@@ -128579,7 +128588,7 @@
       "store": "Pokestore",
       "name": "Pokemon MS-26 Gengar Moncolle Figur",
       "price": "99.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokestore.no/products/pokemon-ms-26-gengar-moncolle-figur?variant=51685788680423",
       "store_count": null,
       "product_class": "card"
@@ -128957,7 +128966,7 @@
       "store": "Pokestore",
       "name": "Pokemon Mega Gengar Moncolle Figur",
       "price": "135.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokestore.no/products/pokemon-mega-gengar-moncolle-figur?variant=51055406481639",
       "store_count": null,
       "product_class": "card"
