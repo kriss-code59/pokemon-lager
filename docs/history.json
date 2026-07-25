@@ -1,6 +1,47 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T08:38:13+00:00",
+      "store": "Ark",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T08:38:13+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Paldean Fates Tin [Charizard]",
+      "price": "1699.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-paldean-fates-tin-charizard?variant=48140837552382",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T08:38:13+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Phantasmal Flames Elite Trainer Box",
+      "price": "2099.00 kr",
+      "url": "https://pokenordic.no/products/phantasmal-flames-elite-trainer-box-etb?variant=47546775011582",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T08:38:13+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Surging Sparks Elite Trainer Box",
+      "price": "2249.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-surging-sparks-elite-trainer-box?variant=48174449590526",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T08:38:13+00:00",
+      "store": "PokeNordic",
+      "name": "Mega Charizard X Ultra Premium Collection (UPC)",
+      "price": "3299.00 kr",
+      "url": "https://pokenordic.no/products/mega-charizard-x-ultra-premium-collection?variant=47546777207038",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T08:18:40+00:00",
       "store": "Ark",
       "name": "Ultimate Sketch Challenge (Pokemon)",
@@ -179810,51 +179851,6 @@
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-pyokorin-pikachu?variant=51989705687271",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Charizard Plush",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-charizard-plush-1?variant=51989705523431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Tatsugiri (Curly Form) Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-tatsugiri-plush?variant=51989705195751",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Espurr Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-espurr-plush?variant=51989705162983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Rowlet Plush (Goodnight Ver.)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-rowlet-plush?variant=51989705130215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Tandemaus Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-tandemaus-plush?variant=51989704114407",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
