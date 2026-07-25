@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T10:57:54+00:00",
+      "store": "Pokesingles",
+      "name": "Charizard ex 6 - 151",
+      "price": "89.00 kr",
+      "url": "https://pokesingles.no/products/charizard-ex-6-151?variant=53024487670039",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-25T10:57:54+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Premium Checklane",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-premium-checklane?variant=52244116668717",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T10:18:35+00:00",
       "store": "RetroWorld",
       "name": "Pokemon Plush and Card Blind Box (Kinesisk)",
@@ -179829,24 +179845,6 @@
       "name": "Pokemon PU-11 SU Medium Sticker - Partners",
       "price": "29.00 kr",
       "url": "https://pokestore.no/products/pokemon-pu-11-su-medium-sticker-partners?variant=51989708636391",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Pichu Face Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pichu-plush-1?variant=51989708505319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-3 SU Sticker - You Did Great",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-3-su-sticker-you-did-great?variant=51989708407015",
       "product_class": "card",
       "event": "ny"
     }
