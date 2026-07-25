@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T15:58:51+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crystal Gathering - Mystery Keychain Box",
+      "price": "379.00 kr",
+      "url": "https://pokebua.no/products/pokemon-kinesisk-crystal-gathering-mystery-keychain?variant=51285883814121",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T15:18:41+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
@@ -179823,15 +179831,6 @@
       "price": "1299.00 kr",
       "url": "https://pokestore.no/products/pokemon-tcg-world-championship-decks-2025-assortment?variant=52209228316903",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Poké Ball Full View Deck Box",
-      "price": "39.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-poke-ball-full-view-deck-box®-for-pokemon?variant=52112667508967",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
