@@ -1,6 +1,41 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T11:18:43+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 250/217 – Fan Rotom",
+      "price": "59,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T11:18:43+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 100/217 – Team Rocket’s Diglett",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-100-217-team-rockets-diglett/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T11:18:43+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 215/217 – Waitress",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-25T11:18:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/paldea-evolved-booster-pack?variant=50101588820269",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T10:57:54+00:00",
       "store": "Pokesingles",
       "name": "Charizard ex 6 - 151",
@@ -179810,42 +179845,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-natu-plush?variant=51989708800231",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Mocchi-Mocchi Pikachu Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush-2?variant=51989708767463",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Clodsire Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-clodsire-plush?variant=51989708734695",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-1 SU Sticker - Excellent Work",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-1-su-sticker-excellent-work?variant=51989708669159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-11 SU Medium Sticker - Partners",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-11-su-medium-sticker-partners?variant=51989708636391",
-      "product_class": "card",
       "event": "ny"
     }
   ]
