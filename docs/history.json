@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T14:18:44+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Future Flash Booster Box (Japansk)",
+      "price": "1099.00 kr",
+      "previous_price": "899.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-future-flash-booster-box-japansk-kopi?variant=47817329410302",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-25T13:58:38+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 129/217 – Mightyena",
@@ -179823,15 +179832,6 @@
       "name": "Pokemon Pikachu Toploader & Penny Sleeves Combo Pack (25 + 25 stk)",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pikachu-toploader®-and-penny-sleeves®-combo-pack-for-the-pokemon-trading-card-game-25-pack?variant=52067026698471",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Premium Vinyl Figure Pikachu 9 cm",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-premium-vinyl-figure-pikachu-9-cm?variant=51994485358823",
       "product_class": "accessory",
       "event": "ny"
     }

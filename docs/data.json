@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-25T13:58:39+00:00",
+  "last_updated": "2026-07-25T14:18:45+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -8850,6 +8850,15 @@
     },
     {
       "store": "Cardstore",
+      "name": "Pitch Black Booster Pack",
+      "price": "89.00 kr",
+      "in_stock": true,
+      "url": "https://store.cardstore.no/products/pitch-black-booster-pack?variant=54642788991299",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardstore",
       "name": "Perfect Order Sleeved Booster",
       "price": "79.00 kr",
       "in_stock": false,
@@ -8922,10 +8931,10 @@
     },
     {
       "store": "Cardstore",
-      "name": "Pitch Black Booster Pack",
-      "price": "89.00 kr",
+      "name": "Pitch Black Booster Bundle",
+      "price": "649.00 kr",
       "in_stock": true,
-      "url": "https://store.cardstore.no/products/pitch-black-booster-pack?variant=54642788991299",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-bundle?variant=54642789056835",
       "store_count": null,
       "product_class": "card"
     },
@@ -8958,10 +8967,10 @@
     },
     {
       "store": "Cardstore",
-      "name": "Pitch Black Booster Bundle",
-      "price": "649.00 kr",
+      "name": "Pitch Black Booster Display",
+      "price": "3199.00 kr",
       "in_stock": true,
-      "url": "https://store.cardstore.no/products/pitch-black-booster-bundle?variant=54642789056835",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-display?variant=54642789024067",
       "store_count": null,
       "product_class": "card"
     },
@@ -9088,15 +9097,6 @@
       "price": "899.00 kr",
       "in_stock": true,
       "url": "https://store.cardstore.no/products/mega-greninja-ex-premium-collection?variant=54642789581123",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardstore",
-      "name": "Pitch Black Booster Display",
-      "price": "3199.00 kr",
-      "in_stock": true,
-      "url": "https://store.cardstore.no/products/pitch-black-booster-display?variant=54642789024067",
       "store_count": null,
       "product_class": "card"
     },
@@ -62383,7 +62383,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Future Flash Booster Box (Japansk)",
-      "price": "899.00 kr",
+      "price": "1099.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-future-flash-booster-box-japansk-kopi?variant=47817329410302",
       "store_count": null,
