@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-25T09:58:38+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Paradox Rift 3pk Blister Cetitan",
+      "price": "299.00 kr",
+      "url": "https://pokestore.no/products/pokemon-paradox-rift-3pk-blister-cetitan?variant=50624545718503",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-25T09:39:12+00:00",
       "store": "Cardcenter",
       "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
@@ -179840,15 +179848,6 @@
       "name": "Pokemon PU-2 SU Sticker - Good Job",
       "price": "29.00 kr",
       "url": "https://pokestore.no/products/pokemon-pu-2-su-sticker-good-job?variant=51989708374247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-21 SU Sticker - Large",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-21-su-sticker-large?variant=51989708341479",
       "product_class": "card",
       "event": "ny"
     }
