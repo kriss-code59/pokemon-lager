@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T11:38:30+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Pitch Black Premium Blister Pack - Luxray",
+      "price": "125.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-pitch-black-premium-blister-pack-luxray",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T11:18:51+00:00",
       "store": "Cardstore",
       "name": "Pitch Black Premium Checklane (Gengar)",
@@ -179797,15 +179805,6 @@
       "name": "Pokemon Prismatic Evolutions Surprise Box + Booster Bundle",
       "price": "2799.00 kr",
       "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-surprise-box-booster-bundle?variant=52209260069095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Zygarde ex Premium Collection",
-      "price": "999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-zygarde-ex-premium-collection?variant=52020741210343",
       "product_class": "card",
       "event": "ny"
     }
