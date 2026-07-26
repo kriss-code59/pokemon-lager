@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T13:58:28+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON 30TH ANNIVERSARY: FIRST PARTNER VOL. 2",
+      "price": "145,00 kr",
+      "previous_price": "149,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/pokemon-30th-anniversary-first-partner-card-set-vol-2",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-26T13:38:22+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Collect 151 Starter Display Stand - Charmander",
@@ -179793,15 +179802,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Groudon Plush",
       "price": "499.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-groudon-plush?variant=50991686156519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Squirtle Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-squirtle-plush?variant=50991684518119",
       "product_class": "accessory",
       "event": "ny"
     }
