@@ -1,6 +1,165 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "PokeNordic",
+      "name": "Mega Gengar ex Mega Moonlight Tin",
+      "price": "549.00 kr",
+      "url": "https://pokenordic.no/products/mega-gengar-ex-mega-moonlight-tin?variant=48331582832894",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Gem Pack Kinesisk Badge Set Display (12 stk)",
+      "price": "2399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-gem-pack-kinesisk-badge-set-display-12-stk?variant=52372792312039",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Gem Pack Kinesisk Badge Set",
+      "price": "209.00 kr",
+      "url": "https://pokestore.no/products/pokemon-gem-pack-kinesisk-badge-set?variant=52372789788903",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Ark",
+      "name": "Puslespill 500 Pokémon - The First 151!",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/puslespill-500-pokemon---the-first-151-4005555005117",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Ark",
+      "name": "Puslespill 300 Pokémon",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/puslespill-300-pokemon-4005555041429",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Ark",
+      "name": "Puslespill 100 Pokémon Multicharacter",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/puslespill-100-pokemon-multicharacter-4005555043201",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Ark",
+      "name": "Puslespill 300 Wild Pokémon",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/puslespill-300-wild-pokemon-4005556132454",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Boosterpakker",
+      "name": "MEGA DREAM EX BOOSTER BOKS",
+      "price": "1 399,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/mega-dream-ex-booster-boks",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Gardevoir Elite Trainer Collection Box",
+      "price": "1799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-gardevoir-elite-trainer-collection-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Braspill",
+      "name": "Pokémon Shrouded Fable Mini Tin 1 stk",
+      "price": "199.00 kr",
+      "url": "https://braspill.no/products/pokemon-shrouded-fable-mini-tin-1-stk?variant=51950743355684",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "PokeNordic",
+      "name": "Mega Gengar ex Mega Moonlight Tin",
+      "price": "549.00 kr",
+      "previous_price": "499.00 kr",
+      "url": "https://pokenordic.no/products/mega-gengar-ex-mega-moonlight-tin?variant=48331582832894",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokesingles",
+      "name": "Banette 034/084 (Reverse Holo) - Pitch Black",
+      "price": "7.00 kr",
+      "url": "https://pokesingles.no/products/banette-034084-reverse-holo-pitch-black-807599?variant=54068802289943",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Scarlet & Violet Booster Pakke",
+      "price": "119.00 kr",
+      "previous_price": "115.00 kr",
+      "url": "https://pokestore.no/products/pokemon-scarlet-violet-booster?variant=50624532807911",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Shining Fates Booster Pakke",
+      "price": "329.00 kr",
+      "previous_price": "279.00 kr",
+      "url": "https://pokestore.no/products/pokemon-shining-fates-booster-pakke?variant=50624515637479",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Scarlet & Violet Booster Box - Booster Box",
+      "price": "4399.00 kr",
+      "previous_price": "3999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-scarlet-violet-booster-box?variant=51251680674023",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Scarlet & Violet Booster Box - Case",
+      "price": "26394.00 kr",
+      "previous_price": "23994.00 kr",
+      "url": "https://pokestore.no/products/pokemon-scarlet-violet-booster-box?variant=51251680706791",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Battle Partners Japansk Booster Box",
+      "price": "1299.00 kr",
+      "previous_price": "1199.00 kr",
+      "url": "https://pokestore.no/products/pokemon-battle-partners-japansk-booster-box?variant=50760429306087",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T02:18:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Shining Fates Elite Trainer Box",
+      "price": "3599.00 kr",
+      "previous_price": "2999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-shining-fates-elite-trainer-box?variant=51214881194215",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-25T19:38:31+00:00",
       "store": "Packs of Norway",
       "name": "Pokemon - Mega Evolution – Chaos Rising Booster Pakke (Tilfeldig Pack Art)",
@@ -179652,168 +179811,6 @@
       "name": "Pokemon Center Japan Original Giratina Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-giratina?variant=50993317249255",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Alolan Ninetales Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-alolan-ninetales-plush?variant=50981503467751",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Riolu Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-original-riolu-plush?variant=50829141115111",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Vaporeon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-raikou-plush-copy?variant=50746121781479",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Magnetisk 3-Kort Beskytter Skeledirge (Uten kort)",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-magnetisk-3-kort-beskytter-skeledirge-uten-kort?variant=50624604897511",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance Build & Battle Stadium",
-      "price": "1349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-build-battle-stadium?variant=50624503415015",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Articuno Deck Protector Sleeves (65 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-articuno-deck-protector-sleeves-65?variant=50735884992743",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu & Mimikyu Deck Protector Sleeves (65 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pikachu-mimikyu-deck-protector-sleeves-65?variant=50735865921767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pitch Black Premium Checklane Blister Sett",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pitch-black-premium-checklane-blister-sett?variant=52266260332775",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Perfect Order 9-Pocket Portfolio",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-mega-evolution-perfect-order-9-pocket-portfolio-for-the-pok-mon-trading-card-game?variant=51966737547495",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Shimmering Skyline 9-Pocket PRO-Binder",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/gallery-series-shimmering-skyline-9-pocket-pro-binder-for-pok-mon?variant=51766575104231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Wooper Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-wooper-plush?variant=51612637135079",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-07 Leafeon Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-07-leafeon-moncolle-figur?variant=51601595171047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MB-03 Ultra Ball Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mb-03-ultra-ball-moncolle-figur?variant=51601591763175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-22 Arceus Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-arceus-moncolle-figur?variant=51568787161319",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Garchomp Moncolle Figur",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-garchomp-moncolle-figur-1?variant=51568778805479",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Espeon",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-espeon?variant=51539011174631",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Shimmering Skyline Full View Deck Box",
-      "price": "39.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-shimmering-skyline-full-view-deck-box?variant=51537580851431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Temporal Forces 4-Pocket Portfolio",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-temporal-forces-4-pocket-album?variant=51537576329447",
       "product_class": "accessory",
       "event": "ny"
     }
