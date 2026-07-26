@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T19:58:34+00:00",
+      "store": "Cardcenter",
+      "name": "White Flare Japansk Boosterpakke",
+      "price": "145.00 kr",
+      "url": "https://cardcenter.no/products/white-flare-japansk-booster-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-26T19:58:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Nine Colors Gathering (Eevee Heroes) Kinesisk Boosterpakke",
+      "price": "109.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-nine-colors-gathering-eevee-heroes-kinesisk",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T19:38:53+00:00",
       "store": "Pokestore",
       "name": "Pokemon Center Japan Original Gliscor Plush",
@@ -179775,24 +179791,6 @@
       "name": "Pokemon ML-23 Giratina Moncolle Figur",
       "price": "239.00 kr",
       "url": "https://pokestore.no/products/pokemon-giratina-moncolle-figur?variant=51232589840615",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Gemstone Collection 1 Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-gemstone-collection-1-figur?variant=51013129601255",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Starrium Series: Dreamy Moonlight Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-starrium-series-dreamy-moonlight-figur?variant=51013113839847",
       "product_class": "card",
       "event": "ny"
     }
