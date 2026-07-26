@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T08:38:26+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Paldea Evolved Booster Pakke",
+      "price": "165.00 kr",
+      "previous_price": "145.00 kr",
+      "url": "https://pokestore.no/products/pokemon-paldea-evolved-booster?variant=50624534380775",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:38:26+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Paldea Evolved Sleeved Booster",
+      "price": "165.00 kr",
+      "previous_price": "145.00 kr",
+      "url": "https://pokestore.no/products/pokemon-paldea-evolved-sleeved-booster?variant=50624534708455",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:38:26+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Paldea Evolved Booster Box - Booster Box",
+      "price": "5999.00 kr",
+      "previous_price": "5499.00 kr",
+      "url": "https://pokestore.no/products/pokemon-paldea-evolved-booster-box?variant=51251682377959",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-26T08:18:43+00:00",
       "store": "Pokestore",
       "name": "Pokemon Astral Radiance Booster Pakke",
@@ -179784,33 +179811,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-mb-04-master-ball-moncolle-figur?variant=51569133551847",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Jolteon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-jolteon-plush?variant=51508489748711",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Lucaro Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-lucaro-plush?variant=51508488863975",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Sylveon Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-sylveon-plush?variant=51508488306919",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
