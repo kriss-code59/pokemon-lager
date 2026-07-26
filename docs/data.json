@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-26T16:58:30+00:00",
+  "last_updated": "2026-07-26T17:18:40+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -61538,7 +61538,7 @@
       "store": "PokeNordic",
       "name": "Pokemon Destined Rivals Booster Box Display",
       "price": "5399.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-destined-rivals-booster-box-display?variant=47993265160446",
       "store_count": null,
       "product_class": "card"
@@ -61682,7 +61682,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Paldean Fates Tin [Great Tusk]",
       "price": "1299.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-paldean-fates-tin-great-tusk?variant=48142959804670",
       "store_count": null,
       "product_class": "card"
@@ -61835,7 +61835,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Glory of Team Rocket Booster Box (Japansk)",
       "price": "2349.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/battle-partners-booster-box-kopi?variant=47772372107518",
       "store_count": null,
       "product_class": "card"
@@ -151635,6 +151635,69 @@
     },
     {
       "store": "Emken",
+      "name": "TEAM ROCKET'S MEOWTH [COSMOS HOLO] #149 POKEMON DESTINED RIVALS",
+      "price": "25,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/team-rocket-s-meowth-cosmos-holo-149-pokemon-destined-rivals-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "TEAM ROCKET'S GIOVANNI [COSMOS HOLO] #174 POKEMON DESTINED RIVALS",
+      "price": "19,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/team-rocket-s-giovanni-cosmos-holo-174-pokemon-destined-rivals-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "TEAM ROCKET'S WOBBUFFET #203 POKEMON PROMO",
+      "price": "9,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/team-rocket-s-wobbuffet-203-pokemon-promo-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "TEAM ROCKET'S MEWTWO EX #205 POKEMON PROMO",
+      "price": "29,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/team-rocket-s-mewtwo-ex-205-pokemon-promo-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "ELECTIVIRE EX #69 POKEMON DESTINED RIVALS",
+      "price": "15,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/electivire-ex-69-pokemon-destined-rivals-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "DONDOZO EX #66 POKEMON DESTINED RIVALS",
+      "price": "19,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/dondozo-ex-66-pokemon-destined-rivals-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "ETHAN'S HO-OH EX #39 POKEMON DESTINED RIVALS",
+      "price": "19,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/ethan-s-ho-oh-ex-39-pokemon-destined-rivals-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
       "name": "FLYGON [COSMOS HOLO] #53 POKEMON PHANTASMAL FLAMES",
       "price": "29,00 kr",
       "in_stock": true,
@@ -151783,69 +151846,6 @@
       "price": "5,00 kr",
       "in_stock": true,
       "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/backtrack-badge-74-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "ANTIQUE SKULL FOSSIL #73 POKEMON PITCH BLACK",
-      "price": "5,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/antique-skull-fossil-73-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "ANTIQUE ARMOR FOSSIL #72 POKEMON PITCH BLACK",
-      "price": "5,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/antique-armor-fossil-72-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "SILVALLY #95 POKEMON PITCH BLACK",
-      "price": "99,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/silvally-95-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "THIEVUL [REVERSE HOLO] #54 POKEMON PITCH BLACK",
-      "price": "19,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/thievul-reverse-holo-54-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "BOMBIRDIER [REVERSE HOLO] #71 POKEMON PITCH BLACK",
-      "price": "9,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/bombirdier-reverse-holo-71-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "SILVALLY #70 POKEMON PITCH BLACK",
-      "price": "5,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/silvally-70-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "BASTIODON [REVERSE HOLO] #62 POKEMON PITCH BLACK",
-      "price": "9,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/bastiodon-reverse-holo-62-pokemon-pitch-black-1",
       "store_count": null,
       "product_class": "card"
     },
