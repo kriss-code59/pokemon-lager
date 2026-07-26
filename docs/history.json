@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T18:18:35+00:00",
+      "store": "LABOGE",
+      "name": "Pokemon Pitch Black Vault Bounty! (Live)",
+      "price": "419.00 kr",
+      "url": "https://laboge.no/products/pokemon-pitch-black-vault-bounty-live?variant=54464237535531",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T18:18:35+00:00",
+      "store": "Playlot",
+      "name": "151 Elite Trainer Box",
+      "price": "kr 6 999,00",
+      "url": "https://playlot.no/produkt/151-elite-trainer-box/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T17:18:39+00:00",
       "store": "Emken",
       "name": "TEAM ROCKET'S MEOWTH [COSMOS HOLO] #149 POKEMON DESTINED RIVALS",
@@ -179779,24 +179796,6 @@
       "name": "Pokemon Lost Origin 3pk Blister Weavile",
       "price": "799.00 kr",
       "url": "https://pokestore.no/products/pokemon-lost-origin-3pk-blister-weavile?variant=50624571506919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Silver Lance Booster Pakke",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-silver-lance-booster-pakke?variant=50624498139367",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Matchless Fighters Booster Pakke",
-      "price": "90.00 kr",
-      "url": "https://pokestore.no/products/pokemon-matchless-fighters-booster-pakke?variant=50624497877223",
       "product_class": "card",
       "event": "ny"
     }
