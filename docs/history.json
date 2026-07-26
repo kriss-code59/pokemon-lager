@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T16:18:24+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
+      "price": "39.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-symphonia-booster-pack-japansk?variant=51254241034541",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T16:18:24+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Perfect Order Booster Pakke",
+      "price": "89.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-perfect-order-booster-pack?variant=47850942234878",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T16:18:24+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Symphonia - Booster Box (Japansk)",
+      "price": "1170.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-symphonia-booster-box-japansk?variant=51426583937325",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T15:58:27+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
@@ -179774,33 +179800,6 @@
       "name": "Ultra Pro Pokemon Pikachu 4-Pocket Portfolio",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-pikachu-4-pocket-portfolio-album?variant=51151541371111",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-18 Zacian Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-zacian-moncolle-figur?variant=51058428903655",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Gyrados Moncolle Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-gyrados-moncolle-figur?variant=51055419588839",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Victini Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-victini-plush?variant=51045168152807",
       "product_class": "accessory",
       "event": "ny"
     }

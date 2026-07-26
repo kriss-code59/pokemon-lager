@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-26T16:18:24+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
+      "price": "39.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-symphonia-booster-pack-japansk?variant=51254241034541",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T15:58:27+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
@@ -2689,15 +2698,6 @@
       "price": "kr 219.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-hair-band-snorlax-23-5x9cm-ts-factory/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Eevee Plush Keychain (10cm, Potdemiel)",
-      "price": "kr 149.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-eevee-plush-keychain-10cm-potdemiel/",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
