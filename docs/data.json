@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-26T18:18:36+00:00",
+  "last_updated": "2026-07-26T18:38:29+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -146507,7 +146507,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Paldean Fates - Booster Pack",
       "price": "379.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-paldean-fates-booster-pack?variant=50380427919661",
       "store_count": null,
       "product_class": "card"
@@ -148332,6 +148332,15 @@
     },
     {
       "store": "Ark",
+      "name": "Pokemon Super Duper Extra Deluxe Essential Handbook",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-super-duper-extra-deluxe-essential-handbook-9781339028019",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
       "name": "Aktivitetsbok Pokemon",
       "price": "?",
       "in_stock": false,
@@ -148368,6 +148377,15 @@
     },
     {
       "store": "Ark",
+      "name": "Pokemon Mega Evolution Handbook",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-mega-evolution-handbook-9780702348532",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
       "name": "Pokemon Adventures FireRed & LeafGreen / Emerald Box Set",
       "price": "?",
       "in_stock": true,
@@ -148381,6 +148399,33 @@
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-adventures-ruby-sapphire-box-set-9781421577760",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Pokemon: Scarlet & Violet Handbook",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-scarlet-violet-handbook-9781338871371",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "All About Eevee (Pokemon)",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/all-about-eevee-pokemon-9781338723540",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Monpoke Water Wonder",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/monpoke-water-wonder-9781339007854",
       "store_count": null,
       "product_class": "card"
     },
@@ -148408,6 +148453,15 @@
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-super-special-box-set-pokemon-9781338791532",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Pikachu's Nighttime Adventure",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pikachus-nighttime-adventure-9780702340109",
       "store_count": null,
       "product_class": "card"
     },
@@ -148539,12 +148593,57 @@
     },
     {
       "store": "Ark",
+      "name": "Meet the Friends",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/meet-the-friends-9781339007793",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
       "name": "Bamse Pokemon S18 20cm 6 ass",
       "price": "?",
       "in_stock": false,
       "url": "https://www.ark.no/produkt/bamse-pokemon-s18-20cm-6-ass-5710948453381",
       "store_count": null,
       "product_class": "accessory"
+    },
+    {
+      "store": "Ark",
+      "name": "Pokemon Origami: Fold Your Own Pokemon Kanto to Paldea",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/hobbyboker-og-fritid/pokemon-origami-fold-your-own-pokemon-kanto-to-paldea-9780702338519",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Monpoke: Pokemon Playtime (Touch-and-Feel Book)",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/monpoke-pokemon-playtime-touch-and-feel-book-9781339007786",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Legendary and Mythical Handbook: Deluxe Updated Edition",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/legendary-and-mythical-handbook-deluxe-updated-edition-9781546131274",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Monpoke Picture Book: Pikachu's First Friends (PB)",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/monpoke-picture-book-pikachus-first-friends-pb-9780702334405",
+      "store_count": null,
+      "product_class": "card"
     },
     {
       "store": "Ark",
@@ -148575,12 +148674,30 @@
     },
     {
       "store": "Ark",
+      "name": "Legendary and Mythical Guidebook: Super Deluxe Edition",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/legendary-and-mythical-guidebook-super-deluxe-edition-9781338795332",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
       "name": "Bamse Pokemon Charmander 30cm",
       "price": "?",
       "in_stock": false,
       "url": "https://www.ark.no/produkt/bamse-pokemon-charmander-30cm-191726481904",
       "store_count": null,
       "product_class": "accessory"
+    },
+    {
+      "store": "Ark",
+      "name": "Pokemon: Phonics Boxed Set",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-phonics-boxed-set-9780702339547",
+      "store_count": null,
+      "product_class": "card"
     },
     {
       "store": "Ark",
@@ -148629,136 +148746,19 @@
     },
     {
       "store": "Ark",
+      "name": "Pokemon Origami: Fold Your Own Pokemon",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-origami-fold-your-own-pokemon-9780702313356",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
       "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
-      "name": "Figur Pokemon clip n og S18",
-      "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/figur-pokemon-clip-n-og-s18-5710948457051",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
-      "name": "Bamse Pokemon Jul 20cm 4 ass",
-      "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/bamse-pokemon-jul-20cm-4-ass-5710948451653",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 500 Pokémon - The First 151!",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/puslespill-500-pokemon---the-first-151-4005555005117",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 300 Pokémon",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/puslespill-300-pokemon-4005555041429",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 100 Pokémon Multicharacter",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/puslespill-100-pokemon-multicharacter-4005555043201",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 1000 Pokèmon utfordring",
-      "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/puslespill-1000-pokemon-utfordring-4005555004608",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Pokemon Super Duper Extra Deluxe Essential Handbook",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-super-duper-extra-deluxe-essential-handbook-9781339028019",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 3D 54 Pokémon Ball rød/hvit",
-      "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/puslespill-3d-54-pokemon-ball-rodhvit-4005556112562",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Pokemon Mega Evolution Handbook",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-mega-evolution-handbook-9780702348532",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 300 Wild Pokémon",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/puslespill-300-wild-pokemon-4005556132454",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "Pokemon: Scarlet & Violet Handbook",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-scarlet-violet-handbook-9781338871371",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
-      "name": "Puslespill 2x24 Pokémon",
-      "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/puslespill-2x24-pokemon-4005556056682",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Ark",
-      "name": "All About Eevee (Pokemon)",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/all-about-eevee-pokemon-9781338723540",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
-      "name": "Monpoke Water Wonder",
-      "price": "?",
-      "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/monpoke-water-wonder-9781339007854",
       "store_count": null,
       "product_class": "card"
     },
@@ -152067,8 +152067,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "[PRE ORDER] – Pokémon ME05: Mega Evolution: Pitch Black - Sleeved Booster Pack (\"Cardboard / Pap Blister\")",
-      "price": "129 kr",
+      "name": "[BESTILLINGSVARE] – Pokémon ME05: Mega Evolution: Pitch Black - Sleeved Booster Pack (\"Cardboard / Pap Blister\")",
+      "price": "89 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/sleeved-booster-pack/pre-order-pokemon-me05-mega-evolution-pitch-black-sleeved-booster-pack-cardboard-pap-blister",
       "store_count": null,
@@ -152089,15 +152089,6 @@
       "price": "1199 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-sv-destined-rivals-booster-bundle-6-packs",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Mystic Trades",
-      "name": "[PRE ORDER] – Pokémon ME05: Mega Evolution: Pitch Black - Booster Box / Display (24 Sleeved Booster Packs)",
-      "price": "2799 kr",
-      "in_stock": true,
-      "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-me05-mega-evolution-pitch-black-booster-box-display-24-sleeved-booster-packs",
       "store_count": null,
       "product_class": "card"
     },
@@ -152490,10 +152481,19 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "​[PRE-ORDER] – Pokémon TCG: ME05: Pitch Black – Booster Box Display",
-      "price": "3849 kr",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Paldea Legends Collector's Tin – Miraidon ex",
+      "price": "699 kr",
       "in_stock": true,
-      "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-me05-pitch-black-booster-box",
+      "url": "https://mystictrades.no/pokemon/pokmon-tins-samlebokser/bestillingsvare-pokemon-tcg-paldea-legends-collectors-tin-miraidon-ex",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Mystic Trades",
+      "name": "​[BESTILLINGSVARE] – Pokémon TCG: ME05: Pitch Black – Booster Box Display",
+      "price": "3199 kr",
+      "in_stock": true,
+      "url": "https://mystictrades.no/pokemon/display-booster-box/pre-order-pokemon-tcg-me05-pitch-black-booster-box",
       "store_count": null,
       "product_class": "card"
     },
@@ -152661,8 +152661,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "​[LAGER – Pokémon TCG: ME05: Pitch Black – Booster Bundle",
-      "price": "699 kr",
+      "name": "​[LAGER] – Pokémon TCG: ME05: Pitch Black – Booster Bundle",
+      "price": "619 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-me05-pitch-black-booster-bundle",
       "store_count": null,
@@ -152670,8 +152670,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "[PRE-ORDER] – Pokémon TCG: ME05 Pitch Black – Booster Pack Artwork Set (4 Packs) *Risk of allocation*",
-      "price": "459 kr",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME05 Pitch Black – Booster Pack Artwork Set (4 Packs) *Risk of allocation*",
+      "price": "399 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/pre-order-pokemon-tcg-me05-pitch-black-booster-pack-artwork-set-4-packs-risk-of-allocation",
       "store_count": null,
@@ -152679,8 +152679,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "[PRE-ORDER] – Pokémon TCG: ME05 Pitch Black – Booster Pack *Risk of allocation*",
-      "price": "119 kr",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME05 Pitch Black – Booster Pack *Risk of allocation*",
+      "price": "99 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-me05-pitch-black-booster-pack-risk-of-allocation",
       "store_count": null,
@@ -152688,8 +152688,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "[PRE-ORDER] – Pokémon TCG: ME05 Mega Evolution: Pitch Black - Booster Pack Bundle Case (25 Bokser / 150 Boosters)",
-      "price": "18999 kr",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME05 Mega Evolution: Pitch Black - Booster Pack Bundle Case (25 Bokser / 150 Boosters)",
+      "price": "13999 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-me05-mega-evolution-pitch-black-booster-pack-bundle-case-25-bokser-150-boosters",
       "store_count": null,
@@ -153021,8 +153021,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "​[PRE-ORDER] – Pokémon TCG: ME05: Pitch Black Elite Trainer Box(ETB)",
-      "price": "1399 kr",
+      "name": "​[BESTILLINGSVARE] – Pokémon TCG: ME05: Pitch Black Elite Trainer Box(ETB)",
+      "price": "1099 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-me05-pitch-black-elite-trainer-boxetb",
       "store_count": null,
