@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-26T18:58:19+00:00",
+  "last_updated": "2026-07-26T19:18:41+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -138893,7 +138893,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Leafeon Tin Set (Kinesisk)",
       "price": "369.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-crystal-gathering-leafeon-tin-set-kinesisk?variant=52251060437293",
       "store_count": null,
       "product_class": "card"
@@ -151455,6 +151455,51 @@
     },
     {
       "store": "Emken",
+      "name": "POKEMON SCARLET & VIOLET: BASE SET BOOSTERPAKKE",
+      "price": "99,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-scarlet-violet-base-set-boosterpakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "POKEMON NIHIL ZERO BOOSTERPAKKE (JAPANSK)",
+      "price": "35,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-nihil-zero-boosterpakke-japansk",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION - BOOSTERPAKKE",
+      "price": "109,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-mega-evolution-boosterpakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "JOURNEY TOGETHER - BOOSTERPAKKE",
+      "price": "89,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/journey-together-booster-pakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "DESTINED RIVALS - BOOSTERPAKKE",
+      "price": "149,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/destined-rivals-boosterpakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
       "name": "POKÉMON SCARLET & VIOLET: TERASTAL GRAND GATHERING EEVEE & FRIENDS COIN SET (SYLVEON) (1 PACK) (KINESISK)",
       "price": "199,00 kr",
       "in_stock": true,
@@ -152013,6 +152058,15 @@
     },
     {
       "store": "Mystic Trades",
+      "name": "[PRE ORDER] – Pokémon TCG: Surging Sparks Booster Bundle (Wide) – 6 Boosters",
+      "price": "1199 kr",
+      "in_stock": true,
+      "url": "https://mystictrades.no/products/pre-order-pokemon-tcg-surging-sparks-booster-bundle-wide-6-boosters",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Mystic Trades",
       "name": "[BESTILLINGSVARE] - Pokémon TCG: Simplified Chinese 30th Anniversary Original Partner Card Set - Vol.1",
       "price": "299 kr",
       "in_stock": true,
@@ -152436,15 +152490,6 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "[BESTILLINGSVARE] – Pokémon TCG: Paldea Legends Collector's Tin – Miraidon ex",
-      "price": "699 kr",
-      "in_stock": true,
-      "url": "https://mystictrades.no/pokemon/pokmon-tins-samlebokser/bestillingsvare-pokemon-tcg-paldea-legends-collectors-tin-miraidon-ex",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Mystic Trades",
       "name": "​[BESTILLINGSVARE] – Pokémon TCG: ME05: Pitch Black – Booster Box Display",
       "price": "3199 kr",
       "in_stock": true,
@@ -152602,6 +152647,15 @@
       "price": "6999 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/display-booster-box/forhandsbestilling-pokemon-tcg-lost-origin-sleeved-booster-display-24-pakker",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Mystic Trades",
+      "name": "[PRE ORDER] – Pokémon TCG: Surging Sparks Booster Bundle (Wide) – 6 Boosters",
+      "price": "1199 kr",
+      "in_stock": true,
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-surging-sparks-booster-bundle-wide-6-boosters",
       "store_count": null,
       "product_class": "card"
     },
@@ -152814,6 +152868,15 @@
     },
     {
       "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Scarlet & Violet—Surging Sparks Booster Bundle (6 pakker)",
+      "price": "1199 kr",
+      "in_stock": true,
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pokemon-tcg-scarlet-violetsurging-sparks-booster-bundle-6-pakker-pa-lager",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Mystic Trades",
       "name": "​[BESTILLINGSVARE] – Pokémon S&S: Brilliant Stars Booster Pack",
       "price": "219 kr",
       "in_stock": true,
@@ -152935,24 +152998,6 @@
       "price": "4699 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-sv-journey-together-enhanced-booster-box-36-boosters-promo",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Mystic Trades",
-      "name": "​[BESTILLINGSVARE] – Pokémon S&V: Destined Rivals Booster Box (SV10)",
-      "price": "6399 kr",
-      "in_stock": true,
-      "url": "https://mystictrades.no/nyheter-forhandsbestilling/forhandsbestilling-pokemon-sv-destined-rivals-booster-box-sv10",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Mystic Trades",
-      "name": "​[BESTILLINGSVARE] – Pokémon S&S: Silver Tempest Booster Box (36 pakker) – Forseglet \"RARE\"",
-      "price": "8999 kr",
-      "in_stock": true,
-      "url": "https://mystictrades.no/products/forhandsbestilling-pokemon-ss-silver-tempest-booster-box-36-pakker-forseglet-rare",
       "store_count": null,
       "product_class": "card"
     },

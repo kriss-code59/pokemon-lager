@@ -1,6 +1,86 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Emken",
+      "name": "POKEMON SCARLET & VIOLET: BASE SET BOOSTERPAKKE",
+      "price": "99,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-scarlet-violet-base-set-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Emken",
+      "name": "POKEMON NIHIL ZERO BOOSTERPAKKE (JAPANSK)",
+      "price": "35,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-nihil-zero-boosterpakke-japansk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION - BOOSTERPAKKE",
+      "price": "109,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-mega-evolution-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Emken",
+      "name": "JOURNEY TOGETHER - BOOSTERPAKKE",
+      "price": "89,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/journey-together-booster-pakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Emken",
+      "name": "DESTINED RIVALS - BOOSTERPAKKE",
+      "price": "149,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/destined-rivals-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE ORDER] – Pokémon TCG: Surging Sparks Booster Bundle (Wide) – 6 Boosters",
+      "price": "1199 kr",
+      "url": "https://mystictrades.no/products/pre-order-pokemon-tcg-surging-sparks-booster-bundle-wide-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE ORDER] – Pokémon TCG: Surging Sparks Booster Bundle (Wide) – 6 Boosters",
+      "price": "1199 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-surging-sparks-booster-bundle-wide-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Scarlet & Violet—Surging Sparks Booster Bundle (6 pakker)",
+      "price": "1199 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pokemon-tcg-scarlet-violetsurging-sparks-booster-bundle-6-pakker-pa-lager",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-26T19:18:40+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Leafeon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-leafeon-tin-set-kinesisk?variant=52251060437293",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T18:58:18+00:00",
       "store": "Mystic Trades",
       "name": "[BESTILLINGSVARE] - Pokémon Chaos Rising – Elite Trainer Box (ETB)",
@@ -179715,87 +179795,6 @@
       "price": "289.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-rowlet-plush?variant=50981498618087",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Lucario Plush (29cm)",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lucario-plush-29cm?variant=50980449779943",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Leafeon",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-leafeon?variant=50899159351527",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Zorua Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-zorua?variant=50746113917159",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X Plush (35cm)",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-plush-35cm?variant=50746106413287",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Sylveon Plush (34cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-sylveon-plush?variant=50746089996519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Iono’s Bellibolt ex Premium Collection",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-iono-s-bellibolt-ex-premium-collection?variant=50688496238823",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon 2022 World Championship Decks - Sebastian/Rikuto/Ondrej/Andre",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-2022-world-championship-decks-sebastian-rikuto-ondrej-andre?variant=50624531497191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Evolving Skies Mini Binder",
-      "price": "1299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-evolving-skies-mini-binder-m-booster-pakke?variant=50624504758503",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lumiose City Mini Tin Display",
-      "price": "1999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tcg-lumiose-city-mini-tins-assorted-display-cdu-10?variant=52181694808295",
-      "product_class": "card",
       "event": "ny"
     }
   ]
