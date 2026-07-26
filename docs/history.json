@@ -1,6 +1,123 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Booster Pakke",
+      "price": "119.00 kr",
+      "previous_price": "109.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-booster-pakke?variant=50624516292839",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Elite Trainer Box",
+      "price": "1799.00 kr",
+      "previous_price": "1699.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-elite-trainer-box?variant=50624503742695",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Sleeved Booster",
+      "price": "119.00 kr",
+      "previous_price": "110.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-sleeved-booster?variant=50624503578855",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance 3-pack Blister Sett",
+      "price": "755.00 kr",
+      "previous_price": "695.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-3-pk-blister-sett?variant=50624520683751",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance 3pk Blister Eevee",
+      "price": "379.00 kr",
+      "previous_price": "349.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-3pk-blister-eevee?variant=50624522223847",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance 3pk Blister Sylveon",
+      "price": "379.00 kr",
+      "previous_price": "349.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-3pk-blister-sylveon?variant=50624522125543",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Premium Checklane Blister Sett",
+      "price": "255.00 kr",
+      "previous_price": "245.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-premium-checklane-blister-sett?variant=50624521830631",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance 3pk Blister Case",
+      "price": "8999.00 kr",
+      "previous_price": "8199.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-3pk-blister-case?variant=50624576061671",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Booster (36 stk uten booster box)",
+      "price": "4149.00 kr",
+      "previous_price": "3799.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-booster-36-stk-uten-booster-box?variant=51637723529447",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Sleeved Booster Case (144 stk)",
+      "price": "16799.00 kr",
+      "previous_price": "15299.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-sleeved-booster-case-144-stk?variant=50624576159975",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Sleeved Booster Kartong (24 stk)",
+      "price": "2799.00 kr",
+      "previous_price": "2599.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-sleeved-booster-kartong-24-stk?variant=51735894720743",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Build & Battle Stadium",
+      "price": "1549.00 kr",
+      "previous_price": "1349.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-build-battle-stadium?variant=50624503415015",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-26T08:18:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Build & Battle Kit",
+      "price": "549.00 kr",
+      "previous_price": "479.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-build-battle-kit?variant=50624503480551",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-26T06:38:31+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Pikachu V-Union Special Collection Box",
@@ -179693,123 +179810,6 @@
       "name": "Pokemon Takara Tomy Sleeping Friends Sylveon Plush",
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-sylveon-plush?variant=51508488306919",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Growlithe Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-growlithe-plush?variant=51508468777191",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Piplup Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-piplup-plush?variant=51508259324135",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Garchomp Plush (28cm)",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-garchomp-plush-28cm?variant=51508223181031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro 35pt One-Touch Edge Poke Ball Magnetisk Kortholder for Pokemon",
-      "price": "85.00 kr",
-      "url": "https://pokestore.no/products/35pt-ultra-pro-one-touch-magnetisk-poke-ball-kortholder-for-pokemon?variant=51452850307303",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Destined Rivals Build & Battle Kit",
-      "price": "1199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-destined-rivals-build-battle-kit?variant=51342615740647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Plusle Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-plusle-plush?variant=51243139825895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Minun Plush (25cm)",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-minum-plush-25cm?variant=51243138547943",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Vaporeon Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-groudon-plush-1?variant=51243117412583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Circular Diorama Collection 1 Figur",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-circular-diorama-collection-1-figur?variant=51237463359719",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Iron Thorns Paradox Moncolle Figur",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-iron-thorns-paradox-moncolle-figur?variant=51232545210599",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Snorlax & Munchlax Full View Deck Box",
-      "price": "39.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-snorlax-munchlax-full-view-deck-box?variant=51072450298087",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-25 Dragonite Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-dragonite-moncolle-figur?variant=51058426806503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Pichu Plush",
-      "price": "389.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-pichu-plush?variant=51021457391847",
       "product_class": "accessory",
       "event": "ny"
     }
