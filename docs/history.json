@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T15:58:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
+      "price": "1390.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldea-evolved-sleeved-pack?variant=51130511753517",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T15:58:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/paldea-evolved-booster-pack?variant=50101588820269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T15:58:27+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Paldea Evolved - Booster Pack",
+      "price": "149.00 kr",
+      "url": "https://pokebua.no/products/pokemon-paldea-evolved-booster-pack?variant=49057091354857",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T14:58:32+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Ascended Heroes Booster Pakke",
@@ -179775,33 +179801,6 @@
       "name": "Pokemon Center Japan Original Victini Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-victini-plush?variant=51045168152807",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Trick Room Deck Protector Sleeves (65 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-trick-room-deck-protector-sleeves-65?variant=50735884533991",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Pocket Statue: Dragon Type Figur",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-pocket-statue-dragon-type-figur?variant=51013816058087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Latias Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-latias-plush?variant=50993300078823",
       "product_class": "accessory",
       "event": "ny"
     }

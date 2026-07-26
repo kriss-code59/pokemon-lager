@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-26T15:58:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
+      "price": "1390.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldea-evolved-sleeved-pack?variant=51130511753517",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T15:58:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/paldea-evolved-booster-pack?variant=50101588820269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T13:18:25+00:00",
       "store": "Cardstore",
       "name": "Pokémon Enhanced 2-Pack Blister",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon: Eevee Plush Keychain (10cm, Potdemiel)",
       "price": "kr 149.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-eevee-plush-keychain-10cm-potdemiel/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Snorlax Plush Backpack (36x28x23.5cm, Shimamura)",
-      "price": "kr 629.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-snorlax-plush-backpack-36x28x23-5cm-shimamura/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Bulbasaur Plush – All Star Collection (11cm, Sanei)",
-      "price": "kr 349.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-fushigidane-bulbasaur-s-pp17/",
       "product_class": "accessory",
       "event": "ny"
     }
