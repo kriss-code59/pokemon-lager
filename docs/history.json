@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T10:18:27+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Storm Emeralda – Booster Box (Forhåndsbestilling, release 31. Juli)",
+      "price": "kr 2 399,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-storm-emeralda-booster-box-forhandsbestilling-release-31-juli/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T09:18:25+00:00",
       "store": "PokeNordic",
       "name": "Pokemon Abyss Eye Booster Box (Japansk)",
@@ -179800,15 +179808,6 @@
       "name": "Pokemon Mega Latias ex MEP011 Black Star Promo (JUMBO)",
       "price": "25.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-latias-ex-mep011-black-star-promo-jumbo?variant=51713869283559",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-45 Psyduck Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-45-psyduck-moncolle-figur?variant=51601321525479",
       "product_class": "card",
       "event": "ny"
     }
