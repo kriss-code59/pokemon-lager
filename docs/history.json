@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T19:38:53+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Center Japan Original Gliscor Plush",
+      "price": "309.00 kr",
+      "url": "https://pokestore.no/products/pokemon-center-japan-original-gliscor-plush?variant=51045176410343",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T19:18:40+00:00",
       "store": "Emken",
       "name": "POKEMON SCARLET & VIOLET: BASE SET BOOSTERPAKKE",
@@ -179786,15 +179794,6 @@
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-starrium-series-dreamy-moonlight-figur?variant=51013113839847",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Rowlet Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-rowlet-plush?variant=50981498618087",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
