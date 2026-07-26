@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T06:38:31+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Pikachu V-Union Special Collection Box",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-pikachu-v-union-special-collection-box",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T03:38:23+00:00",
       "store": "Lekekassen",
       "name": "Pokémon TCG First Partner Illustration Collection Series 2",
@@ -179802,15 +179810,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Pichu Plush",
       "price": "389.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-pichu-plush?variant=51021457391847",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Shimmering Skyline 9-Pocket Portfolio",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-shimmering-skyline-9-pocket-album?variant=51016663367911",
       "product_class": "accessory",
       "event": "ny"
     }
