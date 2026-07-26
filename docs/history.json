@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T16:38:30+00:00",
+      "store": "PokeNordic",
+      "name": "Pokemon Abyss Eye Booster Box (Japansk)",
+      "price": "999.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-box-japansk?variant=48119593468158",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T16:18:24+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
@@ -179792,15 +179801,6 @@
       "price": "239.00 kr",
       "url": "https://pokestore.no/products/pokemon-miraidon-moncolle-figur?variant=51232584106215",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu 4-Pocket Portfolio",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-pikachu-4-pocket-portfolio-album?variant=51151541371111",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]

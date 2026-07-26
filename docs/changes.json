@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-26T16:38:30+00:00",
+      "store": "PokeNordic",
+      "name": "Pokemon Abyss Eye Booster Box (Japansk)",
+      "price": "999.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-box-japansk?variant=48119593468158",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T16:18:24+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Mega Symphonia - Booster Pack (Japansk)",
@@ -2689,15 +2698,6 @@
       "price": "kr 35.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-nihil-zero-w-gummy-candy-8g-takara-tomy/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Hair Band – Snorlax (23.5x9cm, T’s Factory)",
-      "price": "kr 219.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-hair-band-snorlax-23-5x9cm-ts-factory/",
-      "product_class": "card",
       "event": "ny"
     }
   ]
