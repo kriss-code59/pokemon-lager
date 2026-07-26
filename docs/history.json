@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T03:38:23+00:00",
+      "store": "Lekekassen",
+      "name": "Pokémon TCG First Partner Illustration Collection Series 2",
+      "price": "573,-",
+      "url": "https://lekekassen.no/pokemon-tcg-first-partner-illustration-collection-series-2-pok10395-101",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T03:38:23+00:00",
+      "store": "Lekekassen",
+      "name": "Pokémon TCG First Partner Illustration Collection Series 2",
+      "price": "573,-",
+      "url": "https://lekekassen.no/pokemon-tcg-first-partner-illustration-collection-series-2-pok10395-101",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T02:58:16+00:00",
       "store": "Maxgaming",
       "name": "Pokémon Full View Deck Box - Charmander",
@@ -179793,24 +179811,6 @@
       "name": "Ultra Pro Pokemon Gallery Series Shimmering Skyline 9-Pocket Portfolio",
       "price": "189.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-shimmering-skyline-9-pocket-album?variant=51016663367911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Ovaltique Figur",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-ovaltique-figur?variant=51013862064359",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Metagross Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-metagross-plush?variant=50993329537255",
       "product_class": "accessory",
       "event": "ny"
     }
