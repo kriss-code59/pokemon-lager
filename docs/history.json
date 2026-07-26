@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T02:58:16+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Full View Deck Box - Charmander",
+      "price": "41.90 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/full-view-deck-box-charmander",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-26T02:18:45+00:00",
       "store": "PokeNordic",
       "name": "Mega Gengar ex Mega Moonlight Tin",
@@ -179802,15 +179811,6 @@
       "name": "Pokemon Center Japan Original Metagross Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-metagross-plush?variant=50993329537255",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Giratina Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-giratina?variant=50993317249255",
       "product_class": "accessory",
       "event": "ny"
     }
