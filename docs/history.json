@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T14:58:32+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Ascended Heroes Booster Pakke",
+      "price": "229.00 kr",
+      "previous_price": "239.00 kr",
+      "url": "https://pokenordic.no/products/ascended-heroes-booster-pack?variant=47814083346686",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-26T13:58:28+00:00",
       "store": "Card Kings",
       "name": "POKÉMON 30TH ANNIVERSARY: FIRST PARTNER VOL. 2",
@@ -179793,15 +179802,6 @@
       "name": "Pokemon Center Japan Original Latias Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-latias-plush?variant=50993300078823",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Groudon Plush",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-groudon-plush?variant=50991686156519",
       "product_class": "accessory",
       "event": "ny"
     }
