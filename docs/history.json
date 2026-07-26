@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T13:38:22+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Collect 151 Starter Display Stand - Charmander",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-starter-display-stand-charmander",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T13:18:25+00:00",
       "store": "Cardstore",
       "name": "Pokémon Enhanced 2-Pack Blister",
@@ -179794,15 +179802,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Squirtle Plush",
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-squirtle-plush?variant=50991684518119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Fennekin Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-fennekin-plush?variant=50981487935719",
       "product_class": "accessory",
       "event": "ny"
     }
