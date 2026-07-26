@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-26T13:18:25+00:00",
+      "store": "Cardstore",
+      "name": "Pokémon Enhanced 2-Pack Blister",
+      "price": "299.00 kr",
+      "url": "https://store.cardstore.no/products/pokemon-enhanced-2-pack-blister?variant=54435770335555",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T12:58:27+00:00",
       "store": "Cardstore",
       "name": "Perfect Order 1-Pack Blister (Makuhita)",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon: Bulbasaur Plush – All Star Collection (11cm, Sanei)",
       "price": "kr 349.00",
       "url": "https://www.neo-tokyo.no/product/plush-pokemon-fushigidane-bulbasaur-s-pp17/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Suicune Plush Figure – All Star Collection (23,5cm, Sanei)",
-      "price": "kr 649.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-suicune-s-pp64/",
       "product_class": "accessory",
       "event": "ny"
     }

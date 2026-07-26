@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T13:18:25+00:00",
+      "store": "Cardstore",
+      "name": "Pokémon Enhanced 2-Pack Blister",
+      "price": "299.00 kr",
+      "url": "https://store.cardstore.no/products/pokemon-enhanced-2-pack-blister?variant=54435770335555",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T13:18:25+00:00",
+      "store": "Cardstore",
+      "name": "Pokémon Enhanced 2-Pack Blister",
+      "price": "299.00 kr",
+      "previous_price": "249.00 kr",
+      "url": "https://store.cardstore.no/products/pokemon-enhanced-2-pack-blister?variant=54435770335555",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-26T12:58:27+00:00",
       "store": "Cardstore",
       "name": "Perfect Order 1-Pack Blister (Makuhita)",
@@ -179786,24 +179804,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-fennekin-plush?variant=50981487935719",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Snorlax & Munchlax 2\" Album",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-snorlax-munchlax-2-album-for-pokemon?variant=50956854132967",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Professor's Research SWSH152 Promo",
-      "price": "55.00 kr",
-      "url": "https://pokestore.no/products/pokemon-professors-research-swsh152-promo?variant=50923995594983",
-      "product_class": "card",
       "event": "ny"
     }
   ]
