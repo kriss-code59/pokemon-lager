@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T12:18:22+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Nine Colors Gathering (Eevee Heroes) Kinesisk Sleeved Boosterpakke Box",
+      "price": "2499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-nine-colors-gathering-eevee-heroes-kinesisk-sleeved-boosterpakke-box",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T11:58:35+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - 151 Special Set Booster pakke Japan",
@@ -179795,15 +179803,6 @@
       "name": "Pokemon Surging Sparks Elite Trainer Box",
       "price": "2399.00 kr",
       "url": "https://pokestore.no/products/pokemon-surging-sparks-elite-trainer-box?variant=50624595099879",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Explosion Walker Booster Pakke",
-      "price": "80.00 kr",
-      "url": "https://pokestore.no/products/pokemon-explosion-walker-booster-pakke?variant=50624495255783",
       "product_class": "card",
       "event": "ny"
     }
