@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-26T12:58:27+00:00",
+      "store": "Cardstore",
+      "name": "Perfect Order 1-Pack Blister (Makuhita)",
+      "price": "99.00 kr",
+      "url": "https://store.cardstore.no/products/perfect-order-1-pack-blister-makuhita?variant=54300176384323",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T12:58:27+00:00",
+      "store": "Cardstore",
+      "name": "Perfect Order Premium Checklane (Meganium)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/perfect-order-premium-checklane-meganium?variant=54300397961539",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T12:58:27+00:00",
+      "store": "Cardstore",
+      "name": "Perfect Order Premium Checklane (Cinderace)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/perfect-order-premium-checklane-cinderace?variant=54300176449859",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-26T12:58:27+00:00",
+      "store": "Cardstore",
+      "name": "Chaos Rising 1-Pack Blister (Toxel)",
+      "price": "99.00 kr",
+      "url": "https://store.cardstore.no/products/chaos-rising-1-pack-blister-toxel?variant=54459014054211",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-26T03:38:23+00:00",
       "store": "Lekekassen",
       "name": "Pokémon TCG First Partner Illustration Collection Series 2",
@@ -2662,42 +2698,6 @@
       "price": "kr 649.00",
       "url": "https://www.neo-tokyo.no/product/plush-pokemon-suicune-s-pp64/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Charmander Plush – All Star Collection (17,5cm, Sanei)",
-      "price": "kr 329.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-hitokage-charmander-s-pp18/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Aloan Vulpix Plush – All Star Collection (17,5cm, Sanei)",
-      "price": "kr 439.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-alolan-rokon-vulpix-s-pp61/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Mew Mug w/Measurement (220ml, T’s Factory)",
-      "price": "kr 179.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-mew-mug-w-measurement-220ml-ts-factory-2/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Adhesive Wall Hook Mew (Toyo-Case)",
-      "price": "kr 179.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-adhesive-wall-hook-mew-toyo-case/",
-      "product_class": "card",
       "event": "ny"
     }
   ]
