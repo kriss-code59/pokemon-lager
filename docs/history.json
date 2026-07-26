@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T18:58:18+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] - Pokémon Chaos Rising – Elite Trainer Box (ETB)",
+      "price": "1129 kr",
+      "previous_price": "1249 kr",
+      "url": "https://mystictrades.no/pokemon/premium-collections-etb-upc/pre-order-forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-elite-trainer-box-etb",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-26T18:38:28+00:00",
       "store": "Ark",
       "name": "Pikachu's Nighttime Adventure",
@@ -179787,15 +179796,6 @@
       "price": "1999.00 kr",
       "url": "https://pokestore.no/products/pokemon-tcg-lumiose-city-mini-tins-assorted-display-cdu-10?variant=52181694808295",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Pikachu 12-Pocket Zippered PRO-Binder",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/elite-series-pikachu-12-pocket-zippered-pro-binder®-for-pokemon?variant=52067026665703",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
