@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T11:58:35+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - 151 Special Set Booster pakke Japan",
+      "price": "349.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-booster-pakke-japan",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T11:38:30+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Pitch Black Premium Blister Pack - Luxray",
@@ -179796,15 +179804,6 @@
       "name": "Pokemon Explosion Walker Booster Pakke",
       "price": "80.00 kr",
       "url": "https://pokestore.no/products/pokemon-explosion-walker-booster-pakke?variant=50624495255783",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Prismatic Evolutions Surprise Box + Booster Bundle",
-      "price": "2799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-surprise-box-booster-bundle?variant=52209260069095",
       "product_class": "card",
       "event": "ny"
     }
