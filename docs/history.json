@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-26T11:18:51+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-26T10:38:35+00:00",
       "store": "Kanoncon",
       "name": "Pokemon Kinesisk Crystal Gathering Binder Set – Leafeon",
@@ -179799,15 +179807,6 @@
       "price": "999.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-zygarde-ex-premium-collection?variant=52020741210343",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Perfect Order 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-mega-evolution-perfect-order-4-pocket-portfolio-for-the-pok-mon-trading-card-game?variant=51966737481959",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
