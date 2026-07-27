@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T10:39:54+00:00",
+      "store": "Pokesingles",
+      "name": "Cinderace ex 38 - Ascended Heroes",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cinderace-ex-38-ascended-heroes?variant=53024881606935",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T10:39:54+00:00",
+      "store": "PokeShop",
+      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T10:19:56+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Black Bolt - Binder Collection Box",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon VSTAR Universe Booster Box (Japansk)",
       "price": "kr3.679,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-vstar-universe-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Ninja Spinner Booster Box (Japansk)",
-      "price": "kr1.299,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-ninja-spinner-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Triplet Beat Booster Box (Japansk)",
-      "price": "kr1.999,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-triplet-beat-booster-box-japansk/",
       "product_class": "card",
       "event": "ny"
     }

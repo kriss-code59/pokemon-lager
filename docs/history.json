@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T10:39:54+00:00",
+      "store": "Pokesingles",
+      "name": "Cinderace ex 38 - Ascended Heroes",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cinderace-ex-38-ascended-heroes?variant=53024881606935",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T10:39:54+00:00",
+      "store": "PokeShop",
+      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T10:39:54+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Stellar Miracle - Booster Pack (Japansk) - Booster Pack",
+      "price": "39.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-kopi-3?variant=50800695705833",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T10:39:54+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Blade Awakening - Booster Pack (Kinesisk) - Booster Pack",
+      "price": "39.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokebua.no/products/pokemon-blade-awakening-slim-booster-pack-kinesisk?variant=50800931012841",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-27T10:19:56+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Black Bolt - Binder Collection Box",
@@ -179748,42 +179784,6 @@
       "name": "Pokemon Orbeetle V SWSH078 Black Star Promo",
       "price": "20.00 kr",
       "url": "https://pokestore.no/products/pokemon-orbeetle-v-swsh078-black-star-promo?variant=50624527466727",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ultra Sun Booster Pakke",
-      "price": "125.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ultra-sun-booster-pakke?variant=50624493453543",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Journey Together 9-Pocket Portfolio",
-      "price": "165.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-journey-together-9-pocket-portfolio-album?variant=51443641385191",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Victini 012/086 Pokeball Reverse Holo Promo",
-      "price": "15.00 kr",
-      "url": "https://pokestore.no/products/pokemon-victini-012-086-pokeball-reverse-holo-promo?variant=51241126396135",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Tepig 011/086 Foil Promo",
-      "price": "10.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tepig-011-086-foil-promo?variant=51241073344743",
       "product_class": "card",
       "event": "ny"
     }

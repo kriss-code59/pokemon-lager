@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T10:19:57+00:00",
+  "last_updated": "2026-07-27T10:39:55+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -63013,7 +63013,7 @@
     {
       "store": "Pokebua",
       "name": "Pokemon - Stellar Miracle - Booster Pack (Japansk) - Booster Pack",
-      "price": "35.00 kr",
+      "price": "39.00 kr",
       "in_stock": true,
       "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-kopi-3?variant=50800695705833",
       "store_count": null,
@@ -63076,7 +63076,7 @@
     {
       "store": "Pokebua",
       "name": "Pokemon - Blade Awakening - Booster Pack (Kinesisk) - Booster Pack",
-      "price": "35.00 kr",
+      "price": "39.00 kr",
       "in_stock": true,
       "url": "https://pokebua.no/products/pokemon-blade-awakening-slim-booster-pack-kinesisk?variant=50800931012841",
       "store_count": null,
@@ -113900,7 +113900,7 @@
       "store": "Pokesingles",
       "name": "Cinderace ex 38 - Ascended Heroes",
       "price": "20.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokesingles.no/products/cinderace-ex-38-ascended-heroes?variant=53024881606935",
       "store_count": null,
       "product_class": "card"
@@ -148359,7 +148359,7 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Adventures Gold & Silver Box Set (Set Includes Vols. 8-14)",
+      "name": "Pokémon Adventures Gold & Silver Box Set (Set Includes Vols. 8-14)",
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-adventures-gold-silver-box-set-set-includes-vols-8-14-9781421550077",
@@ -150613,6 +150613,24 @@
       "price": "279,00 kr",
       "in_stock": false,
       "url": "https://poke-shop.no/produkt/alle-produkter/blistere-tins-1/pokemon-chaos-rising-3pk-blister",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "MEGA LUCARIO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/mega-lucario-ex-league-battle-deck",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
       "store_count": null,
       "product_class": "card"
     },
