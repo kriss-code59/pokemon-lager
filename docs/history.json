@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T04:38:28+00:00",
+      "store": "Ark",
+      "name": "Monpoke Picture Book: Pikachu's First Friends",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/monpoke-picture-book-pikachus-first-friends-9781339005867",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T03:58:18+00:00",
       "store": "Ark",
       "name": "Pokemon Super Special Flip Book Collection",
@@ -179780,15 +179789,6 @@
       "name": "Pokemon MS-08 Greninja Moncolle Figur",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-greninja-moncolle-figur?variant=51265542422759",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Venusaur Moncolle Figur",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-venusaur-moncolle-figur?variant=51235242442983",
       "product_class": "card",
       "event": "ny"
     }

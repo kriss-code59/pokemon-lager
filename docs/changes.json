@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T04:38:28+00:00",
+      "store": "Ark",
+      "name": "Monpoke Picture Book: Pikachu's First Friends",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/monpoke-picture-book-pikachus-first-friends-9781339005867",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T03:58:18+00:00",
       "store": "Ark",
       "name": "Pokemon Super Special Flip Book Collection",
@@ -2689,15 +2698,6 @@
       "price": "kr 299.00",
       "url": "https://www.neo-tokyo.no/product/plush-pokemon-snorlax-25cm/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Caterpie Plush (12cm)",
-      "price": "kr 199.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-caterpie-plush-12cm/",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
