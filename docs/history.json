@@ -1,6 +1,49 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T08:55:43+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blade Awakened Slim Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-slim-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T08:55:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Glory of Team Rocket Booster Pakke",
+      "price": "110.00 kr",
+      "previous_price": "80.00 kr",
+      "url": "https://pokestore.no/products/pokemon-glory-of-team-rocket-booster-pakke?variant=51224740233447",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T08:55:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Glory of Team Rocket Booster Box",
+      "price": "2999.00 kr",
+      "previous_price": "2199.00 kr",
+      "url": "https://pokestore.no/products/pokemon-glory-of-team-rocket-booster-box?variant=50936758272231",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T08:55:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Shining Fates - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/shining-fates-booster-pack?variant=50101591736621",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T08:55:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates - Booster Pack",
+      "price": "599.00 kr",
+      "url": "https://retroworld.no/products/hidden-fates-booster-pack-fra-2019?variant=50101587312941",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T08:38:53+00:00",
       "store": "Ark",
       "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
@@ -179743,51 +179786,6 @@
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-zekrom-plushie?variant=50746085736679",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Go Special Collection Team Valor",
-      "price": "1149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-go-special-collection-team-valor?variant=50624613974247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Rebel Clash Booster (36 stk uten booster box)",
-      "price": "4399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-rebel-clash-booster-36-stk-uten-display?variant=50624559251687",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Temporal Forces 9-Pocket Portfolio",
-      "price": "165.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-temporal-forces-9-pocket-portfolio-album?variant=51537577804007",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lugia Mynt (Stor)",
-      "price": "15.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lugia-mynt-stor?variant=51529329737959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Pocket Bonsai 3 Collection Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-pocket-bonsai-3-collection-figurer-6-stk-copy?variant=51058957877479",
-      "product_class": "card",
       "event": "ny"
     }
   ]

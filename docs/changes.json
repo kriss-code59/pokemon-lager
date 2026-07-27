@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T08:55:43+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blade Awakened Slim Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-slim-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-27T08:38:53+00:00",
       "store": "Ark",
       "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon TCG: VStar Universe Booster Pack (SWSH S12a, Japanese)",
       "price": "kr 419.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-vstar-universe-booster-pack-swsh-s12a-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Scarlet & Violet Shiny Treasure Booster Pack (SV4a, Japanese)",
-      "price": "kr 279.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-scarlet-violet-shiny-treasure-booster-pack-sv-sv4a-japanese/",
       "product_class": "card",
       "event": "ny"
     }
