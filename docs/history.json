@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T13:38:49+00:00",
+      "store": "Collectible",
+      "name": "Gamegenic – Prime Standard Sleeves 66x91mm – Clear (50)",
+      "price": "39,00 kr",
+      "url": "https://collectible.no/home/gamegenic-prime-standard-sleeves-66x91mm-clear/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T12:58:49+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Blade Awakened Slim Booster Box",
@@ -179771,15 +179780,6 @@
       "name": "Pokemon Toxtricity, Duraludon & Sandaconda Promopakke",
       "price": "25.00 kr",
       "url": "https://pokestore.no/products/pokemon-toxtricity-duraludon-sandaconda-promopakke?variant=50624605421799",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Twilight Masquerade Sleeved Booster Display (24stk)",
-      "price": "3720.00 kr",
-      "url": "https://pokestore.no/products/pokemon-twilight-masquerade-sleeved-booster-kartong-24stk?variant=50624574456039",
       "product_class": "card",
       "event": "ny"
     }
