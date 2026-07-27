@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T11:18:36+00:00",
+      "store": "Ark",
+      "name": "Pokémon Rainbow! (monpoké Water Wonder)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-rainbow-monpoke-water-wonder-9781339007854",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T10:58:39+00:00",
       "store": "LABOGE",
       "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415324073)",
@@ -179774,15 +179783,6 @@
       "name": "Pokemon Zapdos 049 JUMBO Promo Black Star Promo",
       "price": "20.00 kr",
       "url": "https://pokestore.no/products/pokemon-zapdos-049-jumbo-promo-black-star-promo?variant=50624560070887",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "45 stk Pokemon Energy Cards",
-      "price": "10.00 kr",
-      "url": "https://pokestore.no/products/45-stk-pokemon-energy-cards?variant=50624557547751",
       "product_class": "card",
       "event": "ny"
     }
