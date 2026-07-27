@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T11:59:00+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Abyss Eye Japansk Display Booster Box",
+      "price": "1199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-abyss-eye-japansk-display-booster-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T11:59:00+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Time Gazer Koreansk Booster Box",
+      "price": "899.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-time-gazer-koreansk-booster-box",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T11:38:46+00:00",
       "store": "Pokebua",
       "name": "Pokemon - White Flare - Booster Pack (Japansk) - Booster Pack",
@@ -179765,24 +179782,6 @@
       "name": "Pokemon Alter Genesis Booster Pakke",
       "price": "300.00 kr",
       "url": "https://pokestore.no/products/pokemon-alter-genesis-booster-pakke?variant=50624494928103",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-31 Shiny Rayquaza Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-shiny-rayquaza-moncolle-figur?variant=51058417893607",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Temporal Forces Sleeved Booster Display (24stk)",
-      "price": "2399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-temporal-forces-sleeved-booster-display-24stk?variant=50624574587111",
       "product_class": "card",
       "event": "ny"
     }
