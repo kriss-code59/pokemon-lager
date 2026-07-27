@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T17:38:17+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Lost origin - Booster Pack (Kinesisk) - Booster Pack",
+      "price": "49.00 kr",
+      "url": "https://pokebua.no/products/pokemon-lost-origin-booster-pack-kinesisk?variant=50800808329449",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T17:38:17+00:00",
+      "store": "Ark",
+      "name": "Legendary and Mythical Guidebook: Deluxe Updated Edition (Pokémon)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/legendary-and-mythical-guidebook-deluxe-updated-edition-pokemon-9781546131274",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T17:38:17+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – First Partner Illustration Collection Series 2",
+      "price": "kr 749,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-first-partner-illustration-collection-series-2/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-27T17:18:26+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Perfect Order Booster Pakke",
@@ -179747,33 +179774,6 @@
       "price": "179.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-phantasmal-flames-9-pocket-portfolio-album?variant=51630674739431",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Espeon ex SVP175 Black Star Promo",
-      "price": "275.00 kr",
-      "url": "https://pokestore.no/products/pokemon-espeon-ex-svp175-black-star-promo?variant=51879410139367",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Venusaur MEP013 Black Star Promo",
-      "price": "50.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-venusaur-mep013-black-star-promo?variant=51547299741927",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Snivy 001/086 Foil Promo",
-      "price": "10.00 kr",
-      "url": "https://pokestore.no/products/pokemon-snivy-001-086-foil-promo?variant=51241081077991",
-      "product_class": "card",
       "event": "ny"
     }
   ]

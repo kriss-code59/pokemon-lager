@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T17:18:27+00:00",
+  "last_updated": "2026-07-27T17:38:18+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -60870,15 +60870,6 @@
     },
     {
       "store": "Packs of Norway",
-      "name": "Pokemon - Unlimited - Galactic’s Conquest Booster Pack",
-      "price": "6999.00 kr",
-      "in_stock": true,
-      "url": "https://packsofnorway.no/products/pokemon-unlimited-galactic-s-conquest-booster-pack?variant=48015948546286",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Packs of Norway",
       "name": "Pokemon - Unlimited - Bonds to the End of Time - Booster Pack (Rising Rivals)",
       "price": "8999.00 kr",
       "in_stock": true,
@@ -62913,15 +62904,6 @@
     },
     {
       "store": "Pokebua",
-      "name": "Pokemon - Mega Kangaskhan ex Box",
-      "price": "449.00 kr",
-      "in_stock": true,
-      "url": "https://pokebua.no/products/pokemon-mega-kangaskhan-ex-box?variant=50993376919785",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokebua",
       "name": "Pokemon - Journey Together - Booster Bundle Box",
       "price": "699.00 kr",
       "in_stock": true,
@@ -63095,7 +63077,7 @@
       "store": "Pokebua",
       "name": "Pokemon - Lost origin - Booster Pack (Kinesisk) - Booster Pack",
       "price": "49.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokebua.no/products/pokemon-lost-origin-booster-pack-kinesisk?variant=50800808329449",
       "store_count": null,
       "product_class": "card"
@@ -148602,10 +148584,10 @@
     },
     {
       "store": "Ark",
-      "name": "Legendary and Mythical Handbook: Deluxe Updated Edition",
+      "name": "Legendary and Mythical Guidebook: Deluxe Updated Edition (Pokémon)",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/legendary-and-mythical-handbook-deluxe-updated-edition-9781546131274",
+      "url": "https://www.ark.no/produkt/boker/barneboker/legendary-and-mythical-guidebook-deluxe-updated-edition-pokemon-9781546131274",
       "store_count": null,
       "product_class": "card"
     },
@@ -163830,6 +163812,15 @@
     },
     {
       "store": "Spillmonster",
+      "name": "Pokemon TCG – First Partner Illustration Collection Series 2",
+      "price": "kr 749,00",
+      "in_stock": true,
+      "url": "https://spillmonster.no/product/pokemon-tcg-first-partner-illustration-collection-series-2/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Spillmonster",
       "name": "Pokemon TCG – Lumiose City Mini Tin",
       "price": "kr 249,00",
       "in_stock": true,
@@ -164181,15 +164172,6 @@
     },
     {
       "store": "Spillmonster",
-      "name": "Pokemon TCG – First Partner Illustration Collection Series 2",
-      "price": "kr 749,00",
-      "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-first-partner-illustration-collection-series-2/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Spillmonster",
       "name": "Pokemon TCG – Mega Charizard X ex – Ultra Premium Collection",
       "price": "kr 2 799,00",
       "in_stock": false,
@@ -164364,7 +164346,7 @@
       "name": "Pokemon TCG Paldea Evolved – Premium Blister Pack",
       "price": "kr 199,00",
       "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack/",
+      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack-2/",
       "store_count": null,
       "product_class": "card"
     },
@@ -164373,7 +164355,7 @@
       "name": "Pokemon TCG Paldea Evolved – Premium Blister Pack",
       "price": "kr 199,00",
       "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack-2/",
+      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack/",
       "store_count": null,
       "product_class": "card"
     }
