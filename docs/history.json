@@ -1,6 +1,39 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T16:58:19+00:00",
+      "store": "Pokesingles",
+      "name": "Cheren Reverse Holo 81 - White Flare",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/cheren-reverse-holo-81-white-flare?variant=54550690857239",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T16:58:19+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Shiny Treasure EX - Booster Pack (Japansk) - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-1?variant=50800651862249",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T16:58:19+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Shiny Treasure EX - Booster Pack (Japansk) - Booster Box",
+      "price": "1899.00 kr",
+      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-1?variant=50800651895017",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T16:58:19+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Lost origin - Booster Pack (Kinesisk) - Booster Pack",
+      "price": "49.00 kr",
+      "url": "https://pokebua.no/products/pokemon-lost-origin-booster-pack-kinesisk?variant=50800808329449",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T16:38:25+00:00",
       "store": "Pokesingles",
       "name": "Air Balloon Reverse Holo 79 - Black Bolt",
@@ -179741,42 +179774,6 @@
       "name": "Pokemon ex Battle Decks Lucario / Ampharos (2 stk)",
       "price": "379.00 kr",
       "url": "https://pokestore.no/products/pokemon-ex-battle-decks-lucario-ampharos-2-stk?variant=50624544211175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Time Gazer Booster Pakke",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-time-gazer-booster-pakke?variant=50624511541479",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Star Birth Booster Pakke",
-      "price": "175.00 kr",
-      "url": "https://pokestore.no/products/pokemon-star-birth-booster-pakke?variant=50624511443175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pitch Black Booster Bundle",
-      "price": "849.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pitch-black-booster-bundle?variant=52266254958823",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Blastoise ex 009/165 Jumbo",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-blastoise-ex-009-165-jumbo?variant=50781988356327",
       "product_class": "card",
       "event": "ny"
     }
