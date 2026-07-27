@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T08:18:25+00:00",
+      "store": "Ark",
+      "name": "Pokemon Origami: Fold Your Own Pokemon",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-origami-fold-your-own-pokemon-9780702313356",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T08:18:25+00:00",
+      "store": "Cardcenter",
+      "name": "Japansk Nøkkelring Suicune",
+      "price": "69.00 kr",
+      "url": "https://cardcenter.no/products/japansk-nokkelring-suicune",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T07:58:36+00:00",
       "store": "Ark",
       "name": "Pikachu''s First Friends (Pokémon Monpoke Picture Book)",
@@ -179770,24 +179787,6 @@
       "name": "Ultra Pro Pokemon Obsidian Flames 4-Pocket Portfolio",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-obsidian-flames-4-pocket-album?variant=50889300803815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Glaceon Plush (33cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-glaceon-plush?variant=50761334489319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Glaceon Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-glaceon-plush?variant=50761333735655",
       "product_class": "accessory",
       "event": "ny"
     }
