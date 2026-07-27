@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T18:38:17+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Paldean Fates Booster Pakke",
+      "price": "329.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-paldean-fates-booster-pack?variant=48174457749758",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T18:18:22+00:00",
       "store": "Playlot",
       "name": "VStar Universe – Boosterboks Japansk",
@@ -179764,15 +179772,6 @@
       "name": "Pokemon MEGA Expansion Pack Nihil Zero Booster Box",
       "price": "1199.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-expansion-pack-nihil-zero-booster-box?variant=51787578278119",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard Y ex Tin",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-y-ex-tin?variant=51707811528935",
       "product_class": "card",
       "event": "ny"
     }
