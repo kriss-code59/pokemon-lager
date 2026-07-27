@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T12:58:49+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blade Awakened Slim Booster Box",
+      "price": "599.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-slim-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T12:58:49+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon Mega Brave Booster Box (Japansk)",
+      "price": "kr1.249,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-mega-brave-booster-box-japansk/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T12:18:51+00:00",
       "store": "Pokebua",
       "name": "Cody's Snack Pack",
@@ -179764,24 +179780,6 @@
       "name": "Pokemon Twilight Masquerade Sleeved Booster Display (24stk)",
       "price": "3720.00 kr",
       "url": "https://pokestore.no/products/pokemon-twilight-masquerade-sleeved-booster-kartong-24stk?variant=50624574456039",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Clay Burst Booster Pakke",
-      "price": "65.00 kr",
-      "url": "https://pokestore.no/products/pokemon-clay-burst-booster?variant=50624544014567",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Go Premium Collection Radiant Eevee",
-      "price": "1999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-go-premium-collection-radiant-eevee?variant=50624516194535",
       "product_class": "card",
       "event": "ny"
     }
