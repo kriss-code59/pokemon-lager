@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T10:19:56+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Black Bolt - Binder Collection Box",
+      "price": "1249.00 kr",
+      "url": "https://pokebua.no/products/pokemon-black-bolt-binder-collection-box?variant=48607948833001",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T10:19:56+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Ninja Spinner Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ninja-spinner-booster-box?variant=52328501805287",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T10:19:56+00:00",
+      "store": "Playlot",
+      "name": "Mega Evolution Sleeved Boosterpack",
+      "price": "kr 129,00",
+      "url": "https://playlot.no/produkt/mega-evolution-sleeved-boosterpack/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T09:58:41+00:00",
       "store": "Ark",
       "name": "Super Duper Extra Deluxe Essential Handbook (Pokémon)",
@@ -179758,33 +179784,6 @@
       "name": "Pokemon Tepig 011/086 Foil Promo",
       "price": "10.00 kr",
       "url": "https://pokestore.no/products/pokemon-tepig-011-086-foil-promo?variant=51241073344743",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Umbreon Plush",
-      "price": "325.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-umbreon-plush?variant=50760530428135",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Venusaur V & Blastoise V Battle Decks",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-venusaur-v-blastoise-v-battle-decks?variant=50624587202791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lost Origin 3pk Blister Case (24 stk, 72 boostere)",
-      "price": "18599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lost-origin-3pk-blister-case-24-stk-72-boostere?variant=50624566853863",
       "product_class": "card",
       "event": "ny"
     }

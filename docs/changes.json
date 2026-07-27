@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T10:19:56+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Black Bolt - Binder Collection Box",
+      "price": "1249.00 kr",
+      "url": "https://pokebua.no/products/pokemon-black-bolt-binder-collection-box?variant=48607948833001",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T10:19:56+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Ninja Spinner Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ninja-spinner-booster-box?variant=52328501805287",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-27T09:58:41+00:00",
       "store": "Ark",
       "name": "Super Duper Extra Deluxe Essential Handbook (Pokémon)",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon Triplet Beat Booster Box (Japansk)",
       "price": "kr1.999,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-triplet-beat-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Snow Hazard Booster Box (Japansk)",
-      "price": "kr1.449,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-snow-hazard-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Gem Pack Volume 4 Booster Pakke (Kinesisk)",
-      "price": "kr49,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-gem-pack-volume-4-booster-pakke-kinesisk/",
       "product_class": "card",
       "event": "ny"
     }
