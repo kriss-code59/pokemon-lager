@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T14:18:25+00:00",
+      "store": "PokeNordic",
+      "name": "Pokemon Abyss Eye Booster Box (Japansk)",
+      "price": "999.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-box-japansk?variant=48119593468158",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T13:38:49+00:00",
       "store": "Collectible",
       "name": "Gamegenic – Prime Standard Sleeves 66x91mm – Clear (50)",
@@ -179771,15 +179779,6 @@
       "name": "Pokemon Mega Latias ex MEP011 Black Star Promo",
       "price": "35.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-latias-ex-mep011-black-star-promo?variant=51713869021415",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Toxtricity, Duraludon & Sandaconda Promopakke",
-      "price": "25.00 kr",
-      "url": "https://pokestore.no/products/pokemon-toxtricity-duraludon-sandaconda-promopakke?variant=50624605421799",
       "product_class": "card",
       "event": "ny"
     }
