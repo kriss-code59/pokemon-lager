@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T08:38:53+00:00",
+      "store": "Ark",
+      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T08:18:25+00:00",
       "store": "Ark",
       "name": "Pokemon Origami: Fold Your Own Pokemon",
@@ -179779,15 +179788,6 @@
       "price": "155.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-pocket-bonsai-3-collection-figurer-6-stk-copy?variant=51058957877479",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Obsidian Flames 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-obsidian-flames-4-pocket-album?variant=50889300803815",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
