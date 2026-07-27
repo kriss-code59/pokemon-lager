@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T06:58:35+00:00",
+      "store": "Ark",
+      "name": "Scarlet & Violet Handbook (Pokémon)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/scarlet-violet-handbook-pokemon-9781338871371",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T06:38:34+00:00",
       "store": "Ark",
       "name": "Meet the Friends (Monpoké Board Book)",
@@ -2689,15 +2698,6 @@
       "price": "kr 249.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-mega-dream-ex-booster-pack-m2a-japanese/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Mimikyu Standing BIG Plush (48cm, Aoger)",
-      "price": "kr 479.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-mimikyu-standing-big-plush-47cm/",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]

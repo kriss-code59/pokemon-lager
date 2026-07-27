@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T06:58:35+00:00",
+      "store": "Ark",
+      "name": "Scarlet & Violet Handbook (Pokémon)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/scarlet-violet-handbook-pokemon-9781338871371",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T06:58:35+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 10 per pers. Pokemon Destined Rivals Boosterpakke",
+      "price": "139.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-destined-rivals-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T06:38:34+00:00",
       "store": "Ark",
       "name": "Meet the Friends (Monpoké Board Book)",
@@ -179771,24 +179788,6 @@
       "name": "Pokemon ex Battle Deck – Chien-Pao/Tinkaton (2 stk)",
       "price": "379.00 kr",
       "url": "https://pokestore.no/products/pokemon-ex-battle-deck-chien-pao-tinkaton-2-stk?variant=50624551747815",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Origin Forme Palkia VSTAR League Battle Deck",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-origin-forme-palkia-vstar-league-battle-deck?variant=50624533692647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Dark Order Booster Pakke",
-      "price": "100.00 kr",
-      "url": "https://pokestore.no/products/pokemon-dark-order-booster-pakke?variant=50624493748455",
       "product_class": "card",
       "event": "ny"
     }

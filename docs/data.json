@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T06:38:35+00:00",
+  "last_updated": "2026-07-27T06:58:35+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -203,7 +203,7 @@
       "store": "Cardcenter",
       "name": "Maks 10 per pers. Pokemon Destined Rivals Boosterpakke",
       "price": "139.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-destined-rivals-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -148395,10 +148395,10 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon: Scarlet & Violet Handbook",
+      "name": "Scarlet & Violet Handbook (Pokémon)",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-scarlet-violet-handbook-9781338871371",
+      "url": "https://www.ark.no/produkt/boker/barneboker/scarlet-violet-handbook-pokemon-9781338871371",
       "store_count": null,
       "product_class": "card"
     },
