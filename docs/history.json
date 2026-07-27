@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T07:38:30+00:00",
+      "store": "Ark",
+      "name": "Pokémon Playtime: A Touch and Feel Adventure (Monpoké Board Book)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-playtime-a-touch-and-feel-adventure-monpoke-board-book-9781339007786",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T07:38:30+00:00",
+      "store": "Ark",
+      "name": "Ultimate Sketch Challenge (Pokémon)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/ultimate-sketch-challenge-pokemon-9781338237566",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T06:58:35+00:00",
       "store": "Ark",
       "name": "Scarlet & Violet Handbook (Pokémon)",
@@ -179771,24 +179789,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-charmander-plush-20cm?variant=50738352783591",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Shrouded Fable Mini Tin Display",
-      "price": "2699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-shrouded-fable-mini-tin-display?variant=50624567541991",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ex Battle Deck – Chien-Pao/Tinkaton (2 stk)",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ex-battle-deck-chien-pao-tinkaton-2-stk?variant=50624551747815",
-      "product_class": "card",
       "event": "ny"
     }
   ]
