@@ -1,6 +1,95 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Plume Fossil 79 - White Flare",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/antique-plume-fossil-79-white-flare?variant=53024804241687",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Sandwich 161 - Destined Rivals",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/arvens-sandwich-161-destined-rivals?variant=53024758268183",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Brave Bangle 80 - White Flare",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/brave-bangle-80-white-flare?variant=53024804307223",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Cheren 81 - White Flare",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/cheren-81-white-flare?variant=53024804372759",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Playlot",
+      "name": "Greninja & Kingdra EX Special Collection",
+      "price": "kr 1 499,00",
+      "url": "https://playlot.no/produkt/greninja-kingdra-ex-special-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Plume Fossil 79 - White Flare",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-plume-fossil-79-white-flare?variant=53024804241687",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Sandwich 161 - Destined Rivals",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/arvens-sandwich-161-destined-rivals?variant=53024758268183",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Brave Bangle 80 - White Flare",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/brave-bangle-80-white-flare?variant=53024804307223",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Pokesingles",
+      "name": "Cheren 81 - White Flare",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/cheren-81-white-flare?variant=53024804372759",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T14:58:20+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – First Partner Illustration Collection Series 2",
+      "price": "kr 749,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-first-partner-illustration-collection-series-2/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T14:38:28+00:00",
       "store": "Pokesingles",
       "name": "Air Balloon 79 - Black Bolt",
@@ -179689,96 +179778,6 @@
       "name": "Pokemon Shining Fates Elite Trainer Box",
       "price": "2999.00 kr",
       "url": "https://pokestore.no/products/pokemon-shining-fates-elite-trainer-box?variant=51214881194215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon VMAX Climax Booster Pakke",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-vmax-climax-booster-pakke?variant=50624511279335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Chaos Rising Checklane Blister Toxel",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-chaos-rising-checklane-blister-sett?variant=52084401733863",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Umbreon ex SVP176 Black Star Promo",
-      "price": "500.00 kr",
-      "url": "https://pokestore.no/products/pokemon-umbreon-ex-svp176-black-star-promo?variant=51879411744999",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Charmander 020/217 Cosmos Holo",
-      "price": "20.00 kr",
-      "url": "https://pokestore.no/products/pokemon-charmander?variant=51762277515495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Latias ex Box",
-      "price": "749.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-latias-ex-box?variant=51462336413927",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Black Bolt Booster Bundle Display",
-      "price": "13750.00 kr",
-      "url": "https://pokestore.no/products/pokemon-black-bolt-booster-bundle-display?variant=51354907345127",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Tinkaton 9-Pocket Portfolio",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-tinkaton-9-pocket-portfolio-album?variant=51072453640423",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Morning Meadow 9-Pocket PRO-Binder",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-9-pocket-pro-binder-morning-meadow-album?variant=51016682963175",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Leafeon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-leafeon-plush?variant=50981505499367",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Eevee Pokemon Day 2025 Promo",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/eevee-pokemon-day-2025-promo?variant=50976366657767",
       "product_class": "card",
       "event": "ny"
     }

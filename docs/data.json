@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T14:38:29+00:00",
+  "last_updated": "2026-07-27T14:58:21+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -83470,8 +83470,8 @@
     {
       "store": "Pokesingles",
       "name": "Antique Plume Fossil 79 - White Flare",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "3.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/antique-plume-fossil-79-white-flare?variant=53024804241687",
       "store_count": null,
       "product_class": "card"
@@ -87619,8 +87619,8 @@
     {
       "store": "Pokesingles",
       "name": "Arven's Sandwich 161 - Destined Rivals",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/arvens-sandwich-161-destined-rivals?variant=53024758268183",
       "store_count": null,
       "product_class": "card"
@@ -98905,8 +98905,8 @@
     {
       "store": "Pokesingles",
       "name": "Brave Bangle 80 - White Flare",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/brave-bangle-80-white-flare?variant=53024804307223",
       "store_count": null,
       "product_class": "card"
@@ -111199,8 +111199,8 @@
     {
       "store": "Pokesingles",
       "name": "Cheren 81 - White Flare",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/cheren-81-white-flare?variant=53024804372759",
       "store_count": null,
       "product_class": "card"
@@ -161634,19 +161634,19 @@
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon: Bath Bomb Eevee Figure Collection – Flower Scent (95g, Bandai)",
-      "price": "kr 99.00",
+      "name": "Pokemon TCG: Terastal Festival ex SV8a Booster Pack (Japanese)",
+      "price": "kr 299.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-bath-bomb-eevee-figure-collection-chamomile-scent-75g-bandai/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-terastal-festival-ex-sv8a-booster-pack-japanese/",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Terastal Festival ex SV8a Booster Pack (Japanese)",
-      "price": "kr 299.00",
+      "name": "Pokemon: Bath Bomb Eevee Figure Collection – Flower Scent (95g, Bandai)",
+      "price": "kr 99.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-terastal-festival-ex-sv8a-booster-pack-japanese/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-bath-bomb-eevee-figure-collection-chamomile-scent-75g-bandai/",
       "store_count": null,
       "product_class": "card"
     },
@@ -162349,15 +162349,6 @@
       "price": "kr 129.00",
       "in_stock": true,
       "url": "https://www.neo-tokyo.no/product/pokemon-a6-notebook-happy-happy-day-a6-kamiojapan/",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Cubone Plush – All Star Collection (16cm, Sanei)",
-      "price": "kr 399.00",
-      "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-cubone-all-star-collection-16cm-sanei/",
       "store_count": null,
       "product_class": "accessory"
     },
@@ -163353,6 +163344,15 @@
     },
     {
       "store": "Playlot",
+      "name": "Greninja & Kingdra EX Special Collection",
+      "price": "kr 1 499,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/greninja-kingdra-ex-special-collection/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
       "name": "Inferno X boosterpack JPN",
       "price": "kr 89,00",
       "in_stock": true,
@@ -163839,15 +163839,6 @@
     },
     {
       "store": "Spillmonster",
-      "name": "Pokemon TCG – First Partner Illustration Collection Series 2",
-      "price": "kr 749,00",
-      "in_stock": true,
-      "url": "https://spillmonster.no/product/pokemon-tcg-first-partner-illustration-collection-series-2/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Spillmonster",
       "name": "Pokemon TCG – Lumiose City Mini Tin",
       "price": "kr 249,00",
       "in_stock": true,
@@ -164199,6 +164190,15 @@
     },
     {
       "store": "Spillmonster",
+      "name": "Pokemon TCG – First Partner Illustration Collection Series 2",
+      "price": "kr 749,00",
+      "in_stock": false,
+      "url": "https://spillmonster.no/product/pokemon-tcg-first-partner-illustration-collection-series-2/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Spillmonster",
       "name": "Pokemon TCG – Mega Charizard X ex – Ultra Premium Collection",
       "price": "kr 2 799,00",
       "in_stock": false,
@@ -164373,7 +164373,7 @@
       "name": "Pokemon TCG Paldea Evolved – Premium Blister Pack",
       "price": "kr 199,00",
       "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack-2/",
+      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack/",
       "store_count": null,
       "product_class": "card"
     },
@@ -164382,7 +164382,7 @@
       "name": "Pokemon TCG Paldea Evolved – Premium Blister Pack",
       "price": "kr 199,00",
       "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack/",
+      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack-2/",
       "store_count": null,
       "product_class": "card"
     }
