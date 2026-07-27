@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T12:18:52+00:00",
+  "last_updated": "2026-07-27T12:39:40+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -8634,15 +8634,6 @@
     },
     {
       "store": "Cardstore",
-      "name": "Pitch Black Premium Checklane (Gengar)",
-      "price": "149.00 kr",
-      "in_stock": false,
-      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardstore",
       "name": "Chaos Rising Sleeved Booster",
       "price": "79.00 kr",
       "in_stock": false,
@@ -8665,6 +8656,15 @@
       "price": "75.00 kr",
       "in_stock": false,
       "url": "https://store.cardstore.no/products/stellar-crown-1-pack-blister-porygon2?variant=45984037699806",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardstore",
+      "name": "Pitch Black Premium Checklane (Gengar)",
+      "price": "149.00 kr",
+      "in_stock": false,
+      "url": "https://store.cardstore.no/products/pitch-black-premium-checklane-gengar?variant=54642789318979",
       "store_count": null,
       "product_class": "card"
     },
@@ -8895,15 +8895,6 @@
     },
     {
       "store": "Cardstore",
-      "name": "First Partner Illustration Collection Series 2",
-      "price": "749.00 kr",
-      "in_stock": true,
-      "url": "https://store.cardstore.no/products/first-partner-illustration-collection-series-2?variant=54604877267267",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Cardstore",
       "name": "White Flare Booster Pack",
       "price": "89.00 kr",
       "in_stock": false,
@@ -8935,6 +8926,15 @@
       "price": "3199.00 kr",
       "in_stock": true,
       "url": "https://store.cardstore.no/products/pitch-black-booster-display?variant=54642789024067",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardstore",
+      "name": "First Partner Illustration Collection Series 2",
+      "price": "749.00 kr",
+      "in_stock": true,
+      "url": "https://store.cardstore.no/products/first-partner-illustration-collection-series-2?variant=54604877267267",
       "store_count": null,
       "product_class": "card"
     },
