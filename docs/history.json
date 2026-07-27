@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T11:38:46+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - White Flare - Booster Pack (Japansk) - Booster Pack",
+      "price": "85.00 kr",
+      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi?variant=50800637051113",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T11:18:36+00:00",
       "store": "Ark",
       "name": "Pokémon Rainbow! (monpoké Water Wonder)",
@@ -179774,15 +179783,6 @@
       "name": "Pokemon Temporal Forces Sleeved Booster Display (24stk)",
       "price": "2399.00 kr",
       "url": "https://pokestore.no/products/pokemon-temporal-forces-sleeved-booster-display-24stk?variant=50624574587111",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Zapdos 049 JUMBO Promo Black Star Promo",
-      "price": "20.00 kr",
-      "url": "https://pokestore.no/products/pokemon-zapdos-049-jumbo-promo-black-star-promo?variant=50624560070887",
       "product_class": "card",
       "event": "ny"
     }
