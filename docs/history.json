@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T15:19:09+00:00",
+      "store": "Playlot",
+      "name": "Venusaur EX & Blastoise EX Premium Collection",
+      "price": "kr 1 899,00",
+      "url": "https://playlot.no/produkt/venusaur-ex-blastoise-ex-premium-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T14:58:20+00:00",
       "store": "Pokesingles",
       "name": "Antique Plume Fossil 79 - White Flare",
@@ -179769,15 +179778,6 @@
       "name": "Pokemon Lugia SWSH301 Black Star Promo (JUMBO)",
       "price": "45.00 kr",
       "url": "https://pokestore.no/products/pokemon-lugia-swsh301-black-star-promo-jumbo?variant=51529330458855",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Shining Fates Elite Trainer Box",
-      "price": "2999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-shining-fates-elite-trainer-box?variant=51214881194215",
       "product_class": "card",
       "event": "ny"
     }
