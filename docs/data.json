@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T18:58:18+00:00",
+  "last_updated": "2026-07-27T19:18:21+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -6863,7 +6863,7 @@
       "store": "Braspill",
       "name": "151c Coin set Pokemon Gengar",
       "price": "369.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://braspill.no/products/151c-coin-set-pokemon-gengar?variant=55665981325604",
       "store_count": null,
       "product_class": "accessory"
@@ -61726,7 +61726,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Mega Clefable ex Mega Moonlight Tin",
-      "price": "499.00 kr",
+      "price": "449.00 kr",
       "in_stock": true,
       "url": "https://pokenordic.no/products/mega-clefable-ex-mega-moonlight-tin?variant=48331585421566",
       "store_count": null,
@@ -61897,7 +61897,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Brilliant Stars Booster Pakke",
-      "price": "169.00 kr",
+      "price": "199.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack-kopi?variant=48189138927870",
       "store_count": null,
@@ -62085,6 +62085,24 @@
     },
     {
       "store": "PokeNordic",
+      "name": "Pokémon First Partner Illustration Collection (Vol. 1) [B-VARE*]",
+      "price": "899.00 kr",
+      "in_stock": true,
+      "url": "https://pokenordic.no/products/pokemon-first-partner-illustration-collection-vol-1-kopi?variant=48648368750846",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeNordic",
+      "name": "Pokémon Journey Together Enhanced Booster Box",
+      "price": "0.00 kr",
+      "in_stock": false,
+      "url": "https://pokenordic.no/products/pokemon-journey-together-enhanced-booster-box?variant=48645457117438",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeNordic",
       "name": "Pokémon VSTAR Universe Booster Pakke (Japansk)",
       "price": "359.00 kr",
       "in_stock": true,
@@ -62158,7 +62176,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Stellar Crown Booster Pakke",
-      "price": "109.00 kr",
+      "price": "119.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-stellar-crown-booster-pack?variant=48226044674302",
       "store_count": null,
@@ -148701,19 +148719,19 @@
     },
     {
       "store": "Ark",
-      "name": "Pokemon Origami: Fold Your Own Pokemon",
+      "name": "Pokémon Diamond and Pearl Adventure!, Vol. 7",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-origami-fold-your-own-pokemon-9780702313356",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Ark",
-      "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
+      "name": "Pokemon Origami: Fold Your Own Pokemon",
       "price": "?",
       "in_stock": true,
-      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
+      "url": "https://www.ark.no/produkt/boker/barneboker/pokemon-origami-fold-your-own-pokemon-9780702313356",
       "store_count": null,
       "product_class": "card"
     },
@@ -149137,7 +149155,7 @@
       "price": "349,00 kr",
       "in_stock": true,
       "url": "https://www.outland.no/p/pokemon-crochet-kit-kit-includes-everything-you-need-to-make-pikachu-and-instructions-for-5-other-pokemon",
-      "store_count": 7,
+      "store_count": 8,
       "product_class": "card"
     },
     {

@@ -1,6 +1,50 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T19:18:20+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon First Partner Illustration Collection (Vol. 1) [B-VARE*]",
+      "price": "899.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-first-partner-illustration-collection-vol-1-kopi?variant=48648368750846",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T19:18:20+00:00",
+      "store": "Braspill",
+      "name": "151c Coin set Pokemon Gengar",
+      "price": "369.00 kr",
+      "url": "https://braspill.no/products/151c-coin-set-pokemon-gengar?variant=55665981325604",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T19:18:20+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Mega Clefable ex Mega Moonlight Tin",
+      "price": "449.00 kr",
+      "previous_price": "499.00 kr",
+      "url": "https://pokenordic.no/products/mega-clefable-ex-mega-moonlight-tin?variant=48331585421566",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T19:18:20+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Brilliant Stars Booster Pakke",
+      "price": "199.00 kr",
+      "previous_price": "169.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack-kopi?variant=48189138927870",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T19:18:20+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Stellar Crown Booster Pakke",
+      "price": "119.00 kr",
+      "previous_price": "109.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-stellar-crown-booster-pack?variant=48226044674302",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-27T18:58:17+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Paldean Fates Booster Pakke",
@@ -179726,51 +179770,6 @@
       "name": "Pokemon Lost Origin Booster Box - Booster Box",
       "price": "9999.00 kr",
       "url": "https://pokestore.no/products/pokemon-lost-origin-booster-box?variant=50643819790567",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lost Origin Booster Box - Case",
-      "price": "59994.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lost-origin-booster-box?variant=50643819823335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Go Alolan Exeggutor V Box",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-go-alolan-exeggutor-v-box?variant=50624503120103",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu 9-Pocket PRO-Binder",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-9-pocket-pro-binder-pikachu-album?variant=51072251625703",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Journey Together 3pk Blister Sett",
-      "price": "679.00 kr",
-      "url": "https://pokestore.no/products/pokemon-journey-together-3pk-blister-sett?variant=50802502009063",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Journey Together Booster Box",
-      "price": "3999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-journey-together-booster-box?variant=50688370573543",
       "product_class": "card",
       "event": "ny"
     }
