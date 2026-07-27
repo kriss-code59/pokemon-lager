@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T14:18:26+00:00",
+  "last_updated": "2026-07-27T14:38:29+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -79636,8 +79636,8 @@
     {
       "store": "Pokesingles",
       "name": "Air Balloon 79 - Black Bolt",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/air-balloon-79-black-bolt?variant=53024782057751",
       "store_count": null,
       "product_class": "card"
@@ -83353,8 +83353,8 @@
     {
       "store": "Pokesingles",
       "name": "Antique Cover Fossil 80 - Black Bolt",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "3.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/antique-cover-fossil-80-black-bolt?variant=53024782287127",
       "store_count": null,
       "product_class": "card"
@@ -161823,15 +161823,6 @@
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon: Sleepy Friend Plush Series – Sylveon (27cm, Takara Tomy)",
-      "price": "kr 529.00",
-      "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-sleepy-friend-plush-series-sylveon-27cm-takara-tomy/",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Neo Tokyo",
       "name": "Pokemon: Gengar Plush Keychain – Heart Series (10cm, Potdemiel)",
       "price": "kr 179.00",
       "in_stock": true,
@@ -163650,6 +163641,15 @@
     },
     {
       "store": "Playlot",
+      "name": "Prismatic Premium Figure Collection",
+      "price": "kr 3 199,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/prismatic-premium-figure-collection/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
       "name": "Shiny Star V Boosterpack JPN",
       "price": "kr 249,00",
       "in_stock": true,
@@ -163771,6 +163771,15 @@
       "price": "kr 429,00",
       "in_stock": true,
       "url": "https://playlot.no/produkt/ursaluna-bloodmoon-ex-boks/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
+      "name": "Victini Illustration Rare Collection",
+      "price": "kr 999,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/victini-illustration-rare-collection/",
       "store_count": null,
       "product_class": "card"
     },

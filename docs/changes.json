@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Pokesingles",
+      "name": "Air Balloon 79 - Black Bolt",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/air-balloon-79-black-bolt?variant=53024782057751",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Cover Fossil 80 - Black Bolt",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/antique-cover-fossil-80-black-bolt?variant=53024782287127",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Premium Figure Collection",
+      "price": "kr 3 199,00",
+      "url": "https://playlot.no/produkt/prismatic-premium-figure-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Playlot",
+      "name": "Victini Illustration Rare Collection",
+      "price": "kr 999,00",
+      "url": "https://playlot.no/produkt/victini-illustration-rare-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T13:38:49+00:00",
       "store": "Collectible",
       "name": "Gamegenic – Prime Standard Sleeves 66x91mm – Clear (50)",
@@ -2661,42 +2697,6 @@
       "name": "Pokemon Ninja Spinner Booster Pakke (Japansk)",
       "price": "kr49,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-ninja-spinner-booster/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Star Birth Booster Pakke (Japansk)",
-      "price": "kr75,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-star-birth-booster-pakke/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Space Juggler Booster Pakke (Japansk)",
-      "price": "kr55,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-space-juggler-booster-pakke/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Perfect Order Booster pakke",
-      "price": "kr89,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-perfect-order-booster/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Shiny Treasure EX Booster Box (Japansk)",
-      "price": "kr1.999,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-shiny-treasure-ex-booster-box-japansk/",
       "product_class": "card",
       "event": "ny"
     }

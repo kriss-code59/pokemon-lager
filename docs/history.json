@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Pokesingles",
+      "name": "Air Balloon 79 - Black Bolt",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/air-balloon-79-black-bolt?variant=53024782057751",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Cover Fossil 80 - Black Bolt",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/antique-cover-fossil-80-black-bolt?variant=53024782287127",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Premium Figure Collection",
+      "price": "kr 3 199,00",
+      "url": "https://playlot.no/produkt/prismatic-premium-figure-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Playlot",
+      "name": "Victini Illustration Rare Collection",
+      "price": "kr 999,00",
+      "url": "https://playlot.no/produkt/victini-illustration-rare-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Pokesingles",
+      "name": "Air Balloon 79 - Black Bolt",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/air-balloon-79-black-bolt?variant=53024782057751",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T14:38:28+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Cover Fossil 80 - Black Bolt",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-cover-fossil-80-black-bolt?variant=53024782287127",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-27T14:18:25+00:00",
       "store": "PokeNordic",
       "name": "Pokemon Abyss Eye Booster Box (Japansk)",
@@ -179725,60 +179779,6 @@
       "name": "Eevee Pokemon Day 2025 Promo",
       "price": "249.00 kr",
       "url": "https://pokestore.no/products/eevee-pokemon-day-2025-promo?variant=50976366657767",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Arceus Alcove Flip Deck Box",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-arceus-alcove-flip?variant=50762132881639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Quaquaval ex SVP084 Jumbo",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-quaquaval-ex-svp084-jumbo?variant=50624608698599",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance 3pk Blister Case",
-      "price": "8199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-3pk-blister-case?variant=50624576061671",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Paradox Rift 3pk Blister Cetitan",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-paradox-rift-3pk-blister-cetitan?variant=50624545718503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon First Partner Accessory Bundle",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-first-partner-accessory-bundle?variant=50624542540007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Latias ex MEP011 Black Star Promo",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-latias-ex-mep011-black-star-promo?variant=51713869021415",
       "product_class": "card",
       "event": "ny"
     }
