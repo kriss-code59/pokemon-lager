@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T10:58:39+00:00",
+      "store": "LABOGE",
+      "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415324073)",
+      "price": "36.50 kr",
+      "url": "https://laboge.no/products/parasect-dark-phantasma-072-071?variant=54153438822699",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T10:39:54+00:00",
       "store": "Pokesingles",
       "name": "Cinderace ex 38 - Ascended Heroes",
@@ -179775,15 +179783,6 @@
       "name": "45 stk Pokemon Energy Cards",
       "price": "10.00 kr",
       "url": "https://pokestore.no/products/45-stk-pokemon-energy-cards?variant=50624557547751",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Orbeetle V SWSH078 Black Star Promo",
-      "price": "20.00 kr",
-      "url": "https://pokestore.no/products/pokemon-orbeetle-v-swsh078-black-star-promo?variant=50624527466727",
       "product_class": "card",
       "event": "ny"
     }
