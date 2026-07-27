@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T19:56:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lost-origin-booster-pack?variant=50380325454125",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T19:56:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradox Rift - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/paradox-rift-booster-pack?variant=50101589573933",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T19:38:10+00:00",
       "store": "Cardcenter",
       "name": "Black Bolt Japansk Booster Boosterpakke",
@@ -179751,24 +179767,6 @@
       "name": "Pokemon Oshawott 021/086 Foil Promo",
       "price": "10.00 kr",
       "url": "https://pokestore.no/products/pokemon-snivy-021-086-foil-promo?variant=51241084584167",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Drops in the Ocean 021/034",
-      "price": "6.00 kr",
-      "url": "https://pokestore.no/products/pokemon-drops-in-the-ocean-021-034?variant=50624616038631",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sun Seed 027/034 CL",
-      "price": "6.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sun-seed-027-034-cl?variant=50624615907559",
       "product_class": "card",
       "event": "ny"
     }
