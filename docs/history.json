@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T18:18:22+00:00",
+      "store": "Playlot",
+      "name": "VStar Universe – Boosterboks Japansk",
+      "price": "kr 3 299,00",
+      "url": "https://playlot.no/produkt/vstar-universe-boosterboks-japansk/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T17:38:17+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Lost origin - Booster Pack (Kinesisk) - Booster Pack",
@@ -179765,15 +179774,6 @@
       "price": "699.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-charizard-y-ex-tin?variant=51707811528935",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Phantasmal Flames 9-Pocket Portfolio",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-phantasmal-flames-9-pocket-portfolio-album?variant=51630674739431",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
