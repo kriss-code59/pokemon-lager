@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T16:18:28+00:00",
+      "store": "PokeNordic",
+      "name": "Pokemon Abyss Eye Booster Box (Japansk)",
+      "price": "999.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-box-japansk?variant=48119593468158",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:18:28+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Sandwich Reverse Holo 161 - Destined Rivals",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/arvens-sandwich-reverse-holo-161-destined-rivals?variant=53024758300951",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:18:28+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Sandwich Reverse Holo 161 - Destined Rivals",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/arvens-sandwich-reverse-holo-161-destined-rivals?variant=53024758300951",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-27T15:19:09+00:00",
       "store": "Playlot",
       "name": "Venusaur EX & Blastoise EX Premium Collection",
@@ -179751,33 +179778,6 @@
       "name": "Pokemon MEGA Expansion Pack Nihil Zero Booster Pakke",
       "price": "45.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-expansion-pack-nihil-zero-booster-pakke?variant=52016553394407",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Charizard Alcove Flip",
-      "price": "229.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-charizard-alcove-flip?variant=50624613581031",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Oricorio ex MEP024 Black Star Promo",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-oricorio-ex-mep013-black-star-promo?variant=51582575935719",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lugia SWSH301 Black Star Promo (JUMBO)",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lugia-swsh301-black-star-promo-jumbo?variant=51529330458855",
       "product_class": "card",
       "event": "ny"
     }

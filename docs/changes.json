@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T16:18:28+00:00",
+      "store": "PokeNordic",
+      "name": "Pokemon Abyss Eye Booster Box (Japansk)",
+      "price": "999.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-abyss-eye-booster-box-japansk?variant=48119593468158",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:18:28+00:00",
+      "store": "Pokesingles",
+      "name": "Arven's Sandwich Reverse Holo 161 - Destined Rivals",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/arvens-sandwich-reverse-holo-161-destined-rivals?variant=53024758300951",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-27T15:19:09+00:00",
       "store": "Playlot",
       "name": "Venusaur EX & Blastoise EX Premium Collection",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon Star Birth Booster Box (Japansk)",
       "price": "kr1.999,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-star-birth-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Inferno X Booster Box (Japansk)",
-      "price": "kr2.449,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-inferno-x-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Crimson Haze Booster Box (Japansk)",
-      "price": "kr1.549,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-crimson-haze-booster-box-japansk/",
       "product_class": "card",
       "event": "ny"
     }
