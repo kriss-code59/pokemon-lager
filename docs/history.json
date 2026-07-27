@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T17:18:26+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Perfect Order Booster Pakke",
+      "price": "89.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-perfect-order-booster-pack?variant=47850942234878",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T17:18:26+00:00",
+      "store": "Playlot",
+      "name": "151 Minitin",
+      "price": "kr 929,00",
+      "url": "https://playlot.no/produkt/151-minitin/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T16:58:19+00:00",
       "store": "Pokesingles",
       "name": "Cheren Reverse Holo 81 - White Flare",
@@ -179756,24 +179773,6 @@
       "name": "Pokemon Snivy 001/086 Foil Promo",
       "price": "10.00 kr",
       "url": "https://pokestore.no/products/pokemon-snivy-001-086-foil-promo?variant=51241081077991",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Rayquaza Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-rayquaza-plush?variant=50746151436519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ex Battle Decks Lucario / Ampharos (2 stk)",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ex-battle-decks-lucario-ampharos-2-stk?variant=50624544211175",
       "product_class": "card",
       "event": "ny"
     }
