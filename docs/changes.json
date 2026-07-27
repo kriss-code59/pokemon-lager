@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T18:58:17+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Paldean Fates Booster Pakke",
+      "price": "329.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-paldean-fates-booster-pack?variant=48174457749758",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-27T18:18:22+00:00",
       "store": "Playlot",
       "name": "VStar Universe – Boosterboks Japansk",
@@ -2688,15 +2697,6 @@
       "name": "Ascended Heroes – 215/217 – Waitress",
       "price": "3,90 kr",
       "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon TCG Mega Lucario ex League Battle Deck Play Level 3",
-      "price": "kr699,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-mega-lucario-ex-league-battle-deck/",
       "product_class": "card",
       "event": "ny"
     }
