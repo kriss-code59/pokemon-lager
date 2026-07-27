@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T06:38:34+00:00",
+      "store": "Ark",
+      "name": "Meet the Friends (Monpoké Board Book)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/meet-the-friends-monpoke-board-book-9781339007793",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T06:38:34+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 250/217 – Fan Rotom",
+      "price": "59,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T06:38:34+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 100/217 – Team Rocket’s Diglett",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-100-217-team-rockets-diglett/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T06:38:34+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 215/217 – Waitress",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T04:58:21+00:00",
       "store": "Ark",
       "name": "Pokemon Diamond and Pearl Adventure!, Vol. 7",
@@ -179753,42 +179789,6 @@
       "name": "Pokemon Dark Order Booster Pakke",
       "price": "100.00 kr",
       "url": "https://pokestore.no/products/pokemon-dark-order-booster-pakke?variant=50624493748455",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Trainer's Toolkit 2025",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-trainers-toolkit-2025?variant=51602259575015",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X ex Sleeves (65 stk)",
-      "price": "79.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-ex-sleeves?variant=51582573969639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Mega Charizard X Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-mega-charizard-x-plush?variant=51508482277607",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Lucario Ex Figure Collection",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-lucario-ex-figure-collection?variant=51390310023399",
       "product_class": "card",
       "event": "ny"
     }
