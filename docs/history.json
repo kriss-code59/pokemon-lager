@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T12:18:51+00:00",
+      "store": "Pokebua",
+      "name": "Cody's Snack Pack",
+      "price": "549.00 kr",
+      "url": "https://pokebua.no/products/codys-snack-pack?variant=51589414715625",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T11:59:00+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Abyss Eye Japansk Display Booster Box",
@@ -179773,15 +179782,6 @@
       "name": "Pokemon Go Premium Collection Radiant Eevee",
       "price": "1999.00 kr",
       "url": "https://pokestore.no/products/pokemon-go-premium-collection-radiant-eevee?variant=50624516194535",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Alter Genesis Booster Pakke",
-      "price": "300.00 kr",
-      "url": "https://pokestore.no/products/pokemon-alter-genesis-booster-pakke?variant=50624494928103",
       "product_class": "card",
       "event": "ny"
     }

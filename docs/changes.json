@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T12:18:51+00:00",
+      "store": "Pokebua",
+      "name": "Cody's Snack Pack",
+      "price": "549.00 kr",
+      "url": "https://pokebua.no/products/codys-snack-pack?variant=51589414715625",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T11:59:00+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Abyss Eye Japansk Display Booster Box",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon VMAX Climax Booster Box (Japansk)",
       "price": "kr4.159,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-vmax-climax-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Battle Region Booster Box (Japansk)",
-      "price": "kr1.449,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-battle-region-booster-box-japansk/",
       "product_class": "card",
       "event": "ny"
     }
