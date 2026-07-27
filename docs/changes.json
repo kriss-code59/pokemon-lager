@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Air Balloon Reverse Holo 79 - Black Bolt",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/air-balloon-reverse-holo-79-black-bolt?variant=53024782156055",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Cover Fossil Reverse Holo 80 - Black Bolt",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/antique-cover-fossil-reverse-holo-80-black-bolt?variant=53024782385431",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Plume Fossil Reverse Holo 79 - White Flare",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/antique-plume-fossil-79-white-flare-copy?variant=54550671556887",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T16:18:28+00:00",
       "store": "PokeNordic",
       "name": "Pokemon Abyss Eye Booster Box (Japansk)",
@@ -2670,33 +2697,6 @@
       "name": "Pokemon Lost Abyss Booster Box (Japansk)",
       "price": "kr4.749,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-lost-abyss-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Ruler of the Black Flame Booster Box (Japansk)",
-      "price": "kr2.299,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-ruler-of-the-black-flame-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Space Juggler Booster Box (Japansk)",
-      "price": "kr1.449,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-space-juggler-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Star Birth Booster Box (Japansk)",
-      "price": "kr1.999,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-star-birth-booster-box-japansk/",
       "product_class": "card",
       "event": "ny"
     }

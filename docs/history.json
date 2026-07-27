@@ -1,6 +1,59 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Air Balloon Reverse Holo 79 - Black Bolt",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/air-balloon-reverse-holo-79-black-bolt?variant=53024782156055",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Cover Fossil Reverse Holo 80 - Black Bolt",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/antique-cover-fossil-reverse-holo-80-black-bolt?variant=53024782385431",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Plume Fossil Reverse Holo 79 - White Flare",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/antique-plume-fossil-79-white-flare-copy?variant=54550671556887",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Pitch Black Booster Box",
+      "price": "3099.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-pitch-black-booster-box?variant=48624487497982",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Air Balloon Reverse Holo 79 - Black Bolt",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/air-balloon-reverse-holo-79-black-bolt?variant=53024782156055",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-27T16:38:25+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Cover Fossil Reverse Holo 80 - Black Bolt",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-cover-fossil-reverse-holo-80-black-bolt?variant=53024782385431",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-27T16:18:28+00:00",
       "store": "PokeNordic",
       "name": "Pokemon Abyss Eye Booster Box (Japansk)",
@@ -179724,60 +179777,6 @@
       "name": "Pokemon Blastoise ex 009/165 Jumbo",
       "price": "75.00 kr",
       "url": "https://pokestore.no/products/pokemon-blastoise-ex-009-165-jumbo?variant=50781988356327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Go Special Collection Team Mystic",
-      "price": "1149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-go-special-collection-team-mystic?variant=50624614072551",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Darkrai VSTAR 099/189 Jumbo",
-      "price": "30.00 kr",
-      "url": "https://pokestore.no/products/pokemon-darkrai-vstar-099-189-jumbo?variant=50624584876263",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Space Juggler Booster Pakke",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-space-juggler-booster-pakke?variant=50624511574247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon VMAX Climax High Class Booster Box",
-      "price": "3299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-vmax-climax-high-class-booster-box?variant=50624500170983",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Legendary Heartbeat Booster Pakke",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-legendary-heartbeat-booster-pakke?variant=50624495550695",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MEGA Expansion Pack Nihil Zero Booster Pakke",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-expansion-pack-nihil-zero-booster-pakke?variant=52016553394407",
       "product_class": "card",
       "event": "ny"
     }
