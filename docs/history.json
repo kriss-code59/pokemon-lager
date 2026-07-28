@@ -1,6 +1,78 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Jaw Fossil 68 - Perfect Order",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/antique-jaw-fossil-68-perfect-order?variant=53024922075415",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Sail Fossil 69 - Perfect Order",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/antique-sail-fossil-69-perfect-order?variant=53024922140951",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Core Memory 70 - Perfect Order",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/core-memory-70-perfect-order?variant=53024922272023",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Crushing Hammer 71 - Perfect Order",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/crushing-hammer-71-perfect-order?variant=53024922337559",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Jaw Fossil 68 - Perfect Order",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-jaw-fossil-68-perfect-order?variant=53024922075415",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Sail Fossil 69 - Perfect Order",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-sail-fossil-69-perfect-order?variant=53024922140951",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Core Memory 70 - Perfect Order",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/core-memory-70-perfect-order?variant=53024922272023",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:38:21+00:00",
+      "store": "Pokesingles",
+      "name": "Crushing Hammer 71 - Perfect Order",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/crushing-hammer-71-perfect-order?variant=53024922337559",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T09:19:07+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Pokeball - Tin Box",
@@ -179690,78 +179762,6 @@
       "name": "Pokemon Prismatic Evolutions Accessory Pouch Special Collection",
       "price": "1299.00 kr",
       "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-accessory-pouch-special-collection?variant=50624604242151",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Fuecoco SVP079",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/pokemon-fuecoco-svp079?variant=50624600998119",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terapagos ex Ultra Premium Collection",
-      "price": "2599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terapagos-ex-ultra-premium-collection?variant=50624582680807",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crown Zenith Special Collection - Unown V & Lugia V",
-      "price": "2799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crown-zenith-special-collection-unown-v-lugia-v?variant=50624577863911",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Violet Japansk Booster Pakke",
-      "price": "55.00 kr",
-      "url": "https://pokestore.no/products/pokemon-violet-japansk-booster?variant=50624543883495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Eevee VMAX SWSH087 Black Star Promo",
-      "price": "175.00 kr",
-      "url": "https://pokestore.no/products/pokemon-eevee-vmax-swsh087-black-star-promo?variant=50624560988391",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Temporal Forces Sleeved Booster",
-      "price": "100.00 kr",
-      "url": "https://pokestore.no/products/pokemon-temporal-forces-sleeved-booster?variant=50624574652647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Glory of Team Rocket Booster Box",
-      "price": "2199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-glory-of-team-rocket-booster-box?variant=50936758272231",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Destined Rivals Booster Box",
-      "price": "7999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-destined-rivals-booster-box?variant=50822324060391",
       "product_class": "card",
       "event": "ny"
     }
