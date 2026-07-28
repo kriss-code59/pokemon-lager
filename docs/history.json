@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T15:29:01+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon 151 Koreansk Booster Pakke",
+      "price": "189.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-koreansk-booster-pakke",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-28T14:48:58+00:00",
       "store": "Arcticloot",
       "name": "Pokémon TCG: Sword & Shield Ultra-Premium Collection Charizard",
@@ -179749,15 +179757,6 @@
       "name": "Pokemon Center Japan Mega Gardevoir Sleeves (64 stk)",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-mega-gardevoir-sleeves?variant=51568668508391",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T07:58:19+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Reshiram Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-reshiram-sleeves?variant=51568667918567",
       "product_class": "accessory",
       "event": "ny"
     }
