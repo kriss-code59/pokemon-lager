@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T18:58:18+00:00",
+      "store": "Cardhouse",
+      "name": "Crown Zenith Booster Pakke",
+      "price": "429 kr",
+      "previous_price": "419 kr",
+      "url": "https://cardhouse.no/pokemon-engelske-booster-pakker/pokemon-crown-zenith-booster-pakke",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T18:58:18+00:00",
+      "store": "Cardhouse",
+      "name": "White Flare booster pakke",
+      "price": "179 kr",
+      "previous_price": "169 kr",
+      "url": "https://cardhouse.no/pokemon-engelske-booster-pakker/98-white-flare-booster-pakke",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T18:58:18+00:00",
+      "store": "Cardhouse",
+      "name": "Paldean Fates booster pakke",
+      "price": "339 kr",
+      "previous_price": "329 kr",
+      "url": "https://cardhouse.no/pokemon-engelske-booster-pakker/pokemon-paldean-fates-booster-pakke",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T17:58:31+00:00",
       "store": "Cardstore",
       "name": "Pitch Black Booster Bundle",
@@ -179722,33 +179749,6 @@
       "name": "Pokemon Nanoblock Galarian Ponyta Figur",
       "price": "159.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-galarian-ponyta?variant=51235297624295",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Milotic Figur",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-milotic-figur?variant=51235286089959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Chimchar Figur",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-chimchar-figur?variant=51235284648167",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Raichu Figur",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-raichu-figur?variant=51235283960039",
       "product_class": "card",
       "event": "ny"
     }
