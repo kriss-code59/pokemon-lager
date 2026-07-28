@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T13:38:20+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Evolutions Boosterpack",
+      "price": "kr 229,00",
+      "url": "https://playlot.no/produkt/prismatic-evolutions-boosterpack/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-28T13:18:28+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Night Wanderer Japansk Boosterpakke",
@@ -179749,15 +179758,6 @@
       "name": "Pokemon Center Japan Mega Mawile Sleeves (64 stk)",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-mega-mawile-soeeves?variant=51568657957095",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T07:58:19+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Cinderace Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-cinderace-sleeves?variant=51568657694951",
       "product_class": "accessory",
       "event": "ny"
     }
