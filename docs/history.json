@@ -1,6 +1,51 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T10:18:56+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Premium Checklane",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-premium-checklane?variant=52244116668717",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T10:18:56+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Plush and Card Blind Box (Kinesisk)",
+      "price": "399.00 kr",
+      "url": "https://retroworld.no/products/sleepy-eevee-blind-box-copy?variant=51996583952685",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T10:18:56+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Venusaur ex Premium Collection",
+      "price": "899.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-venusaur-ex-premium-collection?variant=51641101320493",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T10:18:56+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Blooming Waters Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-blooming-waters-papp-litt-most-i-hjornet-alt-innhold-good-apnes-live?variant=50652332884269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T10:18:56+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradox Rift - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/paradox-rift-booster-pack?variant=50101589573933",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-28T09:58:32+00:00",
       "store": "Pokesingles",
       "name": "Antique Jaw Fossil Reverse Holo 68 - Perfect Order",
@@ -179716,51 +179761,6 @@
       "name": "Pokemon Ascended Heroes First Partners Deluxe Pin Collection",
       "price": "1279.00 kr",
       "url": "https://pokestore.no/products/pokemon-ascended-heroes-first-partners-deluxe-pin-collection?variant=51707804090599",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Brave Booster Box",
-      "price": "1599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-brave-booster-box?variant=51185319117031",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Brilliant Stars Elite Trainer Box",
-      "price": "2599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-brilliant-stars-elite-trainer-box?variant=50624503251175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon TCG Julekalender for 2023 (Holiday Calendar)",
-      "price": "999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tcg-julekalender-for-2023-holiday-calendar?variant=50624541327591",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Cosmic Eclipse Booster Pakke",
-      "price": "999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-cosmic-eclipse-booster?variant=50624526581991",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Charizard 12-Pocket Zippered PRO-Binder",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-charizard-12-pocket-zippered-album?variant=50939034042599",
       "product_class": "accessory",
       "event": "ny"
     }
