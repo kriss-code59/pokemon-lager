@@ -1,6 +1,95 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Jaw Fossil Reverse Holo 68 - Perfect Order",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/antique-jaw-fossil-reverse-holo-68-perfect-order?variant=53024922108183",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Sail Fossil Reverse Holo 69 - Perfect Order",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/antique-sail-fossil-reverse-holo-69-perfect-order?variant=53024922239255",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Core Memory Reverse Holo 70 - Perfect Order",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/core-memory-reverse-holo-70-perfect-order?variant=53024922304791",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Crushing Hammer Reverse Holo 71 - Perfect Order",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/crushing-hammer-reverse-holo-71-perfect-order?variant=53024922370327",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Ruler Of The Black Flame Japansk Boosterpakke",
+      "price": "85.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-ruler-of-the-black-flame-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Jaw Fossil Reverse Holo 68 - Perfect Order",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-jaw-fossil-reverse-holo-68-perfect-order?variant=53024922108183",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Sail Fossil Reverse Holo 69 - Perfect Order",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/antique-sail-fossil-reverse-holo-69-perfect-order?variant=53024922239255",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Core Memory Reverse Holo 70 - Perfect Order",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/core-memory-reverse-holo-70-perfect-order?variant=53024922304791",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Crushing Hammer Reverse Holo 71 - Perfect Order",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/crushing-hammer-reverse-holo-71-perfect-order?variant=53024922370327",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:58:32+00:00",
+      "store": "Kanoncon",
+      "name": "Pokemon Mega Dream EX Booster Pakke (Japansk)",
+      "price": "kr199,00",
+      "previous_price": "kr179,00",
+      "url": "https://www.kanoncon.no/produkt/pokemon-mega-dream-ex-booster-pakke-japansk/",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T09:38:21+00:00",
       "store": "Pokesingles",
       "name": "Antique Jaw Fossil 68 - Perfect Order",
@@ -179673,96 +179762,6 @@
       "price": "699.00 kr",
       "url": "https://pokestore.no/products/pokemon-elite-series-charizard-12-pocket-zippered-album?variant=50939034042599",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Obsidian Flames Booster Box",
-      "price": "4799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-obsidian-flames-booster-box?variant=50624540672231",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon High Class Pack Mega Dream ex Booster Pakke",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/pokemon-high-class-pack-mega-dream-ex-booster-pakke?variant=51637326971111",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Chaos Rising Elite Trainer Box",
-      "price": "1399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-chaos-rising-elite-trainer-box?variant=52084401406183",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Perfect Order Checklane Blister",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-perfect-order-checklane-blister-sett?variant=51707748876519",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Prismatic Evolutions Premium Figure Collection",
-      "price": "3649.00 kr",
-      "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-premium-figure-collection?variant=51386738409703",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Lucario 9-Pocket Zippered PRO-Binder",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-lucario-9-pocket-zippered-album?variant=50976655474919",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Perfect Order Booster Bundle",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-perfect-order-booster-bundle?variant=51707749236967",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Destined Rivals Premium Checklane Blister Sett",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-destined-rivals-premium-checklane-blister-sett?variant=50852603330791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Skeledirge ex SVP081",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/pokemon-skeledirge-ex-svp081?variant=50624600899815",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Prismatic Evolutions Accessory Pouch Special Collection",
-      "price": "1299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-accessory-pouch-special-collection?variant=50624604242151",
-      "product_class": "card",
       "event": "ny"
     }
   ]

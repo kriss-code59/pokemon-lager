@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28T09:38:22+00:00",
+  "last_updated": "2026-07-28T09:58:32+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -122,7 +122,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Ruler Of The Black Flame Japansk Boosterpakke",
       "price": "85.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-ruler-of-the-black-flame-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -83416,8 +83416,8 @@
     {
       "store": "Pokesingles",
       "name": "Antique Jaw Fossil Reverse Holo 68 - Perfect Order",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/antique-jaw-fossil-reverse-holo-68-perfect-order?variant=53024922108183",
       "store_count": null,
       "product_class": "card"
@@ -83506,8 +83506,8 @@
     {
       "store": "Pokesingles",
       "name": "Antique Sail Fossil Reverse Holo 69 - Perfect Order",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/antique-sail-fossil-reverse-holo-69-perfect-order?variant=53024922239255",
       "store_count": null,
       "product_class": "card"
@@ -118273,8 +118273,8 @@
     {
       "store": "Pokesingles",
       "name": "Core Memory Reverse Holo 70 - Perfect Order",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "6.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/core-memory-reverse-holo-70-perfect-order?variant=53024922304791",
       "store_count": null,
       "product_class": "card"
@@ -121837,8 +121837,8 @@
     {
       "store": "Pokesingles",
       "name": "Crushing Hammer Reverse Holo 71 - Perfect Order",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/crushing-hammer-reverse-holo-71-perfect-order?variant=53024922370327",
       "store_count": null,
       "product_class": "card"
@@ -149448,6 +149448,24 @@
     },
     {
       "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
+      "price": "3 195,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
+      "price": "3 195,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
       "name": "Maks 5 per kunde. Pokémon TCG Mega Evolution Chaos Rising Boosterpakke",
       "price": "92,-",
       "in_stock": true,
@@ -149481,24 +149499,6 @@
       "url": "https://lekekassen.no/pokemon-chaos-rising-9-pocket-portfolio-samleperm-ult16726",
       "store_count": null,
       "product_class": "accessory"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
-      "price": "3 195,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
-      "price": "3 195,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
-      "store_count": null,
-      "product_class": "card"
     },
     {
       "store": "Lekekassen",
@@ -161284,7 +161284,7 @@
     {
       "store": "Kanoncon",
       "name": "Pokemon Mega Dream EX Booster Pakke (Japansk)",
-      "price": "kr179,00",
+      "price": "kr199,00",
       "in_stock": true,
       "url": "https://www.kanoncon.no/produkt/pokemon-mega-dream-ex-booster-pakke-japansk/",
       "store_count": null,
