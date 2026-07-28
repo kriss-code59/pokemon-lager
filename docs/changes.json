@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-28T13:49:07+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T13:49:07+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 10 per pers. Pokemon Ascended Heroes Boosterpakke",
+      "price": "199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-28T13:38:20+00:00",
       "store": "Playlot",
       "name": "Prismatic Evolutions Boosterpack",
@@ -2680,24 +2698,6 @@
       "price": "kr 499.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-clock-wall-sticker-original-starters-toyo-case/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T12:34:33+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Clock Wall Sticker Pikachu & Eevee (Toyo-Case)",
-      "price": "kr 499.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-clock-wall-sticker-pikachu-eevee-toyo-case/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T12:34:33+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Empoleon Plush – All Star Collection (20,5cm, Sanei)",
-      "price": "kr 599.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-empoleon-plush-all-star-collection-205cm-sanei/",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
