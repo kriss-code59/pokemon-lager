@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T03:18:09+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Paldean Fates Shiny Special Tin Shiny Iron Threads",
+      "price": "1799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-paldean-fates-shiny-special-tin-shiny-iron-threads",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-28T02:58:18+00:00",
       "store": "Pokestore",
       "name": "Pokemon Astral Radiance Elite Trainer Box",
@@ -179754,15 +179762,6 @@
       "name": "Pokemon Fusion Arts Booster Pakke",
       "price": "175.00 kr",
       "url": "https://pokestore.no/products/pokemon-fusion-arts-booster-pakke?variant=50624511082727",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ascended Heroes Mega Emboar ex Box",
-      "price": "1049.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ascended-heroes-mega-emboar-ex-box?variant=51707804516583",
       "product_class": "card",
       "event": "ny"
     }
