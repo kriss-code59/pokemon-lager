@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28T10:38:26+00:00",
+  "last_updated": "2026-07-28T10:58:26+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -6863,7 +6863,7 @@
       "store": "Braspill",
       "name": "Pokemon Crystal Gathering Key chain Gaveeske",
       "price": "349.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://braspill.no/products/pokemon-crystal-gathering-charm-gift-box?variant=55162477969700",
       "store_count": null,
       "product_class": "card"
@@ -63147,8 +63147,8 @@
     },
     {
       "store": "Pokebua",
-      "name": "CGC Premium Gradering (Verdi Over 5000kr Ugradert)",
-      "price": "399.00 kr",
+      "name": "CGC Premium Gradering (Verdi opp til 10000kr Ugradert)",
+      "price": "369.00 kr",
       "in_stock": true,
       "url": "https://pokebua.no/products/cgc-gradering-premium-verdi-over-5000kr-ugradert?variant=50473155526889",
       "store_count": null,
@@ -63157,7 +63157,7 @@
     {
       "store": "Pokebua",
       "name": "CGC Gradering (Max Verdi 5000kr Ugradert)",
-      "price": "279.00 kr",
+      "price": "249.00 kr",
       "in_stock": true,
       "url": "https://pokebua.no/products/cgc-gradering-max-verdi-5000kr-ugradert?variant=50129535762665",
       "store_count": null,
@@ -152455,7 +152455,7 @@
     {
       "store": "Mystic Trades",
       "name": "​[BESTILLINGSVARE] – Pokémon ME04: Mega Evolution: Chaos Rising – Booster Box Display (36 Boosters)",
-      "price": "3249 kr",
+      "price": "3099 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/nyheter-forhandsbestilling/forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-booster-box-36-boosters",
       "store_count": null,
@@ -152653,7 +152653,7 @@
     {
       "store": "Mystic Trades",
       "name": "Pokémon ME04: Mega Evolution: Chaos Rising – Booster Pack",
-      "price": "105 kr",
+      "price": "99 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-booster-pakke",
       "store_count": null,
@@ -152662,7 +152662,7 @@
     {
       "store": "Mystic Trades",
       "name": "​[LAGER] – Pokémon ME04: Mega Evolution: Chaos Rising – Booster Bundle (6 Boosters)",
-      "price": "799 kr",
+      "price": "659 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-me04-mega-evolution-chaos-rising-booster-bundle-6-boosters",
       "store_count": null,
@@ -152671,7 +152671,7 @@
     {
       "store": "Mystic Trades",
       "name": "​[BESTILLINGSVARE] – Pokémon ME03: Mega Evolution: Perfect Order – Booster Pakke",
-      "price": "99 kr",
+      "price": "89 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-me03-mega-evolution-perfect-order-booster-pakke",
       "store_count": null,
@@ -153057,8 +153057,8 @@
     },
     {
       "store": "Mystic Trades",
-      "name": "[PÅ LAGER] –  Mega Evolution: Perfect Order Elite Trainer Box (ETB) – Mega Zygarde",
-      "price": "1399 kr",
+      "name": "[BESTILLINGSVARE] –  Mega Evolution: Perfect Order Elite Trainer Box (ETB) – Mega Zygarde",
+      "price": "1099 kr",
       "in_stock": true,
       "url": "https://mystictrades.no/pokemon/premium-collections-etb-upc/nyhet-mega-evolution-perfect-order-etb-mega-zygarde",
       "store_count": null,

@@ -1,6 +1,78 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Crystal Gathering Key chain Gaveeske",
+      "price": "349.00 kr",
+      "url": "https://braspill.no/products/pokemon-crystal-gathering-charm-gift-box?variant=55162477969700",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Pokebua",
+      "name": "CGC Premium Gradering (Verdi opp til 10000kr Ugradert)",
+      "price": "369.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://pokebua.no/products/cgc-gradering-premium-verdi-over-5000kr-ugradert?variant=50473155526889",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Pokebua",
+      "name": "CGC Gradering (Max Verdi 5000kr Ugradert)",
+      "price": "249.00 kr",
+      "previous_price": "279.00 kr",
+      "url": "https://pokebua.no/products/cgc-gradering-max-verdi-5000kr-ugradert?variant=50129535762665",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Mystic Trades",
+      "name": "​[BESTILLINGSVARE] – Pokémon ME04: Mega Evolution: Chaos Rising – Booster Box Display (36 Boosters)",
+      "price": "3099 kr",
+      "previous_price": "3249 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-booster-box-36-boosters",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Mystic Trades",
+      "name": "Pokémon ME04: Mega Evolution: Chaos Rising – Booster Pack",
+      "price": "99 kr",
+      "previous_price": "105 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-booster-pakke",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Mystic Trades",
+      "name": "​[LAGER] – Pokémon ME04: Mega Evolution: Chaos Rising – Booster Bundle (6 Boosters)",
+      "price": "659 kr",
+      "previous_price": "799 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-me04-mega-evolution-chaos-rising-booster-bundle-6-boosters",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Mystic Trades",
+      "name": "​[BESTILLINGSVARE] – Pokémon ME03: Mega Evolution: Perfect Order – Booster Pakke",
+      "price": "89 kr",
+      "previous_price": "99 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-me03-mega-evolution-perfect-order-booster-pakke",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T10:58:25+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] –  Mega Evolution: Perfect Order Elite Trainer Box (ETB) – Mega Zygarde",
+      "price": "1099 kr",
+      "previous_price": "1399 kr",
+      "url": "https://mystictrades.no/pokemon/premium-collections-etb-upc/nyhet-mega-evolution-perfect-order-etb-mega-zygarde",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T10:38:25+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Blade Awakened Slim Boosterpakke",
@@ -179688,78 +179760,6 @@
       "name": "Pokemon Suicune Ex 010/034 CL",
       "price": "35.00 kr",
       "url": "https://pokestore.no/products/pokemon-suicune-ex-010-034-cl?variant=50624615874791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Pikachu 9-Pocket Zippered PRO-Binder",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-pikachu-9-pocket-zippered-album?variant=51299384590567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Meowscarada ex SVP078 Black Star Promo",
-      "price": "50.00 kr",
-      "url": "https://pokestore.no/products/pokemon-meowscarada-ex-svp078?variant=50624601227495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Rotom V SWSH257 Promo",
-      "price": "9.00 kr",
-      "url": "https://pokestore.no/products/pokemon-rotom-v-swsh257-promo?variant=50624584089831",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Galarian Zapdos 082/203",
-      "price": "8.00 kr",
-      "url": "https://pokestore.no/products/pokemon-galarian-zapdos-082-203?variant=50708187971815",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance 3-pack Blister Sett",
-      "price": "695.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-3-pk-blister-sett?variant=50624520683751",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Dragonite VSTAR SWSH236 Black Star Promo",
-      "price": "100.00 kr",
-      "url": "https://pokestore.no/products/pokemon-dragonite-vstar-swsh236-black-star-promo?variant=50624616268007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Victini SVP 208 Black Star Promo",
-      "price": "200.00 kr",
-      "url": "https://pokestore.no/products/pokemon-victini-svp-208-black-star-promo?variant=51241127117031",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Floragato SVP077",
-      "price": "20.00 kr",
-      "url": "https://pokestore.no/products/pokemon-floragato-svp077?variant=50624601620711",
       "product_class": "card",
       "event": "ny"
     }
