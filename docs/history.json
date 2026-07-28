@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T10:38:25+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blade Awakened Slim Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-slim-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-28T10:38:25+00:00",
+      "store": "Mystic Trades",
+      "name": "​[BESTILLINGSVARE] – Pokémon ME03: Mega Evolution: Perfect Order – Booster Pack Bundle (6 Pakker)",
+      "price": "599 kr",
+      "previous_price": "999 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/forhandsbestilling-pokemon-me03-mega-evolution-perfect-order-booster-pack-bundle-6-pakker",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T10:18:56+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - ME05 Mega Evolution Pitch Black - Premium Checklane",
@@ -179744,24 +179761,6 @@
       "price": "20.00 kr",
       "url": "https://pokestore.no/products/pokemon-floragato-svp077?variant=50624601620711",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Stellar Crown Elite Trainer Box",
-      "price": "1699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-stellar-crown-elite-trainer-box?variant=50624572195047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ascended Heroes First Partners Deluxe Pin Collection",
-      "price": "1279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ascended-heroes-first-partners-deluxe-pin-collection?variant=51707804090599",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
