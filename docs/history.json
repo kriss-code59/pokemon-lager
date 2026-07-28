@@ -1,6 +1,77 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Cardhouse",
+      "name": "Black Bolt booster pakke",
+      "price": "169 kr",
+      "url": "https://cardhouse.no/pokemon-engelske-booster-pakker/pokemon-black-bolt-booster-pakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME05 Pitch Black – Booster Pack *Risk of allocation*",
+      "price": "95 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-me05-pitch-black-booster-pack-risk-of-allocation",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Emken",
+      "name": "TEAM ROCKET'S WOBBUFFET #203 POKEMON PROMO",
+      "price": "9,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/team-rocket-s-wobbuffet-203-pokemon-promo-1",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon ME05: Mega Evolution: Pitch Black - Sleeved Booster Pack (\"Cardboard / Pap Blister\")",
+      "price": "95 kr",
+      "previous_price": "89 kr",
+      "url": "https://mystictrades.no/pokemon/sleeved-booster-pack/pre-order-pokemon-me05-mega-evolution-pitch-black-sleeved-booster-pack-cardboard-pap-blister",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME04 Chaos Rising – Half-Size Booster Box Display (18 Boosters) *Risk of allocation*",
+      "price": "1999 kr",
+      "previous_price": "2799 kr",
+      "url": "https://mystictrades.no/pokemon/display-booster-box/bestillingsvare-pokemon-tcg-me04-chaos-rising-half-size-booster-box-display-18-boosters-risk-of-allocation",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "​[LAGER] – Pokémon TCG: ME05: Pitch Black – Booster Bundle",
+      "price": "589 kr",
+      "previous_price": "619 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-me05-pitch-black-booster-bundle",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME05 Pitch Black – Booster Pack Artwork Set (4 Packs) *Risk of allocation*",
+      "price": "379 kr",
+      "previous_price": "399 kr",
+      "url": "https://mystictrades.no/pokemon/pre-order-pokemon-tcg-me05-pitch-black-booster-pack-artwork-set-4-packs-risk-of-allocation",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] - Pokémon Chaos Rising – Elite Trainer Box (ETB)",
+      "price": "1099 kr",
+      "previous_price": "1129 kr",
+      "url": "https://mystictrades.no/pokemon/premium-collections-etb-upc/pre-order-forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-elite-trainer-box-etb",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T10:58:25+00:00",
       "store": "Braspill",
       "name": "Pokemon Crystal Gathering Key chain Gaveeske",
@@ -179688,78 +179759,6 @@
       "name": "Pokemon Flareon SV167",
       "price": "30.00 kr",
       "url": "https://pokestore.no/products/pokemon-flareon-sv167?variant=50688396525799",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sinnoh Stars Mini Tin (1 stk)",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sinnoh-stars-mini-tin-1-stk?variant=50624576225511",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance Sleeved Booster",
-      "price": "110.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-sleeved-booster?variant=50624503578855",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terastal Festival ex Booster Pakke",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terastal-festival-ex-booster-pakke?variant=50814971904231",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Jolteon SV169",
-      "price": "30.00 kr",
-      "url": "https://pokestore.no/products/pokemon-jolteon-sv169?variant=50688398983399",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Raging Surf Booster Pakke",
-      "price": "69.00 kr",
-      "url": "https://pokestore.no/products/pokemon-raging-surf-booster?variant=50624599228647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Paldea Evolved Booster Box - Booster Box",
-      "price": "5499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-paldea-evolved-booster-box?variant=51251682377959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Enhanced 2-Pack Blister Galarian Birds (Fusion Strike!)",
-      "price": "369.00 kr",
-      "url": "https://pokestore.no/products/pokemon-enhanced-2-pack-blister-galarian-birds-fusion-strike?variant=50624533430503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Suicune Ex 010/034 CL",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-suicune-ex-010-034-cl?variant=50624615874791",
       "product_class": "card",
       "event": "ny"
     }

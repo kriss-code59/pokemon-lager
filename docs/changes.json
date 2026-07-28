@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Cardhouse",
+      "name": "Black Bolt booster pakke",
+      "price": "169 kr",
+      "url": "https://cardhouse.no/pokemon-engelske-booster-pakker/pokemon-black-bolt-booster-pakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:22:33+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: ME05 Pitch Black – Booster Pack *Risk of allocation*",
+      "price": "95 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/pre-order-pokemon-tcg-me05-pitch-black-booster-pack-risk-of-allocation",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-28T10:58:25+00:00",
       "store": "Braspill",
       "name": "Pokemon Crystal Gathering Key chain Gaveeske",
@@ -2680,24 +2698,6 @@
       "price": "kr 329.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-fluffy-scarf-pikachu-w11xh72cm-js-planning/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Chandelure Plush – All Star Collection (17cm, Sanei)",
-      "price": "kr 479.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-chandelure-plush-all-star-collection-17cm-sanei/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Galarian Meowth Plush – All Star Collection (19.5cm, Sanei)",
-      "price": "kr 469.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-galarian-meowth-plush-all-star-collection-19-5cm-sanei/",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
