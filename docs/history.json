@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T08:58:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Abyss Eye Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://pokestore.no/products/pokemon-abyss-eye-booster-box?variant=52328499085543",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T08:58:27+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Crystal Gathering Key chain Gaveeske",
+      "price": "349.00 kr",
+      "previous_price": "329.00 kr",
+      "url": "https://braspill.no/products/pokemon-crystal-gathering-charm-gift-box?variant=55162477969700",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T07:58:38+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 211/217 – Thick Scale",
@@ -179744,24 +179762,6 @@
       "name": "Pokemon Crocalor SVP080",
       "price": "15.00 kr",
       "url": "https://pokestore.no/products/pokemon-crocalor-svp080?variant=50624601096423",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Surging Sparks Booster Box",
-      "price": "5699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-surging-sparks-booster-box?variant=50624595263719",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Victini SVP 208 Black Star Promo JUMBO",
-      "price": "40.00 kr",
-      "url": "https://pokestore.no/products/pokemon-victini-svp-208-black-star-promo-jumbo?variant=51241127575783",
       "product_class": "card",
       "event": "ny"
     }
