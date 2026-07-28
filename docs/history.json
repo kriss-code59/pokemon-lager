@@ -1,6 +1,132 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Pokeball - Tin Box",
+      "price": "319.00 kr",
+      "url": "https://pokebua.no/products/pokemon-pokeball-tin-box?variant=51592482914537",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Billy & O'Nare Reverse Holo 142 - Journey Together",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/billy-onare-reverse-holo-142-journey-together?variant=53024733823255",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training Reverse Holo 143 - Journey Together",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-143-journey-together?variant=53024733921559",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training Reverse Holo 144 - Journey Together",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-144-journey-together?variant=53024733987095",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training Reverse Holo 145 - Journey Together",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-145-journey-together?variant=53024734052631",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Brock's Scouting Reverse Holo 146 - Journey Together",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/brocks-scouting-reverse-holo-146-journey-together?variant=53024734183703",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Emken",
+      "name": "ARTICUNO [REVERSED HOLO] #15 POKEMON CHINESE CS6.5C VICTORY STARS",
+      "price": "79,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/articuno-reversed-holo-15-pokemon-chinese-cs6-5c-victory-stars-5",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Emken",
+      "name": "MR. MIME #22 POKEMON JUNGLE",
+      "price": "69,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mr-mime-22-pokemon-jungle-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Billy & O'Nare Reverse Holo 142 - Journey Together",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/billy-onare-reverse-holo-142-journey-together?variant=53024733823255",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training Reverse Holo 143 - Journey Together",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-143-journey-together?variant=53024733921559",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training Reverse Holo 144 - Journey Together",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-144-journey-together?variant=53024733987095",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training Reverse Holo 145 - Journey Together",
+      "price": "5.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-145-journey-together?variant=53024734052631",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Pokesingles",
+      "name": "Brock's Scouting Reverse Holo 146 - Journey Together",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/brocks-scouting-reverse-holo-146-journey-together?variant=53024734183703",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T09:19:07+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Lumiose City Mini Tin",
+      "price": "kr 199,00",
+      "previous_price": "kr 249,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-lumiose-city-mini-tin/",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T08:58:27+00:00",
       "store": "Pokestore",
       "name": "Pokemon Abyss Eye Booster Box",
@@ -179636,132 +179762,6 @@
       "name": "Pokemon Destined Rivals Booster Box",
       "price": "7999.00 kr",
       "url": "https://pokestore.no/products/pokemon-destined-rivals-booster-box?variant=50822324060391",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Gengar 9-Pocket Zippered PRO-Binder",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-gengar-12-pocket-zippered-album?variant=51452355739879",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Hot Air Arena Booster Pakke",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-hot-air-arena-booster-box-1?variant=50841025020135",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Charizard ex League Battle Deck",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-charizard-ex-league-battle-deck?variant=50624591429863",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Brave Booster Pakke",
-      "price": "59.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-brave-booster-pakke?variant=51411638943975",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Charizard 9-Pocket Zippered PRO-Binder",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-charizard-9-pocket-zippered-pro-binder?variant=50624613679335",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Tilfeldig Pokemon Sleeves (65 stk)",
-      "price": "55.00 kr",
-      "url": "https://pokestore.no/products/tilfeldig-pokemon-sleeves-65-stk?variant=50624598016231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Twilight Masquerade Booster Box",
-      "price": "5399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-twilight-masquerade-booster-box?variant=50624557023463",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Gengar 12-Pocket Zippered PRO-Binder",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-gengar-12-pocket-zippered-album-copy?variant=51452374450407",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Zapdos 049 Black Star Promo",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-zapdos-049-black-star-promo?variant=50624559907047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X & Y ex Tin Sett",
-      "price": "1349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-ex-tin?variant=51707804319975",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Venusaur ex 003/165",
-      "price": "65.00 kr",
-      "url": "https://pokestore.no/products/pokemon-venusaur-ex-003-165?variant=50781990191335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Prismatic Evolutions Surprise Box",
-      "price": "1199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-surprise-box?variant=50624603980007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Quaquaval ex SVP084",
-      "price": "40.00 kr",
-      "url": "https://pokestore.no/products/pokemon-quaquaval-ex-svp084?variant=50624608829671",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crocalor SVP080",
-      "price": "15.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crocalor-svp080?variant=50624601096423",
       "product_class": "card",
       "event": "ny"
     }

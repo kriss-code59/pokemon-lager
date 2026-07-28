@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28T08:58:28+00:00",
+  "last_updated": "2026-07-28T09:19:08+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -62454,6 +62454,15 @@
     },
     {
       "store": "Pokebua",
+      "name": "Pokemon - Pokeball - Tin Box",
+      "price": "319.00 kr",
+      "in_stock": true,
+      "url": "https://pokebua.no/products/pokemon-pokeball-tin-box?variant=51592482914537",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokebua",
       "name": "Cody's Snack Pack",
       "price": "549.00 kr",
       "in_stock": true,
@@ -94171,8 +94180,8 @@
     {
       "store": "Pokesingles",
       "name": "Billy & O'Nare Reverse Holo 142 - Journey Together",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/billy-onare-reverse-holo-142-journey-together?variant=53024733823255",
       "store_count": null,
       "product_class": "card"
@@ -94909,8 +94918,8 @@
     {
       "store": "Pokesingles",
       "name": "Black Belt's Training Reverse Holo 143 - Journey Together",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-143-journey-together?variant=53024733921559",
       "store_count": null,
       "product_class": "card"
@@ -94918,8 +94927,8 @@
     {
       "store": "Pokesingles",
       "name": "Black Belt's Training Reverse Holo 144 - Journey Together",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-144-journey-together?variant=53024733987095",
       "store_count": null,
       "product_class": "card"
@@ -94927,8 +94936,8 @@
     {
       "store": "Pokesingles",
       "name": "Black Belt's Training Reverse Holo 145 - Journey Together",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "5.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/black-belts-training-reverse-holo-145-journey-together?variant=53024734052631",
       "store_count": null,
       "product_class": "card"
@@ -100120,8 +100129,8 @@
     {
       "store": "Pokesingles",
       "name": "Brock's Scouting Reverse Holo 146 - Journey Together",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "6.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/brocks-scouting-reverse-holo-146-journey-together?variant=53024734183703",
       "store_count": null,
       "product_class": "card"
@@ -151590,6 +151599,24 @@
     },
     {
       "store": "Emken",
+      "name": "ARTICUNO [REVERSED HOLO] #15 POKEMON CHINESE CS6.5C VICTORY STARS",
+      "price": "79,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/articuno-reversed-holo-15-pokemon-chinese-cs6-5c-victory-stars-5",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
+      "name": "MR. MIME #22 POKEMON JUNGLE",
+      "price": "69,00 kr",
+      "in_stock": true,
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mr-mime-22-pokemon-jungle-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Emken",
       "name": "TEAM ROCKET'S MEOWTH [COSMOS HOLO] #149 POKEMON DESTINED RIVALS",
       "price": "25,00 kr",
       "in_stock": true,
@@ -151783,24 +151810,6 @@
       "price": "5,00 kr",
       "in_stock": true,
       "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/fossil-quarry-76-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "DARK BELL #75 POKEMON PITCH BLACK",
-      "price": "5,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/dark-bell-75-pokemon-pitch-black-1",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Emken",
-      "name": "BACKTRACK BADGE #74 POKEMON PITCH BLACK",
-      "price": "5,00 kr",
-      "in_stock": true,
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/backtrack-badge-74-pokemon-pitch-black-1",
       "store_count": null,
       "product_class": "card"
     },
@@ -163831,7 +163840,7 @@
     {
       "store": "Spillmonster",
       "name": "Pokemon TCG – Lumiose City Mini Tin",
-      "price": "kr 249,00",
+      "price": "kr 199,00",
       "in_stock": true,
       "url": "https://spillmonster.no/product/pokemon-tcg-lumiose-city-mini-tin/",
       "store_count": null,
