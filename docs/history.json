@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T13:18:28+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Night Wanderer Japansk Boosterpakke",
+      "price": "45.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-night-wanderer-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T13:18:28+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Future Flash Japansk Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-future-flash-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-28T12:58:29+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - 151 Special Set Booster pakke Japan",
@@ -179741,24 +179759,6 @@
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-cinderace-sleeves?variant=51568657694951",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T07:58:19+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock RS Mega Lucario Figur",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-rs-mega-lucario-figur?variant=51555996762343",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T07:58:19+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock DX Deluxe Suicune Figur",
-      "price": "649.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-suicune-figur?variant=51555984736487",
-      "product_class": "card",
       "event": "ny"
     }
   ]
