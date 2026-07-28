@@ -1,6 +1,69 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates - Booster Pack",
+      "price": "599.00 kr",
+      "url": "https://retroworld.no/products/hidden-fates-booster-pack-fra-2019?variant=50101587312941",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - MAGMA VS AQUA BOOSTER PACK",
+      "price": "6 499,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-magma-vs-aqua-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - POWER KEEPERS BOOSTER PACK",
+      "price": "10 000,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-power-keepers-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - DOUBLE CRISIS BOOSTER PACK",
+      "price": "4 999,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-double-crisis-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "BULKPAKKE - POKÉMON",
+      "price": "8,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/bulkpakke-pokemon",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - MONOPOLY",
+      "price": "499,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/spill/pokemon-monopoly-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-28T11:22:33+00:00",
       "store": "Cardhouse",
       "name": "Black Bolt booster pakke",
@@ -2634,69 +2697,6 @@
       "name": "Pokemon: Food Forks (9pcs, Skater)",
       "price": "kr 69.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-food-forks-9pcs-skater/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Clock Wall Sticker Mew (Toyo-Case)",
-      "price": "kr 499.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-clock-wall-sticker-mew-toyo-case/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Rayquaza Plush – All Star Collection (20cm, Sanei)",
-      "price": "kr 729.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-plush-all-star-collection-20cm-sanei/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Charizard Plush Backpack (40x56x23cm, Shimamura)",
-      "price": "kr 629.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-charizard-plush-backpack-40x56x23cm-shimamura/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Dragonite Figure – Prime Figure Mini (10cm, Funism)",
-      "price": "kr 449.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-dragonite-figure-prime-figure-mini-10cm-funism/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Meowth Figure – Prime Figure Mini (10cm, Funism)",
-      "price": "kr 449.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-meowth-figure-prime-figure-mini-10cm-funism/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Ditto Plush Backpack (37x33x24.5cm, Shimamura)",
-      "price": "kr 629.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-ditto-plush-backpack-37x33x24-5cm-shimamura/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Fluffy Scarf – Pikachu (W11×H72cm, J’s Planning)",
-      "price": "kr 329.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-fluffy-scarf-pikachu-w11xh72cm-js-planning/",
       "product_class": "card",
       "event": "ny"
     }

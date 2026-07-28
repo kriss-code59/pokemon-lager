@@ -1,6 +1,69 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates - Booster Pack",
+      "price": "599.00 kr",
+      "url": "https://retroworld.no/products/hidden-fates-booster-pack-fra-2019?variant=50101587312941",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - MAGMA VS AQUA BOOSTER PACK",
+      "price": "6 499,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-magma-vs-aqua-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - POWER KEEPERS BOOSTER PACK",
+      "price": "10 000,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-power-keepers-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - DOUBLE CRISIS BOOSTER PACK",
+      "price": "4 999,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-double-crisis-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "BULKPAKKE - POKÉMON",
+      "price": "8,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/bulkpakke-pokemon",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T11:58:23+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - MONOPOLY",
+      "price": "499,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/spill/pokemon-monopoly-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-28T11:22:33+00:00",
       "store": "Cardhouse",
       "name": "Black Bolt booster pakke",
@@ -179696,69 +179759,6 @@
       "name": "Pokemon Crown Zenith Elite Trainer Box",
       "price": "4999.00 kr",
       "url": "https://pokestore.no/products/pokemon-crown-zenith-elite-trainer-box?variant=50624528515303",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance Elite Trainer Box",
-      "price": "1699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-elite-trainer-box?variant=50624503742695",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Gallade V SWSH258 Promo",
-      "price": "12.00 kr",
-      "url": "https://pokestore.no/products/pokemon-gallade-v-swsh258-promo?variant=50624584188135",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon White Flare Japansk Booster Pakke",
-      "price": "125.00 kr",
-      "url": "https://pokestore.no/products/pokemon-white-flare-japansk-booster-pakke?variant=51224752783591",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Glory of Team Rocket Booster Pakke",
-      "price": "80.00 kr",
-      "url": "https://pokestore.no/products/pokemon-glory-of-team-rocket-booster-pakke?variant=51224740233447",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ho-Oh Ex 007/034 CL",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ho-oh-ex-007-034-cl?variant=50624615842023",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Obsidian Flames Sleeved Booster",
-      "price": "130.00 kr",
-      "url": "https://pokestore.no/products/pokemon-obsidian-flames-sleeved-booster?variant=50624539230439",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Flareon SV167",
-      "price": "30.00 kr",
-      "url": "https://pokestore.no/products/pokemon-flareon-sv167?variant=50688396525799",
       "product_class": "card",
       "event": "ny"
     }
