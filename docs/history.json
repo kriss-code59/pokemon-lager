@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T14:29:03+00:00",
+      "store": "Cardhouse",
+      "name": "Black Bolt booster pakke",
+      "price": "179 kr",
+      "previous_price": "169 kr",
+      "url": "https://cardhouse.no/pokemon-engelske-booster-pakker/pokemon-black-bolt-booster-pakke",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T13:49:07+00:00",
       "store": "Cardcenter",
       "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
@@ -179749,15 +179758,6 @@
       "name": "Pokemon Center Japan Poke Ball & Energy Sleeves (64 stk)",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-poke-ball-energy-sleeves?variant=51568666968295",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T07:58:19+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Zekrom Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-zecrom-sleeves?variant=51568664248551",
       "product_class": "accessory",
       "event": "ny"
     }
