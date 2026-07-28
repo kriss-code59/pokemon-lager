@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-28T12:09:17+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Lumiose City Mini Tin Display",
+      "price": "1849.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-lumiose-city-mini-tin-isplay?variant=48648468824318",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T12:09:17+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 5 - Chinese Booster Pack",
+      "price": "45.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-5-chinese-booster-pack?variant=52031179555117",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-28T11:58:23+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Hidden Fates - Booster Pack",
@@ -2680,24 +2698,6 @@
       "price": "kr 149.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-face-plush-keychain-10cm-sun-art/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Round Wallet w/Strap – Black (115x90mm, SunArt)",
-      "price": "kr 279.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-round-wallet-w-strap-black-115x90mm-sunart/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T18:18:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Food Forks (9pcs, Skater)",
-      "price": "kr 69.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-food-forks-9pcs-skater/",
-      "product_class": "card",
       "event": "ny"
     }
   ]

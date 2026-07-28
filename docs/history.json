@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T12:09:17+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Lumiose City Mini Tin Display",
+      "price": "1849.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-lumiose-city-mini-tin-isplay?variant=48648468824318",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T12:09:17+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 5 - Chinese Booster Pack",
+      "price": "45.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-5-chinese-booster-pack?variant=52031179555117",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T12:09:17+00:00",
+      "store": "Cardhouse",
+      "name": "Terastal Festival Booster Boks",
+      "price": "1999 kr",
+      "previous_price": "1899 kr",
+      "url": "https://cardhouse.no/japansk/pokemon-japanske-booster-bokser/pokemon-terastal-festival-booster-boks",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-28T11:58:23+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Hidden Fates - Booster Pack",
@@ -179732,33 +179759,6 @@
       "name": "Pokemon Ascended Heroes Booster Bundle",
       "price": "1699.00 kr",
       "url": "https://pokestore.no/products/pokemon-ascended-heroes-booster-bundle?variant=51580396896487",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MEGA Expansion Pack Inferno X Booster Pakke",
-      "price": "89.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-expansion-pack-inferno-x-booster-pakke?variant=51470701265127",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Phantasmal Flames Booster Bundle",
-      "price": "1299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-bundle?variant=51390296719591",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crown Zenith Elite Trainer Box",
-      "price": "4999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crown-zenith-elite-trainer-box?variant=50624528515303",
       "product_class": "card",
       "event": "ny"
     }
