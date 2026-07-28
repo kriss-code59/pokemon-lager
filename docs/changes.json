@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-28T17:58:31+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Booster Bundle",
+      "price": "649.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-bundle?variant=54642789056835",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T17:58:31+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - MAGMA VS AQUA BOOSTER PACK",
+      "price": "6 499,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-magma-vs-aqua-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T17:58:31+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - POWER KEEPERS BOOSTER PACK",
+      "price": "10 000,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-power-keepers-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T17:58:31+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - DOUBLE CRISIS BOOSTER PACK",
+      "price": "4 999,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-double-crisis-booster-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T17:58:31+00:00",
+      "store": "PokeShop",
+      "name": "BULKPAKKE - POKÉMON",
+      "price": "8,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/bulkpakke-pokemon",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-28T16:58:13+00:00",
       "store": "Collectible",
       "name": "Gamegenic – Prime Standard Sleeves 66x91mm – Clear (50)",
@@ -2652,51 +2697,6 @@
       "name": "Pokemon: Paper Theater Cube w/Case – Pikachu (61x58mm, Ensky)",
       "price": "kr 389.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-paper-theater-cube-w-case-pikachu-61x58mm-ensky/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Playlot",
-      "name": "151 – Blooming Waters Premium Collection",
-      "price": "kr 5 999,00",
-      "url": "https://playlot.no/produkt/151-blooming-waters-premium-collection/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Playlot",
-      "name": "151 – Boosterbundle",
-      "price": "kr 2 999,00",
-      "url": "https://playlot.no/produkt/151-boosterbundle/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Playlot",
-      "name": "151 Boosterpack",
-      "price": "kr 449,00",
-      "url": "https://playlot.no/produkt/151-boosterpack-2/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Playlot",
-      "name": "151 Boosterpack JPN",
-      "price": "kr 299,00",
-      "url": "https://playlot.no/produkt/151-boosterpack-jpn/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Playlot",
-      "name": "151 Ultra Premium Collection",
-      "price": "kr 12 999,00",
-      "url": "https://playlot.no/produkt/151-ultra-premium-collection/",
       "product_class": "card",
       "event": "ny"
     }

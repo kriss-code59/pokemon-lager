@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28T17:20:59+00:00",
+  "last_updated": "2026-07-28T17:58:32+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -2201,7 +2201,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Cyber Judge Koreansk Booster Box",
       "price": "699.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-cyber-judge-koreansk-booster-box",
       "store_count": null,
       "product_class": "card"
@@ -5511,6 +5511,15 @@
     },
     {
       "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes 2-pk Blister",
+      "price": "419.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "BoosterKongen",
       "name": "Pokemon Destined Rivals Booster Pakke",
       "price": "139.00 kr",
       "in_stock": true,
@@ -5551,15 +5560,6 @@
       "price": "109.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-stellar-crown-booster-pakke?variant=52097169359159",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "BoosterKongen",
-      "name": "Pokemon Ascended Heroes 2-pk Blister",
-      "price": "419.00 kr",
-      "in_stock": true,
-      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
       "store_count": null,
       "product_class": "card"
     },
@@ -6476,7 +6476,7 @@
       "store": "Braspill",
       "name": "Pokémon Mega Nihil Zero Munikis boosterpakke",
       "price": "39.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://braspill.no/products/pokemon-mega-nihil-zero-munikis?variant=51554342404388",
       "store_count": null,
       "product_class": "card"
@@ -8852,7 +8852,7 @@
       "store": "Cardstore",
       "name": "Pitch Black Booster Bundle",
       "price": "649.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://store.cardstore.no/products/pitch-black-booster-bundle?variant=54642789056835",
       "store_count": null,
       "product_class": "card"
@@ -61205,7 +61205,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Ascended Heroes Booster Pakke",
       "price": "229.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/ascended-heroes-booster-pack?variant=47814083346686",
       "store_count": null,
       "product_class": "card"
@@ -61232,7 +61232,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Prismatic Evolutions Booster Pakke",
       "price": "229.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/prismatic-evolution-booster-pack?variant=47546700693758",
       "store_count": null,
       "product_class": "card"
@@ -61250,7 +61250,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Chaos Rising Booster Pakke",
       "price": "89.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-chaos-rising-booster-pack?variant=48154207224062",
       "store_count": null,
       "product_class": "card"
@@ -61331,7 +61331,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Paldean Fates Booster Pakke",
       "price": "329.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-paldean-fates-booster-pack?variant=48174457749758",
       "store_count": null,
       "product_class": "card"
@@ -150276,6 +150276,168 @@
     },
     {
       "store": "PokeShop",
+      "name": "POKÉMON - CHAOS RISING BOOSTER BUNDLE",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-chaos-rising-booster-bundle",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - CHAOS RISING BOOSTER BOX",
+      "price": "2 399,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-chaos-rising-booster-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PERFECT ORDER BOOSTER BOX",
+      "price": "2 299,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-perfect-order-booster-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - DESTINED RIVALS BOOSTER PACK",
+      "price": "129,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-destined-rivals-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - HIDDEN FATES BOOSTER PACK",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-hidden-fates-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MAGMA VS AQUA BOOSTER PACK",
+      "price": "6 499,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-magma-vs-aqua-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PLASMA BLAST BOOSTER PACK",
+      "price": "2 299,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-plasma-blast-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - POWER KEEPERS BOOSTER PACK",
+      "price": "10 000,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-power-keepers-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - DOUBLE CRISIS BOOSTER PACK",
+      "price": "4 999,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-double-crisis-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - EX SANDSTORM BOOSTER PACK",
+      "price": "4 299,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-ex-sandstorm-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - FURIOUS FISTS BOOSTER PACK",
+      "price": "899,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-furious-fists-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - HIDDEN LEGENDS BOOSTER PACK",
+      "price": "4 499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-hidden-legends-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - BREAK THROUGH SLEEVED BOOSTER",
+      "price": "1 249,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-break-through-sleeved-booster",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PERFECT ORDER BOOSTER PACK",
+      "price": "79,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-perfect-order-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - MEGA EVOLUTION BOOSTER PACK",
+      "price": "89,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-mega-evolution-booster-pack-apnes-live",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - JOURNEY TOGETHER BOOSTER PACK",
+      "price": "79,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/pokemon-journey-together-booster-pack",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "BULKPAKKE - POKÉMON",
+      "price": "8,00 kr",
+      "in_stock": true,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterpakker-1/bulkpakke-pokemon",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PERFECT ORDER ELITE TRAINER BOX",
+      "price": "799,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-perfect-order-elite-trainer-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
       "name": "POKÉMON - FIRST PARTNER ILLUSTRATION COLLECTION - SERIES 2",
       "price": "299,00 kr",
       "in_stock": false,
@@ -161391,19 +161553,19 @@
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon: Character Chocolate w/Wheat Puff (31g, Bandai)",
-      "price": "kr 39.00",
+      "name": "Pokemon TCG: Mega Symphonia Booster Pack (M1S, Japanese)",
+      "price": "kr 69.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-character-chocolate-w-wheat-puff-31g-bandai/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-mega-symphonia-booster-pack-m1s-japanese/",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Mega Symphonia Booster Pack (M1S, Japanese)",
-      "price": "kr 69.00",
+      "name": "Pokemon: Character Chocolate w/Wheat Puff (31g, Bandai)",
+      "price": "kr 39.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-mega-symphonia-booster-pack-m1s-japanese/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-character-chocolate-w-wheat-puff-31g-bandai/",
       "store_count": null,
       "product_class": "card"
     },
