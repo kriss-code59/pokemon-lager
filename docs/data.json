@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28T14:29:03+00:00",
+  "last_updated": "2026-07-28T14:48:58+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5205,6 +5205,15 @@
     },
     {
       "store": "Arcticloot",
+      "name": "Pokémon TCG: Sword & Shield Ultra-Premium Collection Charizard",
+      "price": "6999.00 kr",
+      "in_stock": true,
+      "url": "https://arcticloot.no/products/pokemon-tcg-sword-shield-ultra-premium-collection-charizard?variant=53702259966176",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Arcticloot",
       "name": "Pokémon World Championships Deck 2024",
       "price": "449.00 kr",
       "in_stock": false,
@@ -5502,15 +5511,6 @@
     },
     {
       "store": "BoosterKongen",
-      "name": "Pokemon Ascended Heroes 2-pk Blister",
-      "price": "419.00 kr",
-      "in_stock": true,
-      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "BoosterKongen",
       "name": "Pokemon Destined Rivals Booster Pakke",
       "price": "139.00 kr",
       "in_stock": true,
@@ -5551,6 +5551,15 @@
       "price": "109.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-stellar-crown-booster-pakke?variant=52097169359159",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes 2-pk Blister",
+      "price": "419.00 kr",
+      "in_stock": true,
+      "url": "https://boosterkongen.no/products/pokemon-ascended-heroes-2-pk-blister?variant=52718542127415",
       "store_count": null,
       "product_class": "card"
     },
