@@ -1,6 +1,246 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 5 per pers. Pokemon - Paldean Fates Boosterpakke",
+      "price": "349.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-paldean-fates-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Billy & O'Nare 142 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/billy-onare-142-journey-together?variant=53024733790487",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 143 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-143-journey-together?variant=53024733856023",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 144 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-144-journey-together?variant=53024733954327",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 145 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-145-journey-together?variant=53024734019863",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Brock's Scouting 146 - Journey Together",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/brocks-scouting-146-journey-together?variant=53024734150935",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Ark",
+      "name": "Pokémon Pocket Comics: Classic",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Outland",
+      "name": "Yellow Lucario MS-52 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
+      "price": "109,00 kr",
+      "url": "https://www.outland.no/p/p-yellow-lucario-ms-52-moncolle-figure-pokemon-moncolle-figurer-pokemon-4904810945895",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Outland",
+      "name": "Umbreon MS-21 MonColle Figure\nTakara Tomy\nFigur",
+      "price": "109,00 kr",
+      "url": "https://www.outland.no/p/p-umbreon-ms-21-moncolle-figure-pokemon-pokemon-4904810996217",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Outland",
+      "name": "Mew MS-17 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
+      "price": "109,00 kr",
+      "url": "https://www.outland.no/p/p-mew-ms-17-moncolle-figure-4904810912248",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 171/217 – Fan Rotom (Energy Symbol Pattern) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-171-217-fan-rotom-171-217-energy-symbol-pattern-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 171/217 – Fan Rotom – 171/217 (Dusk Ball) – Reverse Holo",
+      "price": "5,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-171-217-fan-rotom-171-217-dusk-ball-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 129/217 – Mightyena",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-129-217-mightyena/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 250/217 – Fan Rotom",
+      "price": "59,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 100/217 – Team Rocket’s Diglett",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-100-217-team-rockets-diglett/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 215/217 – Waitress",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Glossy Ribbon Mascot Keychain Gacha (Random, Bandai)",
+      "price": "kr 100.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-glossy-ribbon-mascot-keychain-gacha-random-bandai/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Astral Radiance - Elite Trainer Box",
+      "price": "1999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-astral-radiance-elite-trainer-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Cardstore",
+      "name": "Pitch Black Booster Bundle",
+      "price": "649.00 kr",
+      "url": "https://store.cardstore.no/products/pitch-black-booster-bundle?variant=54642789056835",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Terastal Festival ex Booster Box (Japansk)",
+      "price": "2099.00 kr",
+      "previous_price": "1999.00 kr",
+      "url": "https://pokenordic.no/products/terastal-festival-ex-booster-box?variant=47772344549630",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Billy & O'Nare 142 - Journey Together",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/billy-onare-142-journey-together?variant=53024733790487",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 143 - Journey Together",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-143-journey-together?variant=53024733856023",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 144 - Journey Together",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-144-journey-together?variant=53024733954327",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 145 - Journey Together",
+      "price": "3.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-145-journey-together?variant=53024734019863",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Brock's Scouting 146 - Journey Together",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/brocks-scouting-146-journey-together?variant=53024734150935",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Phantasmal Flames Elite Trainer Box",
+      "price": "2499.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-elite-trainer-box?variant=51389932929255",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Evolutions Boosterpack",
+      "price": "kr 229,00",
+      "url": "https://playlot.no/produkt/prismatic-evolutions-boosterpack/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-27T19:56:34+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Lost Origin - Booster Pack",
@@ -179524,249 +179764,6 @@
       "name": "Pokemon Battle Partners Japansk Booster Box",
       "price": "1199.00 kr",
       "url": "https://pokestore.no/products/pokemon-battle-partners-japansk-booster-box?variant=50760429306087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Skeledirge ex SVP081 Jumbo",
-      "price": "40.00 kr",
-      "url": "https://pokestore.no/products/pokemon-skeledirge-ex-svp081-jumbo?variant=50624600932583",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance Premium Checklane Blister Sett",
-      "price": "245.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-premium-checklane-blister-sett?variant=50624521830631",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pitch Black Elite Trainer Box",
-      "price": "1699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pitch-black-elite-trainer-box?variant=52266253615335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Evolution Enhanced Booster Box - Booster Box",
-      "price": "5799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-evolution-enhanced-booster-box?variant=51608025333991",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Black Bolt & White Flare Tech Sticker Collection (2 stk)",
-      "price": "1399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-black-bolt-white-flare-tech-sticker-collection-2-stk?variant=50939991589095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Hoopa SWSH176 JUMBO Black Star Promo",
-      "price": "12.00 kr",
-      "url": "https://pokestore.no/products/pokemon-hoopa-swsh176-jumbo-black-star-promo?variant=50624564953319",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crown Zenith Premium Figure Collection Shiny Zacian",
-      "price": "5799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crown-zenith-premium-figure-collection-shiny-zacian?variant=50624528810215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Brilliant Stars Booster (36 stk uten booster box)",
-      "price": "7699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-brilliant-stars-booster-36-stk-uten-display?variant=50624527171815",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Cynthia's Garchomp ex Premium Collection",
-      "price": "849.00 kr",
-      "url": "https://pokestore.no/products/pokemon-cynthias-garchomp-ex-premium-collection?variant=51053182583015",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Eevee Accessory Pouch",
-      "price": "50.00 kr",
-      "url": "https://pokestore.no/products/pokemon-eevee-accessory-pouch?variant=50980055580903",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Fusion Strike Booster (36 stk uten booster box)",
-      "price": "8699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-fusion-strike-booster-36-stk-uten-display?variant=50624581992679",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pitch Black Booster Box",
-      "price": "3899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pitch-black-booster-box?variant=52266251452647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Hot Air Arena Booster Box",
-      "price": "2150.00 kr",
-      "url": "https://pokestore.no/products/pokemon-hot-air-arena-booster-box?variant=50760462237927",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Meowscarada ex SVP078 Jumbo Black Star Promo",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-meowscarada-ex-svp078-jumbo?variant=50624601260263",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ogerpon ex Premium Collection",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ogerpon-ex-premium-collection?variant=50624591593703",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Deluxe Battle Decks - Quaquaval ex & Meowscarada ex",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-deluxe-battle-decks-quaquaval-ex-meowscarada-ex?variant=50624555352295",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Brilliant Stars Booster Box",
-      "price": "8999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-brilliant-stars-booster-display?variant=50624502268135",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X ex Tin",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-tin?variant=51707808514279",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Grafaiai ex Box",
-      "price": "429.00 kr",
-      "url": "https://pokestore.no/products/pokemon-grafaiai-ex-box?variant=50688343769319",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Astral Radiance Booster Box",
-      "price": "4999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-astral-radiance-booster-box?variant=50643816087783",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Venusaur MEP013 Black Star Promo (JUMBO)",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-venusaur-mep013-black-star-promo-jumbo?variant=51547300364519",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Scorching Charcoal 026/034 CL",
-      "price": "6.00 kr",
-      "url": "https://pokestore.no/products/pokemon-scorching-charcoal-026-034-cl?variant=50624616005863",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Boltund, Eiscue & Galarian Sirfetch'd Promopakke",
-      "price": "15.00 kr",
-      "url": "https://pokestore.no/products/pokemon-boltund-eiscue-galarian-sirfetchd-promopakke?variant=50624605520103",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lost Origin 3pk Blister Sett",
-      "price": "1589.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lost-origin-3pk-blister-sett?variant=50624514261223",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X ex Playmat",
-      "price": "150.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-ex-playmat?variant=51582573805799",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Evolution Booster Box",
-      "price": "5299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-evolution-booster-box?variant=51389695557863",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Oshawott 021/086 Foil Promo",
-      "price": "10.00 kr",
-      "url": "https://pokestore.no/products/pokemon-snivy-021-086-foil-promo?variant=51241084584167",
       "product_class": "card",
       "event": "ny"
     }

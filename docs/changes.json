@@ -1,6 +1,159 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 5 per pers. Pokemon - Paldean Fates Boosterpakke",
+      "price": "349.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-paldean-fates-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Billy & O'Nare 142 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/billy-onare-142-journey-together?variant=53024733790487",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 143 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-143-journey-together?variant=53024733856023",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 144 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-144-journey-together?variant=53024733954327",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 145 - Journey Together",
+      "price": "3.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-145-journey-together?variant=53024734019863",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Pokesingles",
+      "name": "Brock's Scouting 146 - Journey Together",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/brocks-scouting-146-journey-together?variant=53024734150935",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Ark",
+      "name": "Pokémon Pocket Comics: Classic",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-pocket-comics-classic-9781974700745",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Outland",
+      "name": "Yellow Lucario MS-52 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
+      "price": "109,00 kr",
+      "url": "https://www.outland.no/p/p-yellow-lucario-ms-52-moncolle-figure-pokemon-moncolle-figurer-pokemon-4904810945895",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Outland",
+      "name": "Umbreon MS-21 MonColle Figure\nTakara Tomy\nFigur",
+      "price": "109,00 kr",
+      "url": "https://www.outland.no/p/p-umbreon-ms-21-moncolle-figure-pokemon-pokemon-4904810996217",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Outland",
+      "name": "Mew MS-17 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
+      "price": "109,00 kr",
+      "url": "https://www.outland.no/p/p-mew-ms-17-moncolle-figure-4904810912248",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 171/217 – Fan Rotom (Energy Symbol Pattern) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-171-217-fan-rotom-171-217-energy-symbol-pattern-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 171/217 – Fan Rotom – 171/217 (Dusk Ball) – Reverse Holo",
+      "price": "5,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-171-217-fan-rotom-171-217-dusk-ball-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 129/217 – Mightyena",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-129-217-mightyena/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 250/217 – Fan Rotom",
+      "price": "59,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 100/217 – Team Rocket’s Diglett",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-100-217-team-rockets-diglett/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 215/217 – Waitress",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-28T02:18:27+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Glossy Ribbon Mascot Keychain Gacha (Random, Bandai)",
+      "price": "kr 100.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-glossy-ribbon-mascot-keychain-gacha-random-bandai/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-27T19:18:20+00:00",
       "store": "PokeNordic",
       "name": "Pokémon First Partner Illustration Collection (Vol. 1) [B-VARE*]",
@@ -2544,159 +2697,6 @@
       "name": "Ascended Heroes – 215/217 – Waitress",
       "price": "3,90 kr",
       "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:34:50+00:00",
-      "store": "Spillmonster",
-      "name": "Pokemon TCG – VSTAR Universe – Booster Box (Japansk)",
-      "price": "kr 2 999,00",
-      "url": "https://spillmonster.no/product/pokemon-tcg-vstar-universe-booster-box-japansk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "PokeShop",
-      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
-      "price": "549,00 kr",
-      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON CHASING GLORY TOGETHER BOOSTER BOKS",
-      "price": "409,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/chasing-glory-together-booster-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON TERASTAL GATHERING BOOSTER BOKS",
-      "price": "1 199,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/terastal-gathering-booster-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON 30TH ANNIVERSARY: FIRST PARTNER VOL. 2",
-      "price": "149,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/pokemon-30th-anniversary-first-partner-card-set-vol-2",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON 30TH ANNIVERSARY: FIRST PARTNER VOL. 1",
-      "price": "175,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/pokemon-30th-anniversary-first-partner-card-set-vol-1",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON GEM PACK VOL. 4 BOOSTER PAKKE",
-      "price": "25,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/pokemon-gem-pack-vol-4-booster-pakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON GEM PACK VOL. 4 BOOSTER BOKS",
-      "price": "395,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-4-booster-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON GEM PACK VOL. 5 BOOSTER BOKS",
-      "price": "539,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-5-booster-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON STELLAR CRYSTAL SLIM BOOSTER BOKS",
-      "price": "398,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/stellar-crystal-slim-booster-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON BLADE AWAKENING SLIM BOOSTER BOKS",
-      "price": "379,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/blade-awakening-slim-booster-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON 2026 DRAGON BOAT FESTIVAL GIFT BOKS",
-      "price": "449,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/2026-dragon-boat-festival-gift-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T16:19:20+00:00",
-      "store": "Card Kings",
-      "name": "POKÉMON V-UNION PIKACHU GIFT BOKS",
-      "price": "399,00 kr",
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/v-union-pikachu-gift-boks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T14:38:42+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Scarlet & Violet Base Set - Booster Pack",
-      "price": "99.00 kr",
-      "url": "https://pokebua.no/products/pokemon-scarlet-violet-base-set-booster-pack?variant=48543772901609",
-      "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 129/217 – Mightyena",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-129-217-mightyena/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 250/217 – Fan Rotom",
-      "price": "59,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-25T13:58:38+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 100/217 – Team Rocket’s Diglett",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-100-217-team-rockets-diglett/",
       "product_class": "card",
       "event": "ny"
     }
