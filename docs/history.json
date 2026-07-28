@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-28T02:58:18+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Astral Radiance Elite Trainer Box",
+      "price": "1799.00 kr",
+      "url": "https://pokestore.no/products/pokemon-astral-radiance-elite-trainer-box?variant=50624503742695",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-28T02:18:27+00:00",
       "store": "Cardcenter",
       "name": "Maks 5 per pers. Pokemon - Paldean Fates Boosterpakke",
@@ -179755,15 +179763,6 @@
       "name": "Pokemon Ascended Heroes Mega Emboar ex Box",
       "price": "1049.00 kr",
       "url": "https://pokestore.no/products/pokemon-ascended-heroes-mega-emboar-ex-box?variant=51707804516583",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T06:17:59+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Battle Partners Japansk Booster Box",
-      "price": "1199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-battle-partners-japansk-booster-box?variant=50760429306087",
       "product_class": "card",
       "event": "ny"
     }
