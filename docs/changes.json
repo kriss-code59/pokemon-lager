@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blade Awakened Slim Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-slim-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Special Event Booster Pack (Kinesisk / Chinese)",
+      "price": "119 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-special-event-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Hope Booster Pack (Kinesisk / Chinese)",
+      "price": "79 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-hope-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Gathering Booster Pack (Kinesisk / Chinese)",
+      "price": "109 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-gathering-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Surprises Booster Pack (Kinesisk / Chinese)",
+      "price": "129 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-surprises-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Journey Booster Pack (Kinesisk / Chinese)",
+      "price": "119 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-journey-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-29T10:58:34+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -2644,60 +2698,6 @@
       "price": "kr 299.00",
       "url": "https://www.neo-tokyo.no/product/plush-pokemon-snorlax-25cm/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Caterpie Plush (12cm)",
-      "price": "kr 199.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-caterpie-plush-12cm/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Rayquaza Plush (80cm)",
-      "price": "kr 449.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-plush-80cm/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Gengar Beanie",
-      "price": "kr 149.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-gengar-beanie/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "One Piece TCG: Royal Blood Booster Pack (OP-10, Bandai, Japanese)",
-      "price": "kr 99.00",
-      "url": "https://www.neo-tokyo.no/product/one-piece-tcg-royal-blood-booster-pack-op-10-bandai-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Leafeon Plush (24cm, Aoger)",
-      "price": "kr 299.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-leafeon-plush-24cm/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Vaporeon Key Art Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-vaporeon-key-art-acrylic-keychain/",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]

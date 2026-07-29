@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Blade Awakened Slim Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-blade-awakened-kinesisk-slim-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Special Event Booster Pack (Kinesisk / Chinese)",
+      "price": "119 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-special-event-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Hope Booster Pack (Kinesisk / Chinese)",
+      "price": "79 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-hope-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Gathering Booster Pack (Kinesisk / Chinese)",
+      "price": "109 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-gathering-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Surprises Booster Pack (Kinesisk / Chinese)",
+      "price": "129 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-surprises-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T11:38:41+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&S: Collect 151 Journey Booster Pack (Kinesisk / Chinese)",
+      "price": "119 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-ss-collect-151-journey-booster-pack-kinesisk-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-29T11:18:45+00:00",
       "store": "Mystic Trades",
       "name": "[BESTILLINGSVARE] - Pokémon Booster-pakke – SV09 – Scarlet & Violet: Journey Together",
@@ -179686,60 +179740,6 @@
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-tinkaton-9-pocket-pro-binder®-for-pokemon?variant=52233442230503",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Destined Rivals Build & Battle Kit Display",
-      "price": "11999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-destined-rivals-build-battle-kit-display?variant=52209256792295",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu Alcove Tower Deck Box",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pikachu-alcove®-tower-deck-box®-for-pokemon?variant=52112666886375",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Fuecoco Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-fuecoco-model-kit?variant=52079379677415",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Kyurem Model Kit",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-kyurem-model-kit?variant=52078264746215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Charmander Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-charmander-model-kit?variant=52078251147495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Quaxly Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-quaxly-model-kit?variant=52078248886503",
-      "product_class": "card",
       "event": "ny"
     }
   ]
