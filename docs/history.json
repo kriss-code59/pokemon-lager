@@ -1,6 +1,129 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Chaos Rising Booster Pakke",
+      "price": "89.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-chaos-rising-booster-pack?variant=48154207224062",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 5 - Chinese Booster Box",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-5-chinese-booster-box?variant=52031177556269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradigm Trigger s12 - Booster Pack (Japansk)",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paradigm-trigger-s12-booster-pack-japansk?variant=51746898739501",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Jolteon Advanced Gift Box (Kinesisk)",
+      "price": "2699.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-eternal-birth-chinese-booster-pack?variant=50882707259693",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Playlot",
+      "name": "151 Boosterpack",
+      "price": "kr 449,00",
+      "url": "https://playlot.no/produkt/151-boosterpack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Storm Emeralda – Booster Box (Forhåndsbestilling, release 31. Juli)",
+      "price": "kr 2 399,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-storm-emeralda-booster-box-forhandsbestilling-release-31-juli/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Glaceon",
+      "price": "1499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-glaceon",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Vaporeon Advanced Gift Box (Kinesisk)",
+      "price": "2699.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://retroworld.no/products/pokemon-vaporeon-advanced-gift-box?variant=52125730668845",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Flareon Advanced Gift Box (Kinesisk)",
+      "price": "2699.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://retroworld.no/products/pokemon-flareon-advanced-gift-box?variant=52125730013485",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradigm Trigger s12 - Booster Pack (Japansk)",
+      "price": "129.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paradigm-trigger-s12-booster-pack-japansk?variant=51746898739501",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Jolteon Advanced Gift Box (Kinesisk)",
+      "price": "2699.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-eternal-birth-chinese-booster-pack?variant=50882707259693",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Ark",
+      "name": "Pikachu's Nighttime Adventure",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/pikachus-nighttime-adventure-9780702340109",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Premium Figure Collection",
+      "price": "kr 3 299,00",
+      "url": "https://playlot.no/produkt/prismatic-premium-figure-collection/",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Premium Figure Collection",
+      "price": "kr 3 299,00",
+      "previous_price": "kr 3 199,00",
+      "url": "https://playlot.no/produkt/prismatic-premium-figure-collection/",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-29T16:58:29+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Journey Together Enhanced Booster Box",
@@ -179595,132 +179718,6 @@
       "price": "139.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-litten-figur?variant=51236986093799",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mega Venusaur Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mega-venusaur-figur?variant=51235298869479",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mega Charizard X Figur",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mega-charizard-x-figur?variant=51235291562215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Salamence Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-salamence-figur?variant=51235291005159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Rowlet Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-rowlet-figur?variant=51235284418791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Glaceon Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-glaceon-figur?variant=51235279929575",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Machamp Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-machamp-plush?variant=51188336197863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Crawdaunt Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-crawdaunt-plush?variant=51188334854375",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Tirtouga Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-tirtouga-plush?variant=51188334362855",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Gogoat Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-gogoat-plush?variant=51188332036327",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Sigilyph Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-sigilyph-plush?variant=51188325777639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Heat Rotom Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-heat-rotom-plush?variant=51188322762983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Electrike Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-electrike-plush?variant=51188313915623",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Gastrodon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-gastrodon-plush?variant=51188044497127",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Seel Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-seel-plush?variant=51188036501735",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]

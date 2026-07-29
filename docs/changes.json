@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Chaos Rising Booster Pakke",
+      "price": "89.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-chaos-rising-booster-pack?variant=48154207224062",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 5 - Chinese Booster Box",
+      "price": "799.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-5-chinese-booster-box?variant=52031177556269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradigm Trigger s12 - Booster Pack (Japansk)",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paradigm-trigger-s12-booster-pack-japansk?variant=51746898739501",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Jolteon Advanced Gift Box (Kinesisk)",
+      "price": "2699.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-eternal-birth-chinese-booster-pack?variant=50882707259693",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Playlot",
+      "name": "151 Boosterpack",
+      "price": "kr 449,00",
+      "url": "https://playlot.no/produkt/151-boosterpack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T17:19:28+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Storm Emeralda – Booster Box (Forhåndsbestilling, release 31. Juli)",
+      "price": "kr 2 399,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-storm-emeralda-booster-box-forhandsbestilling-release-31-juli/",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-29T16:58:29+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Journey Together Enhanced Booster Box",
@@ -2643,60 +2697,6 @@
       "name": "Pokemon Gem Pack Volume 4 Booster Box (Kinesisk)",
       "price": "kr649,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-gem-pack-volume-4-booster-box-kinesisk/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Ultra Pro Iono og Bellibolt spillmatte for Pokemon",
-      "price": "kr299,00",
-      "url": "https://www.kanoncon.no/produkt/ultra-pro-iono-og-bellibolt-spillmatte-for-pokemon/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Nihil Zero Japansk Booster Pack",
-      "price": "kr49,00",
-      "url": "https://www.kanoncon.no/produkt/nihil-zero-japansk-booster-pack/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Team Rocket’s Mewtwo ex League Battle Deck",
-      "price": "kr599,00",
-      "url": "https://www.kanoncon.no/produkt/team-rockets-mewtwo-ex-league-battle-deck/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Trainers Toolkit 2025",
-      "price": "kr749,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-trainers-toolkit-2025/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Center Tohoku Box",
-      "price": "kr2.999,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-center-tohoku-box/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Center Fukuoka Box",
-      "price": "kr4.499,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-center-fukuoka-box/",
       "product_class": "card",
       "event": "ny"
     }
