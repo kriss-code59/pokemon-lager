@@ -1,6 +1,84 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Eevee Heroes Japansk Boosterpakke",
+      "price": "699.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-eevee-heroes-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Space Juggler Japansk Boosterpakke",
+      "price": "85.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-space-juggler-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Time Gazer Japansk Boosterpakke",
+      "price": "79.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-time-gazer-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Jet Black Japansk Boosterpakke",
+      "price": "85.00 kr",
+      "url": "https://cardcenter.no/products/jet-black-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Abyss Eye Japansk Boosterpakke",
+      "price": "55.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-abyss-eye-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon - Black Bolt & White Flare Unova Heavy Hitters Premium Collection",
+      "price": "4299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-black-bolt-white-flare-unova-heavy-hitters-premium-collection?variant=52266209673517",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Eevee Heroes Japansk Booster Display Box",
+      "price": "18999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-eevee-heroes-japansk-booster-display-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Time Gazer Japansk Booster Box",
+      "price": "2199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-time-gazer-japansk-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T13:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Jet Black Booster Box",
+      "price": "2699.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-jet-black-booster-box",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-29T13:18:35+00:00",
       "store": "Cardcenter",
       "name": "Pokemon VMAX Climax Japansk Boosterpakke",
@@ -179655,87 +179733,6 @@
       "name": "Pokemon Center Japan Original Anorith Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-anorith-plush?variant=50982968688871",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Rayquaza Legendary Foil Playmat",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-rayquaza-legendary-foil-playmat?variant=50976669073639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Magnezone Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-magnezone-plush?variant=50936754766055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Professor Juniper Deck Box",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-professor-juniper-oppbevaringseske?variant=50923999428839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kirlia Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kirlia-plush?variant=50863559475431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Munchlax (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-munchlax-25cm?variant=50824915222759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Munchlax",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-munchlax?variant=50824914469095",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Roaring Moon Plush (37cm)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-salamance-plush-37cm?variant=50760535769319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Palkia Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-palkia-plush?variant=50760528462055",
       "product_class": "accessory",
       "event": "ny"
     }
