@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T12:18:37+00:00",
+  "last_updated": "2026-07-29T12:38:37+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -95,7 +95,7 @@
       "store": "Cardcenter",
       "name": "Glory Of Team Rocket Japansk Boosterpakke",
       "price": "119.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/glory-of-team-rocket-japansk-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -194,7 +194,7 @@
       "store": "Cardcenter",
       "name": "White Flare Japansk Boosterpakke",
       "price": "145.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/white-flare-japansk-booster-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -221,7 +221,7 @@
       "store": "Cardcenter",
       "name": "Black Bolt Japansk Booster Boosterpakke",
       "price": "149.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/black-bolt-japansk-booster-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -565,6 +565,15 @@
       "price": "2799.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-perfect-order-booster-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Battle Partners Japansk Boosterpakke",
+      "price": "45.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/battle-partners-japansk-boosterpakke",
       "store_count": null,
       "product_class": "card"
     },
@@ -1616,7 +1625,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Espeon",
       "price": "1499.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-espeon",
       "store_count": null,
       "product_class": "accessory"
@@ -122279,7 +122288,7 @@
       "store": "Pokestore",
       "name": "Pokemon Phantasmal Flames Booster Pakke",
       "price": "219.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-pakke?variant=51389966647527",
       "store_count": null,
       "product_class": "card"
@@ -148647,15 +148656,6 @@
     },
     {
       "store": "Ark",
-      "name": "Figur Pokemon clip n og S18",
-      "price": "?",
-      "in_stock": false,
-      "url": "https://www.ark.no/produkt/figur-pokemon-clip-n-og-s18-5710948457051",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Ark",
       "name": "Pokemon Origami: Fold Your Own Pokemon",
       "price": "?",
       "in_stock": true,
@@ -148669,6 +148669,15 @@
       "price": "?",
       "in_stock": true,
       "url": "https://www.ark.no/produkt/boker/skjonnlitteratur/pokemon-diamond-and-pearl-adventure-vol-7-9781421534916",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Ark",
+      "name": "Pikachu''s First Friends (Pokémon Monpoke Picture Book)",
+      "price": "?",
+      "in_stock": true,
+      "url": "https://www.ark.no/produkt/boker/barneboker/pikachus-first-friends-pokemon-monpoke-picture-book-9781339005867",
       "store_count": null,
       "product_class": "card"
     },

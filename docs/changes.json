@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T12:38:36+00:00",
+      "store": "Cardcenter",
+      "name": "Glory Of Team Rocket Japansk Boosterpakke",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/glory-of-team-rocket-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:38:36+00:00",
+      "store": "Cardcenter",
+      "name": "White Flare Japansk Boosterpakke",
+      "price": "145.00 kr",
+      "url": "https://cardcenter.no/products/white-flare-japansk-booster-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:38:36+00:00",
+      "store": "Cardcenter",
+      "name": "Black Bolt Japansk Booster Boosterpakke",
+      "price": "149.00 kr",
+      "url": "https://cardcenter.no/products/black-bolt-japansk-booster-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:38:36+00:00",
+      "store": "Cardcenter",
+      "name": "Battle Partners Japansk Boosterpakke",
+      "price": "45.00 kr",
+      "url": "https://cardcenter.no/products/battle-partners-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T12:38:36+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Phantasmal Flames Booster Pakke",
+      "price": "219.00 kr",
+      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-pakke?variant=51389966647527",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:38:36+00:00",
+      "store": "Ark",
+      "name": "Pikachu''s First Friends (Pokémon Monpoke Picture Book)",
+      "price": "?",
+      "url": "https://www.ark.no/produkt/boker/barneboker/pikachus-first-friends-pokemon-monpoke-picture-book-9781339005867",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-29T12:18:36+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Fusion Arts Japansk Display Boosterpakke",
@@ -2643,60 +2697,6 @@
       "name": "Pokemon TCG: Nihil Zero – Booster Pack (M3, Japanese)",
       "price": "kr 59.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-nihil-zero-booster-pack-m3-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Umbreon Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-umbreon-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Mega Dream EX – Booster Pack (M2a, Japanese)",
-      "price": "kr 249.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-mega-dream-ex-booster-pack-m2a-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Mimikyu Standing BIG Plush (48cm, Aoger)",
-      "price": "kr 479.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-mimikyu-standing-big-plush-47cm/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Mini-Figure Blind Box w/Chewing Gum – Terapagos Edition (1,5g, Bandai)",
-      "price": "kr 79.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-mini-figure-blind-box-w-chewing-gum-terapagos-edition-15g-bandai/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Vaporeon Plush (25cm)",
-      "price": "kr 329.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-vaporeon-plush-25cm/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Eevee Plushie (26cm, Aoger)",
-      "price": "kr 299.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-eevee-26cm/",
       "product_class": "card",
       "event": "ny"
     }
