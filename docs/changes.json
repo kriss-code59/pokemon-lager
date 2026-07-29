@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T09:38:38+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Gem Packs Volume 2 Kinesisk Booster Box",
+      "price": "1299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-gem-packs-volume-2-kinesisk-booster-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-29T09:18:49+00:00",
       "store": "Pokesingles",
       "name": "Antique Cover Fossil 129 - Stellar Crown",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon: Rayquaza Acrylic Keychain",
       "price": "kr 39.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Eevee Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-eevee-acrylic-keychain/",
       "product_class": "accessory",
       "event": "ny"
     }

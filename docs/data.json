@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T09:18:50+00:00",
+  "last_updated": "2026-07-29T09:38:39+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -158,7 +158,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Gem Packs Volume 2 Kinesisk Booster Box",
       "price": "1299.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-gem-packs-volume-2-kinesisk-booster-box",
       "store_count": null,
       "product_class": "card"
@@ -1481,7 +1481,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Reward Round Kinesisk Slim Boosterpack",
       "price": "29.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-reward-round-kinesisk-slim-booster-pack",
       "store_count": null,
       "product_class": "card"

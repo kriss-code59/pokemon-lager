@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T09:38:38+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Gem Packs Volume 2 Kinesisk Booster Box",
+      "price": "1299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-gem-packs-volume-2-kinesisk-booster-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T09:38:38+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Reward Round Kinesisk Slim Boosterpack",
+      "price": "29.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-reward-round-kinesisk-slim-booster-pack",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-29T09:18:49+00:00",
       "store": "Pokesingles",
       "name": "Antique Cover Fossil 129 - Stellar Crown",
@@ -179722,24 +179739,6 @@
       "name": "Pokemon Pokepeace Espurr Plush",
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-pokepeace-espurr-plush-1?variant=51994844889319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Scorbunny Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-scorbunny-plush-1?variant=51994844856551",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Popplio Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-popplio-plush?variant=51994844561639",
       "product_class": "accessory",
       "event": "ny"
     }
