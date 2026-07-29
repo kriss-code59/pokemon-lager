@@ -1,6 +1,40 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T14:58:49+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Summer Japansk Promopakke",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-summer-japansk-promopakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T14:58:49+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon 151 Booster Box (Japansk)",
+      "price": "5399.00 kr",
+      "previous_price": "3490.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-151-booster-box-japansk?variant=47851361370366",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T14:58:49+00:00",
+      "store": "Gameninja",
+      "name": "Pokemon – Ninja Spinner Japansk Display Booster Box",
+      "price": "599,00 kr",
+      "url": "https://www.gameninja.no/produkt/pokemon-ninja-spinner-japansk-display-booster-box/",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T14:58:49+00:00",
+      "store": "Playlot",
+      "name": "Black&White Next Destinies Explosive Edge",
+      "price": "kr 499,00",
+      "url": "https://playlot.no/produkt/blackwhite-next-destinies-explosive-edge/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-29T14:38:45+00:00",
       "store": "Playlot",
       "name": "Battle Arena Decks [Rayquaza EX VS. Kaldeo EX]",
@@ -179692,42 +179726,6 @@
       "name": "Pokemon Center Japan Original Zoroark Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-zoroark-plush?variant=50993329111271",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Crobat Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-crobat-plush?variant=50993285824743",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zweilous Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zweilous-plush?variant=50992815735015",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Pawmo Plush",
-      "price": "269.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-pawmo-plush?variant=50992809246951",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kabutops Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kabutops-plush?variant=50991656141031",
       "product_class": "accessory",
       "event": "ny"
     }

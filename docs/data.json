@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T14:38:45+00:00",
+  "last_updated": "2026-07-29T14:58:49+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1177,6 +1177,15 @@
       "price": "59.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-kinesisk-mini-figure-vol-3-mystery-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Summer Japansk Promopakke",
+      "price": "99.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-summer-japansk-promopakke",
       "store_count": null,
       "product_class": "card"
     },
@@ -62148,6 +62157,15 @@
     },
     {
       "store": "PokeNordic",
+      "name": "Pokémon 151 Booster Pakke (Japansk)",
+      "price": "299.00 kr",
+      "in_stock": false,
+      "url": "https://pokenordic.no/products/pokemon-151-booster-box-japansk-kopi?variant=48657591533822",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeNordic",
       "name": "Pokémon Lumiose City Mini Tin Display",
       "price": "1849.00 kr",
       "in_stock": true,
@@ -62383,7 +62401,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon 151 Booster Box (Japansk)",
-      "price": "3490.00 kr",
+      "price": "5399.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-151-booster-box-japansk?variant=47851361370366",
       "store_count": null,
@@ -157226,7 +157244,7 @@
       "store": "Gameninja",
       "name": "Pokemon – Ninja Spinner Japansk Display Booster Box",
       "price": "599,00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://www.gameninja.no/produkt/pokemon-ninja-spinner-japansk-display-booster-box/",
       "store_count": null,
       "product_class": "card"
@@ -163175,7 +163193,7 @@
       "store": "Playlot",
       "name": "Black&White Next Destinies Explosive Edge",
       "price": "kr 499,00",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://playlot.no/produkt/blackwhite-next-destinies-explosive-edge/",
       "store_count": null,
       "product_class": "card"
