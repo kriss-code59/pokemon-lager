@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T18:58:46+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 121/217 – Koraidon ex",
+      "price": "13,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-121-217-koraidon-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T18:58:46+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 030/217 – Pignite",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-030-217-pignite/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T18:58:46+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 194/217 – Mystery Garden",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-194-217-mystery-garden/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T18:58:46+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Mega Dream Booster Box (Japansk)",
+      "price": "1299.00 kr",
+      "previous_price": "1349.00 kr",
+      "url": "https://pokenordic.no/products/mega-dream-booster-box?variant=47548038349054",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-29T18:38:59+00:00",
       "store": "Collectible",
       "name": "Pitch Black – 113/084 – Tremendous Bomb",
@@ -179675,42 +179711,6 @@
       "name": "Pokemon All Star Collection Blastoise Plush",
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-blastoise-plush?variant=51508339343591",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Pikachu (Female Form) Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-pikachu-female-form-plush?variant=51508321124583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Pikachu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-pikachu-plush?variant=51508315357415",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Pichu Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-pichu-plush?variant=51508308050151",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Morpeko Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-morpeko-plush?variant=51508300841191",
       "product_class": "accessory",
       "event": "ny"
     }
