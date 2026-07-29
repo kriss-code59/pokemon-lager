@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T12:18:36+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Fusion Arts Japansk Display Boosterpakke",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-fusion-arts-japansk-display-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T12:18:36+00:00",
+      "store": "Pokelink",
+      "name": "#130 Vigoroth 130/203 Uncommon Reverse Holo",
+      "price": "7.00 kr",
+      "url": "https://pokelink.no/products/130-vigoroth-130-203-uncommon-reverse-holo?variant=40330769268819",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-29T11:58:43+00:00",
       "store": "Pokestore",
       "name": "Pokemon Mega Brave Booster Pakke",
@@ -179720,24 +179738,6 @@
       "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Darkness Type",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689320679",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Colorless Type",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689386215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Caterpie Evolutions Stitched Playmat for the Pokemon Trading Card Game",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-caterpie-evolutions-stitched-playmat-for-the-pokemon-trading-card-game?variant=52251013710055",
       "product_class": "accessory",
       "event": "ny"
     }
