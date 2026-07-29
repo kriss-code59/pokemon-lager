@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T08:38:36+00:00",
+      "store": "Pokesingles",
+      "name": "Artazon 76 - Paldean Fates",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/artazon-76-paldean-fates?variant=53024596656407",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T08:38:36+00:00",
+      "store": "Pokesingles",
+      "name": "Atticus 77 - Paldean Fates",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/atticus-77-paldean-fates?variant=53024596689175",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T08:38:36+00:00",
+      "store": "Pokesingles",
+      "name": "Clive 78 - Paldean Fates",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/clive-78-paldean-fates?variant=53024596721943",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T08:38:36+00:00",
+      "store": "Pokesingles",
+      "name": "Artazon 76 - Paldean Fates",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/artazon-76-paldean-fates?variant=53024596656407",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T08:38:36+00:00",
+      "store": "Pokesingles",
+      "name": "Atticus 77 - Paldean Fates",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/atticus-77-paldean-fates?variant=53024596689175",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T08:38:36+00:00",
+      "store": "Pokesingles",
+      "name": "Clive 78 - Paldean Fates",
+      "price": "4.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/clive-78-paldean-fates?variant=53024596721943",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-29T08:18:33+00:00",
       "store": "Playlot",
       "name": "Scarlet & Violet Base set – Boosterpack",
@@ -179686,60 +179740,6 @@
       "name": "Pokemon All Star Collection Cherrim Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-cherrim-plush?variant=51989703852263",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Sprigatito Plush",
-      "price": "359.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-sprigatito-plush?variant=51989703557351",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pikachu Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush?variant=51989703491815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Omanyte Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-omanyte-plush?variant=51989703459047",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Mega Charizard Y Plush",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-mega-charizard-plush?variant=51989703393511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepiece Ball Chain Mascot - Mimikyu",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepiece-ball-chain-mascot-mimikyu?variant=51989703295207",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Fidough Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-fidough-plush?variant=51989703262439",
       "product_class": "accessory",
       "event": "ny"
     }
