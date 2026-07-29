@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Dream ex Japansk Boosterpakke",
+      "price": "199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Ascended Heroes Booster Bundle Case (25 stk)",
+      "price": "39999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ascended-heroes-booster-bundle-case-25-stk?variant=52323656532199",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Bundle (6 Booster Packs)",
+      "price": "649.00 kr",
+      "url": "https://retroworld.no/products/pokemon-perfect-order-booster-bundle-6-booster-packs?variant=52031159861549",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Bundle (6 Booster Packs)",
+      "price": "649.00 kr",
+      "previous_price": "499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-perfect-order-booster-bundle-6-booster-packs?variant=52031159861549",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Pack",
+      "price": "109.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-29T12:38:36+00:00",
       "store": "Cardcenter",
       "name": "Glory Of Team Rocket Japansk Boosterpakke",
@@ -179683,60 +179737,6 @@
       "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 4-Pocket Portfolio",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-4-pocket-portfolio?variant=52251775041767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X and Mega Charizard Y Playmat",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-playmat?variant=52251775008999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 2\" Album",
-      "price": "169.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-2-inch-album?variant=52251774976231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X 100+ Deck Box",
-      "price": "49.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-100-deck-box?variant=52251773862119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard Y 100+ Deck Box",
-      "price": "49.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-y-100-deck-box?variant=52251773534439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Fighting",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181252839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Dragon",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181285607",
       "product_class": "accessory",
       "event": "ny"
     }

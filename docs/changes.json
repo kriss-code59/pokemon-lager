@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Dream ex Japansk Boosterpakke",
+      "price": "199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Ascended Heroes Booster Bundle Case (25 stk)",
+      "price": "39999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ascended-heroes-booster-bundle-case-25-stk?variant=52323656532199",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Bundle (6 Booster Packs)",
+      "price": "649.00 kr",
+      "url": "https://retroworld.no/products/pokemon-perfect-order-booster-bundle-6-booster-packs?variant=52031159861549",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T12:58:43+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Perfect Order - Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-29T12:38:36+00:00",
       "store": "Cardcenter",
       "name": "Glory Of Team Rocket Japansk Boosterpakke",
@@ -2661,42 +2697,6 @@
       "name": "Pokemon TCG: VStar Universe Booster Pack (SWSH S12a, Japanese)",
       "price": "kr 419.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-vstar-universe-booster-pack-swsh-s12a-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Scarlet & Violet Shiny Treasure Booster Pack (SV4a, Japanese)",
-      "price": "kr 279.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-scarlet-violet-shiny-treasure-booster-pack-sv-sv4a-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Ninja Spinner – Booster Pack (M4, Japanese)",
-      "price": "kr 75.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-ninja-spinner-booster-pack-m4-japanese/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Choco Egg Scarlet & Violet (20g, Furuta)",
-      "price": "kr 79.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-choco-egg-scarlet-violet-20g-furuta/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Nihil Zero – Booster Pack (M3, Japanese)",
-      "price": "kr 59.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-nihil-zero-booster-pack-m3-japanese/",
       "product_class": "card",
       "event": "ny"
     }

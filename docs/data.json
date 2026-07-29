@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T12:38:37+00:00",
+  "last_updated": "2026-07-29T12:58:44+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -293,7 +293,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Mega Dream ex Japansk Boosterpakke",
       "price": "199.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -5974,15 +5974,6 @@
       "price": "879.00 kr",
       "in_stock": false,
       "url": "https://boosterkongen.no/products/pokemon-tcg-scarlet-ex-booster-boks?variant=51434163241271",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "BoosterKongen",
-      "name": "Pokemon TCG: Mega Dream Booster Boks",
-      "price": "1099.00 kr",
-      "in_stock": false,
-      "url": "https://boosterkongen.no/products/pokemon-tcg-mega-dream-booster-boks?variant=51518911447351",
       "store_count": null,
       "product_class": "card"
     },
@@ -134105,7 +134096,7 @@
       "store": "Pokestore",
       "name": "Pokemon Ascended Heroes Booster Bundle Case (25 stk)",
       "price": "39999.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokestore.no/products/pokemon-ascended-heroes-booster-bundle-case-25-stk?variant=52323656532199",
       "store_count": null,
       "product_class": "card"
@@ -139360,8 +139351,8 @@
     {
       "store": "RetroWorld",
       "name": "Pokemon - Perfect Order - Booster Bundle (6 Booster Packs)",
-      "price": "499.00 kr",
-      "in_stock": false,
+      "price": "649.00 kr",
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-perfect-order-booster-bundle-6-booster-packs?variant=52031159861549",
       "store_count": null,
       "product_class": "card"
@@ -139585,8 +139576,8 @@
     {
       "store": "RetroWorld",
       "name": "Pokemon - Perfect Order - Booster Pack",
-      "price": "89.00 kr",
-      "in_stock": false,
+      "price": "109.00 kr",
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-mega-evolution-booster-pack-copy?variant=51938528067885",
       "store_count": null,
       "product_class": "card"
@@ -149349,6 +149340,24 @@
     },
     {
       "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
+      "price": "3 195,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
+      "price": "3 195,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
       "name": "Maks 5 per kunde. Pokémon TCG Mega Evolution Chaos Rising Boosterpakke",
       "price": "92,-",
       "in_stock": true,
@@ -149382,24 +149391,6 @@
       "url": "https://lekekassen.no/pokemon-chaos-rising-9-pocket-portfolio-samleperm-ult16726",
       "store_count": null,
       "product_class": "accessory"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
-      "price": "3 195,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokémon TCG Mega Evolution Chaos Rising Booster Display - 36 boosterpakker",
-      "price": "3 195,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-chaos-rising-display-36-boosterpakker-pok10407-101",
-      "store_count": null,
-      "product_class": "card"
     },
     {
       "store": "Lekekassen",
@@ -149452,6 +149443,42 @@
       "price": "319,-",
       "in_stock": true,
       "url": "https://lekekassen.no/pokemon-tcg-poke-ball-tin-pok10273-104",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokemon TCG: Shrouded Fable eske med Kingambit kunskort og boosterpakker",
+      "price": "498,-",
+      "in_stock": true,
+      "url": "https://lekekassen.no/pokemon-tcg-shrouded-fable-kingambit-collection",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokemon TCG: Shrouded Fable eske med Kingambit kunskort og boosterpakker",
+      "price": "498,-",
+      "in_stock": true,
+      "url": "https://lekekassen.no/pokemon-tcg-shrouded-fable-kingambit-collection",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
+      "price": "648,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
+      "price": "648,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
       "store_count": null,
       "product_class": "card"
     },
@@ -149529,39 +149556,21 @@
     },
     {
       "store": "Lekekassen",
-      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
-      "price": "648,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
-      "price": "648,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokemon TCG: Shrouded Fable eske med Kingambit kunskort og boosterpakker",
-      "price": "498,-",
+      "name": "Ultra PRO toploaders 3 × 4 for samlekort – 25 stk klare kortbeskyttere",
+      "price": "75,-",
       "in_stock": true,
-      "url": "https://lekekassen.no/pokemon-tcg-shrouded-fable-kingambit-collection",
+      "url": "https://lekekassen.no/ultra-pro-toploaders-3-4-for-samlekort-25-stk-ult81222",
       "store_count": null,
-      "product_class": "card"
+      "product_class": "accessory"
     },
     {
       "store": "Lekekassen",
-      "name": "Pokemon TCG: Shrouded Fable eske med Kingambit kunskort og boosterpakker",
-      "price": "498,-",
+      "name": "Ultra PRO toploaders 3 × 4 for samlekort – 25 stk klare kortbeskyttere",
+      "price": "75,-",
       "in_stock": true,
-      "url": "https://lekekassen.no/pokemon-tcg-shrouded-fable-kingambit-collection",
+      "url": "https://lekekassen.no/ultra-pro-toploaders-3-4-for-samlekort-25-stk-ult81222",
       "store_count": null,
-      "product_class": "card"
+      "product_class": "accessory"
     },
     {
       "store": "Lekekassen",
@@ -149616,24 +149625,6 @@
       "url": "https://lekekassen.no/pokemon-tcg-first-partner-illustration-collection-series-2-pok10395-101",
       "store_count": null,
       "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Ultra PRO toploaders 3 × 4 for samlekort – 25 stk klare kortbeskyttere",
-      "price": "75,-",
-      "in_stock": true,
-      "url": "https://lekekassen.no/ultra-pro-toploaders-3-4-for-samlekort-25-stk-ult81222",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Ultra PRO toploaders 3 × 4 for samlekort – 25 stk klare kortbeskyttere",
-      "price": "75,-",
-      "in_stock": true,
-      "url": "https://lekekassen.no/ultra-pro-toploaders-3-4-for-samlekort-25-stk-ult81222",
-      "store_count": null,
-      "product_class": "accessory"
     },
     {
       "store": "Maxgaming",
