@@ -1,6 +1,86 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Horizons Gem Pack Vol 2 - Chinese Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-horizons-gem-pack-vol-2-chinese-booster-box?variant=52072088961325",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 4 - Chinese Booster Box",
+      "price": "599.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-4-chinese-booster-box?variant=51844019683629",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 4 - Chinese Booster Pack",
+      "price": "35.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-4-chinese-booster-pack?variant=51844014014765",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Horizons Gem Pack Vol 2 - Chinese Booster Pack",
+      "price": "109.00 kr",
+      "url": "https://retroworld.no/products/pokemon-horizons-gem-pack-vol-2-chinese-booster-pack?variant=51048911307053",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Inferno X Japansk Display Booster Box",
+      "price": "2699.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-inferno-x-japansk-display-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Horizons Gem Pack Vol 2 - Chinese Booster Box",
+      "price": "1499.00 kr",
+      "previous_price": "1099.00 kr",
+      "url": "https://retroworld.no/products/pokemon-horizons-gem-pack-vol-2-chinese-booster-box?variant=52072088961325",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 4 - Chinese Booster Box",
+      "price": "599.00 kr",
+      "previous_price": "679.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-4-chinese-booster-box?variant=51844019683629",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Vol 4 - Chinese Booster Pack",
+      "price": "35.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-vol-4-chinese-booster-pack?variant=51844014014765",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T17:38:34+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Horizons Gem Pack Vol 2 - Chinese Booster Pack",
+      "price": "109.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://retroworld.no/products/pokemon-horizons-gem-pack-vol-2-chinese-booster-pack?variant=51048911307053",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-29T17:19:28+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Chaos Rising Booster Pakke",
@@ -179636,87 +179716,6 @@
       "name": "Pokemon Nanoblock Espeon Figur",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-espeon-figur?variant=51237232804071",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Umbreon Figur",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-umbreon-figur?variant=51237224087783",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock RS Series Sprigatito Figur",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-rs-series-sprigatito-figur?variant=51237217665255",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Ho-Oh Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-ho-oh-figur?variant=51237212094695",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Gyarados Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-gyrados-figur?variant=51237055267047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Popplio Figur",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-popplio-figur?variant=51237050482919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Chansey Figur",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-chansey-figur?variant=51237047599335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Kyogre Figur",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-kyogre-figur?variant=51237014208743",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mini Dragon Type (6 stk) Figurer",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mini-dragon-type-6-stk?variant=51237000708327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Litten Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-litten-figur?variant=51236986093799",
       "product_class": "card",
       "event": "ny"
     }
