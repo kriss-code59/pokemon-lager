@@ -1,6 +1,49 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T16:38:32+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 3 per pers. Rip And Ship - 151 Special-Set Boosterpakke",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/rip-and-ship-151-special-set-boosterpakke-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T16:38:32+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Crown Zenith Booster Pakke",
+      "price": "439.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack?variant=48174456471806",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T16:38:32+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Silver Tempest Booster Pakke",
+      "price": "209.00 kr",
+      "previous_price": "139.00 kr",
+      "url": "https://pokenordic.no/products/silver-tempest-booster-pack?variant=47557878644990",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-29T16:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Phantasmal Flames - Booster Pack",
+      "price": "189.00 kr",
+      "url": "https://retroworld.no/products/pokemon-phantasmal-flames-booster-pack?variant=51639093362989",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T16:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - Super-Premium Collection",
+      "price": "4499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-super-premium-collection-maks-1-per-kunde?variant=50729421996333",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-29T16:18:51+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Astral Radiance - 10 Packathon",
@@ -179679,51 +179722,6 @@
       "price": "155.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-12-figur?variant=51058530451687",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Seviper Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-seviper-plush?variant=51045412241639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Luxray Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-luxray-plush?variant=51045410439399",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Meloetta Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-meloetta-plush?variant=51045386125543",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Mienshao Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-mienshao-plush?variant=51045376852199",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Floatzel Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-floatzel-plush?variant=51045106122983",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]

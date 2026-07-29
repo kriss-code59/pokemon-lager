@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T16:18:52+00:00",
+  "last_updated": "2026-07-29T16:38:33+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1015,6 +1015,15 @@
       "price": "119.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-perfect-order-1-pack-blister-makuhita",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Maks 3 per pers. Rip And Ship - 151 Special-Set Boosterpakke",
+      "price": "499.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/rip-and-ship-151-special-set-boosterpakke-1",
       "store_count": null,
       "product_class": "card"
     },
@@ -61978,7 +61987,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Crown Zenith Booster Pakke",
-      "price": "399.00 kr",
+      "price": "439.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack?variant=48174456471806",
       "store_count": null,
@@ -62131,7 +62140,7 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Silver Tempest Booster Pakke",
-      "price": "139.00 kr",
+      "price": "209.00 kr",
       "in_stock": false,
       "url": "https://pokenordic.no/products/silver-tempest-booster-pack?variant=47557878644990",
       "store_count": null,
@@ -62742,7 +62751,7 @@
     },
     {
       "store": "Pokebua",
-      "name": "Pokemon - Pokerev OneRip - Booster Pack (Forhåndsbestilling) (på lager 29.07.26)",
+      "name": "Pokemon - Pokerev OneRip - Booster Pack",
       "price": "289.00 kr",
       "in_stock": true,
       "url": "https://pokebua.no/products/pokemon-revpacks-onerip-forhandsbestilling-forventet-15-07-26?variant=51286952378601",
@@ -140828,7 +140837,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Phantasmal Flames - Booster Pack",
       "price": "189.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-phantasmal-flames-booster-pack?variant=51639093362989",
       "store_count": null,
       "product_class": "card"
@@ -144779,7 +144788,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Prismatic Evolutions - Super-Premium Collection",
       "price": "4499.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-super-premium-collection-maks-1-per-kunde?variant=50729421996333",
       "store_count": null,
       "product_class": "card"
