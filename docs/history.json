@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T15:18:49+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - 10 Packathon",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-astral-radiance-10-packathon?variant=51731621970221",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T15:18:49+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/astral-radiance-booster-pack?variant=50101579055405",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-29T14:58:49+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Summer Japansk Promopakke",
@@ -179709,24 +179725,6 @@
       "price": "139.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-garden-sunlight-afternoon-figur?variant=51014095306983",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Deep Green Forest Figurer (6 stk)",
-      "price": "889.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-deep-green-forest-figurer-6-stk?variant=51013789614311",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zoroark Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zoroark-plush?variant=50993329111271",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
