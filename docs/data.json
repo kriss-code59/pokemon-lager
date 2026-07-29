@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T09:58:33+00:00",
+  "last_updated": "2026-07-29T10:18:30+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -125375,7 +125375,7 @@
       "store": "Pokestore",
       "name": "Pokemon Re-ment Little Night Collection 2 Figur",
       "price": "165.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokestore.no/products/pokemon-re-ment-little-night-collection-2-figur?variant=51411453575399",
       "store_count": null,
       "product_class": "card"
@@ -163465,6 +163465,15 @@
       "price": "kr 2 699,00",
       "in_stock": true,
       "url": "https://playlot.no/produkt/prismatic-evolution-elite-trainer-boks/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
+      "name": "Prismatic Evolution Super Premium Collection",
+      "price": "kr 4 799,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/prismatic-evolution-super-premium-collection/",
       "store_count": null,
       "product_class": "card"
     },

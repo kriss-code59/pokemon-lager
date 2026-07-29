@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T10:18:29+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-ment Little Night Collection 2 Figur",
+      "price": "165.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-little-night-collection-2-figur?variant=51411453575399",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T10:18:29+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Evolution Super Premium Collection",
+      "price": "kr 4 799,00",
+      "url": "https://playlot.no/produkt/prismatic-evolution-super-premium-collection/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-29T09:58:32+00:00",
       "store": "Kanoncon",
       "name": "Pokemon TCG Mega Evolution Lumiose City Mini Tin",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon: Paradox Pokemon Mini-Figure w/Bubble Gum (5g, Bandai)",
       "price": "kr 69.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-paradox-pokemon-mini-figure-w-bubble-gum-5g-bandai/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Gengar Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-gengar-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Vulpix Plush (24cm, Aoger)",
-      "price": "kr 289.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-vulpix-plush-24cm/",
       "product_class": "accessory",
       "event": "ny"
     }
