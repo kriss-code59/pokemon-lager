@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T14:38:45+00:00",
+      "store": "Playlot",
+      "name": "Battle Arena Decks [Rayquaza EX VS. Kaldeo EX]",
+      "price": "kr 1 399,00",
+      "url": "https://playlot.no/produkt/battle-arena-decks-rayquaza-ex-vs-kaldeo-ex/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-29T14:18:46+00:00",
       "store": "RetroWorld",
       "name": "Pokemon Crystal Gathering Binder Set - #471 Glaceon (Kinesisk)",
@@ -179720,15 +179728,6 @@
       "name": "Pokemon Center Japan Original Kabutops Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-kabutops-plush?variant=50991656141031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Pawniard Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-pawniard-plush?variant=50991653781735",
       "product_class": "accessory",
       "event": "ny"
     }
