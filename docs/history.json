@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-29T16:18:51+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - 10 Packathon",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-astral-radiance-10-packathon?variant=51731621970221",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-29T16:18:51+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon Ninja Spinner Japansk Booster Box",
+      "price": "1199.00 kr",
+      "url": "https://epicards.no/products/pokemon-nihil-zero-japansk-booster-box-kopi?variant=56370143264934",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-29T16:18:51+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Lost Origin Booster Pakke",
+      "price": "229.00 kr",
+      "previous_price": "219.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-lost-origin-booster-pack?variant=48226044641534",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-29T15:58:41+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Astral Radiance Booster Pakke",
@@ -179698,33 +179724,6 @@
       "price": "309.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-floatzel-plush?variant=51045106122983",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Riolu Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-riolu-plush?variant=51021461061863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 14 Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-14-figur?variant=51014151930087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 14 Figurer (6 stk)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-14-figurer-6-stk?variant=51014116245735",
-      "product_class": "card",
       "event": "ny"
     }
   ]
