@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T07:58:32+00:00",
+  "last_updated": "2026-07-29T08:18:34+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -107330,7 +107330,7 @@
       "store": "Pokesingles",
       "name": "Cetitan (C) 2707 - Gem Pack Volume 5",
       "price": "79.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokesingles.no/products/cetitan-c-2707-gem-pack-volume-5-782923?variant=53517910343959",
       "store_count": null,
       "product_class": "card"
@@ -163398,6 +163398,15 @@
     },
     {
       "store": "Playlot",
+      "name": "Scarlet & Violet Base set – Boosterpack",
+      "price": "kr 109,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/sv-base-set-boosterpack/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
       "name": "Shiny Star V Boosterpack JPN",
       "price": "kr 249,00",
       "in_stock": true,
@@ -163483,6 +163492,15 @@
       "price": "kr 4 999,00",
       "in_stock": true,
       "url": "https://playlot.no/produkt/team-rocket-briefcase/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
+      "name": "Temporal Forces – Boosterpack",
+      "price": "kr 109,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/temporal-forces-booster-boks/",
       "store_count": null,
       "product_class": "card"
     },

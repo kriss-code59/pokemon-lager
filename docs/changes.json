@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T08:18:33+00:00",
+      "store": "Playlot",
+      "name": "Scarlet & Violet Base set – Boosterpack",
+      "price": "kr 109,00",
+      "url": "https://playlot.no/produkt/sv-base-set-boosterpack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-29T08:18:33+00:00",
+      "store": "Playlot",
+      "name": "Temporal Forces – Boosterpack",
+      "price": "kr 109,00",
+      "url": "https://playlot.no/produkt/temporal-forces-booster-boks/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-29T05:38:34+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Mew Acrylic Keychain",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon: Espeon Plush – All Star Collection (22cm, Sanei)",
       "price": "kr 449.00",
       "url": "https://www.neo-tokyo.no/product/plush-pokemon-eifie-espeon-s-pp121/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Night Light Mini-Figure Gacha (Random, Takara Tomy)",
-      "price": "kr 100.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-night-light-mini-figure-gacha-random-takara-tomy/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Pikachu Mug w/Measurement (220ml, T’s Factory)",
-      "price": "kr 179.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-mug-w-measurement-220ml-ts-factory/",
       "product_class": "accessory",
       "event": "ny"
     }
