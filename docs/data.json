@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T16:38:33+00:00",
+  "last_updated": "2026-07-29T16:58:30+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1022,7 +1022,7 @@
       "store": "Cardcenter",
       "name": "Maks 3 per pers. Rip And Ship - 151 Special-Set Boosterpakke",
       "price": "499.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/rip-and-ship-151-special-set-boosterpakke-1",
       "store_count": null,
       "product_class": "card"
@@ -62175,6 +62175,15 @@
     },
     {
       "store": "PokeNordic",
+      "name": "Pokémon Celebrations Booster Pakke",
+      "price": "479.00 kr",
+      "in_stock": false,
+      "url": "https://pokenordic.no/products/pokemon-celebrations-booster-pakke?variant=48648621490430",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeNordic",
       "name": "Pokémon Lumiose City Mini Tin Display",
       "price": "1849.00 kr",
       "in_stock": true,
@@ -62185,8 +62194,8 @@
     {
       "store": "PokeNordic",
       "name": "Pokémon Journey Together Enhanced Booster Box",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "3899.00 kr",
+      "in_stock": true,
       "url": "https://pokenordic.no/products/pokemon-journey-together-enhanced-booster-box?variant=48645457117438",
       "store_count": null,
       "product_class": "card"

@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-29T16:58:29+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Journey Together Enhanced Booster Box",
+      "price": "3899.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-journey-together-enhanced-booster-box?variant=48645457117438",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-29T16:38:32+00:00",
       "store": "Cardcenter",
       "name": "Maks 3 per pers. Rip And Ship - 151 Special-Set Boosterpakke",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon Center Fukuoka Box",
       "price": "kr4.499,00",
       "url": "https://www.kanoncon.no/produkt/pokemon-center-fukuoka-box/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-28T16:58:13+00:00",
-      "store": "Kanoncon",
-      "name": "Pokemon Center Hiroshima Box",
-      "price": "kr4.499,00",
-      "url": "https://www.kanoncon.no/produkt/pokemon-center-hiroshima-box/",
       "product_class": "card",
       "event": "ny"
     }
