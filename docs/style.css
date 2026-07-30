@@ -416,3 +416,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
   padding: 1px 6px; font-size: 12px;
 }
+
+/* --- Restock-monster (statistics.html) --- */
+.pattern-controls { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.pattern-controls label { font-size: 13px; font-weight: 600; color: var(--text); }
+.pattern-controls select {
+background: var(--card); border: 1px solid var(--border); color: var(--text);
+padding: 8px 14px; border-radius: 18px; font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.pattern-controls select:focus { outline: none; border-color: var(--accent); }
+
+table.heatmap { border-collapse: collapse; width: 100%; max-width: 620px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+table.heatmap th, table.heatmap td { padding: 8px 6px; text-align: center; font-size: 12px; border: 1px solid var(--border); }
+table.heatmap thead th { color: var(--muted); font-weight: 600; }
+table.heatmap tbody th { color: var(--muted); font-weight: 600; text-align: left; padding-left: 12px; }
+table.heatmap td { color: var(--text); font-weight: 600; }
+
+@media (max-width: 640px) {
+table.heatmap th, table.heatmap td { padding: 6px 3px; font-size: 11px; }
+}
