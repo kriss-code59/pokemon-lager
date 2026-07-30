@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30T19:19:43+00:00",
+  "last_updated": "2026-07-30T19:38:34+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -89248,8 +89248,8 @@
     {
       "store": "Pokesingles",
       "name": "Babiri Berry 163 - Surging Sparks",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/babiri-berry-163-surging-sparks?variant=53024682705175",
       "store_count": null,
       "product_class": "card"
@@ -104377,8 +104377,8 @@
     {
       "store": "Pokesingles",
       "name": "Call Bell 165 - Surging Sparks",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/call-bell-165-surging-sparks?variant=53024682869015",
       "store_count": null,
       "product_class": "card"
@@ -112909,8 +112909,8 @@
     {
       "store": "Pokesingles",
       "name": "Chill Teaser Toy 166 - Surging Sparks",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/chill-teaser-toy-166-surging-sparks?variant=53024683000087",
       "store_count": null,
       "product_class": "card"
@@ -116392,8 +116392,8 @@
     {
       "store": "Pokesingles",
       "name": "Clemont's Quick Wit 167 - Surging Sparks",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/clemonts-quick-wit-167-surging-sparks?variant=53024683065623",
       "store_count": null,
       "product_class": "card"
@@ -117418,8 +117418,8 @@
     {
       "store": "Pokesingles",
       "name": "Colbur Berry 168 - Surging Sparks",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/colbur-berry-168-surging-sparks?variant=53024683131159",
       "store_count": null,
       "product_class": "card"
@@ -119911,8 +119911,8 @@
     {
       "store": "Pokesingles",
       "name": "Counter Gain 169 - Surging Sparks",
-      "price": "0.00 kr",
-      "in_stock": false,
+      "price": "4.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/counter-gain-169-surging-sparks?variant=53024683262231",
       "store_count": null,
       "product_class": "card"
@@ -150586,6 +150586,33 @@
       "price": "?",
       "in_stock": false,
       "url": "https://www.maxgaming.no/no/pokemon/pokemon-mystery-gaveboks-forenklet-kinesisk",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - CHAOS RISING BOOSTER BUNDLE",
+      "price": "499,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-chaos-rising-booster-bundle",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - CHAOS RISING BOOSTER BOX",
+      "price": "2 399,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-chaos-rising-booster-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "PokeShop",
+      "name": "POKÉMON - PERFECT ORDER BOOSTER BOX",
+      "price": "2 299,00 kr",
+      "in_stock": false,
+      "url": "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/pokemon-perfect-order-booster-box",
       "store_count": null,
       "product_class": "card"
     },
