@@ -65,6 +65,19 @@
 </section>
 
 <section class="stat-section">
+  <h2>Når restocker butikkene?</h2>
+  <p class="hint" id="patternHint"></p>
+  <div class="pattern-controls">
+    <label for="patternStoreSelect">Velg butikk</label>
+    <select id="patternStoreSelect"></select>
+  </div>
+  <div id="restockHeatmap"></div>
+  <p class="hint" id="patternSummary"></p>
+  <p class="hint" id="patternTableHint" style="margin-top:18px"></p>
+  <div class="stat-table" id="patternTable"></div>
+</section>
+
+<section class="stat-section">
   <h2>Mest restockede produkter</h2>
   <p class="hint">Rangert etter antall registrerte restocks. Snitt-intervall vises nar vi har nok data (minst 2 restocks).</p>
   <div class="stat-table" id="topRestockTable"></div>
@@ -111,6 +124,36 @@ function parsePrice(price) {
   return parseFloat(normalized);
 }
 
+var WEEKDAY_CODES = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+var WEEKDAY_LABELS = { Mon: 'Mandag', Tue: 'Tirsdag', Wed: 'Onsdag', Thu: 'Torsdag', Fri: 'Fredag', Sat: 'Lørdag', Sun: 'Søndag' };
+var PART_OF_DAY = [
+{ label: 'Natt', short: '00-06', from: 0, to: 6 },
+{ label: 'Morgen', short: '06-10', from: 6, to: 10 },
+{ label: 'Formiddag', short: '10-14', from: 10, to: 14 },
+{ label: 'Ettermiddag', short: '14-18', from: 14, to: 18 },
+{ label: 'Kveld', short: '18-24', from: 18, to: 24 },
+];
+var patternDtf = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Oslo', weekday: 'short', hour: 'numeric', hourCycle: 'h23' });
+function osloWeekdayHour(dateObj) {
+var weekday = 'Mon', hour = 0;
+patternDtf.formatToParts(dateObj).forEach(function (p) {
+if (p.type === 'weekday') weekday = p.value;
+if (p.type === 'hour') hour = parseInt(p.value, 10);
+});
+if (!isFinite(hour)) hour = 0;
+return { weekday: weekday, hour: hour % 24 };
+}
+function partIndexForHour(hour) {
+for (var i = 0; i < PART_OF_DAY.length; i++) {
+if (hour >= PART_OF_DAY[i].from && hour < PART_OF_DAY[i].to) return i;
+}
+return PART_OF_DAY.length - 1;
+}
+function bestIndex(arr) {
+var bestI = -1, bestV = -1;
+arr.forEach(function (v, i) { if (v > bestV) { bestV = v; bestI = i; } });
+return { index: bestI, value: bestV };
+}
 function updateUpdatesBadge(events) {
   var today = new Date().toISOString().slice(0, 10);
   var count = events.filter(function (e) {
@@ -238,6 +281,118 @@ async function loadStats() {
       .map(function (s) { return { label: s, value: storeCounts[s] }; })
       .sort(function (a, b) { return b.value - a.value; });
     document.getElementById('storeChart').innerHTML = buildHorizontalBarChart(storeRows);
+
+// --- Restock-monster (dag/tid) ---
+var patternByStore = {};
+var patternTimes = [];
+restockEvents.forEach(function (e) {
+var d = parseServerDate(e.detected_at);
+if (isNaN(d.getTime())) return;
+patternTimes.push(d.getTime());
+var wh = osloWeekdayHour(d);
+var wIdx = WEEKDAY_CODES.indexOf(wh.weekday);
+if (wIdx === -1) wIdx = 0;
+var pIdx = partIndexForHour(wh.hour);
+if (!patternByStore[e.store]) {
+patternByStore[e.store] = {
+total: 0,
+matrix: WEEKDAY_CODES.map(function () { return PART_OF_DAY.map(function () { return 0; }); }),
+weekdayTotals: WEEKDAY_CODES.map(function () { return 0; }),
+partTotals: PART_OF_DAY.map(function () { return 0; }),
+};
+}
+var pat = patternByStore[e.store];
+pat.total++;
+pat.matrix[wIdx][pIdx]++;
+pat.weekdayTotals[wIdx]++;
+pat.partTotals[pIdx]++;
+});
+
+var patternDaySpan = patternTimes.length
+  ? Math.max(1, Math.round((Math.max.apply(null, patternTimes) - Math.min.apply(null, patternTimes)) / 86400000))
+  : 0;
+document.getElementById('patternHint').textContent = patternTimes.length
+  ? 'Restock-mønster per butikk, basert på når restockene ble oppdaget (norsk tid). Dekker nå ca. ' + patternDaySpan + ' dager med data - blir mer treffsikkert etter hvert som mer historikk samles inn.'
+  : 'Ingen restocks registrert ennå - mønsteret bygges opp etter hvert som boten samler data.';
+
+var patternStores = Object.keys(patternByStore)
+  .map(function (s) { return { store: s, total: patternByStore[s].total }; })
+  .sort(function (a, b) { return b.total - a.total; });
+
+function renderPatternHeatmap(store) {
+var pat = patternByStore[store];
+var heatmapEl = document.getElementById('restockHeatmap');
+var summaryEl = document.getElementById('patternSummary');
+if (!pat || pat.total === 0) {
+heatmapEl.innerHTML = '<p class="hint">Ingen restocks registrert for denne butikken ennå.</p>';
+summaryEl.textContent = '';
+return;
+}
+var maxCell = 0;
+pat.matrix.forEach(function (row) { row.forEach(function (v) { if (v > maxCell) maxCell = v; }); });
+var html = '<table class="heatmap"><thead><tr><th></th>' +
+  PART_OF_DAY.map(function (part) { return '<th title="' + part.label + '">' + part.short + '</th>'; }).join('') +
+  '</tr></thead><tbody>';
+WEEKDAY_CODES.forEach(function (code, wIdx) {
+html += '<tr><th>' + WEEKDAY_LABELS[code].slice(0, 3) + '</th>';
+pat.matrix[wIdx].forEach(function (v, pIdx) {
+var alpha = v > 0 ? (0.12 + 0.68 * (v / maxCell)) : 0;
+var title = WEEKDAY_LABELS[code] + ', ' + PART_OF_DAY[pIdx].label + ' (kl. ' + PART_OF_DAY[pIdx].short + '): ' + v + ' restock' + (v === 1 ? '' : 's');
+html += '<td style="background:rgba(255,203,5,' + alpha.toFixed(2) + ')" title="' + title + '">' + (v > 0 ? v : '') + '</td>';
+});
+html += '</tr>';
+});
+html += '</tbody></table>';
+heatmapEl.innerHTML = html;
+
+var bestDay = bestIndex(pat.weekdayTotals);
+var bestPart = bestIndex(pat.partTotals);
+summaryEl.textContent = (bestDay.value > 0 && bestPart.value > 0)
+  ? store + ' restocker oftest på ' + WEEKDAY_LABELS[WEEKDAY_CODES[bestDay.index]].toLowerCase() + ', vanligvis ' + PART_OF_DAY[bestPart.index].label.toLowerCase() + ' (kl. ' + PART_OF_DAY[bestPart.index].short + '), basert på ' + pat.total + ' registrerte restock' + (pat.total === 1 ? '' : 's') + '.'
+  : '';
+}
+
+var patternSelect = document.getElementById('patternStoreSelect');
+patternSelect.innerHTML = '';
+patternStores.forEach(function (s) {
+var opt = document.createElement('option');
+opt.value = s.store;
+opt.textContent = s.store + ' (' + s.total + ')';
+patternSelect.appendChild(opt);
+});
+patternSelect.onchange = function () { renderPatternHeatmap(patternSelect.value); };
+
+var patternTableHintEl = document.getElementById('patternTableHint');
+if (patternStores.length > 0) {
+patternSelect.value = patternStores[0].store;
+renderPatternHeatmap(patternStores[0].store);
+} else {
+document.getElementById('restockHeatmap').innerHTML = '';
+document.getElementById('patternSummary').textContent = '';
+}
+
+var patternTable = document.getElementById('patternTable');
+patternTable.innerHTML = '';
+var patternTableRows = patternStores.filter(function (s) { return s.total >= 2; });
+patternTableHintEl.textContent = patternTableRows.length > 0
+  ? 'Oversikt over butikker med nok data (minst 2 restocks), vanligste ukedag og tidspunkt:'
+  : 'Ikke nok data ennå til et sammendrag per butikk (trenger minst 2 restocks for samme butikk).';
+patternTableRows.forEach(function (s) {
+var pat = patternByStore[s.store];
+var bestDay = bestIndex(pat.weekdayTotals);
+var bestPart = bestIndex(pat.partTotals);
+var row = el('div', 'stat-table-row');
+var nameCell = el('div', 'stat-table-name', s.store);
+var countCell = el('div', 'stat-table-count', s.total + ' restock' + (s.total === 1 ? '' : 's'));
+var dayLabel = bestDay.value > 0 ? WEEKDAY_LABELS[WEEKDAY_CODES[bestDay.index]] : '?';
+var partLabel = bestPart.value > 0 ? PART_OF_DAY[bestPart.index].label + ' (kl. ' + PART_OF_DAY[bestPart.index].short + ')' : '?';
+var intervalCell = el('div', 'stat-table-interval', dayLabel + ', ' + partLabel);
+row.appendChild(nameCell);
+row.appendChild(countCell);
+row.appendChild(intervalCell);
+patternTable.appendChild(row);
+});
+
 
     // --- Mest restockede produkter + snitt-intervall ---
     var byKey = {};
