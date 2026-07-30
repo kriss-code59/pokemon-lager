@@ -1,6 +1,114 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Call Bell Reverse Holo 165 - Surging Sparks",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/call-bell-reverse-holo-165-surging-sparks?variant=53024682934551",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Clemont's Quick Wit Reverse Holo 167 - Surging Sparks",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/clemonts-quick-wit-reverse-holo-167-surging-sparks?variant=53024683098391",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Colbur Berry Reverse Holo 168 - Surging Sparks",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/colbur-berry-reverse-holo-168-surging-sparks?variant=53024683229463",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Counter Gain Reverse Holo 169 - Surging Sparks",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/counter-gain-reverse-holo-169-surging-sparks?variant=53024683294999",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Prismatic Evolutions Booster Pakke",
+      "price": "239.00 kr",
+      "previous_price": "229.00 kr",
+      "url": "https://pokenordic.no/products/prismatic-evolution-booster-pack?variant=47546700693758",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Paldean Fates Booster Pakke",
+      "price": "339.00 kr",
+      "previous_price": "329.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-paldean-fates-booster-pack?variant=48174457749758",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "PokeNordic",
+      "name": "Prismatic Evolutions Booster Bundle",
+      "price": "1499.00 kr",
+      "previous_price": "1399.00 kr",
+      "url": "https://pokenordic.no/products/prismatic-evolution-booster-bundle?variant=47548032909566",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Chilling Reign Booster Pakke",
+      "price": "189.00 kr",
+      "previous_price": "159.00 kr",
+      "url": "https://pokenordic.no/products/chilling-rein-booster-pack?variant=47550322475262",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Call Bell Reverse Holo 165 - Surging Sparks",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/call-bell-reverse-holo-165-surging-sparks?variant=53024682934551",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Clemont's Quick Wit Reverse Holo 167 - Surging Sparks",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/clemonts-quick-wit-reverse-holo-167-surging-sparks?variant=53024683098391",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Colbur Berry Reverse Holo 168 - Surging Sparks",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/colbur-berry-reverse-holo-168-surging-sparks?variant=53024683229463",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T19:58:38+00:00",
+      "store": "Pokesingles",
+      "name": "Counter Gain Reverse Holo 169 - Surging Sparks",
+      "price": "6.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/counter-gain-reverse-holo-169-surging-sparks?variant=53024683294999",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-30T19:38:33+00:00",
       "store": "Pokesingles",
       "name": "Babiri Berry 163 - Surging Sparks",
@@ -179573,114 +179681,6 @@
       "price": "kr 729.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-rayquaza-plush-all-star-collection-20cm-sanei/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Charizard Plush Backpack (40x56x23cm, Shimamura)",
-      "price": "kr 629.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-charizard-plush-backpack-40x56x23cm-shimamura/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Dragonite Figure – Prime Figure Mini (10cm, Funism)",
-      "price": "kr 449.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-dragonite-figure-prime-figure-mini-10cm-funism/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Meowth Figure – Prime Figure Mini (10cm, Funism)",
-      "price": "kr 449.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-meowth-figure-prime-figure-mini-10cm-funism/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Ditto Plush Backpack (37x33x24.5cm, Shimamura)",
-      "price": "kr 629.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-ditto-plush-backpack-37x33x24-5cm-shimamura/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Fluffy Scarf – Pikachu (W11×H72cm, J’s Planning)",
-      "price": "kr 329.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-fluffy-scarf-pikachu-w11xh72cm-js-planning/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Chandelure Plush – All Star Collection (17cm, Sanei)",
-      "price": "kr 479.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-chandelure-plush-all-star-collection-17cm-sanei/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Galarian Meowth Plush – All Star Collection (19.5cm, Sanei)",
-      "price": "kr 469.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-galarian-meowth-plush-all-star-collection-19-5cm-sanei/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Lunch Box w/Divider DW/Micro Safe (840ml, Skater)",
-      "price": "kr 329.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-obentou-lunch-box-w-divider-840ml-196x142x71mm-dw-micro-safe/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Meowth Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-meowth-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Entei Plush Figure – All Star Collection (23,5cm, Sanei)",
-      "price": "kr 649.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-entei-s-pp63/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Pichu – All Star Collection (21cm, Sanei)",
-      "price": "kr 349.00",
-      "url": "https://www.neo-tokyo.no/product/plush-pokemon-pichu-s-pp25/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Pikachu & Eevee Figure – Munchin’ Time (12cm, Banpresto)",
-      "price": "kr 499.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-eevee-figure-munchin-time-12cm-banpresto/",
-      "product_class": "card",
       "event": "ny"
     }
   ]
