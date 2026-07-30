@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T15:58:42+00:00",
+      "store": "Playlot",
+      "name": "Prismatic Evolution Boosterbundle Display [Sealed]",
+      "price": "kr 17 999,00",
+      "url": "https://playlot.no/produkt/prismatic-evolution-boosterbundle-display-sealed/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-30T15:38:40+00:00",
       "store": "Mystic Trades",
       "name": "[PRE-ORDER] – Pokémon: First Partner Illustration Collection: Series 3 (2 Boosters) (30th Anniversary)",
@@ -179680,15 +179689,6 @@
       "name": "Canari (JP) 248 - MEGA Dream ex",
       "price": "320.00 kr",
       "url": "https://pokesingles.no/products/canari-jp-248-mega-dream-ex-437755?variant=53940801831191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Captain Pikachu (C) 0106 Stamped - Gem Pack Volume 5",
-      "price": "49.00 kr",
-      "url": "https://pokesingles.no/products/captain-pikachu-c-0106-stamped-gem-pack-volume-5-023201?variant=53517908869399",
       "product_class": "card",
       "event": "ny"
     }
