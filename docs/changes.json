@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-30T08:58:39+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Mega Brave Booster Pakke",
+      "price": "59.00 kr",
+      "url": "https://pokestore.no/products/pokemon-mega-brave-booster-pakke?variant=51411638943975",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-30T02:58:46+00:00",
       "store": "Maxgaming",
       "name": "Pokémon 2026 Dragon Boat Festival (Simplified Chinese)",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon: Eevee Plush – All Star Collection (15cm, Sanei)",
       "price": "kr 429.00",
       "url": "https://www.neo-tokyo.no/product/plush-pokemon-eevee-s-pp07/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T05:38:34+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Eevee 3D Mug (500ml, ABYstyle)",
-      "price": "kr 279.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-eevee-3d-mug-500ml-abystyle/",
       "product_class": "accessory",
       "event": "ny"
     }
