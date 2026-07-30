@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T16:58:42+00:00",
+      "store": "Pokesingles",
+      "name": "Bravery Charm 175 - Stellar Crown",
+      "price": "79.00 kr",
+      "url": "https://pokesingles.no/products/bravery-charm-175-stellar-crown?variant=53024669892887",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-30T16:38:39+00:00",
       "store": "Pokestore",
       "name": "Pokemon Mega Mewtwo X Moncolle Figur",
@@ -179678,15 +179686,6 @@
       "name": "Pokemon Mega Dream EX (Japansk) (Live) - Boosterboks (10 pakker)",
       "price": "1499.00 kr",
       "url": "https://laboge.no/products/pokemon-mega-dream-ex-japansk-live?variant=54028324831531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Dream EX (Japansk) (Live) - Boosterpakke",
-      "price": "149.90 kr",
-      "url": "https://laboge.no/products/pokemon-mega-dream-ex-japansk-live?variant=54028324864299",
       "product_class": "card",
       "event": "ny"
     }
