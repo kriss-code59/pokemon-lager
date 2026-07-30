@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-30T11:38:39+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Brilliant Stars Booster Pakke",
+      "price": "199.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack-kopi?variant=48189138927870",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T11:38:39+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Stellar Crown Booster Pakke",
+      "price": "119.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-stellar-crown-booster-pack?variant=48226044674302",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-30T11:18:41+00:00",
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Perfect Order 1-Pack Blister - Makuhita",
@@ -2680,24 +2698,6 @@
       "price": "",
       "url": "https://www.outland.no/p/p-gallery-series-morning-meadow-full-view-deck-box-deck-box-pokemon-pokemon-74427164676",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T10:58:34+00:00",
-      "store": "Outland",
-      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
-      "price": "",
-      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T10:58:34+00:00",
-      "store": "Outland",
-      "name": "PokéMon Crochet Snorlax Kit: Includes Materials to Make Snorlax and Instructions for 5 Other PokéMon\nSabrina Somers\nPokéMon Crafts\nBoks-set · Engelsk",
-      "price": "",
-      "url": "https://www.outland.no/p/p-pokemon-crochet-snorlax-kit-9781446309612",
-      "product_class": "card",
       "event": "ny"
     }
   ]

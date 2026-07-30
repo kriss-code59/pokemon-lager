@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T11:38:39+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Brilliant Stars Booster Pakke",
+      "price": "199.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack-kopi?variant=48189138927870",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T11:38:39+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Stellar Crown Booster Pakke",
+      "price": "119.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-stellar-crown-booster-pack?variant=48226044674302",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-30T11:18:41+00:00",
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Perfect Order 1-Pack Blister - Makuhita",
@@ -179678,24 +179696,6 @@
       "name": "Pokemon MS-28 Floragato Moncolle Figur",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-floragato-moncolle-figur?variant=51325893279975",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pokeball 9-Pocket Premium PRO-Binder",
-      "price": "529.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokeball-premium-pro-binder?variant=51266885877991",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-20 Baxcalibur Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-baxcalibur-moncolle-figur?variant=51265704067303",
       "product_class": "card",
       "event": "ny"
     }
