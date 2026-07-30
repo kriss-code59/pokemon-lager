@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30T10:38:45+00:00",
+  "last_updated": "2026-07-30T10:58:42+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -220,7 +220,7 @@
     {
       "store": "Cardcenter",
       "name": "Black Bolt Japansk Booster Boosterpakke",
-      "price": "149.00 kr",
+      "price": "169.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/black-bolt-japansk-booster-boosterpakke",
       "store_count": null,
@@ -373,7 +373,7 @@
     {
       "store": "Cardcenter",
       "name": "Black Bolt Japansk Booster Display Box",
-      "price": "2799.00 kr",
+      "price": "2999.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/black-bolt-japansk-booster-display-box",
       "store_count": null,
@@ -851,7 +851,7 @@
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Chaos Rising 3-Pack Blister - Charmeleon",
       "price": "329.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-chaos-rising-3-pack-blister-charmeleon-1",
       "store_count": null,
       "product_class": "card"
@@ -1407,6 +1407,15 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Pokemon Journey Together 1 Pack Blister Yanma",
+      "price": "129.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-journey-together-1-pack-blister-yanma",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Pokemon Armarouge ex Premium Collection Box",
       "price": "799.00 kr",
       "in_stock": true,
@@ -1429,6 +1438,24 @@
       "price": "990.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-vivid-portrayals-kinesisk-slim-booster-box-charizard",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Journey Together 1 Pack Premium Blister Rhyperior",
+      "price": "119.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-journey-together-1-pack-premium-blister-rhyperior",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Journey Together 1 Pack Blister Scraggy",
+      "price": "119.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-journey-together-1-pack-blister-scraggy",
       "store_count": null,
       "product_class": "card"
     },

@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-30T10:58:41+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 1 per pers. Pokemon Chaos Rising 3-Pack Blister - Charmeleon",
+      "price": "329.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-chaos-rising-3-pack-blister-charmeleon-1",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T10:58:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Journey Together 1 Pack Blister Yanma",
+      "price": "129.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-journey-together-1-pack-blister-yanma",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T10:58:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Journey Together 1 Pack Premium Blister Rhyperior",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-journey-together-1-pack-premium-blister-rhyperior",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T10:58:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Journey Together 1 Pack Blister Scraggy",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-journey-together-1-pack-blister-scraggy",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-30T10:18:52+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - Paldean Fates Charizard Tin",
@@ -2663,42 +2699,6 @@
       "url": "https://www.kanoncon.no/produkt/pokemon-tcg-lumiose-city-mini-tin/",
       "product_class": "card",
       "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T09:38:38+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Gem Packs Volume 2 Kinesisk Booster Box",
-      "price": "1299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-gem-packs-volume-2-kinesisk-booster-box",
-      "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-29T09:18:49+00:00",
-      "store": "Pokesingles",
-      "name": "Antique Cover Fossil 129 - Stellar Crown",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/antique-cover-fossil-129-stellar-crown?variant=53024665829655",
-      "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-29T09:18:49+00:00",
-      "store": "Pokesingles",
-      "name": "Antique Root Fossil 130 - Stellar Crown",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/antique-root-fossil-130-stellar-crown?variant=53024665862423",
-      "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-07-29T09:18:49+00:00",
-      "store": "Pokesingles",
-      "name": "Area Zero Underdepths 131 - Stellar Crown",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/area-zero-underdepths-131-stellar-crown?variant=53024665895191",
-      "product_class": "card",
-      "event": "restock"
     }
   ]
 }
