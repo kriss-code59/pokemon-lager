@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T05:18:39+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Pitch Black – Booster Box",
+      "price": "kr 2 899,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-booster-box/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-30T02:58:46+00:00",
       "store": "Maxgaming",
       "name": "Pokémon 2026 Dragon Boat Festival (Simplified Chinese)",
@@ -179691,15 +179699,6 @@
       "name": "Ultra Pro Pokemon Gallery Series Frosted Forest 4-Pocket Portfolio",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/gallery-series-frosted-forest-4-pocket-portfolio-for-pok-mon?variant=51766575071463",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Evolution 4-Pocket Portfolio",
-      "price": "115.00 kr",
-      "url": "https://pokestore.no/products/mega-evolution-4-pocket-portfolio-for-pok-mon?variant=51743186026727",
       "product_class": "accessory",
       "event": "ny"
     }

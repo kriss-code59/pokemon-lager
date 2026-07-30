@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30T04:58:26+00:00",
+  "last_updated": "2026-07-30T05:18:39+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -164154,15 +164154,6 @@
     },
     {
       "store": "Spillmonster",
-      "name": "Pokemon TCG – Pitch Black – Booster Box",
-      "price": "kr 2 899,00",
-      "in_stock": true,
-      "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-booster-box/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Spillmonster",
       "name": "Pokemon TCG – Pitch Black – Booster Pack",
       "price": "kr 99,00",
       "in_stock": true,
@@ -164505,6 +164496,15 @@
     },
     {
       "store": "Spillmonster",
+      "name": "Pokemon TCG – Pitch Black – Booster Box",
+      "price": "kr 2 899,00",
+      "in_stock": false,
+      "url": "https://spillmonster.no/product/pokemon-tcg-pitch-black-booster-box/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Spillmonster",
       "name": "Pokemon TCG – Pitch Black – Booster Bundle",
       "price": "kr 699,00",
       "in_stock": false,
@@ -164598,7 +164598,7 @@
       "name": "Pokemon TCG Paldea Evolved – Premium Blister Pack",
       "price": "kr 199,00",
       "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack/",
+      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack-2/",
       "store_count": null,
       "product_class": "card"
     },
@@ -164607,7 +164607,7 @@
       "name": "Pokemon TCG Paldea Evolved – Premium Blister Pack",
       "price": "kr 199,00",
       "in_stock": false,
-      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack-2/",
+      "url": "https://spillmonster.no/product/pokemon-tcg-paldea-evolved-premium-blister-pack/",
       "store_count": null,
       "product_class": "card"
     }
