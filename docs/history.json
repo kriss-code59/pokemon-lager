@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T18:58:22+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon ME05: Pitch Black - Booster",
+      "price": "79 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-me05-pitch-black-booster",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-30T17:58:50+00:00",
       "store": "Collectible",
       "name": "Pitch Black – 114/084 – Mega Zeraora ex",
@@ -179673,15 +179681,6 @@
       "price": "kr 899.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-big-plush-squishy-hug-cushion-38cm-sanei/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Magikarp Figure – Prime Figure Mini (10cm, Funism)",
-      "price": "kr 449.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-magikarp-figure-prime-figure-mini-10cm-funism/",
-      "product_class": "card",
       "event": "ny"
     }
   ]
