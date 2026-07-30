@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30T15:58:43+00:00",
+  "last_updated": "2026-07-30T16:18:52+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1292,7 +1292,7 @@
       "store": "Cardcenter",
       "name": "Black Bolt Deluxe Japansk Booster Boosterpakke",
       "price": "899.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/black-bolt-deluxe-japansk-booster-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -1337,7 +1337,7 @@
       "store": "Cardcenter",
       "name": "Black Bolt Deluxe Japansk Booster Display Box",
       "price": "3199.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/black-bolt-deluxe-japansk-booster-display-box",
       "store_count": null,
       "product_class": "card"
@@ -143051,7 +143051,7 @@
       "store": "RetroWorld",
       "name": "Pokémon Plush Figure Sylveon 20 cm",
       "price": "379.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pikachu-bamse?variant=50866992349485",
       "store_count": null,
       "product_class": "accessory"
@@ -163542,6 +163542,15 @@
     },
     {
       "store": "Playlot",
+      "name": "Destined Rivals – Elite Trainer Boks",
+      "price": "kr 2 499,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/destined-rivals-elite-trainer-boks/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
       "name": "Destined Rivals Boosterboks",
       "price": "kr 5 499,00",
       "in_stock": true,
@@ -164023,6 +164032,15 @@
       "price": "kr 129,00",
       "in_stock": false,
       "url": "https://playlot.no/produkt/surging-sparks-boosterpakke/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
+      "name": "SWSH Charizard Ultra Premium Collection",
+      "price": "kr 7 499,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/charizard-ultra-premium-collection-swsh/",
       "store_count": null,
       "product_class": "card"
     },

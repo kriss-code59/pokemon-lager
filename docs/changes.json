@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-30T16:18:50+00:00",
+      "store": "Cardcenter",
+      "name": "Black Bolt Deluxe Japansk Booster Boosterpakke",
+      "price": "899.00 kr",
+      "url": "https://cardcenter.no/products/black-bolt-deluxe-japansk-booster-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T16:18:50+00:00",
+      "store": "Cardcenter",
+      "name": "Black Bolt Deluxe Japansk Booster Display Box",
+      "price": "3199.00 kr",
+      "url": "https://cardcenter.no/products/black-bolt-deluxe-japansk-booster-display-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T16:18:50+00:00",
+      "store": "Playlot",
+      "name": "Destined Rivals – Elite Trainer Boks",
+      "price": "kr 2 499,00",
+      "url": "https://playlot.no/produkt/destined-rivals-elite-trainer-boks/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T16:18:50+00:00",
+      "store": "Playlot",
+      "name": "SWSH Charizard Ultra Premium Collection",
+      "price": "kr 7 499,00",
+      "url": "https://playlot.no/produkt/charizard-ultra-premium-collection-swsh/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-30T15:58:42+00:00",
       "store": "Playlot",
       "name": "Prismatic Evolution Boosterbundle Display [Sealed]",
@@ -2661,42 +2697,6 @@
       "name": "Ascended Heroes – 121/217 – Koraidon ex",
       "price": "13,90 kr",
       "url": "https://collectible.no/home/ascended-heroes-121-217-koraidon-ex/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T18:58:46+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 030/217 – Pignite",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-030-217-pignite/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T18:58:46+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 194/217 – Mystery Garden",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-194-217-mystery-garden/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T18:38:59+00:00",
-      "store": "Collectible",
-      "name": "Pitch Black – 113/084 – Tremendous Bomb",
-      "price": "24,00 kr",
-      "url": "https://collectible.no/home/pitch-black-113-084-tremendous-bomb/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T18:38:59+00:00",
-      "store": "Collectible",
-      "name": "Pitch Black – 104/084 – Brave Bangle",
-      "price": "79,00 kr",
-      "url": "https://collectible.no/home/pitch-black-104-084-brave-bangle/",
       "product_class": "card",
       "event": "ny"
     }
