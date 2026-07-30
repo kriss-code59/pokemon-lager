@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T09:38:35+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Pikachu Hat w/Pump Up Ears",
+      "price": "kr 149.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-hat-w-pump-up-ears/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-30T09:18:54+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - 151 Engelsk - Booster Bundle (6 Booster Packs)",
@@ -179688,15 +179697,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Spheal Plush",
       "price": "379.00 kr",
       "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-spheal-plush?variant=51989703229671",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Kangaskhan Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-kangaskhan-plush?variant=51989703131367",
       "product_class": "accessory",
       "event": "ny"
     }
