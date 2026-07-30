@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T14:58:36+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Nihil Zero Japansk Display Booster Box",
+      "price": "899.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-nullifying-zero-japansk-display-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-30T14:58:36+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Bandai Spirits Lucario & Riolu Model Kit",
+      "price": "149.00 kr",
+      "url": "https://pokestore.no/products/pokemon-bandai-spirits-lucario-riolu-model-kit-figur?variant=52078214021351",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-30T14:38:32+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Fusion Strike - Booster Box (Kinesisk)",
@@ -179675,24 +179691,6 @@
       "name": "Centiskorch V 33 - Darkness Ablaze",
       "price": "25.00 kr",
       "url": "https://pokesingles.no/products/centiskorch-v-33-darkness-ablaze?variant=53023107842327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Cetitan (C) 2706 Stamped - Gem Pack Volume 5",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/cetitan-c-2706-stamped-gem-pack-volume-5-472051?variant=53521906925847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Cetitan (C) 2707 - Gem Pack Volume 5",
-      "price": "79.00 kr",
-      "url": "https://pokesingles.no/products/cetitan-c-2707-gem-pack-volume-5-782923?variant=53517910343959",
       "product_class": "card",
       "event": "ny"
     }
