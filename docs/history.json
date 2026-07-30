@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T14:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Box (Kinesisk)",
+      "price": "1599.00 kr",
+      "url": "https://retroworld.no/products/pokemon-fusion-strike-booster-box-kinesisk?variant=52054995960109",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T14:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Pack (Kinesisk)",
+      "price": "69.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-fusion-strike-booster-pack-kinesisk?variant=51802474250541",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T14:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Dark Crystal Blaze (Charizard art) - Chinese Booster Pack",
+      "price": "39.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://retroworld.no/products/pokemon-dark-crystal-blaze-charizard-art-chinese-booster-pack?variant=51531428004141",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-30T14:18:45+00:00",
       "store": "Pokestore",
       "name": "Pokemon Stellar Miracle Booster Pakke",
@@ -179666,33 +179693,6 @@
       "name": "Cetitan (C) 2707 - Gem Pack Volume 5",
       "price": "79.00 kr",
       "url": "https://pokesingles.no/products/cetitan-c-2707-gem-pack-volume-5-782923?variant=53517910343959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Chansey (C) 0406 Stamped - Gem Pack Volume 5",
-      "price": "49.00 kr",
-      "url": "https://pokesingles.no/products/chansey-c-0406-stamped-gem-pack-volume-5-005724?variant=53521907515671",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Charcadet (JP) 083 - Inferno X",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/charcadet-jp-083-inferno-x-001085?variant=53436494151959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Charcadet 011/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/charcadet-011084-reverse-holo-pitch-black-662727?variant=54068645527831",
       "product_class": "card",
       "event": "ny"
     }

@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-30T14:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Box (Kinesisk)",
+      "price": "1599.00 kr",
+      "url": "https://retroworld.no/products/pokemon-fusion-strike-booster-box-kinesisk?variant=52054995960109",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T14:38:32+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Pack (Kinesisk)",
+      "price": "69.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-fusion-strike-booster-pack-kinesisk?variant=51802474250541",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-30T14:18:45+00:00",
       "store": "Pokestore",
       "name": "Pokemon Stellar Miracle Booster Pakke",
@@ -2679,24 +2697,6 @@
       "name": "Ascended Heroes – 215/217 – Waitress",
       "price": "3,90 kr",
       "url": "https://collectible.no/home/ascended-heroes-215-217-waitress/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T18:38:59+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 221/217 – Budew",
-      "price": "129,00 kr",
-      "url": "https://collectible.no/home/me-ascended-heroes-221-217-budew/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-29T18:38:59+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
-      "price": "4,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
       "product_class": "card",
       "event": "ny"
     }
