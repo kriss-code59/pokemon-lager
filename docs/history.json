@@ -1,6 +1,38 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T17:18:57+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Primordial Arts Venusaur Trainer Box",
+      "price": "349.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-primordial-arts-trainer-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-30T17:18:57+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokémon TCG: Triplet Beat Booster Box (Japansk)",
+      "price": "0.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-triplet-beat-booster-box-japanese?variant=52737642627383",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-30T17:18:57+00:00",
+      "store": "Pokefriends",
+      "name": "Chaos rising Booster pack",
+      "price": "99.00 kr",
+      "url": "https://pokefriends.no/products/chaos-rising-booster-pack?variant=45353462005869",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-30T17:18:57+00:00",
+      "store": "Pokefriends",
+      "name": "Pokemon Prismatic Evolutions Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://pokefriends.no/products/pokemon-prismatic-evolutions-booster-pack?variant=45143871979629",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-30T16:58:42+00:00",
       "store": "Pokesingles",
       "name": "Bravery Charm 175 - Stellar Crown",
@@ -179651,42 +179683,6 @@
       "price": "kr 39.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-sylveon-acrylic-keychain/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:38:24+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Leafeon Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-leafeon-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:38:24+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Charmander Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-charmander-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:38:24+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Gengar Mini-Figure Keychain (5cm, Funism)",
-      "price": "kr 149.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-gengar-mini-figure-keychain-5cm-funism/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Dream EX (Japansk) (Live) - Boosterboks (10 pakker)",
-      "price": "1499.00 kr",
-      "url": "https://laboge.no/products/pokemon-mega-dream-ex-japansk-live?variant=54028324831531",
-      "product_class": "card",
       "event": "ny"
     }
   ]
