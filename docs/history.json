@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T09:59:16+00:00",
+      "store": "Pokesingles",
+      "name": "Applin (Poke Ball Pattern) 9 - Prismatic Evolutions",
+      "price": "25.00 kr",
+      "url": "https://pokesingles.no/products/applin-poke-ball-pattern-9-prismatic-evolutions-914649?variant=54568490664215",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T09:59:16+00:00",
+      "store": "Pokesingles",
+      "name": "Archaludon (Poke Ball Pattern) 70 - Prismatic Evolutions",
+      "price": "35.00 kr",
+      "url": "https://pokesingles.no/products/archaludon-poke-ball-pattern-70-prismatic-evolutions-428934?variant=54568495415575",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T09:59:16+00:00",
+      "store": "Pokesingles",
+      "name": "Aromatisse (Poke Ball Pattern) 39 - Prismatic Evolutions",
+      "price": "25.00 kr",
+      "url": "https://pokesingles.no/products/aromatisse-poke-ball-pattern-39-prismatic-evolutions-880014?variant=54568492794135",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T09:59:16+00:00",
+      "store": "Pokesingles",
+      "name": "Budew (Poke Ball Pattern) 4 - Prismatic Evolutions",
+      "price": "25.00 kr",
+      "url": "https://pokesingles.no/products/budew-poke-ball-pattern-4-prismatic-evolutions-354337?variant=54568490565911",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T09:59:16+00:00",
+      "store": "Pokesingles",
+      "name": "Buneary (Poke Ball Pattern) 83 - Prismatic Evolutions",
+      "price": "25.00 kr",
+      "url": "https://pokesingles.no/products/buneary-poke-ball-pattern-83-prismatic-evolutions-717113?variant=54568496038167",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-30T09:59:16+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Paldean Fates Great Tusk ex & Iron Treads ex Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://pokestore.no/products/paldean-fates-great-tusk-ex-iron-treads-ex-premium-collection?variant=52290069790951",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-30T09:38:35+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Pikachu Hat w/Pump Up Ears",
@@ -179644,60 +179698,6 @@
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/pokemon-bandai-spirits-cinderace-model-kit?variant=52079395209447",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Toploader & Penny Sleeves Combo Pack (25 + 25 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pikachu-toploader®-and-penny-sleeves®-combo-pack-for-the-pokemon-trading-card-game-25-pack?variant=52067026698471",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Premium Vinyl Figure Pikachu 9 cm",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-premium-vinyl-figure-pikachu-9-cm?variant=51994485358823",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Snom Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-snom-plush?variant=51989705228519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Psyduck Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-psyduck-plush?variant=51989703917799",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Floragato Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-floragato-plush?variant=51989703327975",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Spheal Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-spheal-plush?variant=51989703229671",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
