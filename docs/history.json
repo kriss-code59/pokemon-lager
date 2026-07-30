@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T11:18:41+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 1 per pers. Pokemon Perfect Order 1-Pack Blister - Makuhita",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-perfect-order-1-pack-blister-makuhita",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T11:18:41+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 1 per pers. Pokemon Chaos Rising Premium Blister Pack - Pawmot",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-chaos-rising-premium-blister-pack-pawmot",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T11:18:41+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 1 per pers. Pokemon Chaos Rising Premium Blister Pack - Flygon",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-chaos-rising-premium-blister-pack-flygon",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T11:18:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Chaos Rising 1-Pack Blister - Toxel",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-chaos-rising-1-pack-blister-toxel-1",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T11:18:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Dream ex Japansk Display Booster Box",
+      "price": "1799.00 kr",
+      "previous_price": "1899.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-display-booster-box",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T11:18:41+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Dream ex Japansk Boosterpakke",
+      "price": "189.00 kr",
+      "previous_price": "199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-boosterpakke",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-30T10:58:41+00:00",
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Chaos Rising 3-Pack Blister - Charmeleon",
@@ -179643,60 +179697,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-baxcalibur-moncolle-figur?variant=51265704067303",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-35 Cinderace Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-cinderace-moncolle-figur?variant=51265539145959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terapagos (Terastal Forme) Moncolle Figur",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terapagos-terastal-forme-moncolle-figur?variant=51265531117799",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-53 Piplup Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-piplup-moncolle-figur?variant=51265494089959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-49 Ditto Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ditto-moncolle-figur?variant=51232593936615",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-13 Yveltal Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-yveltal-moncolle-figur?variant=51232535478503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Dratini Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-dratini-plush?variant=51188333805799",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
