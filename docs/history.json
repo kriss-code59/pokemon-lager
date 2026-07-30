@@ -1,6 +1,40 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-30T15:38:40+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon: First Partner Illustration Collection: Series 3 (2 Boosters) (30th Anniversary)",
+      "price": "899 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/kommer-snart-pokemon-first-partner-illustration-collection-series-3",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-30T15:38:40+00:00",
+      "store": "RetroWorld",
+      "name": "Pokémon Plush Figure Mimikyu 20 cm",
+      "price": "349.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mimikyu-plush-figur-20cm?variant=50867182764333",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-30T15:38:40+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon: First Partner Illustration Collection: Series 3 (2 Boosters) (30th Anniversary)",
+      "price": "899 kr",
+      "previous_price": "0 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/kommer-snart-pokemon-first-partner-illustration-collection-series-3",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-07-30T15:38:40+00:00",
+      "store": "Playlot",
+      "name": "Ursaluna Bloodmoon EX Collection",
+      "price": "kr 429,00",
+      "url": "https://playlot.no/produkt/ursaluna-bloodmoon-ex-boks/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-30T15:18:47+00:00",
       "store": "Kanoncon",
       "name": "Pokemon TCG Mega Evolution Chaos Rising Booster Pack",
@@ -179655,42 +179689,6 @@
       "name": "Captain Pikachu (C) 0106 Stamped - Gem Pack Volume 5",
       "price": "49.00 kr",
       "url": "https://pokesingles.no/products/captain-pikachu-c-0106-stamped-gem-pack-volume-5-023201?variant=53517908869399",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Carracosta Reverse Holo (Poké Ball) 23 - Black Bolt",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/carracosta-reverse-holo-poke-ball-23-black-bolt?variant=53077761261847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Cascoon (Love Ball) Reverse Holo 14 - Ascended Heroes",
-      "price": "6.00 kr",
-      "url": "https://pokesingles.no/products/cascoon-love-ball-reverse-holo-14-ascended-heroes?variant=53452623085847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Centiskorch 010/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/centiskorch-010084-reverse-holo-pitch-black-379425?variant=54068645495063",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T09:18:21+00:00",
-      "store": "Pokesingles",
-      "name": "Centiskorch 010/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/centiskorch-010084-pitch-black-065818?variant=54068486537495",
       "product_class": "card",
       "event": "ny"
     }
