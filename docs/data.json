@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31T16:40:00+00:00",
+  "last_updated": "2026-07-31T17:20:07+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -145038,6 +145038,15 @@
     },
     {
       "store": "RetroWorld",
+      "name": "Pokemon - The Mew Collector (1 spot)",
+      "price": "20000.00 kr",
+      "in_stock": true,
+      "url": "https://retroworld.no/products/kopi-pokemon-the-charizard-collector-1-spot-skip-the-line?variant=50823104463149",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "RetroWorld",
       "name": "Pokemon - XY Ancient Origins - 3 Card Pack",
       "price": "249.00 kr",
       "in_stock": false,
@@ -145321,6 +145330,15 @@
       "price": "799.00 kr",
       "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-accessory-pouch-special-collection?variant=50729409937709",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "RetroWorld",
+      "name": "Pokemon - Rayquaza Collector Box - One Spot",
+      "price": "10000.00 kr",
+      "in_stock": true,
+      "url": "https://retroworld.no/products/pokemon-rayquaza-collector-box-one-spot-skip-the-line?variant=50720712786221",
       "store_count": null,
       "product_class": "card"
     },
@@ -146651,7 +146669,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Paradise Dragona - Booster Pack (Japansk)",
       "price": "69.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-paradise-dragona-booster-pack-japansk?variant=50449459872045",
       "store_count": null,
       "product_class": "card"
@@ -163355,7 +163373,7 @@
       "store": "Playlot",
       "name": "Greninja & Kingdra EX Special Collection",
       "price": "kr 1 499,00",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://playlot.no/produkt/greninja-kingdra-ex-special-collection/",
       "store_count": null,
       "product_class": "card"
@@ -163519,6 +163537,15 @@
       "price": "kr 109,00",
       "in_stock": true,
       "url": "https://playlot.no/produkt/paradox-rift-boosterpack/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Playlot",
+      "name": "Phantasmal Flames Boosterpack",
+      "price": "kr 179,00",
+      "in_stock": true,
+      "url": "https://playlot.no/produkt/phantasmal-flames-boosterpack/",
       "store_count": null,
       "product_class": "card"
     },
@@ -163706,7 +163733,7 @@
       "store": "Playlot",
       "name": "Steam Siege Prerelease Kit",
       "price": "kr 2 399,00",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://playlot.no/produkt/steam-siege-prerelease-kit/",
       "store_count": null,
       "product_class": "card"
@@ -163769,7 +163796,7 @@
       "store": "Playlot",
       "name": "Trainer’s Toolkit Squawkabilly 2024",
       "price": "kr 699,00",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://playlot.no/produkt/trainers-toolkit-squawkabilly-2024/",
       "store_count": null,
       "product_class": "card"

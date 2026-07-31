@@ -1,6 +1,65 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - The Mew Collector (1 spot)",
+      "price": "20000.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-the-charizard-collector-1-spot-skip-the-line?variant=50823104463149",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Rayquaza Collector Box - One Spot",
+      "price": "10000.00 kr",
+      "url": "https://retroworld.no/products/pokemon-rayquaza-collector-box-one-spot-skip-the-line?variant=50720712786221",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "Playlot",
+      "name": "Phantasmal Flames Boosterpack",
+      "price": "kr 179,00",
+      "url": "https://playlot.no/produkt/phantasmal-flames-boosterpack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paradise Dragona - Booster Pack (Japansk)",
+      "price": "69.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paradise-dragona-booster-pack-japansk?variant=50449459872045",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "Playlot",
+      "name": "Greninja & Kingdra EX Special Collection",
+      "price": "kr 1 499,00",
+      "url": "https://playlot.no/produkt/greninja-kingdra-ex-special-collection/",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "Playlot",
+      "name": "Steam Siege Prerelease Kit",
+      "price": "kr 2 399,00",
+      "url": "https://playlot.no/produkt/steam-siege-prerelease-kit/",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "Playlot",
+      "name": "Trainer’s Toolkit Squawkabilly 2024",
+      "price": "kr 699,00",
+      "url": "https://playlot.no/produkt/trainers-toolkit-squawkabilly-2024/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T16:19:41+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Storm Emeralda Japansk Display Booster Box",
@@ -179620,69 +179679,6 @@
       "price": "379.00 kr",
       "url": "https://pokestore.no/products/pokemon-psycho-soda-refresh-alolan-vulpix-plush?variant=51045372461287",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zeraora Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zeraora-plush?variant=51045367152871",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Torterra Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-torterra-plush?variant=51045178179815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Guzzlord Plush",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-guzzlord-plush?variant=51045165662439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Japanese Window Figurer (6 stk)",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-japanse-window-figurer-6-stk?variant=51016052179175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Gemstone Collection 2 Figurer (6 stk)",
-      "price": "879.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-gemstone-collection-2-figurer-6-stk?variant=51016032059623",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Swing Vignette 2 Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-swing-vignette-2-figur?variant=51016009253095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Midnight's Mysterious Mansion 2 Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-midnights-mysterious-mansion-2-figur?variant=51013834080487",
-      "product_class": "card",
       "event": "ny"
     }
   ]

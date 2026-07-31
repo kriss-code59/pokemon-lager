@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - The Mew Collector (1 spot)",
+      "price": "20000.00 kr",
+      "url": "https://retroworld.no/products/kopi-pokemon-the-charizard-collector-1-spot-skip-the-line?variant=50823104463149",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Rayquaza Collector Box - One Spot",
+      "price": "10000.00 kr",
+      "url": "https://retroworld.no/products/pokemon-rayquaza-collector-box-one-spot-skip-the-line?variant=50720712786221",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T17:20:07+00:00",
+      "store": "Playlot",
+      "name": "Phantasmal Flames Boosterpack",
+      "price": "kr 179,00",
+      "url": "https://playlot.no/produkt/phantasmal-flames-boosterpack/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-31T16:19:41+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Storm Emeralda Japansk Display Booster Box",
@@ -2670,33 +2697,6 @@
       "name": "#042 Magikarp 042/193 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/042-magikarp-042-193-common?variant=40818978717779",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#028 Paldean Tauros 028/193 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/028-paldean-tauros-028-193-uncommon?variant=40819452969043",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#013 Sprigatito 013/193 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/013-sprigatito-013-193-common?variant=40818991267923",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#145 Blissey 145/198 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/145-blissey-145-198-uncommon?variant=40594442485843",
       "product_class": "card",
       "event": "ny"
     }
