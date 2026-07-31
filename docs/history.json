@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T11:39:45+00:00",
+      "store": "Pokefriends",
+      "name": "Phantasmal flames Sleeved Single Booster Pack",
+      "price": "209.00 kr",
+      "previous_price": "219.00 kr",
+      "url": "https://pokefriends.no/products/phantasmal-flames-sleeved-single-booster-pack?variant=45440490176621",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-31T11:19:31+00:00",
       "store": "Outland",
       "name": "Gengar MS-26 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
@@ -179673,15 +179682,6 @@
       "name": "Chi-Yu 059/084 Holo - Pitch Black",
       "price": "10.00 kr",
       "url": "https://pokesingles.no/products/chi-yu-059084-holo-pitch-black-421888?variant=54068804288791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokesingles",
-      "name": "Chien-Pao ex 236 - Paldea Evolved",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/chien-pao-ex-236-paldea-evolved?variant=53024472138007",
       "product_class": "card",
       "event": "ny"
     }
