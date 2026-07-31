@@ -1,6 +1,50 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T15:56:01+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Vaporeon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-vaporeon-tin-set-kinesisk?variant=52251060830509",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T15:56:01+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - Jeg er Gira på 10 packs",
+      "price": "1990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lost-origin-jeg-er-gira-pa-10-packs?variant=52050687787309",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T15:56:01+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Lost Origin - Booster Pack",
+      "price": "199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-lost-origin-booster-pack?variant=50380325454125",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T15:56:01+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - Sleeved Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/paldea-evolved-sleeved-pack?variant=50101589049645",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T15:56:01+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon TCG – Storm Emeralda – Booster Box (Forhåndsbestilling, release 31. Juli)",
+      "price": "kr 2 399,00",
+      "url": "https://spillmonster.no/product/pokemon-tcg-storm-emeralda-booster-box-forhandsbestilling-release-31-juli/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T15:39:26+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - ME05 Mega Evolution Pitch Black - Booster Pack",
@@ -179638,51 +179682,6 @@
       "name": "Pokemon Center Japan Litwick Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-litwick-plush?variant=51612637102311",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Zygarde (Core) Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-zygarde-core-plush?variant=51612635988199",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Swablu Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-swablu-plush?variant=51612634579175",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Banette Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-banette-plush?variant=51612625633511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Ditto Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-ditto-plush?variant=51612625567975",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Magnemite Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-magnemite-plush?variant=51612625371367",
       "product_class": "accessory",
       "event": "ny"
     }
