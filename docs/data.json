@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31T13:19:45+00:00",
+  "last_updated": "2026-07-31T13:39:27+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1202,7 +1202,7 @@
       "store": "Cardcenter",
       "name": "Pokemon - Astral Radiance - Premium 1-Pack Feraligatr",
       "price": "149.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-astral-radiance-premium-1-pack-feraligatr",
       "store_count": null,
       "product_class": "card"
@@ -3342,6 +3342,15 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Battle Deck Meowscarada Ex",
+      "price": "299.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-deluxe-battle-deck-meowscarada-ex",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Pokemon - Julekalender Med Figurer",
       "price": "799.00 kr",
       "in_stock": true,
@@ -3697,6 +3706,15 @@
       "price": "109.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/towering-perfection-japansk-booster-display-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Battle Deck Quaquavel Ex",
+      "price": "299.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-deluxe-battle-deck-quaquavel-ex",
       "store_count": null,
       "product_class": "card"
     },
@@ -139568,7 +139586,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Scarlet & Violet Base - 10 Packathon",
       "price": "990.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-scarlet-violet-base-10-packathon?variant=52173079707949",
       "store_count": null,
       "product_class": "card"
@@ -147497,7 +147515,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Surging Sparks - Booster Pack",
       "price": "139.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-surging-sparks-booster-pack?variant=50183821951277",
       "store_count": null,
       "product_class": "card"
@@ -147596,7 +147614,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Twilight Masquerade - Booster Pack",
       "price": "139.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://retroworld.no/products/twilight-masquerade-booster-pack?variant=50101593178413",
       "store_count": null,
       "product_class": "card"
@@ -147721,7 +147739,7 @@
     {
       "store": "RetroWorld",
       "name": "Pokemon - Silver Tempest - Booster Pack",
-      "price": "199.00 kr",
+      "price": "229.00 kr",
       "in_stock": true,
       "url": "https://retroworld.no/products/silver-tempest-booster-pack?variant=50101591998765",
       "store_count": null,
@@ -149488,7 +149506,7 @@
       "price": "",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-charmander-plush-figure-20-cm-pokemon-pokemon-191726710059",
-      "store_count": 5,
+      "store_count": 4,
       "product_class": "accessory"
     },
     {

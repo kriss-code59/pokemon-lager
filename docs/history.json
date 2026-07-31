@@ -1,6 +1,68 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Battle Deck Meowscarada Ex",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-battle-deck-meowscarada-ex",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Battle Deck Quaquavel Ex",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-battle-deck-quaquavel-ex",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Scarlet & Violet Base - 10 Packathon",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-scarlet-violet-base-10-packathon?variant=52173079707949",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Surging Sparks - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/pokemon-surging-sparks-booster-pack?variant=50183821951277",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Twilight Masquerade - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/twilight-masquerade-booster-pack?variant=50101593178413",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Astral Radiance - Premium 1-Pack Feraligatr",
+      "price": "149.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-astral-radiance-premium-1-pack-feraligatr",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Silver Tempest - Booster Pack",
+      "price": "229.00 kr",
+      "previous_price": "199.00 kr",
+      "url": "https://retroworld.no/products/silver-tempest-booster-pack?variant=50101591998765",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-31T13:19:44+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - Collectors Chest 2025",
@@ -179623,69 +179685,6 @@
       "name": "Pokemon All Star Collection Celebi Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-celebi-plush?variant=51508335673575",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Mimikyu Plush (22cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-mimikyu-plush?variant=51508325187815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Large Pikachu Plush",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-large-pikachu-plush?variant=51508303560935",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pichu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-pokepeace-pichu-plush?variant=51508285178087",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Sylveon Plush",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-sylveon-plush?variant=51508126613735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Jirachi Plush (23cm)",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-jiarchi-plush-23cm?variant=51507692306663",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pikachu Plush (35cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-pokepeace-pikachu-plush?variant=51507529810151",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Premium Gengar Sherpa Hettegenser - 2XL",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-premium-gengar-sherpa-hettegenser?variant=51485875568871",
       "product_class": "accessory",
       "event": "ny"
     }

@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Battle Deck Meowscarada Ex",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-battle-deck-meowscarada-ex",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Battle Deck Quaquavel Ex",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-battle-deck-quaquavel-ex",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Scarlet & Violet Base - 10 Packathon",
+      "price": "990.00 kr",
+      "url": "https://retroworld.no/products/pokemon-scarlet-violet-base-10-packathon?variant=52173079707949",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Surging Sparks - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/pokemon-surging-sparks-booster-pack?variant=50183821951277",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Twilight Masquerade - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://retroworld.no/products/twilight-masquerade-booster-pack?variant=50101593178413",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T13:19:44+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - Collectors Chest 2025",
@@ -2652,51 +2697,6 @@
       "name": "#004 Mega Heracross EX 004/094 Double Rare",
       "price": "35.00 kr",
       "url": "https://pokelink.no/products/004-mega-heracross-ex-004-094-double-rare?variant=44168918237267",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#070 Empoleon EX 070/094 Double Rare",
-      "price": "35.00 kr",
-      "url": "https://pokelink.no/products/070-empoleon-ex-070-094-double-rare?variant=44168918859859",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#104 Mega Kangaskhan EX 104/132 Double Rare",
-      "price": "35.00 kr",
-      "url": "https://pokelink.no/products/104-mega-kangaskhan-ex-104-132-double-rare?variant=44168911355987",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#050 Mega Manectric EX 050/132 Double Rare",
-      "price": "35.00 kr",
-      "url": "https://pokelink.no/products/050-mega-manectric-ex-050-132-double-rare?variant=44168912306259",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#077 Mega Lucario EX 077/132 Double Rare",
-      "price": "35.00 kr",
-      "url": "https://pokelink.no/products/077-mega-lucario-ex-077-132-double-rare?variant=44168907161683",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#066 Dondozo EX 066/182 Double Rare",
-      "price": "35.00 kr",
-      "url": "https://pokelink.no/products/066-dondozo-ex-066-182-double-rare?variant=42837255618643",
       "product_class": "card",
       "event": "ny"
     }
