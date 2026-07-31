@@ -1,6 +1,59 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T19:59:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Gold Rush (Spot 12000) - Mystery Event",
+      "price": "12000.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gold-rush-spot-12000-mystery-event?variant=51673950617901",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T19:59:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Gold Rush (Spot 12500) - Mystery Event",
+      "price": "12500.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gold-rush-spot-9500-mystery-event?variant=51673950388525",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T19:59:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Gold Rush (Spot 444) - Mystery Event",
+      "price": "444.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gold-rush-spot-14-mystery-event?variant=51658421797165",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T19:59:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Gold Rush (Spot 800) - Mystery Event",
+      "price": "800.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gold-rush-spot-8-mystery-event?variant=51658420289837",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T19:59:27+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon Gold Rush (Spot 950) - Mystery Event",
+      "price": "950.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gold-rush-spot-6-mystery-event?variant=51658420191533",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T19:59:27+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 1 per pers. Pokemon Pitch Black Elite Trainer Box",
+      "price": "949.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-pitch-black-elite-trainer-box",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T19:19:23+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Ascended Heroes - ETB [POKEMON CENTER] (SKIP THE LINE)",
@@ -179612,60 +179665,6 @@
       "name": "Pokemon Funko POP! Charizard",
       "price": "189.00 kr",
       "url": "https://pokestore.no/products/pokemon-funko-pop-charizard?variant=51539013697767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Glaceon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-glaceon-plush?variant=51508494860519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Zoroark Plush",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-zoroark-plush?variant=51508485751015",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Zeraora Plush (29cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-zeraora-plush?variant=51508473757927",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Espeon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-espeon-plush?variant=51508220526823",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Mew Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-mew-plush?variant=51507639877863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Moko Moko Charmander Plush",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-charmander-plush?variant=51470732099815",
       "product_class": "accessory",
       "event": "ny"
     }
