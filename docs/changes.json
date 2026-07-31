@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T09:19:45+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Sleeping Friends Leafeon Plush (36cm)",
+      "price": "399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-leafeon-plush-33cm?variant=50761339535591",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T09:19:45+00:00",
+      "store": "Cardhouse",
+      "name": "Shiny Treasure Booster Box",
+      "price": "2099 kr",
+      "url": "https://cardhouse.no/pokemon-booster-box/pokemon-shiny-treasure-booster-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T09:19:45+00:00",
+      "store": "Cardhouse",
+      "name": "Mega Dream Booster Boks",
+      "price": "1449 kr",
+      "url": "https://cardhouse.no/japansk/pokemon-japanske-booster-bokser/mega-dream-booster-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T09:19:45+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Mini Metal Keychain – Random (3cm, Ensky)",
+      "price": "kr 29.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-mini-metal-keychain-random-3cm-ensky/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-31T08:58:41+00:00",
       "store": "Pokestore",
       "name": "Pokemon Takara Tomy Chokkori-San Vulpix Plush",
@@ -2661,42 +2697,6 @@
       "name": "Pokemon: Charizard Plush (25cm, Aoger)",
       "price": "kr 349.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-charizard-plush-25cm-aoger/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Flareon Acrylic Keychain",
-      "price": "kr 39.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-flareon-acrylic-keychain/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Charmander Plushie (20cm, Aoger)",
-      "price": "kr 249.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-charmander-plushie-15cm/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Yummy Sweets Chocolate! Gacha (Random, Takara Tomy)",
-      "price": "kr 80.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-yummy-sweets-chocolate-gacha-random-takara-tomy/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Bulbasaur Plush (20cm, Aoger)",
-      "price": "kr 299.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-bulbasaur-plush-20cm-2/",
       "product_class": "accessory",
       "event": "ny"
     }
