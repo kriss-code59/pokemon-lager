@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31T12:39:22+00:00",
+  "last_updated": "2026-07-31T12:59:25+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -140,7 +140,7 @@
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Pitch Black Elite Trainer Box",
       "price": "949.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-pitch-black-elite-trainer-box",
       "store_count": null,
       "product_class": "card"
@@ -239,7 +239,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Go Elite Trainer Box - Mewtwo",
       "price": "1899.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-go-elite-trainer-box",
       "store_count": null,
       "product_class": "card"
@@ -453,9 +453,18 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Shrouded Fable Elite Trainer Box",
+      "price": "1599.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-shrouded-fable-elite-trainer-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Chaos Rising Elite Trainer Box",
       "price": "990.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-chaos-rising-elite-trainer-box-1",
       "store_count": null,
       "product_class": "card"
@@ -491,7 +500,7 @@
       "store": "Cardcenter",
       "name": "Pokemon - Astral Radiance - Elite Trainer Box",
       "price": "1999.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-astral-radiance-elite-trainer-box",
       "store_count": null,
       "product_class": "card"
@@ -615,6 +624,15 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Pokemon - Astral Radiance - 3-pack Blister Pack Sylveon",
+      "price": "499.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-astral-radiance-3-pack-blister-pack-sylveon",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Pokemon Gem Packs Volume 4 Kinesisk Boosterpakke",
       "price": "35.00 kr",
       "in_stock": false,
@@ -707,7 +725,7 @@
       "store": "Cardcenter",
       "name": "Pokemon - Astral Radiance - 3-pack Blister Pack Eevee",
       "price": "499.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-astral-radiance-3-pack-blister-pack-eevee",
       "store_count": null,
       "product_class": "card"
@@ -1400,7 +1418,7 @@
       "store": "Cardcenter",
       "name": "Stellar Crown 1 Pack blister Horsea",
       "price": "99.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/stellar-crown-1-pack-blister-horsea",
       "store_count": null,
       "product_class": "card"
@@ -1426,8 +1444,8 @@
     {
       "store": "Cardcenter",
       "name": "Maks 10 per pers. Pokemon Chaos Rising Sleeved Boosterpakke",
-      "price": "89.00 kr",
-      "in_stock": false,
+      "price": "99.00 kr",
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-chaos-rising-sleeved-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -146192,7 +146210,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Legends of Justice Box (Black & White)",
       "price": "9999.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-legends-of-justice-box-black-white?variant=50523127578925",
       "store_count": null,
       "product_class": "card"
@@ -147110,7 +147128,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Brilliant Stars - 3 Pack Blister (tilfeldig promo)",
       "price": "699.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-brilliant-stars-3-pack-blister?variant=50380300222765",
       "store_count": null,
       "product_class": "card"
@@ -161647,6 +161665,15 @@
       "price": "kr 279.00",
       "in_stock": true,
       "url": "https://www.neo-tokyo.no/product/pokemon-tcg-scarlet-violet-shiny-treasure-booster-pack-sv-sv4a-japanese/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Neo Tokyo",
+      "name": "Pokemon TCG: Future Flash Booster Pack (SV4M, Japanese)",
+      "price": "kr 59.00",
+      "in_stock": true,
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-future-flash-booster-pack-sv-sv4m-japanese/",
       "store_count": null,
       "product_class": "card"
     },
