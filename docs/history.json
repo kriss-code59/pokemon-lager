@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T02:38:25+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Pro-Binder 9-P Mega Charizard X/Y",
+      "price": "319 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-pro-binder-9-p-mega-charizard-x-y",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T02:38:25+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Portfolio 9-P Mega Charizard X/Y",
+      "price": "179 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-portfolio-9-p-mega-charizard-x-y",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T02:38:25+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Gem Pack Vol 5 Booster Box (Simplified Chinese)",
+      "price": "649 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-gem-pack-vol-5-booster-box-simplified-chinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-07-31T02:18:53+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Crown Zenith - Booster Pack",
@@ -179647,33 +179674,6 @@
       "name": "Pokemon: Gengar Face Plush Keychain (11,5cm, Sun-Art)",
       "price": "kr 149.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-gengar-face-plush-keychain-115cm-sun-art/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Blaziken Plush – All Star Collection (33cm, Sanei)",
-      "price": "kr 629.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-blaziken-plush-all-star-collection-33cm-sanei/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Plush I Choose You! Series – Mewtwo (27,5cm, TakaraTomy)",
-      "price": "kr 529.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-plush-i-choose-you-series-mewtwo-275cm-takaratomy/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Squirtle Plush Keychain – Heart Series (7.5cm, Potdemiel)",
-      "price": "kr 179.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-squirtle-plush-keychain-heart-series-7-5cm-potdemiel/",
       "product_class": "accessory",
       "event": "ny"
     }
