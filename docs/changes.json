@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T18:19:21+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Blooming Waters Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-blooming-waters-papp-litt-most-i-hjornet-alt-innhold-good-apnes-live?variant=50652332884269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T17:59:32+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Astral Radiance Booster Pakke",
@@ -2688,15 +2697,6 @@
       "name": "#193 Therapeutic Energy 193/193 Uncommon",
       "price": "8.00 kr",
       "url": "https://pokelink.no/products/193-therapeutic-energy-193-193-uncommon?variant=40819458113619",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#103 Tinkatuff 103/193 Uncommon",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/103-tinkatuff-103-193-uncommon?variant=40819456802899",
       "product_class": "card",
       "event": "ny"
     }

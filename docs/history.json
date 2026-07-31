@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T18:19:21+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Blooming Waters Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-blooming-waters-papp-litt-most-i-hjornet-alt-innhold-good-apnes-live?variant=50652332884269",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T18:19:21+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fates Collide - Sleeved Pack",
+      "price": "999.00 kr",
+      "url": "https://retroworld.no/products/fates-collide-sleeved-pack?variant=50101586100525",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T17:59:32+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Astral Radiance Booster Pakke",
@@ -179653,24 +179670,6 @@
       "name": "Pokemon MS-28 Floragato Moncolle Figur",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-floragato-moncolle-figur?variant=51325893279975",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pokeball 9-Pocket Premium PRO-Binder",
-      "price": "529.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokeball-premium-pro-binder?variant=51266885877991",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-20 Baxcalibur Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-baxcalibur-moncolle-figur?variant=51265704067303",
       "product_class": "card",
       "event": "ny"
     }
