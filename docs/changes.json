@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T13:59:16+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Lost Origin Booster Pakke",
+      "price": "229.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-lost-origin-booster-pack?variant=48226044641534",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:59:16+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Shrouded Fable Booster Pakke",
+      "price": "139.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-shrouded-fable-booster-pakke?variant=48658410701054",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:59:16+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon White Flare Booster Pakke",
+      "price": "199.00 kr",
+      "url": "https://pokenordic.no/products/white-flare-booster-pack?variant=47546775798014",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T13:39:26+00:00",
       "store": "Cardcenter",
       "name": "Pokemon - Deluxe Battle Deck Meowscarada Ex",
@@ -2670,33 +2697,6 @@
       "name": "#015 Beedrill 015/165 Rare Holo",
       "price": "12.00 kr",
       "url": "https://pokelink.no/products/015-beedrill-015-165-rare-holo?variant=41750107324499",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#045 Vileplume 045/165 Rare Holo",
-      "price": "12.00 kr",
-      "url": "https://pokelink.no/products/045-vileplume-045-165-rare-holo?variant=41750119972947",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#121 Starmie 121/165 Rare Holo",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/121-starmie-121-165-rare-holo?variant=41750135898195",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#004 Mega Heracross EX 004/094 Double Rare",
-      "price": "35.00 kr",
-      "url": "https://pokelink.no/products/004-mega-heracross-ex-004-094-double-rare?variant=44168918237267",
       "product_class": "card",
       "event": "ny"
     }
