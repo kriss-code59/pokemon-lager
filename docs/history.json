@@ -1,6 +1,104 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Collectors Chest 2025",
+      "price": "799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-collectors-chest-2025",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Astral Radiance - Premium 1-Pack Feraligatr",
+      "price": "149.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-astral-radiance-premium-1-pack-feraligatr",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Team Rocket's Mewtwo ex League Battle Deck",
+      "price": "599.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-team-rockets-mewtwo-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Julekalender Med Figurer",
+      "price": "799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-julekalender-2021",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Trainer Toolkit 2025",
+      "price": "649.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-trainer-toolkit-2025",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Julekalender Med Figurer",
+      "price": "799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-julekalender-med-figurer",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon - Deluxe Julekalender Med Figurer",
+      "price": "799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-deluxe-julekalender-med-figurer-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Ascended Heroes - Booster Bundle (6 Booster Packs)",
+      "price": "1499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-ascended-heroes-booster-bundle-6-booster-packs?variant=52031129157933",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/astral-radiance-booster-pack?variant=50101579055405",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Bulbasaur Plush – All Star Collection (11cm, Sanei)",
+      "price": "kr 349.00",
+      "url": "https://www.neo-tokyo.no/product/plush-pokemon-fushigidane-bulbasaur-s-pp17/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T13:19:44+00:00",
+      "store": "Playlot",
+      "name": "Team Rocket’s EX Tin",
+      "price": "kr 599,00",
+      "url": "https://playlot.no/produkt/team-rockets-ex-tin/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T12:59:24+00:00",
       "store": "Cardcenter",
       "name": "Maks 1 per pers. Pokemon Pitch Black Elite Trainer Box",
@@ -179589,105 +179687,6 @@
       "price": "899.00 kr",
       "url": "https://pokestore.no/products/pokemon-premium-gengar-sherpa-hettegenser?variant=51485875568871",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Charizard T-Skjorte - M",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-charizard-t-skjorte?variant=51485868392679",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Gengar Christmas Jumper - S",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-gengar-christmas-jumper?variant=51517127721191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Gengar Christmas Jumper - M",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-gengar-christmas-jumper?variant=51485839229159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Gengar Christmas Jumper - XL",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-gengar-christmas-jumper?variant=51485839294695",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Gengar Novelty Caps",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-gengar-novelty-caps?variant=51480380440807",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Charmander 4-Pocket Portfolio",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-charmander-4-pocket-portfolio-album?variant=51443464372455",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Charmander Playmat",
-      "price": "259.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-charmander-playmat?variant=51443461325031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment A Little Tale of the Forest 2 Figurer (6 stk)",
-      "price": "849.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-a-little-tale-of-the-forest-2-figurer-6-stk?variant=51428949459175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Trick Room 4-Pocket Portfolio",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-trick-room-4-pocket-album-binder?variant=51266890596583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-32 Crocalor Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-cyndaquil-moncolle-figur?variant=51265715142887",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-24 White Zygarde (50% Forme) Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-white-zygarde-50-forme-figur?variant=51265713668327",
-      "product_class": "card",
       "event": "ny"
     }
   ]
