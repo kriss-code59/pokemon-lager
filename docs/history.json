@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T15:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-booster-pack?variant=52221759095085",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T15:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - Booster Pack",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-booster-pack-apnes-live-pa-stream?variant=50420450853165",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T15:19:51+00:00",
       "store": "PokeShop",
       "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
@@ -179665,24 +179683,6 @@
       "name": "Pokemon Center Japan Magnemite Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-magnemite-plush?variant=51612625371367",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Cyndaquil Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-cyndaquil-plush?variant=51612597321959",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Clefable Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-clefable-plush?variant=51612582412519",
       "product_class": "accessory",
       "event": "ny"
     }

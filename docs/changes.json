@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T15:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-booster-pack?variant=52221759095085",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T15:39:26+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - Booster Pack",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-booster-pack-apnes-live-pa-stream?variant=50420450853165",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T15:19:51+00:00",
       "store": "PokeShop",
       "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
@@ -2679,24 +2697,6 @@
       "name": "#157 Cycling Road 157/165 Uncommon",
       "price": "6.00 kr",
       "url": "https://pokelink.no/products/157-cycling-road-157-165-uncommon?variant=41749892595795",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#153 Antique Helix Fossil 153/165 Common",
-      "price": "8.00 kr",
-      "url": "https://pokelink.no/products/153-antique-helix-fossil-153-165-common?variant=41749889744979",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#148 Dragonair 148/165 Uncommon",
-      "price": "15.00 kr",
-      "url": "https://pokelink.no/products/148-dragonair-148-165-uncommon?variant=41750103883859",
       "product_class": "card",
       "event": "ny"
     }
