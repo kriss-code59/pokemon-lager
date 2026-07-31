@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T17:59:32+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Astral Radiance Booster Pakke",
+      "price": "119.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-astral-radiance-booster-pack?variant=48189144137982",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T17:59:32+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Black Bolt Booster Pakke",
+      "price": "209.00 kr",
+      "url": "https://pokenordic.no/products/black-bolt-booster-pack?variant=47546844479742",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T17:20:07+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - The Mew Collector (1 spot)",
@@ -2679,24 +2697,6 @@
       "name": "#103 Tinkatuff 103/193 Uncommon",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/103-tinkatuff-103-193-uncommon?variant=40819456802899",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#100 Tinkatink 100/193 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/100-tinkatink-100-193-common?variant=40818994315347",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#042 Magikarp 042/193 Common",
-      "price": "5.00 kr",
-      "url": "https://pokelink.no/products/042-magikarp-042-193-common?variant=40818978717779",
       "product_class": "card",
       "event": "ny"
     }
