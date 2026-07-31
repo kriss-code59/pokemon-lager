@@ -1,6 +1,38 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T19:19:23+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Ascended Heroes - ETB [POKEMON CENTER] (SKIP THE LINE)",
+      "price": "6199.00 kr",
+      "url": "https://pokebua.no/products/pokemon-ascended-heroes-etb-pokemon-center?variant=51446853337321",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T19:19:23+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T19:19:23+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 151 - Blooming Waters Premium Collection",
+      "price": "4999.00 kr",
+      "url": "https://retroworld.no/products/pokemon-151-blooming-waters-papp-litt-most-i-hjornet-alt-innhold-good-apnes-live?variant=50652332884269",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-07-31T19:19:23+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - Booster Pack",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-booster-pack-apnes-live-pa-stream?variant=50420450853165",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T18:40:06+00:00",
       "store": "Boosterpakker",
       "name": "STORM EMERALDA BOOSTER BOKS",
@@ -179634,42 +179666,6 @@
       "name": "Pokemon Sekiguchi Moko Moko Charmander Plush",
       "price": "479.00 kr",
       "url": "https://pokestore.no/products/pokemon-sekiguchi-charmander-plush?variant=51470732099815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Moko Moko Squirtle Plush",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-squirtle-plush?variant=51470728069351",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Little Night Collection 2 Figurer (6 stk)",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-little-night-collection-2-figurer-6-stk?variant=51411453804775",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Mousepad XXL",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-mousepad-xxl?variant=51348918763751",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Lucario Deck Protector Sleeves (65 stk)",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-lucario-deck-protector-sleeves-65?variant=51342687600871",
       "product_class": "accessory",
       "event": "ny"
     }
