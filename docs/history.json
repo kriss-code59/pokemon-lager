@@ -1,6 +1,41 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T15:19:51+00:00",
+      "store": "PokeShop",
+      "name": "TEAM ROCKET'S MEWTWO EX LEAGUE BATTLE DECK",
+      "price": "549,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/decks/team-rocket-s-mewtwo-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T15:19:51+00:00",
+      "store": "PokeShop",
+      "name": "POKÉMON - MONOPOLY",
+      "price": "499,00 kr",
+      "url": "https://poke-shop.no/produkt/alle-produkter/spill/pokemon-monopoly-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T15:19:51+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon TCG: Cyber Judge Booster Pack (SV5M, Japanese)",
+      "price": "kr 59.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-cyber-judge-booster-pack-sv5m-japanese/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T15:19:51+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Pitch Black Booster Boks",
+      "price": "3199.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-pitch-black-booster-boks?variant=52689922785591",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T14:40:35+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179648,42 +179683,6 @@
       "name": "Pokemon Center Japan Clefable Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-clefable-plush?variant=51612582412519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Mewtwo Y Moncolle Figur",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-mewtwo-y-moncolle-figur?variant=51601587503335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-09 Zeraora Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-09-zeraora-moncolle-figur?variant=51601321394407",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Charmander Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-charmander-plush?variant=51591216824551",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bulbasaur Plush (20cm)",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bulbasaur-plush-20cm?variant=51591216398567",
       "product_class": "accessory",
       "event": "ny"
     }
