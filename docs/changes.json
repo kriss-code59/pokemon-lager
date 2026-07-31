@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-07-31T02:18:53+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crown Zenith - Booster Pack",
+      "price": "389.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crown-zenith-booster-pack?variant=48586445193449",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T02:18:53+00:00",
+      "store": "Pokefriends",
+      "name": "Chaos rising Booster pack",
+      "price": "99.00 kr",
+      "url": "https://pokefriends.no/products/chaos-rising-booster-pack?variant=45353462005869",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T02:18:53+00:00",
+      "store": "Pokefriends",
+      "name": "Pokemon Prismatic Evolutions Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://pokefriends.no/products/pokemon-prismatic-evolutions-booster-pack?variant=45143871979629",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-30T19:58:38+00:00",
       "store": "Pokesingles",
       "name": "Call Bell Reverse Holo 165 - Surging Sparks",
@@ -2671,33 +2698,6 @@
       "price": "kr 39.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-acrylic-keychain-b-side-5cm/",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Ultra Pro: Pokemon Pikachu Playmat",
-      "price": "kr 329.00",
-      "url": "https://www.neo-tokyo.no/product/ultra-pro-pokemon-pikachu-playmat/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Pikachu & Eevee Crayon Art Puzzle (108P, Ensky)",
-      "price": "kr 299.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-eevee-crayon-art-puzzle-208p-ensky/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-30T02:38:27+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Mini-Figure Blind Box – Decorative Frame Collection2 (13cm, Re-Ment)",
-      "price": "kr 289.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-mini-figure-blind-box-decorative-frame-collection2-13cm-re-ment/",
-      "product_class": "card",
       "event": "ny"
     }
   ]
