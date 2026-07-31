@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T10:59:40+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokémon TCG: Triplet Beat Booster Box (Japansk)",
+      "price": "1849.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-triplet-beat-booster-box-japanese?variant=52737642627383",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-07-31T10:19:23+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 234/217 – Banette",
@@ -179673,15 +179682,6 @@
       "name": "Chien-Pao ex 61 - Paldea Evolved",
       "price": "15.00 kr",
       "url": "https://pokesingles.no/products/chien-pao-ex-61-paldea-evolved?variant=53024462373143",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:59:00+00:00",
-      "store": "Pokesingles",
-      "name": "Chikorita (Energy Symbol) Reverse Holo 8 - Ascended Heroes",
-      "price": "7.00 kr",
-      "url": "https://pokesingles.no/products/chikorita-reverse-holo-8-ascended-heroes?variant=53024874627351",
       "product_class": "card",
       "event": "ny"
     }
