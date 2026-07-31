@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T07:58:32+00:00",
+      "store": "Pokesingles",
+      "name": "Black Belt's Training 255 - Ascended Heroes",
+      "price": "39.00 kr",
+      "url": "https://pokesingles.no/products/black-belts-training-255-ascended-heroes?variant=53024910115095",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T03:18:32+00:00",
       "store": "Collectible",
       "name": "Neo Discovery – 16/75 – Wobbuffet – Holo (Heavily Played)",
@@ -179665,15 +179673,6 @@
       "name": "Pokemon: Bulbasaur Plush Keychain – Rest Series (10cm, Potdemiel)",
       "price": "kr 179.00",
       "url": "https://www.neo-tokyo.no/product/pokemon-bulbasaur-plush-keychain-rest-series-10cm-potdemiel/",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T13:38:17+00:00",
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Sleepy Friend Plush Series – Charizard (25cm, Takara Tomy)",
-      "price": "kr 499.00",
-      "url": "https://www.neo-tokyo.no/product/pokemon-sleepy-friend-plush-series-charizard-25cm-takara-tomy/",
       "product_class": "accessory",
       "event": "ny"
     }
