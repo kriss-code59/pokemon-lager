@@ -1,6 +1,50 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T12:39:21+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Pitch Black Premium Blister Pack - Luxray",
+      "price": "125.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-pitch-black-premium-blister-pack-luxray",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T12:39:21+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 1 per pers. Pokemon Pitch Black 3-Pack Blister - Binacle",
+      "price": "299.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-pitch-black-3-pack-blister-binacle",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T12:39:21+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Pitch Black Premium Blister Pack - Gengar",
+      "price": "125.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-pitch-black-premium-blister-pack-gengar",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T12:39:21+00:00",
+      "store": "Cardcenter",
+      "name": "Stellar Crown 1 Pack blister Horsea",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/stellar-crown-1-pack-blister-horsea",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-07-31T12:39:21+00:00",
+      "store": "Playlot",
+      "name": "Obsidian Flames Boosterpack",
+      "price": "kr 149,00",
+      "url": "https://playlot.no/produkt/obsidian-flames-boosterpack-2/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T12:19:28+00:00",
       "store": "Playlot",
       "name": "25th anniversary Promo Boosterpack",
@@ -179647,51 +179691,6 @@
       "price": "139.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-tyranitar-figur?variant=51236961222887",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-11 Black Kyurem Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-black-kyurem-moncolle-figur?variant=51235242311911",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-01 Pikachu Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-moncolle-figur?variant=51232614678759",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-38 Slowpoke Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-slowpoke-moncolle-figur?variant=51232610648295",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Blaziken Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-blaziken-plush?variant=51188343734503",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Tauros Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-tauros-plush?variant=51188318765287",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
