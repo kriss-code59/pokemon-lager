@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T09:55:41+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon First Partner Illustration Collection (Vol. 1) [B-VARE*]",
+      "price": "899.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-first-partner-illustration-collection-vol-1-kopi?variant=48648368750846",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-07-31T09:39:28+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179676,15 +179684,6 @@
       "url": "https://boosterpakker.no/produkt/booster-bokser/kinesisk-arcane-truth-booster-boks",
       "product_class": "card",
       "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T16:18:23+00:00",
-      "store": "Boosterpakker",
-      "name": "KINESISK BRIGHT FANTASY BOOSTER BOKS",
-      "price": "319,00 kr",
-      "previous_price": "299,00 kr",
-      "url": "https://boosterpakker.no/produkt/booster-bokser/kinesisk-bright-fantasty-booster-boks",
-      "event": "prisendring"
     }
   ]
 }
