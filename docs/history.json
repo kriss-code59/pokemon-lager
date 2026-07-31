@@ -1,6 +1,69 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Vulpix Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-vulpix-plush?variant=52257915601127",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Eevee Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-eevee-plush?variant=52257915502823",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Flareon Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-flareon-plush?variant=52257915437287",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Vaporeon Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-vaporeon-plush?variant=52257915404519",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Alolan Vulpix Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-alolan-vulpix-plush?variant=52257914945767",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Morpeko (Full Belly Mode) Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-morpeko-full-belly-mode-plush?variant=52257914912999",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-07-31T08:58:41+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy Chokkori-San Mew Plush",
+      "price": "229.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-chokkori-san-mew-plush?variant=52257913864423",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T08:38:28+00:00",
       "store": "Pokestore",
       "name": "Pokemon Takara Tomy Chokkori-San Snorlax Plush",
@@ -179621,69 +179684,6 @@
       "name": "Ascended Heroes – 182/217 – Anthea & Concordia",
       "price": "3,90 kr",
       "url": "https://collectible.no/home/ascended-heroes-182-217-anthea-concordia/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 185/217 – Canari",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-185-217-canari/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 119/217 – Carkol",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-119-217-carkol/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 194/217 – Mystery Garden",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-194-217-mystery-garden/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "XY Phantom Forces – 093/119 – Dimension Valley",
-      "price": "15,00 kr",
-      "url": "https://collectible.no/home/xy-phantom-forces-093-119-dimension-valley/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
-      "price": "4,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 091/217 – Banette",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-091-217-banette/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-20T15:58:57+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 172/217 – Mega Audino ex",
-      "price": "14,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-172-217-mega-audino-ex/",
       "product_class": "card",
       "event": "ny"
     }
