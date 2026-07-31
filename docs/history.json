@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-07-31T18:40:06+00:00",
+      "store": "Boosterpakker",
+      "name": "STORM EMERALDA BOOSTER BOKS",
+      "price": "2 190,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/storm-emeralda-booster-boks",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-07-31T18:19:21+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - 151 - Blooming Waters Premium Collection",
@@ -179662,15 +179671,6 @@
       "price": "109.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-lucario-deck-protector-sleeves-65?variant=51342687600871",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-28 Floragato Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-floragato-moncolle-figur?variant=51325893279975",
-      "product_class": "card",
       "event": "ny"
     }
   ]
