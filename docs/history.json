@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T13:19:28+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crown Zenith - Booster Pack X 5 (SKIP THE LINE)",
+      "price": "1899.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crown-zenith-booster-pack-x-5-skip-the-line?variant=51607700308201",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-01T12:39:31+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179638,15 +179647,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-trick-room-deck-protector-sleeves-65?variant=50735884533991",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Pocket Statue: Dragon Type Figur",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-pocket-statue-dragon-type-figur?variant=51013816058087",
-      "product_class": "card",
       "event": "ny"
     }
   ]
