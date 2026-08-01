@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-01T02:19:33+00:00",
+  "last_updated": "2026-08-01T02:39:09+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -149988,24 +149988,6 @@
     },
     {
       "store": "Maxgaming",
-      "name": "Pokémon 151C Gathering Booster Box (Simplified Chinese)",
-      "price": "1429 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-151c-gathering-booster-box-forenklet-kinesisk",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Maxgaming",
-      "name": "Pokémon Battle Academy",
-      "price": "349 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/battle-academy",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Maxgaming",
       "name": "Pokémon Grand Crystal Binder Gift Box - Umbreon (Simplified Chinese)",
       "price": "1799 kr",
       "in_stock": null,
@@ -150024,10 +150006,19 @@
     },
     {
       "store": "Maxgaming",
-      "name": "Pokémon First Partner Card Set (Simplified Chinese)",
-      "price": "249 kr",
+      "name": "Pokémon Battle Academy",
+      "price": "349 kr",
       "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-first-partner-card-set-simplified-chinese",
+      "url": "https://www.maxgaming.no/no/pokemon/battle-academy",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Maxgaming",
+      "name": "Pokémon 151C Gathering Booster Box (Simplified Chinese)",
+      "price": "1429 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-151c-gathering-booster-box-forenklet-kinesisk",
       "store_count": null,
       "product_class": "card"
     },
@@ -150042,6 +150033,15 @@
     },
     {
       "store": "Maxgaming",
+      "name": "Pokémon First Partner Card Set (Simplified Chinese)",
+      "price": "249 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-first-partner-card-set-simplified-chinese",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Maxgaming",
       "name": "Pokémon Scarlet & Violet 10: Destined Rivals Booster",
       "price": "79 kr",
       "in_stock": false,
@@ -150051,19 +150051,37 @@
     },
     {
       "store": "Maxgaming",
-      "name": "Pokémon Pikachu Spesialboks Pokémon Center - Fukuoka",
-      "price": "2490 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-pikachu-spesialboks-pokemon-center-fukuoka",
+      "name": "Pokémon ME05: Pitch Black - Checklane",
+      "price": "85 kr",
+      "in_stock": false,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-me05-pitch-black-checklane",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Maxgaming",
-      "name": "Pokémon ME05: Pitch Black - Checklane",
-      "price": "85 kr",
-      "in_stock": false,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-me05-pitch-black-checklane",
+      "name": "Pokémon Scarlet & Violet: Shiny Treasure ex SV4a Booster Box (Japanese)",
+      "price": "1899 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/scarlet-violet-shiny-treasure-ex-sv4a-booster-box-japanese",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Maxgaming",
+      "name": "Pokémon Pikachu Spesialboks Pokémon Center - Hiroshima",
+      "price": "2590 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-pikachu-spesialboks-pokemon-center-hiroshima",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Maxgaming",
+      "name": "Pokémon Pikachu Spesialboks Pokémon Center - Fukuoka",
+      "price": "2490 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-pikachu-spesialboks-pokemon-center-fukuoka",
       "store_count": null,
       "product_class": "card"
     },
@@ -150087,28 +150105,19 @@
     },
     {
       "store": "Maxgaming",
-      "name": "Pokémon Scarlet & Violet: Shiny Treasure ex SV4a Booster Box (Japanese)",
-      "price": "1899 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/scarlet-violet-shiny-treasure-ex-sv4a-booster-box-japanese",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Maxgaming",
-      "name": "Pokémon Pikachu Spesialboks Pokémon Center - Hiroshima",
-      "price": "2590 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-pikachu-spesialboks-pokemon-center-hiroshima",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Maxgaming",
       "name": "Pokémon Grand Crystal Binder Gift Box - Sylveon",
       "price": "1699 kr",
       "in_stock": null,
       "url": "https://www.maxgaming.no/no/pokemon/pokemon-grand-crystal-binder-gift-box-sylveon",
+      "store_count": null,
+      "product_class": "accessory"
+    },
+    {
+      "store": "Maxgaming",
+      "name": "Pokémon Plush Toy Card Display Gift Box",
+      "price": "399 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-plush-toy-kort-vise-gaveeske",
       "store_count": null,
       "product_class": "accessory"
     },
@@ -150138,15 +150147,6 @@
       "url": "https://www.maxgaming.no/no/pokemon/pokemon-pikachu-special-box-pokemon-center-tohoku",
       "store_count": null,
       "product_class": "card"
-    },
-    {
-      "store": "Maxgaming",
-      "name": "Pokémon Plush Toy Card Display Gift Box",
-      "price": "399 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-plush-toy-kort-vise-gaveeske",
-      "store_count": null,
-      "product_class": "accessory"
     },
     {
       "store": "Maxgaming",
@@ -150231,6 +150231,24 @@
     },
     {
       "store": "Maxgaming",
+      "name": "Pokémon Scarlet & Violet 9: Journey Together 9-pocket binder",
+      "price": "?",
+      "in_stock": false,
+      "url": "https://www.maxgaming.no/no/pokemon/scarlet-violet-9-journey-together-9-pocket-binder",
+      "store_count": null,
+      "product_class": "accessory"
+    },
+    {
+      "store": "Maxgaming",
+      "name": "Pokémon Gem Pack Vol 5 Booster Box (Simplified Chinese)",
+      "price": "649 kr",
+      "in_stock": true,
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-gem-pack-vol-5-booster-box-simplified-chinese",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Maxgaming",
       "name": "Pokémon ME2.5 Ascended Heroes Elite Trainer Box",
       "price": "999 kr",
       "in_stock": false,
@@ -150285,12 +150303,12 @@
     },
     {
       "store": "Maxgaming",
-      "name": "Pokémon Scarlet & Violet 9: Journey Together 9-pocket binder",
-      "price": "?",
+      "name": "Pokémon Summer ex Tin box",
+      "price": "449 kr",
       "in_stock": false,
-      "url": "https://www.maxgaming.no/no/pokemon/scarlet-violet-9-journey-together-9-pocket-binder",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-summer-ex-tin-box",
       "store_count": null,
-      "product_class": "accessory"
+      "product_class": "card"
     },
     {
       "store": "Maxgaming",
@@ -150309,15 +150327,6 @@
       "url": "https://www.maxgaming.no/no/pokemon/pokemon-me25-ascended-heroes-deluxe-pin-collection",
       "store_count": null,
       "product_class": "accessory"
-    },
-    {
-      "store": "Maxgaming",
-      "name": "Pokémon Summer ex Tin box",
-      "price": "449 kr",
-      "in_stock": false,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-summer-ex-tin-box",
-      "store_count": null,
-      "product_class": "card"
     },
     {
       "store": "Maxgaming",
@@ -150343,15 +150352,6 @@
       "price": "469 kr",
       "in_stock": false,
       "url": "https://www.maxgaming.no/no/pokemon/charizard-ex-special-collection",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Maxgaming",
-      "name": "Pokémon Gem Pack Vol 5 Booster Box (Simplified Chinese)",
-      "price": "649 kr",
-      "in_stock": true,
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-gem-pack-vol-5-booster-box-simplified-chinese",
       "store_count": null,
       "product_class": "card"
     },
