@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T17:19:47+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Temporal Forces - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://pokebua.no/products/pokemon-temporal-forces-booster-pack?variant=48461041500393",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-01T17:19:47+00:00",
+      "store": "Pokesingles",
+      "name": "Clefairy 94 - Perfect Order",
+      "price": "250.00 kr",
+      "url": "https://pokesingles.no/products/clefairy-94-perfect-order?variant=53024925384983",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-01T17:19:47+00:00",
+      "store": "Pokesingles",
+      "name": "Crushing Hammer 105 - Pitch Black",
+      "price": "59.00 kr",
+      "url": "https://pokesingles.no/products/crushing-hammer-105084-pitch-black-699616?variant=54069312454935",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-01T17:19:47+00:00",
+      "store": "Pokesingles",
+      "name": "Clefairy 94 - Perfect Order",
+      "price": "250.00 kr",
+      "previous_price": "0.00 kr",
+      "url": "https://pokesingles.no/products/clefairy-94-perfect-order?variant=53024925384983",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T17:19:47+00:00",
+      "store": "Pokesingles",
+      "name": "Cobalion ex 103/086 - Chaos Rising",
+      "price": "39.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokesingles.no/products/cobalion-ex-103086-chaos-rising-850063?variant=53813426323735",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T17:19:47+00:00",
+      "store": "Pokesingles",
+      "name": "Crushing Hammer 105 - Pitch Black",
+      "price": "59.00 kr",
+      "previous_price": "149.00 kr",
+      "url": "https://pokesingles.no/products/crushing-hammer-105084-pitch-black-699616?variant=54069312454935",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-01T16:39:29+00:00",
       "store": "Cardcenter",
       "name": "Black Bolt Japansk Booster Boosterpakke",
@@ -179587,60 +179641,6 @@
       "price": "1299.00 kr",
       "url": "https://pokestore.no/products/pokemon-evolving-skies-mini-binder-m-booster-pakke?variant=50624504758503",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lumiose City Mini Tin Display",
-      "price": "1999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tcg-lumiose-city-mini-tins-assorted-display-cdu-10?variant=52181694808295",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Pikachu 12-Pocket Zippered PRO-Binder",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/elite-series-pikachu-12-pocket-zippered-pro-binder®-for-pokemon?variant=52067026665703",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Ascended Heroes Dragonite Sleeves (65 stk)",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ascended-heroes-elite-trainer-box-b-vare?variant=51794272092391",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Charmander 9-Pocket PRO-Binder",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-charmander-9-pocket-pro-binder-album?variant=51443427541223",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Journey Together 4-Pocket Portfolio",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-journey-together-4-pocket-album?variant=51353356861671",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-19 Zamazenta Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-zamazenta-moncolle-figur?variant=51265555103975",
-      "product_class": "card",
       "event": "ny"
     }
   ]
