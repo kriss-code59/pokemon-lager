@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T08:39:23+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Dark Crystal Blaze (Charizard art) - Chinese Booster Box",
+      "price": "549.00 kr",
+      "url": "https://retroworld.no/products/pokemon-dark-crystal-blaze-charizard-art-chinese-booster-box?variant=52270035927341",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T08:39:23+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Battle Academy",
+      "price": "349 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/battle-academy",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T08:19:33+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Badge Box",
@@ -179635,24 +179652,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-ms-12-captain-pikachu-moncolle-figur?variant=51601319067879",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-51 Espeon Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-51-espeon-moncolle-figur?variant=51601315692775",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Pikachu Collection Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-pikachu-collection-sleeves?variant=51568668999911",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
