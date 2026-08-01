@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T08:59:21+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Perfect Order Checklane Blister",
+      "price": "109.00 kr",
+      "url": "https://pokestore.no/products/pokemon-perfect-order-checklane-blister-sett?variant=51707748876519",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T08:39:23+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Dark Crystal Blaze (Charizard art) - Chinese Booster Box",
@@ -179642,15 +179650,6 @@
       "name": "Pokemon MS-22 Garchomp Moncolle figur",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/pokemon-ms-22-garchomp-moncolle-figur?variant=51601587208423",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-12 Captain Pikachu Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-12-captain-pikachu-moncolle-figur?variant=51601319067879",
       "product_class": "card",
       "event": "ny"
     }
