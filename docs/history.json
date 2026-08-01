@@ -1,6 +1,38 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T19:35:47+00:00",
+      "store": "Emken",
+      "name": "TEAM ROCKET'S MEWTWO EX #205 POKEMON PROMO",
+      "price": "29,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/team-rocket-s-mewtwo-ex-205-pokemon-promo-1",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-01T19:35:47+00:00",
+      "store": "Emken",
+      "name": "ELECTIVIRE EX #69 POKEMON DESTINED RIVALS",
+      "price": "15,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/electivire-ex-69-pokemon-destined-rivals-1",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-01T19:35:47+00:00",
+      "store": "Emken",
+      "name": "DONDOZO EX #66 POKEMON DESTINED RIVALS",
+      "price": "19,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/dondozo-ex-66-pokemon-destined-rivals-1",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-01T19:35:47+00:00",
+      "store": "Emken",
+      "name": "ETHAN'S HO-OH EX #39 POKEMON DESTINED RIVALS",
+      "price": "19,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/ethan-s-ho-oh-ex-39-pokemon-destined-rivals-1",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T18:59:57+00:00",
       "store": "Boosterpakker",
       "name": "PARADOX RIFT BOOSTER PAKKE",
@@ -179605,42 +179637,6 @@
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-starrium-series-dreamy-moonlight-figur?variant=51013113839847",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Rowlet Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-rowlet-plush?variant=50981498618087",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Lucario Plush (29cm)",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lucario-plush-29cm?variant=50980449779943",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Leafeon",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-leafeon?variant=50899159351527",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Zorua Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-zorua?variant=50746113917159",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
