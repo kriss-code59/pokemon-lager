@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T18:59:57+00:00",
+      "store": "Boosterpakker",
+      "name": "PARADOX RIFT BOOSTER PAKKE",
+      "price": "119,00 kr",
+      "previous_price": "99,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/paradox-rift-booster-pakke",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-01T17:39:17+00:00",
       "store": "Pokesingles",
       "name": "AZ's Tranquility 106 - Chaos Rising",
@@ -179631,15 +179640,6 @@
       "name": "Pokemon Center Japan Zorua Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-zorua?variant=50746113917159",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Charizard X Plush (35cm)",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-charizard-x-plush-35cm?variant=50746106413287",
       "product_class": "accessory",
       "event": "ny"
     }
