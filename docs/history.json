@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T08:19:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Badge Box",
+      "price": "179.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-badge-box?variant=52270021968173",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T08:19:33+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 30th Anniversary First Partner Vol. 2 (Kinesisk)",
+      "price": "179.00 kr",
+      "url": "https://retroworld.no/products/pokemon-30th-anniversary-first-partner-vol-2-kinesisk?variant=52270014398765",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-01T07:59:12+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Espeon Tin Set (Kinesisk)",
@@ -179634,24 +179652,6 @@
       "name": "Pokemon Center Japan Pikachu Collection Sleeves (64 stk)",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-pikachu-collection-sleeves?variant=51568668999911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Celebi & Friends Premium Gloss Sleeves (64 stk)",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-celebi-friends-premium-gloss-sleeves?variant=51568659792103",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Glory of Team Rocket Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-glory-of-team-rocket-sleeves?variant=51568583180519",
       "product_class": "accessory",
       "event": "ny"
     }
