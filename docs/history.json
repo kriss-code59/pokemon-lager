@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T17:39:17+00:00",
+      "store": "Pokesingles",
+      "name": "AZ's Tranquility 106 - Chaos Rising",
+      "price": "39.00 kr",
+      "url": "https://pokesingles.no/products/azs-tranquility-106-chaos-rising-499464?variant=54584988991767",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T17:39:17+00:00",
+      "store": "Pokesingles",
+      "name": "Beedrill ex 98 - Chaos Rising",
+      "price": "39.00 kr",
+      "url": "https://pokesingles.no/products/beedrill-ex-98-chaos-rising-928552?variant=54584989024535",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T17:39:17+00:00",
+      "store": "Pokesingles",
+      "name": "Claydol 92 - Chaos Rising",
+      "price": "49.00 kr",
+      "url": "https://pokesingles.no/products/claydol-92-chaos-rising-389194?variant=54584988860695",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T17:39:17+00:00",
+      "store": "Pokesingles",
+      "name": "Crobat 93 - Chaos Rising",
+      "price": "49.00 kr",
+      "url": "https://pokesingles.no/products/crobat-93-chaos-rising-964415?variant=54584989188375",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-01T17:19:47+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Temporal Forces - Booster Pack",
@@ -179604,42 +179640,6 @@
       "name": "Pokemon Mega Charizard X Plush (35cm)",
       "price": "599.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-charizard-x-plush-35cm?variant=50746106413287",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Sylveon Plush (34cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-sylveon-plush?variant=50746089996519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Iono’s Bellibolt ex Premium Collection",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-iono-s-bellibolt-ex-premium-collection?variant=50688496238823",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon 2022 World Championship Decks - Sebastian/Rikuto/Ondrej/Andre",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-2022-world-championship-decks-sebastian-rikuto-ondrej-andre?variant=50624531497191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Evolving Skies Mini Binder",
-      "price": "1299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-evolving-skies-mini-binder-m-booster-pakke?variant=50624504758503",
       "product_class": "accessory",
       "event": "ny"
     }

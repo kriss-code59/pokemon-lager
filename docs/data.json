@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-01T17:19:48+00:00",
+  "last_updated": "2026-08-01T17:39:18+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -63030,24 +63030,6 @@
     },
     {
       "store": "Pokebua",
-      "name": "Cody's Snack Pack",
-      "price": "549.00 kr",
-      "in_stock": false,
-      "url": "https://pokebua.no/products/codys-snack-pack?variant=51589414715625",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokebua",
-      "name": "Pokemon - Pitch Black - Booster Pack",
-      "price": "89.00 kr",
-      "in_stock": false,
-      "url": "https://pokebua.no/products/pokemon-pitch-black-booster-pack?variant=51577926320361",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokebua",
       "name": "Pokemon - 151 - Booster Pack (Fra Booster Bundle)",
       "price": "419.00 kr",
       "in_stock": true,
@@ -63219,15 +63201,6 @@
     },
     {
       "store": "Pokebua",
-      "name": "Pokemon - Pokerev OneRip - Booster Pack",
-      "price": "289.00 kr",
-      "in_stock": false,
-      "url": "https://pokebua.no/products/pokemon-revpacks-onerip-forhandsbestilling-forventet-15-07-26?variant=51286952378601",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokebua",
       "name": "Pokemon - Greath Ball Tin Box - Kinesisk",
       "price": "249.00 kr",
       "in_stock": true,
@@ -63273,15 +63246,6 @@
     },
     {
       "store": "Pokebua",
-      "name": "Pokemon - Ascended Heroes - ETB [POKEMON CENTER] (SKIP THE LINE)",
-      "price": "6199.00 kr",
-      "in_stock": false,
-      "url": "https://pokebua.no/products/pokemon-ascended-heroes-etb-pokemon-center?variant=51446853337321",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokebua",
       "name": "Pokemon - Phantasmal Flames - ETB (CASE FRESH 25.06)",
       "price": "1999.00 kr",
       "in_stock": true,
@@ -63295,15 +63259,6 @@
       "price": "169.00 kr",
       "in_stock": true,
       "url": "https://pokebua.no/products/pokemon-crystal-gathering-coin-box-forhandsbestilling?variant=51285913403625",
-      "store_count": null,
-      "product_class": "accessory"
-    },
-    {
-      "store": "Pokebua",
-      "name": "Pokemon - Crystal Gathering - Mystery Keychain Box",
-      "price": "379.00 kr",
-      "in_stock": false,
-      "url": "https://pokebua.no/products/pokemon-kinesisk-crystal-gathering-mystery-keychain?variant=51285883814121",
       "store_count": null,
       "product_class": "accessory"
     },
@@ -88887,6 +88842,15 @@
     },
     {
       "store": "Pokesingles",
+      "name": "AZ's Tranquility 106 - Chaos Rising",
+      "price": "39.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/azs-tranquility-106-chaos-rising-499464?variant=54584988991767",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
       "name": "Azelf (JP) 50 - Super Electric Breaker",
       "price": "0.00 kr",
       "in_stock": false,
@@ -92446,6 +92410,15 @@
       "price": "0.00 kr",
       "in_stock": false,
       "url": "https://pokesingles.no/products/beedrill-7-evolutions?variant=53022759977239",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
+      "name": "Beedrill ex 98 - Chaos Rising",
+      "price": "39.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/beedrill-ex-98-chaos-rising-928552?variant=54584989024535",
       "store_count": null,
       "product_class": "card"
     },
@@ -115338,6 +115311,15 @@
     },
     {
       "store": "Pokesingles",
+      "name": "Claydol 92 - Chaos Rising",
+      "price": "49.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/claydol-92-chaos-rising-389194?variant=54584988860695",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
       "name": "Claydol 94 - Silver Tempest",
       "price": "0.00 kr",
       "in_stock": false,
@@ -121728,6 +121710,15 @@
     },
     {
       "store": "Pokesingles",
+      "name": "Crobat 93 - Chaos Rising",
+      "price": "49.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/crobat-93-chaos-rising-964415?variant=54584989188375",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
       "name": "Crobat BREAK XY181 - XY Black Star Promos",
       "price": "0.00 kr",
       "in_stock": false,
@@ -122506,42 +122497,6 @@
       "price": "0.00 kr",
       "in_stock": false,
       "url": "https://pokesingles.no/products/crustle-jp-8?variant=53042709332247",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
-      "name": "Crustle (JP) Reverse Holo 55 - ブラックボルト",
-      "price": "0.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/crustle-jp-reverse-holo-55?variant=53042664210711",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
-      "name": "Crustle 11 - Unified Minds",
-      "price": "0.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/crustle-11-unified-minds?variant=53022944854295",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
-      "name": "Crustle 12 - Destined Rivals",
-      "price": "0.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/crustle-12-destined-rivals?variant=53024737526039",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
-      "name": "Crustle 12 - Evolving Skies",
-      "price": "0.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/crustle-12-evolving-skies?variant=53023248679191",
       "store_count": null,
       "product_class": "card"
     },
@@ -161634,19 +161589,19 @@
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon: Character Chocolate w/Wheat Puff (31g, Bandai)",
-      "price": "kr 39.00",
+      "name": "Pokemon TCG: Mega Symphonia Booster Pack (M1S, Japanese)",
+      "price": "kr 69.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-character-chocolate-w-wheat-puff-31g-bandai/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-mega-symphonia-booster-pack-m1s-japanese/",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Mega Symphonia Booster Pack (M1S, Japanese)",
-      "price": "kr 69.00",
+      "name": "Pokemon: Character Chocolate w/Wheat Puff (31g, Bandai)",
+      "price": "kr 39.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-mega-symphonia-booster-pack-m1s-japanese/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-character-chocolate-w-wheat-puff-31g-bandai/",
       "store_count": null,
       "product_class": "card"
     },
@@ -161706,19 +161661,19 @@
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon TCG: VStar Universe Booster Pack (SWSH S12a, Japanese)",
-      "price": "kr 419.00",
+      "name": "Pokemon TCG: Cyber Judge Booster Pack (SV5M, Japanese)",
+      "price": "kr 59.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-vstar-universe-booster-pack-swsh-s12a-japanese/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-cyber-judge-booster-pack-sv5m-japanese/",
       "store_count": null,
       "product_class": "card"
     },
     {
       "store": "Neo Tokyo",
-      "name": "Pokemon TCG: Cyber Judge Booster Pack (SV5M, Japanese)",
-      "price": "kr 59.00",
+      "name": "Pokemon TCG: VStar Universe Booster Pack (SWSH S12a, Japanese)",
+      "price": "kr 419.00",
       "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-cyber-judge-booster-pack-sv5m-japanese/",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-vstar-universe-booster-pack-swsh-s12a-japanese/",
       "store_count": null,
       "product_class": "card"
     },
