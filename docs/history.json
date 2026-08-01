@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Pitch Black Booster Boks",
+      "price": "3199.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-pitch-black-booster-boks?variant=52689922785591",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon SWSH12: Silver Tempest Booster Bundle (Box med 6 Boosters)",
+      "price": "2299 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-swsh12-silver-tempest-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&V: Twilight Masquerade Booster Bundle (Box med 6 Boosters)",
+      "price": "1399 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-twilight-masquerade-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&V: Black Bolt Booster Bundle (Box med 6 Boosters)",
+      "price": "1799 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-black-bolt-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&V: White Flare Booster Bundle (Box med 6 Boosters)",
+      "price": "1599 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-white-flare-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE – Pokémon S&V: Journey Together Booster Bundle (Box med 6 Boosters)",
+      "price": "899 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-journey-together-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-01T11:39:24+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179594,60 +179648,6 @@
       "name": "Pokemon Explosion Walker Booster Pakke",
       "price": "80.00 kr",
       "url": "https://pokestore.no/products/pokemon-explosion-walker-booster-pakke?variant=50624495255783",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu & Mimikyu Deck Protector Sleeves (65 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pikachu-mimikyu-deck-protector-sleeves-65?variant=50735865921767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Prismatic Evolutions Surprise Box + Booster Bundle",
-      "price": "2799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-prismatic-evolutions-surprise-box-booster-bundle?variant=52209260069095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Zygarde ex Premium Collection",
-      "price": "999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-zygarde-ex-premium-collection?variant=52020741210343",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Perfect Order 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-mega-evolution-perfect-order-4-pocket-portfolio-for-the-pok-mon-trading-card-game?variant=51966737481959",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Latias ex MEP011 Black Star Promo (JUMBO)",
-      "price": "25.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-latias-ex-mep011-black-star-promo-jumbo?variant=51713869283559",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-45 Psyduck Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-45-psyduck-moncolle-figur?variant=51601321525479",
       "product_class": "card",
       "event": "ny"
     }

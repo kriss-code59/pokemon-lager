@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Pitch Black Booster Boks",
+      "price": "3199.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-pitch-black-booster-boks?variant=52689922785591",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon SWSH12: Silver Tempest Booster Bundle (Box med 6 Boosters)",
+      "price": "2299 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-swsh12-silver-tempest-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&V: Twilight Masquerade Booster Bundle (Box med 6 Boosters)",
+      "price": "1399 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-twilight-masquerade-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&V: Black Bolt Booster Bundle (Box med 6 Boosters)",
+      "price": "1799 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-black-bolt-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon S&V: White Flare Booster Bundle (Box med 6 Boosters)",
+      "price": "1599 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-white-flare-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T11:59:22+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE – Pokémon S&V: Journey Together Booster Bundle (Box med 6 Boosters)",
+      "price": "899 kr",
+      "url": "https://mystictrades.no/pokemon/booster-packs-bundles/bestillingsvare-pokemon-sv-journey-together-booster-bundle-box-med-6-boosters",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-01T11:39:24+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -2643,60 +2697,6 @@
       "name": "#053 Persian 053/165 Uncommon Reverse Holo",
       "price": "15.00 kr",
       "url": "https://pokelink.no/products/053-persian-053-165-uncommon-reverse-holo?variant=41750347743315",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#019 Rattata 019/165 Common Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/019-rattata-019-165-common-reverse-holo?variant=41750327722067",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#096 Drowzee 096/165 Common Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/096-drowzee-096-165-common-reverse-holo?variant=41750418260051",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#064 Kadabra 064/165 Uncommon Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/064-kadabra-064-165-uncommon-reverse-holo?variant=41750393716819",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#104 Cubone 104/165 Common Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/104-cubone-104-165-common-reverse-holo?variant=41750502604883",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#129 Magikarp 129/165 Common Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/129-magikarp-129-165-common-reverse-holo?variant=41750535012435",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#087 Dewgong 087/165 Uncommon Reverse Holo",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/087-dewgong-087-165-uncommon-reverse-holo?variant=41750410035283",
       "product_class": "card",
       "event": "ny"
     }
