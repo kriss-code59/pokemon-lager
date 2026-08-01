@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-01T07:39:21+00:00",
+  "last_updated": "2026-08-01T07:59:13+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -63707,7 +63707,7 @@
       "store": "Pokefriends",
       "name": "Ancient Roar Booster Pack (Japansk)",
       "price": "59.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokefriends.no/products/ancient-roar-booster-pack-japansk?variant=45155259383917",
       "store_count": null,
       "product_class": "card"
@@ -139332,9 +139332,36 @@
     },
     {
       "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Espeon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "in_stock": true,
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-espeon-tin-set-kinesisk?variant=52270013448493",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Flareon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "in_stock": true,
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-flareon-tin-set-kinesisk?variant=52270013219117",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "in_stock": true,
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-umbreon-tin-set-kinesisk?variant=52270012137773",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Sylveon Tin Set (Kinesisk)",
       "price": "369.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-crystal-gathering-sylveon-tin-set-kinesisk?variant=52269532479789",
       "store_count": null,
       "product_class": "card"

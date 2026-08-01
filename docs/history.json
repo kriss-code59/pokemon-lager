@@ -1,6 +1,50 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Espeon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-espeon-tin-set-kinesisk?variant=52270013448493",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Flareon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-flareon-tin-set-kinesisk?variant=52270013219117",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-umbreon-tin-set-kinesisk?variant=52270012137773",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Sylveon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-sylveon-tin-set-kinesisk?variant=52269532479789",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "Pokefriends",
+      "name": "Ancient Roar Booster Pack (Japansk)",
+      "price": "59.00 kr",
+      "url": "https://pokefriends.no/products/ancient-roar-booster-pack-japansk?variant=45155259383917",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T07:39:20+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 254/217 – Anthea & Concordia",
@@ -179608,51 +179652,6 @@
       "name": "Pokemon Center Japan Glory of Team Rocket Sleeves (64 stk)",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-glory-of-team-rocket-sleeves?variant=51568583180519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Fluffy Huggable Leafeon Plush (41cm)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-fluffy-huggable-leafeon-plush-41cm?variant=51568406036711",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Mimikyu Plush (36cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-pokepeace-mimikyu-plush?variant=51508476608743",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Cyndaquil Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-cyndaquil-plush?variant=51508367720679",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Eevee (Female Form) Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-eevee-female-form-plush?variant=51508363722983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Vaporeon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-vaporeon-plush-1?variant=51508349108455",
       "product_class": "accessory",
       "event": "ny"
     }

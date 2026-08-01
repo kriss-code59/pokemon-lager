@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Espeon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-espeon-tin-set-kinesisk?variant=52270013448493",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Flareon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-flareon-tin-set-kinesisk?variant=52270013219117",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-umbreon-tin-set-kinesisk?variant=52270012137773",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T07:59:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Sylveon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-sylveon-tin-set-kinesisk?variant=52269532479789",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-01T07:39:20+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 254/217 – Anthea & Concordia",
@@ -2661,42 +2697,6 @@
       "name": "#108 Lickitung 108/165 Common",
       "price": "5.00 kr",
       "url": "https://pokelink.no/products/108-lickitung-108-165-common?variant=41749875654739",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#106 Hitmonlee 106/165 Uncommon",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/106-hitmonlee-106-165-uncommon?variant=41750048505939",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#099 Kingler 099/165 Uncommon",
-      "price": "12.00 kr",
-      "url": "https://pokelink.no/products/099-kingler-099-165-uncommon?variant=41750044868691",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#031 Nidoqueen 031/165 Uncommon",
-      "price": "8.00 kr",
-      "url": "https://pokelink.no/products/031-nidoqueen-031-165-uncommon?variant=41749934243923",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-31T11:59:22+00:00",
-      "store": "Pokelink",
-      "name": "#025 Pikachu 025/165 Common",
-      "price": "10.00 kr",
-      "url": "https://pokelink.no/products/025-pikachu-025-165-common?variant=41749842427987",
       "product_class": "card",
       "event": "ny"
     }
