@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T16:19:33+00:00",
+      "store": "Playlot",
+      "name": "Mega Dream EX Boosterpack JPN",
+      "price": "kr 154,00",
+      "url": "https://playlot.no/produkt/mega-dream-ex-boosterpack-jpn/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T15:59:19+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179634,15 +179642,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Sylveon Plush (20cm)",
       "price": "459.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-sylveon-plush-20cm?variant=51243165253863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Charizard Plush (27cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-charizard-plush-27cm?variant=51243152179431",
       "product_class": "accessory",
       "event": "ny"
     }
