@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T15:19:24+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - 30th Anniversary First Partner Vol. 2 (Kinesisk)",
+      "price": "179.00 kr",
+      "url": "https://retroworld.no/products/pokemon-30th-anniversary-first-partner-vol-2-kinesisk?variant=52270014398765",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T13:39:45+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 204/217 – Team Rocket’s Giovanni",
@@ -179637,15 +179645,6 @@
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-vintage-collection-type-steel-figur?variant=51014206619879",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Groudon Plush",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-groudon-plush?variant=50991686156519",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
