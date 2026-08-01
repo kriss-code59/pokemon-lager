@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T10:59:27+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Phantasmal Flames Booster Boks",
+      "price": "5999.00 kr",
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-phantasmal-flames-booster-boks?variant=52097236631863",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T10:39:24+00:00",
       "store": "Kanoncon",
       "name": "Pokemon Inferno X Booster pakke (Japansk)",
@@ -179640,15 +179648,6 @@
       "name": "Pokemon Takara Tomy Sleeping Friends Sylveon Plush",
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-sylveon-plush?variant=51508488306919",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Growlithe Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-growlithe-plush?variant=51508468777191",
       "product_class": "accessory",
       "event": "ny"
     }
