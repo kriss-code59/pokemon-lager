@@ -1,6 +1,58 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T12:19:31+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon TCG: Paradox Destinies Tin - Iron Boulder ex",
+      "price": "449.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-paradox-destinies-tin?variant=51380364640567",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T12:19:31+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon TCG: Paradox Destinies Tin - Raging Bolt ex",
+      "price": "449.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-paradox-destinies-tin?variant=51380364673335",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T12:19:31+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon TCG: Paradox Destinies Tin - Gouging Fire ex",
+      "price": "449.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-paradox-destinies-tin?variant=51380364706103",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T12:19:31+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon TCG: Paradox Destinies Tin - Iron Crown ex",
+      "price": "449.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-tcg-paradox-destinies-tin?variant=51380364738871",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T12:19:31+00:00",
+      "store": "Pokesingles",
+      "name": "Applin (Master Ball Pattern) 9 - Prismatic Evolutions",
+      "price": "49.00 kr",
+      "url": "https://pokesingles.no/products/applin-master-ball-pattern-9-prismatic-evolutions-673367?variant=54569034252567",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-01T12:19:31+00:00",
+      "store": "Playlot",
+      "name": "151 – Blooming Waters Premium Collection",
+      "price": "kr 5 999,00",
+      "url": "https://playlot.no/produkt/151-blooming-waters-premium-collection/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-01T11:59:22+00:00",
       "store": "BoosterKongen",
       "name": "Pokemon Pitch Black Booster Boks",
@@ -179595,60 +179647,6 @@
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-paradox-rift-4-pocket-album?variant=50889319514343",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Twilight Masquerade 4-Pocket Portfolio",
-      "price": "79.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-twilight-masquerade-4-pocket-album?variant=50889287172327",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Espeon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-espeon-plush?variant=50888492548327",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Arcanine",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-arcanine?variant=50822280642791",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Jolteon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-jolteon-plush?variant=50746123092199",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Surging Sparks Elite Trainer Box",
-      "price": "2399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-surging-sparks-elite-trainer-box?variant=50624595099879",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Explosion Walker Booster Pakke",
-      "price": "80.00 kr",
-      "url": "https://pokestore.no/products/pokemon-explosion-walker-booster-pakke?variant=50624495255783",
-      "product_class": "card",
       "event": "ny"
     }
   ]
