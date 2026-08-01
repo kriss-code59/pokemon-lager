@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T15:39:24+00:00",
+      "store": "Outland",
+      "name": "Pokemon Pez Dispenser + 2\nPez\nGodteri",
+      "price": "",
+      "url": "https://www.outland.no/p/p-pokemon-pez-dispenser-2-pokemon-pokemon-9044400848009",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T15:39:24+00:00",
+      "store": "Outland",
+      "name": "Hyper Ball Cast Puzzle (Level 5)\nHanayama\nHanayama Cast Puzzles\nHjernetrim",
+      "price": "",
+      "url": "https://www.outland.no/p/p-hyperball-cast-puzzle-level-5-hanayama-cast-puzzles-pokemon-4977513075855",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-01T15:19:24+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - 30th Anniversary First Partner Vol. 2 (Kinesisk)",
@@ -179627,24 +179645,6 @@
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-lucario-plush?variant=51021467812071",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Mimikyu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-mimikyu-plush-copy?variant=51016025899239",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Vintage Collection Type Steel Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-vintage-collection-type-steel-figur?variant=51014206619879",
-      "product_class": "card",
       "event": "ny"
     }
   ]
