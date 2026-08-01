@@ -1,6 +1,51 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-01T12:39:31+00:00",
+      "store": "Outland",
+      "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-gallery-series-morning-meadow-full-view-deck-box-deck-box-pokemon-pokemon-74427164676",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T12:39:31+00:00",
+      "store": "Outland",
+      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T12:39:31+00:00",
+      "store": "Outland",
+      "name": "PokéMon Crochet Snorlax Kit: Includes Materials to Make Snorlax and Instructions for 5 Other PokéMon\nSabrina Somers\nPokéMon Crafts\nBoks-set · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-pokemon-crochet-snorlax-kit-9781446309612",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-01T12:39:31+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Paldean Fates Mini Tin",
+      "price": "599.00 kr",
+      "previous_price": "579.00 kr",
+      "url": "https://boosterkongen.no/products/pokemon-paldean-fates-mini-tin-display-tilgjengelig?variant=52013908984119",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-01T12:39:31+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Paldean Fates Mini Tin Sealed Display (Case Tilgjengelig)",
+      "price": "5990.00 kr",
+      "previous_price": "5790.00 kr",
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-paldean-fates-mini-tin-sealed-display?variant=52215039656247",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-01T12:19:31+00:00",
       "store": "BoosterKongen",
       "name": "Pokemon TCG: Paradox Destinies Tin - Iron Boulder ex",
@@ -179602,51 +179647,6 @@
       "price": "159.00 kr",
       "url": "https://pokestore.no/products/pokemon-re-ment-pocket-statue-dragon-type-figur?variant=51013816058087",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Latias Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-latias-plush?variant=50993300078823",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Squirtle Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-squirtle-plush?variant=50991684518119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Fennekin Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-fennekin-plush?variant=50981487935719",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Professor's Research SWSH152 Promo",
-      "price": "55.00 kr",
-      "url": "https://pokestore.no/products/pokemon-professors-research-swsh152-promo?variant=50923995594983",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Paradox Rift 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-paradox-rift-4-pocket-album?variant=50889319514343",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
