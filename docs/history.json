@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T13:39:15+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Dream ex Japansk Display Booster Box",
+      "price": "1799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-dream-ex-japansk-display-booster-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-02T13:39:15+00:00",
+      "store": "Cardcenter",
+      "name": "Black Bolt Japansk Booster Boosterpakke",
+      "price": "169.00 kr",
+      "url": "https://cardcenter.no/products/black-bolt-japansk-booster-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-02T13:39:15+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Go Elite Trainer Box - Mewtwo",
+      "price": "1899.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-go-elite-trainer-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-02T13:19:19+00:00",
       "store": "Neo Tokyo",
       "name": "Bubble Gum: Pokemon Green Apple Flavor (5g, Coris)",
@@ -179596,33 +179623,6 @@
       "name": "Pokemon Lugia ex 017/034 - CL",
       "price": "30.00 kr",
       "url": "https://pokestore.no/products/pokemon-lugia-ex-017-034-cl?variant=50624615678183",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MEGA Expansion Pack Inferno X Booster Box",
-      "price": "2399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-expansion-pack-inferno-x-booster-box?variant=51382729998567",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Temporal Forces Half Booster Box",
-      "price": "1779.00 kr",
-      "url": "https://pokestore.no/products/pokemon-temporal-forces-half-booster-box?variant=50624565510375",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Giratina V SWSH259 Promo",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-giratina-v-swsh259-promo?variant=50624583991527",
       "product_class": "card",
       "event": "ny"
     }
