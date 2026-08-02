@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T13:59:05+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Pitch Black Booster Bundle",
+      "price": "549.00 kr",
+      "url": "https://pokenordic.no/products/pokemon-pitch-black-booster-bundle?variant=48624466166014",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-02T13:39:15+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Mega Dream ex Japansk Display Booster Box",
@@ -179614,15 +179622,6 @@
       "name": "Pokemon Twilight Masquerade Elite Trainer Box",
       "price": "1799.00 kr",
       "url": "https://pokestore.no/products/pokemon-twilight-masquerade-elite-trainer-box?variant=50624556925159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lugia ex 017/034 - CL",
-      "price": "30.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lugia-ex-017-034-cl?variant=50624615678183",
       "product_class": "card",
       "event": "ny"
     }
