@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T09:19:29+00:00",
+      "store": "Cardhouse",
+      "name": "Storm Emaralda Booster Boks",
+      "price": "2099 kr",
+      "url": "https://cardhouse.no/utvalgte-produkter/storm-emaralda-booster-boks",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-02T08:59:12+00:00",
       "store": "Spillbua",
       "name": "Mega Evolution Pitch Black Booster Pack",
@@ -179618,15 +179627,6 @@
       "name": "Pokemon Chaos Rising Checklane Blister Toxel",
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-chaos-rising-checklane-blister-sett?variant=52084401733863",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Umbreon ex SVP176 Black Star Promo",
-      "price": "500.00 kr",
-      "url": "https://pokestore.no/products/pokemon-umbreon-ex-svp176-black-star-promo?variant=51879411744999",
       "product_class": "card",
       "event": "ny"
     }
