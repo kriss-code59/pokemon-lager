@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T08:59:12+00:00",
+      "store": "Spillbua",
+      "name": "Mega Evolution Pitch Black Booster Pack",
+      "price": "89.00 kr",
+      "url": "https://spillbua.no/products/mega-evolution-pitch-black-booster-pack?variant=48895569199287",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-02T08:59:12+00:00",
+      "store": "Spillbua",
+      "name": "Mega Evolution Pitch Black Booster Pack",
+      "price": "89.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://spillbua.no/products/mega-evolution-pitch-black-booster-pack?variant=48895569199287",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-02T07:59:12+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179610,24 +179627,6 @@
       "name": "Pokemon Umbreon ex SVP176 Black Star Promo",
       "price": "500.00 kr",
       "url": "https://pokestore.no/products/pokemon-umbreon-ex-svp176-black-star-promo?variant=51879411744999",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Charmander 020/217 Cosmos Holo",
-      "price": "20.00 kr",
-      "url": "https://pokestore.no/products/pokemon-charmander?variant=51762277515495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Latias ex Box",
-      "price": "749.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-latias-ex-box?variant=51462336413927",
       "product_class": "card",
       "event": "ny"
     }
