@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T09:59:13+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-umbreon-tin-set-kinesisk?variant=52270012137773",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-02T09:59:13+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-booster-pack?variant=50599214121261",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-02T09:19:29+00:00",
       "store": "Cardhouse",
       "name": "Storm Emaralda Booster Boks",
@@ -179609,24 +179625,6 @@
       "name": "Pokemon Paradox Rift 3pk Blister Cetitan",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-paradox-rift-3pk-blister-cetitan?variant=50624545718503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon VMAX Climax Booster Pakke",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-vmax-climax-booster-pakke?variant=50624511279335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Chaos Rising Checklane Blister Toxel",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-chaos-rising-checklane-blister-sett?variant=52084401733863",
       "product_class": "card",
       "event": "ny"
     }
