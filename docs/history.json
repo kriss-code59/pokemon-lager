@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T10:19:12+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Abyss Eye Japansk Display Booster Box",
+      "price": "1199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-abyss-eye-japansk-display-booster-box",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-02T09:59:13+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
@@ -179616,15 +179624,6 @@
       "name": "Pokemon Shining Fates Elite Trainer Box",
       "price": "2999.00 kr",
       "url": "https://pokestore.no/products/pokemon-shining-fates-elite-trainer-box?variant=51214881194215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Paradox Rift 3pk Blister Cetitan",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-paradox-rift-3pk-blister-cetitan?variant=50624545718503",
       "product_class": "card",
       "event": "ny"
     }
