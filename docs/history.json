@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T11:39:07+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Crystal Gathering-badge-sett CSV9,5C",
+      "price": "159.00 kr",
+      "url": "https://braspill.no/products/pokemon-crystal-gathering-badge-set-csv9-5c?variant=55164588622116",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-02T11:39:07+00:00",
+      "store": "Outland",
+      "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-gallery-series-morning-meadow-full-view-deck-box-deck-box-pokemon-pokemon-74427164676",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-02T11:39:07+00:00",
+      "store": "Outland",
+      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-02T11:39:07+00:00",
+      "store": "Outland",
+      "name": "PokéMon Crochet Snorlax Kit: Includes Materials to Make Snorlax and Instructions for 5 Other PokéMon\nSabrina Somers\nPokéMon Crafts\nBoks-set · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-pokemon-crochet-snorlax-kit-9781446309612",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-02T10:19:12+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Abyss Eye Japansk Display Booster Box",
@@ -179588,42 +179624,6 @@
       "name": "Pokemon MEGA Expansion Pack Nihil Zero Booster Pakke",
       "price": "45.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-expansion-pack-nihil-zero-booster-pakke?variant=52016553394407",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Elite Series Charizard Alcove Flip",
-      "price": "229.00 kr",
-      "url": "https://pokestore.no/products/pokemon-elite-series-charizard-alcove-flip?variant=50624613581031",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Oricorio ex MEP024 Black Star Promo",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-oricorio-ex-mep013-black-star-promo?variant=51582575935719",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Lugia SWSH301 Black Star Promo (JUMBO)",
-      "price": "45.00 kr",
-      "url": "https://pokestore.no/products/pokemon-lugia-swsh301-black-star-promo-jumbo?variant=51529330458855",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Shining Fates Elite Trainer Box",
-      "price": "2999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-shining-fates-elite-trainer-box?variant=51214881194215",
       "product_class": "card",
       "event": "ny"
     }
