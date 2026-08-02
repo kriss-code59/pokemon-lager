@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-02T05:19:21+00:00",
+      "store": "Pokefriends",
+      "name": "Julies Mystery Pack",
+      "price": "699.00 kr",
+      "url": "https://pokefriends.no/products/julies-mystery-pack?variant=45435772469357",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-02T04:59:10+00:00",
       "store": "Collectible",
       "name": "Neo Genesis – 001/111 – Ampharos – Holo (Moderately Played)",
@@ -179621,15 +179629,6 @@
       "price": "249.00 kr",
       "url": "https://pokestore.no/products/eevee-pokemon-day-2025-promo?variant=50976366657767",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T06:19:06+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Arceus Alcove Flip Deck Box",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-arceus-alcove-flip?variant=50762132881639",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
