@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T19:19:57+00:00",
+      "store": "Pokelageret",
+      "name": "Venusaur ex - 003/165 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/venusaur-ex-003-165?variant=48843524505851",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T18:59:37+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 062/217 – Stunfisk (Energy Symbol Pattern) – Reverse Holo",
@@ -179495,15 +179503,6 @@
       "name": "Pokemon Center Japan Fluffy Huggable Umbreon Plush (46cm)",
       "price": "799.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-fluffy-huggable-umbreon-plush-46cm?variant=51611564114151",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Fluffy Huggable Espeon Plush (38cm)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-fluffy-huggable-espeon-plush-38cm?variant=51611563950311",
       "product_class": "accessory",
       "event": "ny"
     }
