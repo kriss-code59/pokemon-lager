@@ -1,6 +1,101 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Hidden Fates - Tin Box",
+      "price": "2099.00 kr",
+      "url": "https://pokebua.no/products/pokemon-hidden-fates-tin-box?variant=49163835605225",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Mega Evolution: Ascended Heroes – Focused Fighters Premium Poster Collection (14 Boosters)",
+      "price": "4599 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/bestillingsvare-pokemon-tcg-mega-evolution-ascended-heroes-focused-fighters-premium-poster-collection-14-boosters",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Dragon Boat Festival Gift Box 2026 (Kinesisk/Chinese)",
+      "price": "749 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-tcg-dragon-boat-festival-gift-box-2026-kinesiskchinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Scarlet & Violet CSV9.5C – Terastal Grand Gathering Eevee & Friends Gift Box (Kinesisk/Chinese)",
+      "price": "6999 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-tcg-scarlet-violet-csv95c-terastal-grand-gathering-eevee-friends-gift-box-kinesiskchinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] – Pokémon TCG: Scarlet & Violet CSV9.5C – Terastal Grand Gathering Pendant Gift Box (Kinesisk/Chinese)",
+      "price": "499 kr",
+      "url": "https://mystictrades.no/pokemon/kinesisk-koreansk-pokmon/bestillingsvare-pokemon-tcg-scarlet-violet-csv95c-terastal-grand-gathering-pendant-gift-box-kinesiskchinese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Pokelageret",
+      "name": "Iono's Wattrel - 231/217 - NM",
+      "price": "124.00 kr",
+      "url": "https://pokelageret.no/products/ionos-wattrel-231-217?variant=49123146662139",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Pokelageret",
+      "name": "Toxtricity - 103/094 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/toxtricity-103-094?variant=48960192413947",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Pokelageret",
+      "name": "Energy Retrieval - 108/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/energy-retrieval-108-086?variant=49002528407803",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 5 BOOSTER BOKS",
+      "price": "539,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-5-booster-boks",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Mystic Trades",
+      "name": "[BESTILLINGSVARE] - Pokémon Chaos Rising – Elite Trainer Box (ETB)",
+      "price": "1149 kr",
+      "previous_price": "1099 kr",
+      "url": "https://mystictrades.no/pokemon/premium-collections-etb-upc/pre-order-forhandsbestilling-pokemon-me04-mega-evolution-chaos-rising-elite-trainer-box-etb",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T19:59:50+00:00",
+      "store": "Mystic Trades",
+      "name": "​[BESTILLINGSVARE] – Pokémon S&V: Destined Rivals Elite Trainer Box (ETB) – Team Rocket's Wobbuffet",
+      "price": "2499 kr",
+      "previous_price": "3499 kr",
+      "url": "https://mystictrades.no/pokemon/premium-collections-etb-upc/forhandsbestilling-pokemon-sv-destined-rivals-elite-trainer-box-etb-team-rockets-wobbuffet",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T19:19:57+00:00",
       "store": "Pokelageret",
       "name": "Venusaur ex - 003/165 - NM",
@@ -179404,105 +179499,6 @@
       "name": "Pokemon Center Japan Eevee Fit Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-eevee-fit-plush?variant=51612646375655",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Altaria Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-altaria-plush?variant=51612640706791",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Pikachu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-pikachu-plush?variant=51612640149735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Tyranitar Plush",
-      "price": "325.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-tyranitar-plush?variant=51612639658215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Kyogre Plush",
-      "price": "325.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-kyogre-plush?variant=51612638970087",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Darkrai Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-darkrai-plush?variant=51612634972391",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Solgaleo Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-solgaleo-plush?variant=51612624879847",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Blastoise Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-blastoise-plush?variant=51612624421095",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Slowpoke Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-slowpoke-plush?variant=51612597092583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mamoswine Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mamoswine-plush?variant=51612590899431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Shuckle Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-shuckle-plush?variant=51611605565671",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Fluffy Huggable Umbreon Plush (46cm)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-fluffy-huggable-umbreon-plush-46cm?variant=51611564114151",
       "product_class": "accessory",
       "event": "ny"
     }
