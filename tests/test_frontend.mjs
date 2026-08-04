@@ -111,6 +111,27 @@ test("grupperer etter sett og merker ikke-vestlige regioner", async () => {
   assert.equal(alle(w, ".sett-tittel .merkelapp.jp").length, 1);
 });
 
+test("samme sett i to regioner blir to bolker", async () => {
+  // Regresjon: 151 (vestlig), 151 (japansk) og 151 (kinesisk) havnet i én
+  // bolk, som sa ut som "Booster Box" gjentatt tre ganger uten forklaring.
+  const to = { ...SNAPSHOT, produkter: [
+    { id: "151:booster-box:en", set_id: "151", type_id: "booster-box", region: "en",
+      set_label: "151", type_label: "Booster Box", tilbud: [["a", 129900, 1]],
+      min_pris: 129900, antall_pa_lager: 1 },
+    { id: "151:booster-box:jp", set_id: "151", type_id: "booster-box", region: "jp",
+      set_label: "151", type_label: "Booster Box", tilbud: [["b", 99900, 1]],
+      min_pris: 99900, antall_pa_lager: 1 },
+  ] };
+  const dom = new JSDOM(les("index.html"), { url: "https://pokepuls.no/",
+    runScripts: "outside-only", pretendToBeVisual: true });
+  dom.window.fetch = async (u) => ({ ok: true, status: 200, json: async () =>
+    String(u).includes("/snapshot") ? to : { sets: [], types: [], stores: [] } });
+  dom.window.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 30));
+  const titler = alle(dom.window, ".sett-tittel").map((e) => e.textContent.trim());
+  assert.deepEqual(titler, ["151", "151 Japansk"]);
+});
+
 test("filteret 'kun pa lager' kan slas av og viser da alt", async () => {
   const w = await app();
   $(w, '[data-filter="lager"]').dispatchEvent(new w.Event("click", { bubbles: true }));
