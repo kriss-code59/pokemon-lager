@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T16:59:12+00:00",
+      "store": "Pokelageret",
+      "name": "Rowlet - 043 - NM",
+      "price": "69.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/rowlet-043?variant=48985231032571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T16:59:12+00:00",
+      "store": "Pokelageret",
+      "name": "Popplio - 045 - NM",
+      "price": "59.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/popplio-045?variant=48985229394171",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T16:39:09+00:00",
       "store": "Pokelageret",
       "name": "Dondozo ex - 211/182 - NM",
@@ -179495,24 +179513,6 @@
       "name": "Pokemon All Star Collection Vulpix Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-vulpix-plush?variant=51508263452903",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Alolan Vulpix Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-alolan-vulpix-plush?variant=51508239794407",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Galarian Ponyta Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-ponyta-plush?variant=51508135657703",
       "product_class": "accessory",
       "event": "ny"
     }
