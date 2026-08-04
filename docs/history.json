@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T10:19:19+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Paldean Fates ETB Sleeves",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-paldean-fates-etb-sleeves",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T10:19:19+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Morpeko V-Union Special Collection Box",
+      "price": "1399.00 kr",
+      "previous_price": "799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-morpeko-v-union-special-collection-box",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T09:59:11+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Prismatic Evolution Figure Collection Sleeves",
@@ -179549,24 +179567,6 @@
       "price": "249.00 kr",
       "url": "https://pokestore.no/products/pokemon-pokepiece-ball-chain-mascot-mimikyu?variant=51989703295207",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Fidough Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-fidough-plush?variant=51989703262439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Gothita Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-gothita-plush?variant=51989703098599",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
