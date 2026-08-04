@@ -18,6 +18,11 @@
 
 * { box-sizing: border-box; }
 
+/* `display: flex` pa .chips slar nettleserens standardregel for [hidden],
+   sa filterradene ble staende igjen nar man byttet fane. Denne linjen ma
+   ligge for reglene som setter display. */
+[hidden] { display: none !important; }
+
 html { -webkit-text-size-adjust: 100%; }
 
 body {
