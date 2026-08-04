@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Pokepuls">
+  <rect width="512" height="512" rx="112" fill="#0b0d10"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#262c35" stroke-width="16"/>
+  <path d="M106 256h74l30-72 46 152 34-98 22 18h94"
+        fill="none" stroke="#ffcb05" stroke-width="26"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="256" r="30" fill="#0b0d10"/>
+  <circle cx="256" cy="256" r="30" fill="none" stroke="#ffcb05" stroke-width="14"/>
+</svg>
