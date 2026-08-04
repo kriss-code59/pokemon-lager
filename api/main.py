@@ -1,0 +1,253 @@
+"""Pokepuls API.
+
+Erstatter docs/data.json (5,8 MB, cache-bustet ved hvert sidebesok) med noen
+fa endepunkter som kan caches.
+
+Designvalg som er verdt a vite om:
+
+* /snapshot leverer KANONISKE PRODUKTER med tilbud under seg, ikke en flat
+  liste av butikkrader. Det er hele poenget med katalogen: brukeren folger
+  "Pitch Black Booster Box", ikke 6 ulike butikklenker.
+* Tilbud sendes som lister, ikke objekter. Med ~2 200 tilbud sparer det
+  omtrent halvparten av rapayloaden, og frontend er var egen.
+* Alt som kan caches har ETag. Klienten sender If-None-Match og far 304 med
+  tom kropp nar ingenting har endret seg -- som skjer 19 av 20 minutter.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from contextlib import asynccontextmanager
+from datetime import datetime, timedelta, timezone
+
+from fastapi import FastAPI, HTTPException, Query, Request, Response
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from psycopg.rows import dict_row
+from psycopg_pool import AsyncConnectionPool
+
+DSN = os.environ.get("POKEPULS_DSN", "postgresql:///pokepuls")
+
+# Snapshot regenereres uansett bare hvert 20. minutt av scraperen.
+CACHE_SNAPSHOT = "public, max-age=60, stale-while-revalidate=600"
+CACHE_KATALOG = "public, max-age=3600, stale-while-revalidate=86400"
+CACHE_HENDELSER = "public, max-age=30, stale-while-revalidate=300"
+
+pool: AsyncConnectionPool | None = None
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global pool
+    pool = AsyncConnectionPool(DSN, min_size=1, max_size=8, open=False,
+                               kwargs={"row_factory": dict_row})
+    await pool.open(wait=True, timeout=15)
+    try:
+        yield
+    finally:
+        await pool.close()
+
+
+app = FastAPI(title="Pokepuls API", version="1.0", lifespan=lifespan,
+              docs_url="/api/docs", openapi_url="/api/openapi.json")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://pokepuls.no", "https://www.pokepuls.no",
+                   "https://kriss-code59.github.io", "http://localhost:8000",
+                   "http://127.0.0.1:8000"],
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
+
+
+def _svar(request: Request, data: dict, cache: str) -> Response:
+    """JSON med ETag. Returnerer 304 hvis klienten allerede har versjonen."""
+    kropp = json.dumps(data, ensure_ascii=False, separators=(",", ":"),
+                       default=str).encode("utf-8")
+    etag = '"%s"' % hashlib.blake2b(kropp, digest_size=16).hexdigest()
+    if request.headers.get("if-none-match") == etag:
+        return Response(status_code=304, headers={"ETag": etag, "Cache-Control": cache})
+    return Response(content=kropp, media_type="application/json; charset=utf-8",
+                    headers={"ETag": etag, "Cache-Control": cache})
+
+
+async def _hent(sql: str, *args) -> list[dict]:
+    async with pool.connection() as conn:
+        cur = await conn.execute(sql, args if args else None)
+        return await cur.fetchall()
+
+
+# ------------------------------------------------------------------ helse
+
+@app.get("/api/health")
+async def health():
+    """Bevisst ucachet. Dodmannsknappen og uptime-sjekker leser denne."""
+    try:
+        rader = await _hent(
+            "SELECT started_at, finished_at, product_count, store_count, "
+            "       failed_stores, carried_stores, ok "
+            "FROM scrape_runs ORDER BY started_at DESC LIMIT 1")
+    except Exception as e:  # databasen nede
+        return JSONResponse({"ok": False, "feil": str(e)[:200]}, status_code=503)
+
+    if not rader:
+        return JSONResponse({"ok": False, "feil": "ingen kjoringer registrert"},
+                            status_code=503)
+
+    kjoring = rader[0]
+    alder = datetime.now(timezone.utc) - kjoring["started_at"]
+    fersk = alder < timedelta(minutes=60)
+    return JSONResponse(
+        {"ok": bool(kjoring["ok"]) and fersk,
+         "sist_kjort": kjoring["started_at"],
+         "alder_minutter": round(alder.total_seconds() / 60, 1),
+         "oppforinger": kjoring["product_count"],
+         "butikker": kjoring["store_count"],
+         "feilede_butikker": kjoring["failed_stores"] or [],
+         "fremforte_butikker": kjoring["carried_stores"] or []},
+        status_code=200 if fersk else 503,
+        headers={"Cache-Control": "no-store"})
+
+
+# ---------------------------------------------------------------- katalog
+
+@app.get("/api/catalog")
+async def catalog(request: Request):
+    """Sett, typer og butikker. Endres sjelden -- caches en time."""
+    sets = await _hent(
+        "SELECT s.id, s.label, s.region, s.release_date, "
+        "  count(DISTINCT p.id) FILTER (WHERE l.id IS NOT NULL) AS produkter "
+        "FROM sets s "
+        "LEFT JOIN products p ON p.set_id = s.id "
+        "LEFT JOIN listings l ON l.product_id = p.id "
+        "GROUP BY s.id ORDER BY s.label")
+    typer = await _hent("SELECT id, label, sort_order FROM product_types ORDER BY sort_order")
+    butikker = await _hent(
+        "SELECT s.id, s.name, count(l.id) AS oppforinger, "
+        "  count(l.id) FILTER (WHERE l.in_stock) AS pa_lager "
+        "FROM stores s LEFT JOIN listings l ON l.store_id = s.id "
+        "GROUP BY s.id ORDER BY s.name")
+    return _svar(request, {"sets": sets, "types": typer, "stores": butikker},
+                 CACHE_KATALOG)
+
+
+# --------------------------------------------------------------- snapshot
+
+SNAPSHOT_SQL = """
+SELECT p.id, p.set_id, p.type_id, p.region, s.label AS set_label,
+       t.label AS type_label, t.sort_order,
+       json_agg(json_build_array(
+           l.store_id, l.price_ore,
+           CASE WHEN l.in_stock IS TRUE THEN 1
+                WHEN l.in_stock IS FALSE THEN 0 ELSE null END)
+         ORDER BY l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST) AS tilbud,
+       min(l.price_ore) FILTER (WHERE l.in_stock) AS min_pris,
+       count(*) FILTER (WHERE l.in_stock) AS antall_pa_lager,
+       max(l.last_seen_at) AS sist_sett
+FROM listings l
+JOIN products p      ON p.id = l.product_id
+JOIN sets s          ON s.id = p.set_id
+JOIN product_types t ON t.id = p.type_id
+WHERE l.last_seen_at > now() - interval '7 days'
+GROUP BY p.id, s.label, t.label, t.sort_order
+ORDER BY s.label, t.sort_order
+"""
+
+
+@app.get("/api/snapshot")
+async def snapshot(request: Request):
+    """Kanoniske produkter med tilbud.
+
+    tilbud = [butikk_id, pris_ore, pa_lager (1/0/null)]
+
+    Bevisst uten tittel og url: de to feltene alene tredoblet payloaden
+    (123 KB -> 457 KB ra) og trengs bare nar noen apner ETT produkt.
+    Da henter frontenden /api/product/<id>, som har alt.
+    """
+    produkter = await _hent(SNAPSHOT_SQL)
+    kjoring = await _hent(
+        "SELECT started_at, ok FROM scrape_runs ORDER BY started_at DESC LIMIT 1")
+    return _svar(request, {
+        "generert": datetime.now(timezone.utc),
+        "sist_skannet": kjoring[0]["started_at"] if kjoring else None,
+        "skanning_ok": bool(kjoring[0]["ok"]) if kjoring else None,
+        "felt": ["butikk", "pris_ore", "pa_lager"],
+        "produkter": produkter,
+    }, CACHE_SNAPSHOT)
+
+
+@app.get("/api/unmatched")
+async def unmatched(request: Request,
+                    limit: int = Query(3000, ge=1, le=10000)):
+    """Forseglede varer vi ikke har klart a mappe til et kanonisk produkt.
+
+    Katalogdekningen er rundt 50 %. Uten dette endepunktet ville halvparten
+    av det ekte varelageret vart usynlig, og det er verre enn en litt rotete
+    liste. Alt her er en kandidat til et nytt alias i katalog.json.
+    """
+    rader = await _hent(
+        "SELECT l.store_id, l.title, l.price_ore, l.in_stock, l.url "
+        "FROM listings l WHERE l.product_id IS NULL "
+        "  AND l.last_seen_at > now() - interval '7 days' "
+        "ORDER BY l.in_stock DESC NULLS LAST, l.title LIMIT %s", limit)
+    return _svar(request, {"antall": len(rader), "varer": rader}, CACHE_SNAPSHOT)
+
+
+# ---------------------------------------------------------------- produkt
+
+@app.get("/api/product/{produkt_id}")
+async def product(request: Request, produkt_id: str):
+    rader = await _hent(
+        "SELECT p.id, p.set_id, p.type_id, p.region, p.msrp_ore, "
+        "       s.label AS set_label, t.label AS type_label "
+        "FROM products p JOIN sets s ON s.id = p.set_id "
+        "JOIN product_types t ON t.id = p.type_id WHERE p.id = %s", produkt_id)
+    if not rader:
+        raise HTTPException(404, "ukjent produkt")
+
+    tilbud = await _hent(
+        "SELECT l.store_id, st.name AS store_name, l.title, l.price_ore, "
+        "       l.in_stock, l.url, l.last_seen_at "
+        "FROM listings l JOIN stores st ON st.id = l.store_id "
+        "WHERE l.product_id = %s ORDER BY l.in_stock DESC NULLS LAST, l.price_ore",
+        produkt_id)
+    hendelser = await _hent(
+        "SELECT kind, store_id, price_ore, prev_price_ore, detected_at "
+        "FROM events WHERE product_id = %s ORDER BY detected_at DESC LIMIT 100",
+        produkt_id)
+    return _svar(request, {"produkt": rader[0], "tilbud": tilbud,
+                           "hendelser": hendelser}, CACHE_SNAPSHOT)
+
+
+# --------------------------------------------------------------- hendelser
+
+@app.get("/api/history")
+async def history(request: Request,
+                  limit: int = Query(200, ge=1, le=1000),
+                  kind: str | None = Query(None),
+                  timer: int = Query(168, ge=1, le=720)):
+    vilkar = ["e.detected_at > now() - make_interval(hours => %s)"]
+    args: list = [timer]
+    if kind:
+        gyldige = {"ny", "restock", "utsolgt", "prisendring"}
+        valgt = [k for k in kind.split(",") if k in gyldige]
+        if not valgt:
+            raise HTTPException(400, "ugyldig kind")
+        vilkar.append("e.kind = ANY(%s)")
+        args.append(valgt)
+    args.append(limit)
+    rader = await _hent(
+        "SELECT e.kind, e.detected_at, e.price_ore, e.prev_price_ore, "
+        "       e.store_id, st.name AS store_name, e.product_id, "
+        "       l.title, l.url, s.label AS set_label, t.label AS type_label "
+        "FROM events e "
+        "LEFT JOIN listings l ON l.id = e.listing_id "
+        "LEFT JOIN stores st ON st.id = e.store_id "
+        "LEFT JOIN products p ON p.id = e.product_id "
+        "LEFT JOIN sets s ON s.id = p.set_id "
+        "LEFT JOIN product_types t ON t.id = p.type_id "
+        "WHERE " + " AND ".join(vilkar) +
+        " ORDER BY e.detected_at DESC LIMIT %s", *args)
+    return _svar(request, {"antall": len(rader), "hendelser": rader}, CACHE_HENDELSER)
