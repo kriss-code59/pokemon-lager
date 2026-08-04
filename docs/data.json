@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T10:39:19+00:00",
+  "last_updated": "2026-08-04T10:59:27+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5747,7 +5747,7 @@
       "store": "Pokelageret",
       "name": "Destined Rivals Premium Checklane Blister - Togekiss",
       "price": "149.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/destined-rivals-premium-checklane-blister?variant=47537670914299",
       "store_count": null,
       "product_class": "card"
@@ -7150,8 +7150,8 @@
     {
       "store": "Pokelageret",
       "name": "Ampharos - 090/086 - NM",
-      "price": "149.00 kr",
-      "in_stock": false,
+      "price": "99.00 kr",
+      "in_stock": true,
       "url": "https://pokelageret.no/products/ampharos-090-086?variant=49002528276731",
       "store_count": null,
       "product_class": "card"
@@ -7538,7 +7538,7 @@
       "store": "Pokelageret",
       "name": "Wugtrio - 224/091 - NM",
       "price": "39.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/wugtrio-224-091?variant=48848866672891",
       "store_count": null,
       "product_class": "card"
@@ -7997,7 +7997,7 @@
       "store": "Pokelageret",
       "name": "Unown VSTAR - 066/195 - NM",
       "price": "25.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/unown-vstar-066-195?variant=49123175399675",
       "store_count": null,
       "product_class": "card"
@@ -10544,7 +10544,7 @@
       "store": "Pokelageret",
       "name": "Nihilego GX - SV62/SV94 - NM",
       "price": "224.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/nihilego-gx-sv62-sv94?variant=48984726012155",
       "store_count": null,
       "product_class": "card"
@@ -13117,7 +13117,7 @@
     {
       "store": "Pokelageret",
       "name": "Surfing Pikachu V - 008/025 - NM",
-      "price": "69.00 kr",
+      "price": "59.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/surfing-pikachu-v-008-025?variant=48887010328827",
       "store_count": null,
@@ -13586,7 +13586,7 @@
       "store": "Pokelageret",
       "name": "Black Kyurem ex - 218/191 - NM",
       "price": "25.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/black-kyurem-ex-218-191?variant=48848873783547",
       "store_count": null,
       "product_class": "card"
@@ -14025,10 +14025,10 @@
     },
     {
       "store": "Pokelageret",
-      "name": "Magneton - 009/102 - HP",
+      "name": "Magneton - 009/102 - DMG",
       "price": "215.00 kr",
-      "in_stock": false,
-      "url": "https://pokelageret.no/products/magneton-009-102?variant=48875231838459",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/magneton-009-102?variant=49137983193339",
       "store_count": null,
       "product_class": "card"
     },
@@ -14981,7 +14981,7 @@
       "store": "Pokelageret",
       "name": "Palafin - 225/091 - NM",
       "price": "29.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/palafin-225-091?variant=48848867393787",
       "store_count": null,
       "product_class": "card"
@@ -15142,7 +15142,7 @@
     {
       "store": "Pokelageret",
       "name": "Flareon - 167 - NM",
-      "price": "25.00 kr",
+      "price": "12.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/flareon-167?variant=48848862314747",
       "store_count": null,
@@ -15160,7 +15160,7 @@
     {
       "store": "Pokelageret",
       "name": "Vaporeon - 168 - NM",
-      "price": "25.00 kr",
+      "price": "12.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/vaporeon-168?variant=48848862150907",
       "store_count": null,
@@ -17122,7 +17122,7 @@
     {
       "store": "Pokelageret",
       "name": "Leafeon - 170 - NM",
-      "price": "25.00 kr",
+      "price": "21.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/leafeon-170?variant=48838884557051",
       "store_count": null,

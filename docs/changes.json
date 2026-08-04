@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-04T10:59:26+00:00",
+      "store": "Pokelageret",
+      "name": "Ampharos - 090/086 - NM",
+      "price": "99.00 kr",
+      "url": "https://pokelageret.no/products/ampharos-090-086?variant=49002528276731",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T10:59:26+00:00",
+      "store": "Pokelageret",
+      "name": "Wugtrio - 224/091 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/wugtrio-224-091?variant=48848866672891",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T10:59:26+00:00",
+      "store": "Pokelageret",
+      "name": "Unown VSTAR - 066/195 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/unown-vstar-066-195?variant=49123175399675",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T10:59:26+00:00",
+      "store": "Pokelageret",
+      "name": "Black Kyurem ex - 218/191 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/black-kyurem-ex-218-191?variant=48848873783547",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T10:59:26+00:00",
+      "store": "Pokelageret",
+      "name": "Magneton - 009/102 - DMG",
+      "price": "215.00 kr",
+      "url": "https://pokelageret.no/products/magneton-009-102?variant=49137983193339",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T10:59:26+00:00",
+      "store": "Pokelageret",
+      "name": "Palafin - 225/091 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/palafin-225-091?variant=48848867393787",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-04T10:19:19+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Paldean Fates ETB Sleeves",
@@ -2643,60 +2697,6 @@
       "name": "Dialga - 095/132 - NM / Holofoil",
       "price": "5.00 kr",
       "url": "https://pokelageret.no/products/dialga-095-132?variant=48989090087163",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Wo-Chien - 018/182 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/wo-chien-018-182?variant=48989090840827",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Cradily - 006/142 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/cradily-006-142?variant=48989089988859",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Tapu Koko - 065/191 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/tapu-koko-065-191?variant=48989089923323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Rabsca - 099/193 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/rabsca-099-193?variant=48989089890555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Zeraora - 055/142 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/zeraora-055-142?variant=48989089825019",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Scizor - 141/197 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/scizor-141-197?variant=48989089857787",
       "product_class": "card",
       "event": "ny"
     }
