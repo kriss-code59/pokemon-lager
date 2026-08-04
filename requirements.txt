@@ -1,1 +1,5 @@
-playwright==1.48.0
+# Playwright ma vaere ny nok for Python-versjonen pa serveren. 1.48.0 drar
+# inn greenlet 3.1, som ikke har hjul for Python 3.14 og forsoker a bygge
+# fra kilde -- det feiler. Ubuntu 26.04 leveres med 3.14, sa versjonen her
+# er ikke kosmetikk.
+playwright==1.62.0
