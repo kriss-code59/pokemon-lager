@@ -169,16 +169,48 @@ def main():
         sjekk(tell(a.dsn, "SELECT count(*) FROM listings WHERE store_id = 'cardcenter'") == for_,
               "oppforingene star fortsatt urort")
 
-        # ------------------------------------------------- 6. sporringene
-        print("\n6. API-sporringene kjorer mot ekte data")
-        sys.path.insert(0, os.path.join(ROT, "api"))
-        import main as api  # noqa: E402
-        with psycopg.connect(a.dsn) as c:
-            rader = c.execute(api.SNAPSHOT_SQL).fetchall()
-        sjekk(len(rader) > 300, "snapshot gir over 300 kanoniske produkter", len(rader))
-        rapayload = len(json.dumps(rader, default=str))
-        sjekk(rapayload < 1_500_000,
-              "snapshot er under 1,5 MB ra (data.json er 5,8 MB): %.0f KB" % (rapayload / 1024))
+        # ------------------------------------------------- 6. hele API-et
+        # Kjor endepunktene gjennom ekte HTTP i stedet for bare a sjekke
+        # SQL-en. Uten dette gar en serialiseringsfeil (datetime i
+        # JSONResponse) rett i produksjon -- den gjorde det én gang.
+        print("\n6. API-endepunktene svarer")
+        os.environ["POKEPULS_DSN"] = a.dsn
+        sys.path.insert(0, ROT)
+        from fastapi.testclient import TestClient  # noqa: E402
+        from api import main as api  # noqa: E402
+
+        with TestClient(api.app) as klient:
+            r = klient.get("/api/health")
+            sjekk(r.status_code in (200, 503), "/health svarer med gyldig status",
+                  r.status_code)
+            sjekk("sist_kjort" in r.json(), "/health har sist_kjort", r.text[:120])
+
+            r = klient.get("/api/snapshot")
+            sjekk(r.status_code == 200, "/snapshot svarer 200", r.status_code)
+            d = r.json()
+            sjekk(len(d["produkter"]) > 300,
+                  "snapshot gir over 300 kanoniske produkter", len(d["produkter"]))
+            storrelse = len(r.content)
+            sjekk(storrelse < 1_500_000,
+                  "snapshot er %.0f KB ra (data.json er 5 800 KB)" % (storrelse / 1024))
+            etag = r.headers.get("etag")
+            sjekk(bool(etag), "snapshot har ETag", etag)
+            sjekk(klient.get("/api/snapshot",
+                             headers={"If-None-Match": etag}).status_code == 304,
+                  "uendret snapshot gir 304 og tom kropp")
+
+            pid = d["produkter"][0]["id"]
+            r = klient.get("/api/product/" + pid)
+            sjekk(r.status_code == 200, "/product/<id> svarer 200", r.status_code)
+            sjekk(len(r.json()["tilbud"]) > 0, "produktet har minst ett tilbud")
+            sjekk(klient.get("/api/product/finnes-ikke:x:en").status_code == 404,
+                  "ukjent produkt gir 404")
+
+            for sti in ["/api/catalog", "/api/unmatched?limit=50",
+                        "/api/history?limit=10", "/api/history?kind=restock"]:
+                sjekk(klient.get(sti).status_code == 200, sti + " svarer 200")
+            sjekk(klient.get("/api/history?kind=tull").status_code == 400,
+                  "ugyldig hendelsestype gir 400")
 
     print("\n%d sjekker ok, %d feil" % (OK, len(FEIL)))
     if FEIL:
