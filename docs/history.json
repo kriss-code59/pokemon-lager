@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T15:19:25+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Pikachu Big Plush – Squishy Hug Cushion (38cm, Sanei)",
+      "price": "kr 899.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-pikachu-big-plush-squishy-hug-cushion-38cm-sanei/",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-04T14:59:25+00:00",
       "store": "Pokelageret",
       "name": "Mimikyu (Delta Species) - SWSH136 - NM",
@@ -179511,15 +179520,6 @@
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-alolan-cubone-plush?variant=51304816738535",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-18 Jigglypuff Moncolle Figur",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-jigglypuff-moncolle-figur?variant=51266198175975",
-      "product_class": "card",
       "event": "ny"
     }
   ]
