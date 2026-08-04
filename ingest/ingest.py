@@ -223,7 +223,12 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
             )
             kjoring_id = cur.fetchone()["id"]
 
-            for butikk, oppforinger in sorted(per_butikk.items()):
+            # Butikker som er meldt feilet finnes ofte IKKE i per_butikk i det
+            # hele tatt -- en butikk som returnerte null produkter har ingen
+            # rader a gruppere. De ma likevel innom lokken, ellers blir en
+            # feilet skanning helt usynlig i rapporten.
+            for butikk in sorted(set(per_butikk) | feilede):
+                oppforinger = per_butikk.get(butikk, {})
                 butikk_id = slug(butikk)
                 cur.execute(
                     "INSERT INTO stores (id, name) VALUES (%s, %s) "
@@ -315,6 +320,17 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                         ([r["id"] for r in borte],))
 
                 stat["oppforinger"] += len(oppforinger)
+
+            # En butikk som forsvant helt fra kjoringen uten a bli meldt som
+            # feilet er nettopp F1-scenarioet: skanningen ga null produkter,
+            # og forrige tilstand ma sta urort. Vi rorer den ikke -- men den
+            # skal vaere synlig i rapporten, ikke bare stille utelatt.
+            cur.execute(
+                "SELECT s.id, s.name FROM stores s "
+                "WHERE EXISTS (SELECT 1 FROM listings l WHERE l.store_id = s.id)")
+            for rad in cur.fetchall():
+                if rad["name"] not in per_butikk and rad["name"] not in feilede:
+                    stat["hoppet_over"].append("%s (ikke i kjoringen)" % rad["name"])
 
             # Hendelser med listing_id = None kom fra rader som nettopp ble
             # satt inn; sla opp id-ene deres i én sporring.
