@@ -40,7 +40,22 @@ sudo -u postgres psql -q -d "$DB" -c "GRANT ALL ON SCHEMA public TO $BRUKER"
 # Utvidelsene krever superbruker; skjemaet ellers gjor det ikke.
 sudo -u postgres psql -q -d "$DB" -c "CREATE EXTENSION IF NOT EXISTS citext"
 sudo -u postgres psql -q -d "$DB" -c "CREATE EXTENSION IF NOT EXISTS pgcrypto"
-sudo -u "$BRUKER" psql -q -d "$DB" -f "$REPO/db/001_skjema.sql"
+
+# Tabeller opprettet av postgres i en tidligere okt kan ikke endres av
+# pokepuls. CREATE TABLE IF NOT EXISTS gar da stille forbi, mens CREATE
+# INDEX feiler med "must be owner of table" -- og skjemaet blir halvveis
+# anvendt uten at noe stopper. Normaliser eierskap forst.
+sudo -u postgres psql -q -d "$DB" -Atc "
+  SELECT 'ALTER TABLE '||quote_ident(tablename)||' OWNER TO $BRUKER;'
+    FROM pg_tables WHERE schemaname='public' AND tableowner <> '$BRUKER'
+  UNION ALL
+  SELECT 'ALTER SEQUENCE '||quote_ident(sequencename)||' OWNER TO $BRUKER;'
+    FROM pg_sequences WHERE schemaname='public' AND sequenceowner <> '$BRUKER'
+" | sudo -u postgres psql -q -d "$DB"
+
+# ON_ERROR_STOP: et skjema som feiler halvveis skal stoppe oppsettet, ikke
+# etterlate en database som ser ferdig ut.
+sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/001_skjema.sql"
 
 LOGG "4/7 Miljofil"
 if [[ ! -f /etc/pokepuls.env ]]; then
@@ -70,8 +85,7 @@ nginx -t
 systemctl reload nginx
 
 LOGG "7/7 Cron for skanning og ingest"
-install -m 755 -o "$BRUKER" -g "$BRUKER" \
-  "$REPO/deploy/pokepuls-cron-scrape.sh" "$REPO/deploy/pokepuls-cron-scrape.sh"
+chmod 755 "$REPO/deploy/pokepuls-cron-scrape.sh"
 cat > /etc/cron.d/pokepuls <<'EOF'
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin
