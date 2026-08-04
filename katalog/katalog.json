@@ -1,0 +1,1098 @@
+{
+  "_kommentar": "Kanonisk katalog. Et kanonisk produkt er (sett x type x region). Aliaser er sma bokstaver, diakritikk fjernet. Rekkefolgen i 'types' er viktig: mest spesifikke monster forst (mini tin for tin, elite trainer box for box).",
+  "regions": [
+    {
+      "id": "en",
+      "label": "Vestlig",
+      "aliases": [
+        "engelsk",
+        "english",
+        "eng"
+      ]
+    },
+    {
+      "id": "jp",
+      "label": "Japansk",
+      "aliases": [
+        "japansk",
+        "japanske",
+        "japan",
+        "japanese",
+        "jpn"
+      ]
+    },
+    {
+      "id": "cn",
+      "label": "Kinesisk",
+      "aliases": [
+        "kinesisk",
+        "kinesiske",
+        "chinese",
+        "kina"
+      ]
+    },
+    {
+      "id": "ko",
+      "label": "Koreansk",
+      "aliases": [
+        "koreansk",
+        "koreanske",
+        "korean"
+      ]
+    }
+  ],
+  "types": [
+    {
+      "id": "booster-box",
+      "label": "Booster Box",
+      "aliases": [
+        "booster box",
+        "boosterbox",
+        "booster display",
+        "boosterdisplay",
+        "display box",
+        "hel eske",
+        "boosterboks",
+        "display"
+      ]
+    },
+    {
+      "id": "etb",
+      "label": "Elite Trainer Box",
+      "aliases": [
+        "elite trainer box",
+        "elitetrainer box",
+        "elite trainer",
+        "etb"
+      ]
+    },
+    {
+      "id": "mini-tin",
+      "label": "Mini Tin",
+      "aliases": [
+        "mini tin",
+        "minitin",
+        "mini-tin"
+      ]
+    },
+    {
+      "id": "tin",
+      "label": "Tin",
+      "aliases": [
+        "tin",
+        "tinboks",
+        "tin boks"
+      ]
+    },
+    {
+      "id": "bundle",
+      "label": "Booster Bundle",
+      "aliases": [
+        "booster bundle",
+        "bundle"
+      ]
+    },
+    {
+      "id": "booster-pack",
+      "label": "Boosterpakke",
+      "aliases": [
+        "booster pakke",
+        "boosterpakke",
+        "boosterpakker",
+        "booster pack",
+        "booster packs",
+        "enkeltpakke",
+        "lospakke",
+        "boosterpakkе"
+      ]
+    },
+    {
+      "id": "premium-collection",
+      "label": "Premium Collection",
+      "aliases": [
+        "ultra premium collection",
+        "premium collection",
+        "super premium collection",
+        "premium figure collection"
+      ]
+    },
+    {
+      "id": "collection-box",
+      "label": "Collection Box",
+      "aliases": [
+        "collection box",
+        "special collection",
+        "ex box",
+        "v box",
+        "vmax box",
+        "vstar box",
+        "gaveboks",
+        "samleboks",
+        "collection",
+        "box set",
+        "boks sett"
+      ]
+    },
+    {
+      "id": "poster-collection",
+      "label": "Poster Collection",
+      "aliases": [
+        "poster collection"
+      ]
+    },
+    {
+      "id": "blister",
+      "label": "Blister",
+      "aliases": [
+        "checklane blister",
+        "checklane",
+        "sleeved booster",
+        "sleeved",
+        "blister",
+        "3 pack blister",
+        "3-pack",
+        "three pack"
+      ]
+    },
+    {
+      "id": "league-battle-deck",
+      "label": "League Battle Deck",
+      "aliases": [
+        "league battle deck"
+      ]
+    },
+    {
+      "id": "build-battle",
+      "label": "Build & Battle",
+      "aliases": [
+        "build battle stadium",
+        "build & battle stadium",
+        "build battle box",
+        "build & battle box",
+        "build battle",
+        "build & battle"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio",
+      "aliases": [
+        "pocket portfolio",
+        "portfolio"
+      ]
+    },
+    {
+      "id": "surprise-box",
+      "label": "Surprise Box",
+      "aliases": [
+        "surprise box",
+        "one spot mystery",
+        "spot mystery box"
+      ]
+    },
+    {
+      "id": "deck",
+      "label": "Deck",
+      "aliases": [
+        "battle deck",
+        "starter deck",
+        "theme deck",
+        "deck boks",
+        "deck box",
+        "deck"
+      ]
+    },
+    {
+      "id": "mystery-box",
+      "label": "Mystery Box",
+      "aliases": [
+        "mystery box",
+        "blind box",
+        "mysteryboks"
+      ]
+    },
+    {
+      "id": "case",
+      "label": "Case",
+      "aliases": [
+        "sealed case",
+        "case"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "30th-celebration",
+      "label": "30th Anniversary Celebration",
+      "region": "en",
+      "aliases": [
+        "30th anniversary celebration",
+        "30th celebration",
+        "30th anniversary",
+        "30 arsjubileum"
+      ]
+    },
+    {
+      "id": "first-partner",
+      "label": "First Partner",
+      "region": "en",
+      "aliases": [
+        "first partner"
+      ]
+    },
+    {
+      "id": "pitch-black",
+      "label": "Pitch Black",
+      "region": "en",
+      "aliases": [
+        "pitch black"
+      ]
+    },
+    {
+      "id": "chaos-rising",
+      "label": "Chaos Rising",
+      "region": "en",
+      "aliases": [
+        "chaos rising"
+      ]
+    },
+    {
+      "id": "perfect-order",
+      "label": "Perfect Order",
+      "region": "en",
+      "aliases": [
+        "perfect order"
+      ]
+    },
+    {
+      "id": "ascended-heroes",
+      "label": "Ascended Heroes",
+      "region": "en",
+      "aliases": [
+        "ascended heroes"
+      ]
+    },
+    {
+      "id": "phantasmal-flames",
+      "label": "Phantasmal Flames",
+      "region": "en",
+      "aliases": [
+        "phantasmal flames"
+      ]
+    },
+    {
+      "id": "mega-evolution",
+      "label": "Mega Evolution",
+      "region": "en",
+      "aliases": [
+        "mega evolution"
+      ]
+    },
+    {
+      "id": "black-bolt",
+      "label": "Black Bolt",
+      "region": "en",
+      "aliases": [
+        "black bolt"
+      ]
+    },
+    {
+      "id": "white-flare",
+      "label": "White Flare",
+      "region": "en",
+      "aliases": [
+        "white flare"
+      ]
+    },
+    {
+      "id": "destined-rivals",
+      "label": "Destined Rivals",
+      "region": "en",
+      "aliases": [
+        "destined rivals"
+      ]
+    },
+    {
+      "id": "journey-together",
+      "label": "Journey Together",
+      "region": "en",
+      "aliases": [
+        "journey together"
+      ]
+    },
+    {
+      "id": "prismatic-evolutions",
+      "label": "Prismatic Evolutions",
+      "region": "en",
+      "aliases": [
+        "prismatic evolutions"
+      ]
+    },
+    {
+      "id": "surging-sparks",
+      "label": "Surging Sparks",
+      "region": "en",
+      "aliases": [
+        "surging sparks"
+      ]
+    },
+    {
+      "id": "stellar-crown",
+      "label": "Stellar Crown",
+      "region": "en",
+      "aliases": [
+        "stellar crown"
+      ]
+    },
+    {
+      "id": "shrouded-fable",
+      "label": "Shrouded Fable",
+      "region": "en",
+      "aliases": [
+        "shrouded fable"
+      ]
+    },
+    {
+      "id": "twilight-masquerade",
+      "label": "Twilight Masquerade",
+      "region": "en",
+      "aliases": [
+        "twilight masquerade"
+      ]
+    },
+    {
+      "id": "temporal-forces",
+      "label": "Temporal Forces",
+      "region": "en",
+      "aliases": [
+        "temporal forces"
+      ]
+    },
+    {
+      "id": "paldean-fates",
+      "label": "Paldean Fates",
+      "region": "en",
+      "aliases": [
+        "paldean fates"
+      ]
+    },
+    {
+      "id": "paradox-rift",
+      "label": "Paradox Rift",
+      "region": "en",
+      "aliases": [
+        "paradox rift"
+      ]
+    },
+    {
+      "id": "151",
+      "label": "151",
+      "region": "en",
+      "aliases": [
+        "151"
+      ]
+    },
+    {
+      "id": "obsidian-flames",
+      "label": "Obsidian Flames",
+      "region": "en",
+      "aliases": [
+        "obsidian flames"
+      ]
+    },
+    {
+      "id": "paldea-evolved",
+      "label": "Paldea Evolved",
+      "region": "en",
+      "aliases": [
+        "paldea evolved"
+      ]
+    },
+    {
+      "id": "scarlet-violet-base",
+      "label": "Scarlet & Violet",
+      "region": "en",
+      "aliases": [
+        "scarlet violet base",
+        "scarlet & violet base",
+        "scarlet violet"
+      ]
+    },
+    {
+      "id": "team-rocket",
+      "label": "Destined Rivals: Team Rocket",
+      "region": "en",
+      "aliases": [
+        "team rocket"
+      ]
+    },
+    {
+      "id": "crown-zenith",
+      "label": "Crown Zenith",
+      "region": "en",
+      "aliases": [
+        "crown zenith"
+      ]
+    },
+    {
+      "id": "silver-tempest",
+      "label": "Silver Tempest",
+      "region": "en",
+      "aliases": [
+        "silver tempest"
+      ]
+    },
+    {
+      "id": "lost-origin",
+      "label": "Lost Origin",
+      "region": "en",
+      "aliases": [
+        "lost origin"
+      ]
+    },
+    {
+      "id": "astral-radiance",
+      "label": "Astral Radiance",
+      "region": "en",
+      "aliases": [
+        "astral radiance"
+      ]
+    },
+    {
+      "id": "brilliant-stars",
+      "label": "Brilliant Stars",
+      "region": "en",
+      "aliases": [
+        "brilliant stars"
+      ]
+    },
+    {
+      "id": "evolving-skies",
+      "label": "Evolving Skies",
+      "region": "en",
+      "aliases": [
+        "evolving skies"
+      ]
+    },
+    {
+      "id": "celebrations",
+      "label": "Celebrations",
+      "region": "en",
+      "aliases": [
+        "celebrations"
+      ]
+    },
+    {
+      "id": "vivid-voltage",
+      "label": "Vivid Voltage",
+      "region": "en",
+      "aliases": [
+        "vivid voltage"
+      ]
+    },
+    {
+      "id": "hidden-fates",
+      "label": "Hidden Fates",
+      "region": "en",
+      "aliases": [
+        "hidden fates"
+      ]
+    },
+    {
+      "id": "trick-or-trade",
+      "label": "Trick or Trade",
+      "region": "en",
+      "aliases": [
+        "trick or trade",
+        "boosterpakke halloween"
+      ]
+    },
+    {
+      "id": "mcdonalds",
+      "label": "McDonald's",
+      "region": "en",
+      "aliases": [
+        "mcdonald",
+        "mcdonalds",
+        "mcdonald s"
+      ]
+    },
+    {
+      "id": "mega-dream",
+      "label": "Mega Dream",
+      "region": "jp",
+      "aliases": [
+        "mega dream"
+      ]
+    },
+    {
+      "id": "mega-brave",
+      "label": "Mega Brave",
+      "region": "jp",
+      "aliases": [
+        "mega brave"
+      ]
+    },
+    {
+      "id": "mega-symphonia",
+      "label": "Mega Symphonia",
+      "region": "jp",
+      "aliases": [
+        "mega symphonia"
+      ]
+    },
+    {
+      "id": "nihil-zero",
+      "label": "Nihil Zero",
+      "region": "jp",
+      "aliases": [
+        "nihil zero"
+      ]
+    },
+    {
+      "id": "abyss-eye",
+      "label": "Abyss Eye",
+      "region": "jp",
+      "aliases": [
+        "abyss eye"
+      ]
+    },
+    {
+      "id": "ninja-spinner",
+      "label": "Ninja Spinner",
+      "region": "jp",
+      "aliases": [
+        "ninja spinner"
+      ]
+    },
+    {
+      "id": "storm-emeralda",
+      "label": "Storm Emeralda",
+      "region": "jp",
+      "aliases": [
+        "storm emeralda"
+      ]
+    },
+    {
+      "id": "heat-wave-arena",
+      "label": "Heat Wave Arena",
+      "region": "jp",
+      "aliases": [
+        "heat wave arena"
+      ]
+    },
+    {
+      "id": "inferno-x",
+      "label": "Inferno X",
+      "region": "jp",
+      "aliases": [
+        "inferno x"
+      ]
+    },
+    {
+      "id": "paradise-dragona",
+      "label": "Paradise Dragona",
+      "region": "jp",
+      "aliases": [
+        "paradise dragona"
+      ]
+    },
+    {
+      "id": "shiny-treasure-ex",
+      "label": "Shiny Treasure ex",
+      "region": "jp",
+      "aliases": [
+        "shiny treasure"
+      ]
+    },
+    {
+      "id": "terastal-festival",
+      "label": "Terastal Festival",
+      "region": "jp",
+      "aliases": [
+        "terastal festival"
+      ]
+    },
+    {
+      "id": "stellar-miracle",
+      "label": "Stellar Miracle",
+      "region": "jp",
+      "aliases": [
+        "stellar miracle"
+      ]
+    },
+    {
+      "id": "battle-partners",
+      "label": "Battle Partners",
+      "region": "jp",
+      "aliases": [
+        "battle partners"
+      ]
+    },
+    {
+      "id": "crimson-haze",
+      "label": "Crimson Haze",
+      "region": "jp",
+      "aliases": [
+        "crimson haze"
+      ]
+    },
+    {
+      "id": "ancient-roar",
+      "label": "Ancient Roar",
+      "region": "jp",
+      "aliases": [
+        "ancient roar"
+      ]
+    },
+    {
+      "id": "future-flash",
+      "label": "Future Flash",
+      "region": "jp",
+      "aliases": [
+        "future flash"
+      ]
+    },
+    {
+      "id": "snow-hazard",
+      "label": "Snow Hazard",
+      "region": "jp",
+      "aliases": [
+        "snow hazard"
+      ]
+    },
+    {
+      "id": "vmax-climax",
+      "label": "VMAX Climax",
+      "region": "jp",
+      "aliases": [
+        "vmax climax"
+      ]
+    },
+    {
+      "id": "super-electric-breaker",
+      "label": "Super Electric Breaker",
+      "region": "jp",
+      "aliases": [
+        "super electric breaker"
+      ]
+    },
+    {
+      "id": "crystal-gathering",
+      "label": "Crystal Gathering",
+      "region": "cn",
+      "aliases": [
+        "crystal gathering"
+      ]
+    },
+    {
+      "id": "blade-awakened",
+      "label": "Blade Awakened",
+      "region": "cn",
+      "aliases": [
+        "blade awakened"
+      ]
+    },
+    {
+      "id": "dark-crystal-blaze",
+      "label": "Dark Crystal Blaze",
+      "region": "cn",
+      "aliases": [
+        "dark crystal blaze"
+      ]
+    },
+    {
+      "id": "eternal-birth",
+      "label": "Eternal Birth",
+      "region": "cn",
+      "aliases": [
+        "eternal birth"
+      ]
+    },
+    {
+      "id": "primordial-arts",
+      "label": "Primordial Arts",
+      "region": "cn",
+      "aliases": [
+        "primordial arts"
+      ]
+    },
+    {
+      "id": "paradox-veil",
+      "label": "Paradox Veil",
+      "region": "cn",
+      "aliases": [
+        "paradox veil"
+      ]
+    },
+    {
+      "id": "stellar-crystal",
+      "label": "Stellar Crystal",
+      "region": "cn",
+      "aliases": [
+        "stellar crystal"
+      ]
+    },
+    {
+      "id": "blue-sky-stream",
+      "label": "Blue Sky Stream",
+      "region": "cn",
+      "aliases": [
+        "blue sky stream"
+      ]
+    },
+    {
+      "id": "eevee-heroes",
+      "label": "Eevee Heroes",
+      "region": "cn",
+      "aliases": [
+        "eevee heroes"
+      ]
+    },
+    {
+      "id": "fearless-terastal",
+      "label": "Fearless Terastal",
+      "region": "cn",
+      "aliases": [
+        "fearless terastal"
+      ]
+    },
+    {
+      "id": "final-flame-dance",
+      "label": "Final Flame Dance",
+      "region": "cn",
+      "aliases": [
+        "final flame dance"
+      ]
+    },
+    {
+      "id": "gem-packs",
+      "label": "Gem Packs",
+      "region": "cn",
+      "aliases": [
+        "gem packs",
+        "gem pack"
+      ]
+    },
+    {
+      "id": "fusion-strike",
+      "label": "Fusion Strike",
+      "region": "en",
+      "aliases": [
+        "fusion strike"
+      ]
+    },
+    {
+      "id": "chilling-reign",
+      "label": "Chilling Reign",
+      "region": "en",
+      "aliases": [
+        "chilling reign"
+      ]
+    },
+    {
+      "id": "battle-styles",
+      "label": "Battle Styles",
+      "region": "en",
+      "aliases": [
+        "battle styles"
+      ]
+    },
+    {
+      "id": "shining-fates",
+      "label": "Shining Fates",
+      "region": "en",
+      "aliases": [
+        "shining fates"
+      ]
+    },
+    {
+      "id": "darkness-ablaze",
+      "label": "Darkness Ablaze",
+      "region": "en",
+      "aliases": [
+        "darkness ablaze"
+      ]
+    },
+    {
+      "id": "rebel-clash",
+      "label": "Rebel Clash",
+      "region": "en",
+      "aliases": [
+        "rebel clash"
+      ]
+    },
+    {
+      "id": "sword-shield-base",
+      "label": "Sword & Shield",
+      "region": "en",
+      "aliases": [
+        "sword & shield"
+      ]
+    },
+    {
+      "id": "cosmic-eclipse",
+      "label": "Cosmic Eclipse",
+      "region": "en",
+      "aliases": [
+        "cosmic eclipse"
+      ]
+    },
+    {
+      "id": "unified-minds",
+      "label": "Unified Minds",
+      "region": "en",
+      "aliases": [
+        "unified minds"
+      ]
+    },
+    {
+      "id": "unbroken-bonds",
+      "label": "Unbroken Bonds",
+      "region": "en",
+      "aliases": [
+        "unbroken bonds"
+      ]
+    },
+    {
+      "id": "team-up",
+      "label": "Team Up",
+      "region": "en",
+      "aliases": [
+        "team up"
+      ]
+    },
+    {
+      "id": "lost-thunder",
+      "label": "Lost Thunder",
+      "region": "en",
+      "aliases": [
+        "lost thunder"
+      ]
+    },
+    {
+      "id": "celestial-storm",
+      "label": "Celestial Storm",
+      "region": "en",
+      "aliases": [
+        "celestial storm"
+      ]
+    },
+    {
+      "id": "forbidden-light",
+      "label": "Forbidden Light",
+      "region": "en",
+      "aliases": [
+        "forbidden light"
+      ]
+    },
+    {
+      "id": "ultra-prism",
+      "label": "Ultra Prism",
+      "region": "en",
+      "aliases": [
+        "ultra prism"
+      ]
+    },
+    {
+      "id": "burning-shadows",
+      "label": "Burning Shadows",
+      "region": "en",
+      "aliases": [
+        "burning shadows"
+      ]
+    },
+    {
+      "id": "guardians-rising",
+      "label": "Guardians Rising",
+      "region": "en",
+      "aliases": [
+        "guardians rising"
+      ]
+    },
+    {
+      "id": "sun-moon-base",
+      "label": "Sun & Moon",
+      "region": "en",
+      "aliases": [
+        "sun & moon"
+      ]
+    },
+    {
+      "id": "25th-anniversary",
+      "label": "25th Anniversary",
+      "region": "en",
+      "aliases": [
+        "25th anniversary"
+      ]
+    },
+    {
+      "id": "world-championship",
+      "label": "World Championship",
+      "region": "en",
+      "aliases": [
+        "world championship"
+      ]
+    },
+    {
+      "id": "black-white-base",
+      "label": "Black & White",
+      "region": "en",
+      "aliases": [
+        "black & white"
+      ]
+    },
+    {
+      "id": "diamond-pearl-base",
+      "label": "Diamond & Pearl",
+      "region": "en",
+      "aliases": [
+        "diamond & pearl"
+      ]
+    },
+    {
+      "id": "scarlet-violet-promos",
+      "label": "Black Star Promos",
+      "region": "en",
+      "aliases": [
+        "black star promos"
+      ]
+    },
+    {
+      "id": "steam-siege",
+      "label": "Steam Siege",
+      "region": "en",
+      "aliases": [
+        "steam siege"
+      ]
+    },
+    {
+      "id": "evolutions",
+      "label": "Evolutions",
+      "region": "en",
+      "aliases": [
+        "evolutions"
+      ]
+    },
+    {
+      "id": "champions-path",
+      "label": "Champion's Path",
+      "region": "en",
+      "aliases": [
+        "champions path"
+      ]
+    },
+    {
+      "id": "fates-collide",
+      "label": "Fates Collide",
+      "region": "en",
+      "aliases": [
+        "fates collide"
+      ]
+    },
+    {
+      "id": "raging-surf",
+      "label": "Raging Surf",
+      "region": "jp",
+      "aliases": [
+        "raging surf"
+      ]
+    },
+    {
+      "id": "night-wanderer",
+      "label": "Night Wanderer",
+      "region": "jp",
+      "aliases": [
+        "night wanderer"
+      ]
+    },
+    {
+      "id": "shiny-star-v",
+      "label": "Shiny Star V",
+      "region": "jp",
+      "aliases": [
+        "shiny star v"
+      ]
+    },
+    {
+      "id": "lumiose-city",
+      "label": "Lumiose City",
+      "region": "jp",
+      "aliases": [
+        "lumiose city"
+      ]
+    },
+    {
+      "id": "clay-burst",
+      "label": "Clay Burst",
+      "region": "jp",
+      "aliases": [
+        "clay burst"
+      ]
+    },
+    {
+      "id": "mask-of-change",
+      "label": "Mask of Change",
+      "region": "jp",
+      "aliases": [
+        "mask of change"
+      ]
+    },
+    {
+      "id": "wild-force",
+      "label": "Wild Force",
+      "region": "jp",
+      "aliases": [
+        "wild force"
+      ]
+    },
+    {
+      "id": "cyber-judge",
+      "label": "Cyber Judge",
+      "region": "jp",
+      "aliases": [
+        "cyber judge"
+      ]
+    },
+    {
+      "id": "ruler-of-the-black-flame",
+      "label": "Ruler of the Black Flame",
+      "region": "jp",
+      "aliases": [
+        "ruler of the black flame"
+      ]
+    },
+    {
+      "id": "fairy-rise",
+      "label": "Fairy Rise",
+      "region": "jp",
+      "aliases": [
+        "fairy rise"
+      ]
+    },
+    {
+      "id": "tag-team",
+      "label": "Tag Team",
+      "region": "jp",
+      "aliases": [
+        "tag team"
+      ]
+    },
+    {
+      "id": "charming-stars",
+      "label": "Charming Stars",
+      "region": "cn",
+      "aliases": [
+        "charming stars"
+      ]
+    },
+    {
+      "id": "dragon-boat-festival",
+      "label": "Dragon Boat Festival",
+      "region": "cn",
+      "aliases": [
+        "dragon boat festival"
+      ]
+    }
+  ]
+}
