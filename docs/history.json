@@ -1,6 +1,55 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T17:19:25+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu V - 008/025 - NM",
+      "price": "59.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-v-008-025?variant=48887010328827",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T17:19:25+00:00",
+      "store": "Pokelageret",
+      "name": "Charmander - 004/165 - NM",
+      "price": "45.00 kr",
+      "url": "https://pokelageret.no/products/charmander-004-165?variant=49002490265851",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T17:19:25+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu ex - 057/217 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-ex-057-217?variant=48984728469755",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T17:19:25+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 027/078 - NM / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-027-078?variant=48985218744571",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T17:19:25+00:00",
+      "store": "Pokelageret",
+      "name": "Charmander - 023/185 - NM / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/charmander-023-185?variant=48985117491451",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T17:19:25+00:00",
+      "store": "Pokesingles",
+      "name": "Black Kyurem ex 218 - Surging Sparks",
+      "price": "39.00 kr",
+      "url": "https://pokesingles.no/products/black-kyurem-ex-218-surging-sparks?variant=53024686539031",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T16:59:12+00:00",
       "store": "Pokelageret",
       "name": "Rowlet - 043 - NM",
@@ -179459,60 +179508,6 @@
       "name": "Pokemon All Star Collection Blastoise Plush",
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-blastoise-plush?variant=51508339343591",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Pikachu (Female Form) Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-pikachu-female-form-plush?variant=51508321124583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Pikachu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-pikachu-plush?variant=51508315357415",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Pichu Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-pichu-plush?variant=51508308050151",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Morpeko Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-morpeko-plush?variant=51508300841191",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pyokorin Series Charizard Plush",
-      "price": "425.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-pyokorin-series-charizard-plush?variant=51508269580519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Vulpix Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-vulpix-plush?variant=51508263452903",
       "product_class": "accessory",
       "event": "ny"
     }
