@@ -1,6 +1,102 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Pokelageret",
+      "name": "Arceus V - 166/172 - NM",
+      "price": "774.00 kr",
+      "url": "https://pokelageret.no/products/arceus-v-166-172?variant=48843150262523",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 211/217 – Thick Scale",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-211-217-thick-scale/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 246/217 – Mawile",
+      "price": "109,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-246-217-mawile/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 239/217 – Team Rocket’s Dugtrio",
+      "price": "149,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-239-217-team-rockets-dugtrio/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Neo Destiny – 016/105 – Miracle Energy – Holo (Lightly Played)",
+      "price": "225,00 kr",
+      "url": "https://collectible.no/home/neo-destiny-016-105-miracle-energy-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 033/217 – N’s Darmanitan",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-033-217-ns-darmanitan/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 011/217 – Wurmple",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-011-217-wurmple/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Pokelageret",
+      "name": "Ditto - GG22/GG70 - NM",
+      "price": "229.00 kr",
+      "url": "https://pokelageret.no/products/ditto-gg22-gg70?variant=48849648976123",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza - 138/185 - NM",
+      "price": "305.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-138-185?variant=48849600708859",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T11:59:48+00:00",
+      "store": "Pokelageret",
+      "name": "Mew V - 251/264 - NM",
+      "price": "1335.00 kr",
+      "url": "https://pokelageret.no/products/mew-v-251-264?variant=48846483357947",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T11:39:24+00:00",
       "store": "Pokelageret",
       "name": "Surfing Pikachu V - 008/025",
@@ -179460,105 +179556,6 @@
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689320679",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Colorless Type",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689386215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Caterpie Evolutions Stitched Playmat for the Pokemon Trading Card Game",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-caterpie-evolutions-stitched-playmat-for-the-pokemon-trading-card-game?variant=52251013710055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Tinkaton 9-Pocket PRO-Binder",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-tinkaton-9-pocket-pro-binder®-for-pokemon?variant=52233442230503",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Destined Rivals Build & Battle Kit Display",
-      "price": "11999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-destined-rivals-build-battle-kit-display?variant=52209256792295",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu Alcove Tower Deck Box",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pikachu-alcove®-tower-deck-box®-for-pokemon?variant=52112666886375",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Fuecoco Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-fuecoco-model-kit?variant=52079379677415",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Kyurem Model Kit",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-kyurem-model-kit?variant=52078264746215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Charmander Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-charmander-model-kit?variant=52078251147495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Quaxly Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-quaxly-model-kit?variant=52078248886503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Scorbunny Model Kit",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-scorbunny-model-kit?variant=52078244004071",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Charizard & Dragonite Model Kit Sett",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-charizard-dragonite-model-kit-sett?variant=52078239973607",
-      "product_class": "card",
       "event": "ny"
     }
   ]
