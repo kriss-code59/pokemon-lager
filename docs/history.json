@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T12:59:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Battle Partners Koreansk Boosterpakke",
+      "price": "29.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-battle-partners-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:59:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Brave Koreansk Boosterpakke",
+      "price": "39.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mega-brave-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T12:59:32+00:00",
+      "store": "Cardcenter",
+      "name": "Super Electric Breaker Koreansk Boosterpakke",
+      "price": "39.00 kr",
+      "url": "https://cardcenter.no/products/super-electric-breaker-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:59:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Heat Wave Arena Koreansk Booster Box",
+      "price": "1199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-heat-wave-koreansk-booster-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:59:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Battle Partners Koreansk Booster Box",
+      "price": "799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-battle-partners-koreansk-booster-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:59:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Paradise Dragona Koreansk Booster Box",
+      "price": "699.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-paradise-dragona-koreansk-booster-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-04T12:39:31+00:00",
       "store": "Boosterpakker",
       "name": "CHAMPIONS PATH BOOSTER PAKKE",
@@ -179497,60 +179551,6 @@
       "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Munchlax (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-munchlax-25cm?variant=50824915222759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Munchlax",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-munchlax?variant=50824914469095",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Roaring Moon Plush (37cm)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-salamance-plush-37cm?variant=50760535769319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Palkia Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-palkia-plush?variant=50760528462055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Velvet Pikachu Plush (20cm)",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-velvet-pikachu-plushie-20cm?variant=50740890337511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bulbasaur Vinter Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bulbasaur-vinter-plushie-20cm?variant=50736195371239",
       "product_class": "accessory",
       "event": "ny"
     }

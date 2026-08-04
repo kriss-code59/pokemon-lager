@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T12:39:32+00:00",
+  "last_updated": "2026-08-04T12:59:33+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -1299,6 +1299,15 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Pokemon Battle Partners Koreansk Boosterpakke",
+      "price": "29.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-battle-partners-koreansk-boosterpakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Pokemon - Ionos Bellibolt Ex Premium Collection",
       "price": "699.00 kr",
       "in_stock": false,
@@ -1409,7 +1418,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Mega Brave Koreansk Boosterpakke",
       "price": "39.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-mega-brave-koreansk-boosterpakke",
       "store_count": null,
       "product_class": "card"
@@ -1551,6 +1560,15 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Super Electric Breaker Koreansk Boosterpakke",
+      "price": "39.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/super-electric-breaker-koreansk-boosterpakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Kinesisk 25th Anniversary Mewtwo og Mew",
       "price": "1349.00 kr",
       "in_stock": false,
@@ -1591,6 +1609,15 @@
       "price": "299.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-kinesisk-umbreon-kort-display-ramme",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Heat Wave Arena Koreansk Booster Box",
+      "price": "1199.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-heat-wave-koreansk-booster-box",
       "store_count": null,
       "product_class": "card"
     },
@@ -1654,6 +1681,15 @@
       "price": "299.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/japansk-pokemon-illustration-contest-2024-promo",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Battle Partners Koreansk Booster Box",
+      "price": "799.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-battle-partners-koreansk-booster-box",
       "store_count": null,
       "product_class": "card"
     },
@@ -2347,6 +2383,15 @@
       "price": "799.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-bright-fantasy-jumbo-booster-box",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Paradise Dragona Koreansk Booster Box",
+      "price": "699.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-paradise-dragona-koreansk-booster-box",
       "store_count": null,
       "product_class": "card"
     },
@@ -122268,15 +122313,6 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Charjabug 025/084 - Pitch Black",
-      "price": "3.00 kr",
-      "in_stock": true,
-      "url": "https://pokesingles.no/products/charjabug-025084-pitch-black-621441?variant=54068486996247",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
       "name": "Charjabug 100 - Fusion Strike",
       "price": "0.00 kr",
       "in_stock": false,
@@ -122290,6 +122326,15 @@
       "price": "0.00 kr",
       "in_stock": false,
       "url": "https://pokesingles.no/products/charjabug-169-temporal-forces?variant=53024621691159",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
+      "name": "Charjabug 25 - Pitch Black",
+      "price": "3.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/charjabug-025084-pitch-black-621441?variant=54068486996247",
       "store_count": null,
       "product_class": "card"
     },
@@ -161733,6 +161778,24 @@
     },
     {
       "store": "Lekekassen",
+      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
+      "price": "648,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
+      "price": "648,-",
+      "in_stock": null,
+      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
       "name": "Pokémon Mega Evolution Chaos Rising 4-Pocket Portfolio samleperm",
       "price": "106,-",
       "in_stock": true,
@@ -161764,24 +161827,6 @@
       "price": "92,-",
       "in_stock": true,
       "url": "https://lekekassen.no/pokemon-tcg-pitch-black-boosterpakke-pok10425-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
-      "price": "648,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokemon TCG: Trainer’s Toolkit 2025 – bygg ditt eget kraftige kortdeck",
-      "price": "648,-",
-      "in_stock": null,
-      "url": "https://lekekassen.no/pokemon-tcg-trainers-toolkit-2025-pok10112-101",
       "store_count": null,
       "product_class": "card"
     },
@@ -176180,6 +176225,6 @@
     "failed_stores": [],
     "carried_forward_stores": [],
     "store_count": 35,
-    "product_count": 19573
+    "product_count": 19578
   }
 }
