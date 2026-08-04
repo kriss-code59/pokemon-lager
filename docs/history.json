@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T13:39:23+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Space Juggler Koreansk Boosterpakke",
+      "price": "39.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-space-juggler-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:39:23+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Dark Fantasma Koreansk Boosterpakke",
+      "price": "65.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-dark-fantasma-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:39:23+00:00",
+      "store": "Pokelageret",
+      "name": "Grand Tree - 136/142",
+      "price": "7.00 kr",
+      "url": "https://pokelageret.no/products/grand-tree-136-143?variant=49139231260923",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:39:23+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee VMAX - SWSH087",
+      "price": "69.00 kr",
+      "url": "https://pokelageret.no/products/eevee-vmax-swsh087-1?variant=49139230638331",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:39:23+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210",
+      "price": "13.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-211?variant=49139229655291",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:39:23+00:00",
+      "store": "Pokelageret",
+      "name": "Leafeon - 170",
+      "price": "25.00 kr",
+      "previous_price": "21.00 kr",
+      "url": "https://pokelageret.no/products/leafeon-171?variant=49137982636283",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T13:19:32+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Ruler Of The Black Flame Koreansk Boosterpakke",
@@ -179494,60 +179548,6 @@
       "name": "Pokemon Center Japan Original Pawniard Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-pawniard-plush?variant=50991653781735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Aerodactyl Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-aerodactyl-plush?variant=50991623766247",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Lapras Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-lapras-plush?variant=50991612985575",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Cobalion Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-cobalion-plush?variant=50983494222055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Infernape Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-infernape-plush?variant=50983387136231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Deerling Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-deerling-plush?variant=50983386382567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Delcatty Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-delcatty-plush?variant=50983383072999",
       "product_class": "accessory",
       "event": "ny"
     }
