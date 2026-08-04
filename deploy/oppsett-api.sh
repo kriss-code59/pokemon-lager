@@ -21,6 +21,10 @@ LOGG "1/7 Repo"
 if [[ ! -d "$REPO/.git" ]]; then
   sudo -u "$BRUKER" git clone https://github.com/kriss-code59/pokemon-lager.git "$REPO"
 else
+  # Scraperen skriver docs/data.json lokalt, mens EC2 fortsatt committer sin
+  # egen versjon til git. Da stopper --ff-only pa en lokal endring. Sannheten
+  # ligger uansett i Postgres, sa den lokale filen kastes.
+  sudo -u "$BRUKER" git -C "$REPO" checkout -- docs/ 2>/dev/null || true
   sudo -u "$BRUKER" git -C "$REPO" pull --ff-only
 fi
 
