@@ -1,6 +1,58 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T12:39:31+00:00",
+      "store": "Boosterpakker",
+      "name": "CHAMPIONS PATH BOOSTER PAKKE",
+      "price": "269,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/champions-path-booster-pakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:39:31+00:00",
+      "store": "Boosterpakker",
+      "name": "DESTINED RIVALS BOOSTER BUNDLE",
+      "price": "1 079,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/destined-rivals-booster-bundle",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Chaos Rising Elite Trainer Box",
+      "price": "929.00 kr",
+      "url": "https://pokelageret.no/products/chaos-rising-elite-trainer-box?variant=48862998102267",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T12:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 51/64 - MP / Unlimited",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/eevee-51-64?variant=48875244585211",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T12:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu & Zekrom GX - SM168 - NM",
+      "price": "2775.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-zekrom-gx-sm168?variant=48843512643835",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T12:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 60/64 - LP / Unlimited",
+      "price": "65.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-60-64?variant=48875213521147",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T12:19:50+00:00",
       "store": "Collectible",
       "name": "Neo Destiny – 002/105 – Dark Crobat – Holo (Damaged)",
@@ -179500,60 +179552,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-bulbasaur-vinter-plushie-20cm?variant=50736195371239",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Cuties Plush (20cm)",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-cuties-plushie-20cm?variant=50736138518759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bulbasaur Jul Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bulbasaur-jul-plushie-20cm?variant=50736119415015",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Jul Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-jul-plushie?variant=50736087793895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Giratina Deck Box",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-giratina-deck-box?variant=50724873568487",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Dark Order Booster Box",
-      "price": "2799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-dark-order-booster-box?variant=50624497582311",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Celebi Sword & Shield Starter Set",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-celebi-sword-amp-shield-starter-set?variant=50624496500967",
-      "product_class": "card",
       "event": "ny"
     }
   ]
