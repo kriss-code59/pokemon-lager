@@ -48,6 +48,10 @@ from playwright.sync_api import sync_playwright
 # Hvor lenge vi venter mellom hver butikk (vaer snill mot serverne deres)
 DELAY_BETWEEN_SITES = 3
 
+# Maks antall nye lagerhendelser i EN kjoring for vi antar datafeil og lar
+# vaere a varsle. Se stormvernet i main().
+ALERT_STORM_THRESHOLD = 200
+
 # User-Agent som identifiserer boten aerlig (god praksis ved scraping)
 USER_AGENT = "PokemonLagerBot/1.0 (privat prosjekt, kontakt: <legg inn din e-post>)"
 
@@ -1775,13 +1779,69 @@ def send_ntfy_notification(events: list) -> None:
           f"{skipped} filtrert bort av notification_settings.json, {len(events)} totalt).")
 
 
+# ---------------------------------------------------------------------------
+# Vern mot falske "nytt produkt"-varsler ved delvis feilet skanning.
+#
+# main() skrev tidligere docs/data.json ubetinget. Feilet en butikk (timeout,
+# 503, endret HTML), forsvant alle produktene dens fra fila -- og neste
+# vellykkede kjoring sa dem som HELT NYE, siden load_previous_products() ikke
+# lenger fant dem. For en butikk som LABOGE (5 598 produkter) betyr det
+# tusenvis av falske varsler, og history.json forurenses permanent.
+#
+# Losningen er a BEHOLDE forrige kjorings produkter for en butikk som gikk fra
+# mange produkter til null. At en butikk faktisk tommer hele katalogen sin
+# mellom to kjoringer er sa usannsynlig at vi heller tar feil i den retningen.
+# ---------------------------------------------------------------------------
+CARRY_FORWARD_MIN_PREV = 20
+
+
+def carry_forward_failed_stores(all_products: list, previous_by_url: dict):
+    """Beholder forrige kjorings produkter for butikker som plutselig gav 0
+    treff. Returnerer (produkter, navn pa butikker som ble viderefort)."""
+    now_counts = {}
+    for p in all_products:
+        now_counts[p.store] = now_counts.get(p.store, 0) + 1
+
+    prev_by_store = {}
+    for prev in previous_by_url.values():
+        store = prev.get("store")
+        if store:
+            prev_by_store.setdefault(store, []).append(prev)
+
+    carried_stores = []
+    carried_products = []
+    for store, prev_items in sorted(prev_by_store.items()):
+        if len(prev_items) < CARRY_FORWARD_MIN_PREV or now_counts.get(store, 0) > 0:
+            continue
+        carried_stores.append(store)
+        for prev in prev_items:
+            carried_products.append(Product(
+                store=store,
+                name=prev.get("name", ""),
+                price=prev.get("price", ""),
+                in_stock=prev.get("in_stock"),
+                url=prev.get("url", ""),
+                store_count=prev.get("store_count"),
+                product_class=prev.get("product_class") or "",
+            ))
+        print(f"[{store}] ADVARSEL: 0 produkter funnet, {len(prev_items)} forrige "
+              f"kjoring -- antar feilet skanning, beholder forrige data")
+
+    return all_products + carried_products, carried_stores
+
+
 def main():
     all_products: list = []
     previous_by_url = load_previous_products()
+    failed_stores: list = []
 
     for config in SHOPIFY_STORES:
         print(f"Scanner {config['store']} (via Shopify-API)...")
-        all_products += scrape_shopify_store(config)
+        try:
+            all_products += scrape_shopify_store(config)
+        except Exception as e:
+            failed_stores.append(config["store"])
+            print(f"[{config['store']}] FEILET: {type(e).__name__}: {e}")
 
     with sync_playwright() as p:
         # --disable-*-throttling/backgrounding: uten disse behandler Chromium
@@ -1798,40 +1858,81 @@ def main():
             ],
         )
         context = browser.new_context(user_agent=USER_AGENT, locale="nb-NO")
+        # UTEN DISSE HENGER SCRAPEREN FOR ALLTID. Playwright har som standard
+        # ingen ovre grense pa hvor lenge den venter pa en side. 2026-08-02
+        # kl. 14:00 mistet Chromium forbindelsen til en butikk uten a si ifra;
+        # python3 la seg i epoll_wait og ventet i 44 timer, mens flock -n
+        # gjorde at alle senere cron-kjoringer avsluttet stille. Med disse
+        # kastes det en TimeoutError i stedet, som fanges opp per butikk under.
+        context.set_default_timeout(30_000)
+        context.set_default_navigation_timeout(45_000)
         page = context.new_page()
+
+        # Hver butikk kjores isolert: en butikk som feiler (timeout, endret
+        # HTML, blokkering) skal ikke rive med seg resten av kjoringen. Uten
+        # dette mistet vi ALLE butikkene hvis en eneste kastet exception.
+        scrapers = {
+            "nille": scrape_nille,
+            "nettbutikk24": scrape_nettbutikk24,
+            "outland": scrape_outland,
+            "norli": scrape_norli,
+            "maxgaming": scrape_maxgaming,
+            "quickbutik": scrape_quickbutik,
+            "woocommerce": scrape_woocommerce,
+        }
 
         for site in PLAYWRIGHT_SITES:
             print(f"Scanner {site['store']}...")
-            custom = site.get("custom_scraper")
-            if custom == "nille":
-                all_products += scrape_nille(page, site)
-            elif custom == "nettbutikk24":
-                all_products += scrape_nettbutikk24(page, site)
-            elif custom == "outland":
-                all_products += scrape_outland(page, site)
-            elif custom == "norli":
-                all_products += scrape_norli(page, site)
-            elif custom == "maxgaming":
-                all_products += scrape_maxgaming(page, site)
-            elif custom == "quickbutik":
-                all_products += scrape_quickbutik(page, site)
-            elif custom == "woocommerce":
-                all_products += scrape_woocommerce(page, site)
-            else:
-                all_products += scrape_with_browser(page, site)
+            scraper = scrapers.get(site.get("custom_scraper"), scrape_with_browser)
+            try:
+                all_products += scraper(page, site)
+            except Exception as e:
+                failed_stores.append(site["store"])
+                print(f"[{site['store']}] FEILET: {type(e).__name__}: {e}")
+                # Siden kan sta i en odelagt tilstand etter en timeout, sa vi
+                # bytter til en frisk fane for neste butikk.
+                try:
+                    page.close()
+                    page = context.new_page()
+                except Exception:
+                    pass
 
         browser.close()
 
+    # Se carry_forward_failed_stores(): ma kjores FOR hendelsene beregnes,
+    # ellers ser en butikk som feilet ut som om hele katalogen forsvant.
+    all_products, carried_stores = carry_forward_failed_stores(all_products, previous_by_url)
+
     new_events = compute_new_stock_events(all_products, previous_by_url)
     extra_events = compute_extra_events(all_products, previous_by_url)
+
+    # Stormvern: en enkelt kjoring skal aldri kunne sende hundrevis av varsler.
+    # Skjer det, er det nesten alltid et symptom pa at noe er galt med dataene
+    # (jf. carry_forward_failed_stores) -- ikke at 400 produkter faktisk kom
+    # pa lager samtidig. Vi logger da hoylytt og lar vaere a varsle.
+    if len(new_events) > ALERT_STORM_THRESHOLD:
+        print(f"STORMVERN: {len(new_events)} nye lagerhendelser denne kjoringen "
+              f"(grense {ALERT_STORM_THRESHOLD}). Sender INGEN varsler -- dette "
+              f"tyder pa datafeil, ikke ekte restock. Butikker som feilet: "
+              f"{', '.join(failed_stores) or 'ingen'}")
+    else:
+        send_ntfy_notification(new_events)
+
     changes = update_changes_log(new_events)
     history = update_history_log(new_events + extra_events)
-    send_ntfy_notification(new_events)
 
     output = {
         "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "products": [asdict(p) for p in all_products],
         "manual_check_stores": MANUAL_CHECK_STORES,
+        # Helsestatus, sa bade dashbordet og dodmannsknappen kan se om
+        # kjoringen faktisk var komplett eller bare delvis vellykket.
+        "health": {
+            "failed_stores": failed_stores,
+            "carried_forward_stores": carried_stores,
+            "store_count": len({p.store for p in all_products}),
+            "product_count": len(all_products),
+        },
     }
 
     with open("docs/data.json", "w", encoding="utf-8") as f:
