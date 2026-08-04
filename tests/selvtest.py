@@ -139,8 +139,24 @@ def main():
         sjekk(etter == for_, "Cardcenters oppforinger ble beholdt", (for_, etter))
         sjekk(tell(a.dsn, "SELECT count(*) FROM events") == hendelser_for,
               "ingen nye hendelser fra en butikk som forsvant")
+        sjekk(any("Cardcenter (ikke i kjoringen)" == s for s in stat["hoppet_over"]),
+              "butikken ble rapportert som fravaerende, ikke stille utelatt",
+              stat["hoppet_over"])
+
+        # ------------------------------------------ 4b. halvferdig skanning
+        print("\n4b. Kjoring der Cardcenter bare leverer halve katalogen")
+        halv = copy.deepcopy(endret)
+        cc = [r for r in halv["products"] if r.get("store") == "Cardcenter"]
+        behold = {r["url"] for r in cc[:len(cc) // 2]}
+        halv["products"] = [r for r in halv["products"]
+                            if r.get("store") != "Cardcenter" or r["url"] in behold]
+        stat = kjor(a.dsn, skriv(halv, tmp, "halv.json"), verbose=False)
         sjekk(any("krympvern" in s for s in stat["hoppet_over"]),
-              "krympvernet rapporterte at det slo inn", stat["hoppet_over"])
+              "krympvernet slo inn pa en halvferdig skanning", stat["hoppet_over"])
+        sjekk(tell(a.dsn, "SELECT count(*) FROM listings WHERE store_id = 'cardcenter'") == for_,
+              "ingen oppforinger ble slettet av den halve skanningen")
+        sjekk(tell(a.dsn, "SELECT count(*) FROM events") == hendelser_for,
+              "og ingen hendelser ble laget")
 
         # --------------------------------------- 5. eksplisitt feilmelding
         print("\n5. Kjoring der helse-feltet melder at butikken feilet")
@@ -148,7 +164,7 @@ def main():
         feilet["health"] = {"failed_stores": ["Cardcenter"], "carried_forward_stores": []}
         feilet["products"] = [r for r in feilet["products"] if r.get("store") != "Cardcenter"]
         stat = kjor(a.dsn, skriv(feilet, tmp, "feilet.json"), verbose=False)
-        sjekk(any("feilet" in s for s in stat["hoppet_over"]),
+        sjekk(any("Cardcenter (feilet)" == s for s in stat["hoppet_over"]),
               "butikken ble hoppet over pa grunn av helsestatus", stat["hoppet_over"])
         sjekk(tell(a.dsn, "SELECT count(*) FROM listings WHERE store_id = 'cardcenter'") == for_,
               "oppforingene star fortsatt urort")

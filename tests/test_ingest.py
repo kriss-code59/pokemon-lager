@@ -153,3 +153,20 @@ def test_alle_priser_lar_seg_parse_eller_er_tomme():
 
 def test_krympgrensen_er_fornuftig():
     assert 0 < KRYMP_GRENSE < 0.5
+
+
+@pytest.mark.skipif(not os.path.exists(DATA), reason="data.json mangler")
+def test_produkt_id_kan_ha_annen_region_enn_settet():
+    """En japansk utgave av et vestlig sett gir `sett:type:jp`, som ikke
+    finnes i krysstabellen sets x types. Uten sikre_produkter() faller
+    ingest pa en fremmednokkelfeil -- det skjedde i produksjon."""
+    with open(DATA, encoding="utf-8") as f:
+        data = json.load(f)
+    per_butikk, _ = grupper_per_butikk(data["products"], KAT)
+    region_for_sett = {s["id"]: s["region"] for s in KAT.sets}
+    ider = {o["product_id"] for b in per_butikk.values() for o in b.values()
+            if o["product_id"]}
+    avvik = [i for i in ider if i.split(":")[2] != region_for_sett[i.split(":")[0]]]
+    assert avvik, "forventet minst ett produkt med avvikende region"
+    for pid in ider:
+        assert len(pid.split(":")) == 3, pid
