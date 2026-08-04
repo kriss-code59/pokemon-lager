@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T12:59:33+00:00",
+  "last_updated": "2026-08-04T13:19:33+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -867,6 +867,15 @@
     },
     {
       "store": "Cardcenter",
+      "name": "Pokemon Ruler Of The Black Flame Koreansk Boosterpakke",
+      "price": "35.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-ruler-of-the-black-flame-koreansk-boosterpakke",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
       "name": "Pokemon Eevee Heroes Japansk Boosterpakke",
       "price": "699.00 kr",
       "in_stock": true,
@@ -1150,6 +1159,24 @@
       "price": "119.00 kr",
       "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-chaos-rising-premium-blister-pack-pawmot",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Scarlet Koreansk Boosterpakke",
+      "price": "29.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-scarlet-koreansk-boosterpakke-1",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Cardcenter",
+      "name": "Pokemon Mask of Change Koreansk Boosterpakke",
+      "price": "39.00 kr",
+      "in_stock": true,
+      "url": "https://cardcenter.no/products/pokemon-mask-of-change-koreansk-boosterpakke",
       "store_count": null,
       "product_class": "card"
     },
@@ -2129,7 +2156,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Reward Round Kinesisk Slim Booster Box",
       "price": "499.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://cardcenter.no/products/pokemon-reward-round-kinesisk-slim-booster-box",
       "store_count": null,
       "product_class": "card"
@@ -7518,10 +7545,10 @@
     },
     {
       "store": "Pokelageret",
-      "name": "Absol - 67/116 - 067/116 - NM",
+      "name": "Absol - 67/116 - 067/116 - DMG",
       "price": "85.00 kr",
-      "in_stock": false,
-      "url": "https://pokelageret.no/products/absol-67-116-067-116?variant=49002529030395",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/absol-67-116-067-116?variant=49139230605563",
       "store_count": null,
       "product_class": "card"
     },
@@ -7725,10 +7752,10 @@
     },
     {
       "store": "Pokelageret",
-      "name": "Moltres - 9/124 - LP / Normal",
-      "price": "15.00 kr",
-      "in_stock": false,
-      "url": "https://pokelageret.no/products/moltres-9-124?variant=48985143378171",
+      "name": "Moltres - 9/124 - DMG / Normal",
+      "price": "5.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/moltres-9-124?variant=49139254001915",
       "store_count": null,
       "product_class": "card"
     },
@@ -9097,6 +9124,15 @@
       "price": "55.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/space-juggler-booster-box?variant=47903026741499",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
+      "name": "Lugia - 022/025",
+      "price": "10.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/lugia-022-25?variant=49139239616763",
       "store_count": null,
       "product_class": "card"
     },
@@ -14250,15 +14286,6 @@
     },
     {
       "store": "Pokelageret",
-      "name": "Lugia - 022/025 - NM",
-      "price": "15.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/lugia-022-025?variant=48881635197179",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
       "name": "Victini - 012/086 - NM",
       "price": "6.00 kr",
       "in_stock": true,
@@ -14926,7 +14953,7 @@
     {
       "store": "Pokelageret",
       "name": "Tornadus - 210 - NM",
-      "price": "25.00 kr",
+      "price": "13.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/tornadus-210?variant=48875146936571",
       "store_count": null,
@@ -15395,7 +15422,7 @@
       "store": "Pokelageret",
       "name": "Riolu - 215/198 - NM",
       "price": "415.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/riolu-215-198?variant=48848877093115",
       "store_count": null,
       "product_class": "card"
@@ -15845,7 +15872,7 @@
       "store": "Pokelageret",
       "name": "Reshiram - 113/114 - NM",
       "price": "199.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/reshiram-113-114?variant=48847043657979",
       "store_count": null,
       "product_class": "card"
@@ -17149,7 +17176,7 @@
     {
       "store": "Pokelageret",
       "name": "Eevee VMAX - SWSH087 - NM",
-      "price": "65.00 kr",
+      "price": "69.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/eevee-vmax-swsh087?variant=48838872891643",
       "store_count": null,
@@ -95529,15 +95556,6 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Annihilape 041/084 - Pitch Black",
-      "price": "4.00 kr",
-      "in_stock": true,
-      "url": "https://pokesingles.no/products/annihilape-041084-pitch-black-524380?variant=54068487487767",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
       "name": "Annihilape 100 - Surging Sparks",
       "price": "0.00 kr",
       "in_stock": false,
@@ -95560,6 +95578,15 @@
       "price": "0.00 kr",
       "in_stock": false,
       "url": "https://pokesingles.no/products/annihilape-171-paldean-fates?variant=53024601276695",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
+      "name": "Annihilape 41 - Pitch Black",
+      "price": "4.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/annihilape-041084-pitch-black-524380?variant=54068487487767",
       "store_count": null,
       "product_class": "card"
     },
@@ -101246,7 +101273,7 @@
       "store": "Pokesingles",
       "name": "Azumarill ex 84 - Ascended Heroes",
       "price": "20.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokesingles.no/products/azumarill-ex-84-ascended-heroes?variant=53024886227223",
       "store_count": null,
       "product_class": "card"
@@ -102135,15 +102162,6 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Banette 034/084 - Pitch Black",
-      "price": "5.00 kr",
-      "in_stock": true,
-      "url": "https://pokesingles.no/products/banette-034084-pitch-black-882446?variant=54068487323927",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokesingles",
       "name": "Banette 1 - Crystal Guardians",
       "price": "0.00 kr",
       "in_stock": false,
@@ -102211,6 +102229,15 @@
       "price": "0.00 kr",
       "in_stock": false,
       "url": "https://pokesingles.no/products/banette-32-roaring-skies?variant=53022564679959",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokesingles",
+      "name": "Banette 34 - Pitch Black",
+      "price": "5.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/banette-034084-pitch-black-882446?variant=54068487323927",
       "store_count": null,
       "product_class": "card"
     },
@@ -176225,6 +176252,6 @@
     "failed_stores": [],
     "carried_forward_stores": [],
     "store_count": 35,
-    "product_count": 19578
+    "product_count": 19581
   }
 }

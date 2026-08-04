@@ -1,6 +1,111 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Ruler Of The Black Flame Koreansk Boosterpakke",
+      "price": "35.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-ruler-of-the-black-flame-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Scarlet Koreansk Boosterpakke",
+      "price": "29.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-scarlet-koreansk-boosterpakke-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mask of Change Koreansk Boosterpakke",
+      "price": "39.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mask-of-change-koreansk-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Reward Round Kinesisk Slim Booster Box",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-reward-round-kinesisk-slim-booster-box",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Absol - 67/116 - 067/116 - DMG",
+      "price": "85.00 kr",
+      "url": "https://pokelageret.no/products/absol-67-116-067-116?variant=49139230605563",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Moltres - 9/124 - DMG / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/moltres-9-124?variant=49139254001915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Lugia - 022/025",
+      "price": "10.00 kr",
+      "url": "https://pokelageret.no/products/lugia-022-25?variant=49139239616763",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210 - NM",
+      "price": "13.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-210?variant=48875146936571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Riolu - 215/198 - NM",
+      "price": "415.00 kr",
+      "url": "https://pokelageret.no/products/riolu-215-198?variant=48848877093115",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Reshiram - 113/114 - NM",
+      "price": "199.00 kr",
+      "url": "https://pokelageret.no/products/reshiram-113-114?variant=48847043657979",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee VMAX - SWSH087 - NM",
+      "price": "69.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/eevee-vmax-swsh087?variant=48838872891643",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T13:19:32+00:00",
+      "store": "Pokesingles",
+      "name": "Azumarill ex 84 - Ascended Heroes",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/azumarill-ex-84-ascended-heroes?variant=53024886227223",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T12:59:32+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Battle Partners Koreansk Boosterpakke",
@@ -179443,114 +179548,6 @@
       "name": "Pokemon Center Japan Original Delcatty Plush",
       "price": "319.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-delcatty-plush?variant=50983383072999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Stoutland Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-stoutland-plush?variant=50983381663975",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Drapion Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-drapion-plush?variant=50983377535207",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Zebstrika Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-zebstrika-plush?variant=50983260389607",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kyurem Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kyurem-plush?variant=50982982844647",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Snivy Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-snivy-plush?variant=50982977863911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Registeel Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-registeel-plush?variant=50982976618727",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Anorith Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-anorith-plush?variant=50982968688871",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Rayquaza Legendary Foil Playmat",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-rayquaza-legendary-foil-playmat?variant=50976669073639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Magnezone Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-magnezone-plush?variant=50936754766055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Professor Juniper Deck Box",
-      "price": "35.00 kr",
-      "url": "https://pokestore.no/products/pokemon-professor-juniper-oppbevaringseske?variant=50923999428839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kirlia Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kirlia-plush?variant=50863559475431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
       "product_class": "accessory",
       "event": "ny"
     }
