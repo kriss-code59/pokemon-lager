@@ -1,6 +1,114 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK CHASING GLORY KOFFERT",
+      "price": "4 259,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/kinesisk-chasing-glory-koffert",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Boosterpakker",
+      "name": "DREAM FIGURE VOL. 2",
+      "price": "229,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/dream-figure-vol-2",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Boosterpakker",
+      "name": "DREAM FIGURE VOL. 1",
+      "price": "289,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/dream-figure-vol-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Terastal Festival ex - Booster Box",
+      "price": "1829.00 kr",
+      "previous_price": "1859.00 kr",
+      "url": "https://pokelageret.no/products/terastal-festival-ex-booster-box?variant=47515915878651",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "The Glory of Team Rocket - Booster Box",
+      "price": "2419.00 kr",
+      "previous_price": "2389.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket?variant=47515173191931",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Raging Surf - Booster Box",
+      "price": "1349.00 kr",
+      "previous_price": "1379.00 kr",
+      "url": "https://pokelageret.no/products/raging-surf-booster-box?variant=47517593764091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Heat Wave Arena - Booster Box",
+      "price": "2019.00 kr",
+      "previous_price": "2099.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket-copy?variant=47515909325051",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Future Flash - Booster Box",
+      "price": "1139.00 kr",
+      "previous_price": "1169.00 kr",
+      "url": "https://pokelageret.no/products/future-flash-booster-box?variant=47517558243579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Stellar Miracle - Booster Box",
+      "price": "1119.00 kr",
+      "previous_price": "1219.00 kr",
+      "url": "https://pokelageret.no/products/stellar-miracle-booster-box?variant=47516201713915",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Supercharged Breaker - Booster Box",
+      "price": "2819.00 kr",
+      "previous_price": "2919.00 kr",
+      "url": "https://pokelageret.no/products/supercharged-breaker-booster-box?variant=47515920564475",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Cyber Judge - Booster Box",
+      "price": "1259.00 kr",
+      "previous_price": "1299.00 kr",
+      "url": "https://pokelageret.no/products/cyber-judge-booster-box?variant=47517544972539",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T18:37:10+00:00",
+      "store": "Pokelageret",
+      "name": "Mask of Change - Booster Box",
+      "price": "1369.00 kr",
+      "previous_price": "1399.00 kr",
+      "url": "https://pokelageret.no/products/mask-of-change-booster-box?variant=47516213412091",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T17:59:26+00:00",
       "store": "Outland",
       "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
@@ -179396,114 +179504,6 @@
       "name": "Pokemon Moncolle Rising Volt Tacklers Transformation! Brave Asagi! Figur",
       "price": "899.00 kr",
       "url": "https://pokestore.no/products/pokemon-moncolle-rising-volt-tacklers-transformation-brave-asagi-figur?variant=51569120674023",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terastal Koraidon Moncolle Figur",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terastal-koraidon-figur?variant=51568808820967",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-55 Totodile Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-feraligator-moncolle-figur?variant=51568795418855",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Charizard X Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-charizard-x-sleeves?variant=51568678306023",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Kangaskhan Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-kangaskhan-sleeves?variant=51568662216935",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Crobat Premium Gloss Sleeves (64 stk)",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-crobat-premium-gloss-sleeves?variant=51568660414695",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Charizard X Plush (35cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-charizard-x-plush-35cm?variant=51568446439655",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Tyranitar Plush (40cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-tyranitar-plush-40cm?variant=51568404988135",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Altaria Plush",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-altaria-plush?variant=51568403349735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Moko Moko Gengar Plush",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-moko-moko-gengar-plush?variant=51555974250727",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Fluffy Pikachu Plush",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-fluffy-pikachu-plush?variant=51539735445735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Fluffy Gengar Plush",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-fluffy-gengar-plush?variant=51539726893287",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Kotobukiya ARTFXJ Statue 1/8 Juliana & Sprigatito Statue",
-      "price": "1799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kotobukiya-artfxj-statue-1-8-juliana-sprigatito?variant=51539054100711",
       "product_class": "card",
       "event": "ny"
     }

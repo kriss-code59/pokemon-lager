@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T18:18:09+00:00",
+  "last_updated": "2026-08-04T18:37:11+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5332,7 +5332,7 @@
     {
       "store": "Pokelageret",
       "name": "Terastal Festival ex - Booster Box",
-      "price": "1859.00 kr",
+      "price": "1829.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/terastal-festival-ex-booster-box?variant=47515915878651",
       "store_count": null,
@@ -5539,7 +5539,7 @@
     {
       "store": "Pokelageret",
       "name": "The Glory of Team Rocket - Booster Box",
-      "price": "2389.00 kr",
+      "price": "2419.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/the-glory-of-team-rocket?variant=47515173191931",
       "store_count": null,
@@ -6511,7 +6511,7 @@
     {
       "store": "Pokelageret",
       "name": "Raging Surf - Booster Box",
-      "price": "1379.00 kr",
+      "price": "1349.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/raging-surf-booster-box?variant=47517593764091",
       "store_count": null,
@@ -6529,7 +6529,7 @@
     {
       "store": "Pokelageret",
       "name": "Heat Wave Arena - Booster Box",
-      "price": "2099.00 kr",
+      "price": "2019.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/the-glory-of-team-rocket-copy?variant=47515909325051",
       "store_count": null,
@@ -6574,7 +6574,7 @@
     {
       "store": "Pokelageret",
       "name": "Future Flash - Booster Box",
-      "price": "1169.00 kr",
+      "price": "1139.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/future-flash-booster-box?variant=47517558243579",
       "store_count": null,
@@ -6673,7 +6673,7 @@
     {
       "store": "Pokelageret",
       "name": "Stellar Miracle - Booster Box",
-      "price": "1219.00 kr",
+      "price": "1119.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/stellar-miracle-booster-box?variant=47516201713915",
       "store_count": null,
@@ -6763,7 +6763,7 @@
     {
       "store": "Pokelageret",
       "name": "Supercharged Breaker - Booster Box",
-      "price": "2919.00 kr",
+      "price": "2819.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/supercharged-breaker-booster-box?variant=47515920564475",
       "store_count": null,
@@ -6790,7 +6790,7 @@
     {
       "store": "Pokelageret",
       "name": "Cyber Judge - Booster Box",
-      "price": "1299.00 kr",
+      "price": "1259.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/cyber-judge-booster-box?variant=47517544972539",
       "store_count": null,
@@ -6925,7 +6925,7 @@
     {
       "store": "Pokelageret",
       "name": "Mask of Change - Booster Box",
-      "price": "1399.00 kr",
+      "price": "1369.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/mask-of-change-booster-box?variant=47516213412091",
       "store_count": null,
@@ -163344,6 +163344,15 @@
     },
     {
       "store": "Boosterpakker",
+      "name": "KINESISK CHASING GLORY KOFFERT",
+      "price": "4 259,00 kr",
+      "in_stock": true,
+      "url": "https://boosterpakker.no/produkt/collection-bokser/kinesisk-chasing-glory-koffert",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Boosterpakker",
       "name": "MEGA CHARIZARD ULTRA PREMIUM COLLECTION",
       "price": "3 390,00 kr",
       "in_stock": true,
@@ -163357,6 +163366,24 @@
       "price": "5 990,00 kr",
       "in_stock": true,
       "url": "https://boosterpakker.no/produkt/collection-bokser/pokemon-classic-collection",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Boosterpakker",
+      "name": "DREAM FIGURE VOL. 2",
+      "price": "229,00 kr",
+      "in_stock": true,
+      "url": "https://boosterpakker.no/produkt/collection-bokser/dream-figure-vol-2",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Boosterpakker",
+      "name": "DREAM FIGURE VOL. 1",
+      "price": "289,00 kr",
+      "in_stock": true,
+      "url": "https://boosterpakker.no/produkt/collection-bokser/dream-figure-vol-1",
       "store_count": null,
       "product_class": "card"
     },
@@ -163530,33 +163557,6 @@
       "url": "https://boosterpakker.no/produkt/collection-bokser/kinesisk-terastal-gathering-coin-set",
       "store_count": null,
       "product_class": "accessory"
-    },
-    {
-      "store": "Boosterpakker",
-      "name": "KINESISK TERASTAL GATHERING BADGE SET",
-      "price": "139,00 kr",
-      "in_stock": true,
-      "url": "https://boosterpakker.no/produkt/collection-bokser/kinesisk-terastal-gathering-badge-set",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Boosterpakker",
-      "name": "KINESISK TERASTAL GATHERING GIFT BOX",
-      "price": "329,00 kr",
-      "in_stock": true,
-      "url": "https://boosterpakker.no/produkt/collection-bokser/kinesisk-terastal-gathering-gift-box",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Boosterpakker",
-      "name": "MEGA CHARIZARD X/Y TIN",
-      "price": "599,00 kr",
-      "in_stock": true,
-      "url": "https://boosterpakker.no/produkt/collection-bokser/mega-charizard-x-y-tin",
-      "store_count": null,
-      "product_class": "card"
     },
     {
       "store": "Card Kings",
@@ -168118,114 +168118,6 @@
       "price": "751,00 kr",
       "in_stock": false,
       "url": "https://collectible.no/home/ascended-heroes-283-217-mega-hawlucha-ex/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Darkness Ablaze – 178/189 – Houndoom V",
-      "price": "49,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/darkness-ablaze-178-189-houndoom-v/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Jungle – 47/64 – Tauros – 1st Edition",
-      "price": "59,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/jungle-47-64-tauros-1st-edition/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "EX Crystal Guardians – 002/100 – Blastoise (delta species) – Holo Rare (Lightly Played)",
-      "price": "549,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ex-crystal-guardians-002-100-blastoise-delta-species-holo-rare-lightly-played/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "EX Dragon – 97/97 – Rayquaza EX",
-      "price": "2.199,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ex-dragon-97-97-rayquaza-ex/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Ascended Heroes – 063/217 – Helioptile (Energy Symbol Pattern) – Reverse Holo",
-      "price": "4,90 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ascended-heroes-063-217-helioptile-energy-symbol-pattern-reverse-holo/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Ascended Heroes – 098/217 – Spectrier (Energy Symbol Pattern) – Reverse Holo",
-      "price": "4,90 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ascended-heroes-098-217-spectrier-energy-symbol-pattern-reverse-holo/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Ascended Heroes – 040/217 – Golduck (Love Ball) – Reverse Holo",
-      "price": "5,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ascended-heroes-040-217-golduck-love-ball-reverse-holo/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Ascended Heroes – 075/217 – Clefable (Love Ball) – Reverse Holo",
-      "price": "6,86 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ascended-heroes-075-217-clefable-love-ball-reverse-holo/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Aquapolis – H11 – Houndoom – Holo Rare (Heavily Played)",
-      "price": "1.999,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/aquapolis-h11-houndoom-holo-rare-moderately-played/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "EX Unseen Forces – 104/115 – Ho-Oh ex (Lightly Played)",
-      "price": "1.199,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ex-unseen-forces-104-115-ho-oh-ex-lightly-played/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Ascended Heroes – 222/217 – Ethan’s Magcargo",
-      "price": "109,00 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ascended-heroes-222-217-ethans-magcargo/",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Collectible",
-      "name": "Ascended Heroes – 033/217 – N’s Darmanitan (Energy Symbol Pattern) – Reverse Holo",
-      "price": "5,02 kr",
-      "in_stock": false,
-      "url": "https://collectible.no/home/ascended-heroes-033-217-ns-darmanitan-energy-symbol-pattern-reverse-holo/",
       "store_count": null,
       "product_class": "card"
     },
@@ -175370,6 +175262,6 @@
     "failed_stores": [],
     "carried_forward_stores": [],
     "store_count": 35,
-    "product_count": 19483
+    "product_count": 19471
   }
 }
