@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-04T09:19:25+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon TCG: Mega Greninja ex Premium Collection (B-vare)",
+      "price": "999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-tcg-mega-greninja-ex-premium-collection-b-vare?variant=52444179038439",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-04T08:39:32+00:00",
       "store": "Pokelageret",
       "name": "Mega Dream ex - Booster Box",
@@ -2688,15 +2697,6 @@
       "name": "Beedrill - 015/165 - NM / Holofoil",
       "price": "5.00 kr",
       "url": "https://pokelageret.no/products/beedrill-015-165?variant=48989089562875",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mr. Mime - 122/165 - NM / Holofoil",
-      "price": "5.00 kr",
-      "url": "https://pokelageret.no/products/mr-mime-122-165?variant=48989089595643",
       "product_class": "card",
       "event": "ny"
     }

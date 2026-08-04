@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T09:19:25+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon TCG: Mega Greninja ex Premium Collection (B-vare)",
+      "price": "999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-tcg-mega-greninja-ex-premium-collection-b-vare?variant=52444179038439",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-04T08:59:30+00:00",
       "store": "Maxgaming",
       "name": "Pokémon ME05: Pitch Black - Booster",
@@ -179558,15 +179567,6 @@
       "name": "Ultra Pro Pokemon Neon Kanto One-Touch Edge 3-Card Holder",
       "price": "239.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-neon-kanto-one-touch-edge-3-card-holder?variant=51720540160231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Wooloo (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-wooloo-emea-9-cm?variant=51704570380519",
       "product_class": "accessory",
       "event": "ny"
     }
