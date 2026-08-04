@@ -99,9 +99,12 @@ async def health():
     kjoring = rader[0]
     alder = datetime.now(timezone.utc) - kjoring["started_at"]
     fersk = alder < timedelta(minutes=60)
+    # JSONResponse serialiserer ikke datetime. Det ma skje her, ikke i et
+    # unntak nede i starlette -- dette endepunktet er det siste som skal
+    # kunne feile, siden dodmannsknappen leser det.
     return JSONResponse(
         {"ok": bool(kjoring["ok"]) and fersk,
-         "sist_kjort": kjoring["started_at"],
+         "sist_kjort": kjoring["started_at"].isoformat(),
          "alder_minutter": round(alder.total_seconds() / 60, 1),
          "oppforinger": kjoring["product_count"],
          "butikker": kjoring["store_count"],

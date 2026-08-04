@@ -1,0 +1,36 @@
+[Unit]
+Description=Pokepuls API (FastAPI/uvicorn)
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=pokepuls
+Group=pokepuls
+WorkingDirectory=/home/pokepuls/pokemon-lager
+EnvironmentFile=/etc/pokepuls.env
+ExecStart=/home/pokepuls/venv/bin/uvicorn api.main:app \
+    --host 127.0.0.1 --port 8001 --workers 2 --proxy-headers \
+    --forwarded-allow-ips 127.0.0.1 --no-server-header
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=3
+
+# API-et trenger a lese repoet og snakke med Postgres over unix-socket.
+# Alt annet stenges. En prosess som tolker data fra 40 fremmede nettsteder
+# skal ikke kunne skrive noe sted den ikke ma.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/run/postgresql
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictNamespaces=true
+LockPersonality=true
+MemoryMax=1G
+
+[Install]
+WantedBy=multi-user.target

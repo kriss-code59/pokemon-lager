@@ -1,0 +1,218 @@
+/* Pokepuls — mobil forst. Ingen rammeverk, ingen byggesteg.
+   Alt som ikke er innhold skal komme seg unna: hele skjermen er en liste. */
+
+:root {
+  --bg: #0b0d10;
+  --flate: #14181d;
+  --flate-2: #1b2027;
+  --kant: #262c35;
+  --tekst: #e8ecf1;
+  --tekst-svak: #8b95a3;
+  --gul: #ffcb05;
+  --gronn: #2ecc71;
+  --rod: #ff5f56;
+  --bla: #4c9aff;
+  --topp-h: 148px;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--tekst);
+  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  padding-bottom: calc(66px + env(safe-area-inset-bottom));
+  overscroll-behavior-y: none;
+}
+
+button { font: inherit; color: inherit; }
+
+/* ------------------------------------------------------------ toppfelt */
+
+.topp {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(11, 13, 16, .93);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--kant);
+  padding: max(10px, env(safe-area-inset-top)) 14px 8px;
+}
+
+.topp-rad { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+
+.merke { margin: 0; font-size: 21px; letter-spacing: -.4px; font-weight: 800; }
+.merke-poke { color: var(--tekst); }
+.merke-puls { color: var(--gul); }
+
+.puls {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--flate); border: 1px solid var(--kant);
+  border-radius: 999px; padding: 5px 11px 5px 9px;
+  font-size: 12px; color: var(--tekst-svak); cursor: pointer;
+}
+.prikk {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--tekst-svak);
+  box-shadow: 0 0 0 0 currentColor;
+}
+.prikk.ok { background: var(--gronn); animation: banke 2.4s ease-out infinite; color: var(--gronn); }
+.prikk.gammel { background: var(--gul); color: var(--gul); }
+.prikk.nede { background: var(--rod); color: var(--rod); }
+@keyframes banke {
+  0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, .55); }
+  70% { box-shadow: 0 0 0 7px rgba(46, 204, 113, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .prikk.ok { animation: none; } }
+
+.sok-rad { position: relative; margin-top: 9px; }
+#sok {
+  width: 100%; padding: 10px 34px 10px 13px;
+  background: var(--flate); border: 1px solid var(--kant);
+  border-radius: 11px; color: var(--tekst); font-size: 16px; /* 16px = ingen iOS-zoom */
+  -webkit-appearance: none;
+}
+#sok:focus { outline: none; border-color: var(--gul); }
+#sok::placeholder { color: var(--tekst-svak); }
+.tom-sok {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; font-size: 22px; line-height: 1;
+  color: var(--tekst-svak); padding: 4px 9px; cursor: pointer;
+}
+
+.chips {
+  display: flex; gap: 7px; margin-top: 9px;
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chips-under { margin: 12px 14px 4px; }
+.chip {
+  flex: 0 0 auto; padding: 6px 12px; border-radius: 999px;
+  background: var(--flate); border: 1px solid var(--kant);
+  color: var(--tekst-svak); font-size: 13px; white-space: nowrap; cursor: pointer;
+}
+.chip.pa { background: var(--gul); border-color: var(--gul); color: #1a1400; font-weight: 600; }
+
+/* ---------------------------------------------------------------- liste */
+
+main { padding: 0 14px; }
+.teller { color: var(--tekst-svak); font-size: 12.5px; margin: 12px 2px 8px; }
+.hjelp { color: var(--tekst-svak); font-size: 13px; margin: 14px 2px; }
+.tom { color: var(--tekst-svak); text-align: center; margin: 40px 10px; }
+
+.sett-tittel {
+  display: flex; align-items: center; gap: 8px;
+  margin: 18px 2px 8px; font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .6px; color: var(--tekst-svak);
+}
+.sett-tittel::after { content: ""; flex: 1; height: 1px; background: var(--kant); }
+
+.merkelapp {
+  font-size: 10px; font-weight: 700; letter-spacing: .4px;
+  padding: 2px 6px; border-radius: 5px; text-transform: uppercase;
+  background: var(--flate-2); color: var(--tekst-svak); border: 1px solid var(--kant);
+}
+.merkelapp.jp { color: #ff8a8a; border-color: #4a2727; background: #2a1a1a; }
+.merkelapp.cn { color: #ffd479; border-color: #4a3b1c; background: #2a2314; }
+.merkelapp.ko { color: #9ec1ff; border-color: #24365a; background: #161f2e; }
+
+.kort {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  padding: 12px 13px; margin-bottom: 8px; text-align: left;
+  background: var(--flate); border: 1px solid var(--kant);
+  border-radius: var(--radius); cursor: pointer;
+}
+.kort:active { background: var(--flate-2); }
+.kort-venstre { flex: 1; min-width: 0; }
+.kort-navn {
+  font-weight: 600; font-size: 15px; margin-bottom: 3px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.kort-under { font-size: 12.5px; color: var(--tekst-svak); display: flex; gap: 7px; align-items: center; }
+.kort-hoyre { text-align: right; flex: 0 0 auto; }
+.pris { font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums; }
+.pris.ingen { color: var(--tekst-svak); font-weight: 500; font-size: 13px; }
+.lager { font-size: 11.5px; margin-top: 2px; }
+.lager.inne { color: var(--gronn); }
+.lager.ute { color: var(--tekst-svak); }
+
+.mer {
+  display: block; width: 100%; margin: 6px 0 20px; padding: 11px;
+  background: var(--flate); border: 1px solid var(--kant);
+  border-radius: var(--radius); color: var(--tekst-svak); cursor: pointer;
+}
+
+/* ------------------------------------------------------------ hendelser */
+
+.hendelse { display: flex; gap: 11px; align-items: flex-start; padding: 11px 13px; }
+.hendelse-ikon {
+  flex: 0 0 auto; width: 26px; height: 26px; border-radius: 8px;
+  display: grid; place-items: center; font-size: 13px; font-weight: 700;
+}
+.k-restock { background: rgba(46,204,113,.14); color: var(--gronn); }
+.k-ny { background: rgba(255,203,5,.14); color: var(--gul); }
+.k-prisendring { background: rgba(76,154,255,.14); color: var(--bla); }
+.k-utsolgt { background: rgba(255,95,86,.12); color: var(--rod); }
+.hendelse-tid { font-size: 11.5px; color: var(--tekst-svak); }
+.gjennomstreket { text-decoration: line-through; color: var(--tekst-svak); }
+
+/* ------------------------------------------------------------- fanelinje */
+
+.faner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: flex; background: rgba(11,13,16,.95);
+  backdrop-filter: blur(12px); border-top: 1px solid var(--kant);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.fane-knapp {
+  flex: 1; background: none; border: 0; padding: 9px 4px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  font-size: 11px; color: var(--tekst-svak); cursor: pointer;
+}
+.fane-knapp svg { width: 21px; height: 21px; fill: none; stroke: currentColor;
+                  stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.fane-knapp.valgt { color: var(--gul); }
+
+/* ------------------------------------------------------------------ ark */
+
+.ark-bakgrunn { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 40; }
+.ark {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  max-height: 86vh; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  background: var(--flate); border-radius: 20px 20px 0 0;
+  border-top: 1px solid var(--kant);
+  padding: 8px 16px calc(26px + env(safe-area-inset-bottom));
+  animation: opp .22s ease-out;
+}
+@keyframes opp { from { transform: translateY(18px); opacity: .4; } }
+.ark-hank { width: 38px; height: 4px; border-radius: 2px; background: var(--kant); margin: 0 auto 10px; }
+.ark-lukk {
+  position: absolute; top: 8px; right: 10px; background: none; border: 0;
+  font-size: 26px; line-height: 1; color: var(--tekst-svak); padding: 4px 10px; cursor: pointer;
+}
+.ark h2 { margin: 4px 0 2px; font-size: 19px; }
+.ark .ark-under { color: var(--tekst-svak); font-size: 13px; margin-bottom: 14px;
+                  display: flex; gap: 8px; align-items: center; }
+.ark h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .6px;
+          color: var(--tekst-svak); margin: 18px 0 8px; }
+
+.tilbud {
+  display: flex; align-items: center; gap: 11px; padding: 11px 12px;
+  margin-bottom: 7px; background: var(--flate-2); border: 1px solid var(--kant);
+  border-radius: 11px; text-decoration: none; color: inherit;
+}
+.tilbud-venstre { flex: 1; min-width: 0; }
+.tilbud-butikk { font-weight: 600; font-size: 14px; }
+.tilbud-tittel { font-size: 12px; color: var(--tekst-svak);
+                 overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pil { color: var(--tekst-svak); flex: 0 0 auto; }
+
+@media (min-width: 720px) {
+  main, .chips-under { max-width: 720px; margin-left: auto; margin-right: auto; }
+  .topp { padding-left: max(14px, calc(50vw - 360px)); padding-right: max(14px, calc(50vw - 360px)); }
+  .ark { left: 50%; transform: translateX(-50%); width: 640px; border-radius: 20px 20px 0 0; }
+}
