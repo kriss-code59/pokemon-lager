@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T08:59:30+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon ME05: Pitch Black - Booster",
+      "price": "79 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-me05-pitch-black-booster",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T08:39:32+00:00",
       "store": "Pokelageret",
       "name": "Mega Dream ex - Booster Box",
@@ -179559,15 +179567,6 @@
       "name": "Pokemon Funko POP! Wooloo (9 cm)",
       "price": "199.00 kr",
       "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-wooloo-emea-9-cm?variant=51704570380519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Charizard (25 cm)",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-charizard-emea-25-cm?variant=51704570314983",
       "product_class": "accessory",
       "event": "ny"
     }
