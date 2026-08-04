@@ -1,6 +1,51 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T16:39:09+00:00",
+      "store": "Pokelageret",
+      "name": "Dondozo ex - 211/182 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/dondozo-ex-211-182?variant=48984728535291",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T16:39:09+00:00",
+      "store": "Pokelageret",
+      "name": "Dedenne - 093/088 - NM",
+      "price": "69.00 kr",
+      "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T16:39:09+00:00",
+      "store": "Pokelageret",
+      "name": "Koraidon ex - 197",
+      "price": "7.00 kr",
+      "url": "https://pokelageret.no/products/koraidon-ex-198?variant=49140549878011",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T16:39:09+00:00",
+      "store": "Pokefriends",
+      "name": "Julies Mystery Pack",
+      "price": "699.00 kr",
+      "url": "https://pokefriends.no/products/julies-mystery-pack?variant=45435772469357",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T16:39:09+00:00",
+      "store": "Pokelageret",
+      "name": "Dedenne - 093/088 - NM",
+      "price": "69.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T16:19:18+00:00",
       "store": "Pokelageret",
       "name": "Ralts - 211/198 - NM",
@@ -179468,51 +179513,6 @@
       "name": "Pokemon Takara Tomy Sleeping Friends Galarian Ponyta Plush",
       "price": "399.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-ponyta-plush?variant=51508135657703",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Riolu Plush (30cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-riolu-plush-30cm?variant=51508111704295",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Jolteon Plush",
-      "price": "425.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-jolteon-plush?variant=51507604881639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Salamence Plush (36cm)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-salamence-plush-36cm?variant=51507481379047",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Espeon Plush (28cm)",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-espeon-plush-28cm?variant=51507401130215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Premium Pikachu Sherpa Hettegenser - 2XL",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-premium-pikachu-sherpa-hettegenser?variant=51485880090855",
       "product_class": "accessory",
       "event": "ny"
     }
