@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T10:59:27+00:00",
+  "last_updated": "2026-08-04T11:19:27+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -6898,8 +6898,8 @@
     {
       "store": "Pokelageret",
       "name": "Tauros - 096/086 - NM",
-      "price": "55.00 kr",
-      "in_stock": false,
+      "price": "49.00 kr",
+      "in_stock": true,
       "url": "https://pokelageret.no/products/tauros-096-086?variant=48971008246011",
       "store_count": null,
       "product_class": "card"
@@ -7348,8 +7348,8 @@
     {
       "store": "Pokelageret",
       "name": "Crobat - 093/086 - NM",
-      "price": "45.00 kr",
-      "in_stock": false,
+      "price": "49.00 kr",
+      "in_stock": true,
       "url": "https://pokelageret.no/products/crobat-093-086?variant=48960191529211",
       "store_count": null,
       "product_class": "card"
@@ -7761,6 +7761,42 @@
     },
     {
       "store": "Pokelageret",
+      "name": "Greninja ex - 132",
+      "price": "1174.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/greninja-ex-133?variant=49138050433275",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
+      "name": "Flareon - 167",
+      "price": "12.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/flareon-168?variant=49137982570747",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
+      "name": "Alakazam ex - 215/091",
+      "price": "79.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/alakazam-ex-215-91?variant=49137998102779",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
+      "name": "Here Comes Team Rocket! - 15/82",
+      "price": "11.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/here-comes-team-rocket-15-83?variant=49137982537979",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
       "name": "Fuecoco - 002 - NM",
       "price": "75.00 kr",
       "in_stock": true,
@@ -8033,7 +8069,7 @@
       "store": "Pokelageret",
       "name": "Cobalion ex - 103/086 - NM",
       "price": "25.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/cobalion-ex-103-086?variant=49018873577723",
       "store_count": null,
       "product_class": "card"
@@ -8069,7 +8105,7 @@
       "store": "Pokelageret",
       "name": "Iono's Bellibolt ex - 188/159 - NM",
       "price": "195.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/ionos-bellibolt-ex-188-159?variant=49123146924283",
       "store_count": null,
       "product_class": "card"
@@ -8114,7 +8150,7 @@
       "store": "Pokelageret",
       "name": "Iono's Wattrel - 231/217 - NM",
       "price": "124.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/ionos-wattrel-231-217?variant=49123146662139",
       "store_count": null,
       "product_class": "card"
@@ -11308,7 +11344,7 @@
     {
       "store": "Pokelageret",
       "name": "Philippe - 110/086 - NM",
-      "price": "39.00 kr",
+      "price": "25.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/philippe-110-086?variant=48971008082171",
       "store_count": null,
@@ -11326,7 +11362,7 @@
     {
       "store": "Pokelageret",
       "name": "Doublade - 098/088 - NM",
-      "price": "39.00 kr",
+      "price": "26.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/doublade-098-088?variant=48971008147707",
       "store_count": null,
@@ -13828,7 +13864,7 @@
     {
       "store": "Pokelageret",
       "name": "Gengar - 20/62 - MP / Unlimited",
-      "price": "295.00 kr",
+      "price": "345.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/gengar-20-62?variant=48875175051515",
       "store_count": null,
@@ -14890,8 +14926,8 @@
     {
       "store": "Pokelageret",
       "name": "Ralts - 211/198 - NM",
-      "price": "545.00 kr",
-      "in_stock": false,
+      "price": "549.00 kr",
+      "in_stock": true,
       "url": "https://pokelageret.no/products/ralts-211-198?variant=48848874897659",
       "store_count": null,
       "product_class": "card"
@@ -15136,15 +15172,6 @@
       "price": "155.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/kingdra-tg03-tg30?variant=48848862937339",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
-      "name": "Flareon - 167 - NM",
-      "price": "12.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/flareon-167?variant=48848862314747",
       "store_count": null,
       "product_class": "card"
     },
@@ -15656,7 +15683,7 @@
       "store": "Pokelageret",
       "name": "Melony - GG64/GG70 - NM",
       "price": "89.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/melony-gg64-gg70?variant=48846481031419",
       "store_count": null,
       "product_class": "card"
@@ -16000,15 +16027,6 @@
       "price": "25.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/haxorus-69-101?variant=48846424080635",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
-      "name": "Here Comes Team Rocket! - 15/82 - NM",
-      "price": "11.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/here-comes-team-rocket-15-82?variant=48846407893243",
       "store_count": null,
       "product_class": "card"
     },
@@ -16483,7 +16501,7 @@
     {
       "store": "Pokelageret",
       "name": "Rocket's Suicune ex - 105/109 - MP / Holofoil",
-      "price": "2759.00 kr",
+      "price": "2505.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/rockets-suicune-ex-105-109?variant=48846258503931",
       "store_count": null,
@@ -17188,15 +17206,6 @@
       "price": "285.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/espeon-ex-175-svp-175?variant=48837200380155",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
-      "name": "Alakazam ex - 215/091 - NM",
-      "price": "75.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/alakazam-ex-215-091?variant=48833198981371",
       "store_count": null,
       "product_class": "card"
     },
@@ -19287,6 +19296,15 @@
       "url": "https://braspill.no/products/151c-coin-set-pokemon-gengar?variant=55665981325604",
       "store_count": null,
       "product_class": "accessory"
+    },
+    {
+      "store": "Braspill",
+      "name": "Pokemon Gem Packs Volume 6 Kinesisk Booster Box",
+      "price": "399.00 kr",
+      "in_stock": false,
+      "url": "https://braspill.no/products/pokemon-gem-packs-volume-6-kinesisk-booster-box?variant=55979743674660",
+      "store_count": null,
+      "product_class": "card"
     },
     {
       "store": "Braspill",
@@ -176207,6 +176225,6 @@
     "failed_stores": [],
     "carried_forward_stores": [],
     "store_count": 35,
-    "product_count": 19576
+    "product_count": 19578
   }
 }
