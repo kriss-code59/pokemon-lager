@@ -1,6 +1,184 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Neo Destiny – 002/105 – Dark Crobat – Holo (Damaged)",
+      "price": "240,00 kr",
+      "url": "https://collectible.no/home/neo-destiny-002-105-dark-crobat-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 023/217 – Ethan’s Slugma",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-023-217-ethans-slugma/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 066/217 – Vikavolt",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-066-217-vikavolt/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 119/217 – Carkol",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-119-217-carkol/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 248/217 – Drakloak",
+      "price": "89,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-248-217-drakloak/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 180/217 – Acerola’s Mischief",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-180-217-acerolas-mischief/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 062/217 – Stunfisk (Energy Symbol Pattern) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-062-217-stunfisk-energy-symbol-pattern-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 182/217 – Anthea & Concordia",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-182-217-anthea-concordia/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 047/217 – Mega Froslass ex",
+      "price": "29,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-047-217-mega-froslass-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 227/217 – Snorunt",
+      "price": "79,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-227-217-snorunt/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 268/217 – Mega Hawlucha ex",
+      "price": "109,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-268-217-mega-hawlucha-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 234/217 – Banette",
+      "price": "159,00 kr",
+      "url": "https://collectible.no/home/me-ascended-heroes-234-217-banette/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 204/217 – Team Rocket’s Giovanni",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-204-217-team-rockets-giovanni/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 256/217 – Boss’s Orders [Corbeau]",
+      "price": "119,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-256-217-bosss-orders-corbeau/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 037/217 – Raboot",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-037-217-raboot/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 053/217 – Frosmoth",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-053-217-frosmoth/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 277/217 – Pikachu ex",
+      "price": "4.499,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-277-217-pikachu-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 233/217 – Misdreavus",
+      "price": "89,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-233-217-misdreavus/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Pokelageret",
+      "name": "Jigglypuff - 54/64 - HP / Unlimited",
+      "price": "11.00 kr",
+      "url": "https://pokelageret.no/products/jigglypuff-54-64?variant=49123146858747",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T12:19:50+00:00",
+      "store": "Pokelageret",
+      "name": "Alolan Exeggutor V - SWSH225 - LP",
+      "price": "9.00 kr",
+      "url": "https://pokelageret.no/products/alolan-exeggutor-v-swsh225?variant=48985120604411",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T11:59:48+00:00",
       "store": "Pokelageret",
       "name": "Arceus V - 166/172 - NM",
@@ -179376,186 +179554,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-celebi-sword-amp-shield-starter-set?variant=50624496500967",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Black and White Dragon Selection Booster Pakke (2012)",
-      "price": "3500.00 kr",
-      "url": "https://pokestore.no/products/pokemon-black-and-white-dragon-selection-booster-pakke-2012?variant=50624493388007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sideshow Collectibles Charizard Statue 47 cm",
-      "price": "12499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-statue-charizard-47-cm?variant=52282734706919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pitch Black Booster Pakke",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pitch-black-booster-pakke?variant=52266255810791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X Deck Protector Sleeves (65 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-65ct-deck-protectors-sleeves-mega-charizard-x?variant=52251775172839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard Y Deck Protector Sleeves (65 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-65ct-deck-protectors-sleeves-mega-charizard-y?variant=52251775140071",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Chaos Rising 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-mega-evolution-chaos-rising-4-pocket-portfolio-for-the-pokemon-trading-card-game?variant=52251775107303",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-4-pocket-portfolio?variant=52251775041767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X and Mega Charizard Y Playmat",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-playmat?variant=52251775008999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 2\" Album",
-      "price": "169.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-2-inch-album?variant=52251774976231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X 100+ Deck Box",
-      "price": "49.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-100-deck-box?variant=52251773862119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard Y 100+ Deck Box",
-      "price": "49.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-y-100-deck-box?variant=52251773534439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Fighting",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181252839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Dragon",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181285607",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Metal",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181318375",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Fire",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181351143",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Grass",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251181383911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Water Type",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689189607",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Lightning Type",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689222375",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Psychic Type",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689255143",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Energy Type Deck Protector Sleeves (65 stk) - Darkness Type",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-energy-type-65ct-deck-protector®-sleeves-for-pokemon?variant=52251689320679",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
