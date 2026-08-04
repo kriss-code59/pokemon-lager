@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T17:39:21+00:00",
+      "store": "Pokelageret",
+      "name": "Mewtwo - 052 - NM",
+      "price": "559.00 kr",
+      "url": "https://pokelageret.no/products/mewtwo-052?variant=48968066040059",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T17:19:25+00:00",
       "store": "Pokelageret",
       "name": "Surfing Pikachu V - 008/025 - NM",
@@ -179499,15 +179507,6 @@
       "name": "Pokemon Takara Tomy Sleeping Friends Gengar Plush (51cm)",
       "price": "1299.00 kr",
       "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-gengar-51cm?variant=51508357005543",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Blastoise Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-blastoise-plush?variant=51508339343591",
       "product_class": "accessory",
       "event": "ny"
     }
