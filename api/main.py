@@ -172,8 +172,11 @@ async def snapshot(request: Request):
     produkter = await _hent(SNAPSHOT_SQL)
     kjoring = await _hent(
         "SELECT started_at, ok FROM scrape_runs ORDER BY started_at DESC LIMIT 1")
+    # Ingen "generert"-tidsstempel her. Det virker uskyldig, men det gjor
+    # kroppen ulik ved hver forespørsel, og da endres ETag-en hver gang --
+    # og hele poenget med caching forsvinner. Klienten trenger uansett
+    # sist_skannet, ikke naar serveren tilfeldigvis svarte.
     return _svar(request, {
-        "generert": datetime.now(timezone.utc),
         "sist_skannet": kjoring[0]["started_at"] if kjoring else None,
         "skanning_ok": bool(kjoring[0]["ok"]) if kjoring else None,
         "felt": ["butikk", "pris_ore", "pa_lager"],
