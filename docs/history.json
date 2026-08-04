@@ -1,6 +1,32 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T09:39:20+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Stellar Crown Elite Trainer Box (B-vare)",
+      "price": "1599.00 kr",
+      "url": "https://pokestore.no/products/pokemon-stellar-crown-elite-trainer-box-b-vare?variant=51230674682087",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T09:39:20+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Pitch Black Elite Trainer Box (B-vare)",
+      "price": "1699.00 kr",
+      "url": "https://pokestore.no/products/pokemon-pitch-black-elite-trainer-box-b-vare?variant=52444157870311",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T09:39:20+00:00",
+      "store": "Pokelageret",
+      "name": "Abyss Eye - Booster Pack",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/abyss-eye?variant=48881819320571",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T09:19:25+00:00",
       "store": "Pokestore",
       "name": "Pokemon TCG: Mega Greninja ex Premium Collection (B-vare)",
@@ -179540,33 +179566,6 @@
       "name": "Ultra Pro Pokemon Koraidon & Miraidon 4-Pocket Portfolio",
       "price": "99.00 kr",
       "url": "https://pokestore.no/products/koraidon-miraidon-4-pocket-portfolio-for-pok-mon?variant=51766621896935",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Shimmering Skyline Playmat",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/gallery-series-shimmering-skyline-standard-gaming-playmat-for-pok-mon?variant=51766575136999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Lapras (25 cm)",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-lapras-emea-25-cm?variant=51741723951335",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Neon Kanto One-Touch Edge 3-Card Holder",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-neon-kanto-one-touch-edge-3-card-holder?variant=51720540160231",
       "product_class": "accessory",
       "event": "ny"
     }
