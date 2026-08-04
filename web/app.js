@@ -111,10 +111,14 @@ function tegnProdukter() {
       " · " + new Set(treff.map((p) => p.set_id)).size + " sett"
     : "";
 
+  // Grupper pa sett OG region. Uten regionen havner den vestlige, japanske
+  // og kinesiske utgaven av samme sett i samme bolk, og listen ser ut til a
+  // vise "Booster Box" tre ganger uten forklaring.
   const grupper = new Map();
   for (const p of treff) {
-    if (!grupper.has(p.set_id)) grupper.set(p.set_id, []);
-    grupper.get(p.set_id).push(p);
+    const nokkel = p.set_id + ":" + p.region;
+    if (!grupper.has(nokkel)) grupper.set(nokkel, []);
+    grupper.get(nokkel).push(p);
   }
 
   let html = "";
