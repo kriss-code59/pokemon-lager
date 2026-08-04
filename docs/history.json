@@ -1,6 +1,157 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy I Choose You! Lugia Plush (31cm)",
+      "price": "399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-lugia-plush-31cm?variant=51243147002087",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy I Choose You! Piplup Plush",
+      "price": "399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-piplup-plush?variant=51021463388391",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-ment Japanese Window Figurer (6 stk)",
+      "price": "899.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-japanse-window-figurer-6-stk?variant=51016052179175",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Takara Tomy I Choose You! Galarian Rapidash Plush",
+      "price": "479.00 kr",
+      "url": "https://pokestore.no/products/pokemon-takara-tomy-galarian-rapidash-plush?variant=51508293370087",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-ment Romantic Collection 1 Figurer (6 stk)",
+      "price": "859.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-romantic-collection-1-figur-copy?variant=51013123637479",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-ment Terrarium Collection 15 Figurer (6 stk)",
+      "price": "999.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-15-figurer-6-stk?variant=51539720896743",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Sekiguchi Fluffy Rowlet Plush",
+      "price": "399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-sekiguchi-fluffy-rowlet-plush?variant=52257913077991",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Sekiguchi Dedenne Plush (Vaskbar)",
+      "price": "279.00 kr",
+      "url": "https://pokestore.no/products/pokemon-sekiguchi-dedenne-plush-vaskbar?variant=52257912750311",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Sekiguchi Pikachu Plush (42cm)",
+      "price": "499.00 kr",
+      "url": "https://pokestore.no/products/pokemon-sekiguchi-pikachu-plush-42cm?variant=52257912717543",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Sekiguchi Gengar Plush (Vaskbar)",
+      "price": "399.00 kr",
+      "url": "https://pokestore.no/products/pokemon-sekiguchi-gengar-plush-vaskbar?variant=52257912652007",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-Ment DesQ Relaxing Home! Collection Figur (6 stk)",
+      "price": "899.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-desq-relaxing-home-collection-figur-6-stk?variant=51999118196967",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Re-Ment Diamond Dust Collection Figur (6 stk)",
+      "price": "899.00 kr",
+      "url": "https://pokestore.no/products/pokemon-re-ment-diamond-dust-collection-figur-6-stk?variant=51999117869287",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokelageret",
+      "name": "Froslass ex - 217/182 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/froslass-ex-217-182?variant=48849603068155",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokelageret",
+      "name": "Numel - 013/078 - NM",
+      "price": "169.00 kr",
+      "url": "https://pokelageret.no/products/numel-013-078?variant=48846241399035",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Armor Fossil 72 - Pitch Black",
+      "price": "3.00 kr",
+      "previous_price": "4.00 kr",
+      "url": "https://pokesingles.no/products/antique-armor-fossil-072084-pitch-black-653150?variant=54069308031255",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokesingles",
+      "name": "Antique Skull Fossil 73 - Pitch Black",
+      "price": "3.00 kr",
+      "previous_price": "4.00 kr",
+      "url": "https://pokesingles.no/products/antique-skull-fossil-073084-pitch-black-015810?variant=54069308195095",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T14:19:27+00:00",
+      "store": "Pokesingles",
+      "name": "Backtrack Badge 74 - Pitch Black",
+      "price": "4.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokesingles.no/products/backtrack-badge-074084-pitch-black-210653?variant=54069308358935",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T13:59:16+00:00",
       "store": "Pokestore",
       "name": "Pokemon Takara Tomy I Choose You! Kyogre Plush (33cm)",
@@ -179395,159 +179546,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-original-crawdaunt-plush?variant=51188334854375",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Tirtouga Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-tirtouga-plush?variant=51188334362855",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Gogoat Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-gogoat-plush?variant=51188332036327",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Sigilyph Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-sigilyph-plush?variant=51188325777639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Heat Rotom Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-heat-rotom-plush?variant=51188322762983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Electrike Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-electrike-plush?variant=51188313915623",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Gastrodon Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-gastrodon-plush?variant=51188044497127",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Seel Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-seel-plush?variant=51188036501735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock Mewtwo Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-mewtwo-figur?variant=51072485490919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Haunted Hollow Deluxe Gaming Trove",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-gallery-series-haunted-hollow-deluxe-gaming-trove?variant=51072447119591",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 12 Figur",
-      "price": "155.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-12-figur?variant=51058530451687",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Seviper Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-seviper-plush?variant=51045412241639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Luxray Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-luxray-plush?variant=51045410439399",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Meloetta Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-meloetta-plush?variant=51045386125543",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Mienshao Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-mienshao-plush?variant=51045376852199",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Floatzel Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-floatzel-plush?variant=51045106122983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Riolu Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-riolu-plush?variant=51021461061863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment Terrarium Collection 14 Figur",
-      "price": "145.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-terrarium-collection-14-figur?variant=51014151930087",
-      "product_class": "card",
       "event": "ny"
     }
   ]
