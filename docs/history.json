@@ -1,6 +1,47 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T15:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Sharpedo ex - 113/094 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-sharpedo-ex-113-094?variant=48971007787259",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T15:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Leafeon VSTAR - 014/159 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/leafeon-vstar-014-159?variant=49123175268603",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T15:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Kadabra - 069/144 - HP / Normal",
+      "price": "174.00 kr",
+      "url": "https://pokelageret.no/products/kadabra-069-144?variant=49123146596603",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T15:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Mew VMAX - 114/264 - NM",
+      "price": "224.00 kr",
+      "url": "https://pokelageret.no/products/mew-vmax-114-264?variant=48971007918331",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-04T15:39:31+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 049/203 - NM / Reverse Holofoil",
+      "price": "12.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-049-203?variant=48887001940219",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T15:19:25+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Pikachu Big Plush – Squishy Hug Cushion (38cm, Sanei)",
@@ -179474,51 +179515,6 @@
       "name": "Pokemon Snorlax Micro Bag",
       "price": "259.00 kr",
       "url": "https://pokestore.no/products/pokemon-snorlax-micro-bag?variant=51485849026791",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Crew Socks (Pikachu, Eevee & Gengar) - 43-46",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-crew-socks-pikachu-eevee-gengar?variant=51480339382503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-ment A Little Tale of the Forest 2 Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-a-little-tale-of-the-forest-2-figur?variant=51428955226343",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu 2019 Deck Protector Sleeves (65 stk)",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pikachu-2019-deck-protector-sleeves-65?variant=51286144483559",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Geodude Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-geodude-plush?variant=51304899510503",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Alolan Marowak Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-alolan-cubone-plush?variant=51304816738535",
       "product_class": "accessory",
       "event": "ny"
     }
