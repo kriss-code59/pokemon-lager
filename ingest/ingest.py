@@ -129,6 +129,30 @@ def synk_katalog(cur, katalog: Katalog) -> int:
     return len(regioner)
 
 
+def sikre_produkter(cur, produkt_ider):
+    """Opprett kanoniske produkter som katalogen ikke forutsa.
+
+    matcher.match() lar en eksplisitt spraakmarkering i tittelen overstyre
+    settets egen region: "White Flare Japansk Booster Box" blir
+    `white-flare:booster-box:jp`, selv om White Flare star som `en` i
+    katalogen. Slike kombinasjoner finnes ikke i krysstabellen over, og
+    uten denne funksjonen faller oppforingen pa en fremmednokkelfeil.
+    """
+    manglende = sorted(produkt_ider)
+    if not manglende:
+        return 0
+    rader = []
+    for pid in manglende:
+        set_id, type_id, region = pid.split(":")
+        rader.append((pid, set_id, type_id, region))
+    cur.executemany(
+        "INSERT INTO products (id, set_id, type_id, region) VALUES (%s, %s, %s, %s) "
+        "ON CONFLICT (id) DO NOTHING",
+        rader,
+    )
+    return len(rader)
+
+
 # ------------------------------------------------------------------- kjor
 
 def les_data(sti: str) -> dict:
@@ -188,6 +212,8 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
         conn.execute("SET search_path TO public")
         with conn.cursor() as cur:
             synk_katalog(cur, katalog)
+            sikre_produkter(cur, {o["product_id"] for b in per_butikk.values()
+                                  for o in b.values() if o["product_id"]})
 
             cur.execute(
                 "INSERT INTO scrape_runs (started_at, store_count, failed_stores, carried_stores) "
