@@ -155,7 +155,7 @@ JOIN sets s          ON s.id = p.set_id
 JOIN product_types t ON t.id = p.type_id
 WHERE l.last_seen_at > now() - interval '7 days'
 GROUP BY p.id, s.label, t.label, t.sort_order
-ORDER BY s.label, t.sort_order
+ORDER BY s.label, p.region, t.sort_order
 """
 
 
