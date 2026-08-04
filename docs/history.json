@@ -1,6 +1,69 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Prismatic Evolution Figure Collection Sleeves",
+      "price": "99.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-prismatic-evolution-figure-collection-sleeves",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Ascended Heroes ETB Sleeves",
+      "price": "119.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-etb-sleeves",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Fearless Terastal Kinesisk Slim Booster Pack",
+      "price": "89.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-fearless-terastal-kinesisk-slim-booster-pack",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Reward Round Kinesisk Slim Booster Box",
+      "price": "499.00 kr",
+      "previous_price": "399.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-reward-round-kinesisk-slim-booster-box",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Bulbasaur",
+      "price": "2999.00 kr",
+      "previous_price": "2199.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-bulbasaur",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Squirtle",
+      "price": "2599.00 kr",
+      "previous_price": "1999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-squirtle",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-04T09:59:11+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Charmander",
+      "price": "2799.00 kr",
+      "previous_price": "2399.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-charmander",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-04T09:39:20+00:00",
       "store": "Pokestore",
       "name": "Pokemon Stellar Crown Elite Trainer Box (B-vare)",
@@ -179503,69 +179566,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Gothita Plush",
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-gothita-plush?variant=51989703098599",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mocchi-Mocchi-Style / Monster Ball",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mocchi-mocchi-style-monster-ball?variant=51989703033063",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Pawmi Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-pawmi-plush?variant=51989702967527",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ARTFXJ Statue 1/8 Serena & Fennekin 21 cm",
-      "price": "1999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-artfxj-statue-1-8-serena-fennekin-21-cm?variant=51939283271911",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Phantasmal Flames Booster Bundle Case (25)",
-      "price": "32475.00 kr",
-      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-bundle-case-26?variant=51938115616999",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Super Sized Jumbo Funko POP! Vinyl Figure Glaceon 25 cm",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-glaceon-emea-25-cm?variant=51780783571175",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Games Vinyl Figure Dratini 9 cm",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-dratini-9-cm?variant=51780783538407",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Koraidon & Miraidon 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/koraidon-miraidon-4-pocket-portfolio-for-pok-mon?variant=51766621896935",
       "product_class": "accessory",
       "event": "ny"
     }
