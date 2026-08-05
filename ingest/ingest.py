@@ -21,6 +21,7 @@ scraperen slipper gjennom en tom butikk, skal det ikke bli 773 varsler.
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import os
 import re
@@ -50,6 +51,11 @@ STORM_GRENSE = 200
 
 # Prisendringer under 1 krone er avrunding, ikke en prisendring.
 PRIS_STOY_ORE = 100
+
+# Butikker setter 1,00 kr pa varer som ikke er prissatt ennaa (forhandsbestilling
+# uten pris). Det er ikke en pris, det er et tomt felt med et tall i. Uten denne
+# grensen ble "billigste pris" pa et helt sett til 1 krone.
+MIN_EKTE_PRIS_ORE = 500
 
 
 def slug(tekst: str) -> str:
@@ -90,9 +96,10 @@ def pris_til_ore(verdi) -> int | None:
     if not heltall.isdigit():
         return None
     try:
-        return int(heltall) * 100 + int(desimal)
+        ore = int(heltall) * 100 + int(desimal)
     except ValueError:
         return None
+    return ore if ore >= MIN_EKTE_PRIS_ORE else None
 
 
 def normaliser_lager(verdi):
@@ -163,7 +170,7 @@ def les_data(sti: str) -> dict:
 def grupper_per_butikk(rader, katalog: Katalog):
     """Ra rader -> {butikknavn: {url: oppforing}}, kun sealed."""
     per_butikk: dict[str, dict] = {}
-    forkastet = {"single": 0, "merch": 0, "singles-butikk": 0, "duplikat": 0}
+    forkastet = collections.Counter()
     for r in rader:
         butikk = r.get("store")
         url = r.get("url")
@@ -189,7 +196,7 @@ def grupper_per_butikk(rader, katalog: Katalog):
             "in_stock": normaliser_lager(r.get("in_stock")),
             "product_id": treff["product_id"] if treff else None,
         }
-    return per_butikk, forkastet
+    return per_butikk, dict(forkastet)
 
 
 def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
