@@ -52,9 +52,20 @@
         "boosterdisplay",
         "display box",
         "hel eske",
-        "boosterboks",
-        "display"
-      ]
+        "boosterboks"
+      ],
+      "storrelse": 100
+    },
+    {
+      "id": "jumbo-booster-box",
+      "label": "Jumbo Booster Box",
+      "aliases": [
+        "jumbo booster box",
+        "jumbo booster boks",
+        "jumbo boosterboks",
+        "jumbo display"
+      ],
+      "storrelse": 110
     },
     {
       "id": "etb",
@@ -64,7 +75,8 @@
         "elitetrainer box",
         "elite trainer",
         "etb"
-      ]
+      ],
+      "storrelse": 60
     },
     {
       "id": "mini-tin",
@@ -73,7 +85,8 @@
         "mini tin",
         "minitin",
         "mini-tin"
-      ]
+      ],
+      "storrelse": 20
     },
     {
       "id": "tin",
@@ -82,15 +95,19 @@
         "tin",
         "tinboks",
         "tin boks"
-      ]
+      ],
+      "storrelse": 25
     },
     {
       "id": "bundle",
       "label": "Booster Bundle",
       "aliases": [
         "booster bundle",
+        "booster pack bundle",
+        "booster pakke bundle",
         "bundle"
-      ]
+      ],
+      "storrelse": 40
     },
     {
       "id": "booster-pack",
@@ -104,7 +121,8 @@
         "enkeltpakke",
         "lospakke",
         "boosterpakkе"
-      ]
+      ],
+      "storrelse": 10
     },
     {
       "id": "premium-collection",
@@ -114,7 +132,8 @@
         "premium collection",
         "super premium collection",
         "premium figure collection"
-      ]
+      ],
+      "storrelse": 70
     },
     {
       "id": "collection-box",
@@ -131,14 +150,16 @@
         "collection",
         "box set",
         "boks sett"
-      ]
+      ],
+      "storrelse": 50
     },
     {
       "id": "poster-collection",
       "label": "Poster Collection",
       "aliases": [
         "poster collection"
-      ]
+      ],
+      "storrelse": 45
     },
     {
       "id": "blister",
@@ -152,14 +173,16 @@
         "3 pack blister",
         "3-pack",
         "three pack"
-      ]
+      ],
+      "storrelse": 30
     },
     {
       "id": "league-battle-deck",
       "label": "League Battle Deck",
       "aliases": [
         "league battle deck"
-      ]
+      ],
+      "storrelse": 40
     },
     {
       "id": "build-battle",
@@ -171,7 +194,8 @@
         "build & battle box",
         "build battle",
         "build & battle"
-      ]
+      ],
+      "storrelse": 35
     },
     {
       "id": "portfolio",
@@ -218,6 +242,17 @@
         "sealed case",
         "case"
       ]
+    },
+    {
+      "id": "jumbo-booster-pack",
+      "label": "Jumbo Boosterpakke",
+      "aliases": [
+        "jumbo booster pakke",
+        "jumbo boosterpakke",
+        "jumbo booster pack",
+        "jumbo boosterpack"
+      ],
+      "storrelse": 12
     }
   ],
   "sets": [
@@ -284,8 +319,10 @@
       "id": "mega-evolution",
       "label": "Mega Evolution",
       "region": "en",
-      "aliases": [
-        "mega evolution"
+      "aliases": [],
+      "serie_aliaser": [
+        "mega evolution",
+        "mega evolutions"
       ]
     },
     {
@@ -414,7 +451,9 @@
       "region": "en",
       "aliases": [
         "scarlet violet base",
-        "scarlet & violet base",
+        "scarlet & violet base"
+      ],
+      "serie_aliaser": [
         "scarlet violet"
       ]
     },
@@ -423,6 +462,9 @@
       "label": "Destined Rivals: Team Rocket",
       "region": "en",
       "aliases": [
+        "glory of team rocket"
+      ],
+      "serie_aliaser": [
         "team rocket"
       ]
     },
@@ -769,9 +811,10 @@
       "id": "gem-packs",
       "label": "Gem Packs",
       "region": "cn",
-      "aliases": [
-        "gem packs",
-        "gem pack"
+      "aliases": [],
+      "serie_aliaser": [
+        "gem pack",
+        "gem packs"
       ]
     },
     {
@@ -826,7 +869,8 @@
       "id": "sword-shield-base",
       "label": "Sword & Shield",
       "region": "en",
-      "aliases": [
+      "aliases": [],
+      "serie_aliaser": [
         "sword & shield"
       ]
     },
@@ -914,7 +958,8 @@
       "id": "sun-moon-base",
       "label": "Sun & Moon",
       "region": "en",
-      "aliases": [
+      "aliases": [],
+      "serie_aliaser": [
         "sun & moon"
       ]
     },
@@ -938,7 +983,8 @@
       "id": "black-white-base",
       "label": "Black & White",
       "region": "en",
-      "aliases": [
+      "aliases": [],
+      "serie_aliaser": [
         "black & white"
       ]
     },
@@ -946,7 +992,8 @@
       "id": "diamond-pearl-base",
       "label": "Diamond & Pearl",
       "region": "en",
-      "aliases": [
+      "aliases": [],
+      "serie_aliaser": [
         "diamond & pearl"
       ]
     },
@@ -1092,6 +1139,136 @@
       "region": "cn",
       "aliases": [
         "dragon boat festival"
+      ]
+    },
+    {
+      "id": "gem-pack-1",
+      "label": "Gem Pack Vol. 1",
+      "region": "cn",
+      "aliases": [
+        "gem pack vol 1",
+        "gem pack volume 1",
+        "gem packs vol 1",
+        "gem packs volume 1",
+        "gem packs volum 1",
+        "gem pack 1",
+        "cbb1c"
+      ]
+    },
+    {
+      "id": "gem-pack-2",
+      "label": "Gem Pack Vol. 2",
+      "region": "cn",
+      "aliases": [
+        "gem pack vol 2",
+        "gem pack volume 2",
+        "gem packs vol 2",
+        "gem packs volume 2",
+        "gem packs volum 2",
+        "gem pack 2",
+        "cbb2c"
+      ]
+    },
+    {
+      "id": "gem-pack-3",
+      "label": "Gem Pack Vol. 3",
+      "region": "cn",
+      "aliases": [
+        "gem pack vol 3",
+        "gem pack volume 3",
+        "gem packs vol 3",
+        "gem packs volume 3",
+        "gem packs volum 3",
+        "gem pack 3",
+        "cbb3c"
+      ]
+    },
+    {
+      "id": "gem-pack-4",
+      "label": "Gem Pack Vol. 4",
+      "region": "cn",
+      "aliases": [
+        "gem pack vol 4",
+        "gem pack volume 4",
+        "gem packs vol 4",
+        "gem packs volume 4",
+        "gem packs volum 4",
+        "gem pack 4",
+        "cbb4c"
+      ]
+    },
+    {
+      "id": "gem-pack-5",
+      "label": "Gem Pack Vol. 5",
+      "region": "cn",
+      "aliases": [
+        "gem pack vol 5",
+        "gem pack volume 5",
+        "gem packs vol 5",
+        "gem packs volume 5",
+        "gem packs volum 5",
+        "gem pack 5",
+        "cbb5c"
+      ]
+    },
+    {
+      "id": "gem-pack-6",
+      "label": "Gem Pack Vol. 6",
+      "region": "cn",
+      "aliases": [
+        "gem pack vol 6",
+        "gem pack volume 6",
+        "gem packs vol 6",
+        "gem packs volume 6",
+        "gem packs volum 6",
+        "gem pack 6",
+        "cbb6c"
+      ]
+    },
+    {
+      "id": "collect-151-journey",
+      "label": "Collect 151 Journey",
+      "region": "cn",
+      "aliases": [
+        "collect 151 journey",
+        "151 journey"
+      ]
+    },
+    {
+      "id": "collect-151-hope",
+      "label": "Collect 151 Hope",
+      "region": "cn",
+      "aliases": [
+        "collect 151 hope",
+        "151 hope"
+      ]
+    },
+    {
+      "id": "collect-151-surprise",
+      "label": "Collect 151 Surprise",
+      "region": "cn",
+      "aliases": [
+        "collect 151 surprises",
+        "collect 151 surprise",
+        "151 surprise"
+      ]
+    },
+    {
+      "id": "collect-151-gathering",
+      "label": "Collect 151 Gathering",
+      "region": "cn",
+      "aliases": [
+        "collect 151 gathering",
+        "151 gathering"
+      ]
+    },
+    {
+      "id": "team-rocket-returns",
+      "label": "EX Team Rocket Returns",
+      "region": "en",
+      "aliases": [
+        "team rocket returns",
+        "ex team rocket returns"
       ]
     }
   ]
