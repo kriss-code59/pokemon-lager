@@ -1,6 +1,105 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Mimikyu (Delta Species) - SWSH136 - NM",
+      "price": "155.00 kr",
+      "previous_price": "165.00 kr",
+      "url": "https://pokelageret.no/products/mimikyu-delta-species-swsh136?variant=48846276395259",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Lucario VSTAR - SWSH291 - NM",
+      "price": "145.00 kr",
+      "previous_price": "139.00 kr",
+      "url": "https://pokelageret.no/products/lucario-vstar-swsh291?variant=48967932084475",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 19/68 - NM / Reverse Holofoil",
+      "price": "105.00 kr",
+      "previous_price": "109.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-19-68?variant=48886999384315",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Vaporeon - 18/68 - LP / Holofoil",
+      "price": "11.00 kr",
+      "previous_price": "10.00 kr",
+      "url": "https://pokelageret.no/products/vaporeon-18-68?variant=48846430339323",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza - SWSH029 - NM",
+      "price": "89.00 kr",
+      "previous_price": "85.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-swsh029?variant=48985266192635",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Jolteon - 23/68 - NM / Normal",
+      "price": "9.00 kr",
+      "previous_price": "8.00 kr",
+      "url": "https://pokelageret.no/products/jolteon-23-68?variant=48864982237435",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Candela - SWSH228 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/candela-swsh228?variant=48849610146043",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee V - SWSH065 - NM",
+      "price": "85.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokelageret.no/products/eevee-v-swsh065?variant=48847041757435",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Galarian Zapdos - SWSH283 - NM",
+      "price": "45.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/galarian-zapdos-swsh283?variant=48838889242875",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Umbreon - SWSH129 - NM",
+      "price": "239.00 kr",
+      "previous_price": "225.00 kr",
+      "url": "https://pokelageret.no/products/umbreon-swsh129?variant=48838875447547",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T06:16:07+00:00",
+      "store": "Pokelageret",
+      "name": "Special Delivery Charizard - SWSH075 - NM",
+      "price": "2395.00 kr",
+      "previous_price": "2315.00 kr",
+      "url": "https://pokelageret.no/products/special-delivery-charizard-swsh075?variant=48838872858875",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T05:39:14+00:00",
       "store": "Pokelageret",
       "name": "Chaos Rising Booster Box",
@@ -179363,105 +179462,6 @@
       "name": "Clive 344/190 - Shiny Treasure ex - NM (ID: 53272218745153)",
       "price": "29.00 kr",
       "url": "https://laboge.no/products/clive-344-190-shiny-treasure-ex?variant=54028805046571",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Clive 344/190 - Shiny Treasure ex - NM (ID: 53272339719646)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/clive-344-190-shiny-treasure-ex?variant=54028805079339",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Clauncher 083/078 - Violet ex - NM (ID: 53272623654477)",
-      "price": "45.00 kr",
-      "url": "https://laboge.no/products/clauncher-083-078-violet-ex?variant=54028804948267",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Celebi V 003/070 - Jet-Black Spirit - NM (ID: 53214797202796)",
-      "price": "25.00 kr",
-      "url": "https://laboge.no/products/celebi-v-003-070-jet-black-spirit?variant=54028804620587",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Celebi 003/094 - Miracle Twin - NM (ID: 53215324763586)",
-      "price": "25.00 kr",
-      "url": "https://laboge.no/products/celebi-003-094-miracle-twin?variant=54028804587819",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Blastoise 023/095 - Tag Bolt - NM (ID: 53214717336988)",
-      "price": "65.00 kr",
-      "url": "https://laboge.no/products/blastoise-023-095-tag-bolt?variant=54028804522283",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Blastoise 023/095 - Tag Bolt - NM (ID: 53214783626435)",
-      "price": "65.00 kr",
-      "url": "https://laboge.no/products/blastoise-023-095-tag-bolt?variant=54028804555051",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Bellibolt 112/108 - Ruler of the Black Flame - NM (ID: 53272597728772)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/bellibolt-112-108-ruler-of-the-black-flame?variant=54028804358443",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Beauty 083/076 - Legendary Heartbeat - NM (ID: 53272192560058)",
-      "price": "115.00 kr",
-      "url": "https://laboge.no/products/beauty-083-076-legendary-heartbeat?variant=54028804325675",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Banette ex 041/078 - Violet ex - NM (ID: 53905998634481)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/banette-ex-041-078-violet-ex?variant=54028804161835",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tsareena V 101/100 - Fusion Arts - NM (ID: 53515781568124)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/tsareena-v-fusion-arts-101-100?variant=54147655696683",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Switch 102/080 - Inferno X - NM (ID: 53515782414726)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/switch-inferno-x-102-080?variant=54147655598379",
       "product_class": "card",
       "event": "ny"
     }
