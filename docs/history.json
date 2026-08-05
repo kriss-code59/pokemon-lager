@@ -1,6 +1,127 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210 - NM",
+      "price": "14.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-210?variant=48875146936571",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Sylveon ex - 041/131 - NM",
+      "price": "119.00 kr",
+      "url": "https://pokelageret.no/products/sylveon-ex-041-132?variant=49002491707643",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Blastoise EX - XY122 - DMG",
+      "price": "1035.00 kr",
+      "url": "https://pokelageret.no/products/blastoise-ex-xy122?variant=49002529423611",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Galvantula ex - 051/142 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/galvantula-ex-051-142?variant=49002490298619",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Mewtwo ex - 058/182 - NM",
+      "price": "35.00 kr",
+      "url": "https://pokelageret.no/products/mewtwo-ex-058-182?variant=48985233654011",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Mewtwo EX - 54/99 - NM",
+      "price": "205.00 kr",
+      "url": "https://pokelageret.no/products/mewtwo-ex-54-99?variant=48984728895739",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Mewtwo GX - 31/68 - NM",
+      "price": "124.00 kr",
+      "url": "https://pokelageret.no/products/mewtwo-gx-31-68?variant=48984725946619",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Onix GX - 36/68 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/onix-gx-36-68?variant=48984726700283",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Mew V - 113/264 - NM",
+      "price": "89.00 kr",
+      "url": "https://pokelageret.no/products/mew-v-113-264?variant=48971007951099",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Scizor EX - 76/122 - MP",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/scizor-ex-76-122?variant=48960209584379",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Hitmonchan - 012/034 - NM",
+      "price": "95.00 kr",
+      "url": "https://pokelageret.no/products/hitmonchan-012-034?variant=48890541768955",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Slaking V - 058/078 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/slaking-v-058-078?variant=48887202054395",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Mew - 32/68 - NM / Reverse Holofoil",
+      "price": "85.00 kr",
+      "url": "https://pokelageret.no/products/mew-32-68?variant=48886999351547",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Mr. Mime - 013/034 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mr-mime-013-034?variant=48880635642107",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T09:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Poliwrath - 25/108 - NM / Holofoil",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/poliwrath-25-108?variant=48839500431611",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T08:59:49+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon TCG: Future Flash Booster Pack (SV4M, Japanese)",
@@ -179327,141 +179448,6 @@
       "name": "Tsareena V 011/100 - Fusion Arts - NM (ID: 53906485361123)",
       "price": "15.00 kr",
       "url": "https://laboge.no/products/tsareena-v-011-100-fusion-arts?variant=54028814287147",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Toxtricity V 059/190 - Shiny Star V - NM (ID: 53906203903541)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/toxtricity-v-059-190-shiny-star-v?variant=54028814156075",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Torkoal 069/066 - Crimson Haze - NM (ID: 53272378784817)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/torkoal-069-066-crimson-haze?variant=54028813926699",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Torkoal 069/066 - Crimson Haze - NM (ID: 53272391793095)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/torkoal-069-066-crimson-haze?variant=54028813959467",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Torkoal 069/066 - Crimson Haze - NM (ID: 53272404498341)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/torkoal-069-066-crimson-haze?variant=54028813992235",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Thorton 115/100 - Lost Abyss - NM (ID: 53272179398012)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/thorton-115-100-lost-abyss?variant=54028813861163",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Team Rocket's Mewtwo ex 063/193 - MEGA Dream ex - NM (ID: 53215033883539)",
-      "price": "19.00 kr",
-      "url": "https://laboge.no/products/team-rockets-mewtwo-ex-063-193-mega-dream-ex?variant=54028813795627",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tapu Bulu 065/064 - Night Wanderer - NM (ID: 53272715144891)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/tapu-bulu-065-064-night-wanderer?variant=54028813730091",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tapu Bulu 065/064 - Night Wanderer - NM (ID: 53272728565894)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/tapu-bulu-065-064-night-wanderer?variant=54028813762859",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Stunfisk 115/086 - White Flare - NM (ID: 53272443857278)",
-      "price": "45.00 kr",
-      "url": "https://laboge.no/products/stunfisk-115-086-white-flare?variant=54028813697323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Stunfisk 113/106 - Super Electric Breaker - NM (ID: 53272456929737)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/stunfisk-113-106-super-electric-breaker?variant=54028813533483",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Stunfisk 113/106 - Super Electric Breaker - NM (ID: 53272469962182)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/stunfisk-113-106-super-electric-breaker?variant=54028813566251",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Stunfisk 113/106 - Super Electric Breaker - NM (ID: 53272482462234)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/stunfisk-113-106-super-electric-breaker?variant=54028813599019",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Stunfisk 113/106 - Super Electric Breaker - NM (ID: 53272494980239)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/stunfisk-113-106-super-electric-breaker?variant=54028813631787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Stunfisk 113/106 - Super Electric Breaker - NM (ID: 53272507537940)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/stunfisk-113-106-super-electric-breaker?variant=54028813664555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Spiritomb 071/063 - Mega Brave - NM (ID: 53272417361853)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/spiritomb-071-063-mega-brave?variant=54028813500715",
       "product_class": "card",
       "event": "ny"
     }
