@@ -1,6 +1,48 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T10:19:59+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu VMAX - 009/025 - LP",
+      "price": "95.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-vmax-009-025?variant=49128752218363",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T10:19:59+00:00",
+      "store": "Pokelageret",
+      "name": "Tauros - 096/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/tauros-096-086?variant=48971008246011",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T10:19:59+00:00",
+      "store": "Pokelageret",
+      "name": "Crobat - 093/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/crobat-093-086?variant=48960191529211",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T10:19:59+00:00",
+      "store": "Pokelageret",
+      "name": "Ampharos - 090/086 - NM",
+      "price": "89.00 kr",
+      "url": "https://pokelageret.no/products/ampharos-090-086?variant=49002528276731",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T10:19:59+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Forbidden Light Japansk Booster",
+      "price": "149.00 kr",
+      "previous_price": "129.00 kr",
+      "url": "https://pokestore.no/products/pokemon-forbidden-light-japansk-booster?variant=50624615186663",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T09:59:34+00:00",
       "store": "Pokelageret",
       "name": "Tornadus - 210 - NM",
@@ -179403,51 +179445,6 @@
       "name": "Worker 111/098 - Paradigm Trigger - NM (ID: 53272232464424)",
       "price": "59.00 kr",
       "url": "https://laboge.no/products/worker-111-098-paradigm-trigger?variant=54028814385451",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tulip 087/066 - Future Flash - NM (ID: 53272300228681)",
-      "price": "69.00 kr",
-      "url": "https://laboge.no/products/tulip-087-066-future-flash?variant=54028814319915",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tsareena V 011/100 - Fusion Arts - NM (ID: 53906023775222)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/tsareena-v-011-100-fusion-arts?variant=54028814188843",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tsareena V 011/100 - Fusion Arts - NM (ID: 53906297565796)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/tsareena-v-011-100-fusion-arts?variant=54028814221611",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tsareena V 011/100 - Fusion Arts - NM (ID: 53906399437091)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/tsareena-v-011-100-fusion-arts?variant=54028814254379",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Tsareena V 011/100 - Fusion Arts - NM (ID: 53906485361123)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/tsareena-v-011-100-fusion-arts?variant=54028814287147",
       "product_class": "card",
       "event": "ny"
     }
