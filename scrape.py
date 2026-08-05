@@ -108,6 +108,40 @@ def classify_product_class(name: str) -> str:
     return "card"
 
 
+
+def bilde_fra_kort(card, side_url: str) -> str | None:
+    """Forste produktbilde i et kort, som absolutt URL.
+
+    Butikkene bruker lat lasting pa ulike mater: `src` er ofte en 1x1-piksel
+    eller en base64-plassholder mens det ekte bildet ligger i `data-src`,
+    `data-original` eller forste oppforing i `srcset`. Vi prover dem i
+    rekkefolge og forkaster alt som apenbart ikke er et produktbilde.
+    """
+    try:
+        img = card.query_selector("img")
+        if img is None:
+            return None
+        for attributt in ("data-src", "data-original", "data-lazy-src", "src"):
+            verdi = img.get_attribute(attributt)
+            if verdi and not verdi.startswith("data:") and "1x1" not in verdi:
+                return _absolutt(verdi, side_url)
+        srcset = img.get_attribute("srcset") or img.get_attribute("data-srcset")
+        if srcset:
+            forste = srcset.split(",")[0].strip().split(" ")[0]
+            if forste and not forste.startswith("data:"):
+                return _absolutt(forste, side_url)
+    except Exception:
+        pass
+    return None
+
+
+def _absolutt(url: str, side_url: str) -> str:
+    from urllib.parse import urljoin
+    if url.startswith("//"):
+        return "https:" + url
+    return urljoin(side_url, url)
+
+
 @dataclass
 class Product:
     store: str
@@ -117,6 +151,7 @@ class Product:
     url: str
     store_count: int | None = None  # antall fysiske butikker med varen (kun noen butikker oppgir dette)
     product_class: str = ""  # "card" eller "accessory" -- se classify_product_class()
+    image: str | None = None  # absolutt URL til butikkens produktbilde, om vi fant et
 
     def __post_init__(self):
         if not self.product_class:
@@ -376,10 +411,14 @@ def scrape_shopify_collection(
 
             variants = p.get("variants", [])
             if variant_mode == "each":
+                bilder = p.get("images") or []
+                standardbilde = (bilder[0] or {}).get("src") if bilder else None
                 for v in variants:
                     variant_title = (v.get("title") or "").strip()
                     name = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
                     product_url = f"{base_url}/products/{p['handle']}?variant={v['id']}"
+                    # Varianten har ofte sitt eget bilde (ulik omslagskunst).
+                    variantbilde = (v.get("featured_image") or {}).get("src")
                     products.append(
                         Product(
                             store=store,
@@ -387,14 +426,17 @@ def scrape_shopify_collection(
                             price=f"{v.get('price', '?')} kr",
                             in_stock=v.get("available"),
                             url=product_url,
+                            image=variantbilde or standardbilde,
                         )
                     )
             else:
                 product_url = f"{base_url}/products/{p['handle']}"
                 available = any(v.get("available") for v in variants)
                 price = variants[0]["price"] if variants else "?"
+                bilder = p.get("images") or []
                 products.append(
-                    Product(store=store, name=title, price=f"{price} kr", in_stock=available, url=product_url)
+                    Product(store=store, name=title, price=f"{price} kr", in_stock=available,
+                            url=product_url, image=(bilder[0] or {}).get("src") if bilder else None)
                 )
 
         if len(page_products) < 250:
@@ -775,6 +817,7 @@ def scrape_nille(page, site: dict) -> list[Product]:
 
                 collected[href] = Product(
                     store=store, name=name, price=price, in_stock=in_stock, url=href,
+                    image=bilde_fra_kort(card, url),
                 )
             except Exception as e:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
@@ -867,6 +910,7 @@ def scrape_nettbutikk24(page, site: dict) -> list[Product]:
 
                 products[href] = Product(
                     store=store, name=name, price=price, in_stock=in_stock, url=href,
+                    image=bilde_fra_kort(card, url),
                 )
             except Exception as e:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
@@ -925,6 +969,7 @@ def scrape_quickbutik(page, site: dict) -> list[Product]:
 
                 products[href] = Product(
                     store=store, name=name.strip(), price=f"{price_raw} kr", in_stock=in_stock, url=href,
+                    image=bilde_fra_kort(card, url),
                 )
             except Exception as e:
                 print(f"[{store}] Feil ved lesing av produktkort: {e}")
@@ -1022,7 +1067,8 @@ def scrape_woocommerce(page, site: dict) -> list[Product]:
                     else:
                         in_stock = None
 
-                    products[href] = Product(store=store, name=name, price=price, in_stock=in_stock, url=href)
+                    products[href] = Product(store=store, name=name, price=price, in_stock=in_stock,
+                                             url=href, image=bilde_fra_kort(card, url))
                     new_found += 1
                 except Exception as e:
                     print(f"[{store}] Feil ved lesing av produktkort: {e}")
@@ -1079,7 +1125,8 @@ def scrape_maxgaming(page, site: dict) -> list[Product]:
             status_el = card.query_selector("[class*='PT_text_Lagerstatus']")
             in_stock = classify_stock(status_el.text_content()) if status_el else None
 
-            products[href] = Product(store=store, name=name, price=price, in_stock=in_stock, url=href)
+            products[href] = Product(store=store, name=name, price=price, in_stock=in_stock,
+                                     url=href, image=bilde_fra_kort(card, url))
         except Exception as e:
             print(f"[{store}] Feil ved lesing av produktkort: {e}")
 
@@ -1823,6 +1870,7 @@ def carry_forward_failed_stores(all_products: list, previous_by_url: dict):
                 url=prev.get("url", ""),
                 store_count=prev.get("store_count"),
                 product_class=prev.get("product_class") or "",
+                image=prev.get("image"),
             ))
         print(f"[{store}] ADVARSEL: 0 produkter funnet, {len(prev_items)} forrige "
               f"kjoring -- antar feilet skanning, beholder forrige data")
