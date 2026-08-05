@@ -1,6 +1,997 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mew V Special Kinesisk Elite Trainer Collection Box",
+      "price": "3999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-mew-v-special-elite-trainer-collection-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Flareon - 167 - NM",
+      "price": "12.00 kr",
+      "url": "https://pokelageret.no/products/flareon-167?variant=48848862314747",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Galarian Moltres V - TG20/TG30 - LP",
+      "price": "255.00 kr",
+      "url": "https://pokelageret.no/products/galarian-moltres-v-tg20-tg30?variant=49131332862203",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 005/025 - NM",
+      "price": "124.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-005-025?variant=48838859882747",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Charizard Ultra Premium Collection - UPC Box (SKIP THE LINE) (Lite Hull i Plasten)",
+      "price": "6299.00 kr",
+      "url": "https://pokebua.no/products/pokemon-charizard-ultra-premium-collection-upc-box-skip-the-line?variant=49088311623913",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Brilliant Stars - Build&Battle stadium Box (Case Fresh 04.08)",
+      "price": "2299.00 kr",
+      "url": "https://pokebua.no/products/pokemon-brilliant-stars-build-battle-stadium-box-case-fresh-04-09?variant=51620362387689",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Outland",
+      "name": "Venusaur MS-14 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
+      "price": "",
+      "url": "https://www.outland.no/p/p-venusaur-ms-14-moncolle-figure-4904810912170",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA EVOLUTION: PITCH BLACK BOOSTERPAKKE",
+      "price": "89,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/boosterpakker/pokemon-mega-evolution-pitch-black-boosterpakke",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION: PITCH BLACK BOOSTER BUNDLE(6 PACK)",
+      "price": "899,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-pitch-black-booster-bundle-6-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: TERASTAL GRAND GATHERING EEVEE & FRIENDS COIN SET (SYLVEON) (1 PACK) (KINESISK)",
+      "price": "199,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/antal3-pokemon-scarlet-violet-terastal-grand-gathering-eevee-friends-coin-set-sylveon-1-pack-ch",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: TERASTAL GRAND GATHERING EEVEE & FRIENDS COIN SET (UMBREON) (1 PACK) (KINESISK)",
+      "price": "199,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-terastal-grand-gathering-eevee-friends-coin-set-umbreon-1-pack-kinesisk",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA MOONLIGHT MEGA GENGAR EX MINI TIN (4 PACK) (ENG)",
+      "price": "549,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-moonlight-mega-gengar-ex-mini-tin-4-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA MOONLIGHT MEGA CLEFABLE EX MINI TIN (4 PACK) (ENG)",
+      "price": "549,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-moonlight-mega-clefable-ex-mini-tin-4-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: THE GLORY OF TEAM ROCKET SPECIAL KIT (30 PACK) (KOR)",
+      "price": "1 049,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-the-glory-of-team-rocket-special-kit-30-pack-kor",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION: LUMIOSE CITY MINI TIN (2 PACK) (ENG)",
+      "price": "279,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-lumiose-city-mini-tin-2-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKEMON MEGA EVOLUTION: CHAOS RISING BOOSTER BUNDLE (6 PACK) (ENG)",
+      "price": "899,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-chaos-rising-booster-bundle-6-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA EVOLUTION: ASCENDED HEROES BOOSTER BUNDLE (6 PACK) (ENG)",
+      "price": "1 599,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-mega-evolution-ascended-heroes-booster-bundle-6-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: DESTINED RIVALS BOOSTER BUNDLE (6 PACK)",
+      "price": "1 199,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-destined-rivals-booster-bundle-6-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: 151 HOPE DEPARTURE BATTLE GIFT BOX (3 PACK) (KINESISK)",
+      "price": "299,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-151-hope-departure-battle-gift-box-3-pack-kinesisk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: FLAREON EEVEE GX COLLECTION GIFT BOX (8 PACK) (CH)",
+      "price": "1 999,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-flareon-eevee-gx-collection-gift-box-8-pack-ch",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKEMON GARDEVOIR EX LEAGUE BATTLE DECK",
+      "price": "399,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-gardevoir-ex-league-battle-deck",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA EVOLUTION: CHAOS RISING ELITE TRAINER BOX (ETB) (9 PACK)",
+      "price": "1 299,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/elite-trainer-box/pokemon-mega-evolution-chaos-rising-elite-trainer-box-etb-9-pack",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA EVOLUTION: ASCENDED HEROES ELITE TRAINER BOX (ETB) (9 PACK) (ENG)",
+      "price": "2 999,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/elite-trainer-box/pokemon-mega-evolution-ascended-heroes-elite-trainer-box-etb-9-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "POKÉMON MEGA EVOLUTION: PERFECT ORDER ELITE TRAINER BOX (ETB) (9 PACK) (ENG)",
+      "price": "1 299,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/elite-trainer-box/pokemon-mega-evolution-perfect-order-elite-trainer-box-etb-9-pack-eng",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "EEVEE #80 POKEMON FURIOUS FISTS",
+      "price": "25,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/eevee-80-pokemon-furious-fists-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "BLAZIKEN #14 POKEMON FURIOUS FISTS",
+      "price": "49,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/blaziken-14-pokemon-furious-fists-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "SMOOCHUM #64 POKEMON DRAGON FRONTIERS",
+      "price": "25,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/smoochum-64-pokemon-dragon-frontiers-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "HORSEA #50 POKEMON DRAGON FRONTIERS",
+      "price": "25,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/horsea-50-pokemon-dragon-frontiers-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MEGA FLOETTE EX #35 POKEMON CHAOS RISING",
+      "price": "25,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-floette-ex-35-pokemon-chaos-rising-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MORPEKO EX #102 POKEMON PITCH BLACK",
+      "price": "69,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/morpeko-ex-102-pokemon-pitch-black-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MEGA CHANDELURE EX #99 POKEMON PITCH BLACK",
+      "price": "149,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-chandelure-ex-99-pokemon-pitch-black-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "SLOWBRO #90 POKEMON PITCH BLACK",
+      "price": "299,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/slowbro-90-pokemon-pitch-black-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "ARMAROUGE #86 POKEMON PITCH BLACK",
+      "price": "99,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/armarouge-86-pokemon-pitch-black-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "DECIDUEYE EX #93 POKEMON JAPANESE NIHIL ZERO",
+      "price": "49,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/decidueye-ex-93-pokemon-japanese-nihil-zero-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "RATICATE #92 POKEMON JAPANESE NIHIL ZERO",
+      "price": "49,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/raticate-92-pokemon-japanese-nihil-zero-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "CLEFAIRY #86 POKEMON JAPANESE NIHIL ZERO",
+      "price": "139,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/clefairy-86-pokemon-japanese-nihil-zero-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "AURORUS #84 POKEMON JAPANESE NIHIL ZERO",
+      "price": "39,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/aurorus-84-pokemon-japanese-nihil-zero-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MEGA SKARMORY EX #54 POKEMON JAPANESE NIHIL ZERO",
+      "price": "19,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-skarmory-ex-54-pokemon-japanese-nihil-zero-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MEGA STARMIE EX #21 POKEMON JAPANESE NIHIL ZERO",
+      "price": "19,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-starmie-ex-21-pokemon-japanese-nihil-zero-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "CHARCADET [COSMOS HOLO] #26 POKEMON PARADOX RIFT",
+      "price": "19,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/charcadet-cosmos-holo-26-pokemon-paradox-rift-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "ARMAROUGE EX #125 POKEMON PROMO",
+      "price": "29,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/armarouge-ex-125-pokemon-promo-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "CERULEDGE [COSMOS HOLO] #98 POKEMON PALDEA EVOLVED",
+      "price": "9,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/ceruledge-cosmos-holo-98-pokemon-paldea-evolved-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MEGA GARDEVOIR EX #226 POKEMON JAPANESE MEGA DREAM EX",
+      "price": "99,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-gardevoir-ex-226-pokemon-japanese-mega-dream-ex-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "N'S PP UP #214 POKEMON JAPANESE MEGA DREAM EX",
+      "price": "25,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/n-s-pp-up-214-pokemon-japanese-mega-dream-ex-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "FAN ROTOM #213 POKEMON JAPANESE MEGA DREAM EX",
+      "price": "39,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/fan-rotom-213-pokemon-japanese-mega-dream-ex-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "DREEPY #211 POKEMON JAPANESE MEGA DREAM EX",
+      "price": "49,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/dreepy-211-pokemon-japanese-mega-dream-ex-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "BUDEW #196 POKEMON JAPANESE MEGA DREAM EX",
+      "price": "49,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/budew-196-pokemon-japanese-mega-dream-ex-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Emken",
+      "name": "MEGA LUCARIO EX #92 POKEMON JAPANESE MEGA DREAM EX",
+      "price": "19,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-lucario-ex-92-pokemon-japanese-mega-dream-ex-1",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 204/217 – Team Rocket’s Giovanni",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-204-217-team-rockets-giovanni/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 247/217 – Dreepy",
+      "price": "139,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-247-217-dreepy/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 256/217 – Boss’s Orders [Corbeau]",
+      "price": "119,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-256-217-bosss-orders-corbeau/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 037/217 – Raboot",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-037-217-raboot/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 053/217 – Frosmoth",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-053-217-frosmoth/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 277/217 – Pikachu ex",
+      "price": "4.499,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-277-217-pikachu-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 233/217 – Misdreavus",
+      "price": "89,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-233-217-misdreavus/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Cardcenter",
+      "name": "Maks 5 per pers. Pokemon - 151 Special-Set Boosterpakke",
+      "price": "499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-151-special-set-boosterpakke",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Storm Emeralda Japansk Display Booster Box",
+      "price": "2099.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-storm-emeralda-japansk-display-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Probopass - 096/088 - NM",
+      "price": "13.00 kr",
+      "previous_price": "14.00 kr",
+      "url": "https://pokelageret.no/products/probopass-096-088?variant=49123146268923",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Unown VSTAR - 066/195 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/unown-vstar-066-195?variant=49123175399675",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Iono's Wattrel - 231/217 - NM",
+      "price": "119.00 kr",
+      "previous_price": "124.00 kr",
+      "url": "https://pokelageret.no/products/ionos-wattrel-231-217?variant=49123146662139",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Eelektross ex - 266/217 - NM",
+      "price": "55.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://pokelageret.no/products/mega-eelektross-ex-266-217?variant=49123146039547",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Ampharos - 090/086 - NM",
+      "price": "89.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://pokelageret.no/products/ampharos-090-086?variant=49002528276731",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Cynthia's Garchomp ex - 215/182 - NM",
+      "price": "55.00 kr",
+      "url": "https://pokelageret.no/products/cynthias-garchomp-ex-215-182?variant=49002528309499",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Charizard X ex - 013/094 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/mega-charizard-x-ex-013-094?variant=49002491740411",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Litleo - 139/132 - NM",
+      "price": "59.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/litleo-139-132?variant=49002490790139",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Popplio - 045 - NM",
+      "price": "65.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://pokelageret.no/products/popplio-045?variant=48985229394171",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Litten - 044 - NM",
+      "price": "85.00 kr",
+      "previous_price": "75.00 kr",
+      "url": "https://pokelageret.no/products/litten-044?variant=48985230737659",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Moltres - 9/124 - DMG / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/moltres-9-124?variant=49139254001915",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Doublade - 098/088 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/doublade-098-088?variant=48971008147707",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Doublade - 098/088 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/doublade-098-088?variant=48971008147707",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Dedenne - 093/088 - NM",
+      "price": "65.00 kr",
+      "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Dedenne - 093/088 - NM",
+      "price": "65.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Gengar ex - 056/094 - NM",
+      "price": "35.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/mega-gengar-ex-056-094?variant=48969134932219",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 074/131 (Pokemon Day 2025) - NM",
+      "price": "49.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/eevee-074-131-pokemon-day-2025?variant=48967702151419",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Lapras ex - 032/142 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/lapras-ex-032-142?variant=48960207814907",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Toxtricity - 103/094 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/toxtricity-103-094?variant=48960192413947",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Flygon - 101/094 - NM",
+      "price": "75.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/flygon-101-094?variant=48846479294715",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Sylveon ex - 041/131 - NM",
+      "price": "119.00 kr",
+      "previous_price": "115.00 kr",
+      "url": "https://pokelageret.no/products/sylveon-ex-041-132?variant=49002491707643",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Metang - 094/086 - NM",
+      "price": "35.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/metang-094-86?variant=49002494296315",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Kangaskhan ex - 025 - NM",
+      "price": "11.00 kr",
+      "previous_price": "12.00 kr",
+      "url": "https://pokelageret.no/products/mega-kangaskhan-ex-025?variant=49002490953979",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Umbreon - 059/131 - NM / Reverse Holofoil",
+      "price": "6.00 kr",
+      "url": "https://pokelageret.no/products/umbreon-059-131?variant=49002490626299",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Charmander - 004/165 - NM",
+      "price": "39.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/charmander-004-165?variant=49002490265851",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Mimikyu - 097/193 - NM / Holofoil",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/mimikyu-097-193?variant=48989098574075",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Raikou - 048/132 - NM",
+      "price": "6.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokelageret.no/products/raikou-048-132?variant=48989032317179",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Dusk Ball - 175/191 - NM / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/dusk-ball-175-191?variant=48988844294395",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu VMAX - 009/025 - LP",
+      "price": "95.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-vmax-009-025?variant=49128752218363",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Night Stretcher - 061/064 - NM / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/night-stretcher-061-064?variant=48979497091323",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Poke Pad - 081/088 - NM / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/poke-pad-081-088?variant=48979199525115",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Dawn - 118/094 - NM",
+      "price": "75.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/dawn-118-094?variant=48979076546811",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Cynthia's Garchomp ex - 111/217 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/cynthias-garchomp-ex-111-217?variant=48972111151355",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "N's Zoroark ex - 137/217 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/ns-zoroark-ex-137-217?variant=48971007754491",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Feraligatr ex - 036 - NM",
+      "price": "11.00 kr",
+      "previous_price": "10.00 kr",
+      "url": "https://pokelageret.no/products/mega-feraligatr-ex-036?variant=48960196280571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Seadra - 011/064 - NM",
+      "price": "6.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokelageret.no/products/seadra-011-064?variant=48890636140795",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Tandemaus - 167/193 - NM",
+      "price": "13.00 kr",
+      "previous_price": "12.00 kr",
+      "url": "https://pokelageret.no/products/tandemaus-167-193?variant=48890584957179",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Hydrapple ex - 011/131 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/hydrapple-ex-011-131?variant=48887858135291",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Fezandipiti ex - 038/064 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/fezandipiti-ex-038-064?variant=48887838933243",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Lucario V - 146/264 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/lucario-v-146-264?variant=48887799316731",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Magnezone ex - 065/198 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/magnezone-ex-065-198?variant=48887010230523",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 48/68 - NM / Reverse Holofoil",
+      "price": "55.00 kr",
+      "url": "https://pokelageret.no/products/eevee-48-68?variant=48887001579771",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Victini - 012/086 - NM",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/victini-012-086?variant=48881635361019",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Cynthia's Ambition - 138/172 - NM / Normal",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/cynthias-ambition-138-172?variant=48881581424891",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Vaporeon - 030/185 - NM / Reverse Holofoil",
+      "price": "15.00 kr",
+      "url": "https://pokelageret.no/products/vaporeon-030-185?variant=48848858153211",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Prime Catcher - 119/131 - NM",
+      "price": "7.00 kr",
+      "url": "https://pokelageret.no/products/prime-catcher-119-131?variant=48846683570427",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Jolteon - TG04/TG30",
+      "price": "265.00 kr",
+      "url": "https://pokelageret.no/products/jolteon-tg04-tg30?variant=48881667899643",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 60/64 - LP / Unlimited",
+      "price": "65.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-60-64?variant=48875213521147",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 051/162 - NM",
+      "price": "45.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-051-162?variant=48838877806843",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Braspill",
+      "name": "Pokemon Ascended Heroes mini tin assortert 1 stk minitin.",
+      "price": "499.00 kr",
+      "url": "https://braspill.no/products/pokemon-ascended-heroes-mini-tin-assortert-1-stk-minitin?variant=52036971561252",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crystal Gathering - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crystal-gathering-booster-pack?variant=51477621833961",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Star Birth - Booster Pack (Japansk) - Booster Pack",
+      "price": "79.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crimson-haze-booster-pack-japansk-kopi-kopi?variant=50800768844009",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokesingles",
+      "name": "Armarouge 012/084 (Reverse Holo) - Pitch Black",
+      "price": "12.00 kr",
+      "url": "https://pokesingles.no/products/armarouge-012084-reverse-holo-pitch-black-884104?variant=54068645560599",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokesingles",
+      "name": "Claydol 92 - Chaos Rising",
+      "price": "49.00 kr",
+      "url": "https://pokesingles.no/products/claydol-92-chaos-rising-389194?variant=54584988860695",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokesingles",
+      "name": "Crispin 133 - Stellar Crown",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/crispin-133-stellar-crown?variant=53024665960727",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "Pokestore",
+      "name": "Ultra Pro Pokemon Elite Series Pikachu 12-Pocket Zippered PRO-Binder",
+      "price": "599.00 kr",
+      "url": "https://pokestore.no/products/elite-series-pikachu-12-pocket-zippered-pro-binder®-for-pokemon?variant=52067026665703",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T02:19:30+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Venusaur ex Premium Collection",
+      "price": "899.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-venusaur-ex-premium-collection?variant=51641101320493",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-04T19:59:50+00:00",
       "store": "Pokebua",
       "name": "Pokemon - Hidden Fates - Tin Box",
@@ -178474,1032 +179465,6 @@
       "price": "6.00 kr",
       "url": "https://pokesingles.no/products/bronzong-064084-reverse-holo-pitch-black-888646?variant=54068803469591",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bronzong 064/084 - Pitch Black",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/bronzong-064084-pitch-black-382300?variant=54068644774167",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bronzor 063/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/bronzor-063084-reverse-holo-pitch-black-475228?variant=54068803436823",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bronzor 063/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/bronzor-063084-pitch-black-219600?variant=54068644741399",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Buddy-Buddy Poffin 184 - Ascended Heroes",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/buddy-buddy-poffin-184-ascended-heroes?variant=53024895009047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Budew (Energy Symbol) Reverse Holo 16 - Ascended Heroes",
-      "price": "8.00 kr",
-      "url": "https://pokesingles.no/products/budew-reverse-holo-16-ascended-heroes?variant=53024878788887",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Budew 221 - Ascended Heroes",
-      "price": "120.00 kr",
-      "url": "https://pokesingles.no/products/budew-221-ascended-heroes?variant=53024905396503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Canari (JP) 248 - MEGA Dream ex",
-      "price": "320.00 kr",
-      "url": "https://pokesingles.no/products/canari-jp-248-mega-dream-ex-437755?variant=53940801831191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Captain Pikachu (C) 0106 Stamped - Gem Pack Volume 5",
-      "price": "49.00 kr",
-      "url": "https://pokesingles.no/products/captain-pikachu-c-0106-stamped-gem-pack-volume-5-023201?variant=53517908869399",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Carracosta Reverse Holo (Poké Ball) 23 - Black Bolt",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/carracosta-reverse-holo-poke-ball-23-black-bolt?variant=53077761261847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cascoon (Love Ball) Reverse Holo 14 - Ascended Heroes",
-      "price": "6.00 kr",
-      "url": "https://pokesingles.no/products/cascoon-love-ball-reverse-holo-14-ascended-heroes?variant=53452623085847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Centiskorch 010/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/centiskorch-010084-reverse-holo-pitch-black-379425?variant=54068645495063",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Centiskorch 010/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/centiskorch-010084-pitch-black-065818?variant=54068486537495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Centiskorch V 33 - Darkness Ablaze",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/centiskorch-v-33-darkness-ablaze?variant=53023107842327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cetitan (C) 2706 Stamped - Gem Pack Volume 5",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/cetitan-c-2706-stamped-gem-pack-volume-5-472051?variant=53521906925847",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cetitan (C) 2707 - Gem Pack Volume 5",
-      "price": "79.00 kr",
-      "url": "https://pokesingles.no/products/cetitan-c-2707-gem-pack-volume-5-782923?variant=53517910343959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chansey (C) 0406 Stamped - Gem Pack Volume 5",
-      "price": "49.00 kr",
-      "url": "https://pokesingles.no/products/chansey-c-0406-stamped-gem-pack-volume-5-005724?variant=53521907515671",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Charcadet (JP) 083 - Inferno X",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/charcadet-jp-083-inferno-x-001085?variant=53436494151959",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Charcadet 011/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/charcadet-011084-reverse-holo-pitch-black-662727?variant=54068645527831",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Charcadet 011/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/charcadet-011084-pitch-black-551527?variant=54068486570263",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Charjabug 025/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/charjabug-025084-reverse-holo-pitch-black-761488?variant=54068646052119",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Charjabug 025/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/charjabug-025084-pitch-black-621441?variant=54068486996247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chi-Yu 059/084 - Pitch Black",
-      "price": "12.00 kr",
-      "url": "https://pokesingles.no/products/chi-yu-059084-pitch-black-421830?variant=54068803338519",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chi-Yu 059/084 Holo - Pitch Black",
-      "price": "10.00 kr",
-      "url": "https://pokesingles.no/products/chi-yu-059084-holo-pitch-black-421888?variant=54068804288791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chien-Pao ex 236 - Paldea Evolved",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/chien-pao-ex-236-paldea-evolved?variant=53024472138007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chien-Pao ex 61 - Paldea Evolved",
-      "price": "15.00 kr",
-      "url": "https://pokesingles.no/products/chien-pao-ex-61-paldea-evolved?variant=53024462373143",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chikorita (Energy Symbol) Reverse Holo 8 - Ascended Heroes",
-      "price": "7.00 kr",
-      "url": "https://pokesingles.no/products/chikorita-reverse-holo-8-ascended-heroes?variant=53024874627351",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chikorita (Friend Ball) Reverse Holo 8 - Ascended Heroes",
-      "price": "7.00 kr",
-      "url": "https://pokesingles.no/products/chikorita-friend-ball-reverse-holo-8-ascended-heroes?variant=53451641028887",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chimecho (C) 1106 Stamped - Gem Pack Volume 5",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/chimecho-c-1106-stamped-gem-pack-volume-5-211047?variant=53521907187991",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Chimecho (C) 1107 - Gem Pack Volume 5",
-      "price": "49.00 kr",
-      "url": "https://pokesingles.no/products/chimecho-c-1107-gem-pack-volume-5-577886?variant=53517909098775",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cinderace V 18 - Shining Fates",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/cinderace-v-18-shining-fates?variant=53023183569175",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cinderace V 43 - Fusion Strike",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/cinderace-v-43-fusion-strike?variant=53023496110359",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cinderace V 44 - Fusion Strike",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/cinderace-v-44-fusion-strike?variant=53023497519383",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Clawitzer (JP) 068 - Mega Symphonia",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/clawitzer-jp-068-mega-symphonia-767066?variant=53436493005079",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Clemont's Quick Wit 229 - Surging Sparks",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/clemonts-quick-wit-229-surging-sparks?variant=53024687030551",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Clive 227 - Paldean Fates",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/clive-227-paldean-fates?variant=53024605176087",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cobalion ex 103/086 - Chaos Rising",
-      "price": "29.00 kr",
-      "url": "https://pokesingles.no/products/cobalion-ex-103086-chaos-rising-850063?variant=53813426323735",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Copperajah V 136 - Rebel Clash",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/copperajah-v-136-rebel-clash?variant=53023064916247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cornerstone Mask Ogerpon ex 199 - Twilight Masquerade",
-      "price": "60.00 kr",
-      "url": "https://pokesingles.no/products/cornerstone-mask-ogerpon-ex-199-twilight-masquerade?variant=53024637321495",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Crabominable V 76 - Fusion Strike",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/crabominable-v-76-fusion-strike?variant=53023566987543",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cramorant (C) 2507 - Gem Pack Volume 4",
-      "price": "69.00 kr",
-      "url": "https://pokesingles.no/products/cramorant-c-2507-gem-pack-volume-4-923968?variant=53518036467991",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cramorant (JP) 072 - Crimson Haze",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/cramorant-jp-072-crimson-haze-815040?variant=53436615622935",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cramorant VMAX 55 - Shining Fates",
-      "price": "49.00 kr",
-      "url": "https://pokesingles.no/products/cramorant-vmax-55-shining-fates?variant=53023188254999",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cranidos 044/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/cranidos-044084-reverse-holo-pitch-black-520335?variant=54068802519319",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Cranidos 044/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/cranidos-044084-pitch-black-224016?variant=54068644282647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Crispin 164 - Stellar Crown",
-      "price": "139.00 kr",
-      "url": "https://pokesingles.no/products/crispin-164-stellar-crown?variant=53024669368599",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Crocalor (C) 2306 Stamped - Gem Pack Volume 5",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/crocalor-c-2306-stamped-gem-pack-volume-5-055843?variant=53521906696471",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Crushing Hammer 105/084 - Pitch Black",
-      "price": "149.00 kr",
-      "url": "https://pokesingles.no/products/crushing-hammer-105084-pitch-black-699616?variant=54069312454935",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Raichu Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-raichu-plush?variant=50993326031079",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Salamence Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-salamence-plush?variant=50993289920743",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Typhlosion Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-typhlosion-plush?variant=50993289363687",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Dragonite Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-dragonite-plush?variant=50992823140583",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Krokorok Plush",
-      "price": "269.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-krokorok-plush?variant=50992809902311",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Cranidos Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-cranidos-plush?variant=50983373439207",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Pidove Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-pidove-plush?variant=50982975144167",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Armarouge & Ceruledge 4-Pocket Portfolio",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-shimmering-skyline-4-pocket-album-1?variant=50976904544487",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Rapid Strike Urshifu League Battle Deck",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-rapid-strike-urshifu-league-battle-deck?variant=50976685588711",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Shimmering Skyline 4-Pocket Portfolio",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-shimmering-skyline-4-pocket-album?variant=50965768962279",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Frosted Forest 2\" Album",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-frosted-forest-2-album-for-pokemon?variant=50956853149927",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Trick Room Playmat",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-trick-room-pokemon-playmat?variant=50956843155687",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Purrloin Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-purrloin-plush?variant=50936759156967",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Professor Juniper Sleeves (60 stk)",
-      "price": "75.00 kr",
-      "url": "https://pokestore.no/products/pokemon-professor-juniper-sleeves-60-stk?variant=50923998118119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Blaziken",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-blaziken?variant=50824924365031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Chimchar",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-chimchar?variant=50824917975271",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Bulbasaur",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-charmander-copy?variant=50824913486055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Raikou Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-raikou-plush?variant=50746116800743",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mimikyu Plush (20cm)",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mimikyu-plushie-20cm?variant=50738335416551",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Fuecoco Plush (20cm)",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-fuecoco-plushie-20cm?variant=50736246161639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Vinter Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-vinter-plushie-20cm?variant=50736195240167",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Flower Pikachu Cuties Plush (20cm)",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-flower-pikachu-cuties-plushie-20cm?variant=50736139829479",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Lost Zone Sleeves (64 stk)",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-lost-zone-sleeves?variant=50725726814439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Giratina Sleeves (64 stk)",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-giratina-sleeves?variant=50725725831399",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Forbidden Light Japansk Booster",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-forbidden-light-japansk-booster?variant=50624615186663",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon 2022 World Championship Decks - Ondřej Škubal",
-      "price": "219.00 kr",
-      "url": "https://pokestore.no/products/pokemon-2022-world-championship-decks-ondrej-skubal?variant=50624533168359",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon VSTAR & VMAX High Class Deck Deoxys",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-vstar-vmax-high-class-deck-deoxys?variant=50624516260071",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Silver Lance Booster Box",
-      "price": "1999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-silver-lance-booster-box?variant=50624496206055",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Chaos Rising 9-Pocket Portfolio",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-mega-evolution-chaos-rising-9-pocket-portfolio-for-the-pokemon-trading-card-game?variant=52251775074535",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X & Mega Charizard Y 9-Pocket PRO-Binder",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-mega-charizard-x-and-mega-charizard-y-9-pocket-pro-binder?variant=52251773468903",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Pikachu Full View Deck Box for Pokémon",
-      "price": "39.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pikachu-full-view-deck-box®-for-pokemon?variant=52112668229863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Rayquaza Model Kit",
-      "price": "229.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-rayquaza-model-kit?variant=52078266450151",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bandai Spirits Lucario & Riolu Model Kit",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bandai-spirits-lucario-riolu-model-kit-figur?variant=52078214021351",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mini Portfolio m/Booster 2026",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mini-portfolio-m-booster-2026?variant=52020913471719",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Teddiursa Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-teddiursa-plush?variant=51994923761895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Oshawott Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-oshawott-plush?variant=51994845151463",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Torchic Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-torchic-plush?variant=51994844725479",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Blaziken Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-blaziken-plush?variant=51994844594407",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Games Vinyl Figure Snubbull 9 cm",
-      "price": "139.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-snubbull-emea-9-cm?variant=51994492567783",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Games Vinyl Figure Electabuzz 9 cm",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-electabuzz-9-cm?variant=51994485326055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Games Vinyl Figure Grumpy Pikachu 9 cm",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-grumpy-pikachu-9-cm?variant=51994485260519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Friends Sprigatito Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-friends-sprigatito-plush?variant=51989708931303",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Friends Snorlax Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-friends-snorlax-plush?variant=51989708898535",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Ditto Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-ditto-plush?variant=51989708832999",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Corviknight Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-corviknight-plush?variant=51989708538087",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sticker - Black Cool",
-      "price": "49.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sticker-black-cool?variant=51989708439783",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-20 SU Sticker - Mini Stickers",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-20-su-sticker-mini-stickers?variant=51989708308711",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Kutakuta Tatta! Yamper Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-yamper-plush?variant=51989705720039",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Kutakuta Tatta! Snorlax Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-snorlax-plush?variant=51989705654503",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Rowlet Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-rowlet-plush-1?variant=51989705621735",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Piplup Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-piplup-plush?variant=51989704048871",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Mega Ampharos Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-mega-ampharos-plush?variant=51989703753959",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Espeon Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-espeon-plush?variant=51989703721191",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Tinkatink Plush",
-      "price": "359.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-tinkatink-plush?variant=51989703590119",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Togekiss Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-togekiss-plush?variant=51989703164135",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Typhlosion Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-typhlosion-plush?variant=51989703000295",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Espeon & Umbreon Figur",
-      "price": "100.00 kr",
-      "url": "https://pokestore.no/products/pokemon-espeon-umbreon-figur?variant=51879403552999",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Diecast Replica Cherish Ball",
-      "price": "1599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-diecast-replica-cherish-ball?variant=51807196184807",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon 2\" Gallery Series Shimmering Skyline Album",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/2-gallery-series-shimmering-skyline-album-for-pok-mon?variant=51766621929703",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Gallery Series Trick Room 2\" Album",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-gallery-series-trick-room-2-inch-album?variant=51766618030311",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Astral Radiance 4-Pocket Portfolio",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/sword-and-shield-10-4-pocket-portfolio-for-pok-mon?variant=51766575005927",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jolteon (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-jolteon-9-cm?variant=51704570249447",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Flareon (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-flareon-emea-9-cm?variant=51704570183911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Deoxys Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-deoxys-moncolle-figur?variant=51685788713191",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Pikachu Plush",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-plush-pikachu-12-cm?variant=51637540847847",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Shellder Fit Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-shellder-fit-plush?variant=51612648669415",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Eevee Fit Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-eevee-fit-plush?variant=51612646375655",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
