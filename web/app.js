@@ -1,7 +1,7 @@
 /* Pokepuls frontend.
  *
  * Henter ETT lite snapshot (kanoniske produkter med tilbud under seg) i
- * stedet for 5,8 MB data.json. Alt filtrering skjer i minnet -- 427
+ * stedet for 5,8 MB data.json. Alt filtrering skjer i minnet -- 460
  * produkter er ingenting, og det gjor soket umiddelbart.
  *
  * Ingen rammeverk, ingen byggesteg: filen som ligger pa serveren er filen
@@ -28,6 +28,9 @@ const state = {
   hendelseKinds: new Set(["restock"]),
   andre: [], andreVist: 0,
   fane: "produkter",
+  bruker: null,        // null = ikke innlogget
+  folger: new Map(),   // product_id -> abonnement-id
+  apentProdukt: null,
 };
 
 /* ------------------------------------------------------------- verktoy */
@@ -52,12 +55,58 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
 const butikknavn = (id) => (id || "").split("-")
   .map((d) => d.charAt(0).toUpperCase() + d.slice(1)).join(" ");
 
+/* ------------------------------------------------------------- bilder */
+
+/* Butikkene har ikke bilde pa alt. I stedet for et tomt hull tegner vi en
+ * enkel silhuett av varetypen i regionens farge -- da ser listen hel ut,
+ * og du ser hva slags produkt det er selv uten foto. */
+const REGIONFARGE = { en: "#4c9aff", jp: "#ff8a8a", cn: "#ffd479", ko: "#9ec1ff" };
+
+const FORM = {
+  "booster-box": '<rect x="14" y="22" width="36" height="26" rx="3"/><path d="M14 30h36M32 22v26"/>',
+  "jumbo-booster-box": '<rect x="10" y="18" width="44" height="32" rx="3"/><path d="M10 28h44M32 18v32"/>',
+  etb: '<rect x="16" y="18" width="32" height="30" rx="3"/><path d="M16 27h32"/><circle cx="32" cy="37" r="4"/>',
+  "premium-collection": '<rect x="12" y="20" width="40" height="28" rx="3"/><path d="M12 29h40"/><circle cx="32" cy="38" r="5"/>',
+  "collection-box": '<rect x="14" y="20" width="36" height="28" rx="3"/><path d="M14 29h36"/>',
+  bundle: '<rect x="18" y="16" width="12" height="32" rx="2"/><rect x="34" y="16" width="12" height="32" rx="2"/>',
+  blister: '<rect x="20" y="14" width="24" height="36" rx="4"/><path d="M20 24h24"/>',
+  tin: '<rect x="16" y="22" width="32" height="24" rx="6"/><path d="M16 30h32"/>',
+  "mini-tin": '<rect x="22" y="26" width="20" height="18" rx="5"/><path d="M22 32h20"/>',
+  "booster-pack": '<rect x="22" y="14" width="20" height="36" rx="2"/><path d="M22 22h20"/>',
+  "jumbo-booster-pack": '<rect x="18" y="12" width="28" height="40" rx="2"/><path d="M18 22h28"/>',
+  "league-battle-deck": '<rect x="16" y="22" width="32" height="22" rx="3"/><path d="M24 22v22"/>',
+};
+
+function reservebilde(p) {
+  const farge = REGIONFARGE[p.region] || "#8b95a3";
+  const form = FORM[p.type_id] || '<rect x="16" y="20" width="32" height="26" rx="3"/>';
+  const svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">' +
+    '<rect width="64" height="64" rx="10" fill="#1b2027"/>' +
+    '<g fill="none" stroke="' + farge + '" stroke-width="2.4" stroke-linejoin="round" opacity="0.85">' +
+    form + "</g></svg>";
+  return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+}
+
+function bildeHtml(p, klasse) {
+  const reserve = reservebilde(p);
+  const src = p.bilde || reserve;
+  return '<img class="' + klasse + '" loading="lazy" decoding="async" alt="" ' +
+    'src="' + esc(src) + '" onerror="this.onerror=null;this.src=\'' + reserve + '\'">';
+}
+
 /* ---------------------------------------------------------------- data */
 
-async function hent(sti) {
-  const r = await fetch(API + sti, { headers: { Accept: "application/json" } });
-  if (!r.ok) throw new Error(sti + " svarte " + r.status);
-  return r.json();
+async function hent(sti, valg) {
+  const r = await fetch(API + sti, {
+    credentials: "same-origin",
+    headers: { Accept: "application/json", ...(valg && valg.body ? { "Content-Type": "application/json" } : {}) },
+    ...valg,
+  });
+  const tekst = await r.text();
+  const data = tekst ? JSON.parse(tekst) : null;
+  if (!r.ok) throw new Error((data && data.detail) || (sti + " svarte " + r.status));
+  return data;
 }
 
 async function last() {
@@ -108,19 +157,21 @@ function tegnProdukter() {
   $("tom-liste").hidden = treff.length > 0;
   $("teller").textContent = treff.length
     ? treff.length + " produkter" + (state.kunLager ? " pa lager" : "") +
-      " · " + new Set(treff.map((p) => p.set_id)).size + " sett"
+      " · " + new Set(treff.map((p) => p.set_id + p.region)).size + " sett"
     : "";
+  liste.innerHTML = grupperHtml(treff);
+}
 
-  // Grupper pa sett OG region. Uten regionen havner den vestlige, japanske
-  // og kinesiske utgaven av samme sett i samme bolk, og listen ser ut til a
-  // vise "Booster Box" tre ganger uten forklaring.
+/* Grupper pa sett OG region. Uten regionen havner den vestlige, japanske
+ * og kinesiske utgaven av samme sett i samme bolk, og listen ser ut til a
+ * vise "Booster Box" tre ganger uten forklaring. */
+function grupperHtml(treff) {
   const grupper = new Map();
   for (const p of treff) {
     const nokkel = p.set_id + ":" + p.region;
     if (!grupper.has(nokkel)) grupper.set(nokkel, []);
     grupper.get(nokkel).push(p);
   }
-
   let html = "";
   for (const [, produkter] of grupper) {
     const f = produkter[0];
@@ -129,15 +180,18 @@ function tegnProdukter() {
         esc(REGION[f.region] || f.region) + "</span>" : "") + "</div>";
     for (const p of produkter) html += kortHtml(p);
   }
-  liste.innerHTML = html;
+  return html;
 }
 
 function kortHtml(p) {
   const antall = Number(p.antall_pa_lager) || 0;
   const pris = kr(p.min_pris);
+  const folges = state.folger.has(p.id);
   return '<button class="kort" data-produkt="' + esc(p.id) + '">' +
+    bildeHtml(p, "miniatyr") +
     '<span class="kort-venstre">' +
-      '<span class="kort-navn">' + esc(p.type_label) + "</span>" +
+      '<span class="kort-navn">' + esc(p.type_label) +
+        (folges ? ' <span class="folge-merke" title="Du folger denne">♥</span>' : "") + "</span>" +
       '<span class="kort-under">' + p.tilbud.length + " tilbud</span>" +
     "</span>" +
     '<span class="kort-hoyre">' +
@@ -152,14 +206,22 @@ function kortHtml(p) {
 /* ---------------------------------------------------------------- ark */
 
 async function apneProdukt(id) {
+  state.apentProdukt = id;
   visArk('<p class="hjelp">Laster…</p>');
   try {
     const d = await hent("/product/" + encodeURIComponent(id));
     const p = d.produkt;
-    let h = "<h2>" + esc(p.set_label) + " — " + esc(p.type_label) + "</h2>" +
-      '<div class="ark-under"><span class="merkelapp ' + p.region + '">' +
-      esc(REGION[p.region] || p.region) + "</span><span>" + d.tilbud.length +
-      " tilbud hos " + new Set(d.tilbud.map((t) => t.store_id)).size + " butikker</span></div>";
+    const iSnapshot = state.produkter.find((x) => x.id === id) || p;
+    const bilde = d.tilbud.find((t) => t.image_url);
+    let h = '<div class="ark-topp">' +
+      (bilde ? '<img class="ark-bilde" src="' + esc(bilde.image_url) + '" alt="" ' +
+               "onerror=\"this.onerror=null;this.src='" + reservebilde(iSnapshot) + "'\">"
+             : '<img class="ark-bilde" src="' + reservebilde(iSnapshot) + '" alt="">') +
+      '<div class="ark-tekst"><h2>' + esc(p.set_label) + "</h2>" +
+      '<div class="ark-under"><span>' + esc(p.type_label) + "</span>" +
+      '<span class="merkelapp ' + p.region + '">' + esc(REGION[p.region] || p.region) + "</span></div>" +
+      '<button class="folg-knapp" id="folg-knapp" type="button"></button>' +
+      "</div></div>";
 
     const inne = d.tilbud.filter((t) => t.in_stock === true);
     const ute = d.tilbud.filter((t) => t.in_stock !== true);
@@ -177,13 +239,30 @@ async function apneProdukt(id) {
       }).join("");
     }
     $("ark-innhold").innerHTML = h;
+    tegnFolgKnapp();
   } catch (e) {
     $("ark-innhold").innerHTML = '<p class="tom">Klarte ikke a hente produktet.</p>';
   }
 }
 
+function tegnFolgKnapp() {
+  const knapp = $("folg-knapp");
+  if (!knapp) return;
+  if (!state.bruker) {
+    knapp.textContent = "Logg inn for a folge";
+    knapp.className = "folg-knapp";
+    knapp.onclick = apneKonto;
+    return;
+  }
+  const folges = state.folger.has(state.apentProdukt);
+  knapp.textContent = folges ? "♥ Folger" : "♡ Folg denne";
+  knapp.className = "folg-knapp" + (folges ? " pa" : "");
+  knapp.onclick = () => vekslFolg(state.apentProdukt);
+}
+
 function tilbudHtml(t) {
   return '<a class="tilbud" href="' + esc(t.url) + '" target="_blank" rel="noopener nofollow">' +
+    (t.image_url ? '<img class="tilbud-bilde" loading="lazy" src="' + esc(t.image_url) + '" alt="">' : "") +
     '<span class="tilbud-venstre"><span class="tilbud-butikk">' +
       esc(t.store_name || butikknavn(t.store_id)) + "</span>" +
     '<span class="tilbud-tittel">' + esc(t.title) + "</span></span>" +
@@ -201,6 +280,155 @@ function lukkArk() {
   $("ark").hidden = true;
   $("ark-bakgrunn").hidden = true;
   document.body.style.overflow = "";
+  state.apentProdukt = null;
+}
+
+/* ---------------------------------------------------------- konto */
+
+async function lastBruker() {
+  try {
+    const d = await hent("/auth/me");
+    state.bruker = d.innlogget ? d : null;
+  } catch (e) {
+    state.bruker = null;
+  }
+  $("konto-knapp").classList.toggle("innlogget", !!state.bruker);
+  if (state.bruker) {
+    await lastFolger();
+    // Folgelisten kommer etter forste tegning. Uten denne omtegningen ser du
+    // ingen hjerter for du tilfeldigvis rorer et filter.
+    if (state.produkter.length) tegnProdukter();
+  }
+}
+
+async function lastFolger() {
+  try {
+    const d = await hent("/watchlist");
+    state.folger = new Map(d.folger.filter((f) => f.product_id).map((f) => [f.product_id, f.id]));
+  } catch (e) {
+    state.folger = new Map();
+  }
+}
+
+async function vekslFolg(produktId) {
+  try {
+    if (state.folger.has(produktId)) {
+      await hent("/watchlist/" + state.folger.get(produktId), { method: "DELETE" });
+      state.folger.delete(produktId);
+    } else {
+      const d = await hent("/watchlist", {
+        method: "POST",
+        body: JSON.stringify({ product_id: produktId, kinds: ["restock", "ny"] }),
+      });
+      state.folger.set(produktId, d.id);
+    }
+    tegnFolgKnapp();
+    tegnProdukter();
+  } catch (e) {
+    alert("Klarte ikke a lagre: " + e.message);
+  }
+}
+
+function apneKonto() {
+  if (state.bruker) return visKontoSide();
+  visArk(skjemaHtml("logg-inn"));
+  koblSkjema();
+}
+
+function skjemaHtml(modus) {
+  const erNy = modus === "registrer";
+  return '<h2>' + (erNy ? "Lag konto" : "Logg inn") + "</h2>" +
+    '<p class="hjelp">' + (erNy
+      ? "Med konto kan du folge produkter og fa dem samlet under Folger. Varsler kommer nar Web Push er pa plass."
+      : "Velkommen tilbake.") + "</p>" +
+    '<form id="konto-skjema" class="skjema" novalidate>' +
+      '<label>E-post<input id="k-epost" type="email" autocomplete="email" required></label>' +
+      '<label>Passord<input id="k-passord" type="password" ' +
+        'autocomplete="' + (erNy ? "new-password" : "current-password") + '" ' +
+        'minlength="' + (erNy ? 8 : 1) + '" required></label>' +
+      (erNy ? '<p class="hjelp liten">Minst 8 tegn.</p>' : "") +
+      '<p class="feil" id="k-feil" hidden></p>' +
+      '<button class="hovedknapp" type="submit">' + (erNy ? "Lag konto" : "Logg inn") + "</button>" +
+    "</form>" +
+    '<button class="lenkeknapp" id="bytt-modus" type="button" data-modus="' +
+      (erNy ? "logg-inn" : "registrer") + '">' +
+      (erNy ? "Har du konto? Logg inn" : "Ny her? Lag konto") + "</button>";
+}
+
+function koblSkjema() {
+  const skjema = $("konto-skjema");
+  if (!skjema) return;
+  skjema.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const erNy = skjema.parentElement.querySelector("#bytt-modus").dataset.modus === "logg-inn";
+    const feil = $("k-feil");
+    feil.hidden = true;
+    const knapp = skjema.querySelector("button[type=submit]");
+    knapp.disabled = true;
+    try {
+      await hent("/auth/" + (erNy ? "register" : "login"), {
+        method: "POST",
+        body: JSON.stringify({ email: $("k-epost").value.trim(), password: $("k-passord").value }),
+      });
+      await lastBruker();
+      lukkArk();
+      tegnProdukter();
+      if (state.fane === "folger") tegnFolgerFane();
+    } catch (err) {
+      feil.textContent = err.message;
+      feil.hidden = false;
+    } finally {
+      knapp.disabled = false;
+    }
+  });
+  $("bytt-modus").addEventListener("click", (e) => {
+    visArk(skjemaHtml(e.target.dataset.modus));
+    koblSkjema();
+  });
+}
+
+function visKontoSide() {
+  visArk('<h2>Konto</h2>' +
+    '<p class="hjelp">Innlogget som <strong>' + esc(state.bruker.email) + "</strong>" +
+    (state.bruker.role !== "free" ? " · " + esc(state.bruker.role) : "") + "</p>" +
+    '<p class="hjelp liten">Du folger ' + state.folger.size + " produkt" +
+      (state.folger.size === 1 ? "" : "er") + ".</p>" +
+    '<button class="hovedknapp" id="logg-ut" type="button">Logg ut</button>');
+  $("logg-ut").addEventListener("click", async () => {
+    await hent("/auth/logout", { method: "POST" });
+    state.bruker = null;
+    state.folger = new Map();
+    $("konto-knapp").classList.remove("innlogget");
+    lukkArk();
+    tegnProdukter();
+    if (state.fane === "folger") tegnFolgerFane();
+  });
+}
+
+/* --------------------------------------------------------- folger-fane */
+
+async function tegnFolgerFane() {
+  const boks = $("folger-innhold");
+  if (!state.bruker) {
+    boks.innerHTML = '<p class="tom">Logg inn for a folge produkter.<br>' +
+      '<button class="hovedknapp smal" id="folger-logg-inn" type="button">Logg inn eller lag konto</button></p>';
+    $("folger-logg-inn").addEventListener("click", apneKonto);
+    return;
+  }
+  boks.innerHTML = '<p class="hjelp">Laster…</p>';
+  try {
+    const d = await hent("/watchlist/snapshot");
+    if (!d.produkter.length) {
+      boks.innerHTML = '<p class="tom">Du folger ingen produkter enna.<br>' +
+        "Apne et produkt og trykk «Folg denne».</p>";
+      return;
+    }
+    const pa = d.produkter.filter((p) => p.antall_pa_lager).length;
+    boks.innerHTML = '<p class="teller">' + d.produkter.length + " fulgte produkter · " +
+      pa + " pa lager na</p>" + '<div class="liste">' + grupperHtml(d.produkter) + "</div>";
+  } catch (e) {
+    boks.innerHTML = '<p class="tom">Klarte ikke a hente folgelisten.</p>';
+  }
 }
 
 /* ----------------------------------------------------------- hendelser */
@@ -254,6 +482,7 @@ function visMerAndre() {
   const bit = state.andre.slice(state.andreVist, state.andreVist + 60);
   $("andre").insertAdjacentHTML("beforeend", bit.map((v) =>
     '<a class="kort" href="' + esc(v.url) + '" target="_blank" rel="noopener nofollow">' +
+    (v.image_url ? '<img class="miniatyr" loading="lazy" src="' + esc(v.image_url) + '" alt="">' : "") +
     '<span class="kort-venstre"><span class="kort-navn">' + esc(v.title) + "</span>" +
     '<span class="kort-under">' + esc(butikknavn(v.store_id)) + "</span></span>" +
     '<span class="kort-hoyre"><span class="pris">' + (kr(v.price_ore) || "–") + "</span>" +
@@ -263,7 +492,7 @@ function visMerAndre() {
   $("mer-andre").hidden = state.andreVist >= state.andre.length;
 }
 
-/* ------------------------------------------------------------- hendel. */
+/* --------------------------------------------------------------- faner */
 
 function byttFane(navn) {
   state.fane = navn;
@@ -274,10 +503,12 @@ function byttFane(navn) {
   }
   $("fane-produkter").hidden = navn !== "produkter";
   $("fane-nytt").hidden = navn !== "nytt";
+  $("fane-folger").hidden = navn !== "folger";
   $("fane-andre").hidden = navn !== "andre";
   document.querySelector(".sok-rad").hidden = navn !== "produkter";
   $("chips").hidden = navn !== "produkter";
   if (navn === "nytt") lastHendelser();
+  if (navn === "folger") tegnFolgerFane();
   if (navn === "andre") lastAndre();
   scrollTo({ top: 0 });
 }
@@ -326,6 +557,7 @@ function koble() {
   for (const b of document.querySelectorAll(".fane-knapp"))
     b.addEventListener("click", () => byttFane(b.dataset.fane));
 
+  $("konto-knapp").addEventListener("click", apneKonto);
   $("ark-lukk").addEventListener("click", lukkArk);
   $("ark-bakgrunn").addEventListener("click", lukkArk);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") lukkArk(); });
@@ -351,6 +583,7 @@ function koble() {
 
 koble();
 last();
+lastBruker();
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").catch(() => {});
