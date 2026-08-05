@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T07:35:52+00:00",
+      "store": "Pokelageret",
+      "name": "M Steelix EX - 68/114 - HP",
+      "price": "59.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/m-steelix-ex-68-114?variant=49002529128699",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T07:35:52+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee & Snorlax GX - SM169 - NM",
+      "price": "2409.00 kr",
+      "previous_price": "2125.00 kr",
+      "url": "https://pokelageret.no/products/eevee-snorlax-gx-sm169?variant=48843542921467",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T07:35:52+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu & Zekrom GX - SM168 - NM",
+      "price": "3055.00 kr",
+      "previous_price": "2775.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-zekrom-gx-sm168?variant=48843512643835",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T07:01:04+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Storm Emeralda Japansk Display Booster Box",
@@ -179435,33 +179462,6 @@
       "name": "Mew V 039/100 - Fusion Arts - NM (ID: 53214811502892)",
       "price": "39.00 kr",
       "url": "https://laboge.no/products/mew-v-039-100-fusion-arts?variant=54028809175339",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 039/100 - Fusion Arts - NM (ID: 53214825818600)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/mew-v-039-100-fusion-arts?variant=54028809208107",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 039/100 - Fusion Arts - NM (ID: 53214839628541)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/mew-v-039-100-fusion-arts?variant=54028809240875",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 039/100 - Fusion Arts - NM (ID: 53215061988904)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/mew-v-039-100-fusion-arts?variant=54028809273643",
       "product_class": "card",
       "event": "ny"
     }
