@@ -1,6 +1,39 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T12:19:35+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - 3 Pack Blister",
+      "price": "329.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-3-pack-blister?variant=52244102971693",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T12:19:35+00:00",
+      "store": "Pokelageret",
+      "name": "Palafin - 200/197 - NM",
+      "price": "69.00 kr",
+      "url": "https://pokelageret.no/products/palafin-200-197?variant=48846484242683",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T12:19:35+00:00",
+      "store": "Pokelageret",
+      "name": "Professor Turo's Scenario - 240/182 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/professor-turos-scenario-240-182?variant=48849607033083",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T12:19:35+00:00",
+      "store": "Pokelageret",
+      "name": "Walking Wake ex - 178/131 - NM",
+      "price": "75.00 kr",
+      "url": "https://pokelageret.no/products/walking-wake-ex-178-131?variant=48846445936891",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T11:59:40+00:00",
       "store": "Pokelageret",
       "name": "Electrike - 196/182 - NM",
@@ -179403,42 +179436,6 @@
       "price": "99.00 kr",
       "url": "https://braspill.no/products/pokemon-perfect-order-1-pack-blister-makuhita?variant=53699504374052",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon Mega Evolution 2,5 gaveeske Assortert - Feraligatr",
-      "price": "1049.00 kr",
-      "url": "https://braspill.no/products/pokemon-mega-evolution-2-5-gaveeske-assortert?variant=55743009030436",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon Mega Evolution 2,5 gaveeske Assortert - Emboar",
-      "price": "1049.00 kr",
-      "url": "https://braspill.no/products/pokemon-mega-evolution-2-5-gaveeske-assortert?variant=55743009063204",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon Mega Evolution 2,5 gaveeske Assortert - Meganium",
-      "price": "1049.00 kr",
-      "url": "https://braspill.no/products/pokemon-mega-evolution-2-5-gaveeske-assortert?variant=55743009325348",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon Ascended Heroes Deluxe Pin Collection - First Partners",
-      "price": "1259.00 kr",
-      "url": "https://braspill.no/products/kommer-inn-29-april-pokemon-ascended-heroes-deluxe-pin-coll-first-partners?variant=53345311981860",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
