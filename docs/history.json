@@ -1,6 +1,31 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T05:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Chaos Rising Booster Box",
+      "price": "2844.00 kr",
+      "url": "https://pokelageret.no/products/chaos-rising-booster-box?variant=48862993580283",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T05:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Back to School Tin 2024",
+      "price": "499.00 kr",
+      "url": "https://pokelageret.no/products/back-to-school-tin-2024?variant=47534649639163",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T05:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Scizor V - 118/189 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/scizor-v-118-189?variant=48887902306555",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T05:19:14+00:00",
       "store": "Pokelageret",
       "name": "Gardevoir ex - 93/101 - NM",
@@ -179437,33 +179462,6 @@
       "name": "Switch 102/080 - Inferno X - NM (ID: 53515782414726)",
       "price": "15.00 kr",
       "url": "https://laboge.no/products/switch-inferno-x-102-080?variant=54147655598379",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Sobble 224/190 - Shiny Star V - NM (ID: 53515782942763)",
-      "price": "20.00 kr",
-      "url": "https://laboge.no/products/sobble-shiny-star-v-224-190?variant=54147655500075",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Sinistea 251/190 - Shiny Star V - NM (ID: 53515782747183)",
-      "price": "19.00 kr",
-      "url": "https://laboge.no/products/sinistea-shiny-star-v-251-190?variant=54147655467307",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Rotom 237/190 - Shiny Star V - NM (ID: 53515783005667)",
-      "price": "29.00 kr",
-      "url": "https://laboge.no/products/rotom-shiny-star-v-237-190?variant=54147655401771",
       "product_class": "card",
       "event": "ny"
     }
