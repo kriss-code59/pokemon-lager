@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T04:39:10+00:00",
+      "store": "Pokelageret",
+      "name": "Dragonite VSTAR - 050/078 - NM",
+      "price": "45.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/dragonite-vstar-050-078?variant=49123175366907",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:39:10+00:00",
+      "store": "Pokelageret",
+      "name": "Sylveon - 035/078 - NM / Reverse Holofoil",
+      "price": "12.00 kr",
+      "previous_price": "13.00 kr",
+      "url": "https://pokelageret.no/products/sylveon-035-078?variant=48886999580923",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:39:10+00:00",
+      "store": "Pokelageret",
+      "name": "Giratina VSTAR - 131/196 - NM",
+      "price": "35.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/giratina-vstar-131-196?variant=48843536335099",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:39:10+00:00",
+      "store": "Pokelageret",
+      "name": "Mewtwo VSTAR - 031/078 - NM",
+      "price": "95.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/mewtwo-vstar-031-078?variant=48843525947643",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T04:18:56+00:00",
       "store": "Pokelageret",
       "name": "Swablu - GG27/GG70 - NM",
@@ -179428,42 +179464,6 @@
       "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415275018)",
       "price": "36.50 kr",
       "url": "https://laboge.no/products/parasect-dark-phantasma-072-071?variant=54153438789931",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415324073)",
-      "price": "36.50 kr",
-      "url": "https://laboge.no/products/parasect-dark-phantasma-072-071?variant=54153438822699",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 105/100 - Fusion Arts - NM (ID: 53515782114186)",
-      "price": "315.00 kr",
-      "url": "https://laboge.no/products/mew-v-fusion-arts-105-100?variant=54147655237931",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Aegislash ex (C) 146 - Dark Crystal Blaze",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/aegislash-ex-c-146-dark-crystal-blaze-608403?variant=53521723621655",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Aegislash ex 135 - Paradox Rift",
-      "price": "15.00 kr",
-      "url": "https://pokesingles.no/products/aegislash-ex-135-paradox-rift?variant=53024587120919",
       "product_class": "card",
       "event": "ny"
     }
