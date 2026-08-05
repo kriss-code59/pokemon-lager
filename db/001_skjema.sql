@@ -61,6 +61,10 @@ CREATE TABLE IF NOT EXISTS listings (
   -- "nytt produkt"-varsler. Se carry_forward_failed_stores() i scrape.py.
   last_ok_at    TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+-- Butikkens produktbilde. Lagt til etter at tabellen fantes, derfor ALTER:
+-- skjemaet skal kunne kjores pa nytt mot en database som allerede er i drift.
+ALTER TABLE listings ADD COLUMN IF NOT EXISTS image_url TEXT;
+
 CREATE INDEX IF NOT EXISTS listings_product_idx ON listings (product_id) WHERE product_id IS NOT NULL;
 CREATE INDEX IF NOT EXISTS listings_store_idx   ON listings (store_id);
 CREATE INDEX IF NOT EXISTS listings_instock_idx ON listings (product_id, in_stock) WHERE in_stock;
