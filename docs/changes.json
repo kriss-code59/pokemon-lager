@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T17:00:00+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon Storm Emeralda Japansk Booster Box",
+      "price": "2399.00 kr",
+      "url": "https://epicards.no/products/pokemon-storm-emeralda-japansk-booster-box?variant=56893719150758",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-05T16:20:05+00:00",
       "store": "EpiCards",
       "name": "Pokémon Mega Dream Japansk Booster Box",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon Pitch Black Elite Trainer Box (B-vare)",
       "price": "1699.00 kr",
       "url": "https://pokestore.no/products/pokemon-pitch-black-elite-trainer-box-b-vare?variant=52444157870311",
-      "product_class": "card",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-04T09:19:25+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon TCG: Mega Greninja ex Premium Collection (B-vare)",
-      "price": "999.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tcg-mega-greninja-ex-premium-collection-b-vare?variant=52444179038439",
       "product_class": "card",
       "event": "restock"
     }

@@ -1,6 +1,23 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T17:00:00+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon Storm Emeralda Japansk Booster Box",
+      "price": "2399.00 kr",
+      "url": "https://epicards.no/products/pokemon-storm-emeralda-japansk-booster-box?variant=56893719150758",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T17:00:00+00:00",
+      "store": "Pokesingles",
+      "name": "Budew 221 - Ascended Heroes",
+      "price": "89.00 kr",
+      "url": "https://pokesingles.no/products/budew-221-ascended-heroes?variant=53024905396503",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T16:20:05+00:00",
       "store": "EpiCards",
       "name": "Pokémon Mega Dream Japansk Booster Box",
@@ -179399,24 +179416,6 @@
       "price": "599.00 kr",
       "url": "https://cardcenter.no/products/pokemon-trading-card-game-classic-collection-kun-brett",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Fuecoco & Ampharos Starter Deck",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-fuecoco-ampharos-starter-deck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Ceruledge",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-ceruledge",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
