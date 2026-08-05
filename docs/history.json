@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T03:19:07+00:00",
+      "store": "Pokelageret",
+      "name": "Iron Leaves ex - 203/162 - NM",
+      "price": "435.00 kr",
+      "previous_price": "449.00 kr",
+      "url": "https://pokelageret.no/products/iron-leaves-ex-203-162?variant=48846445248763",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T02:59:06+00:00",
       "store": "Pokelageret",
       "name": "Night Stretcher - 061/064 - NM / Normal",
@@ -179455,15 +179464,6 @@
       "name": "Blowtorch 117 - Phantasmal Flames",
       "price": "39.00 kr",
       "url": "https://pokesingles.no/products/blowtorch-117-phantasmal-flames?variant=53024869515543",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Blowtorch 86 - Phantasmal Flames",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/blowtorch-86-phantasmal-flames?variant=53024864928023",
       "product_class": "card",
       "event": "ny"
     }
