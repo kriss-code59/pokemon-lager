@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Wondrous Patch - 117/088 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/wondrous-patch-117-088?variant=48979088408827",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu V - 008/025",
+      "price": "59.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-v-008-27?variant=49145672433915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Shaymin V - 013/172",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/shaymin-v-013-173?variant=49145654771963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Norman - 237/182 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/norman-237-182?variant=49145656049915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-05T13:00:02+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Mega Venusaur ex Premium Collection",
@@ -2661,42 +2697,6 @@
       "name": "Mega Charizard X ex Ultra Premium Collection",
       "price": "3299.00 kr",
       "url": "https://pokelageret.no/products/charizard-ultra-premium-collection?variant=47763581305083",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Pokemon 151 Booster Bundle Display",
-      "price": "27999.00 kr",
-      "url": "https://pokelageret.no/products/pokemon-151-booster-bundle?variant=47715223830779",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Shiny Treasure - Booster Box",
-      "price": "1799.00 kr",
-      "url": "https://pokelageret.no/products/shiny-treasure-booster-box?variant=47535791014139",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Shiny Treasure - Booster Pack",
-      "price": "199.00 kr",
-      "url": "https://pokelageret.no/products/shiny-treasure-booster-box?variant=47903027462395",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mega Venusaur ex Premium Collection",
-      "price": "899.00 kr",
-      "url": "https://pokelageret.no/products/mega-venusaur-ex-premium-collection?variant=47690431889659",
       "product_class": "card",
       "event": "ny"
     }

@@ -1,6 +1,94 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Wondrous Patch - 117/088 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/wondrous-patch-117-088?variant=48979088408827",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu V - 008/025",
+      "price": "59.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-v-008-27?variant=49145672433915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Shaymin V - 013/172",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/shaymin-v-013-173?variant=49145654771963",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Norman - 237/182 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/norman-237-182?variant=49145656049915",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Japansk 30th Anniversary PokeBall Ornament Set",
+      "price": "4799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-japansk-30th-anniversary-pokeball-ornament-set",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokelageret",
+      "name": "Wondrous Patch - 117/088 - NM",
+      "price": "39.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/wondrous-patch-117-088?variant=48979088408827",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Kotobukiya ARTFXJ Statue 1/8 Juliana & Sprigatito Statue",
+      "price": "1799.00 kr",
+      "url": "https://pokestore.no/products/pokemon-kotobukiya-artfxj-statue-1-8-juliana-sprigatito?variant=51539054100711",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Brilliant Stars - Booster Pack",
+      "price": "229.00 kr",
+      "previous_price": "219.00 kr",
+      "url": "https://retroworld.no/products/brilliant-stars-booster-pack?variant=50101582299437",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Playlot",
+      "name": "Mabostiff EX Collection Box",
+      "price": "kr 599,00",
+      "previous_price": "kr 479,00",
+      "url": "https://playlot.no/produkt/mabostiff-ex-collection-box/",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T13:36:25+00:00",
+      "store": "Playlot",
+      "name": "Mega Kangaskhan EX Collection",
+      "price": "kr 599,00",
+      "previous_price": "kr 419,00",
+      "url": "https://playlot.no/produkt/mega-kangaskhan-ex-collection/",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T13:00:02+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Mega Venusaur ex Premium Collection",
@@ -179342,96 +179430,6 @@
       "name": "Pokemon Prime Figur - Pikachu",
       "price": "599.00 kr",
       "url": "https://cardcenter.no/products/pokemon-prime-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Bulbasaur",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Squirtle",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Starter Deck Generations Special Battle Set",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-starter-deck-generations-special-battle-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Maks 10 per pers. Pokemon Ascended Heroes Boosterpakke",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Jigglypuff",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-jigglypuff",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Center - Glory of Team Rocket Sleeves",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-center-glory-of-team-rocket-sleeves",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle Great Ball",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-great-ball",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Takara Tomy Pokemon Moncolle Baxcalibur",
-      "price": "135.00 kr",
-      "url": "https://cardcenter.no/products/japansk-takara-tomy-pokemon-moncolle-baxcalibur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Boulder",
-      "price": "69.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-boulder",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Pokedex Metal Charm 1014",
-      "price": "55.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-pokedex-metal-charm-1014",
       "product_class": "card",
       "event": "ny"
     }
