@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T11:39:30+00:00",
+      "store": "Pokelageret",
+      "name": "Fuecoco - 002 - NM",
+      "price": "75.00 kr",
+      "url": "https://pokelageret.no/products/fuecoco-002?variant=49131443552507",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T11:39:30+00:00",
+      "store": "Pokelageret",
+      "name": "Drapion V - GG49/GG70 - NM",
+      "price": "155.00 kr",
+      "url": "https://pokelageret.no/products/drapion-v-gg49-gg70?variant=48849613357307",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T11:19:53+00:00",
       "store": "Pokelageret",
       "name": "Dedenne - 093/088 - NM",
@@ -179424,24 +179440,6 @@
       "name": "Pokemon Ascended Heroes Boosterpakke",
       "price": "250.00 kr",
       "url": "https://braspill.no/products/pokemon-ascended-heroes-boosterpakke?variant=53345268302116",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon Paldean Fates Tin Iron Threads",
-      "price": "1249.00 kr",
-      "url": "https://braspill.no/products/forhandssalg-pokemon-paldean-fates-tin-iron-threads-ventes-inn-29-april?variant=53345262895396",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon Paldean Fates Tin Charizard",
-      "price": "1499.00 kr",
-      "url": "https://braspill.no/products/forhandssalg-pokemon-paldean-fates-tin-charizard-ventes-inn-29-april?variant=53345254768932",
       "product_class": "card",
       "event": "ny"
     }
