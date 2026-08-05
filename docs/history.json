@@ -1,6 +1,63 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon TCG: MEGA M6a Expansion Pack – 30th Celebration (Japansk Booster Display Box)",
+      "price": "5799 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-mega-m6a-expansion-pack-30th-celebration-japansk-booster-display-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Pokelageret",
+      "name": "Dedenne - 093/088 - NM",
+      "price": "69.00 kr",
+      "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Pokelageret",
+      "name": "Charizard ex - 161 - NM",
+      "price": "85.00 kr",
+      "url": "https://pokelageret.no/products/charizard-ex-161?variant=49002491543803",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Pokelageret",
+      "name": "Cofagrigus - 083/191 - NM / Holofoil",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/cofagrigus-083-191?variant=48989096509691",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Pokelageret",
+      "name": "Dipplin - 010/131 - NM",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/dipplin-010-131?variant=48985084690683",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Pokelageret",
+      "name": "Dragonite - 149/165 - NM / Holofoil",
+      "price": "19.00 kr",
+      "url": "https://pokelageret.no/products/dragonite-149-165?variant=48884974813435",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T19:40:08+00:00",
+      "store": "Boosterpakker",
+      "name": "ABYSS EYE BOOSTER BOKS",
+      "price": "1 149,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/abyss-eye-booster-boks-kommer-snart",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T19:00:10+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 011/217 – Wurmple",
@@ -179345,69 +179402,6 @@
       "name": "Pokemon Dream Painting Water Figure Mystery Box",
       "price": "399.00 kr",
       "url": "https://cardcenter.no/products/pokemon-dream-painting-water-figure-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Bulbasaur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Sobble Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-sobble-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Meowth",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-meowth",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Bulbasaur",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Fireworks Pikachu",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-fireworks-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Primordial Arts Blastoise Trainer Box",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-primordial-arts-blastoise-trainer-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Alolan Exeggutor Gaveboks",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-alolan-exeggutor-gaveboks",
       "product_class": "card",
       "event": "ny"
     }

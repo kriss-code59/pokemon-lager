@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05T19:00:11+00:00",
+  "last_updated": "2026-08-05T19:40:09+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -8165,7 +8165,7 @@
       "store": "Pokelageret",
       "name": "Dedenne - 093/088 - NM",
       "price": "69.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
       "store_count": null,
       "product_class": "card",
@@ -8795,7 +8795,7 @@
       "store": "Pokelageret",
       "name": "Charizard ex - 161 - NM",
       "price": "85.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/charizard-ex-161?variant=49002491543803",
       "store_count": null,
       "product_class": "card",
@@ -12475,7 +12475,7 @@
       "store": "Pokelageret",
       "name": "Cofagrigus - 083/191 - NM / Holofoil",
       "price": "5.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/cofagrigus-083-191?variant=48989096509691",
       "store_count": null,
       "product_class": "card",
@@ -13685,7 +13685,7 @@
       "store": "Pokelageret",
       "name": "Dipplin - 010/131 - NM",
       "price": "5.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/dipplin-010-131?variant=48985084690683",
       "store_count": null,
       "product_class": "card",
@@ -14245,7 +14245,7 @@
       "store": "Pokelageret",
       "name": "Dragonite - 149/165 - NM / Holofoil",
       "price": "19.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/dragonite-149-165?variant=48884974813435",
       "store_count": null,
       "product_class": "card",
@@ -180965,7 +180965,7 @@
       "store": "Boosterpakker",
       "name": "ABYSS EYE BOOSTER BOKS",
       "price": "1 149,00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://boosterpakker.no/produkt/booster-bokser/abyss-eye-booster-boks-kommer-snart",
       "store_count": null,
       "product_class": "card",
@@ -182173,6 +182173,16 @@
     },
     {
       "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon TCG: MEGA M6a Expansion Pack – 30th Celebration (Japansk Booster Display Box)",
+      "price": "5799 kr",
+      "in_stock": true,
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-mega-m6a-expansion-pack-30th-celebration-japansk-booster-display-box",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cdn.quickbutik.com/images/96848J/products/6a738d9c1c46d.jpeg?w=350&h=350&auto=format"
+    },
+    {
+      "store": "Mystic Trades",
       "name": "[BESTILLINGSVARE] – Pokémon TCG: Mega Evolution: Ascended Heroes – Focused Fighters Premium Poster Collection (14 Boosters)",
       "price": "4599 kr",
       "in_stock": true,
@@ -182640,16 +182650,6 @@
       "store_count": null,
       "product_class": "card",
       "image": "https://cdn.quickbutik.com/images/96848J/products/6a46a09472a33.jpeg?w=350&h=350&auto=format"
-    },
-    {
-      "store": "Mystic Trades",
-      "name": "[KOMMER SNART] – Pokémon: 30th Celebration – Mini Tins Display (10 stk. Mini Tins)",
-      "price": "0 kr",
-      "in_stock": false,
-      "url": "https://mystictrades.no/nyheter-forhandsbestilling/kommer-snart-pokemon-30th-celebration-mini-tins-display-10-stk-mini-tins",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://cdn.quickbutik.com/images/96848J/products/6a46a03de4849.jpeg?w=350&h=350&auto=format"
     },
     {
       "store": "Mystic Trades",
