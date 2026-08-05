@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T11:19:53+00:00",
+      "store": "Pokelageret",
+      "name": "Dedenne - 093/088 - NM",
+      "price": "69.00 kr",
+      "url": "https://pokelageret.no/products/dedenne-093-088?variant=48960193200379",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T11:19:53+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - TG11/TG30 - MP",
+      "price": "255.00 kr",
+      "url": "https://pokelageret.no/products/eevee-tg11-tg30?variant=49144545313019",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T11:19:53+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 005/025 - HP",
+      "price": "124.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-005-025?variant=49144545378555",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-05T10:59:34+00:00",
       "store": "Pokelageret",
       "name": "Chespin - 087/086 - NM",
@@ -2670,33 +2697,6 @@
       "name": "Jirachi/Celebi 2-Pack Blister",
       "price": "399.00 kr",
       "url": "https://pokelageret.no/products/jirachi-celebi-2-pack-blister?variant=47772560621819",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Lillie Premium Tournament Collection",
-      "price": "899.00 kr",
-      "url": "https://pokelageret.no/products/lillie-premium-tournament-collection?variant=47518630019323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mega Kangaskhan ex Box",
-      "price": "499.00 kr",
-      "url": "https://pokelageret.no/products/mega-kangaskhan-ex-box?variant=47690431135995",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Destined Rivals Checklane Blister - Eevee",
-      "price": "199.00 kr",
-      "url": "https://pokelageret.no/products/destined-rivals-checklane-blister?variant=47537663869179",
       "product_class": "card",
       "event": "ny"
     }
