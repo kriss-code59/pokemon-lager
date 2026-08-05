@@ -1,6 +1,57 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Mega Evolution Booster Pack",
+      "price": "119.00 kr",
+      "url": "https://pokenordic.no/products/mega-evolution-booster-pack?variant=47546693976318",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - 3 Pack Blister",
+      "price": "329.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-3-pack-blister?variant=50599224377645",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "Pokelageret",
+      "name": "Pitch Black Booster Pakke",
+      "price": "79.00 kr",
+      "url": "https://pokelageret.no/products/pitch-black-booster-pakke?variant=49125959729403",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - 3 Pack Blister",
+      "price": "329.00 kr",
+      "previous_price": "279.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-3-pack-blister?variant=50599224377645",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - Booster Pack",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-booster-pack-apnes-live-pa-stream?variant=50420450853165",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon 151C Gathering Booster Box (Simplified Chinese)",
+      "price": "1429 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-151c-gathering-booster-box-forenklet-kinesisk",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T17:40:21+00:00",
       "store": "EpiCards",
       "name": "Pokemon Storm Emeralda Japansk Booster Pakke",
@@ -179361,60 +179412,6 @@
       "name": "Pokemon Kinesisk Figur - Hanging Pikachu",
       "price": "179.00 kr",
       "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Glowing Pikachu",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-glowing-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Typhlosion Kort Display Ramme",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-typhlosion-kort-display-ramme",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Valiant",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-valiant",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Thorns",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-thorns",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Quaxly Quaxwell Quaquaval",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-quaxly-quaxwell-quaquaval",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Gouging Fire",
-      "price": "79.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-raging-fire",
       "product_class": "card",
       "event": "ny"
     }

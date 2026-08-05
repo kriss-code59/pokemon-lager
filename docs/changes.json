@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "PokeNordic",
+      "name": "Pokémon Mega Evolution Booster Pack",
+      "price": "119.00 kr",
+      "url": "https://pokenordic.no/products/mega-evolution-booster-pack?variant=47546693976318",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T18:20:03+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - 3 Pack Blister",
+      "price": "329.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-3-pack-blister?variant=50599224377645",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-05T17:40:21+00:00",
       "store": "EpiCards",
       "name": "Pokemon Storm Emeralda Japansk Booster Pakke",
@@ -2680,24 +2698,6 @@
       "price": "99.00 kr",
       "url": "https://cardcenter.no/products/pokemon-prismatic-evolution-figure-collection-sleeves",
       "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-04T09:59:11+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Ascended Heroes ETB Sleeves",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-ascended-heroes-etb-sleeves",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-04T09:39:20+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Stellar Crown Elite Trainer Box (B-vare)",
-      "price": "1599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-stellar-crown-elite-trainer-box-b-vare?variant=51230674682087",
-      "product_class": "card",
       "event": "restock"
     }
   ]

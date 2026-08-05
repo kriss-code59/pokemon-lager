@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05T17:40:21+00:00",
+  "last_updated": "2026-08-05T18:20:03+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -7765,7 +7765,7 @@
       "store": "Pokelageret",
       "name": "Pitch Black Booster Pakke",
       "price": "79.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/pitch-black-booster-pakke?variant=49125959729403",
       "store_count": null,
       "product_class": "card",
@@ -81655,7 +81655,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Mega Evolution Booster Pack",
       "price": "119.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokenordic.no/products/mega-evolution-booster-pack?variant=47546693976318",
       "store_count": null,
       "product_class": "card",
@@ -175234,8 +175234,8 @@
     {
       "store": "RetroWorld",
       "name": "Pokemon - Journey Together (Scarlet & Violet) - 3 Pack Blister",
-      "price": "279.00 kr",
-      "in_stock": false,
+      "price": "329.00 kr",
+      "in_stock": true,
       "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-3-pack-blister?variant=50599224377645",
       "store_count": null,
       "product_class": "card",
@@ -176165,7 +176165,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Prismatic Evolutions - Booster Pack",
       "price": "299.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-booster-pack-apnes-live-pa-stream?variant=50420450853165",
       "store_count": null,
       "product_class": "card",
@@ -178887,7 +178887,7 @@
       "price": "",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-abyss-eye-booster-display-boks-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462127",
-      "store_count": 9,
+      "store_count": 10,
       "product_class": "card",
       "image": null
     },
@@ -178897,7 +178897,7 @@
       "price": "",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-abyss-eye-booster-pack-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462110",
-      "store_count": 10,
+      "store_count": 11,
       "product_class": "card",
       "image": null
     },
@@ -178917,7 +178917,7 @@
       "price": "",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-pokemon-cross-stitch-kit-9781446310618",
-      "store_count": 9,
+      "store_count": 8,
       "product_class": "card",
       "image": null
     },
@@ -179815,7 +179815,7 @@
       "store": "Maxgaming",
       "name": "Pokémon 151C Gathering Booster Box (Simplified Chinese)",
       "price": "1429 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://www.maxgaming.no/no/pokemon/pokemon-151c-gathering-booster-box-forenklet-kinesisk",
       "store_count": null,
       "product_class": "card",
