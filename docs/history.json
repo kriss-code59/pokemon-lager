@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T02:59:06+00:00",
+      "store": "Pokelageret",
+      "name": "Night Stretcher - 061/064 - NM / Normal",
+      "price": "6.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokelageret.no/products/night-stretcher-061-064?variant=48979497091323",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:59:06+00:00",
+      "store": "Pokelageret",
+      "name": "Blastoise ex - 030/142 - NM",
+      "price": "39.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/blastoise-ex-030-142?variant=48960208765179",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T02:39:14+00:00",
       "store": "Maxgaming",
       "name": "Pokémon Storm Emeralda Booster Box (Japanese)",
@@ -179446,24 +179464,6 @@
       "name": "Blowtorch 86 - Phantasmal Flames",
       "price": "4.00 kr",
       "url": "https://pokesingles.no/products/blowtorch-86-phantasmal-flames?variant=53024864928023",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bombirdier 071/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/bombirdier-071084-reverse-holo-pitch-black-343212?variant=54068803862807",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bombirdier 071/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/bombirdier-071084-pitch-black-572000?variant=54068645003543",
       "product_class": "card",
       "event": "ny"
     }
