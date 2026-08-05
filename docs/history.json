@@ -1,6 +1,87 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Gardevoir ex - 93/101 - NM",
+      "price": "125.00 kr",
+      "previous_price": "129.00 kr",
+      "url": "https://pokelageret.no/products/gardevoir-ex-93-101?variant=48984728830203",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Team Magma's Groudon - 9/95 - NM",
+      "price": "19.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/team-magmas-groudon-9-95?variant=48846414643451",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Lugia - 022/025",
+      "price": "9.00 kr",
+      "previous_price": "10.00 kr",
+      "url": "https://pokelageret.no/products/lugia-022-25?variant=49139239616763",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Wigglytuff - 111/264 - LP / Normal",
+      "price": "12.00 kr",
+      "previous_price": "14.00 kr",
+      "url": "https://pokelageret.no/products/wigglytuff-111-264?variant=48985113035003",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 049/203 - NM / Reverse Holofoil",
+      "price": "11.00 kr",
+      "previous_price": "12.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-049-203?variant=48887001940219",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Galarian Moltres - 093/203 - NM / Holofoil",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/galarian-moltres-093-203?variant=48886991126779",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Kyogre - 003/025 - NM",
+      "price": "6.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokelageret.no/products/kyogre-003-025?variant=48884989624571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Zekrom - 010/025 - NM",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/zekrom-010-025?variant=48884981235963",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T05:19:14+00:00",
+      "store": "Pokelageret",
+      "name": "Luxray GL LV.X - 109/111 - NM",
+      "price": "49.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/luxray-gl-lv-x-109-111?variant=48846268399867",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T04:59:12+00:00",
       "store": "Pokelageret",
       "name": "Zekrom - TG05/TG30 - NM",
@@ -179383,87 +179464,6 @@
       "name": "Rotom 237/190 - Shiny Star V - NM (ID: 53515783005667)",
       "price": "29.00 kr",
       "url": "https://laboge.no/products/rotom-shiny-star-v-237-190?variant=54147655401771",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Shiny Treasure EX (Japansk) (Live) - Boosterboks (10 pakker)",
-      "price": "1999.00 kr",
-      "url": "https://laboge.no/products/pokemon-shiny-treasure-ex-japansk-live?variant=54028394889515",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Shiny Treasure EX (Japansk) (Live) - Boosterpakke",
-      "price": "199.90 kr",
-      "url": "https://laboge.no/products/pokemon-shiny-treasure-ex-japansk-live?variant=54028394922283",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Symphonia (Japansk) (Live) - Boosterboks (30 pakker)",
-      "price": "1099.00 kr",
-      "url": "https://laboge.no/products/pokemon-mega-symphonia-japansk-live?variant=54028379455787",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Symphonia (Japansk) (Live) - Boosterpakke",
-      "price": "37.00 kr",
-      "url": "https://laboge.no/products/pokemon-mega-symphonia-japansk-live?variant=54028379488555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Brave (Japansk) (Live) - Boosterboks (30 pakker)",
-      "price": "1199.00 kr",
-      "url": "https://laboge.no/products/pokemon-mega-brave-japansk-live?variant=54028359008555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Brave (Japansk) (Live) - Boosterpakke",
-      "price": "40.00 kr",
-      "url": "https://laboge.no/products/pokemon-mega-brave-japansk-live?variant=54028359041323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Dream EX (Japansk) (Live) - Boosterboks (10 pakker)",
-      "price": "1499.00 kr",
-      "url": "https://laboge.no/products/pokemon-mega-dream-ex-japansk-live?variant=54028324831531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Mega Dream EX (Japansk) (Live) - Boosterpakke",
-      "price": "149.90 kr",
-      "url": "https://laboge.no/products/pokemon-mega-dream-ex-japansk-live?variant=54028324864299",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Ninja Spinner (Japansk) (Live) - Boosterboks (30 pakker)",
-      "price": "1149.00 kr",
-      "url": "https://laboge.no/products/pokemon-ninja-spinner-japansk-live?variant=54028302778667",
       "product_class": "card",
       "event": "ny"
     }
