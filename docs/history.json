@@ -1,6 +1,114 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Swablu - GG27/GG70 - NM",
+      "price": "85.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/swablu-gg27-gg70?variant=48848875421947",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza V - 100/159 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-v-100-159?variant=48890649641211",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Thievul - GG17/GG70 - NM",
+      "price": "39.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/thievul-gg17-gg70?variant=48849648353531",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Roxanne - GG66/GG70 - NM",
+      "price": "75.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/roxanne-gg66-gg70?variant=48849610277115",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Duskull - GG28/GG70 - NM",
+      "price": "69.00 kr",
+      "previous_price": "75.00 kr",
+      "url": "https://pokelageret.no/products/duskull-gg28-gg70?variant=48848876044539",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee V - 108/159 - NM",
+      "price": "99.00 kr",
+      "previous_price": "95.00 kr",
+      "url": "https://pokelageret.no/products/eevee-v-108-159?variant=48847042183419",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Adaman - GG57/GG70 - NM",
+      "price": "59.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/adaman-gg57-gg70?variant=48846278328571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Hisuian Voltorb - GG01/GG70 - NM",
+      "price": "45.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/hisuian-voltorb-gg01-gg70?variant=48849652875515",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Absol - GG16/GG70 - NM",
+      "price": "109.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/absol-gg16-gg70?variant=48849652482299",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - GG30/GG70 - NM",
+      "price": "575.00 kr",
+      "previous_price": "555.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-gg30-gg70?variant=48848875192571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Melony - GG64/GG70 - NM",
+      "price": "95.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/melony-gg64-gg70?variant=48846481031419",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:18:56+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 160/159 - NM",
+      "price": "545.00 kr",
+      "previous_price": "569.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-160-159?variant=48843521097979",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T03:59:09+00:00",
       "store": "Pokelageret",
       "name": "Iron Bundle - 066 - NM",
@@ -179356,114 +179464,6 @@
       "name": "Aegislash ex 135 - Paradox Rift",
       "price": "15.00 kr",
       "url": "https://pokesingles.no/products/aegislash-ex-135-paradox-rift?variant=53024587120919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Aggron V 96 - Brilliant Stars",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/aggron-v-96-brilliant-stars?variant=53023971606807",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Air Balloon 181 - Ascended Heroes",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/air-balloon-181-ascended-heroes?variant=53024894681367",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Alakazam 56 - Mega Evolution",
-      "price": "12.00 kr",
-      "url": "https://pokesingles.no/products/alakazam-56-mega-evolution?variant=53024826982679",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Alakazam ex (C) 065 - Collect 151",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/alakazam-ex-c-065-collect-151-771451?variant=53521722736919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Alakazam EX (JP) Holo 326/190 - Shiny Treasure ex",
-      "price": "69.00 kr",
-      "url": "https://pokesingles.no/products/alakazam-ex-jp-holo-326190-shiny-treasure-ex-142738?variant=53829717721367",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Alakazam ex 65 - 151",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/alakazam-ex-65-151?variant=53024493338903",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Alomomola Reverse Holo (Poké Ball) 24 - Black Bolt",
-      "price": "20.00 kr",
-      "url": "https://pokesingles.no/products/alomomola-reverse-holo-poke-ball-24-black-bolt?variant=53077761818903",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Amarys 132 - Prismatic Evolutions",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/amarys-132-prismatic-evolutions?variant=53024711803159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Ambipom (JP) 092 - Inferno X",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/ambipom-jp-092-inferno-x-676863?variant=53436453814551",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Amoonguss ex 11 - Journey Together",
-      "price": "15.00 kr",
-      "url": "https://pokesingles.no/products/amoonguss-ex-11-journey-together?variant=53024719503639",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Annihilape 041/084 - Pitch Black",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/annihilape-041084-pitch-black-524380?variant=54068487487767",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Antique Armor Fossil 072/084 - Pitch Black",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/antique-armor-fossil-072084-pitch-black-653150?variant=54069308031255",
       "product_class": "card",
       "event": "ny"
     }
