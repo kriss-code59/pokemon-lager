@@ -1,6 +1,68 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Mega Venusaur ex Premium Collection",
+      "price": "899.00 kr",
+      "url": "https://retroworld.no/products/pokemon-mega-venusaur-ex-premium-collection?variant=51641101320493",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Pitch Black Boosterpakke",
+      "price": "92,-",
+      "url": "https://lekekassen.no/pokemon-tcg-pitch-black-boosterpakke-pok10425-101",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Pitch Black Boosterpakke",
+      "price": "92,-",
+      "url": "https://lekekassen.no/pokemon-tcg-pitch-black-boosterpakke-pok10425-101",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "Lekekassen",
+      "name": "Pokémon TCG First Partner Illustration Collection Series 2",
+      "price": "573,-",
+      "url": "https://lekekassen.no/pokemon-tcg-first-partner-illustration-collection-series-2-pok10395-101",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "Lekekassen",
+      "name": "Pokémon TCG First Partner Illustration Collection Series 2",
+      "price": "573,-",
+      "url": "https://lekekassen.no/pokemon-tcg-first-partner-illustration-collection-series-2-pok10395-101",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "Playlot",
+      "name": "Black Bolt Boosterbox JPN",
+      "price": "kr 2 980,00",
+      "url": "https://playlot.no/produkt/black-bolt-boosterbox-jpn/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T13:00:02+00:00",
+      "store": "Pokesingles",
+      "name": "Cofagrigus ex 76 - Paradox Rift",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cofagrigus-ex-76-paradox-rift?variant=53024581681431",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T12:39:48+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
@@ -179370,69 +179432,6 @@
       "name": "Japansk Nøkkelring Pokedex Metal Charm 1014",
       "price": "55.00 kr",
       "url": "https://cardcenter.no/products/japansk-nokkelring-pokedex-metal-charm-1014",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Japansk Nøkkelring Iron Leaf",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/japansk-nokkelring-iron-leaf",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Perfect Order 3pk Blister Chikorita",
-      "price": "319.00 kr",
-      "url": "https://braspill.no/products/pokemon-perfect-order-3pk-blister-chikorita?variant=55743490392356",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Mega Greninja ex Premium Collection",
-      "price": "985.00 kr",
-      "url": "https://braspill.no/products/pokemon-mega-greninja-ex-premium-collection?variant=55740084322596",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon TCG: Paldea Legends Tin - Miraidon",
-      "price": "599.00 kr",
-      "url": "https://braspill.no/products/pokemon-tcg-paldea-legends-tin?variant=55722231726372",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokémon TCG: Paldea Legends Tin - Koraidon",
-      "price": "599.00 kr",
-      "url": "https://braspill.no/products/pokemon-tcg-paldea-legends-tin?variant=55722231759140",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Sendes ut 16.07. Pokemon Pitch Black Boosterpakke",
-      "price": "98.00 kr",
-      "url": "https://braspill.no/products/sendes-ut-16-07-pokemon-pitch-black-boosterpakke?variant=55666066194724",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Sendes ut 16 Juli. Pokemon Pitch Black 3-pakning Blister - Binacle",
-      "price": "369.00 kr",
-      "url": "https://braspill.no/products/pokemon-pitch-black-3-pack-blister-binacle?variant=55369570615588",
       "product_class": "card",
       "event": "ny"
     }
