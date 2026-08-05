@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T13:56:06+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Gem Pack Badge Set (Kinesisk)",
+      "price": "299.00 kr",
+      "previous_price": "199.00 kr",
+      "url": "https://retroworld.no/products/pokemon-gem-pack-badge-set?variant=51996628746541",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T13:36:25+00:00",
       "store": "Pokelageret",
       "name": "Wondrous Patch - 117/088 - NM",
@@ -179421,15 +179430,6 @@
       "name": "Pokemon Prime Figur - Gigantamax Eevee",
       "price": "499.00 kr",
       "url": "https://cardcenter.no/products/pokemon-prime-figur-gigantamax-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Prime Figur - Pikachu",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-prime-figur-pikachu",
       "product_class": "card",
       "event": "ny"
     }
