@@ -1,6 +1,87 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Palafin - 225/091 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/palafin-225-091?variant=48848867393787",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Artazon - 229/197 - NM",
+      "price": "15.00 kr",
+      "previous_price": "19.00 kr",
+      "url": "https://pokelageret.no/products/artazon-229-197?variant=48833199145211",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Paras - 004/034 - NM",
+      "price": "39.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/paras-004-034?variant=48890554384635",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Basic Lightning Energy - 034/034 - NM",
+      "price": "10.00 kr",
+      "previous_price": "11.00 kr",
+      "url": "https://pokelageret.no/products/basic-lightning-energy-034-034?variant=48887945429243",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Eiscue ex - 222/197 - NM",
+      "price": "85.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/eiscue-ex-222-197?variant=48849613324539",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Wigglytuff ex - 187/165 - NM",
+      "price": "99.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/wigglytuff-ex-187-165?variant=48849602806011",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Pidgeotto - 208/197 - NM",
+      "price": "149.00 kr",
+      "previous_price": "135.00 kr",
+      "url": "https://pokelageret.no/products/pidgeotto-208-197?variant=48848867754235",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Basic Psychic Energy - 207/165 - NM",
+      "price": "49.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/basic-psychic-energy-207-165?variant=48846474805499",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:39:11+00:00",
+      "store": "Pokelageret",
+      "name": "Slither Wing - 203/182 - NM",
+      "price": "75.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokelageret.no/products/slither-wing-203-182?variant=48843519262971",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T03:19:07+00:00",
       "store": "Pokelageret",
       "name": "Iron Leaves ex - 203/162 - NM",
@@ -179383,87 +179464,6 @@
       "name": "Bastiodon 062/084 (NON-HOLO, Build & Battle) - Pitch Black",
       "price": "10.00 kr",
       "url": "https://pokesingles.no/products/bastiodon-062084-non-holo-build-battle-pitch-black-928227?variant=54068644806935",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bastiodon 062/084 Holo - Pitch Black",
-      "price": "10.00 kr",
-      "url": "https://pokesingles.no/products/bastiodon-062084-holo-pitch-black-084551?variant=54068804354327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Battle Cage 85 - Phantasmal Flames",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/battle-cage-85-phantasmal-flames?variant=53024864862487",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bayleef (Friend Ball) Reverse Holo 9 - Ascended Heroes",
-      "price": "8.00 kr",
-      "url": "https://pokesingles.no/products/bayleef-reverse-holo-9-ascended-heroes?variant=53024874725655",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Beautifly (JP) 194 holo - MEGA Dream ex",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/beautifly-jp-194-holo-mega-dream-ex-400777?variant=53436538290455",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Beautifly (Love Ball) Reverse Holo 13 - Ascended Heroes",
-      "price": "8.00 kr",
-      "url": "https://pokesingles.no/products/beautifly-love-ball-reverse-holo-13-ascended-heroes?variant=53452616171799",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bisharp Reverse Holo (Poké Ball) 65 - Black Bolt",
-      "price": "20.00 kr",
-      "url": "https://pokesingles.no/products/bisharp-reverse-holo-poke-ball-65-black-bolt?variant=53077788098839",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Black Belt's Training 255 - Ascended Heroes",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/black-belts-training-255-ascended-heroes?variant=53024910115095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Black Kyurem ex 48 - Surging Sparks",
-      "price": "15.00 kr",
-      "url": "https://pokesingles.no/products/black-kyurem-ex-48-surging-sparks?variant=53024674152727",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Blowtorch 117 - Phantasmal Flames",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/blowtorch-117-phantasmal-flames?variant=53024869515543",
       "product_class": "card",
       "event": "ny"
     }
