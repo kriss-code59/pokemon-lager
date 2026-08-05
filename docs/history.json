@@ -1,6 +1,132 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Iron Bundle - 066 - NM",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/iron-bundle-066?variant=48849612439803",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210",
+      "price": "14.00 kr",
+      "previous_price": "13.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-211?variant=49139229655291",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Vaporeon - 168",
+      "price": "11.00 kr",
+      "previous_price": "12.00 kr",
+      "url": "https://pokelageret.no/products/vaporeon-169?variant=49137982603515",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Leafeon - 170",
+      "price": "19.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/leafeon-171?variant=49137982636283",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Mabosstiff ex - 086 - NM",
+      "price": "6.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokelageret.no/products/mabosstiff-ex-086?variant=48984794431739",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Jacq - 236/198 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/jacq-236-198?variant=48979077071099",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Grafaiai ex - 100 - NM",
+      "price": "10.00 kr",
+      "previous_price": "9.00 kr",
+      "url": "https://pokelageret.no/products/grafaiai-ex-100?variant=48960216531195",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Sprigatito ex - 087 - NM",
+      "price": "14.00 kr",
+      "previous_price": "13.00 kr",
+      "url": "https://pokelageret.no/products/sprigatito-ex-087?variant=48969082601723",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Scovillain - 202/198 - NM",
+      "price": "75.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokelageret.no/products/scovillain-202-198?variant=48849629085947",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Arven - 249/198 - NM",
+      "price": "69.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/arven-249-198?variant=48849608114427",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Flareon - 167 - NM",
+      "price": "11.00 kr",
+      "previous_price": "12.00 kr",
+      "url": "https://pokelageret.no/products/flareon-167?variant=48848862314747",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Floragato - 077 - NM",
+      "price": "35.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/floragato-077?variant=48848756834555",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Meowscarada ex - 078 - NM",
+      "price": "69.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/meowscarada-ex-078?variant=48846686257403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T03:59:09+00:00",
+      "store": "Pokelageret",
+      "name": "Frigibax - 208/193 - NM",
+      "price": "285.00 kr",
+      "previous_price": "275.00 kr",
+      "url": "https://pokelageret.no/products/frigibax-208-193?variant=48846483882235",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T03:39:11+00:00",
       "store": "Pokelageret",
       "name": "Palafin - 225/091 - NM",
@@ -179338,132 +179464,6 @@
       "name": "Antique Armor Fossil 072/084 - Pitch Black",
       "price": "4.00 kr",
       "url": "https://pokesingles.no/products/antique-armor-fossil-072084-pitch-black-653150?variant=54069308031255",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Antique Skull Fossil 073/084 - Pitch Black",
-      "price": "6.00 kr",
-      "url": "https://pokesingles.no/products/antique-skull-fossil-073084-pitch-black-015809?variant=54069308162327",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Antique Skull Fossil 073/084 - Pitch Black",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/antique-skull-fossil-073084-pitch-black-015810?variant=54069308195095",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Applin (C) 2006 Stamped - Gem Pack Volume 5",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/applin-c-2006-stamped-gem-pack-volume-5-593809?variant=53521907384599",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Armarouge 012/084 (Reverse Holo) - Pitch Black",
-      "price": "12.00 kr",
-      "url": "https://pokesingles.no/products/armarouge-012084-reverse-holo-pitch-black-884104?variant=54068645560599",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Armarouge 012/084 Holo- Pitch Black",
-      "price": "10.00 kr",
-      "url": "https://pokesingles.no/products/armarouge-012084-holo-pitch-black-838537?variant=54068803928343",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Arven (C) 1904 - Gem Pack Volume 3",
-      "price": "130.00 kr",
-      "url": "https://pokesingles.no/products/arven-c-1904-gem-pack-volume-3-380849?variant=53518037451031",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Atticus 133 - Prismatic Evolutions",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/atticus-133-prismatic-evolutions?variant=53024711999767",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Atticus 134 - Prismatic Evolutions",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/atticus-134-prismatic-evolutions?variant=53024712261911",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Axew Reverse Holo (Poké Ball) 68 - Black Bolt",
-      "price": "15.00 kr",
-      "url": "https://pokesingles.no/products/axew-reverse-holo-poke-ball-68-black-bolt?variant=53077789770007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Backtrack Badge 074/084 (Reverse Holo) - Pitch Black",
-      "price": "7.00 kr",
-      "url": "https://pokesingles.no/products/backtrack-badge-074084-reverse-holo-pitch-black-210654?variant=54069308260631",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Backtrack Badge 074/084 - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/backtrack-badge-074084-pitch-black-210653?variant=54069308358935",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Banette 034/084 (Reverse Holo) - Pitch Black",
-      "price": "7.00 kr",
-      "url": "https://pokesingles.no/products/banette-034084-reverse-holo-pitch-black-807599?variant=54068802289943",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Banette 034/084 - Pitch Black",
-      "price": "5.00 kr",
-      "url": "https://pokesingles.no/products/banette-034084-pitch-black-882446?variant=54068487323927",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bastiodon 062/084 (NON-HOLO, Build & Battle) - Pitch Black",
-      "price": "10.00 kr",
-      "url": "https://pokesingles.no/products/bastiodon-062084-non-holo-build-battle-pitch-black-928227?variant=54068644806935",
       "product_class": "card",
       "event": "ny"
     }
