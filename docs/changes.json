@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T08:39:19+00:00",
+      "store": "Pokelageret",
+      "name": "Destined Rivals Booster Pakke",
+      "price": "79.00 kr",
+      "url": "https://pokelageret.no/products/destined-rivals-booster-pakke?variant=47527768031483",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-05T08:19:08+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 180/217 – Acerola’s Mischief",
@@ -2688,15 +2697,6 @@
       "name": "Wild Force - Booster Pack",
       "price": "49.00 kr",
       "url": "https://pokelageret.no/products/wild-force-booster-box?variant=47903026905339",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Night Wanderer - Booster Pack",
-      "price": "49.00 kr",
-      "url": "https://pokelageret.no/products/night-wanderer-booster-box?variant=47903028838651",
       "product_class": "card",
       "event": "ny"
     }

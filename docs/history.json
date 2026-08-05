@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T08:39:19+00:00",
+      "store": "Pokelageret",
+      "name": "Destined Rivals Booster Pakke",
+      "price": "79.00 kr",
+      "url": "https://pokelageret.no/products/destined-rivals-booster-pakke?variant=47527768031483",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T08:39:19+00:00",
+      "store": "Pokelageret",
+      "name": "Machamp - 49/101 - LP / Holofoil",
+      "price": "45.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/machamp-49-101?variant=48843145380091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T08:39:19+00:00",
+      "store": "Pokelageret",
+      "name": "Palkia EX - 66/101 - NM",
+      "price": "285.00 kr",
+      "previous_price": "259.00 kr",
+      "url": "https://pokelageret.no/products/palkia-ex-66-101?variant=48843536892155",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T08:19:08+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 180/217 – Acerola’s Mischief",
@@ -179435,33 +179462,6 @@
       "name": "Shuckle-GX 013/095 - Super-Burst Impact - NM (ID: 53215269266643)",
       "price": "65.00 kr",
       "url": "https://laboge.no/products/shuckle-gx-013-095-super-burst-impact?variant=54028813107499",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Roserade 068/067 - Battle Region - NM (ID: 53272753943265)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/roserade-068-067-battle-region?variant=54028812878123",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Rayquaza V 119/184 - VMAX Climax - NM (ID: 53906510481774)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/rayquaza-v-119-184-vmax-climax?variant=54028812681515",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Rayquaza V 107/172 - VSTAR Universe - NM (ID: 53215172239867)",
-      "price": "19.00 kr",
-      "url": "https://laboge.no/products/rayquaza-v-107-172-vstar-universe?variant=54028812583211",
       "product_class": "card",
       "event": "ny"
     }
