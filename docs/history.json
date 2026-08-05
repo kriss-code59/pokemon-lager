@@ -1,6 +1,48 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "EpiCards",
+      "name": "Pokémon Mega Dream Japansk Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://epicards.no/products/pokemon-mega-dream-japansk-booster-box?variant=56151642013862",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon Ninja Spinner Japansk Booster Box",
+      "price": "1199.00 kr",
+      "url": "https://epicards.no/products/pokemon-nihil-zero-japansk-booster-box-kopi?variant=56370143264934",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Premium Checklane",
+      "price": "129.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-premium-checklane?variant=52244116668717",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - Checklane",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-checklane?variant=52244115882285",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T15:40:30+00:00",
       "store": "Pokesingles",
       "name": "Annihilape 41 (Reverse Holo) - Pitch Black",
@@ -179375,51 +179417,6 @@
       "price": "99.00 kr",
       "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-ceruledge",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Chandelure",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-chandelure",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Cubone",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-cubone",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Paldea Trainer Mystery Keychain Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-paldea-trainer-mystery-keychain-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Venusaur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-venusaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Figur - Mega Scizor",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-figur-mega-scizor",
-      "product_class": "card",
       "event": "ny"
     }
   ]

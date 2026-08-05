@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "EpiCards",
+      "name": "Pokémon Mega Dream Japansk Booster Box",
+      "price": "1499.00 kr",
+      "url": "https://epicards.no/products/pokemon-mega-dream-japansk-booster-box?variant=56151642013862",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T16:20:05+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon Ninja Spinner Japansk Booster Box",
+      "price": "1199.00 kr",
+      "url": "https://epicards.no/products/pokemon-nihil-zero-japansk-booster-box-kopi?variant=56370143264934",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-05T15:40:30+00:00",
       "store": "Pokesingles",
       "name": "Annihilape 41 (Reverse Holo) - Pitch Black",
@@ -2681,24 +2699,6 @@
       "url": "https://pokestore.no/products/pokemon-tcg-mega-greninja-ex-premium-collection-b-vare?variant=52444179038439",
       "product_class": "card",
       "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mega Dream ex - Booster Box",
-      "price": "1299.00 kr",
-      "url": "https://pokelageret.no/products/mega-dream-ex-booster-box?variant=47713374109947",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mega Dream ex - Booster Pack",
-      "price": "149.00 kr",
-      "url": "https://pokelageret.no/products/mega-dream-ex-booster-box?variant=47903029133563",
-      "product_class": "card",
-      "event": "ny"
     }
   ]
 }
