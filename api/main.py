@@ -49,7 +49,7 @@ async def lifespan(app: FastAPI):
         await pool.close()
 
 
-app = FastAPI(title="Pokepuls API", version="1.0", lifespan=lifespan,
+app = FastAPI(title="Pokepuls API", version="1.1", lifespan=lifespan,
               docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 app.add_middleware(
@@ -57,9 +57,16 @@ app.add_middleware(
     allow_origins=["https://pokepuls.no", "https://www.pokepuls.no",
                    "https://kriss-code59.github.io", "http://localhost:8000",
                    "http://127.0.0.1:8000"],
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST", "DELETE"],
     allow_headers=["*"],
+    allow_credentials=True,
 )
+
+# Kontoer, sesjoner og folgeliste ligger i api/auth.py. De monteres her fordi
+# de trenger den samme tilkoblingspoolen, som ikke finnes for oppstart.
+from . import auth  # noqa: E402
+
+auth.monter(app, lambda: pool)
 
 
 def _svar(request: Request, data: dict, cache: str) -> Response:
@@ -148,6 +155,11 @@ SELECT p.id, p.set_id, p.type_id, p.region, s.label AS set_label,
          ORDER BY l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST) AS tilbud,
        min(l.price_ore) FILTER (WHERE l.in_stock) AS min_pris,
        count(*) FILTER (WHERE l.in_stock) AS antall_pa_lager,
+       -- Ett representativt bilde: helst fra en butikk som har varen inne,
+       -- ellers hvilken som helst. Frontenden faller tilbake pa egen grafikk
+       -- nar dette er null.
+       (array_remove(array_agg(l.image_url ORDER BY l.in_stock DESC NULLS LAST,
+                                                   l.price_ore NULLS LAST), NULL))[1] AS bilde,
        max(l.last_seen_at) AS sist_sett
 FROM listings l
 JOIN products p      ON p.id = l.product_id
@@ -194,7 +206,7 @@ async def unmatched(request: Request,
     liste. Alt her er en kandidat til et nytt alias i katalog.json.
     """
     rader = await _hent(
-        "SELECT l.store_id, l.title, l.price_ore, l.in_stock, l.url "
+        "SELECT l.store_id, l.title, l.price_ore, l.in_stock, l.url, l.image_url "
         "FROM listings l WHERE l.product_id IS NULL "
         "  AND l.last_seen_at > now() - interval '7 days' "
         "ORDER BY l.in_stock DESC NULLS LAST, l.title LIMIT %s", limit)
@@ -215,7 +227,7 @@ async def product(request: Request, produkt_id: str):
 
     tilbud = await _hent(
         "SELECT l.store_id, st.name AS store_name, l.title, l.price_ore, "
-        "       l.in_stock, l.url, l.last_seen_at "
+        "       l.in_stock, l.url, l.image_url, l.last_seen_at "
         "FROM listings l JOIN stores st ON st.id = l.store_id "
         "WHERE l.product_id = %s ORDER BY l.in_stock DESC NULLS LAST, l.price_ore",
         produkt_id)

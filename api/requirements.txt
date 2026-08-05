@@ -2,6 +2,8 @@ fastapi==0.141.1
 uvicorn[standard]==0.52.1
 psycopg[binary]==3.3.4
 psycopg_pool==3.3.1
+argon2-cffi==25.1.0
+email-validator==2.3.0
 # httpx brukes bare av tests/selvtest.py (FastAPI TestClient), men installeres
 # med resten sa selvtesten kan kjores pa serveren uten ekstra steg.
 httpx==0.28.1
