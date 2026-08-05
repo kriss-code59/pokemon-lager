@@ -75,12 +75,24 @@ chown root:"$BRUKER" /etc/pokepuls.env
 LOGG "5/7 systemd"
 install -m 644 "$REPO/deploy/pokepuls-api.service" /etc/systemd/system/pokepuls-api.service
 systemctl daemon-reload
-systemctl enable --now pokepuls-api
+systemctl enable pokepuls-api
+# RESTART, ikke "enable --now": kjorer tjenesten allerede, gjor --now
+# ingenting, og da svarer serveren fortsatt med den GAMLE koden etter en
+# deploy. Det tok en runde med "hvorfor finnes ikke det nye endepunktet".
+systemctl restart pokepuls-api
 sleep 2
 systemctl is-active --quiet pokepuls-api || { journalctl -u pokepuls-api -n 40 --no-pager; exit 1; }
 
 LOGG "6/7 nginx"
-install -m 644 "$REPO/deploy/nginx-pokepuls.conf" /etc/nginx/sites-available/pokepuls
+# certbot skriver TLS-blokka rett inn i denne filen. Kopierer vi repoets
+# versjon over den, forsvinner sertifikatet og hele siden blir utilgjengelig
+# pa https -- det skjedde ved forste deploy etter at TLS var satt opp.
+if grep -q ssl_certificate /etc/nginx/sites-available/pokepuls 2>/dev/null; then
+  echo "TLS-konfig finnes; lar den sta. Kjor certbot pa nytt hvis du har"
+  echo "endret nginx-pokepuls.conf:  certbot --nginx -d pokepuls.no -d www.pokepuls.no --reinstall"
+else
+  install -m 644 "$REPO/deploy/nginx-pokepuls.conf" /etc/nginx/sites-available/pokepuls
+fi
 ln -sf /etc/nginx/sites-available/pokepuls /etc/nginx/sites-enabled/pokepuls
 rm -f /etc/nginx/sites-enabled/default
 # nginx ma kunne lese web/ gjennom /home/pokepuls.
