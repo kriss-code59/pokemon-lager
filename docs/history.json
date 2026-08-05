@@ -1,6 +1,40 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T15:00:09+00:00",
+      "store": "Outland",
+      "name": "Ball & Energy Deck Box\nThe Pokemon Company\nDeck Boks · Japansk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-ball-energy-deck-box-deck-box-pokemon-pokemon-4521329345512",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T15:00:09+00:00",
+      "store": "Emken",
+      "name": "POKÉMON SCARLET & VIOLET: TERASTAL GRAND GATHERING EEVEE & FRIENDS DISPLAY SET (2 PACK) (CH)",
+      "price": "399,00 kr",
+      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/collection-bokser/pokemon-scarlet-violet-terastal-grand-gathering-eevee-friends-display-set-2-pack-ch",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T15:00:09+00:00",
+      "store": "Pokelageret",
+      "name": "Armarouge ex - 218/182 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/armarouge-ex-218-182?variant=49002490200315",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T15:00:09+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Fusion Strike - Booster Pack",
+      "price": "229.00 kr",
+      "url": "https://retroworld.no/products/fusion-strike-booster-pack?variant=50101586493741",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T14:20:38+00:00",
       "store": "Collectible",
       "name": "Ascended Heroes – 066/217 – Vikavolt",
@@ -179387,42 +179421,6 @@
       "name": "Pokemon Kinesisk Lillie's Support Gift Box",
       "price": "4999.00 kr",
       "url": "https://cardcenter.no/products/pokemon-kinesisk-lillies-support-gift-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Stevens Metagross ex Starter Set Koreansk",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/stevens-beldum-ex-starter-set-koreansk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Pawmi",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-pawmi",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Hanging Squirtle",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-hanging-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Zacian V-Union Special Collection Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-zacian-v-union-special-collection-box",
       "product_class": "card",
       "event": "ny"
     }
