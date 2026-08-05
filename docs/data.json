@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05T10:20:00+00:00",
+  "last_updated": "2026-08-05T10:59:35+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -2290,7 +2290,7 @@
     {
       "store": "Cardcenter",
       "name": "Pokemon Center Mega Symphonia Special Box",
-      "price": "2499.00 kr",
+      "price": "3299.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-center-mega-symphonia-special-box",
       "store_count": null,
@@ -2335,7 +2335,7 @@
     {
       "store": "Cardcenter",
       "name": "Pokemon Center Mega Brave Special Box",
-      "price": "2999.00 kr",
+      "price": "3799.00 kr",
       "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-center-mega-brave-special-box",
       "store_count": null,
@@ -7186,8 +7186,8 @@
     {
       "store": "Pokelageret",
       "name": "Chespin - 087/086 - NM",
-      "price": "124.00 kr",
-      "in_stock": false,
+      "price": "49.00 kr",
+      "in_stock": true,
       "url": "https://pokelageret.no/products/chespin-087-086?variant=48971008278779",
       "store_count": null,
       "product_class": "card"
@@ -7664,7 +7664,7 @@
       "store": "Pokelageret",
       "name": "Armarouge ex - 125 - NM",
       "price": "13.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokelageret.no/products/armarouge-ex-125?variant=49002491314427",
       "store_count": null,
       "product_class": "card"
@@ -9138,6 +9138,33 @@
     },
     {
       "store": "Pokelageret",
+      "name": "Zacian ex - 198",
+      "price": "7.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/zacian-ex-199?variant=49144514183419",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
+      "name": "Miraidon ex - 028",
+      "price": "8.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/miraidon-ex-28?variant=49144452612347",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
+      "name": "Tornadus - 210",
+      "price": "14.00 kr",
+      "in_stock": true,
+      "url": "https://pokelageret.no/products/tornadus-212?variant=49144452546811",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Pokelageret",
       "name": "Koraidon ex - 197",
       "price": "7.00 kr",
       "in_stock": true,
@@ -9732,10 +9759,10 @@
     },
     {
       "store": "Pokelageret",
-      "name": "Eri - 136/131 - NM",
+      "name": "Eri - 136/131 - LP",
       "price": "25.00 kr",
       "in_stock": true,
-      "url": "https://pokelageret.no/products/eri-136-131?variant=49002491347195",
+      "url": "https://pokelageret.no/products/eri-136-131?variant=49144514380027",
       "store_count": null,
       "product_class": "card"
     },
@@ -14025,15 +14052,6 @@
     },
     {
       "store": "Pokelageret",
-      "name": "Miraidon ex - 028 - NM",
-      "price": "25.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/miraidon-ex-028?variant=48887003807995",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
       "name": "Noibat - 152/193 - NM / Reverse Holofoil",
       "price": "5.00 kr",
       "in_stock": true,
@@ -14252,7 +14270,7 @@
       "store": "Pokelageret",
       "name": "Reshiram - 002/025 - NM",
       "price": "5.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/reshiram-002-025?variant=48884979040507",
       "store_count": null,
       "product_class": "card"
@@ -14261,7 +14279,7 @@
       "store": "Pokelageret",
       "name": "Zekrom - 010/025 - NM",
       "price": "5.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/zekrom-010-025?variant=48884981235963",
       "store_count": null,
       "product_class": "card"
@@ -14461,15 +14479,6 @@
       "price": "25.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/mimikyu-ex-004?variant=48881560813819",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
-      "name": "Zacian ex - 198 - NM",
-      "price": "25.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/zacian-ex-198?variant=48881546690811",
       "store_count": null,
       "product_class": "card"
     },
@@ -14965,15 +14974,6 @@
       "price": "5.00 kr",
       "in_stock": true,
       "url": "https://pokelageret.no/products/team-rockets-exeggcute-077-217?variant=48863412846843",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Pokelageret",
-      "name": "Tornadus - 210 - NM",
-      "price": "14.00 kr",
-      "in_stock": true,
-      "url": "https://pokelageret.no/products/tornadus-210?variant=48875146936571",
       "store_count": null,
       "product_class": "card"
     },
@@ -74768,7 +74768,7 @@
       "store": "Pokebua",
       "name": "Pokemon - Hidden Fates - Booster Pack",
       "price": "499.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokebua.no/products/pokemon-hidden-fates-booster-pack-1?variant=48639656263913",
       "store_count": null,
       "product_class": "card"

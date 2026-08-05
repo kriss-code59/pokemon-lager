@@ -1,6 +1,112 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Chespin - 087/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/chespin-087-086?variant=48971008278779",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Armarouge ex - 125 - NM",
+      "price": "13.00 kr",
+      "url": "https://pokelageret.no/products/armarouge-ex-125?variant=49002491314427",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Zacian ex - 198",
+      "price": "7.00 kr",
+      "url": "https://pokelageret.no/products/zacian-ex-199?variant=49144514183419",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Miraidon ex - 028",
+      "price": "8.00 kr",
+      "url": "https://pokelageret.no/products/miraidon-ex-28?variant=49144452612347",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210",
+      "price": "14.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-212?variant=49144452546811",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Eri - 136/131 - LP",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/eri-136-131?variant=49144514380027",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Hidden Fates - Booster Pack",
+      "price": "499.00 kr",
+      "url": "https://pokebua.no/products/pokemon-hidden-fates-booster-pack-1?variant=48639656263913",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Center Mega Symphonia Special Box",
+      "price": "3299.00 kr",
+      "previous_price": "2499.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-center-mega-symphonia-special-box",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Center Mega Brave Special Box",
+      "price": "3799.00 kr",
+      "previous_price": "2999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-center-mega-brave-special-box",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Chespin - 087/086 - NM",
+      "price": "49.00 kr",
+      "previous_price": "124.00 kr",
+      "url": "https://pokelageret.no/products/chespin-087-086?variant=48971008278779",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Reshiram - 002/025 - NM",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/reshiram-002-025?variant=48884979040507",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Zekrom - 010/025 - NM",
+      "price": "5.00 kr",
+      "url": "https://pokelageret.no/products/zekrom-010-025?variant=48884981235963",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T10:19:59+00:00",
       "store": "Pokelageret",
       "name": "Surfing Pikachu VMAX - 009/025 - LP",
@@ -179337,114 +179443,6 @@
       "name": "Volbeat 42/106 - Emerald - LP (ID: 53933939210232)",
       "price": "25.00 kr",
       "url": "https://laboge.no/products/volbeat-42-106-emerald?variant=54056865530155",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Makuhita 54/106 - Emerald - LP (ID: 53943658293150)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/makuhita-54-106-emerald?variant=54056912486699",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Larvitar 52/106 - Emerald - LP (ID: 53943658327420)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/larvitar-52-106-emerald?variant=54056912224555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Larvitar 52/106 - Emerald - LP (ID: 53943658360564)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/larvitar-52-106-emerald?variant=54056912257323",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Electrode 27/106 - Emerald - LP (ID: 53933939255007)",
-      "price": "19.00 kr",
-      "url": "https://laboge.no/products/electrode-27-106-emerald?variant=54056863727915",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Electrike 47/106 - Emerald - LP (ID: 53933938826144)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/electrike-47-106-emerald?variant=54056863695147",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Battle Frontier 75/106 - Emerald - LP (ID: 53933940782420)",
-      "price": "59.00 kr",
-      "url": "https://laboge.no/products/battle-frontier-75-106-emerald?variant=54056863072555",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Reuniclus 52/101 - Noble Victories - NM (ID: 53718752443800)",
-      "price": "15.00 kr",
-      "url": "https://laboge.no/products/reuniclus-52-101-noble-victories?variant=54055706689835",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Fraxure 87/101 - Noble Victories - NM (ID: 53718752398539)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/fraxure-87-101-noble-victories?variant=54055706657067",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Zweilous 78/101 - Noble Victories - NM (ID: 53718752252919)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/zweilous-78-101-noble-victories?variant=54055698366763",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Zweilous 78/101 - Noble Victories - NM (ID: 53718752307460)",
-      "price": "12.00 kr",
-      "url": "https://laboge.no/products/zweilous-78-101-noble-victories?variant=54055698399531",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pansear 16/101 - Noble Victories - NM (ID: 53718750891895)",
-      "price": "9.00 kr",
-      "url": "https://laboge.no/products/pansear-16-101-noble-victories?variant=54055698432299",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Worker 111/098 - Paradigm Trigger - NM (ID: 53272232464424)",
-      "price": "59.00 kr",
-      "url": "https://laboge.no/products/worker-111-098-paradigm-trigger?variant=54028814385451",
       "product_class": "card",
       "event": "ny"
     }

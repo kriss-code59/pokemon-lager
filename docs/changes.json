@@ -1,6 +1,69 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Chespin - 087/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/chespin-087-086?variant=48971008278779",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Armarouge ex - 125 - NM",
+      "price": "13.00 kr",
+      "url": "https://pokelageret.no/products/armarouge-ex-125?variant=49002491314427",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Zacian ex - 198",
+      "price": "7.00 kr",
+      "url": "https://pokelageret.no/products/zacian-ex-199?variant=49144514183419",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Miraidon ex - 028",
+      "price": "8.00 kr",
+      "url": "https://pokelageret.no/products/miraidon-ex-28?variant=49144452612347",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210",
+      "price": "14.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-212?variant=49144452546811",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokelageret",
+      "name": "Eri - 136/131 - LP",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/eri-136-131?variant=49144514380027",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T10:59:34+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Hidden Fates - Booster Pack",
+      "price": "499.00 kr",
+      "url": "https://pokebua.no/products/pokemon-hidden-fates-booster-pack-1?variant=48639656263913",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-05T10:19:59+00:00",
       "store": "Pokelageret",
       "name": "Surfing Pikachu VMAX - 009/025 - LP",
@@ -2634,69 +2697,6 @@
       "name": "Destined Rivals Checklane Blister - Eevee",
       "price": "199.00 kr",
       "url": "https://pokelageret.no/products/destined-rivals-checklane-blister?variant=47537663869179",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Destined Rivals Checklane Blister - Zarude",
-      "price": "149.00 kr",
-      "url": "https://pokelageret.no/products/destined-rivals-checklane-blister?variant=47537663901947",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mega Latias ex Box",
-      "price": "499.00 kr",
-      "url": "https://pokelageret.no/products/mega-latias-ex-box?variant=47582986404091",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Slashing Legends Tin",
-      "price": "499.00 kr",
-      "url": "https://pokelageret.no/products/slashing-legends-tin?variant=47534484553979",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Mega Lucario ex Figure Collection",
-      "price": "699.00 kr",
-      "url": "https://pokelageret.no/products/mega-lucario-ex-figure-collection?variant=47763588546811",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Shrouded Fable Special Illustration Collection - Greninja",
-      "price": "1999.00 kr",
-      "url": "https://pokelageret.no/products/shrouded-fable-special-illustration-collection?variant=47518675992827",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Shrouded Fable Special Illustration Collection - Kingdra",
-      "price": "1999.00 kr",
-      "url": "https://pokelageret.no/products/shrouded-fable-special-illustration-collection?variant=47518676025595",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T08:39:32+00:00",
-      "store": "Pokelageret",
-      "name": "Iono’s Bellibolt Premium Collection",
-      "price": "599.00 kr",
-      "url": "https://pokelageret.no/products/iono-s-bellibolt-premium-collection?variant=47518647615739",
       "product_class": "card",
       "event": "ny"
     }
