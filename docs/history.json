@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T04:59:12+00:00",
+      "store": "Pokelageret",
+      "name": "Zekrom - TG05/TG30 - NM",
+      "price": "205.00 kr",
+      "previous_price": "195.00 kr",
+      "url": "https://pokelageret.no/products/zekrom-tg05-tg30?variant=48848862970107",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T04:59:12+00:00",
+      "store": "Pokelageret",
+      "name": "Vaporeon - TG02/TG30 - NM",
+      "price": "275.00 kr",
+      "previous_price": "285.00 kr",
+      "url": "https://pokelageret.no/products/vaporeon-tg02-tg30?variant=48848861266171",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T04:39:10+00:00",
       "store": "Pokelageret",
       "name": "Dragonite VSTAR - 050/078 - NM",
@@ -179446,24 +179464,6 @@
       "name": "Pokemon Ninja Spinner (Japansk) (Live) - Boosterboks (30 pakker)",
       "price": "1149.00 kr",
       "url": "https://laboge.no/products/pokemon-ninja-spinner-japansk-live?variant=54028302778667",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Pokemon Ninja Spinner (Japansk) (Live) - Boosterpakke",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/pokemon-ninja-spinner-japansk-live?variant=54028302811435",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Parasect 072/071 - Dark Phantasma - NM (ID: 53360415275018)",
-      "price": "36.50 kr",
-      "url": "https://laboge.no/products/parasect-dark-phantasma-072-071?variant=54153438789931",
       "product_class": "card",
       "event": "ny"
     }
