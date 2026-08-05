@@ -1,6 +1,96 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Storm Emeralda Booster Box (Japanese)",
+      "price": "2399 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-storm-emeralda-booster-box-japanese",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Exeggcute - 192/191 - NM",
+      "price": "105.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://pokelageret.no/products/exeggcute-192-191?variant=48864982499579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Team Rocket's Nidoking ex - 216/182 - NM",
+      "price": "59.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/team-rockets-nidoking-ex-216-182?variant=49002491478267",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Shaymin - 185/182 - NM",
+      "price": "149.00 kr",
+      "previous_price": "155.00 kr",
+      "url": "https://pokelageret.no/products/shaymin-185-182?variant=48984725881083",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Terapagos ex - 180/131 - NM",
+      "price": "125.00 kr",
+      "previous_price": "115.00 kr",
+      "url": "https://pokelageret.no/products/terapagos-ex-180-131?variant=48846475133179",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Budew - 004/131 - NM",
+      "price": "8.00 kr",
+      "previous_price": "9.00 kr",
+      "url": "https://pokelageret.no/products/budew-004-131?variant=48984537399547",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "N's Zoroark ex - 098/159 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/ns-zoroark-ex-098-160?variant=48960221348091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Miracle Headset - 183/191 - NM",
+      "price": "10.00 kr",
+      "previous_price": "9.00 kr",
+      "url": "https://pokelageret.no/products/miracle-headset-183-191?variant=48960195428603",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Max Rod - 116/131 - NM",
+      "price": "7.00 kr",
+      "previous_price": "8.00 kr",
+      "url": "https://pokelageret.no/products/max-rod-116-131?variant=48846684586235",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T02:39:14+00:00",
+      "store": "Pokelageret",
+      "name": "Prime Catcher - 119/131 - NM",
+      "price": "8.00 kr",
+      "previous_price": "7.00 kr",
+      "url": "https://pokelageret.no/products/prime-catcher-119-131?variant=48846683570427",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T02:19:30+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Mew V Special Kinesisk Elite Trainer Collection Box",
@@ -179374,96 +179464,6 @@
       "name": "Bombirdier 071/084 - Pitch Black",
       "price": "3.00 kr",
       "url": "https://pokesingles.no/products/bombirdier-071084-pitch-black-572000?variant=54068645003543",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Boss's Orders 183 - Ascended Heroes",
-      "price": "4.00 kr",
-      "url": "https://pokesingles.no/products/bosss-orders-183-ascended-heroes?variant=53024894943511",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bouffalant ex 77 - White Flare",
-      "price": "15.00 kr",
-      "url": "https://pokesingles.no/products/bouffalant-ex-77-white-flare?variant=53024804045079",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Brassius 135 - Prismatic Evolutions",
-      "price": "39.00 kr",
-      "url": "https://pokesingles.no/products/brassius-135-prismatic-evolutions?variant=53024712360215",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bravery Charm 175 - Stellar Crown",
-      "price": "79.00 kr",
-      "url": "https://pokesingles.no/products/bravery-charm-175-stellar-crown?variant=53024669892887",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Braviary (C) 1706 Stamped - Gem Pack Volume 5",
-      "price": "38.00 kr",
-      "url": "https://pokesingles.no/products/braviary-c-1706-stamped-gem-pack-volume-5-914814?variant=53521907548439",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Braviary (C) 1707 - Gem Pack Volume 5",
-      "price": "110.00 kr",
-      "url": "https://pokesingles.no/products/braviary-c-1707-gem-pack-volume-5-298813?variant=53517909754135",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Breloom V 6 - Fusion Strike",
-      "price": "25.00 kr",
-      "url": "https://pokesingles.no/products/breloom-v-6-fusion-strike?variant=53023459508503",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Brilliant Blender 164 - Surging Sparks",
-      "price": "29.00 kr",
-      "url": "https://pokesingles.no/products/brilliant-blender-164-surging-sparks?variant=53024682836247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Brionne 019/084 - Pitch Black",
-      "price": "3.00 kr",
-      "url": "https://pokesingles.no/products/brionne-019084-pitch-black-168174?variant=54068486766871",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Pokesingles",
-      "name": "Bronzong 064/084 (Reverse Holo) - Pitch Black",
-      "price": "6.00 kr",
-      "url": "https://pokesingles.no/products/bronzong-064084-reverse-holo-pitch-black-888646?variant=54068803469591",
       "product_class": "card",
       "event": "ny"
     }
