@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T07:56:36+00:00",
+      "store": "Collectible",
+      "name": "Neo Destiny – 003/105 – Dark Donphan – Holo (Lightly Played)",
+      "price": "490,00 kr",
+      "url": "https://collectible.no/home/neo-destiny-003-105-dark-donphan-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T07:56:36+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 119/217 – Carkol",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-119-217-carkol/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T07:56:36+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 248/217 – Drakloak",
+      "price": "89,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-248-217-drakloak/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T07:56:36+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK FEARLESS TERASTAL BOOSTER BOKS",
+      "price": "1 099,00 kr",
+      "previous_price": "1 119,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/fearless-terastal",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-05T07:35:52+00:00",
       "store": "Pokelageret",
       "name": "M Steelix EX - 68/114 - HP",
@@ -179426,42 +179462,6 @@
       "name": "Mewtwo V 050/172 - VSTAR Universe - NM (ID: 53215158656596)",
       "price": "29.00 kr",
       "url": "https://laboge.no/products/mewtwo-v-050-172-vstar-universe?variant=54028809666859",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 053/172 - VSTAR Universe - NM (ID: 53214853116123)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/mew-v-053-172-vstar-universe?variant=54028809404715",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 053/172 - VSTAR Universe - NM (ID: 53214867187538)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/mew-v-053-172-vstar-universe?variant=54028809437483",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 053/172 - VSTAR Universe - NM (ID: 53215089285232)",
-      "price": "35.00 kr",
-      "url": "https://laboge.no/products/mew-v-053-172-vstar-universe?variant=54028809470251",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Mew V 039/100 - Fusion Arts - NM (ID: 53214811502892)",
-      "price": "39.00 kr",
-      "url": "https://laboge.no/products/mew-v-039-100-fusion-arts?variant=54028809175339",
       "product_class": "card",
       "event": "ny"
     }
