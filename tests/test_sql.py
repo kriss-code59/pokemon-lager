@@ -18,7 +18,7 @@ ROT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KILDER = [os.path.join(ROT, "api", "main.py"),
           os.path.join(ROT, "ingest", "ingest.py")]
 
-START = re.compile(r"^\s*(SELECT|INSERT|UPDATE|DELETE|WITH)\b", re.I)
+START = re.compile(r"^\s*(SELECT|INSERT|UPDATE|DELETE|WITH)\s+\S", re.I)
 
 # En streng som slutter midt i en klausul er en halvdel som limes sammen med
 # noe annet ved kjoretid (se /api/history). Den kan ikke parses alene, og

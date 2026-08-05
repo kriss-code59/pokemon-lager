@@ -66,23 +66,37 @@ const HISTORIKK = {
   ],
 };
 
-async function app() {
+/* Frontenden leser svaret med r.text() slik at et tomt svar (204) ikke
+ * kaster. Testdobbelen ma derfor tilby text(), ikke bare json(). */
+function svar(url, valg, innlogget) {
+  const sti = String(url).replace(/^.*\/api/, "");
+  let data = null;
+  if (sti.startsWith("/snapshot")) data = SNAPSHOT;
+  else if (sti.startsWith("/catalog")) data = { sets: [], types: [], stores: [] };
+  else if (sti.startsWith("/history")) data = HISTORIKK;
+  else if (sti.startsWith("/unmatched")) data = { antall: 0, varer: [] };
+  else if (sti.startsWith("/product/")) data = PRODUKT;
+  else if (sti.startsWith("/auth/me")) data = innlogget
+    ? { innlogget: true, email: "kris@example.no", role: "free" } : { innlogget: false };
+  else if (sti.startsWith("/watchlist/snapshot")) data = { produkter: [SNAPSHOT.produkter[0]] };
+  else if (sti.startsWith("/watchlist")) {
+    if (valg && valg.method === "POST") data = { id: 7 };
+    else if (valg && valg.method === "DELETE") data = { ok: true };
+    else data = { folger: innlogget ? [{ id: 7, product_id: "pitch-black:booster-box:en" }] : [] };
+  } else if (sti.startsWith("/auth/")) data = { email: "kris@example.no", role: "free" };
+  const kropp = JSON.stringify(data);
+  return { ok: data !== null, status: data ? 200 : 404,
+           text: async () => kropp, json: async () => data };
+}
+
+async function app(innlogget = false) {
   const dom = new JSDOM(les("index.html"), {
     url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true,
   });
   const w = dom.window;
-  w.fetch = async (url) => {
-    const sti = String(url).replace(/^.*\/api/, "");
-    let data = null;
-    if (sti.startsWith("/snapshot")) data = SNAPSHOT;
-    else if (sti.startsWith("/catalog")) data = { sets: [], types: [], stores: [] };
-    else if (sti.startsWith("/history")) data = HISTORIKK;
-    else if (sti.startsWith("/unmatched")) data = { antall: 0, varer: [] };
-    else if (sti.startsWith("/product/")) data = PRODUKT;
-    return { ok: true, status: 200, json: async () => data };
-  };
+  w.fetch = async (url, valg) => svar(url, valg, innlogget);
   w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
-  await new Promise((r) => setTimeout(r, 30));
+  await new Promise((r) => setTimeout(r, 40));
   return w;
 }
 
@@ -124,8 +138,11 @@ test("samme sett i to regioner blir to bolker", async () => {
   ] };
   const dom = new JSDOM(les("index.html"), { url: "https://pokepuls.no/",
     runScripts: "outside-only", pretendToBeVisual: true });
-  dom.window.fetch = async (u) => ({ ok: true, status: 200, json: async () =>
-    String(u).includes("/snapshot") ? to : { sets: [], types: [], stores: [] } });
+  dom.window.fetch = async (u) => {
+    const d = String(u).includes("/snapshot") ? to : { sets: [], types: [], stores: [] };
+    const k = JSON.stringify(d);
+    return { ok: true, status: 200, text: async () => k, json: async () => d };
+  };
   dom.window.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
   await new Promise((r) => setTimeout(r, 30));
   const titler = alle(dom.window, ".sett-tittel").map((e) => e.textContent.trim());
@@ -194,10 +211,108 @@ test("brukerdata slipper aldri ut som rå HTML", async () => {
     set_label: '<img src=x onerror=alert(1)>', tilbud: [["a", 1000, 1]] }] };
   const dom = new JSDOM(les("index.html"), { url: "https://pokepuls.no/",
     runScripts: "outside-only", pretendToBeVisual: true });
-  dom.window.fetch = async (u) => ({ ok: true, status: 200, json: async () =>
-    String(u).includes("/snapshot") ? ondt : { sets: [], types: [], stores: [] } });
+  dom.window.fetch = async (u) => {
+    const d = String(u).includes("/snapshot") ? ondt : { sets: [], types: [], stores: [] };
+    const k = JSON.stringify(d);
+    return { ok: true, status: 200, text: async () => k, json: async () => d };
+  };
   dom.window.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
   await new Promise((r) => setTimeout(r, 30));
-  assert.equal(dom.window.document.querySelectorAll("#liste img").length, 0);
+  // Miniatyrbildene vare er ekte <img>, sa vi kan ikke telle alle. Poenget er
+  // at det INJISERTE bildet ikke ble til et element, og at teksten star
+  // ordrett i overskriften.
+  const injisert = [...dom.window.document.querySelectorAll("#liste img")]
+    .filter((el) => el.getAttribute("src") === "x" || el.hasAttribute("onerror") &&
+                    /alert/.test(el.getAttribute("onerror")));
+  assert.equal(injisert.length, 0, "payloaden ble tolket som HTML");
   assert.match($(dom.window, ".sett-tittel").textContent, /<img/);
+});
+
+
+test("produktkort far miniatyrbilde, med reservegrafikk uten foto", async () => {
+  const w = await app();
+  const bilder = alle(w, "#liste .miniatyr");
+  assert.equal(bilder.length, 2, "ett bilde per kort");
+  // Ingen av produktene i testdataene har bilde, sa begge skal ha reserven.
+  for (const b of bilder) {
+    assert.match(b.getAttribute("src"), /^data:image\/svg\+xml/);
+    assert.equal(b.getAttribute("loading"), "lazy");
+  }
+});
+
+test("reservegrafikken skiller pa varetype", async () => {
+  const w = await app();
+  const [boks, ] = alle(w, "#liste .miniatyr").map((b) => b.getAttribute("src"));
+  const jp = alle(w, "#liste .miniatyr")[1].getAttribute("src");
+  // Booster box (vestlig, bla) og booster box (japansk, rod) skal ikke vaere
+  // samme bilde -- regionen farger silhuetten.
+  assert.notEqual(boks, jp);
+});
+
+test("butikkens bilde brukes nar det finnes", async () => {
+  const med = { ...SNAPSHOT, produkter: [{ ...SNAPSHOT.produkter[0],
+    bilde: "https://cdn.example.no/pitch.jpg" }] };
+  const dom = new JSDOM(les("index.html"), { url: "https://pokepuls.no/",
+    runScripts: "outside-only", pretendToBeVisual: true });
+  dom.window.fetch = async (u) => {
+    const d = String(u).includes("/snapshot") ? med : { sets: [], types: [], stores: [] };
+    const k = JSON.stringify(d);
+    return { ok: true, status: 200, text: async () => k, json: async () => d };
+  };
+  dom.window.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 30));
+  const img = $(dom.window, "#liste .miniatyr");
+  assert.equal(img.getAttribute("src"), "https://cdn.example.no/pitch.jpg");
+  // Faller bildet, skal reserven ta over i stedet for et odelagt ikon.
+  assert.match(img.getAttribute("onerror"), /data:image\/svg\+xml/);
+});
+
+test("utlogget bruker blir bedt om a logge inn i folger-fanen", async () => {
+  const w = await app(false);
+  alle(w, ".fane-knapp").find((b) => b.dataset.fane === "folger")
+    .dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 20));
+  assert.match($(w, "#folger-innhold").textContent, /Logg inn for a folge/);
+  assert.equal($(w, ".konto-knapp").classList.contains("innlogget"), false);
+});
+
+test("innlogget bruker ser folgelisten og merket pa kortet", async () => {
+  const w = await app(true);
+  assert.equal($(w, ".konto-knapp").classList.contains("innlogget"), true);
+  assert.equal(alle(w, "#liste .folge-merke").length, 1, "det fulgte produktet skal merkes");
+  alle(w, ".fane-knapp").find((b) => b.dataset.fane === "folger")
+    .dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 25));
+  assert.match($(w, "#folger-innhold").textContent, /1 fulgte produkter/);
+});
+
+test("innloggingsskjemaet kan bytte mellom logg inn og registrer", async () => {
+  const w = await app(false);
+  $(w, "#konto-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 15));
+  assert.equal($(w, "#ark").hidden, false);
+  assert.match($(w, "#ark-innhold").textContent, /Logg inn/);
+  $(w, "#bytt-modus").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 15));
+  assert.match($(w, "#ark-innhold").textContent, /Lag konto/);
+  assert.equal($(w, "#k-passord").getAttribute("minlength"), "8");
+});
+
+test("folg-knappen i produktarket krever innlogging", async () => {
+  const w = await app(false);
+  $(w, "#liste .kort").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 25));
+  assert.match($(w, "#folg-knapp").textContent, /Logg inn/);
+});
+
+test("innlogget bruker kan folge og slutte a folge fra produktarket", async () => {
+  const w = await app(true);
+  // Apne et produkt brukeren IKKE folger fra for.
+  alle(w, "#liste .kort")[1].dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 25));
+  const knapp = $(w, "#folg-knapp");
+  assert.match(knapp.textContent, /Folg denne/);
+  knapp.dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 25));
+  assert.match($(w, "#folg-knapp").textContent, /Folger/);
 });

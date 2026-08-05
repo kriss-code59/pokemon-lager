@@ -212,6 +212,66 @@ def main():
             sjekk(klient.get("/api/history?kind=tull").status_code == 400,
                   "ugyldig hendelsestype gir 400")
 
+            # --------------------------------------------- 7. konto og folgeliste
+            print("\n7. Konto, sesjon og folgeliste")
+            e_post = "selvtest-%d@pokepuls.no" % int(datetime.now().timestamp())
+            passord = "et-ganske-langt-passord"
+
+            sjekk(klient.get("/api/watchlist").status_code == 401,
+                  "folgelisten krever innlogging")
+            sjekk(klient.post("/api/auth/register",
+                              json={"email": e_post, "password": "kort"}).status_code == 422,
+                  "for kort passord avvises")
+
+            r = klient.post("/api/auth/register", json={"email": e_post, "password": passord})
+            sjekk(r.status_code == 200, "registrering svarer 200", r.text[:120])
+            sjekk("pokepuls_sesjon" in r.cookies or "pokepuls_sesjon" in klient.cookies,
+                  "sesjonscookie ble satt")
+            sjekk(klient.post("/api/auth/register",
+                              json={"email": e_post, "password": passord}).status_code == 409,
+                  "samme e-post to ganger gir 409")
+
+            r = klient.get("/api/auth/me")
+            sjekk(r.json().get("innlogget") is True, "/auth/me ser sesjonen", r.text[:120])
+
+            r = klient.post("/api/watchlist", json={"product_id": pid})
+            sjekk(r.status_code == 200, "kan folge et produkt", r.text[:120])
+            abonnement = r.json()["id"]
+            liste = klient.get("/api/watchlist").json()["folger"]
+            sjekk(len(liste) == 1 and liste[0]["product_id"] == pid,
+                  "produktet ligger i folgelisten")
+            fl = klient.get("/api/watchlist/snapshot").json()["produkter"]
+            sjekk(len(fl) == 1 and fl[0]["id"] == pid,
+                  "folgeliste-snapshot gir samme form som /snapshot")
+
+            sjekk(klient.delete("/api/watchlist/%d" % abonnement).status_code == 200,
+                  "kan slutte a folge")
+            sjekk(len(klient.get("/api/watchlist").json()["folger"]) == 0,
+                  "folgelisten er tom igjen")
+
+            klient.post("/api/auth/logout")
+            sjekk(klient.get("/api/auth/me").json().get("innlogget") is False,
+                  "utlogging avslutter sesjonen")
+            sjekk(klient.post("/api/auth/login",
+                              json={"email": e_post, "password": "feil passord"}
+                              ).status_code == 401, "feil passord gir 401")
+            sjekk(klient.post("/api/auth/login",
+                              json={"email": e_post, "password": passord}
+                              ).status_code == 200, "kan logge inn igjen")
+
+            # Passordet skal aldri kunne leses ut av databasen, og tokenet
+            # skal ikke ligge der i klartekst.
+            with psycopg.connect(a.dsn) as c:
+                hash_ = c.execute("SELECT password_hash FROM users WHERE email = %s",
+                                  (e_post,)).fetchone()[0]
+                sjekk(hash_.startswith("$argon2id$"), "passordet er argon2id-hashet",
+                      hash_[:20])
+                sjekk(passord not in hash_, "passordet star ikke i klartekst")
+                token_rader = c.execute(
+                    "SELECT token_hash FROM sessions").fetchall()
+                sjekk(all(len(t[0]) == 64 for t in token_rader),
+                      "sesjoner lagres som sha256, ikke som token")
+
     print("\n%d sjekker ok, %d feil" % (OK, len(FEIL)))
     if FEIL:
         for f in FEIL:
