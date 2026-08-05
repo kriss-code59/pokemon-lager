@@ -1230,8 +1230,10 @@
       "label": "Collect 151 Journey",
       "region": "cn",
       "aliases": [
+        "151 journey",
+        "151 vol 1 journey",
         "collect 151 journey",
-        "151 journey"
+        "collect 151 vol 1 journey"
       ]
     },
     {
@@ -1239,8 +1241,10 @@
       "label": "Collect 151 Hope",
       "region": "cn",
       "aliases": [
+        "151 hope",
+        "151 vol 2 hope",
         "collect 151 hope",
-        "151 hope"
+        "collect 151 vol 2 hope"
       ]
     },
     {
@@ -1248,9 +1252,12 @@
       "label": "Collect 151 Surprise",
       "region": "cn",
       "aliases": [
-        "collect 151 surprises",
+        "151 surprise",
+        "151 vol 3 surprise",
         "collect 151 surprise",
-        "151 surprise"
+        "collect 151 surprises",
+        "collect 151 vol 3 surprise",
+        "collect 151 vol 3 surprises"
       ]
     },
     {
@@ -1258,8 +1265,10 @@
       "label": "Collect 151 Gathering",
       "region": "cn",
       "aliases": [
+        "151 gathering",
+        "151 vol 4 gathering",
         "collect 151 gathering",
-        "151 gathering"
+        "collect 151 vol 4 gathering"
       ]
     },
     {
