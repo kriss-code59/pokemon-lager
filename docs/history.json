@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T08:59:49+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon TCG: Future Flash Booster Pack (SV4M, Japanese)",
+      "price": "kr 59.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-future-flash-booster-pack-sv-sv4m-japanese/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T08:59:49+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Poke Ball Shaped Lunch Box Micro Safe (170ml/140ml, Skater)",
+      "price": "kr 299.00",
+      "url": "https://www.neo-tokyo.no/product/lunch-box-pokemon-poke-ball-shaped-micro-safe-170ml/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-05T08:59:49+00:00",
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Hair Band – Gengar (23.5x9cm, T’s Factory)",
+      "price": "kr 219.00",
+      "url": "https://www.neo-tokyo.no/product/pokemon-hair-band-gengar-23-5x9cm-ts-factory/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-05T08:39:19+00:00",
       "store": "Pokelageret",
       "name": "Destined Rivals Booster Pakke",
@@ -179435,33 +179462,6 @@
       "name": "Spiritomb 071/063 - Mega Brave - NM (ID: 53272417361853)",
       "price": "29.00 kr",
       "url": "https://laboge.no/products/spiritomb-071-063-mega-brave?variant=54028813500715",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Solgaleo 055/095 - Alter Genesis - NM (ID: 53215338752951)",
-      "price": "19.00 kr",
-      "url": "https://laboge.no/products/solgaleo-055-095-alter-genesis?variant=54028813140267",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Solgaleo 055/095 - Alter Genesis - NM (ID: 53215407778111)",
-      "price": "19.00 kr",
-      "url": "https://laboge.no/products/solgaleo-055-095-alter-genesis?variant=54028813173035",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "LABOGE",
-      "name": "Shuckle-GX 013/095 - Super-Burst Impact - NM (ID: 53215269266643)",
-      "price": "65.00 kr",
-      "url": "https://laboge.no/products/shuckle-gx-013-095-super-burst-impact?variant=54028813107499",
       "product_class": "card",
       "event": "ny"
     }

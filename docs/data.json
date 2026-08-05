@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05T08:39:20+00:00",
+  "last_updated": "2026-08-05T08:59:49+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -161598,24 +161598,6 @@
     },
     {
       "store": "Lekekassen",
-      "name": "Pokémon TCG Mega Evolution Pitch Black Elite Trainer Box",
-      "price": "1 048,-",
-      "in_stock": true,
-      "url": "https://lekekassen.no/pokemon-tcg-pitch-black-elite-trainer-box-pok10416-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
-      "name": "Pokémon TCG Mega Evolution Pitch Black Elite Trainer Box",
-      "price": "1 048,-",
-      "in_stock": true,
-      "url": "https://lekekassen.no/pokemon-tcg-pitch-black-elite-trainer-box-pok10416-101",
-      "store_count": null,
-      "product_class": "card"
-    },
-    {
-      "store": "Lekekassen",
       "name": "Pokémon TCG First Partner Illustration Collection Series 2",
       "price": "573,-",
       "in_stock": null,
@@ -161629,6 +161611,24 @@
       "price": "573,-",
       "in_stock": null,
       "url": "https://lekekassen.no/pokemon-tcg-first-partner-illustration-collection-series-2-pok10395-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Pitch Black Elite Trainer Box",
+      "price": "1 048,-",
+      "in_stock": true,
+      "url": "https://lekekassen.no/pokemon-tcg-pitch-black-elite-trainer-box-pok10416-101",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Lekekassen",
+      "name": "Pokémon TCG Mega Evolution Pitch Black Elite Trainer Box",
+      "price": "1 048,-",
+      "in_stock": true,
+      "url": "https://lekekassen.no/pokemon-tcg-pitch-black-elite-trainer-box-pok10416-101",
       "store_count": null,
       "product_class": "card"
     },
@@ -173433,6 +173433,15 @@
     },
     {
       "store": "Neo Tokyo",
+      "name": "Pokemon TCG: Future Flash Booster Pack (SV4M, Japanese)",
+      "price": "kr 59.00",
+      "in_stock": true,
+      "url": "https://www.neo-tokyo.no/product/pokemon-tcg-future-flash-booster-pack-sv-sv4m-japanese/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Neo Tokyo",
       "name": "Pokemon: Pikachu Hat w/Pump Up Ears",
       "price": "kr 149.00",
       "in_stock": true,
@@ -173592,6 +173601,15 @@
       "url": "https://www.neo-tokyo.no/product/pokemon-gengar-acrylic-keychain/",
       "store_count": null,
       "product_class": "accessory"
+    },
+    {
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Poke Ball Shaped Lunch Box Micro Safe (170ml/140ml, Skater)",
+      "price": "kr 299.00",
+      "in_stock": true,
+      "url": "https://www.neo-tokyo.no/product/lunch-box-pokemon-poke-ball-shaped-micro-safe-170ml/",
+      "store_count": null,
+      "product_class": "card"
     },
     {
       "store": "Neo Tokyo",
@@ -174058,6 +174076,15 @@
       "price": "kr 100.00",
       "in_stock": true,
       "url": "https://www.neo-tokyo.no/product/pokemon-tail-figure-gacha-vol-1-random-bandai/",
+      "store_count": null,
+      "product_class": "card"
+    },
+    {
+      "store": "Neo Tokyo",
+      "name": "Pokemon: Hair Band – Gengar (23.5x9cm, T’s Factory)",
+      "price": "kr 219.00",
+      "in_stock": true,
+      "url": "https://www.neo-tokyo.no/product/pokemon-hair-band-gengar-23-5x9cm-ts-factory/",
       "store_count": null,
       "product_class": "card"
     },
@@ -176326,6 +176353,6 @@
       "NorthTCG"
     ],
     "store_count": 35,
-    "product_count": 19589
+    "product_count": 19592
   }
 }
