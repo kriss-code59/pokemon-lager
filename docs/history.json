@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T11:59:40+00:00",
+      "store": "Pokelageret",
+      "name": "Electrike - 196/182 - NM",
+      "price": "45.00 kr",
+      "url": "https://pokelageret.no/products/electrike-196-182?variant=49002496229627",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T11:59:40+00:00",
+      "store": "Pokelageret",
+      "name": "Fuecoco - 079 - NM",
+      "price": "65.00 kr",
+      "url": "https://pokelageret.no/products/fuecoco-079?variant=48848860872955",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T11:39:30+00:00",
       "store": "Pokelageret",
       "name": "Fuecoco - 002 - NM",
@@ -179423,24 +179439,6 @@
       "price": "1259.00 kr",
       "url": "https://braspill.no/products/kommer-inn-29-april-pokemon-ascended-heroes-deluxe-pin-coll-first-partners?variant=53345311981860",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Ascended Heroes Poster Coll #2\nPremium Poster Coll - Mega Gardevoir ex",
-      "price": "2490.00 kr",
-      "url": "https://braspill.no/products/forhandssalg-ventes-inn-29-april-pokemon-ascended-heroes-poster-coll-2-premium-poster-coll-mega-gardevoir-ex?variant=53345309851940",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Ascended Heroes Boosterpakke",
-      "price": "250.00 kr",
-      "url": "https://braspill.no/products/pokemon-ascended-heroes-boosterpakke?variant=53345268302116",
-      "product_class": "card",
       "event": "ny"
     }
   ]
