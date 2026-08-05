@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T17:40:21+00:00",
+      "store": "EpiCards",
+      "name": "Pokemon Storm Emeralda Japansk Booster Pakke",
+      "price": "79.00 kr",
+      "url": "https://epicards.no/products/pokemon-storm-emeralda-japansk-booster-pakke?variant=56893793239206",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-05T17:00:00+00:00",
       "store": "EpiCards",
       "name": "Pokemon Storm Emeralda Japansk Booster Box",
@@ -179406,15 +179415,6 @@
       "name": "Japansk Nøkkelring Gouging Fire",
       "price": "79.00 kr",
       "url": "https://cardcenter.no/products/japansk-nokkelring-raging-fire",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Trading Card Game Classic Collection (Kun brett)",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-trading-card-game-classic-collection-kun-brett",
       "product_class": "card",
       "event": "ny"
     }
