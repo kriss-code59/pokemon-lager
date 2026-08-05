@@ -1,6 +1,76 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Crystal Gathering Umbreon Tin Set (Kinesisk)",
+      "price": "369.00 kr",
+      "url": "https://retroworld.no/products/pokemon-crystal-gathering-umbreon-tin-set-kinesisk?variant=52270012137773",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME02.5 Mega Evolution Ascended Heroes - Booster Pack",
+      "price": "249.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me02-5-mega-evolution-ascended-heroes-booster-pack-max-8-per-kunde?variant=51830153150765",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-booster-pack?variant=50599214121261",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Prismatic Evolutions - Booster Pack",
+      "price": "299.00 kr",
+      "url": "https://retroworld.no/products/pokemon-prismatic-evolutions-booster-pack-apnes-live-pa-stream?variant=50420450853165",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "Pokelageret",
+      "name": "Blastoise - 017/078 - NM / Reverse Holofoil",
+      "price": "35.00 kr",
+      "url": "https://pokelageret.no/products/blastoise-017-078?variant=48886999711995",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "Pokelageret",
+      "name": "Pinsir - 09/64 - DMG / Unlimited Holofoil",
+      "price": "115.00 kr",
+      "previous_price": "109.00 kr",
+      "url": "https://pokelageret.no/products/pinsir-09-64?variant=48875225186555",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "Pokelageret",
+      "name": "Ditto - 03/62 - MP / Unlimited Holofoil",
+      "price": "359.00 kr",
+      "previous_price": "375.00 kr",
+      "url": "https://pokelageret.no/products/ditto-03-62?variant=48875226398971",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-05T12:39:48+00:00",
+      "store": "Pokelageret",
+      "name": "Slither Wing - 203/182 - NM",
+      "price": "75.00 kr",
+      "url": "https://pokelageret.no/products/slither-wing-203-182?variant=48843519262971",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T12:19:35+00:00",
       "store": "RetroWorld",
       "name": "Pokemon - ME05 Mega Evolution Pitch Black - 3 Pack Blister",
@@ -179363,78 +179433,6 @@
       "name": "Sendes ut 16 Juli. Pokemon Pitch Black 3-pakning Blister - Binacle",
       "price": "369.00 kr",
       "url": "https://braspill.no/products/pokemon-pitch-black-3-pack-blister-binacle?variant=55369570615588",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Pitch Black Elite Trainer Box",
-      "price": "1499.00 kr",
-      "url": "https://braspill.no/products/pokemon-pitch-black-elite-trainer-box?variant=55369536340260",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Sendes ut 16 juli Pokémon Pitch Black Booster Bundle (6 Booster Packs)",
-      "price": "799.00 kr",
-      "url": "https://braspill.no/products/pokemon-pitch-black-boosterbundle-6-pack?variant=55368756789540",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Sendes ut 16 Juli. Pokemon Pitch Black Booster Box",
-      "price": "3399.00 kr",
-      "url": "https://braspill.no/products/pokemon-pitch-black-booster-box?variant=55368754331940",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Mega Moonlit Tin Clefable",
-      "price": "559.00 kr",
-      "url": "https://braspill.no/products/pokemon-mega-moonlit-tin-clefable?variant=55236710236452",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Chaos Rising Boosterboks (Gratis frakt)",
-      "price": "3599.00 kr",
-      "url": "https://braspill.no/products/pokemon-chaos-rising-boosterboks?variant=54009624396068",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Chaos Rising boosterpakke (assortert)",
-      "price": "105.00 kr",
-      "url": "https://braspill.no/products/kommer-22-mai-pokemon-chaos-rising-boosterpakke-assortert?variant=53966421655844",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Chaos Rising Elite Trainer box",
-      "price": "1499.00 kr",
-      "url": "https://braspill.no/products/kommer-22-mai-chaos-rising-elite-trainer-box?variant=53966412939556",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Braspill",
-      "name": "Pokemon Perfect Order 1-Pack Blister - Makuhita",
-      "price": "99.00 kr",
-      "url": "https://braspill.no/products/pokemon-perfect-order-1-pack-blister-makuhita?variant=53699504374052",
       "product_class": "card",
       "event": "ny"
     }
