@@ -1,6 +1,33 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T05:20:10+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza - 138/185 - NM",
+      "price": "295.00 kr",
+      "previous_price": "305.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-138-185?variant=48849600708859",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:20:10+00:00",
+      "store": "Pokelageret",
+      "name": "Jirachi - 119/185 - NM",
+      "price": "109.00 kr",
+      "previous_price": "115.00 kr",
+      "url": "https://pokelageret.no/products/jirachi-119-185?variant=48846264041723",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:20:10+00:00",
+      "store": "Pokelageret",
+      "name": "Scizor V - 118/189 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/scizor-v-118-189?variant=48887902306555",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T04:59:46+00:00",
       "store": "Pokelageret",
       "name": "Pikachu - 049/203 - NM / Reverse Holofoil",
@@ -179342,33 +179369,6 @@
       "price": "119.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-mega-mawile-soeeves?variant=51568657957095",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Cinderace Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-cinderace-sleeves?variant=51568657694951",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock RS Mega Lucario Figur",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-rs-mega-lucario-figur?variant=51555996762343",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock DX Deluxe Suicune Figur",
-      "price": "649.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-suicune-figur?variant=51555984736487",
-      "product_class": "card",
       "event": "ny"
     }
   ]
