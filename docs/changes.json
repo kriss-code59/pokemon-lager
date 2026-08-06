@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Phantasmal Flames Booster Bundle",
+      "price": "1299.00 kr",
+      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-bundle?variant=51390296719591",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Boosterpakker",
+      "name": "GRENINJA EX & KINGDRA EX SPECIAL COLLECTION",
+      "price": "1 149,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/kingdra-greninja",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-06T08:00:07+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Japansk 30th Anniversary PokeBall Ornament Set",
@@ -2679,24 +2697,6 @@
       "name": "MEGA CHANDELURE EX #99 POKEMON PITCH BLACK",
       "price": "149,00 kr",
       "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/mega-chandelure-ex-99-pokemon-pitch-black-1",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T02:19:30+00:00",
-      "store": "Emken",
-      "name": "SLOWBRO #90 POKEMON PITCH BLACK",
-      "price": "299,00 kr",
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/slowbro-90-pokemon-pitch-black-1",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T02:19:30+00:00",
-      "store": "Emken",
-      "name": "ARMAROUGE #86 POKEMON PITCH BLACK",
-      "price": "99,00 kr",
-      "url": "https://www.emken.no/produkt/spill-samling/pokemon/kort/single-kort/alle-kort/armarouge-86-pokemon-pitch-black-1",
       "product_class": "card",
       "event": "ny"
     }

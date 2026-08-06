@@ -1,6 +1,51 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Phantasmal Flames Booster Bundle",
+      "price": "1299.00 kr",
+      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-bundle?variant=51390296719591",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Boosterpakker",
+      "name": "GRENINJA EX & KINGDRA EX SPECIAL COLLECTION",
+      "price": "1 149,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/kingdra-greninja",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Pokelageret",
+      "name": "Stoutland - 122/149 - LP / Holofoil",
+      "price": "65.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://pokelageret.no/products/stoutland-122-149?variant=48846280294651",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK CHASING GLORY TOGETHER BOOSTER BOKS",
+      "price": "399,00 kr",
+      "previous_price": "419,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/kinesisk-chasing-glory-togheter-booster-boks-preorder",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T08:40:02+00:00",
+      "store": "Boosterpakker",
+      "name": "KINESISK TERASTAL GATHERING BOOSTER BOKS",
+      "price": "1 229,00 kr",
+      "previous_price": "1 249,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/kinesisk-terastal-gathering-booster-boks",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T08:00:07+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Japansk 30th Anniversary PokeBall Ornament Set",
@@ -179319,51 +179364,6 @@
       "name": "Ultra Pro Pokemon Neon Kanto One-Touch Edge 3-Card Holder",
       "price": "239.00 kr",
       "url": "https://pokestore.no/products/ultra-pro-pokemon-neon-kanto-one-touch-edge-3-card-holder?variant=51720540160231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Wooloo (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-wooloo-emea-9-cm?variant=51704570380519",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Charizard (25 cm)",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-charizard-emea-25-cm?variant=51704570314983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Gardevoir (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-gardevoir-9-cm?variant=51704570282215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Umbreon (9 cm)",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-umbreon-emea-9-cm?variant=51704570151143",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Umbreon (25 cm)",
-      "price": "549.00 kr",
-      "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-umbreon-emea-25-cm?variant=51704570020071",
       "product_class": "accessory",
       "event": "ny"
     }
