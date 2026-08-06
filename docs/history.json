@@ -1,6 +1,69 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 028/078 - NM / Holofoil",
+      "price": "19.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-028-078?variant=48969039118587",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 054/078 - NM / Reverse Holofoil",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/eevee-054-078?variant=48886999482619",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Zamazenta V - TG22/TG30 - NM",
+      "price": "119.00 kr",
+      "previous_price": "125.00 kr",
+      "url": "https://pokelageret.no/products/zamazenta-v-tg22-tg30?variant=48846688813307",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Zacian V - TG21/TG30 - NM",
+      "price": "265.00 kr",
+      "previous_price": "275.00 kr",
+      "url": "https://pokelageret.no/products/zacian-v-tg21-tg30?variant=48846688485627",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Giratina VSTAR - 131/196 - NM",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/giratina-vstar-131-196?variant=48843536335099",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Hisuian Arcanine - TG08/TG30 - NM",
+      "price": "55.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/hisuian-arcanine-tg08-tg30?variant=48843519590651",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:20:02+00:00",
+      "store": "Pokelageret",
+      "name": "Aerodactyl V - 179/196 - NM",
+      "price": "35.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/aerodactyl-v-179-196?variant=48984726044923",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T03:59:52+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Espeon Acrylic Keychain",
@@ -179305,69 +179368,6 @@
       "name": "Pokemon Funko POP! Fidough",
       "price": "189.00 kr",
       "url": "https://pokestore.no/products/pokemon-funko-pop-fidough?variant=51539014648039",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Fuecoco",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-fuecoco?variant=51539014222055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Suicune Plush",
-      "price": "499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-suicune-plush?variant=51508329611495",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Kutakuta Tatta! Glaceon Plush (19cm)",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-kutakuta-tatta-glaceon-plush-19cm?variant=51508317651175",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Mew Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-mew-plush?variant=51508306706663",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Alolan Vulpix Plush",
-      "price": "479.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-alolan-vulpix-plush?variant=51508299596007",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Riolu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-riolu-plush?variant=51508258078951",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Shaymin (Sky Form) Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-shaymin-sky-form-plush?variant=51508228292839",
       "product_class": "accessory",
       "event": "ny"
     }
