@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T08:00:07+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Japansk 30th Anniversary PokeBall Ornament Set",
+      "price": "4799.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-japansk-30th-anniversary-pokeball-ornament-set",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T08:00:07+00:00",
+      "store": "Maxgaming",
+      "name": "Ultra Pro Toploader 3x4\" Clear Platinum 25-pack - Plastfickor",
+      "price": "139 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/toploader-3x4-clear-platinum-25-pack-plastfickor",
+      "product_class": "accessory",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T08:00:07+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu EX - XY174 - DMG",
+      "price": "99.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-ex-xy174?variant=49002529095931",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T08:00:07+00:00",
+      "store": "Pokelageret",
+      "name": "Machamp - 49/101 - LP / Holofoil",
+      "price": "39.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/machamp-49-101?variant=48843145380091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T08:00:07+00:00",
+      "store": "Pokelageret",
+      "name": "Pignite - 26/113 - NM / Normal",
+      "price": "85.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokelageret.no/products/pignite-26-113?variant=48864993411323",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T08:00:07+00:00",
+      "store": "Pokelageret",
+      "name": "Palkia EX - 66/101 - NM",
+      "price": "255.00 kr",
+      "previous_price": "285.00 kr",
+      "url": "https://pokelageret.no/products/palkia-ex-66-101?variant=48843536892155",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T07:39:47+00:00",
       "store": "Pokesingles",
       "name": "Antique Armor Fossil 72 (Reverse Holo) - Pitch Black",
@@ -179310,60 +179364,6 @@
       "name": "Pokemon Funko POP! Jumbo Umbreon (25 cm)",
       "price": "549.00 kr",
       "url": "https://pokestore.no/products/pokemon-super-sized-jumbo-pop-vinyl-figure-umbreon-emea-25-cm?variant=51704570020071",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-58 Quaquaval Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ms-58-quaquaval-moncolle-figur?variant=51685788647655",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Roy Trainer Moncolle Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-moncolle-figur?variant=51685788582119",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Iono and Bellibolt Playmat for Pokémon",
-      "price": "259.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-playmat-for-pok-mon?variant=51677139697895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt 2\" Album",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-2-album-for-pok-mon?variant=51677139665127",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt 9-Pocket Portfolio",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-9-pocket-portfolio-for-pok-mon?variant=51677139632359",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt 4-Pocket Portfolio",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/iono-and-bellibolt-4-pocket-portfolio-for-pok-mon?variant=51677139566823",
       "product_class": "accessory",
       "event": "ny"
     }
