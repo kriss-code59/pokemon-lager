@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06T14:19:57+00:00",
+  "last_updated": "2026-08-06T15:00:10+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -82335,7 +82335,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Chilling Reign Booster Pakke",
       "price": "189.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokenordic.no/products/chilling-rein-booster-pack?variant=47550322475262",
       "store_count": null,
       "product_class": "card",
@@ -82425,7 +82425,7 @@
       "store": "PokeNordic",
       "name": "Pokémon Crown Zenith Booster Pakke",
       "price": "449.00 kr",
-      "in_stock": false,
+      "in_stock": true,
       "url": "https://pokenordic.no/products/pokemon-crown-zenith-booster-pack?variant=48174456471806",
       "store_count": null,
       "product_class": "card",
@@ -167975,7 +167975,7 @@
       "store": "RetroWorld",
       "name": "Pokemon Crystal Gathering Binder Set - #196 Espeon (Kinesisk)",
       "price": "1999.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-crystal-gathering-binder-set-196-espeon-kinesisk?variant=52266251157805",
       "store_count": null,
       "product_class": "accessory",
@@ -179227,7 +179227,7 @@
       "price": "",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-mega-venusaur-moncolle-figure-pokemon-4904810952466",
-      "store_count": 5,
+      "store_count": 4,
       "product_class": "card",
       "image": null
     },
