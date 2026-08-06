@@ -1,6 +1,69 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Sliggoo - 095/086 - DMG",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/sliggoo-095-86?variant=49151078957307",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu VMAX - 009/025 - DMG",
+      "price": "95.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-vmax-009-025?variant=49151079252219",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Claydol - 092/086 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/claydol-092-086?variant=48971008016635",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Meowth ex - 062/088 - LP",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/meowth-ex-062-088?variant=49151078990075",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Greninja ex - 022/086 - LP",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-greninja-ex-022-086?variant=49151079121147",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza V - 110/203 - HP",
+      "price": "35.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-v-110-203?variant=49151079547131",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Froakie - 088/086 - NM",
+      "price": "124.00 kr",
+      "url": "https://pokelageret.no/products/froakie-088-086?variant=49018873217275",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-06T10:40:31+00:00",
       "store": "Pokelageret",
       "name": "Surfing Pikachu V - 008/025 - NM",
@@ -2636,69 +2699,6 @@
       "url": "https://collectible.no/home/ascended-heroes-037-217-raboot/",
       "product_class": "card",
       "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 053/217 – Frosmoth",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-053-217-frosmoth/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 277/217 – Pikachu ex",
-      "price": "4.499,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-277-217-pikachu-ex/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 233/217 – Misdreavus",
-      "price": "89,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-233-217-misdreavus/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T02:39:14+00:00",
-      "store": "Maxgaming",
-      "name": "Pokémon Storm Emeralda Booster Box (Japanese)",
-      "price": "2399 kr",
-      "url": "https://www.maxgaming.no/no/pokemon/pokemon-storm-emeralda-booster-box-japanese",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T02:19:30+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mew V Special Kinesisk Elite Trainer Collection Box",
-      "price": "3999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mew-v-special-elite-trainer-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T02:19:30+00:00",
-      "store": "Pokelageret",
-      "name": "Flareon - 167 - NM",
-      "price": "12.00 kr",
-      "url": "https://pokelageret.no/products/flareon-167?variant=48848862314747",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T02:19:30+00:00",
-      "store": "Pokelageret",
-      "name": "Galarian Moltres V - TG20/TG30 - LP",
-      "price": "255.00 kr",
-      "url": "https://pokelageret.no/products/galarian-moltres-v-tg20-tg30?variant=49131332862203",
-      "product_class": "card",
-      "event": "restock"
     }
   ]
 }

@@ -1,6 +1,127 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Sliggoo - 095/086 - DMG",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/sliggoo-095-86?variant=49151078957307",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu VMAX - 009/025 - DMG",
+      "price": "95.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-vmax-009-025?variant=49151079252219",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Claydol - 092/086 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/claydol-092-086?variant=48971008016635",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Meowth ex - 062/088 - LP",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/meowth-ex-062-088?variant=49151078990075",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Greninja ex - 022/086 - LP",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-greninja-ex-022-086?variant=49151079121147",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza V - 110/203 - HP",
+      "price": "35.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-v-110-203?variant=49151079547131",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Froakie - 088/086 - NM",
+      "price": "124.00 kr",
+      "url": "https://pokelageret.no/products/froakie-088-086?variant=49018873217275",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Prismatic Evolutions Booster Bundle",
+      "price": "1399.00 kr",
+      "url": "https://pokelageret.no/products/prismatic-evolutions-booster-bundle?variant=47819366105339",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Evolutions 9-P Binder",
+      "price": "225.00 kr",
+      "url": "https://pokelageret.no/products/mega-evolutions-9-p-binder?variant=47582989156603",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Froakie - 088/086 - NM",
+      "price": "124.00 kr",
+      "previous_price": "174.00 kr",
+      "url": "https://pokelageret.no/products/froakie-088-086?variant=49018873217275",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Ruffian - 181/159 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/ruffian-181-159?variant=48960193331451",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokelageret",
+      "name": "Muk - 016/110 - HP / Holofoil",
+      "price": "115.00 kr",
+      "previous_price": "119.00 kr",
+      "url": "https://pokelageret.no/products/muk-016-110?variant=48875233476859",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokefriends",
+      "name": "Pokemon Prismatic Evolutions Booster Bundle (6-pack) (Engelsk)",
+      "price": "1399.00 kr",
+      "url": "https://pokefriends.no/products/pokemon-prismatic-evolutions-booster-bundle-6-pack-engelsk?variant=45278193975405",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T11:20:04+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon MS-49 Ditto Moncolle Figur",
+      "price": "99.00 kr",
+      "url": "https://pokestore.no/products/pokemon-ditto-moncolle-figur?variant=51232593936615",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T10:40:31+00:00",
       "store": "Pokelageret",
       "name": "Surfing Pikachu V - 008/025 - NM",
@@ -179233,132 +179354,6 @@
       "name": "Pokemon Pokepeace Espurr Plush",
       "price": "339.00 kr",
       "url": "https://pokestore.no/products/pokemon-pokepeace-espurr-plush-1?variant=51994844889319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Scorbunny Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-scorbunny-plush-1?variant=51994844856551",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Popplio Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-popplio-plush?variant=51994844561639",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Scorbunny Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-scorbunny-plush?variant=51994844397799",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Yamper Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-yamper-plush-1?variant=51994844365031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Friends Medium Pikachu",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-friends-medium-size-pikachu?variant=51994825916647",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sleeping Friends Small Pikachu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sleeping-friends-pikachu-plush?variant=51994498466023",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Games Vinyl Figure Ivysaur 9 cm",
-      "price": "199.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pop-games-vinyl-figure-ivysaur-9-cm?variant=51994485457127",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-Ment Softly Swaying Decoration Collection Figur (6 stk)",
-      "price": "899.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-softly-swaying-decoration-collection-figur-6-stk?variant=51989794685159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Re-Ment Softly Swaying Decoration Collection Figur",
-      "price": "159.00 kr",
-      "url": "https://pokestore.no/products/pokemon-re-ment-softly-swaying-decoration-collection-figur?variant=51989794652391",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Mega Mewtwo X Plush",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-mega-mewtwo-plush?variant=51989708964071",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Pikachu Plush",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush-3?variant=51989708865767",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Natu Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-natu-plush?variant=51989708800231",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Mocchi-Mocchi Pikachu Plush",
-      "price": "449.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush-2?variant=51989708767463",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Clodsire Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-clodsire-plush?variant=51989708734695",
       "product_class": "accessory",
       "event": "ny"
     }
