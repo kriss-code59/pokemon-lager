@@ -1,6 +1,105 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Outland",
+      "name": "Charizard MS-15 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
+      "price": "",
+      "url": "https://www.outland.no/p/p-charizard-ms-15-moncolle-figure-4904810912187",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Inferno X - Booster Box",
+      "price": "2049.00 kr",
+      "previous_price": "2089.00 kr",
+      "url": "https://pokelageret.no/products/inferno-x-booster-box?variant=47537582014715",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "The Glory of Team Rocket - Booster Box",
+      "price": "2379.00 kr",
+      "previous_price": "2349.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket?variant=47515173191931",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Black Bolt - Booster Box",
+      "price": "2289.00 kr",
+      "previous_price": "2389.00 kr",
+      "url": "https://pokelageret.no/products/black-bolt-booster-box?variant=47515907096827",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Black Bolt - Booster Pack",
+      "price": "129.00 kr",
+      "previous_price": "139.00 kr",
+      "url": "https://pokelageret.no/products/black-bolt-booster-box?variant=47903025201403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Ancient Roar - Booster Box",
+      "price": "1189.00 kr",
+      "previous_price": "1219.00 kr",
+      "url": "https://pokelageret.no/products/ancient-roar-booster-box?variant=47517562863867",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Wild Force - Booster Box",
+      "price": "1299.00 kr",
+      "previous_price": "1239.00 kr",
+      "url": "https://pokelageret.no/products/wild-force-booster-box?variant=47517543465211",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Raging Surf - Booster Box",
+      "price": "1389.00 kr",
+      "previous_price": "1339.00 kr",
+      "url": "https://pokelageret.no/products/raging-surf-booster-box?variant=47517593764091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Heat Wave Arena - Booster Box",
+      "price": "2019.00 kr",
+      "previous_price": "2069.00 kr",
+      "url": "https://pokelageret.no/products/the-glory-of-team-rocket-copy?variant=47515909325051",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Stellar Miracle - Booster Box",
+      "price": "1139.00 kr",
+      "previous_price": "1169.00 kr",
+      "url": "https://pokelageret.no/products/stellar-miracle-booster-box?variant=47516201713915",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:39:50+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 30/111 - LP / Normal",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-30-111?variant=48985119621371",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T05:59:52+00:00",
       "store": "Pokelageret",
       "name": "Phantasmal Flames Booster Box",
@@ -179269,105 +179368,6 @@
       "price": "315.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-dragalge-plush?variant=51612591718631",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Growlithe Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-growlithe-plush?variant=51612591587559",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Goodra Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-goodra-plush?variant=51612589719783",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock DX Deluxe Miraidon Figur",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-miraidon-figur?variant=51601605787879",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-21 Ultra Necrozma Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ml-21-ultra-necrozma-moncolle-figur?variant=51601592516839",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Iono & Bellibolt PRO-Dual Deck Box",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-iono-bellibolt-pro-dual-deck-box?variant=51580730474727",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Trainer! Laboratory DX Moncolle Figur",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-trainer-laboratory-dx-moncolle-figur?variant=51569128341735",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Transform! Battle World Moncolle Figur",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-transform-battle-world-moncolle-figur?variant=51569126703335",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Extreme Terastal Transformation! Gym Moncolle Figur",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-extreme-terastal-transformation-gym-moncolle-figur?variant=51569122083047",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-50 Chicorita Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-chicorita-moncolle-figur?variant=51568800334055",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon MS-60 Tepig Moncolle Figur",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-tepig-moncolle-figur?variant=51568782311655",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Blaziken Moncolle Figur",
-      "price": "149.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-blaziken-moncolle-figur?variant=51568774906087",
-      "product_class": "card",
       "event": "ny"
     }
   ]
