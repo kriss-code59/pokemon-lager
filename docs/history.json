@@ -1,6 +1,303 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "LABOGE",
+      "name": "Mew V 105/100 - Fusion Arts - NM (ID: 53515782114186)",
+      "price": "315.00 kr",
+      "url": "https://laboge.no/products/mew-v-fusion-arts-105-100?variant=54147655237931",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza V - 100/159 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-v-100-159?variant=48890649641211",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Alakazam ex - 050 - NM",
+      "price": "10.00 kr",
+      "previous_price": "9.00 kr",
+      "url": "https://pokelageret.no/products/alakazam-ex-050?variant=48838877348091",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Varoom - 206/197 - NM",
+      "price": "35.00 kr",
+      "previous_price": "39.00 kr",
+      "url": "https://pokelageret.no/products/varoom-206-197?variant=49123146629371",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Mewtwo ex - 058/182 - NM",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/mewtwo-ex-058-182?variant=48985233654011",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Bibarel - GG25/GG70 - NM",
+      "price": "45.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/bibarel-gg25-gg70?variant=48849651532027",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Squirtle - 048 - NM",
+      "price": "19.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/squirtle-048?variant=48875151655163",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Duskull - GG28/GG70 - NM",
+      "price": "65.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/duskull-gg28-gg70?variant=48848876044539",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Pidgey - 207/197 - NM",
+      "price": "215.00 kr",
+      "previous_price": "205.00 kr",
+      "url": "https://pokelageret.no/products/pidgey-207-197?variant=48848868311291",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Sprigatito - 076 - NM",
+      "price": "115.00 kr",
+      "previous_price": "125.00 kr",
+      "url": "https://pokelageret.no/products/sprigatito-076?variant=48848755917051",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee V - 108/159 - NM",
+      "price": "95.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://pokelageret.no/products/eevee-v-108-159?variant=48847042183419",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Palafin - 200/197 - NM",
+      "price": "65.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/palafin-200-197?variant=48846484242683",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Poochyena - GG33/GG70 - NM",
+      "price": "65.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/poochyena-gg33-gg70?variant=48843512545531",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Sylveon - 172 - NM",
+      "price": "45.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/sylveon-172?variant=48838878724347",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Artazon - 229/197 - NM",
+      "price": "13.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokelageret.no/products/artazon-229-197?variant=48833199145211",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Tornadus - 210",
+      "price": "13.00 kr",
+      "previous_price": "14.00 kr",
+      "url": "https://pokelageret.no/products/tornadus-212?variant=49144452546811",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Koraidon ex - 197",
+      "price": "6.00 kr",
+      "previous_price": "7.00 kr",
+      "url": "https://pokelageret.no/products/koraidon-ex-198?variant=49140549878011",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Vaporeon - 168",
+      "price": "10.00 kr",
+      "previous_price": "11.00 kr",
+      "url": "https://pokelageret.no/products/vaporeon-169?variant=49137982603515",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Iron Crown ex - 146 - NM",
+      "price": "10.00 kr",
+      "previous_price": "11.00 kr",
+      "url": "https://pokelageret.no/products/iron-crown-ex-146?variant=48985148260603",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Grafaiai ex - 100 - NM",
+      "price": "9.00 kr",
+      "previous_price": "10.00 kr",
+      "url": "https://pokelageret.no/products/grafaiai-ex-100?variant=48960216531195",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Absol - GG16/GG70 - NM",
+      "price": "115.00 kr",
+      "previous_price": "109.00 kr",
+      "url": "https://pokelageret.no/products/absol-gg16-gg70?variant=48849652482299",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Lapras - GG05/GG70 - MP",
+      "price": "225.00 kr",
+      "previous_price": "235.00 kr",
+      "url": "https://pokelageret.no/products/lapras-gg05-gg70?variant=48849650057467",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Kricketune - GG02/GG70 - NM",
+      "price": "99.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/kricketune-gg02-gg70?variant=48849650385147",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Paras - GG32/GG70 - NM",
+      "price": "99.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/paras-gg32-gg70?variant=48849606181115",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Scovillain - 202/198 - NM",
+      "price": "79.00 kr",
+      "previous_price": "75.00 kr",
+      "url": "https://pokelageret.no/products/scovillain-202-198?variant=48849629085947",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Bidoof - GG29/GG70 - NM",
+      "price": "95.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/bidoof-gg29-gg70?variant=48849605755131",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Froslass ex - 217/182 - NM",
+      "price": "35.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/froslass-ex-217-182?variant=48849603068155",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Wigglytuff ex - 187/165 - NM",
+      "price": "95.00 kr",
+      "previous_price": "99.00 kr",
+      "url": "https://pokelageret.no/products/wigglytuff-ex-187-165?variant=48849602806011",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - GG30/GG70 - NM",
+      "price": "595.00 kr",
+      "previous_price": "575.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-gg30-gg70?variant=48848875192571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Pidgeotto - 208/197 - NM",
+      "price": "155.00 kr",
+      "previous_price": "149.00 kr",
+      "url": "https://pokelageret.no/products/pidgeotto-208-197?variant=48848867754235",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Meowscarada ex - 078 - NM",
+      "price": "75.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/meowscarada-ex-078?variant=48846686257403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Basic Psychic Energy - 207/165 - NM",
+      "price": "55.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/basic-psychic-energy-207-165?variant=48846474805499",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:39:41+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 043 - NM",
+      "price": "59.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/eevee-043?variant=48838887375099",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T03:00:17+00:00",
       "store": "Pokelageret",
       "name": "Exeggcute - 192/191 - NM",
@@ -179071,303 +179368,6 @@
       "price": "3,90 kr",
       "url": "https://collectible.no/home/ascended-heroes-119-217-carkol/",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 117/217 – Carbink",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-117-217-carbink/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 194/217 – Mystery Garden",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-194-217-mystery-garden/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "XY Phantom Forces – 093/119 – Dimension Valley",
-      "price": "15,00 kr",
-      "url": "https://collectible.no/home/xy-phantom-forces-093-119-dimension-valley/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
-      "price": "4,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 091/217 – Banette",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-091-217-banette/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 172/217 – Mega Audino ex",
-      "price": "14,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-172-217-mega-audino-ex/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 118/217 – Rolycoly (Dusk Ball) – Reverse Holo",
-      "price": "4,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-118-217-rolycoly-dusk-ball-reverse-holo/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 130/217 – Galarian Zigzagoon",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-130-217-galarian-zigzagoon/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 017/217 – Grubbin",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-017-217-grubbin/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 250/217 – Fan Rotom",
-      "price": "59,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-250-217-fan-rotom/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 171/217 – Fan Rotom",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-171-217-fan-rotom/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T08:38:31+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 200/217 – Surfer",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-200-217-surfer/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:58:44+00:00",
-      "store": "Spillmonster",
-      "name": "Pokemon TCG – Prismatic Evolutions – Elite Trainer Box",
-      "price": "kr 2 499,00",
-      "url": "https://spillmonster.no/product/pokemon-tcg-prismatic-evolutions-elite-trainer-box/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Leafeon Tin Set",
-      "price": "349.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-leafeon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Vaporeon",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-vaporeon",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Monopol Pokemon Edition Brettspill",
-      "price": "599.00 kr",
-      "url": "https://cardcenter.no/products/monopol-pokemon-edition-brettspill",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokémon TCG Poke Ball Gaveboks Kinesisk",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-tcg-poke-ball-gaveboks-kinesisk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Lunar New Year 2026 Gaveboks",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-2026-lunar-new-year-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Eksklusiv Pikachu Keychain Gaveboks Kinesisk",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pikachu-eevee-keychain-gaveboks-kinesisk",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Vaporeon Tin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-vaporeon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Eevee",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Figur - Sitting Gengar",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-figur-sitting-gengar",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Collection File Lillie - Battle Partners",
-      "price": "849.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-collection-file-lillie-battle-partners",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk 30th Anniversary Celebration First Partner Box Vol. 2",
-      "price": "189.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-30th-anniversary-celebration-first-partner-box-vol-2",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Glaceon Tin Set",
-      "price": "319.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-glaceon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Mynt",
-      "price": "29.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Dragonite Mynt",
-      "price": "29.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-dragonite-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mystery Trainer Tin Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mystery-trainer-tin-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon - Battle Deck Melmetal Ex",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-battle-deck-melmetal-ex",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Sleeping Eeveelution Figur Mystery Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-sleeping-eeveelution-figur-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Espeon Tin Set",
-      "price": "319.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-espeon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Bulbasaur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Binder Set - Flareon",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-flareon",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
