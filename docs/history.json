@@ -1,6 +1,165 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Tauros - 096/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/tauros-096-086?variant=48971008246011",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Sliggoo - 095/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/sliggoo-095-86?variant=49151548817659",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Pyroar ex - 099/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/mega-pyroar-ex-099-86?variant=48971010867451",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Claydol - 092/086 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/claydol-092-086?variant=48971008016635",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Floette ex - 101/086 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/mega-floette-ex-101-086?variant=48971007885563",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Garchomp ex 104 - Destined Rivals",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-garchomp-ex-104-destined-rivals?variant=53024747159831",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Power Weight 162 - Destined Rivals",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-power-weight-162-destined-rivals?variant=53024758333719",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Power Weight Reverse Holo 162 - Destined Rivals",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-power-weight-reverse-holo-162-destined-rivals?variant=53024758432023",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Spiritomb (JP) 208 holo - MEGA Dream ex",
+      "price": "49.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-spiritomb-jp-208-holo-mega-dream-ex-926262?variant=53436635709719",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cyrano 170 - Surging Sparks",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/cyrano-170-surging-sparks?variant=53024683327767",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cyrano Reverse Holo 170 - Surging Sparks",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/cyrano-reverse-holo-170-surging-sparks?variant=53024683360535",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Dark Bell 75 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/dark-bell-75-reverse-holo-pitch-black?variant=54614629220631",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Dark Bell 75 - Pitch Black",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/dark-bell-075084-pitch-black-594358?variant=54069308653847",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Pyroar ex - 099/086 - NM",
+      "price": "49.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/mega-pyroar-ex-099-86?variant=48971010867451",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Floette ex - 101/086 - NM",
+      "price": "39.00 kr",
+      "previous_price": "79.00 kr",
+      "url": "https://pokelageret.no/products/mega-floette-ex-101-086?variant=48971007885563",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Maxgaming",
+      "name": "Ultra Pro Toploader 3x4\" Clear Platinum 25-pack - Plastfickor",
+      "price": "139 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/toploader-3x4-clear-platinum-25-pack-plastfickor",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Scarlet & Violet: Shiny Treasure ex SV4a Booster Box (Japanese)",
+      "price": "1899 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/scarlet-violet-shiny-treasure-ex-sv4a-booster-box-japanese",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Maxgaming",
+      "name": "Pokémon Storm Emeralda Booster Box (Japanese)",
+      "price": "2399 kr",
+      "url": "https://www.maxgaming.no/no/pokemon/pokemon-storm-emeralda-booster-box-japanese",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T13:20:19+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Pikachu Plush Flower Swing Keychain (10cm, Potdemiel)",
@@ -179178,168 +179337,6 @@
       "name": "Pokemon Professor Juniper Deck Box",
       "price": "35.00 kr",
       "url": "https://pokestore.no/products/pokemon-professor-juniper-oppbevaringseske?variant=50923999428839",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Kirlia Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-kirlia-plush?variant=50863559475431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Luxray (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-luxray-25cm?variant=50824922202343",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Jumbo Munchlax (25cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-jumbo-munchlax-25cm?variant=50824915222759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Munchlax",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-munchlax?variant=50824914469095",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Roaring Moon Plush (37cm)",
-      "price": "799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-salamance-plush-37cm?variant=50760535769319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Original Palkia Plush",
-      "price": "309.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-original-palkia-plush?variant=50760528462055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Velvet Pikachu Plush (20cm)",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-velvet-pikachu-plushie-20cm?variant=50740890337511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bulbasaur Vinter Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bulbasaur-vinter-plushie-20cm?variant=50736195371239",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Cuties Plush (20cm)",
-      "price": "289.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-cuties-plushie-20cm?variant=50736138518759",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Bulbasaur Jul Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-bulbasaur-jul-plushie-20cm?variant=50736119415015",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pikachu Jul Plush (20cm)",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pikachu-jul-plushie?variant=50736087793895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Giratina Deck Box",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-giratina-deck-box?variant=50724873568487",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Dark Order Booster Box",
-      "price": "2799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-dark-order-booster-box?variant=50624497582311",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Celebi Sword & Shield Starter Set",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-celebi-sword-amp-shield-starter-set?variant=50624496500967",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Black and White Dragon Selection Booster Pakke (2012)",
-      "price": "3500.00 kr",
-      "url": "https://pokestore.no/products/pokemon-black-and-white-dragon-selection-booster-pakke-2012?variant=50624493388007",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sideshow Collectibles Charizard Statue 47 cm",
-      "price": "12499.00 kr",
-      "url": "https://pokestore.no/products/pokemon-statue-charizard-47-cm?variant=52282734706919",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pitch Black Booster Pakke",
-      "price": "109.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pitch-black-booster-pakke?variant=52266255810791",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Ultra Pro Pokemon Mega Charizard X Deck Protector Sleeves (65 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/ultra-pro-pokemon-65ct-deck-protectors-sleeves-mega-charizard-x?variant=52251775172839",
       "product_class": "accessory",
       "event": "ny"
     }

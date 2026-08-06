@@ -1,6 +1,123 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Tauros - 096/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/tauros-096-086?variant=48971008246011",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Sliggoo - 095/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/sliggoo-095-86?variant=49151548817659",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Pyroar ex - 099/086 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/mega-pyroar-ex-099-86?variant=48971010867451",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Claydol - 092/086 - NM",
+      "price": "29.00 kr",
+      "url": "https://pokelageret.no/products/claydol-092-086?variant=48971008016635",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Floette ex - 101/086 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/mega-floette-ex-101-086?variant=48971007885563",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Garchomp ex 104 - Destined Rivals",
+      "price": "20.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-garchomp-ex-104-destined-rivals?variant=53024747159831",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Power Weight 162 - Destined Rivals",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-power-weight-162-destined-rivals?variant=53024758333719",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Power Weight Reverse Holo 162 - Destined Rivals",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-power-weight-reverse-holo-162-destined-rivals?variant=53024758432023",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cynthia's Spiritomb (JP) 208 holo - MEGA Dream ex",
+      "price": "49.00 kr",
+      "url": "https://pokesingles.no/products/cynthias-spiritomb-jp-208-holo-mega-dream-ex-926262?variant=53436635709719",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cyrano 170 - Surging Sparks",
+      "price": "4.00 kr",
+      "url": "https://pokesingles.no/products/cyrano-170-surging-sparks?variant=53024683327767",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Cyrano Reverse Holo 170 - Surging Sparks",
+      "price": "6.00 kr",
+      "url": "https://pokesingles.no/products/cyrano-reverse-holo-170-surging-sparks?variant=53024683360535",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Dark Bell 75 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/dark-bell-75-reverse-holo-pitch-black?variant=54614629220631",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T13:59:52+00:00",
+      "store": "Pokesingles",
+      "name": "Dark Bell 75 - Pitch Black",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/dark-bell-075084-pitch-black-594358?variant=54069308653847",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-06T13:20:19+00:00",
       "store": "Neo Tokyo",
       "name": "Pokemon: Pikachu Plush Flower Swing Keychain (10cm, Potdemiel)",
@@ -2582,123 +2699,6 @@
       "url": "https://pokestore.no/products/pokemon-center-japan-fraxure-fit-plush?variant=52033450574055",
       "product_class": "accessory",
       "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Palpitoad Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-palpitoad-fit-plush?variant=52033450082535",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Gastrodon (East Sea) Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-gastrodon-east-sea-fit-plush?variant=52033388052711",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Gothita Fit Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-gothita-fit-plush?variant=52033387954407",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Klang Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-klang-fit-plush?variant=52033387725031",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Cottonee Fit Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-cottonee-fit-plush?variant=52033387561191",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Vigoroth Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-vigoroth-fit-plush?variant=52033387266279",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Shiftry Fit Plush",
-      "price": "325.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-shiftry-fit-plush?variant=52033387069671",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Outland",
-      "name": "Gallery Series Morning Meadow Full View Deck Box\nUltra PRO\nDeck Boks · Engelsk",
-      "price": "",
-      "url": "https://www.outland.no/p/p-gallery-series-morning-meadow-full-view-deck-box-deck-box-pokemon-pokemon-74427164676",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Outland",
-      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
-      "price": "",
-      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Outland",
-      "name": "PokéMon Crochet Snorlax Kit: Includes Materials to Make Snorlax and Instructions for 5 Other PokéMon\nSabrina Somers\nPokéMon Crafts\nBoks-set · Engelsk",
-      "price": "",
-      "url": "https://www.outland.no/p/p-pokemon-crochet-snorlax-kit-9781446309612",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Boosterpakker",
-      "name": "HIDDEN FATES TIN",
-      "price": "2 590,00 kr",
-      "url": "https://boosterpakker.no/produkt/collection-bokser/hidden-fates-tin",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Neo Destiny – 003/105 – Dark Donphan – Holo (Lightly Played)",
-      "price": "490,00 kr",
-      "url": "https://collectible.no/home/neo-destiny-003-105-dark-donphan-holo/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 119/217 – Carkol",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-119-217-carkol/",
-      "product_class": "card",
-      "event": "ny"
     }
   ]
 }
