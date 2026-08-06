@@ -1,6 +1,167 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Pokelageret",
+      "name": "Surfing Pikachu V - 008/025 - NM",
+      "price": "59.00 kr",
+      "url": "https://pokelageret.no/products/surfing-pikachu-v-008-025?variant=48887010328827",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 107/217 – Regirock ex",
+      "price": "13,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-107-217-regirock-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 264/217 – Ultra Ball",
+      "price": "109,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-264-217-ultra-ball/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 034/217 – Salandit (Energy Symbol Pattern) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-034-217-salandit-energy-symbol-pattern-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 204/217 – Team Rocket’s Giovanni",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-204-217-team-rockets-giovanni/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 252/217 – Stunfisk ex",
+      "price": "13,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-252-217-stunfisk-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 133/217 – Cynthia’s Spiritomb",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-133-217-cynthias-spiritomb/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 244/217 – Cynthia’s Spiritomb",
+      "price": "159,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-244-217-cynthias-spiritomb/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 248/217 – Drakloak",
+      "price": "89,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-248-217-drakloak/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 189/217 – Glass Trumpet",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-189-217-glass-trumpet/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 269/217 – Mega Gengar ex",
+      "price": "799,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-269-217-mega-gengar-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 184/217 – Buddy-Buddy Poffin",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-184-217-buddy-buddy-poffin/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 158/217 – Dreepy",
+      "price": "3,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-158-217-dreepy/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
+      "price": "4,90 kr",
+      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 277/217 – Pikachu ex",
+      "price": "4.499,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-277-217-pikachu-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 268/217 – Mega Hawlucha ex",
+      "price": "109,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-268-217-mega-hawlucha-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Collectible",
+      "name": "Ascended Heroes – 089/217 – Mega Gardevoir ex",
+      "price": "24,00 kr",
+      "url": "https://collectible.no/home/ascended-heroes-089-217-mega-gardevoir-ex/",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T10:40:31+00:00",
+      "store": "Playlot",
+      "name": "Cyclizar EX Collection Box",
+      "price": "kr 649,00",
+      "url": "https://playlot.no/produkt/cyclizar-ex-collection-box/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T10:00:15+00:00",
       "store": "Pokelageret",
       "name": "Victini Illustration Collection",
@@ -179198,168 +179359,6 @@
       "name": "Pokemon Takara Tomy I Choose You! Clodsire Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-clodsire-plush?variant=51989708734695",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-1 SU Sticker - Excellent Work",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-1-su-sticker-excellent-work?variant=51989708669159",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-11 SU Medium Sticker - Partners",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-11-su-medium-sticker-partners?variant=51989708636391",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Pichu Face Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pichu-plush-1?variant=51989708505319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-3 SU Sticker - You Did Great",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-3-su-sticker-you-did-great?variant=51989708407015",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-2 SU Sticker - Good Job",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-2-su-sticker-good-job?variant=51989708374247",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-21 SU Sticker - Large",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-21-su-sticker-large?variant=51989708341479",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon PU-10 SU Medium Sticker - Pikachu",
-      "price": "29.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pu-10-su-medium-sticker-pikachu?variant=51989705752807",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pyokorin Pikachu",
-      "price": "339.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pyokorin-pikachu?variant=51989705687271",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Charizard Plush",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-charizard-plush-1?variant=51989705523431",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Tatsugiri (Curly Form) Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-tatsugiri-plush?variant=51989705195751",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Espurr Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-espurr-plush?variant=51989705162983",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Rowlet Plush (Goodnight Ver.)",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-rowlet-plush?variant=51989705130215",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Tandemaus Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-tandemaus-plush?variant=51989704114407",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Scorbunny Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-scorbunny-plush?variant=51989704016103",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pichu Plush (Goodnight Ver.)",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pichu-plush?variant=51989703983335",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Emolga Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-emolga-plush?variant=51989703950567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepeace Pikachu Face Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush-1?variant=51989703885031",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Cherrim Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-cherrim-plush?variant=51989703852263",
       "product_class": "accessory",
       "event": "ny"
     }
