@@ -68,6 +68,9 @@ sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/001_skjema.sq
 # 002 avhenger av tabellene i 001 (users, events, push_endpoints) og maa
 # derfor kjores etter. Begge er idempotente.
 sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/002_varsler.sql"
+# 003: glemt passord, feedback og kontosletting -- alt som ma finnes for
+# fremmede kan lage konto her.
+sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/003_deling.sql"
 
 LOGG "4/8 Miljofil"
 if [[ ! -f /etc/pokepuls.env ]]; then
@@ -97,6 +100,24 @@ else
 fi
 grep -q "^POKEPULS_VAPID_PUBLIC=" /etc/pokepuls.env \
   || { echo "FEIL: klarte ikke lage VAPID-nokler"; exit 1; }
+
+# Admin-lasen. To laser er poenget: role='admin' i databasen holder ikke
+# alene, adressen ma OGSA staa her. En feil UPDATE eller en SQL-injeksjon
+# skal ikke vaere nok til a gi noen innsyn i alle brukerne.
+if ! grep -q "^POKEPULS_ADMIN_EPOST=" /etc/pokepuls.env; then
+  echo "POKEPULS_ADMIN_EPOST=kristian.bo@icloud.com" >> /etc/pokepuls.env
+  chmod 640 /etc/pokepuls.env
+  chown root:"$BRUKER" /etc/pokepuls.env
+fi
+
+# RESEND_API_KEY settes IKKE herfra -- den er en hemmelighet som Kristian
+# limer inn selv:
+#   sudo sh -c 'echo "RESEND_API_KEY=re_..." >> /etc/pokepuls.env'
+#   sudo systemctl restart pokepuls-api
+# Mangler den, virker alt annet som for; glemt-passord svarer bare at
+# e-post ikke er satt opp enna.
+grep -q "^RESEND_API_KEY=" /etc/pokepuls.env \
+  || echo "MERK: RESEND_API_KEY mangler -- glemt-passord er av."
 
 LOGG "6/8 systemd"
 install -m 644 "$REPO/deploy/pokepuls-api.service" /etc/systemd/system/pokepuls-api.service
