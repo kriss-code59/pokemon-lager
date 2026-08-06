@@ -79,11 +79,22 @@ hva de følger, hvilke enheter, hvilke varsler de har fått), og katalog — der
 du kan koble en umatchet tittel til et kanonisk produkt i nettleseren.
 Koblingen lagres i `manual_matches` og overlever neste ingest.
 
-**Scraperen er parallellisert.** 18 Shopify-butikker seks om gangen i én
-trådpool, 18 nettleserbutikker fordelt på tre Chromium-instanser, og de to
-halvdelene kjører samtidig. Loggen viser nå de åtte tregeste butikkene med
-tid, så neste flaskehals ikke må gjettes. Justerbart uten deploy med
-`POKEPULS_SHOPIFY_PARALLELL` og `POKEPULS_BROWSER_PARALLELL`.
+**Scraperen er parallellisert: 19 min → 9,5 min.** Målt på en full runde
+2026-08-06 kl. 23:22 (19 597 varer, 6 414 på lager). 18 Shopify-butikker
+seks om gangen i én trådpool, 18 nettleserbutikker fordelt på tre
+Chromium-instanser, og de to halvdelene kjører samtidig. Justerbart uten
+deploy med `POKEPULS_SHOPIFY_PARALLELL` og `POKEPULS_BROWSER_PARALLELL`.
+
+Loggen skriver nå de åtte tregeste butikkene, og den første målingen sier
+noe tydelig:
+
+```
+Tregeste butikker: Collectible 301s, Gameninja 106s, PokeShop 86s,
+Ark 76s, Neo Tokyo 74s, Outland 68s, Pokecandy 64s, Playlot 62s
+```
+
+**Collectible alene er 5 av de 9,5 minuttene.** Én butikk eier halve
+rundetiden. Det er den neste tingen å se på — ikke flere tråder.
 
 **Frontend v6.** Nyeste aktivitet øverst i stedet for alfabetisk — alfabetisk
 er en sortering for et arkiv, og satte «Ascended Heroes» først hver dag
@@ -265,9 +276,11 @@ tilbake**. Kommer samme tekst ut, virker hele kjeden.
    Er runden under ~7 min, kan intervallet ned fra 20 til 10 minutter i
    `/etc/cron.d/pokepuls`. Det halverer hvor gammelt et restock-varsel kan
    være, og det er hele poenget med produktet.
-   En observasjon å ta med: én treg nettleserbutikk styrer nå rundetiden,
-   siden de tre arbeiderne får statisk fordelte bunker. Blir det trangt, er
-   neste steg en delt kø i stedet for `sider[i::N]`.
+   Runden er allerede nede i 9,5 min, så intervallet **kan** ned til 10 med
+   én gang. Men se på Collectible først: 301 s av 570 s går til én butikk,
+   og fikser du den, er runden under 6 minutter. Flere tråder hjelper ikke
+   når én bunke er så mye tyngre enn de andre — der er neste steg enten å
+   fikse den butikken eller å bytte `sider[i::N]` mot en delt kø.
 4. **Katalogdekning.** ~1 800 forseglede varer er umatchet. Admin-fanen
    «Katalog» sorterer dem på hvor mange butikker som selger dem, så den
    øverste koblingen gir mest dekning. Vanligste hull: Pokémon Center-esker
