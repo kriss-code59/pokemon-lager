@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06T17:39:59+00:00",
+  "last_updated": "2026-08-06T18:20:12+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -2585,7 +2585,7 @@
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Mystery Sleeve Box Vol. 1",
       "price": "329.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-sleeve-box",
       "store_count": null,
       "product_class": "accessory",
@@ -178295,7 +178295,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Astral Radiance - Booster Pack",
       "price": "99.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/astral-radiance-booster-pack?variant=50101579055405",
       "store_count": null,
       "product_class": "card",
@@ -192903,16 +192903,6 @@
     },
     {
       "store": "Neo Tokyo",
-      "name": "One Piece TCG: Royal Blood Booster Pack (OP-10, Bandai, Japanese)",
-      "price": "kr 99.00",
-      "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/one-piece-tcg-royal-blood-booster-pack-op-10-bandai-japanese/",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://www.neo-tokyo.no/wp-content/uploads/150514-280x280.jpg"
-    },
-    {
-      "store": "Neo Tokyo",
       "name": "Pokemon: Gengar Acrylic Keychain",
       "price": "kr 39.00",
       "in_stock": true,
@@ -192920,6 +192910,16 @@
       "store_count": null,
       "product_class": "accessory",
       "image": "https://www.neo-tokyo.no/wp-content/uploads/152225-280x280.jpg"
+    },
+    {
+      "store": "Neo Tokyo",
+      "name": "One Piece TCG: Royal Blood Booster Pack (OP-10, Bandai, Japanese)",
+      "price": "kr 99.00",
+      "in_stock": true,
+      "url": "https://www.neo-tokyo.no/product/one-piece-tcg-royal-blood-booster-pack-op-10-bandai-japanese/",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://www.neo-tokyo.no/wp-content/uploads/150514-280x280.jpg"
     },
     {
       "store": "Neo Tokyo",
@@ -193610,16 +193610,6 @@
       "store_count": null,
       "product_class": "card",
       "image": "https://www.neo-tokyo.no/wp-content/uploads/155337-280x280.jpg"
-    },
-    {
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Gengar Plush Pendant – Sweet Dream Series (7cm, Potdemiel)",
-      "price": "kr 189.00",
-      "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-gengar-plush-pendant-sweet-dream-series-7cm-potdemiel/",
-      "store_count": null,
-      "product_class": "accessory",
-      "image": "https://www.neo-tokyo.no/wp-content/uploads/155193-280x280.jpg"
     },
     {
       "store": "Neo Tokyo",
@@ -195965,6 +195955,6 @@
       "NorthTCG"
     ],
     "store_count": 35,
-    "product_count": 19594
+    "product_count": 19593
   }
 }

@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T18:20:12+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Kinesisk Mystery Sleeve Box Vol. 1",
+      "price": "329.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-sleeve-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T18:20:12+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Astral Radiance - Booster Pack",
+      "price": "99.00 kr",
+      "url": "https://retroworld.no/products/astral-radiance-booster-pack?variant=50101579055405",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T17:39:58+00:00",
       "store": "Playlot",
       "name": "Eternatus V Tin V-Powers",
@@ -179293,24 +179309,6 @@
       "name": "Pokemon - 25th Anniversary Gift box - Venusaur (kinesisk)",
       "price": "1699.00 kr",
       "url": "https://pokebua.no/products/pokemon-25th-anniversary-gift-box-venusaur-kinesisk?variant=50807646781673",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - 25th Anniversary - Booster Pack (Kinesisk)",
-      "price": "139.00 kr",
-      "url": "https://pokebua.no/products/pokemon-25th-anniversary-booster-pack-kinesisk?variant=50801109663977",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Dark Crystal Blaze  - Booster Pack (Kinesisk) - Booster Pack",
-      "price": "39.00 kr",
-      "url": "https://pokebua.no/products/pokemon-dark-crystal-blaze-booster-pack-kinesisk?variant=50800936911081",
       "product_class": "card",
       "event": "ny"
     }
