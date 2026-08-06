@@ -1,6 +1,40 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T19:59:51+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon TCG: MEGA Starter Set – Sprigatito & Meowscarada ex (Japansk Kortstokk)",
+      "price": "689 kr",
+      "url": "https://mystictrades.no/pokemon/pokmon-tins-samlebokser/pre-order-pokemon-tcg-mega-starter-set-sprigatito-meowscarada-ex-japansk-kortstokk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T19:59:51+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon TCG: MEGA Starter Set – Zorua & Zoroark ex (Japansk Kortstokk)",
+      "price": "669 kr",
+      "url": "https://mystictrades.no/pokemon/pokmon-tins-samlebokser/pre-order-pokemon-tcg-mega-starter-set-zorua-zoroark-ex-japansk-kortstokk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T19:59:51+00:00",
+      "store": "BoosterKongen",
+      "name": "Pokemon Ascended Heroes Mini Tin",
+      "price": "439.00 kr",
+      "url": "https://boosterkongen.no/products/forhandsbestilling-pokemon-ascended-heroes-mini-tin?variant=52519540097335",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T19:59:51+00:00",
+      "store": "Spillmonster",
+      "name": "Pokemon Shiny Treasure EX – Booster Box (Japansk)",
+      "price": "kr 1 999,00",
+      "url": "https://spillmonster.no/product/shiny-treasure-ex-booster-box-japansk/",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T19:39:34+00:00",
       "store": "Outland",
       "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
@@ -179261,42 +179295,6 @@
       "name": "Pokemon - Chaos Rising - Booster Pack",
       "price": "95.00 kr",
       "url": "https://pokebua.no/products/pokemon-chaos-rising-booster-pack?variant=51127559160041",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Temporal Forces - Booster Pack",
-      "price": "99.00 kr",
-      "url": "https://pokebua.no/products/pokemon-temporal-forces-booster-pack?variant=48461041500393",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Shiny Treasure EX - Booster Pack (Japansk) - Booster Pack",
-      "price": "199.00 kr",
-      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-1?variant=50800651862249",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Shiny Treasure EX - Booster Pack (Japansk) - Booster Box",
-      "price": "1899.00 kr",
-      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-1?variant=50800651895017",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Paradox Rift - Booster Pack",
-      "price": "99.00 kr",
-      "url": "https://pokebua.no/products/pokemon-paradox-rift-booster-pack?variant=48466464178409",
       "product_class": "card",
       "event": "ny"
     }
