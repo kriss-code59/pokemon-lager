@@ -4,12 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0d10">
-<title>Pokepuls — Pokémon-lager i Norge</title>
-<meta name="description" content="Se lagerstatus og pris pa forseglede Pokemon-produkter hos 33 norske butikker. Oppdateres hvert 20. minutt.">
+<title>Pokepuls – priser og lagerstatus på Pokémon-kort i Norge</title>
+<meta name="description" content="Sammenlign priser og se hva som er på lager av forseglede Pokémon-produkter hos 33 norske butikker. Få push-varsel på telefonen når en vare kommer inn. Oppdateres hvert 20. minutt.">
+<link rel="canonical" href="https://pokepuls.no/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pokepuls">
+<meta property="og:title" content="Pokepuls – priser og lagerstatus på Pokémon-kort i Norge">
+<meta property="og:description" content="Sammenlign priser hos 33 norske butikker og få varsel når en vare kommer på lager.">
+<meta property="og:url" content="https://pokepuls.no/">
+<meta property="og:locale" content="nb_NO">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Pokepuls","url":"https://pokepuls.no/","inLanguage":"nb-NO","description":"Priser og lagerstatus på forseglede Pokémon-produkter hos norske butikker.","potentialAction":{"@type":"SearchAction","target":"https://pokepuls.no/?sok={search_term_string}","query-input":"required name=search_term_string"}}</script>
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/ikon.svg">
-<link rel="stylesheet" href="/style.css?v=5">
+<link rel="stylesheet" href="/style.css?v=6">
 </head>
 <body>
 
@@ -27,12 +35,12 @@
   </div>
   <div class="sok-rad">
     <input id="sok" type="search" inputmode="search" autocomplete="off"
-           placeholder="Sok etter sett, produkt eller butikk" aria-label="Sok">
-    <button id="tom-sok" class="tom-sok" type="button" aria-label="Tom soket" hidden>&times;</button>
+           placeholder="Søk etter sett, produkt eller butikk" aria-label="Søk">
+    <button id="tom-sok" class="tom-sok" type="button" aria-label="Tøm søket" hidden>&times;</button>
   </div>
   <div class="chips" id="chips" role="group" aria-label="Filtre">
     <button class="chip chip-av" data-filter="lager">Kun pa lager</button>
-    <button class="chip" data-filter="region" data-verdi="en">Vestlig</button>
+    <button class="chip" data-filter="region" data-verdi="en">Engelsk</button>
     <button class="chip" data-filter="region" data-verdi="jp">Japansk</button>
     <button class="chip" data-filter="region" data-verdi="cn">Kinesisk</button>
     <button class="chip" data-filter="region" data-verdi="ko">Koreansk</button>
@@ -47,7 +55,7 @@
   <section id="fane-produkter" class="fane">
     <p class="teller" id="teller"></p>
     <div id="liste" class="liste"></div>
-    <p class="tom" id="tom-liste" hidden>Ingen treff. Prov et annet sok, eller sla av filtrene.</p>
+    <p class="tom" id="tom-liste" hidden>Ingen treff. Prøv et annet søk, eller slå av filtrene.</p>
   </section>
 
   <section id="fane-nytt" class="fane" hidden>
@@ -65,8 +73,8 @@
   </section>
 
   <section id="fane-andre" class="fane" hidden>
-    <p class="hjelp">Forseglede varer som enna ikke er koblet til et kanonisk
-      produkt. De vises her sa ingenting blir usynlig mens katalogen fylles ut.</p>
+    <p class="hjelp">Forseglede varer som ennå ikke er koblet til et kanonisk
+      produkt. De vises her så ingenting blir usynlig mens katalogen fylles ut.</p>
     <div id="andre" class="liste"></div>
     <button class="mer" id="mer-andre" type="button" hidden>Vis flere</button>
   </section>
@@ -78,7 +86,7 @@
   <button class="fane-knapp" data-fane="nytt" role="tab" aria-selected="false">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 4 14h7l-1 7 9-11h-7z"/></svg>Nytt</button>
   <button class="fane-knapp" data-fane="folger" role="tab" aria-selected="false">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.6c0 5-7 9.4-7 9.4z"/></svg>Folger</button>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.6c0 5-7 9.4-7 9.4z"/></svg>Følger</button>
   <button class="fane-knapp" data-fane="andre" role="tab" aria-selected="false">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v13H3zM8 7V4h8v3"/></svg>Andre</button>
 </nav>
@@ -90,6 +98,6 @@
   <div id="ark-innhold"></div>
 </div>
 
-<script src="/app.js?v=5" type="module"></script>
+<script src="/app.js?v=6" type="module"></script>
 </body>
 </html>
