@@ -1,6 +1,22 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T16:20:10+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Charizard Ultra Premium Collection - UPC Box (SKIP THE LINE) (Lite Hull i Plasten)",
+      "price": "6299.00 kr",
+      "url": "https://pokebua.no/products/pokemon-charizard-ultra-premium-collection-upc-box-skip-the-line?variant=49088311623913",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T16:20:10+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crown Zenith - Booster Pack X 5 (SKIP THE LINE)",
+      "price": "1899.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crown-zenith-booster-pack-x-5-skip-the-line?variant=51607700308201",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T15:39:59+00:00",
       "store": "Pokelageret",
       "name": "Lugia - 022/025 - NM",
@@ -179296,24 +179312,6 @@
       "name": "Pokemon - Blade Awakening - Booster Pack (Kinesisk) - Booster Pack",
       "price": "35.00 kr",
       "url": "https://pokebua.no/products/pokemon-blade-awakening-slim-booster-pack-kinesisk?variant=50800931012841",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Brilliant Fantasy - Booster Pack (csv8C) - Booster Pack",
-      "price": "39.00 kr",
-      "url": "https://pokebua.no/products/pokemon-brilliant-fantasy-booster-pack-csv8c?variant=50800901423337",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Fearless Terastal - Booster Pack (Kinesisk) CSV3C",
-      "price": "49.00 kr",
-      "url": "https://pokebua.no/products/pokemon-fearless-terastal-booster-pack-kinesisk?variant=50800831824105",
       "product_class": "card",
       "event": "ny"
     }
