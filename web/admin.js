@@ -50,9 +50,20 @@ async function tegnDrift() {
 
   // Det viktigste tallet forst og storst: gaar scraperen? Alt annet pa
   // siden er meningslost hvis svaret er nei.
-  const helse = alder < 45 ? ["ok", "Scraperen går"] :
-                alder < 180 ? ["gammel", "Scraperen henger etter"] :
-                              ["nede", "SCRAPEREN STÅR"];
+  //
+  // Nattpausen ma med. Scraperen sover 22-04 norsk tid (se
+  // deploy/pokepuls-cron-scrape.sh), og uten dette unntaket lyser siden
+  // rodt hver eneste natt. En overvaking som roper ulv seks timer i dognet
+  // er en overvaking du slutter a se pa -- det var nettopp slik den forrige
+  // dodmannsknappen ble ignorert.
+  const oslo = Number(new Intl.DateTimeFormat("no", {
+    timeZone: "Europe/Oslo", hour: "numeric", hour12: false }).format(new Date()));
+  const natt = oslo >= 22 || oslo < 4;
+
+  const helse = natt ? ["ok", "Nattpause (22–04)"]
+    : alder < 45 ? ["ok", "Scraperen går"]
+    : alder < 180 ? ["gammel", "Scraperen henger etter"]
+    : ["nede", "SCRAPEREN STÅR"];
 
   $("#admin-innhold").innerHTML =
     '<div class="helsekort ' + helse[0] + '"><strong>' + helse[1] + "</strong>" +

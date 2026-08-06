@@ -59,9 +59,18 @@ function siden(iso) {
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-/* Butikk-id er en slug ("neo-tokyo"); vis den som butikknavn ("Neo Tokyo"). */
-const butikknavn = (id) => (id || "").split("-")
-  .map((d) => d.charAt(0).toUpperCase() + d.slice(1)).join(" ");
+/* Butikknavn fra butikk-id.
+ *
+ * /snapshot sender bare id-en ("pokenordic") -- a sende navnet med hver
+ * eneste tilbudsrad ville lagt pa flere kilobyte for informasjon som er den
+ * samme overalt. /catalog har de ekte navnene, og lastes samtidig.
+ *
+ * Reserven under er en ren slug-oppdeling, og den tar feil av navn med
+ * indre stor bokstav: "pokenordic" blir "Pokenordic", ikke "PokeNordic".
+ * Derfor er den bare en reserve, ikke hovedveien. */
+const butikkNavn = new Map();
+const butikknavn = (id) => butikkNavn.get(id) ||
+  (id || "").split("-").map((d) => d.charAt(0).toUpperCase() + d.slice(1)).join(" ");
 
 /* ------------------------------------------------------------- bilder */
 
@@ -121,6 +130,9 @@ async function last() {
   try {
     const [snap, kat] = await Promise.all([hent("/snapshot"), hent("/catalog")]);
     kat.types.forEach((t) => state.typer.set(t.id, t.label));
+    // Ma fylles for _sok bygges under: ellers indekseres "Pokenordic" og
+    // et sok pa "pokenordic" gir treff mens "PokeNordic" i listen ikke gjor.
+    (kat.stores || []).forEach((b) => butikkNavn.set(b.id, b.name));
     state.produkter = snap.produkter.map((p) => ({
       ...p,
       _sok: (p.set_label + " " + p.type_label + " " + REGION[p.region] + " " +
