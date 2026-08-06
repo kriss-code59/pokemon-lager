@@ -1,6 +1,15 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T14:19:56+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Pitch Black - Booster Pack",
+      "price": "79.00 kr",
+      "url": "https://pokebua.no/products/pokemon-pitch-black-booster-pack?variant=51577926320361",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-06T13:59:52+00:00",
       "store": "Pokelageret",
       "name": "Tauros - 096/086 - NM",
@@ -2688,15 +2697,6 @@
       "name": "Pokemon Center Japan Tapu Fini Fit Plush",
       "price": "349.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-tapu-fini-fit-plush?variant=52033450639591",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Fraxure Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-fraxure-fit-plush?variant=52033450574055",
       "product_class": "accessory",
       "event": "restock"
     }

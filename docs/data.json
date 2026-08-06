@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06T13:59:53+00:00",
+  "last_updated": "2026-08-06T14:19:57+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -83083,6 +83083,16 @@
     },
     {
       "store": "Pokebua",
+      "name": "Pokemon - Pitch Black - Booster Pack",
+      "price": "79.00 kr",
+      "in_stock": true,
+      "url": "https://pokebua.no/products/pokemon-pitch-black-booster-pack?variant=51577926320361",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cdn.shopify.com/s/files/1/0744/7258/7497/files/pitch-black-booster-pack.webp?v=1784914970"
+    },
+    {
+      "store": "Pokebua",
       "name": "Pokemon - Charizard Ultra Premium Collection - UPC Box (SKIP THE LINE) (Lite Hull i Plasten)",
       "price": "6299.00 kr",
       "in_stock": true,
@@ -153125,7 +153135,7 @@
       "store": "Pokestore",
       "name": "Pokemon Gigantimax Charizard Moncolle Figur",
       "price": "269.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokestore.no/products/pokemon-mega-charizard-moncolle-figur?variant=51058483921127",
       "store_count": null,
       "product_class": "card",
@@ -178847,7 +178857,7 @@
       "price": "",
       "in_stock": true,
       "url": "https://www.outland.no/p/p-abyss-eye-booster-display-boks-japansk-abyss-eye-pokemon-tcg-pokemon-4521329462127",
-      "store_count": 10,
+      "store_count": 11,
       "product_class": "card",
       "image": null
     },
@@ -194130,16 +194140,6 @@
       "store_count": null,
       "product_class": "accessory",
       "image": "https://www.neo-tokyo.no/wp-content/uploads/154196-280x280.jpg"
-    },
-    {
-      "store": "Neo Tokyo",
-      "name": "Pokemon: Gardevoir Plush – All Star Collection (27cm, Sanei)",
-      "price": "kr 499.00",
-      "in_stock": true,
-      "url": "https://www.neo-tokyo.no/product/pokemon-gardevoir-plush-all-star-collection-27cm-sanei/",
-      "store_count": null,
-      "product_class": "accessory",
-      "image": "https://www.neo-tokyo.no/wp-content/uploads/154195-280x280.jpg"
     },
     {
       "store": "Neo Tokyo",
