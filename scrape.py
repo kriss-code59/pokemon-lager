@@ -35,10 +35,13 @@ Kjor lokalt:
 """
 
 import json
+import os
 import re
+import threading
 import time
 import datetime
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, asdict
 from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, Request
@@ -47,6 +50,40 @@ from playwright.sync_api import sync_playwright
 
 # Hvor lenge vi venter mellom hver butikk (vaer snill mot serverne deres)
 DELAY_BETWEEN_SITES = 3
+
+# ---------------------------------------------------------- parallellitet
+#
+# Runden tok ~19 minutter mot et 20-minutters intervall. Det er ikke bare
+# trangt -- det ER taket paa hvor fersk en restock-varsling kan bli. En vare
+# som kommer inn rett etter at Cardcenter er skannet, oppdages foerst 19
+# minutter senere, og da er den ofte borte igjen.
+#
+# Tiden gikk nesten utelukkende med til aa VENTE paa fremmede servere, ikke
+# til aa regne. Da hjelper det aa vente paa flere samtidig.
+#
+# To adskilte pooler, fordi de to halvdelene koster helt ulike ting:
+#
+#   Shopify-butikkene er rene HTTP-kall mot products.json. De koster
+#   ingenting lokalt, saa her er 6 samtidige greit -- det er fortsatt bare
+#   ETT samtidig kall per butikk, som er det som betyr noe for dem.
+#
+#   Playwright-butikkene krever hver sin Chromium. Der er minne, ikke
+#   hoeflighet, begrensningen: ca. 400 MB per nettleser. 3 er valgt for aa
+#   ligge trygt under RAM-en paa serveren selv naar en side er tung.
+#
+# Begge kan overstyres med miljovariabler, saa taket kan justeres uten en
+# ny deploy hvis serveren byttes.
+SHOPIFY_PARALLELL = int(os.environ.get("POKEPULS_SHOPIFY_PARALLELL", "6"))
+BROWSER_PARALLELL = int(os.environ.get("POKEPULS_BROWSER_PARALLELL", "3"))
+
+# print() fra flere traader blander linjer midt i ordet. Loggen er det
+# eneste vi har naar noe gaar galt kl. 03, saa den skal vaere lesbar.
+_utskriftslas = threading.Lock()
+
+
+def logg(*deler):
+    with _utskriftslas:
+        print(*deler, flush=True)
 
 # Maks antall nye lagerhendelser i EN kjoring for vi antar datafeil og lar
 # vaere a varsle. Se stormvernet i main().
@@ -1878,74 +1915,151 @@ def carry_forward_failed_stores(all_products: list, previous_by_url: dict):
     return all_products + carried_products, carried_stores
 
 
-def main():
-    all_products: list = []
-    previous_by_url = load_previous_products()
-    failed_stores: list = []
+def skann_shopify_parallelt(butikker: list) -> tuple[list, list, dict]:
+    """Alle Shopify-butikker samtidig. -> (produkter, feilede, sekunder)
 
-    for config in SHOPIFY_STORES:
-        print(f"Scanner {config['store']} (via Shopify-API)...")
+    Hver butikk er isolert i sin egen fremtid: en butikk som kaster skal
+    ikke rive med seg de fem andre som kjorer akkurat da.
+    """
+    produkter: list = []
+    feilede: list = []
+    tider: dict = {}
+
+    def en(config):
+        t0 = time.monotonic()
         try:
-            all_products += scrape_shopify_store(config)
+            res = scrape_shopify_store(config)
+            return config["store"], res, None, time.monotonic() - t0
         except Exception as e:
-            failed_stores.append(config["store"])
-            print(f"[{config['store']}] FEILET: {type(e).__name__}: {e}")
+            return config["store"], [], f"{type(e).__name__}: {e}", time.monotonic() - t0
 
-    with sync_playwright() as p:
-        # --disable-*-throttling/backgrounding: uten disse behandler Chromium
-        # headless-fanen som en "bakgrunnsfane" og nedprioriterer timere/
-        # scroll-observatorer, som gjor at sider med "last inn ved scroll"
-        # (som Nille) slutter a laste inn flere produkter. Dette er rene
-        # ytelsesflagg og har ingenting med a skjule at det er en bot a gjore.
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                "--disable-background-timer-throttling",
-                "--disable-backgrounding-occluded-windows",
-                "--disable-renderer-backgrounding",
-            ],
-        )
-        context = browser.new_context(user_agent=USER_AGENT, locale="nb-NO")
-        # UTEN DISSE HENGER SCRAPEREN FOR ALLTID. Playwright har som standard
-        # ingen ovre grense pa hvor lenge den venter pa en side. 2026-08-02
-        # kl. 14:00 mistet Chromium forbindelsen til en butikk uten a si ifra;
-        # python3 la seg i epoll_wait og ventet i 44 timer, mens flock -n
-        # gjorde at alle senere cron-kjoringer avsluttet stille. Med disse
-        # kastes det en TimeoutError i stedet, som fanges opp per butikk under.
-        context.set_default_timeout(30_000)
-        context.set_default_navigation_timeout(45_000)
-        page = context.new_page()
+    with ThreadPoolExecutor(max_workers=SHOPIFY_PARALLELL,
+                            thread_name_prefix="shopify") as pool:
+        for f in as_completed([pool.submit(en, c) for c in butikker]):
+            navn, res, feil, sek = f.result()
+            tider[navn] = round(sek, 1)
+            if feil:
+                feilede.append(navn)
+                logg(f"[{navn}] FEILET etter {sek:.0f}s: {feil}")
+            else:
+                produkter += res
+    return produkter, feilede, tider
 
-        # Hver butikk kjores isolert: en butikk som feiler (timeout, endret
-        # HTML, blokkering) skal ikke rive med seg resten av kjoringen. Uten
-        # dette mistet vi ALLE butikkene hvis en eneste kastet exception.
-        scrapers = {
-            "nille": scrape_nille,
-            "nettbutikk24": scrape_nettbutikk24,
-            "outland": scrape_outland,
-            "norli": scrape_norli,
-            "maxgaming": scrape_maxgaming,
-            "quickbutik": scrape_quickbutik,
-            "woocommerce": scrape_woocommerce,
-        }
 
-        for site in PLAYWRIGHT_SITES:
-            print(f"Scanner {site['store']}...")
-            scraper = scrapers.get(site.get("custom_scraper"), scrape_with_browser)
-            try:
-                all_products += scraper(page, site)
-            except Exception as e:
-                failed_stores.append(site["store"])
-                print(f"[{site['store']}] FEILET: {type(e).__name__}: {e}")
-                # Siden kan sta i en odelagt tilstand etter en timeout, sa vi
-                # bytter til en frisk fane for neste butikk.
+def skann_playwright_parallelt(sider: list) -> tuple[list, list, dict]:
+    """Nettleserbutikkene fordelt paa BROWSER_PARALLELL arbeidere.
+
+    Hver arbeider har SIN EGEN sync_playwright(), nettleser, kontekst og
+    fane. Det er ikke overdrevet forsiktighet: Playwrights synkrone API
+    binder objektene til traaden som lagde dem, og aa dele en `page`
+    mellom traader gir «Cannot switch to a different thread» midt i en
+    kjoring -- en feil som bare dukker opp under last, altsaa i drift og
+    aldri under testing.
+    """
+    produkter: list = []
+    feilede: list = []
+    tider: dict = {}
+    resultatlas = threading.Lock()
+
+    scrapers = {
+        "nille": scrape_nille,
+        "nettbutikk24": scrape_nettbutikk24,
+        "outland": scrape_outland,
+        "norli": scrape_norli,
+        "maxgaming": scrape_maxgaming,
+        "quickbutik": scrape_quickbutik,
+        "woocommerce": scrape_woocommerce,
+    }
+
+    # Statisk fordeling annenhver: butikkene ligger gruppert etter plattform,
+    # og en sammenhengende oppdeling ville gitt én arbeider alle de tunge.
+    bunker = [sider[i::BROWSER_PARALLELL] for i in range(BROWSER_PARALLELL)]
+
+    def arbeider(mine: list, nr: int):
+        if not mine:
+            return
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-background-timer-throttling",
+                    "--disable-backgrounding-occluded-windows",
+                    "--disable-renderer-backgrounding",
+                    # Delt minne-omraadet i containere er lite; uten dette
+                    # kraesjer Chromium tilfeldig naar flere kjorer samtidig.
+                    "--disable-dev-shm-usage",
+                ],
+            )
+            context = browser.new_context(user_agent=USER_AGENT, locale="nb-NO")
+            # UTEN DISSE HENGER SCRAPEREN FOR ALLTID. Playwright har som
+            # standard ingen ovre grense pa hvor lenge den venter pa en side.
+            # 2026-08-02 kl. 14:00 mistet Chromium forbindelsen til en butikk
+            # uten a si ifra; python3 la seg i epoll_wait og ventet i 44 timer,
+            # mens flock -n gjorde at alle senere cron-kjoringer avsluttet
+            # stille. Med disse kastes en TimeoutError i stedet.
+            context.set_default_timeout(30_000)
+            context.set_default_navigation_timeout(45_000)
+            page = context.new_page()
+
+            for site in mine:
+                logg(f"[{nr}] Scanner {site['store']}...")
+                t0 = time.monotonic()
+                scraper = scrapers.get(site.get("custom_scraper"), scrape_with_browser)
                 try:
-                    page.close()
-                    page = context.new_page()
-                except Exception:
-                    pass
+                    res = scraper(page, site)
+                    with resultatlas:
+                        produkter.extend(res)
+                        tider[site["store"]] = round(time.monotonic() - t0, 1)
+                except Exception as e:
+                    with resultatlas:
+                        feilede.append(site["store"])
+                        tider[site["store"]] = round(time.monotonic() - t0, 1)
+                    logg(f"[{site['store']}] FEILET: {type(e).__name__}: {e}")
+                    # Siden kan sta i en odelagt tilstand etter en timeout,
+                    # sa vi bytter til en frisk fane for neste butikk.
+                    try:
+                        page.close()
+                        page = context.new_page()
+                    except Exception:
+                        pass
 
-        browser.close()
+            browser.close()
+
+    traader = [threading.Thread(target=arbeider, args=(b, i + 1), daemon=True)
+               for i, b in enumerate(bunker)]
+    for t in traader:
+        t.start()
+    for t in traader:
+        t.join()
+    return produkter, feilede, tider
+
+
+def main():
+    start = time.monotonic()
+    previous_by_url = load_previous_products()
+
+    logg(f"Starter: {len(SHOPIFY_STORES)} Shopify-butikker ({SHOPIFY_PARALLELL} "
+         f"samtidig) + {len(PLAYWRIGHT_SITES)} nettleserbutikker "
+         f"({BROWSER_PARALLELL} samtidig).")
+
+    # Shopify-poolen startes FOERST og faar gaa mens nettleserne jobber:
+    # den ene venter paa fremmede HTTP-servere, den andre paa Chromium.
+    # De konkurrerer ikke om det samme.
+    with ThreadPoolExecutor(max_workers=1, thread_name_prefix="shopify-pool") as ytre:
+        shopify_fremtid = ytre.submit(skann_shopify_parallelt, SHOPIFY_STORES)
+        pw_produkter, pw_feilede, pw_tider = skann_playwright_parallelt(PLAYWRIGHT_SITES)
+        sh_produkter, sh_feilede, sh_tider = shopify_fremtid.result()
+
+    all_products = sh_produkter + pw_produkter
+    failed_stores = sh_feilede + pw_feilede
+    tider = {**sh_tider, **pw_tider}
+
+    # Tregeste butikker forst i loggen. Dette er den eneste maaten aa vite
+    # HVEM som eier rundetiden -- gjetting har kostet oss tid for.
+    tregest = sorted(tider.items(), key=lambda kv: -kv[1])[:8]
+    logg("Tregeste butikker: " + ", ".join(f"{n} {s:.0f}s" for n, s in tregest))
+    logg(f"Skanning ferdig pa {(time.monotonic() - start) / 60:.1f} min.")
+
 
     # Se carry_forward_failed_stores(): ma kjores FOR hendelsene beregnes,
     # ellers ser en butikk som feilet ut som om hele katalogen forsvant.
