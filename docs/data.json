@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06T07:19:50+00:00",
+  "last_updated": "2026-08-06T07:39:48+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -106053,6 +106053,16 @@
     },
     {
       "store": "Pokesingles",
+      "name": "Antique Armor Fossil 72 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/antique-armor-fossil-72-reverse-holo-pitch-black?variant=54614618571031",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/f0448d96dad3cbbce6f43d6060feabc2.jpg?v=1784310831"
+    },
+    {
+      "store": "Pokesingles",
       "name": "Antique Armor Fossil 72 - Pitch Black",
       "price": "3.00 kr",
       "in_stock": true,
@@ -106293,8 +106303,8 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Antique Skull Fossil 073/084 - Pitch Black",
-      "price": "6.00 kr",
+      "name": "Antique Skull Fossil 73 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
       "in_stock": true,
       "url": "https://pokesingles.no/products/antique-skull-fossil-073084-pitch-black-015809?variant=54069308162327",
       "store_count": null,
@@ -112333,9 +112343,9 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Backtrack Badge 074/084 (Reverse Holo) - Pitch Black",
-      "price": "7.00 kr",
-      "in_stock": false,
+      "name": "Backtrack Badge 74 (Reverse Holo) - Pitch Black",
+      "price": "6.00 kr",
+      "in_stock": true,
       "url": "https://pokesingles.no/products/backtrack-badge-074084-reverse-holo-pitch-black-210654?variant=54069308260631",
       "store_count": null,
       "product_class": "card",
@@ -122153,16 +122163,6 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Bombirdier 071/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/bombirdier-071084-reverse-holo-pitch-black-343212?variant=54068803862807",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/84fcc5f0757688f3fb3b122acc53505e_6d120473-e629-4e74-a92f-6da3afd6064a.jpg?v=1784307947"
-    },
-    {
-      "store": "Pokesingles",
       "name": "Bombirdier 101 - Journey Together",
       "price": "0.00 kr",
       "in_stock": false,
@@ -122200,6 +122200,16 @@
       "store_count": null,
       "product_class": "card",
       "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/high_1cf70af6-3f1b-4d2e-861f-4b3055f1a032.webp?v=1777746626"
+    },
+    {
+      "store": "Pokesingles",
+      "name": "Bombirdier 71 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/bombirdier-071084-reverse-holo-pitch-black-343212?variant=54068803862807",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/84fcc5f0757688f3fb3b122acc53505e_6d120473-e629-4e74-a92f-6da3afd6064a.jpg?v=1784307947"
     },
     {
       "store": "Pokesingles",
@@ -149160,16 +149170,6 @@
       "store_count": null,
       "product_class": "card",
       "image": null
-    },
-    {
-      "store": "Pokesingles",
-      "name": "Crustle (JP) 136/086 - SV11B: Black Bolt",
-      "price": "49.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/crustle-jp-136086-sv11b-black-bolt-316832?variant=53436494479639",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/46119d9223af24944cae1321be5677e2.jpg?v=1779787160"
     },
     {
       "store": "Pokestore",
@@ -192633,6 +192633,16 @@
     },
     {
       "store": "Neo Tokyo",
+      "name": "Pokemon: Bath Bomb Figure Collection – Soothing Forest Scent (75g, Bandai)",
+      "price": "kr 99.00",
+      "in_stock": true,
+      "url": "https://www.neo-tokyo.no/product/pokemon-bath-bomb-figure-collection-soap-scent-75g-bandai/",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://www.neo-tokyo.no/wp-content/uploads/151514-1-280x280.jpg"
+    },
+    {
+      "store": "Neo Tokyo",
       "name": "Pokemon: Eeveelution Figure Gacha Blind Box (Random, Funism)",
       "price": "kr 529.00",
       "in_stock": true,
@@ -195915,6 +195925,6 @@
       "NorthTCG"
     ],
     "store_count": 35,
-    "product_count": 19589
+    "product_count": 19590
   }
 }
