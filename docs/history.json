@@ -1,6 +1,114 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Exeggcute - 192/191 - NM",
+      "price": "99.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/exeggcute-192-191?variant=48864982499579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Umbreon - 059/131 - NM / Reverse Holofoil",
+      "price": "7.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/umbreon-059-131?variant=49002490626299",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Deerling - 165/162 - NM",
+      "price": "509.00 kr",
+      "previous_price": "525.00 kr",
+      "url": "https://pokelageret.no/products/deerling-165-162?variant=48849613652219",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Squirtle - 001/034 - NM",
+      "price": "195.00 kr",
+      "previous_price": "205.00 kr",
+      "url": "https://pokelageret.no/products/squirtle-001-034?variant=48848860774651",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Prime Catcher - 119/131 - NM",
+      "price": "7.00 kr",
+      "previous_price": "8.00 kr",
+      "url": "https://pokelageret.no/products/prime-catcher-119-131?variant=48846683570427",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Espeon ex - 034/131 - NM",
+      "price": "49.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/espeon-ex-034-131?variant=48843538792699",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Teal Mask Ogerpon ex - 025/167",
+      "price": "39.00 kr",
+      "previous_price": "45.00 kr",
+      "url": "https://pokelageret.no/products/teal-mask-ogerpon-ex-025-168?variant=49128569503995",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Pecharunt ex - 039/064 - NM",
+      "price": "75.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/pecharunt-ex-039-064?variant=48985150947579",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Prime Catcher - 157/162 - NM",
+      "price": "10.00 kr",
+      "previous_price": "11.00 kr",
+      "url": "https://pokelageret.no/products/prime-catcher-157-162?variant=48960194248955",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Poke Vital A - 062/064 - NM",
+      "price": "6.00 kr",
+      "previous_price": "7.00 kr",
+      "url": "https://pokelageret.no/products/poke-vital-a-062-064?variant=48960194609403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Larvitar - 047/131 - NM",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/larvitar-047-131?variant=48886987522299",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T03:00:17+00:00",
+      "store": "Pokelageret",
+      "name": "Flapple - 210/191 - NM",
+      "price": "65.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/flapple-210-191?variant=48849647534331",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T02:20:15+00:00",
       "store": "Pokelageret",
       "name": "Mega Pyroar ex - 015/086 - NM",
@@ -179260,114 +179368,6 @@
       "price": "1499.00 kr",
       "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-binder-set-flareon",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Kinesisk Pokemon 151 Gathering Coin Set Mystery Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/kinesisk-pokemon-151-gathering-coin-set-mystery-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Jumbo Boosterpakke - Lost Origin",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-jumbo-boosterpakke-lost-origin",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Kinesisk Pokemon 151 Hope Coin Set ex Mystery Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/kinesisk-pokemon-151-hope-coin-set-ex-mystery-box",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Pikachu",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Eevee Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-eevee-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Magnetic Coin Set Paldea Vol. 2",
-      "price": "119.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-magnetic-coin-set-paldea-vol-2",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mewtwo V-Union Special Collection Box",
-      "price": "349.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mewtwo-v-union-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Center Japan - Taruka Kortspill",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-center-japan-taruka-kortspill",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Stellar Crystal Slim Boosterpakke",
-      "price": "39.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-stellar-crystal-slim-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Dancing Psyduck",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-dancing-psyduck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Espeon & Umbreon Pin",
-      "price": "49.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-espeon-umbreon-pin",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Koreansk Sylveon Deck",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-koreansk-sylveon-deck-box",
-      "product_class": "card",
       "event": "ny"
     }
   ]
