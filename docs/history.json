@@ -1,6 +1,66 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "Pokesingles",
+      "name": "Cranidos 44 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
+      "url": "https://pokesingles.no/products/cranidos-044084-reverse-holo-pitch-black-520335?variant=54068802519319",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "Boosterpakker",
+      "name": "151 BOOSTER BUNDLE",
+      "price": "2 690,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/151-bundle",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu & Zekrom GX - SM168 - NM",
+      "price": "2765.00 kr",
+      "previous_price": "3055.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-zekrom-gx-sm168?variant=48843512643835",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee & Snorlax GX - SM169 - NM",
+      "price": "2185.00 kr",
+      "previous_price": "2409.00 kr",
+      "url": "https://pokelageret.no/products/eevee-snorlax-gx-sm169?variant=48843542921467",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - ME05 Mega Evolution Pitch Black - 3 Pack Blister",
+      "price": "329.00 kr",
+      "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-3-pack-blister?variant=52244102971693",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon -  Iono's Bellibolt EX Premium Collection",
+      "price": "749.00 kr",
+      "url": "https://retroworld.no/products/pokemon-ionos-bellibolt-ex-premium-collection?variant=50780309389613",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T06:59:49+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Journey Together (Scarlet & Violet) - 3 Pack Blister",
+      "price": "329.00 kr",
+      "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-3-pack-blister?variant=50599224377645",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-06T06:39:50+00:00",
       "store": "Outland",
       "name": "Charizard MS-15 Moncolle Figure\nTakara Tomy\nPokemon Moncolle-figurer\nFigur",
@@ -179304,69 +179364,6 @@
       "name": "Pokemon Center Japan Quagsire Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-quagsire-plush?variant=51612635398375",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Greninja Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-greninja-plush?variant=51612634743015",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Bellisprout Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-bellisprout-plush?variant=51612625207527",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Lilligant Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-lilligant-plush?variant=51612625076455",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Milotic Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-milotic-plush?variant=51612624781543",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Ho-Oh Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-ho-oh-plush?variant=51612624453863",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Azumarill Plush",
-      "price": "319.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-azumarill-plush?variant=51612624257255",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Dragalge Plush",
-      "price": "315.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-dragalge-plush?variant=51612591718631",
       "product_class": "accessory",
       "event": "ny"
     }

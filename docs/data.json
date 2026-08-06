@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06T06:39:50+00:00",
+  "last_updated": "2026-08-06T06:59:50+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -11064,7 +11064,7 @@
     {
       "store": "Pokelageret",
       "name": "Pikachu & Zekrom GX - SM168 - NM",
-      "price": "3055.00 kr",
+      "price": "2765.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/pikachu-zekrom-gx-sm168?variant=48843512643835",
       "store_count": null,
@@ -18904,7 +18904,7 @@
     {
       "store": "Pokelageret",
       "name": "Eevee & Snorlax GX - SM169 - NM",
-      "price": "2409.00 kr",
+      "price": "2185.00 kr",
       "in_stock": false,
       "url": "https://pokelageret.no/products/eevee-snorlax-gx-sm169?variant=48843542921467",
       "store_count": null,
@@ -147233,16 +147233,6 @@
     },
     {
       "store": "Pokesingles",
-      "name": "Cranidos 044/084 (Reverse Holo) - Pitch Black",
-      "price": "5.00 kr",
-      "in_stock": false,
-      "url": "https://pokesingles.no/products/cranidos-044084-reverse-holo-pitch-black-520335?variant=54068802519319",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/481bd086f806a5578e5515bafdb9ac98_8ebac916-077e-45cc-94ae-c96248003e1c.jpg?v=1784307902"
-    },
-    {
-      "store": "Pokesingles",
       "name": "Cranidos 43 - Mysterious Treasures",
       "price": "0.00 kr",
       "in_stock": false,
@@ -147250,6 +147240,16 @@
       "store_count": null,
       "product_class": "card",
       "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/high_b2fdc7a8-f03e-4b24-bc7e-22abc3279d9b.webp?v=1777686120"
+    },
+    {
+      "store": "Pokesingles",
+      "name": "Cranidos 44 (Reverse Holo) - Pitch Black",
+      "price": "5.00 kr",
+      "in_stock": true,
+      "url": "https://pokesingles.no/products/cranidos-044084-reverse-holo-pitch-black-520335?variant=54068802519319",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cdn.shopify.com/s/files/1/0688/4130/8439/files/481bd086f806a5578e5515bafdb9ac98_8ebac916-077e-45cc-94ae-c96248003e1c.jpg?v=1784307902"
     },
     {
       "store": "Pokesingles",
@@ -168055,7 +168055,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - ME05 Mega Evolution Pitch Black - 3 Pack Blister",
       "price": "329.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-me05-mega-evolution-pitch-black-3-pack-blister?variant=52244102971693",
       "store_count": null,
       "product_class": "card",
@@ -174435,7 +174435,7 @@
       "store": "RetroWorld",
       "name": "Pokemon -  Iono's Bellibolt EX Premium Collection",
       "price": "749.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-ionos-bellibolt-ex-premium-collection?variant=50780309389613",
       "store_count": null,
       "product_class": "card",
@@ -175205,7 +175205,7 @@
       "store": "RetroWorld",
       "name": "Pokemon - Journey Together (Scarlet & Violet) - 3 Pack Blister",
       "price": "329.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://retroworld.no/products/pokemon-journey-together-scarlet-violet-3-pack-blister?variant=50599224377645",
       "store_count": null,
       "product_class": "card",
@@ -180623,6 +180623,16 @@
     },
     {
       "store": "Boosterpakker",
+      "name": "151 BOOSTER BUNDLE",
+      "price": "2 690,00 kr",
+      "in_stock": true,
+      "url": "https://boosterpakker.no/produkt/boosterpakker/151-bundle",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://boosterpakker.no/bilder_nettbutikk/04a3c84eca368f4fa05ffa7d5225d645-image.jpeg"
+    },
+    {
+      "store": "Boosterpakker",
       "name": "JOURNEY TOGETHER BOOSTER BUNDLE",
       "price": "699,00 kr",
       "in_stock": true,
@@ -180850,16 +180860,6 @@
       "store_count": null,
       "product_class": "card",
       "image": "https://boosterpakker.no/bilder_nettbutikk/7e8a724677474e6f0f0ccb9c24a12f1a-image.jpeg"
-    },
-    {
-      "store": "Boosterpakker",
-      "name": "PALDEAN FATES TECH STICKER COLLECTION",
-      "price": "949,00 kr",
-      "in_stock": true,
-      "url": "https://boosterpakker.no/produkt/boosterpakker/palden-fates-tech-sticker-collection",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://boosterpakker.no/bilder_nettbutikk/7f208c405e6d1b86ee41612376d25d94-image.jpeg"
     },
     {
       "store": "Boosterpakker",
