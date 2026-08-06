@@ -1,6 +1,49 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 2 BOOSTER BOKS",
+      "price": "1 149,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-2-booster-boks-forventes-pa-lager-10-06",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 4 BOOSTER BOKS",
+      "price": "429,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-4-booster-boks",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Dream ex - Booster Box",
+      "price": "1299.00 kr",
+      "url": "https://pokelageret.no/products/mega-dream-ex-booster-box?variant=47713374109947",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Floette ex - 101/086 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/mega-floette-ex-101-086?variant=48971007885563",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 4 BOOSTER BOKS",
+      "price": "429,00 kr",
+      "previous_price": "395,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-4-booster-boks",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T18:20:12+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Kinesisk Mystery Sleeve Box Vol. 1",
@@ -179264,51 +179307,6 @@
       "name": "Pokemon - Star Birth - Booster Pack (Japansk) - Booster Box",
       "price": "1799.00 kr",
       "url": "https://pokebua.no/products/pokemon-crimson-haze-booster-pack-japansk-kopi-kopi?variant=50800768876777",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Crimson Haze - Booster Pack (Japansk) - Booster Pack",
-      "price": "49.00 kr",
-      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-kopi-5?variant=50800758817001",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Stellar Miracle - Booster Pack (Japansk) - Booster Pack",
-      "price": "35.00 kr",
-      "url": "https://pokebua.no/products/pokemon-black-bolt-booster-pack-japansk-kopi-kopi-kopi-3?variant=50800695705833",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Kinesisk Greninja V-Union - Special Collection Box (Bare Binder og Promo Kort",
-      "price": "279.00 kr",
-      "url": "https://pokebua.no/products/pokemon-kinesisk-mewtwo-v-union-special-collection-box-bare-binder-og-promo-kort-kopi-kopi?variant=50807719952617",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - Kinesisk Zacian V-Union - Special Collection Box (Bare Binder og Promo Kort",
-      "price": "279.00 kr",
-      "url": "https://pokebua.no/products/pokemon-kinesisk-zacian-v-union-special-collection-box-bare-binder-og-promo-kort?variant=50807715725545",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokebua",
-      "name": "Pokemon - 25th Anniversary Gift box - Venusaur (kinesisk)",
-      "price": "1699.00 kr",
-      "url": "https://pokebua.no/products/pokemon-25th-anniversary-gift-box-venusaur-kinesisk?variant=50807646781673",
       "product_class": "card",
       "event": "ny"
     }

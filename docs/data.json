@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06T18:20:12+00:00",
+  "last_updated": "2026-08-06T18:59:58+00:00",
   "products": [
     {
       "store": "Cardcenter",
@@ -5805,7 +5805,7 @@
       "store": "Pokelageret",
       "name": "Mega Dream ex - Booster Box",
       "price": "1299.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/mega-dream-ex-booster-box?variant=47713374109947",
       "store_count": null,
       "product_class": "card",
@@ -9625,7 +9625,7 @@
       "store": "Pokelageret",
       "name": "Mega Floette ex - 101/086 - NM",
       "price": "39.00 kr",
-      "in_stock": true,
+      "in_stock": false,
       "url": "https://pokelageret.no/products/mega-floette-ex-101-086?variant=48971007885563",
       "store_count": null,
       "product_class": "card",
@@ -181383,6 +181383,16 @@
     },
     {
       "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 2 BOOSTER BOKS",
+      "price": "1 149,00 kr",
+      "in_stock": true,
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-2-booster-boks-forventes-pa-lager-10-06",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cardkings.no/assets/img/450/450/bilder_nettbutikk/8eb0308999180fc21d77cf2913569bce-image.jpeg"
+    },
+    {
+      "store": "Card Kings",
       "name": "POKÉMON GEM PACK VOL. 4 BOOSTER PAKKE",
       "price": "25,00 kr",
       "in_stock": true,
@@ -181394,8 +181404,8 @@
     {
       "store": "Card Kings",
       "name": "POKÉMON GEM PACK VOL. 4 BOOSTER BOKS",
-      "price": "395,00 kr",
-      "in_stock": false,
+      "price": "429,00 kr",
+      "in_stock": true,
       "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-4-booster-boks",
       "store_count": null,
       "product_class": "card",
@@ -181433,16 +181443,6 @@
     },
     {
       "store": "Card Kings",
-      "name": "POKÉMON 2026 DRAGON BOAT FESTIVAL GIFT BOKS",
-      "price": "449,00 kr",
-      "in_stock": true,
-      "url": "https://cardkings.no/produkt/kinesisk-pokemon/2026-dragon-boat-festival-gift-boks",
-      "store_count": null,
-      "product_class": "card",
-      "image": "https://cardkings.no/assets/img/450/450/bilder_nettbutikk/7973b4192042dde1d0d3eec689e2220d-image.jpeg"
-    },
-    {
-      "store": "Card Kings",
       "name": "POKÉMON V-UNION PIKACHU GIFT BOKS",
       "price": "399,00 kr",
       "in_stock": true,
@@ -181450,6 +181450,16 @@
       "store_count": null,
       "product_class": "card",
       "image": "https://cardkings.no/assets/img/450/450/bilder_nettbutikk/36796c1a104d7fbd41a58777178d5da6-image.jpeg"
+    },
+    {
+      "store": "Card Kings",
+      "name": "POKÉMON 2026 DRAGON BOAT FESTIVAL GIFT BOKS",
+      "price": "449,00 kr",
+      "in_stock": true,
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/2026-dragon-boat-festival-gift-boks",
+      "store_count": null,
+      "product_class": "card",
+      "image": "https://cardkings.no/assets/img/450/450/bilder_nettbutikk/7973b4192042dde1d0d3eec689e2220d-image.jpeg"
     },
     {
       "store": "Emken",
@@ -195955,6 +195965,6 @@
       "NorthTCG"
     ],
     "store_count": 35,
-    "product_count": 19593
+    "product_count": 19594
   }
 }

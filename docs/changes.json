@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 2 BOOSTER BOKS",
+      "price": "1 149,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-2-booster-boks-forventes-pa-lager-10-06",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T18:59:57+00:00",
+      "store": "Card Kings",
+      "name": "POKÉMON GEM PACK VOL. 4 BOOSTER BOKS",
+      "price": "429,00 kr",
+      "url": "https://cardkings.no/produkt/kinesisk-pokemon/gem-pack-vol-4-booster-boks",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
       "detected_at": "2026-08-06T15:39:59+00:00",
       "store": "Pokelageret",
       "name": "Lugia - 022/025 - NM",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon Center Japan Mega Yanmega Fit Plush",
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-mega-yanmega-fit-plush?variant=52033452048615",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Golbat Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-golbat-fit-plush?variant=52033451589863",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Azurill Fit Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-azurill-fit-plush?variant=52033451491559",
       "product_class": "accessory",
       "event": "restock"
     }
