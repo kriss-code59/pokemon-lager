@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<meta name="robots" content="noindex, nofollow">
+<title>Pokepuls admin</title>
+<link rel="stylesheet" href="/style.css?v=6">
+</head>
+<body class="admin">
+
+<header class="topp">
+  <div class="topp-rad">
+    <h1 class="merke"><a href="/"><span class="merke-poke">poke</span><span class="merke-puls">puls</span></a>
+      <span class="admin-merke">admin</span></h1>
+    <div class="topp-hoyre">
+      <button class="puls" id="oppdater" type="button">Oppdater</button>
+    </div>
+  </div>
+  <div class="chips" id="admin-faner" role="tablist">
+    <button class="chip pa" data-fane="drift">Drift</button>
+    <button class="chip" data-fane="brukere">Brukere</button>
+    <button class="chip" data-fane="katalog">Katalog</button>
+  </div>
+</header>
+
+<main id="admin-innhold">
+  <p class="hjelp">Laster…</p>
+</main>
+
+<script src="/admin.js?v=6" type="module"></script>
+</body>
+</html>

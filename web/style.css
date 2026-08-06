@@ -293,3 +293,149 @@ main { padding: 0 14px; }
 
 .feil { color: var(--rod); font-size: 13.5px; margin: 0; }
 .hjelp.liten { font-size: 12px; margin-top: -4px; }
+
+/* ===================================================== nytt i v6 ===== */
+
+/* «12 min siden» pa et produktkort. Liten, men den er grunnen til at
+   toppen av listen er verdt a se pa. */
+.nylig {
+  font-size: 11px; font-weight: 600; color: var(--gronn);
+  background: rgba(46, 204, 113, .12); border-radius: 999px;
+  padding: 1px 7px; margin-left: 4px; white-space: nowrap;
+}
+
+/* ------------------------------------------------------------ varsler */
+
+.varselboks {
+  margin-top: 18px; padding: 14px; border-radius: var(--radius);
+  background: var(--flate-2); border: 1px solid var(--kant);
+}
+.varselboks h3 { margin: 0 0 6px; font-size: 15px; }
+.varselboks .hovedknapp { width: 100%; margin-top: 4px; }
+/* Av-knappen skal ikke se like innbydende ut som pa-knappen. */
+.varselboks .hovedknapp.av {
+  background: var(--flate); color: var(--tekst); border: 1px solid var(--kant);
+}
+.bryter {
+  display: flex; align-items: center; gap: 9px; margin-top: 12px;
+  font-size: 13.5px; color: var(--tekst-svak); cursor: pointer;
+}
+.bryter input { width: 18px; height: 18px; accent-color: var(--gul); }
+
+/* -------------------------------------------------- serverrendret side */
+/* Sidene under /p/ deler farger og typografi med appen, men har sitt eget,
+   enklere oppsett: de er en inngangsdor fra Google, ikke en app. */
+
+body.side { padding-bottom: 40px; }
+.side-topp { padding: 16px; border-bottom: 1px solid var(--kant); }
+.side-hjem { text-decoration: none; font-size: 19px; font-weight: 800; }
+.side-innhold { padding: 18px 16px; max-width: 780px; margin: 0 auto; }
+.side-innhold h1 { font-size: 24px; margin: 0 0 4px; line-height: 1.2; }
+.side-innhold h2 { font-size: 16px; margin: 26px 0 10px; color: var(--tekst-svak); }
+.side-under { color: var(--tekst-svak); font-size: 14px; margin: 0 0 16px; }
+
+.side-status {
+  padding: 12px 14px; border-radius: var(--radius); font-size: 15px; margin: 0 0 16px;
+}
+.side-status.inne { background: rgba(46, 204, 113, .12); color: var(--gronn); }
+.side-status.ute  { background: var(--flate-2); color: var(--tekst-svak); }
+
+.side-cta {
+  display: inline-block; padding: 12px 18px; border-radius: 12px;
+  background: var(--gul); color: #1a1400; font-weight: 700; text-decoration: none;
+}
+
+.side-liste { list-style: none; padding: 0; margin: 0; }
+.side-tilbud {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 4px 12px;
+  align-items: center; padding: 12px 0; border-bottom: 1px solid var(--kant);
+}
+.side-tilbud a { text-decoration: none; color: inherit; min-width: 0; }
+.side-butikk { display: block; font-weight: 600; }
+.side-tittel {
+  display: block; font-size: 12.5px; color: var(--tekst-svak);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.side-pris { font-variant-numeric: tabular-nums; font-weight: 600; }
+.side-lager { font-size: 12px; }
+.side-lager.inne { color: var(--gronn); }
+.side-lager.ute  { color: var(--tekst-svak); }
+
+.side-fot {
+  padding: 24px 16px; max-width: 780px; margin: 0 auto;
+  color: var(--tekst-svak); font-size: 13px;
+}
+.side-fot a { color: var(--bla); }
+
+/* ---------------------------------------------------------------- admin */
+
+body.admin { padding-bottom: 40px; }
+body.admin .topp { position: static; }
+.admin-merke {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--bg); background: var(--gul); border-radius: 5px;
+  padding: 2px 6px; margin-left: 8px; vertical-align: middle;
+}
+.merke a { text-decoration: none; }
+#admin-innhold { padding: 14px 16px; max-width: 1100px; margin: 0 auto; }
+#admin-innhold h2 { font-size: 15px; margin: 26px 0 8px; color: var(--tekst-svak); }
+#admin-innhold h3 { font-size: 14px; margin: 20px 0 6px; }
+
+/* Helsekortet skal kunne leses pa en armlengdes avstand. Det er det eneste
+   pa siden som betyr noe hvis svaret er «nede». */
+.helsekort {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 16px; border-radius: var(--radius); margin-bottom: 16px;
+}
+.helsekort strong { font-size: 19px; }
+.helsekort span { font-size: 13px; opacity: .85; }
+.helsekort.ok     { background: rgba(46, 204, 113, .14); color: var(--gronn); }
+.helsekort.gammel { background: rgba(255, 203, 5, .14);  color: var(--gul); }
+.helsekort.nede   { background: rgba(255, 95, 86, .16);  color: var(--rod); }
+
+.tallrad { display: flex; flex-wrap: wrap; gap: 8px; }
+.talle {
+  flex: 1 1 90px; padding: 11px 12px; border-radius: 11px;
+  background: var(--flate-2); border: 1px solid var(--kant);
+}
+.talle b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+.talle span { font-size: 11.5px; color: var(--tekst-svak); }
+
+.tabell { border: 1px solid var(--kant); border-radius: 11px; overflow: hidden; }
+.tabell .rad {
+  display: flex; flex-wrap: wrap; gap: 4px 14px; padding: 10px 12px;
+  border-bottom: 1px solid var(--kant); font-size: 13px;
+}
+.tabell .rad:last-child { border-bottom: 0; }
+.tabell .rad span:first-child { flex: 1 1 200px; }
+.tabell .rad.feil { background: rgba(255, 95, 86, .07); }
+.tabell .rad.klikkbar { cursor: pointer; }
+.tabell .rad.klikkbar:hover { background: var(--flate-2); }
+.tabell .ua { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+
+.admin-sok {
+  width: 100%; margin: 10px 0; padding: 11px 12px; font-size: 16px;
+  background: var(--flate-2); border: 1px solid var(--kant);
+  border-radius: 11px; color: var(--tekst); -webkit-appearance: none;
+}
+
+.umatchet {
+  padding: 12px; border: 1px solid var(--kant); border-radius: 11px;
+  margin-bottom: 8px;
+}
+.umatchet.koblet { border-color: var(--gronn); opacity: .7; }
+.umatchet-topp { display: flex; gap: 10px; align-items: flex-start; }
+.umatchet-topp img {
+  width: 44px; height: 44px; object-fit: contain; border-radius: 8px;
+  background: var(--flate-2); flex: 0 0 auto;
+}
+.umatchet-topp b { display: block; font-size: 13.5px; }
+.umatchet-verktoy { margin-top: 10px; }
+.koble-sok {
+  width: 100%; padding: 9px 11px; font-size: 16px; border-radius: 9px;
+  background: var(--flate); border: 1px solid var(--kant); color: var(--tekst);
+  -webkit-appearance: none;
+}
+.koble-treff { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.koble-treff .chip { font-size: 12px; }
+.umatchet-verktoy .ok { color: var(--gronn); font-size: 13px; }

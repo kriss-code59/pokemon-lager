@@ -14,13 +14,21 @@ const API = location.hostname === "localhost" || location.hostname === "127.0.0.
 
 const $ = (id) => document.getElementById(id);
 
-const REGION = { en: "Vestlig", jp: "Japansk", cn: "Kinesisk", ko: "Koreansk" };
+/* «Engelsk», ikke «Vestlig». Butikkene, Facebook-gruppene og folk flest sier
+ * engelsk om denne utgaven -- «vestlig» er et ord fra samlermiljoet som en
+ * ny kjoper ma oversette i hodet for a bruke filteret. */
+const REGION = { en: "Engelsk", jp: "Japansk", cn: "Kinesisk", ko: "Koreansk" };
 const HENDELSE = {
-  restock: { ikon: "↑", ord: "pa lager igjen" },
+  restock: { ikon: "↑", ord: "på lager igjen" },
   ny: { ikon: "✦", ord: "ny vare" },
   prisendring: { ikon: "kr", ord: "ny pris" },
   utsolgt: { ikon: "↓", ord: "utsolgt" },
 };
+
+/* Hvor lenge en hendelse regnes som «nylig». 24 timer er valgt fordi det er
+ * omtrent sa lenge en restock er interessant: er den fortsatt inne dagen
+ * etter, var det ikke en restock det hastet med. */
+const NYLIG_MS = 24 * 3600 * 1000;
 
 const state = {
   produkter: [], typer: new Map(),
@@ -41,7 +49,7 @@ const kr = (ore) => ore == null ? null :
 
 function siden(iso) {
   const min = Math.round((Date.now() - new Date(iso)) / 60000);
-  if (min < 1) return "na";
+  if (min < 1) return "nå";
   if (min < 60) return min + " min siden";
   const t = Math.round(min / 60);
   if (t < 24) return t + " t siden";
@@ -156,15 +164,21 @@ function tegnProdukter() {
   const liste = $("liste");
   $("tom-liste").hidden = treff.length > 0;
   $("teller").textContent = treff.length
-    ? treff.length + " produkter" + (state.kunLager ? " pa lager" : "") +
+    ? treff.length + " produkter" + (state.kunLager ? " på lager" : "") +
       " · " + new Set(treff.map((p) => p.set_id + p.region)).size + " sett"
     : "";
   liste.innerHTML = grupperHtml(treff);
 }
 
-/* Grupper pa sett OG region. Uten regionen havner den vestlige, japanske
+/* Grupper pa sett OG region. Uten regionen havner den engelske, japanske
  * og kinesiske utgaven av samme sett i samme bolk, og listen ser ut til a
- * vise "Booster Box" tre ganger uten forklaring. */
+ * vise "Booster Box" tre ganger uten forklaring.
+ *
+ * Bolkene sorteres pa NYESTE HENDELSE, ikke alfabetisk. Alfabetisk er en
+ * sortering for et arkiv: den setter «Ascended Heroes» overst hver eneste
+ * dag uansett hva som har skjedd. Det du apner appen for a se, er hva som
+ * er nytt -- sa det ligger overst. Sett uten aktivitet beholder sin
+ * innbyrdes rekkefolge under. */
 function grupperHtml(treff) {
   const grupper = new Map();
   for (const p of treff) {
@@ -172,8 +186,21 @@ function grupperHtml(treff) {
     if (!grupper.has(nokkel)) grupper.set(nokkel, []);
     grupper.get(nokkel).push(p);
   }
+
+  const bolker = [...grupper.values()].map((produkter, i) => ({
+    produkter,
+    // Ferskeste hendelse i bolken. 0 = ingen aktivitet vi vet om.
+    tid: Math.max(...produkter.map((p) =>
+      p.sist_hendelse ? new Date(p.sist_hendelse).getTime() : 0)),
+    i,
+  }));
+  // Stabil sortering: like verdier beholder opprinnelig rekkefolge (som er
+  // alfabetisk fra API-et). Array.prototype.sort er stabil i alle nettlesere
+  // vi bryr oss om, men vi tar med `i` sa det ikke er noe a lure pa.
+  bolker.sort((a, b) => (b.tid - a.tid) || (a.i - b.i));
+
   let html = "";
-  for (const [, produkter] of grupper) {
+  for (const { produkter } of bolker) {
     const f = produkter[0];
     html += '<div class="sett-tittel">' + esc(f.set_label) +
       (f.region !== "en" ? ' <span class="merkelapp ' + f.region + '">' +
@@ -183,20 +210,39 @@ function grupperHtml(treff) {
   return html;
 }
 
+/* Billigste butikk med varen inne.
+ *
+ * tilbud er allerede sortert av API-et: pa lager forst, sa stigende pris.
+ * Forste rad med pa_lager=1 er derfor den billigste kjopbare. */
+function billigsteButikk(p) {
+  const t = (p.tilbud || []).find((x) => x[2] === 1 && x[1]);
+  return t ? butikknavn(t[0]) : null;
+}
+
 function kortHtml(p) {
   const antall = Number(p.antall_pa_lager) || 0;
   const pris = kr(p.min_pris);
   const folges = state.folger.has(p.id);
+  const hos = billigsteButikk(p);
+  const tid = p.sist_hendelse ? new Date(p.sist_hendelse).getTime() : 0;
+  const nylig = tid && Date.now() - tid < NYLIG_MS;
+
   return '<button class="kort" data-produkt="' + esc(p.id) + '">' +
     bildeHtml(p, "miniatyr") +
     '<span class="kort-venstre">' +
       '<span class="kort-navn">' + esc(p.type_label) +
-        (folges ? ' <span class="folge-merke" title="Du folger denne">♥</span>' : "") + "</span>" +
-      '<span class="kort-under">' + p.tilbud.length + " tilbud</span>" +
+        (folges ? ' <span class="folge-merke" title="Du følger denne">♥</span>' : "") +
+        (nylig ? ' <span class="nylig">' + esc(siden(p.sist_hendelse)) + "</span>" : "") +
+      "</span>" +
+      // Under navnet star det som faktisk avgjor om du klikker: hvor den er
+      // billigst. «6 tilbud» er et tall om databasen, ikke om varen.
+      '<span class="kort-under">' +
+        (hos ? "billigst hos " + esc(hos) : p.tilbud.length + " butikker følges") +
+      "</span>" +
     "</span>" +
     '<span class="kort-hoyre">' +
       (pris ? '<span class="pris">' + pris + "</span>"
-            : '<span class="pris ingen">ikke pa lager</span>') +
+            : '<span class="pris ingen">ikke på lager</span>') +
       '<div class="lager ' + (antall ? "inne" : "ute") + '">' +
         (antall ? antall + " butikk" + (antall > 1 ? "er" : "") + " inne" : "–") +
       "</div>" +
@@ -225,8 +271,8 @@ async function apneProdukt(id) {
 
     const inne = d.tilbud.filter((t) => t.in_stock === true);
     const ute = d.tilbud.filter((t) => t.in_stock !== true);
-    if (inne.length) h += "<h3>Pa lager</h3>" + inne.map(tilbudHtml).join("");
-    if (ute.length) h += "<h3>Ikke pa lager</h3>" + ute.map(tilbudHtml).join("");
+    if (inne.length) h += "<h3>På lager</h3>" + inne.map(tilbudHtml).join("");
+    if (ute.length) h += "<h3>Ikke på lager</h3>" + ute.map(tilbudHtml).join("");
 
     if (d.hendelser.length) {
       h += "<h3>Historikk</h3>" + d.hendelser.slice(0, 20).map((e) => {
@@ -249,13 +295,13 @@ function tegnFolgKnapp() {
   const knapp = $("folg-knapp");
   if (!knapp) return;
   if (!state.bruker) {
-    knapp.textContent = "Logg inn for a folge";
+    knapp.textContent = "Logg inn for å følge";
     knapp.className = "folg-knapp";
     knapp.onclick = apneKonto;
     return;
   }
   const folges = state.folger.has(state.apentProdukt);
-  knapp.textContent = folges ? "♥ Folger" : "♡ Folg denne";
+  knapp.textContent = folges ? "♥ Følger" : "♡ Følg denne";
   knapp.className = "folg-knapp" + (folges ? " pa" : "");
   knapp.onclick = () => vekslFolg(state.apentProdukt);
 }
@@ -325,7 +371,7 @@ async function vekslFolg(produktId) {
     tegnFolgKnapp();
     tegnProdukter();
   } catch (e) {
-    alert("Klarte ikke a lagre: " + e.message);
+    alert("Klarte ikke å lagre: " + e.message);
   }
 }
 
@@ -339,7 +385,7 @@ function skjemaHtml(modus) {
   const erNy = modus === "registrer";
   return '<h2>' + (erNy ? "Lag konto" : "Logg inn") + "</h2>" +
     '<p class="hjelp">' + (erNy
-      ? "Med konto kan du folge produkter og fa dem samlet under Folger. Varsler kommer nar Web Push er pa plass."
+      ? "Med konto kan du følge produkter og få push-varsel på telefonen i det de kommer på lager."
       : "Velkommen tilbake.") + "</p>" +
     '<form id="konto-skjema" class="skjema" novalidate>' +
       '<label>E-post<input id="k-epost" type="email" autocomplete="email" required></label>' +
@@ -387,13 +433,179 @@ function koblSkjema() {
   });
 }
 
-function visKontoSide() {
+/* --------------------------------------------------------- web push */
+
+/* Hele poenget med appen er dette varselet. Alt annet -- katalogen,
+ * prissammenligningen, folgelisten -- er forarbeid til at telefonen din
+ * piper i det sekundet en vare du vil ha kommer inn.
+ *
+ * Tre ting gjor dette vanskeligere enn det ser ut:
+ *
+ * 1. **iOS.** Safari gir bare Web Push til sider som er lagt til pa
+ *    hjemskjermen. Er den ikke det, finnes ikke `PushManager` i det hele
+ *    tatt -- og en knapp som ikke gjor noe er verre enn ingen knapp. Vi
+ *    oppdager tilfellet og forklarer det i stedet.
+ * 2. **Tillatelse kan bare spørres om én gang.** Sier brukeren nei, kan vi
+ *    aldri spørre igjen fra kode; det ma gjores i nettleserinnstillingene.
+ *    Derfor spor vi ALDRI automatisk ved sidelasting -- bare etter et
+ *    bevisst trykk.
+ * 3. **Abonnementet er per nettleser, ikke per konto.** Vi lagrer det mot
+ *    brukeren, og sw.js sender inn et nytt hvis nettleseren bytter det ut.
+ */
+const push = {
+  stottes() {
+    return "serviceWorker" in navigator && "PushManager" in window &&
+           "Notification" in window;
+  },
+  erIos() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  },
+  paaHjemskjerm() {
+    return window.matchMedia("(display-mode: standalone)").matches ||
+           navigator.standalone === true;
+  },
+
+  /* base64url -> Uint8Array. applicationServerKey godtar ikke strengen
+   * direkte i alle nettlesere, og feilen den gir er «InvalidCharacterError»
+   * uten flere ord. */
+  nokkelTilBytes(base64) {
+    const pad = "=".repeat((4 - (base64.length % 4)) % 4);
+    const raa = atob((base64 + pad).replace(/-/g, "+").replace(/_/g, "/"));
+    return Uint8Array.from([...raa].map((c) => c.charCodeAt(0)));
+  },
+
+  async abonnement() {
+    if (!this.stottes()) return null;
+    const reg = await navigator.serviceWorker.ready;
+    return reg.pushManager.getSubscription();
+  },
+
+  async slaPaa() {
+    const { public_key: nokkel } = await hent("/push/nokkel");
+    if (!nokkel) throw new Error("Varsler er ikke satt opp på serveren ennå.");
+
+    const tillatelse = await Notification.requestPermission();
+    if (tillatelse !== "granted") {
+      throw new Error(tillatelse === "denied"
+        ? "Varsler er blokkert for pokepuls.no. Du må slå dem på igjen i nettleserinnstillingene."
+        : "Du må godta varsler for at dette skal virke.");
+    }
+
+    const reg = await navigator.serviceWorker.ready;
+    const ab = await reg.pushManager.getSubscription() ||
+      await reg.pushManager.subscribe({
+        // Kreves av alle nettlesere: vi lover at hver push blir et synlig
+        // varsel. Bryter vi lovnaden, trekkes tillatelsen tilbake.
+        userVisibleOnly: true,
+        applicationServerKey: this.nokkelTilBytes(nokkel),
+      });
+    await hent("/push/abonner", { method: "POST", body: JSON.stringify(ab.toJSON()) });
+    return ab;
+  },
+
+  async slaAv() {
+    const ab = await this.abonnement();
+    if (!ab) return;
+    await hent("/push/avmeld", { method: "POST",
+      body: JSON.stringify({ endpoint: ab.endpoint }) });
+    await ab.unsubscribe();
+  },
+};
+
+async function varselSeksjonHtml() {
+  if (!push.stottes()) {
+    if (push.erIos() && !push.paaHjemskjerm()) {
+      return '<div class="varselboks"><h3>Varsler på iPhone</h3>' +
+        '<p class="hjelp">Safari gir bare varsler til sider som ligger på hjemskjermen. ' +
+        "Trykk <strong>Del</strong> nederst, velg <strong>Legg til på Hjem-skjerm</strong>, " +
+        "og åpne Pokepuls derfra. Da dukker knappen opp her.</p></div>";
+    }
+    return '<div class="varselboks"><h3>Varsler</h3>' +
+      '<p class="hjelp">Denne nettleseren støtter ikke varsler.</p></div>';
+  }
+
+  let status = null;
+  try { status = await hent("/push/status"); } catch (e) { /* ikke innlogget */ }
+  if (status && !status.vapid_paa) {
+    return '<div class="varselboks"><h3>Varsler</h3>' +
+      '<p class="hjelp">Varsler er ikke slått på på serveren ennå.</p></div>';
+  }
+
+  const ab = await push.abonnement();
+  const paa = !!ab && !!status && status.antall > 0;
+  return '<div class="varselboks"><h3>Varsler</h3>' +
+    '<p class="hjelp">' + (paa
+      ? "Du får push-varsel når noe du følger kommer på lager. " +
+        (status.sendt_7d ? status.sendt_7d + " varsler siste uke." : "Ingen varsler ennå.")
+      : "Slå på for å få beskjed på telefonen i det en vare du følger kommer inn.") +
+    "</p>" +
+    '<button class="hovedknapp' + (paa ? " av" : "") + '" id="varsel-knapp" type="button">' +
+      (paa ? "Slå av varsler" : "🔔 Slå på varsler") + "</button>" +
+    (paa ? '<button class="lenkeknapp" id="varsel-test" type="button">Send et testvarsel</button>' +
+           '<label class="bryter"><input type="checkbox" id="varsel-natt"' +
+             (status.stille_natt ? " checked" : "") + "> Ikke varsle mellom 23 og 07</label>"
+         : "") +
+    '<p class="feil" id="varsel-feil" hidden></p></div>';
+}
+
+function koblVarselKnapper() {
+  const knapp = $("varsel-knapp");
+  const feil = $("varsel-feil");
+  const vis = (e) => { feil.textContent = e; feil.hidden = !e; };
+
+  if (knapp) knapp.addEventListener("click", async () => {
+    knapp.disabled = true;
+    vis("");
+    try {
+      const ab = await push.abonnement();
+      if (ab) await push.slaAv(); else await push.slaPaa();
+      await visKontoSide();
+    } catch (e) {
+      vis(e.message);
+      knapp.disabled = false;
+    }
+  });
+
+  const test = $("varsel-test");
+  if (test) test.addEventListener("click", async () => {
+    test.disabled = true;
+    vis("");
+    try {
+      await hent("/push/test", { method: "POST" });
+      test.textContent = "Sendt. Se på telefonen.";
+    } catch (e) {
+      vis(e.message);
+    } finally {
+      setTimeout(() => { test.disabled = false; test.textContent = "Send et testvarsel"; }, 4000);
+    }
+  });
+
+  const natt = $("varsel-natt");
+  if (natt) natt.addEventListener("change", () => {
+    hent("/push/innstillinger", { method: "POST",
+      body: JSON.stringify({ stille_natt: natt.checked }) }).catch(() => {});
+  });
+}
+
+async function visKontoSide() {
   visArk('<h2>Konto</h2>' +
     '<p class="hjelp">Innlogget som <strong>' + esc(state.bruker.email) + "</strong>" +
     (state.bruker.role !== "free" ? " · " + esc(state.bruker.role) : "") + "</p>" +
-    '<p class="hjelp liten">Du folger ' + state.folger.size + " produkt" +
+    '<p class="hjelp liten">Du følger ' + state.folger.size + " produkt" +
       (state.folger.size === 1 ? "" : "er") + ".</p>" +
+    '<div id="varsel-seksjon"><p class="hjelp liten">Sjekker varsler…</p></div>' +
+    (state.bruker.role === "admin"
+      ? '<a class="lenkeknapp" href="/admin.html">Åpne admin</a>' : "") +
     '<button class="hovedknapp" id="logg-ut" type="button">Logg ut</button>');
+
+  // Varselseksjonen etterfylles: den ma sporre bade serveren og nettleserens
+  // pushManager, og arket skal ikke stå tomt mens den venter.
+  varselSeksjonHtml().then((h) => {
+    const boks = $("varsel-seksjon");
+    if (boks) { boks.innerHTML = h; koblVarselKnapper(); }
+  });
+
   $("logg-ut").addEventListener("click", async () => {
     await hent("/auth/logout", { method: "POST" });
     state.bruker = null;
@@ -420,12 +632,12 @@ async function tegnFolgerFane() {
     const d = await hent("/watchlist/snapshot");
     if (!d.produkter.length) {
       boks.innerHTML = '<p class="tom">Du folger ingen produkter enna.<br>' +
-        "Apne et produkt og trykk «Folg denne».</p>";
+        "Åpne et produkt og trykk «Følg denne».</p>";
       return;
     }
     const pa = d.produkter.filter((p) => p.antall_pa_lager).length;
     boks.innerHTML = '<p class="teller">' + d.produkter.length + " fulgte produkter · " +
-      pa + " pa lager na</p>" + '<div class="liste">' + grupperHtml(d.produkter) + "</div>";
+      pa + " på lager nå</p>" + '<div class="liste">' + grupperHtml(d.produkter) + "</div>";
   } catch (e) {
     boks.innerHTML = '<p class="tom">Klarte ikke a hente folgelisten.</p>';
   }
@@ -487,7 +699,7 @@ function visMerAndre() {
     '<span class="kort-under">' + esc(butikknavn(v.store_id)) + "</span></span>" +
     '<span class="kort-hoyre"><span class="pris">' + (kr(v.price_ore) || "–") + "</span>" +
     '<div class="lager ' + (v.in_stock ? "inne" : "ute") + '">' +
-    (v.in_stock ? "pa lager" : "–") + "</div></span></a>").join(""));
+    (v.in_stock ? "på lager" : "–") + "</div></span></a>").join(""));
   state.andreVist += bit.length;
   $("mer-andre").hidden = state.andreVist >= state.andre.length;
 }
@@ -584,6 +796,22 @@ function koble() {
 koble();
 last();
 lastBruker();
+
+/* Dyplenke fra de serverrendrede produktsidene: /p/<id> lenker hit med
+ * ?produkt=<id>. Uten dette lander alle som kommer fra Google pa forsiden
+ * og ma sokte seg frem til varen de nettopp leste om. */
+(function dyplenke() {
+  const id = new URLSearchParams(location.search).get("produkt");
+  if (!id) return;
+  history.replaceState(null, "", location.pathname);
+  // Vent til snapshot er lastet, sa arket kan vise reservebilde og folge-
+  // knappen med riktig tilstand.
+  const prov = (forsok = 0) => {
+    if (state.produkter.length || forsok > 40) apneProdukt(id);
+    else setTimeout(() => prov(forsok + 1), 100);
+  };
+  prov();
+})();
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").catch(() => {});
