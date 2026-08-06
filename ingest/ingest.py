@@ -167,8 +167,24 @@ def les_data(sti: str) -> dict:
         return json.load(f)
 
 
-def grupper_per_butikk(rader, katalog: Katalog):
+def les_manuelle_koblinger(cur) -> dict:
+    """tittel -> product_id, satt av et menneske paa /admin.
+
+    Disse overstyrer matcher.py. Grunnen er praktisk: naar du ser en umatchet
+    vare i admin og vet hva den er, skal koblingen gjelde ved neste ingest --
+    ikke forsvinne fordi regelmotoren fortsatt ikke kjenner igjen tittelen.
+    """
+    try:
+        cur.execute("SELECT title, product_id FROM manual_matches")
+        return {r["title"]: r["product_id"] for r in cur.fetchall()}
+    except Exception:
+        # 002_varsler.sql har ikke kjort enna. Ingest skal ikke stoppe av det.
+        return {}
+
+
+def grupper_per_butikk(rader, katalog: Katalog, manuelle: dict | None = None):
     """Ra rader -> {butikknavn: {url: oppforing}}, kun sealed."""
+    manuelle = manuelle or {}
     per_butikk: dict[str, dict] = {}
     forkastet = collections.Counter()
     for r in rader:
@@ -185,6 +201,7 @@ def grupper_per_butikk(rader, katalog: Katalog):
             forkastet[klasse] += 1
             continue
         treff = katalog.match(navn)
+        manuell = manuelle.get(navn)
         bod = per_butikk.setdefault(butikk, {})
         if url in bod:
             forkastet["duplikat"] += 1
@@ -194,7 +211,9 @@ def grupper_per_butikk(rader, katalog: Katalog):
             "title": navn[:500],
             "price_ore": pris_til_ore(r.get("price")),
             "in_stock": normaliser_lager(r.get("in_stock")),
-            "product_id": treff["product_id"] if treff else None,
+            # Manuell kobling vinner over regelmotoren. Et menneske som har
+            # sett varen vet mer enn et regexuttrykk.
+            "product_id": manuell or (treff["product_id"] if treff else None),
         }
     return per_butikk, dict(forkastet)
 
@@ -208,7 +227,14 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
     fremfort = set(helse.get("carried_forward_stores") or [])
     sist_oppdatert = data.get("last_updated")
 
-    per_butikk, forkastet = grupper_per_butikk(data.get("products") or [], katalog)
+    # Egen kort tilkobling: de manuelle koblingene maa leses FOR grupperingen,
+    # og grupperingen skjer for hovedtransaksjonen apnes.
+    with psycopg.connect(dsn, row_factory=dict_row) as _c:
+        with _c.cursor() as _cur:
+            manuelle = les_manuelle_koblinger(_cur)
+
+    per_butikk, forkastet = grupper_per_butikk(data.get("products") or [], katalog,
+                                               manuelle)
 
     hendelser: list[tuple] = []
     stat = {"nye": 0, "restock": 0, "utsolgt": 0, "prisendring": 0,
