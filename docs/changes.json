@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T15:39:59+00:00",
+      "store": "Pokelageret",
+      "name": "Lugia - 022/025 - NM",
+      "price": "9.00 kr",
+      "url": "https://pokelageret.no/products/lugia-022-025?variant=48881635197179",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T15:39:59+00:00",
+      "store": "Pokelageret",
+      "name": "Raboot - SV016/SV122 - NM",
+      "price": "65.00 kr",
+      "url": "https://pokelageret.no/products/raboot-sv016-sv122?variant=48846231896315",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-06T15:00:08+00:00",
       "store": "PokeNordic",
       "name": "Pokémon Chilling Reign Booster Pakke",
@@ -2679,24 +2697,6 @@
       "name": "Pokemon Center Japan Azurill Fit Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-azurill-fit-plush?variant=52033451491559",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Vivillon (Garden Pattern) Fit Plush",
-      "price": "349.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-vivillon-garden-pattern-fit-plush?variant=52033451458791",
-      "product_class": "accessory",
-      "event": "restock"
-    },
-    {
-      "detected_at": "2026-08-05T07:01:04+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Eelektrik Fit Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-eelektrik-fit-plush?variant=52033450836199",
       "product_class": "accessory",
       "event": "restock"
     }
