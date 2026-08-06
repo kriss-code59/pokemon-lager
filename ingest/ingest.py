@@ -214,6 +214,13 @@ def grupper_per_butikk(rader, katalog: Katalog, manuelle: dict | None = None):
             # Manuell kobling vinner over regelmotoren. Et menneske som har
             # sett varen vet mer enn et regexuttrykk.
             "product_id": manuell or (treff["product_id"] if treff else None),
+            # Butikkens produktbilde. Skjemaet har hatt listings.image_url
+            # siden starten og API-et har alltid lest den -- men ingen skrev
+            # den. Resultatet var 0 av 3 900 oppforinger med bilde, og en
+            # liste med bare reservesilhuetter, mens data.json hadde 19 000
+            # bilde-URL-er liggende. Et felt som leses av alle og skrives av
+            # ingen feiler stille: ingenting kaster, det ser bare tomt ut.
+            "image_url": (r.get("image") or None),
         }
     return per_butikk, dict(forkastet)
 
@@ -226,6 +233,9 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
     feilede = set(helse.get("failed_stores") or [])
     fremfort = set(helse.get("carried_forward_stores") or [])
     sist_oppdatert = data.get("last_updated")
+    # Skanningens ekte starttid hvis scraperen oppgir den; ellers faller vi
+    # tilbake pa naar filen ble skrevet, som er naar skanningen var FERDIG.
+    startet = helse.get("started_at") or sist_oppdatert
 
     # Egen kort tilkobling: de manuelle koblingene maa leses FOR grupperingen,
     # og grupperingen skjer for hovedtransaksjonen apnes.
@@ -251,7 +261,7 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
             cur.execute(
                 "INSERT INTO scrape_runs (started_at, store_count, failed_stores, carried_stores) "
                 "VALUES (%s, %s, %s, %s) RETURNING id",
-                (sist_oppdatert or datetime.now(timezone.utc), len(per_butikk),
+                (startet or datetime.now(timezone.utc), len(per_butikk),
                  sorted(feilede), sorted(fremfort)),
             )
             kjoring_id = cur.fetchone()["id"]
@@ -296,14 +306,16 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                     gammel = for_.get(url)
                     if gammel is None:
                         sett_inn.append((butikk_id, ny["product_id"], url, ny["title"],
-                                         ny["price_ore"], ny["in_stock"], na, na))
+                                         ny["price_ore"], ny["in_stock"], na, na,
+                                         ny["image_url"]))
                         if ny["in_stock"] is True and not bootstrap:
                             hendelser.append((None, url, ny["product_id"], butikk_id,
                                               "ny", ny["price_ore"], None))
                         continue
 
                     oppdater.append((ny["product_id"], ny["title"], ny["price_ore"],
-                                     ny["in_stock"], na, na, gammel["id"]))
+                                     ny["in_stock"], na, na, ny["image_url"],
+                                     gammel["id"]))
                     if bootstrap:
                         continue
 
@@ -326,17 +338,22 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                 if sett_inn:
                     cur.executemany(
                         "INSERT INTO listings (store_id, product_id, url, title, price_ore, "
-                        "in_stock, last_seen_at, last_ok_at) "
-                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s) "
+                        "in_stock, last_seen_at, last_ok_at, image_url) "
+                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) "
                         "ON CONFLICT (url) DO UPDATE SET "
                         "  product_id = EXCLUDED.product_id, title = EXCLUDED.title, "
                         "  price_ore = EXCLUDED.price_ore, in_stock = EXCLUDED.in_stock, "
-                        "  last_seen_at = EXCLUDED.last_seen_at, last_ok_at = EXCLUDED.last_ok_at",
+                        "  last_seen_at = EXCLUDED.last_seen_at, last_ok_at = EXCLUDED.last_ok_at, "
+                        # COALESCE, ikke EXCLUDED alene: en kjoring der en
+                        # butikk endrer temaet sitt og slutter a levere bilder
+                        # skal ikke tomme kolonnen for alle varene deres.
+                        "  image_url = COALESCE(EXCLUDED.image_url, listings.image_url)",
                         sett_inn)
                 if oppdater:
                     cur.executemany(
                         "UPDATE listings SET product_id = %s, title = %s, price_ore = %s, "
-                        "in_stock = %s, last_seen_at = %s, last_ok_at = %s WHERE id = %s",
+                        "in_stock = %s, last_seen_at = %s, last_ok_at = %s, "
+                        "image_url = COALESCE(%s, image_url) WHERE id = %s",
                         oppdater)
 
                 # Oppforinger som ikke lenger finnes i butikkens katalog.
