@@ -1,6 +1,95 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Phantasmal Flames Booster Box",
+      "price": "5999.00 kr",
+      "url": "https://pokelageret.no/products/phantasmal-flames-booster-box?variant=47690412982523",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Rayquaza - SWSH029 - NM",
+      "price": "99.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/rayquaza-swsh029?variant=48985266192635",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 48/68 - NM / Reverse Holofoil",
+      "price": "49.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/eevee-48-68?variant=48887001579771",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu V - SWSH285 - NM",
+      "price": "59.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-v-swsh285?variant=48849605067003",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Seviper - SV15/SV94 - NM",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/seviper-sv15-sv94?variant=48984728142075",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Candela - SWSH228 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/candela-swsh228?variant=48849610146043",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu V-Union - SWSH140 - NM",
+      "price": "99.00 kr",
+      "previous_price": "105.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-v-union-swsh140?variant=48849604739323",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu V-Union - SWSH139 - NM",
+      "price": "85.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-v-union-swsh139?variant=48849604444411",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Zacian V (Shiny) - SWSH292 - NM",
+      "price": "59.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/zacian-v-shiny-swsh292?variant=48849601757435",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T05:59:52+00:00",
+      "store": "Pokelageret",
+      "name": "Poke Ball - SWSH146 - NM",
+      "price": "319.00 kr",
+      "previous_price": "309.00 kr",
+      "url": "https://pokelageret.no/products/poke-ball-swsh146?variant=48838874628347",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T05:20:10+00:00",
       "store": "Pokelageret",
       "name": "Rayquaza - 138/185 - NM",
@@ -179279,96 +179368,6 @@
       "price": "149.00 kr",
       "url": "https://pokestore.no/products/pokemon-mega-blaziken-moncolle-figur?variant=51568774906087",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Terastal Pikachu Moncolle Figur",
-      "price": "179.00 kr",
-      "url": "https://pokestore.no/products/pokemon-terastal-pikachu-moncolle-figur?variant=51568764158183",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Sleeping Friends Morpeko Plush",
-      "price": "379.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-sleeping-friends-morpeko-plush?variant=51568762683623",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon ML-01 Ho-Oh Moncolle Figur",
-      "price": "239.00 kr",
-      "url": "https://pokestore.no/products/pokemon-ho-oh-moncolle-figur?variant=51568762421479",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Mega Altaria Moncolle Figur",
-      "price": "129.00 kr",
-      "url": "https://pokestore.no/products/pokemon-mega-altaria-moncolle-figur?variant=51568761536743",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Gardevoir Sleeves (64 stk)",
-      "price": "99.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-gardevoir-sleeves?variant=51568668508391",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Reshiram Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-reshiram-sleeves?variant=51568667918567",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Poke Ball & Energy Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-poke-ball-energy-sleeves?variant=51568666968295",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Zekrom Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-zecrom-sleeves?variant=51568664248551",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Absol Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-absol-sleeves?variant=51568658186471",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Mega Mawile Sleeves (64 stk)",
-      "price": "119.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-mega-mawile-soeeves?variant=51568657957095",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
