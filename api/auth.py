@@ -72,6 +72,33 @@ class Folg(BaseModel):
     kinds: list[str] = ["restock", "ny"]
 
 
+class GlemtPassord(BaseModel):
+    email: EmailStr
+
+
+class NyttPassord(BaseModel):
+    token: str = Field(min_length=20, max_length=200)
+    password: str = Field(min_length=8, max_length=200)
+
+
+class Token(BaseModel):
+    token: str = Field(min_length=20, max_length=200)
+
+
+class SlettMeg(BaseModel):
+    # Passordet kreves selv om brukeren er innlogget. En apen laptop skal
+    # ikke vaere nok til aa slette kontoen til noen andre.
+    password: str = Field(min_length=1, max_length=200)
+    grunn: str | None = Field(default=None, max_length=500)
+
+
+# Hvor lenge en engangslenke varer. Passord: kort, fordi den gir full
+# tilgang til kontoen. E-postbekreftelse: lang, fordi den ikke gir noe
+# annet enn et flagg, og folk leser e-post pa mandag.
+PASSORD_TIMER = 1
+EPOST_DOGN = 3
+
+
 # Modellene ma ligge pa modulniva. Defineres de inne i monter(), far
 # `from __future__ import annotations` pydantic til a se en ForwardRef den
 # ikke kan slaa opp, og hele OpenAPI-genereringen faller.
@@ -113,7 +140,8 @@ async def hent_bruker(pool, token: str | None):
         return None
     async with pool.connection() as conn:
         cur = await conn.execute(
-            "SELECT u.id, u.email, u.role, u.premium_until, u.created_at "
+            "SELECT u.id, u.email, u.role, u.premium_until, u.created_at, "
+            "       u.email_verified_at "
             "FROM sessions s JOIN users u ON u.id = s.user_id "
             "WHERE s.token_hash = %s AND s.expires_at > now()",
             (_hash_token(token),))
@@ -190,7 +218,8 @@ def monter(app, hent_pool):
         if not bruker:
             return {"innlogget": False}
         return {"innlogget": True, "email": bruker["email"], "role": bruker["role"],
-                "premium_until": bruker["premium_until"]}
+                "premium_until": bruker["premium_until"],
+                "epost_bekreftet": bruker["email_verified_at"] is not None}
 
     # ----------------------------------------------------------- folgeliste
 
@@ -263,6 +292,153 @@ def monter(app, hent_pool):
             cur = await conn.execute(sql, (bruker["id"], bruker["id"]))
             return {"produkter": await cur.fetchall(),
                     "felt": ["butikk", "pris_ore", "pa_lager"]}
+
+    # ------------------------------------------------- glemt passord m.m.
+
+    async def _lag_token(pool, bruker_id, kind: str, levetid) -> str:
+        token = secrets.token_urlsafe(32)
+        async with pool.connection() as conn:
+            # Bare én gyldig lenke av hver type om gangen. Ber noen om nytt
+            # passord tre ganger, skal ikke alle tre lenkene virke.
+            await conn.execute(
+                "DELETE FROM engangstokener WHERE user_id = %s AND kind = %s",
+                (bruker_id, kind))
+            await conn.execute(
+                "INSERT INTO engangstokener (token_hash, user_id, kind, expires_at) "
+                "VALUES (%s, %s, %s, %s)",
+                (_hash_token(token), bruker_id, kind,
+                 datetime.now(timezone.utc) + levetid))
+        return token
+
+    async def _bruk_token(pool, token: str, kind: str):
+        """-> user_id, og merker tokenet som brukt. None hvis ugyldig."""
+        async with pool.connection() as conn:
+            cur = await conn.execute(
+                "UPDATE engangstokener SET brukt_at = now() "
+                "WHERE token_hash = %s AND kind = %s AND brukt_at IS NULL "
+                "  AND expires_at > now() RETURNING user_id",
+                (_hash_token(token), kind))
+            rad = await cur.fetchone()
+        return rad["user_id"] if rad else None
+
+    @router.post("/glemt")
+    async def glemt(data: GlemtPassord, request: Request):
+        """Sender en lenke for nytt passord.
+
+        Svarer ALLTID det samme, uansett om adressen finnes. Alt annet gjor
+        endepunktet til en liste over hvem som har konto her -- og for et
+        Pokemon-nettsted er den listen ikke uinteressant for noen som vil
+        gjette passord.
+        """
+        from varsling import epost as epost_modul
+
+        _bank_pa("glemt:" + (request.client.host if request.client else "?"))
+        e_post = data.email.strip().lower()
+        pool = hent_pool()
+        async with pool.connection() as conn:
+            cur = await conn.execute("SELECT id FROM users WHERE email = %s", (e_post,))
+            bruker = await cur.fetchone()
+
+        if bruker:
+            if not epost_modul.er_satt_opp():
+                raise HTTPException(
+                    503, "E-post er ikke satt opp på serveren ennå. "
+                         "Ta kontakt på norgekriss@gmail.com.")
+            token = await _lag_token(pool, bruker["id"], "passord",
+                                     timedelta(hours=PASSORD_TIMER))
+            ok, feil = epost_modul.send_passordlenke(
+                e_post, f"https://pokepuls.no/nytt-passord.html?t={token}")
+            if not ok:
+                # Loggen skal si hva som gikk galt; brukeren skal ikke faa
+                # vite om adressen finnes.
+                print(f"[glemt] klarte ikke sende til {e_post}: {feil}")
+
+        return {"ok": True, "melding":
+                "Finnes det en konto med denne adressen, er lenken sendt."}
+
+    @router.post("/nytt-passord")
+    async def nytt_passord(data: NyttPassord, request: Request, svar: Response):
+        _bank_pa("nytt:" + (request.client.host if request.client else "?"))
+        pool = hent_pool()
+        bruker_id = await _bruk_token(pool, data.token, "passord")
+        if not bruker_id:
+            raise HTTPException(400, "Lenken er brukt opp eller utløpt. Be om en ny.")
+        async with pool.connection() as conn:
+            await conn.execute(
+                "UPDATE users SET password_hash = %s, email_verified_at = "
+                "COALESCE(email_verified_at, now()) WHERE id = %s",
+                (_hasher.hash(data.password), bruker_id))
+            # Alle andre sesjoner ryker. Var kontoen kapret, kastes tyven ut
+            # i det du setter nytt passord -- ellers sitter de igjen med en
+            # gyldig cookie i 90 dager.
+            await conn.execute("DELETE FROM sessions WHERE user_id = %s", (bruker_id,))
+            cur = await conn.execute("SELECT email, role FROM users WHERE id = %s",
+                                     (bruker_id,))
+            bruker = await cur.fetchone()
+        await _ny_sesjon(pool, bruker_id, svar, request)
+        return {"email": bruker["email"], "role": bruker["role"]}
+
+    @router.post("/send-verifisering")
+    async def send_verifisering(pokepuls_sesjon: str | None = Cookie(None)):
+        from varsling import epost as epost_modul
+
+        pool = hent_pool()
+        bruker = _krev(await hent_bruker(pool, pokepuls_sesjon))
+        if not epost_modul.er_satt_opp():
+            raise HTTPException(503, "E-post er ikke satt opp på serveren ennå.")
+        token = await _lag_token(pool, bruker["id"], "epost", timedelta(days=EPOST_DOGN))
+        ok, feil = epost_modul.send_verifisering(
+            bruker["email"], f"https://pokepuls.no/?verifiser={token}")
+        if not ok:
+            raise HTTPException(502, f"Klarte ikke sende: {feil}")
+        return {"ok": True}
+
+    @router.post("/verifiser")
+    async def verifiser(data: Token):
+        pool = hent_pool()
+        bruker_id = await _bruk_token(pool, data.token, "epost")
+        if not bruker_id:
+            raise HTTPException(400, "Lenken er brukt opp eller utløpt.")
+        async with pool.connection() as conn:
+            await conn.execute(
+                "UPDATE users SET email_verified_at = now() WHERE id = %s", (bruker_id,))
+        return {"ok": True}
+
+    @router.post("/slett-meg")
+    async def slett_meg(data: SlettMeg, svar: Response,
+                        pokepuls_sesjon: str | None = Cookie(None)):
+        """Brukeren sletter seg selv. Ekte sletting, ikke et flagg.
+
+        Alt henger pa users.id med ON DELETE CASCADE: sesjoner, folgeliste,
+        push-enheter, sendte varsler og engangstokener forsvinner i samme
+        setning. Feedback beholdes, men uten kobling til personen (SET NULL).
+        """
+        pool = hent_pool()
+        bruker = _krev(await hent_bruker(pool, pokepuls_sesjon))
+        async with pool.connection() as conn:
+            cur = await conn.execute("SELECT password_hash FROM users WHERE id = %s",
+                                     (bruker["id"],))
+            rad = await cur.fetchone()
+        try:
+            _hasher.verify(rad["password_hash"], data.password)
+        except (VerifyMismatchError, VerificationError):
+            raise HTTPException(401, "Feil passord.")
+
+        async with pool.connection() as conn:
+            cur = await conn.execute(
+                "SELECT (SELECT count(*) FROM subscriptions WHERE user_id = %s) AS folgt, "
+                "       EXTRACT(DAY FROM now() - created_at)::int AS dager "
+                "FROM users WHERE id = %s", (bruker["id"], bruker["id"]))
+            tall = await cur.fetchone()
+            # Anonym statistikk, sa du kan se OM folk slutter uten a vite hvem.
+            await conn.execute(
+                "INSERT INTO slettede_kontoer (grunn, dager_aktiv, antall_fulgt) "
+                "VALUES (%s, %s, %s)", (data.grunn, tall["dager"], tall["folgt"]))
+            await conn.execute("UPDATE feedback SET user_id = NULL WHERE user_id = %s",
+                               (bruker["id"],))
+            await conn.execute("DELETE FROM users WHERE id = %s", (bruker["id"],))
+        svar.delete_cookie(COOKIE, path="/")
+        return {"ok": True}
 
     app.include_router(router)
     app.include_router(liste_router)

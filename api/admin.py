@@ -15,10 +15,26 @@ data, og den skal gjores bevisst med SQL, ikke med et uhell paa mobil.
 """
 from __future__ import annotations
 
+import os
+
 from fastapi import APIRouter, Cookie, HTTPException, Query
 from pydantic import BaseModel, Field
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
+
+# To laser, ikke én.
+#
+# role='admin' i databasen er den vanlige. POKEPULS_ADMIN_EPOST er den andre:
+# en liste over adresser som FAKTISK slipper inn, satt i /etc/pokepuls.env og
+# utenfor databasens rekkevidde.
+#
+# Poenget er ikke at databasen er utrygg. Poenget er at en SQL-injeksjon, en
+# feil i rolleknappen eller en tastefeil i en UPDATE ellers ville vaere nok
+# til aa gi noen full innsikt i alle brukerne. Med to laser maa begge feile.
+#
+# Er variabelen tom, gjelder bare rollen -- da oppforer alt seg som for.
+_ADMIN_EPOST = {e.strip().lower() for e in
+                os.environ.get("POKEPULS_ADMIN_EPOST", "").split(",") if e.strip()}
 
 
 class Kobling(BaseModel):
@@ -31,14 +47,23 @@ class Rolle(BaseModel):
     role: str = Field(pattern="^(free|premium|admin)$")
 
 
+class FeedbackStatus(BaseModel):
+    status: str | None = Field(default=None, pattern="^(ny|lest|gjort|avvist)$")
+    notat: str | None = Field(default=None, max_length=2000)
+
+
 def monter(app, hent_pool, hent_bruker):
     async def _krev_admin(token):
         bruker = await hent_bruker(hent_pool(), token)
         if not bruker:
             raise HTTPException(401, "Ikke innlogget")
+        # 404, ikke 403: en side som svarer "forbudt" bekrefter at den
+        # finnes. Den skal ikke finnes for andre enn admin.
         if bruker["role"] != "admin":
-            # 404, ikke 403: en side som svarer "forbudt" bekrefter at den
-            # finnes. Den skal ikke finnes for andre enn admin.
+            raise HTTPException(404, "Ikke funnet")
+        if _ADMIN_EPOST and bruker["email"].lower() not in _ADMIN_EPOST:
+            print(f"[admin] AVVIST: {bruker['email']} har role=admin i databasen, "
+                  f"men staar ikke i POKEPULS_ADMIN_EPOST")
             raise HTTPException(404, "Ikke funnet")
         return bruker
 
@@ -155,6 +180,53 @@ def monter(app, hent_pool, hent_bruker):
             tall = await cur.fetchone()
         return {"kjoringer": kjoringer, "butikker": butikker,
                 "hendelser_24t": hendelser, "varsler_24t": varsler, "tall": tall}
+
+    # --------------------------------------------------------- feedback
+
+    @router.get("/feedback")
+    async def feedback(pokepuls_sesjon: str | None = Cookie(None),
+                       status: str | None = Query(None)):
+        await _krev_admin(pokepuls_sesjon)
+        vilkar, args = [], []
+        if status in {"ny", "lest", "gjort", "avvist"}:
+            vilkar.append("f.status = %s")
+            args.append(status)
+        async with hent_pool().connection() as conn:
+            cur = await conn.execute(
+                "SELECT f.id, f.tekst, f.slag, f.side, f.status, f.notat, "
+                "       f.created_at, f.user_agent, "
+                "       COALESCE(u.email, f.epost) AS epost, "
+                "       (u.id IS NULL) AS slettet_konto, u.role "
+                "FROM feedback f LEFT JOIN users u ON u.id = f.user_id " +
+                ("WHERE " + " AND ".join(vilkar) + " " if vilkar else "") +
+                "ORDER BY (f.status = 'ny') DESC, f.created_at DESC LIMIT 300", args)
+            meldinger = await cur.fetchall()
+            cur = await conn.execute(
+                "SELECT status, count(*) AS n FROM feedback GROUP BY status")
+            antall = {r["status"]: r["n"] for r in await cur.fetchall()}
+        return {"meldinger": meldinger, "antall": antall}
+
+    @router.post("/feedback/{melding_id}")
+    async def sett_feedback_status(melding_id: int, data: FeedbackStatus,
+                                   pokepuls_sesjon: str | None = Cookie(None)):
+        await _krev_admin(pokepuls_sesjon)
+        felt, verdier = [], []
+        if data.status:
+            felt.append("status = %s")
+            verdier.append(data.status)
+        if data.notat is not None:
+            felt.append("notat = %s")
+            verdier.append(data.notat or None)
+        if not felt:
+            return {"ok": True}
+        verdier.append(melding_id)
+        async with hent_pool().connection() as conn:
+            cur = await conn.execute(
+                "UPDATE feedback SET " + ", ".join(felt) + " WHERE id = %s RETURNING id",
+                tuple(verdier))
+            if not await cur.fetchone():
+                raise HTTPException(404, "Ukjent melding")
+        return {"ok": True}
 
     # ---------------------------------------------------------- katalog
 
