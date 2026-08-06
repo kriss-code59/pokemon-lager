@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Pyroar ex - 015/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-pyroar-ex-015-086?variant=48960196215035",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crystal Gathering - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crystal-gathering-booster-pack?variant=51477621833961",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Boosterpakker",
+      "name": "JOURNEY TOGETHER BOOSTER BUNDLE",
+      "price": "699,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/journey-together-booster-bundle",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon TCG: MEGA Starter Set – Eevee ex (Japansk Kortstokk)",
+      "price": "749 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-mega-starter-set-eevee-ex-japansk-kortstokk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-05T19:40:08+00:00",
       "store": "Mystic Trades",
       "name": "[PRE-ORDER] – Pokémon TCG: MEGA M6a Expansion Pack – 30th Celebration (Japansk Booster Display Box)",
@@ -2661,42 +2697,6 @@
       "name": "Ascended Heroes – 239/217 – Team Rocket’s Dugtrio",
       "price": "149,00 kr",
       "url": "https://collectible.no/home/ascended-heroes-239-217-team-rockets-dugtrio/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T11:59:48+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 148/217 – Kingambit (Quick Ball) – Reverse Holo",
-      "price": "4,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-148-217-kingambit-quick-ball-reverse-holo/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T11:59:48+00:00",
-      "store": "Collectible",
-      "name": "Neo Destiny – 016/105 – Miracle Energy – Holo (Lightly Played)",
-      "price": "225,00 kr",
-      "url": "https://collectible.no/home/neo-destiny-016-105-miracle-energy-holo/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T11:59:48+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 033/217 – N’s Darmanitan",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-033-217-ns-darmanitan/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-04T11:59:48+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 011/217 – Wurmple",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-011-217-wurmple/",
       "product_class": "card",
       "event": "ny"
     }

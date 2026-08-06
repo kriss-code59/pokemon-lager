@@ -1,6 +1,502 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Pyroar ex - 015/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-pyroar-ex-015-086?variant=48960196215035",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokebua",
+      "name": "Pokemon - Crystal Gathering - Booster Pack",
+      "price": "139.00 kr",
+      "url": "https://pokebua.no/products/pokemon-crystal-gathering-booster-pack?variant=51477621833961",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Boosterpakker",
+      "name": "JOURNEY TOGETHER BOOSTER BUNDLE",
+      "price": "699,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/journey-together-booster-bundle",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Mystic Trades",
+      "name": "[PRE-ORDER] – Pokémon TCG: MEGA Starter Set – Eevee ex (Japansk Kortstokk)",
+      "price": "749 kr",
+      "url": "https://mystictrades.no/nyheter-forhandsbestilling/pre-order-pokemon-tcg-mega-starter-set-eevee-ex-japansk-kortstokk",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Mega Symphonia Japansk Display Booster Box",
+      "price": "1299.00 kr",
+      "url": "https://cardcenter.no/products/s",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Cardcenter",
+      "name": "Pokemon Go Japansk Booster Box",
+      "price": "3999.00 kr",
+      "url": "https://cardcenter.no/products/pokemon-go-japansk-booster-box",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Storm Emeralda - Booster Box",
+      "price": "1999.00 kr",
+      "url": "https://pokelageret.no/products/storm-emeralda?variant=49125308989691",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Evolutions Checklane Blister",
+      "price": "99.00 kr",
+      "url": "https://pokelageret.no/products/mega-evolutions-checklane-blister?variant=47582984372475",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Iono's Wattrel - 231/217 - NM",
+      "price": "115.00 kr",
+      "previous_price": "119.00 kr",
+      "url": "https://pokelageret.no/products/ionos-wattrel-231-217?variant=49123146662139",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Cynthia's Roserade - 184/182 - NM",
+      "price": "165.00 kr",
+      "previous_price": "174.00 kr",
+      "url": "https://pokelageret.no/products/cynthias-roserade-184-182?variant=49123146301691",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Ampharos - 090/086 - NM",
+      "price": "95.00 kr",
+      "previous_price": "89.00 kr",
+      "url": "https://pokelageret.no/products/ampharos-090-086?variant=49002528276731",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Charizard X ex - 013/094 - NM",
+      "price": "55.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/mega-charizard-x-ex-013-094?variant=49002491740411",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Dondozo ex - 211/182 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/dondozo-ex-211-182?variant=48984728535291",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Chespin - 087/086 - NM",
+      "price": "55.00 kr",
+      "previous_price": "49.00 kr",
+      "url": "https://pokelageret.no/products/chespin-087-086?variant=48971008278779",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Toxtricity - 103/094 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/toxtricity-103-094?variant=48960192413947",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Probopass - 096/088 - NM",
+      "price": "12.00 kr",
+      "previous_price": "13.00 kr",
+      "url": "https://pokelageret.no/products/probopass-096-088?variant=49123146268923",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Chikorita - 046 - NM",
+      "price": "175.00 kr",
+      "previous_price": "165.00 kr",
+      "url": "https://pokelageret.no/products/chikorita-046?variant=49123180577019",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Sliggoo - 095/086 - NM",
+      "price": "25.00 kr",
+      "previous_price": "29.00 kr",
+      "url": "https://pokelageret.no/products/sliggoo-095-86?variant=49123149185275",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Aurorus - 092/088 - NM",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/aurorus-092-088?variant=49123146137851",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Team Rocket's Crobat ex - 217/182 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/team-rockets-crobat-ex-217-182?variant=49002496262395",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Gourgeist ex - 102/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/gourgeist-ex-102-086?variant=49002496164091",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Team Rocket's Nidoking ex - 216/182 - NM",
+      "price": "55.00 kr",
+      "url": "https://pokelageret.no/products/team-rockets-nidoking-ex-216-182?variant=49002491478267",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Team Rocket's Nidoking ex - 216/182 - NM",
+      "price": "55.00 kr",
+      "previous_price": "59.00 kr",
+      "url": "https://pokelageret.no/products/team-rockets-nidoking-ex-216-182?variant=49002491478267",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Raikou - 048/132 - NM",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/raikou-048-132?variant=48989032317179",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Rowlet - 043 - NM",
+      "price": "75.00 kr",
+      "previous_price": "69.00 kr",
+      "url": "https://pokelageret.no/products/rowlet-043?variant=48985231032571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Floette ex - 035/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-floette-ex-035-086?variant=48971007852795",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Sharpedo ex - 113/094 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-sharpedo-ex-113-094?variant=48971007787259",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Gengar ex - 056/094 - NM",
+      "price": "29.00 kr",
+      "previous_price": "35.00 kr",
+      "url": "https://pokelageret.no/products/mega-gengar-ex-056-094?variant=48969134932219",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Greninja ex - 022/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/mega-greninja-ex-022-086?variant=48960195461371",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Flygon - 101/094 - NM",
+      "price": "69.00 kr",
+      "previous_price": "75.00 kr",
+      "url": "https://pokelageret.no/products/flygon-101-094?variant=48846479294715",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Zamazenta - 201/182 - NM",
+      "price": "59.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/zamazenta-201-182?variant=48846476017915",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Prism Tower - 111/086 - NM",
+      "price": "35.00 kr",
+      "url": "https://pokelageret.no/products/prism-tower-111-086?variant=49018873708795",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Beedrill ex - 003/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/beedrill-ex-003-086?variant=49018872791291",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Salamence ex - 177/159 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/salamence-ex-177-159?variant=49002530275579",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Arboliva ex - 207/182 - NM",
+      "price": "39.00 kr",
+      "url": "https://pokelageret.no/products/arboliva-ex-207-182?variant=49002495967483",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Mega Kangaskhan ex - 025 - NM",
+      "price": "10.00 kr",
+      "previous_price": "11.00 kr",
+      "url": "https://pokelageret.no/products/mega-kangaskhan-ex-025?variant=49002490953979",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Charmeleon - 18/113 - MP / Normal",
+      "price": "65.00 kr",
+      "url": "https://pokelageret.no/products/charmeleon-18-113?variant=48985140429051",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 074/131 - NM",
+      "price": "19.00 kr",
+      "url": "https://pokelageret.no/products/eevee-074-132?variant=48985098518779",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Blaziken ex - 024/159 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/blaziken-ex-024-159?variant=48985129681147",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Charmeleon - SV7/SV94 - NM",
+      "price": "225.00 kr",
+      "url": "https://pokelageret.no/products/charmeleon-sv7-sv94?variant=48984728436987",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Dawn - 118/094 - NM",
+      "price": "65.00 kr",
+      "previous_price": "75.00 kr",
+      "url": "https://pokelageret.no/products/dawn-118-094?variant=48979076546811",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Philippe - 110/086 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/philippe-110-086?variant=48971008082171",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Charmander - 038 - NM",
+      "price": "499.00 kr",
+      "url": "https://pokelageret.no/products/charmander-038?variant=48969193095419",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Reshiram ex - 030/159 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/reshiram-ex-030-159?variant=48960216072443",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Eevee - 166/236 - NM / Reverse Holofoil",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/eevee-166-236?variant=48887001907451",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Atticus - 133/131 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/atticus-133-131?variant=48849630494971",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Giacomo - 138/131 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/giacomo-138-131?variant=48849631117563",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "Sylveon - SWSH211 - NM",
+      "price": "95.00 kr",
+      "url": "https://pokelageret.no/products/sylveon-swsh211?variant=48846458126587",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokelageret",
+      "name": "N's Plan - 163/086 - NM",
+      "price": "59.00 kr",
+      "previous_price": "65.00 kr",
+      "url": "https://pokelageret.no/products/ns-plan-163-086?variant=48846445805819",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "LABOGE",
+      "name": "Charmeleon 012/094 - Phantasmal Flames - NM (ID: 53125426145326)",
+      "price": "8.90 kr",
+      "url": "https://laboge.no/products/charmeleon-012-094-phantasmal-flames-rh?variant=54114756297003",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "LABOGE",
+      "name": "Charmander 011/094 - Phantasmal Flames - NM (ID: 53125426109976)",
+      "price": "8.90 kr",
+      "url": "https://laboge.no/products/charmander-011-094-phantasmal-flames-rh?variant=54114748105003",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokefriends",
+      "name": "Clay Burst Booster Pack (Japansk)",
+      "price": "69.00 kr",
+      "url": "https://pokefriends.no/products/clay-burst-booster-pack-japansk?variant=45155532406893",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokesingles",
+      "name": "Bastiodon 062/084 (NON-HOLO, Build & Battle) - Pitch Black",
+      "price": "10.00 kr",
+      "url": "https://pokesingles.no/products/bastiodon-062084-non-holo-build-battle-pitch-black-928227?variant=54068644806935",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Phantasmal Flames Booster Bundle",
+      "price": "1299.00 kr",
+      "url": "https://pokestore.no/products/pokemon-phantasmal-flames-booster-bundle?variant=51390296719591",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Pikachu V SWSH061 Black Star Promo Jumbo",
+      "price": "20.00 kr",
+      "url": "https://pokestore.no/products/pokemon-pikachu-v-swsh061-black-star-promo-jumbo?variant=50624527663335",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Pokestore",
+      "name": "Pokemon Iron Treads 118/162",
+      "price": "3.00 kr",
+      "url": "https://pokestore.no/products/pokemon-iron-treads-118-162?variant=52431811936487",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Paldea Evolved - 10 Packs of Fishing",
+      "price": "1390.00 kr",
+      "url": "https://retroworld.no/products/pokemon-paldea-evolved-sleeved-pack?variant=51130511753517",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "RetroWorld",
+      "name": "Pokemon - Hidden Fates Tin (Tilfeldig art)",
+      "price": "2499.00 kr",
+      "url": "https://retroworld.no/products/pokemon-hidden-fates-tin-charizard-gx?variant=50380636487981",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T02:20:15+00:00",
+      "store": "Boosterpakker",
+      "name": "MEGA EVOLUTION BOOSTER PAKKE",
+      "price": "109,00 kr",
+      "url": "https://boosterpakker.no/produkt/boosterpakker/mega-evolutions-booster-pakke",
+      "event": "utsolgt"
+    },
+    {
       "detected_at": "2026-08-05T19:40:08+00:00",
       "store": "Mystic Trades",
       "name": "[PRE-ORDER] – Pokémon TCG: MEGA M6a Expansion Pack – 30th Celebration (Japansk Booster Display Box)",
@@ -178871,537 +179367,6 @@
       "name": "Pokemon Koreansk Sylveon Deck",
       "price": "229.00 kr",
       "url": "https://cardcenter.no/products/pokemon-koreansk-sylveon-deck-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Marnies Grimmsnarl Ex Starter Set Koreansk",
-      "price": "449.00 kr",
-      "url": "https://cardcenter.no/products/marnies-grimmsnarl-ex-starter-set-koreansk",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Squirtle",
-      "price": "1999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-squirtle",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Metal Energy Kinesisk Special Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-metal-energy-kinesisk-special-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Dark Energy Kinesisk Special Box",
-      "price": "899.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-dark-type-binder-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Greninja V-Union Special Collection Box",
-      "price": "329.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-greninja-v-union-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Jolteon Coin Set",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-jolteon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Start Deck 100 Battle Collection",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-start-deck-100-battle-collection",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Charizard X Mynt",
-      "price": "59.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-charizard-x-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Klara Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-klara-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Mega Charizard X UPC Playmat",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-mega-charizard-x-upc-playmat",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Natural Wilderness Diorama Figure - Psyduck",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-natural-wilderness-diorama-figure-psyduck",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Lost Abyss Koreansk Boosterpakke",
-      "price": "69.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-lost-abyss-koreansk-boosterpakke",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Mystery Sleeve Box Vol. 2",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-mystery-sleeve-box-vol-2",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk KFC Lunar New Year 2025 Figur - Bulbasaur",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-kfc-lunar-new-year-2025-figur-bulbasaur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Magnetic Coin Set Paldea",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-magnetic-coin-set-paldea",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Trading Card Game Classic Collection Spillbrett (uten kort)",
-      "price": "799.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-trading-card-game-classic-collection-spillbrett",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Sylveon Coin Set",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-sylveon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Leafeon Coin Set",
-      "price": "229.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-leafeon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Espeon Coin Set",
-      "price": "199.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-espeon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Vaporeon Coin Set",
-      "price": "159.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-vaporeon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Flareon Tin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-flareon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Pikachu",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Eevee Tin Set",
-      "price": "329.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-mystery-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Eevee Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-mystery-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon 30th Anniversary Japansk Nøkkelring - Charizard",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-30th-anniversary-japansk-nokkelring-charizard",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Entei Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-entei-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Delibird Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-delibird-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Eiscue Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-eiscue-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Ceruledge",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-ceruledge",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Re-Ment Japanese Style Figur Mystery Box",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-re-ment-japanese-style-figur-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Raichu",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-raichu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Eksklusiv Mid-Autumn Festival Gaveboks",
-      "price": "1299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-eksklusiv-mid-autumn-festival-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Collect 151 First Partner Gaveboks - Charmander",
-      "price": "2399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-collect-151-first-partner-gaveboks-charmander",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Japansk Mega Diancie ex Starter Set",
-      "price": "449.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-japansk-mega-diancie-ex-starter-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Electric Energy Kinesisk Special Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-electric-type-binder-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Marnie's Determination Special Collection Box",
-      "price": "1499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-marnies-determination-special-collection-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Happy Combo Vol. 2 Gift Box",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-happy-combo-vol-2-gift-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Brave Stars Trainer Box",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-brave-stars-trainer-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon TCG Clip On Card Holder Set 151 Journey Kinesisk",
-      "price": "329.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-tcg-clip-on-card-holder-set-151-journey-kinesisk",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Glaceon Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-glaceon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Umbreon Coin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-umbreon-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Crystal Gathering Jolteon Tin Set",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-crystal-gathering-jolteon-tin-set",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Stellar Crystal Jumbo Booster Box",
-      "price": "899.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-stellar-crystal-jumbo-booster-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Espeon & Umbreon Figur",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-espeon-umbreon-figur",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Cyrus Mynt",
-      "price": "19.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-cyrus-mynt",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Bright Fantasy Coin Set",
-      "price": "179.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-bright-fantasy-coin-set",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Ash's Greninja",
-      "price": "249.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-ashs-greninja",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Funism Figur - Mewtwo & Mew",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-funism-figur-mewtwo-mew",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Natural Wilderness Diorama Figure - Eevee",
-      "price": "149.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-natural-wilderness-diorama-figure-eevee",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Pikachu & Friends Figure Mystery Box",
-      "price": "299.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-pikachu-friends-figure-mystery-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Water Energy Special Box",
-      "price": "1699.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-water-energy-kinesisk-special-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Travel Journey Gift Box",
-      "price": "4999.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-travel-journey-gift-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Lovely Pokemon Figur - Pikachu",
-      "price": "129.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-lovely-pokemon-figur-pikachu",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Grass Energy Kinesisk Special Box",
-      "price": "990.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-grass-energy-kinesisk-special-box",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Jirachi",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-jirachi",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Starry Dreams Figur - Snorlax",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-starry-dreams-figur-snorlax",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Dragon Boat Festival 2026 Gaveboks",
-      "price": "499.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-dragon-boat-festival-2026-gaveboks",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Kinesisk Gem Pack Vol. 3 Binder - Gengar",
-      "price": "99.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-kinesisk-gem-pack-vol-3-binder-gengar",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T07:38:34+00:00",
-      "store": "Cardcenter",
-      "name": "Pokemon Dream Painting Water Figure Mystery Box",
-      "price": "399.00 kr",
-      "url": "https://cardcenter.no/products/pokemon-dream-painting-water-figure-mystery-box",
       "product_class": "card",
       "event": "ny"
     }
