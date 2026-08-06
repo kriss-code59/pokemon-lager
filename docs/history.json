@@ -1,6 +1,78 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Pikachu - 049/203 - NM / Reverse Holofoil",
+      "price": "12.00 kr",
+      "previous_price": "11.00 kr",
+      "url": "https://pokelageret.no/products/pikachu-049-203?variant=48887001940219",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Team Magma's Groudon - 9/95 - NM",
+      "price": "25.00 kr",
+      "previous_price": "19.00 kr",
+      "url": "https://pokelageret.no/products/team-magmas-groudon-9-95?variant=48846414643451",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Donphan - 107/123 - NM",
+      "price": "19.00 kr",
+      "previous_price": "15.00 kr",
+      "url": "https://pokelageret.no/products/donphan-107-123?variant=48846290092283",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Galarian Moltres - 093/203 - NM / Holofoil",
+      "price": "6.00 kr",
+      "previous_price": "5.00 kr",
+      "url": "https://pokelageret.no/products/galarian-moltres-093-203?variant=48886991126779",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Kyogre - 003/025 - NM",
+      "price": "5.00 kr",
+      "previous_price": "6.00 kr",
+      "url": "https://pokelageret.no/products/kyogre-003-025?variant=48884989624571",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Hattrem - SV055/SV122 - NM",
+      "price": "49.00 kr",
+      "previous_price": "55.00 kr",
+      "url": "https://pokelageret.no/products/hattrem-sv055-sv122?variant=48848726065403",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Poke Kid - 070/072 - NM",
+      "price": "125.00 kr",
+      "previous_price": "119.00 kr",
+      "url": "https://pokelageret.no/products/poke-kid-070-072?variant=48846443086075",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T04:59:46+00:00",
+      "store": "Pokelageret",
+      "name": "Pincurchin - SV043/SV122 - NM",
+      "price": "29.00 kr",
+      "previous_price": "25.00 kr",
+      "url": "https://pokelageret.no/products/pincurchin-sv043-sv122?variant=48846278754555",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T04:20:02+00:00",
       "store": "Pokelageret",
       "name": "Pikachu - 028/078 - NM / Holofoil",
@@ -179297,78 +179369,6 @@
       "price": "649.00 kr",
       "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-suicune-figur?variant=51555984736487",
       "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock DX Deluxe Entei Figur",
-      "price": "649.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-entei-figur?variant=51555981230311",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Nanoblock DX Deluxe Raikou Figur",
-      "price": "649.00 kr",
-      "url": "https://pokestore.no/products/pokemon-nanoblock-dx-deluxe-raikou-figur?variant=51555980509415",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Rowlet Plush (30cm)",
-      "price": "699.00 kr",
-      "url": "https://pokestore.no/products/pokemon-takara-tomy-pokepeace-rowlet-plush-30cm?variant=51555977822439",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Moko Moko Teddiursa Plush",
-      "price": "399.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-moko-moko-teddiursa-plush?variant=51555976511719",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Sekiguchi Moko Moko Quaxly Plush",
-      "price": "439.00 kr",
-      "url": "https://pokestore.no/products/pokemon-sekiguchi-moko-moko-quaxly-plush?variant=51539724402919",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Kotobukiya ARTFXJ Statue 1/8 Florian & Fuecoco Statue",
-      "price": "1799.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kotobukiya-artfxj-statue-1-8-florian-fuecoco?variant=51539239534823",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Turtwig",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-turtwig?variant=51539027820775",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Funko POP! Fidough",
-      "price": "189.00 kr",
-      "url": "https://pokestore.no/products/pokemon-funko-pop-fidough?variant=51539014648039",
-      "product_class": "accessory",
       "event": "ny"
     }
   ]
