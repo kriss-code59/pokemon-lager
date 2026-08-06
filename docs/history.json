@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T07:19:50+00:00",
+      "store": "Pokesingles",
+      "name": "Bastiodon 62 (Reverse Holo) - Pitch Black",
+      "price": "12.00 kr",
+      "url": "https://pokesingles.no/products/bastiodon-62-reverse-holo-pitch-black?variant=54614441853207",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T07:19:50+00:00",
+      "store": "Pokesingles",
+      "name": "Chi-Yu 59 (Reverse Holo) - Pitch Black",
+      "price": "12.00 kr",
+      "url": "https://pokesingles.no/products/chi-yu-59-reverse-holo-pitch-black?variant=54614348955927",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T07:19:50+00:00",
+      "store": "Boosterpakker",
+      "name": "PRISMATIC EVOLUTION SUPER PREMIUM COLLECTION",
+      "price": "4 390,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/prismatic-spc",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T07:19:50+00:00",
+      "store": "Boosterpakker",
+      "name": "SNORLAX EX & BLISSEY EX SPECIAL COLLECTION",
+      "price": "1 149,00 kr",
+      "url": "https://boosterpakker.no/produkt/collection-bokser/snoirlax-blissey-kingdra-box",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T07:19:50+00:00",
+      "store": "Pokelageret",
+      "name": "Charmeleon - RC4/RC32 - LP",
+      "price": "175.00 kr",
+      "previous_price": "185.00 kr",
+      "url": "https://pokelageret.no/products/charmeleon-rc4-rc32?variant=48848872964347",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T07:19:50+00:00",
+      "store": "Pokelageret",
+      "name": "Charmander - RC3/RC32 - LP",
+      "price": "205.00 kr",
+      "previous_price": "215.00 kr",
+      "url": "https://pokelageret.no/products/charmander-rc3-rc32?variant=48848870244603",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T06:59:49+00:00",
       "store": "Pokesingles",
       "name": "Cranidos 44 (Reverse Holo) - Pitch Black",
@@ -179310,60 +179364,6 @@
       "name": "Pokemon Center Japan Squirtle Plush",
       "price": "279.00 kr",
       "url": "https://pokestore.no/products/pokemon-center-japan-squirtle-plush?variant=51612638937319",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Larvesta Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-larvesta-plush?variant=51612638707943",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Goomy Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-goomy-plush?variant=51612638511335",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Scrafty Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-scrafty-plush?variant=51612635889895",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Bulbasaur Plush",
-      "price": "279.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-bulbasaur-plush?variant=51612635726055",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Venusaur Plush",
-      "price": "329.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-venusaur-plush?variant=51612635463911",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Center Japan Quagsire Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-center-japan-quagsire-plush?variant=51612635398375",
       "product_class": "accessory",
       "event": "ny"
     }
