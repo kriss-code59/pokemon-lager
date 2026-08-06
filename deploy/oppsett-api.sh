@@ -17,7 +17,7 @@ LOGG() { echo -e "\n=== $* ==="; }
 
 if [[ $EUID -ne 0 ]]; then echo "Ma kjores som root"; exit 1; fi
 
-LOGG "1/7 Repo"
+LOGG "1/8 Repo"
 if [[ ! -d "$REPO/.git" ]]; then
   sudo -u "$BRUKER" git clone https://github.com/kriss-code59/pokemon-lager.git "$REPO"
 else
@@ -28,12 +28,12 @@ else
   sudo -u "$BRUKER" git -C "$REPO" pull --ff-only
 fi
 
-LOGG "2/7 Python-miljo"
+LOGG "2/8 Python-miljo"
 [[ -d "$VENV" ]] || sudo -u "$BRUKER" python3 -m venv "$VENV"
 sudo -u "$BRUKER" "$VENV/bin/pip" install -q --upgrade pip
 sudo -u "$BRUKER" "$VENV/bin/pip" install -q -r "$REPO/api/requirements.txt"
 
-LOGG "3/7 Database"
+LOGG "3/8 Database"
 # Peer-autentisering over unix-socket: ingen passord som kan lekke, og
 # databasen lytter aldri pa nettet.
 sudo -u postgres psql -tAc "SELECT 1 FROM pg_roles WHERE rolname='$BRUKER'" \
@@ -60,8 +60,11 @@ sudo -u postgres psql -q -d "$DB" -Atc "
 # ON_ERROR_STOP: et skjema som feiler halvveis skal stoppe oppsettet, ikke
 # etterlate en database som ser ferdig ut.
 sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/001_skjema.sql"
+# 002 avhenger av tabellene i 001 (users, events, push_endpoints) og maa
+# derfor kjores etter. Begge er idempotente.
+sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/002_varsler.sql"
 
-LOGG "4/7 Miljofil"
+LOGG "4/8 Miljofil"
 if [[ ! -f /etc/pokepuls.env ]]; then
   cat > /etc/pokepuls.env <<EOF
 # Unix-socket, ikke TCP: databasen skal aldri vaere naabar utenfra.
@@ -72,7 +75,25 @@ fi
 chmod 640 /etc/pokepuls.env
 chown root:"$BRUKER" /etc/pokepuls.env
 
-LOGG "5/7 systemd"
+LOGG "5/8 VAPID-nokler for Web Push"
+# Noklene lages EN gang og skal aldri byttes: bytter du dem, blir hvert
+# eneste eksisterende push-abonnement ugyldig, og alle brukere maa trykke
+# "Sla pa varsler" pa nytt uten a faa vite hvorfor varslene sluttet.
+# Derfor: bare hvis de ikke finnes allerede.
+if ! grep -q "^POKEPULS_VAPID_PRIVATE=" /etc/pokepuls.env; then
+  echo "Lager nye VAPID-nokler."
+  ( cd "$REPO" && sudo -u "$BRUKER" "$VENV/bin/python" -m varsling.vapid ) \
+    >> /etc/pokepuls.env
+  echo "POKEPULS_VAPID_SUBJECT=mailto:norgekriss@gmail.com" >> /etc/pokepuls.env
+  chmod 640 /etc/pokepuls.env
+  chown root:"$BRUKER" /etc/pokepuls.env
+else
+  echo "VAPID-nokler finnes allerede. Rorer dem ikke."
+fi
+grep -q "^POKEPULS_VAPID_PUBLIC=" /etc/pokepuls.env \
+  || { echo "FEIL: klarte ikke lage VAPID-nokler"; exit 1; }
+
+LOGG "6/8 systemd"
 install -m 644 "$REPO/deploy/pokepuls-api.service" /etc/systemd/system/pokepuls-api.service
 systemctl daemon-reload
 systemctl enable pokepuls-api
@@ -83,7 +104,7 @@ systemctl restart pokepuls-api
 sleep 2
 systemctl is-active --quiet pokepuls-api || { journalctl -u pokepuls-api -n 40 --no-pager; exit 1; }
 
-LOGG "6/7 nginx"
+LOGG "7/8 nginx"
 # certbot skriver TLS-blokka rett inn i denne filen. Kopierer vi repoets
 # versjon over den, forsvinner sertifikatet og hele siden blir utilgjengelig
 # pa https -- det skjedde ved forste deploy etter at TLS var satt opp.
@@ -100,23 +121,36 @@ chmod 755 "$HJEM"
 nginx -t
 systemctl reload nginx
 
-LOGG "7/7 Cron for skanning og ingest"
-chmod 755 "$REPO/deploy/pokepuls-cron-scrape.sh"
+LOGG "8/8 Cron for skanning, ingest og varsling"
+chmod 755 "$REPO"/deploy/*.sh
 cat > /etc/cron.d/pokepuls <<'EOF'
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin
 # Skanning + ingest hvert 20. minutt. timeout og flock -n er ikke pynt:
 # uten dem blokkerte en hengende kjoring 132 pafolgende i august 2026.
-*/20 * * * * pokepuls timeout -k 60 2400 flock -n /tmp/pokepuls-scrape.lock /home/pokepuls/pokemon-lager/deploy/pokepuls-cron-scrape.sh >> /home/pokepuls/scrape.log 2>&1
+#
+# /bin/bash foran skriptet er heller ikke pynt. Filer lastet opp gjennom
+# GitHubs nettgrensesnitt lagres som mode 100644, og forste `git checkout`
+# etter et `chmod 755` setter dem tilbake. Cron ga da "flock: Permission
+# denied" og scraperen sto i 28 timer (2026-08-05). Kaller vi tolken
+# eksplisitt, betyr kjorebiten ingenting.
+*/20 * * * * pokepuls timeout -k 60 2400 flock -n /tmp/pokepuls-scrape.lock /bin/bash /home/pokepuls/pokemon-lager/deploy/pokepuls-cron-scrape.sh >> /home/pokepuls/scrape.log 2>&1
 # Dodmannsknapp hvert 15. minutt. EGEN jobb uten delt las, slik at den
 # fortsatt lever nar scraperen henger. Det er hele poenget med den.
-*/15 * * * * pokepuls /home/pokepuls/venv/bin/python /home/pokepuls/pokemon-lager/overvak/dodmannsknapp.py >> /home/pokepuls/dodmannsknapp.log 2>&1
+*/15 * * * * pokepuls cd /home/pokepuls/pokemon-lager && set -a && . /etc/pokepuls.env && set +a && /home/pokepuls/venv/bin/python overvak/dodmannsknapp.py >> /home/pokepuls/dodmannsknapp.log 2>&1
+# Varselsender hvert 5. minutt. Egen jobb, ikke en del av ingest: en feil i
+# varslingen skal aldri kunne rulle tilbake en vellykket ingest. Den er
+# billig nar det ikke er noe a sende (én sporring mot et vannmerke), og den
+# tar igjen automatisk hvis en runde skulle feile.
+*/5 * * * * pokepuls cd /home/pokepuls/pokemon-lager && set -a && . /etc/pokepuls.env && set +a && /home/pokepuls/venv/bin/python overvak/varsler.py --stille >> /home/pokepuls/varsler.log 2>&1
 EOF
 chmod 644 /etc/cron.d/pokepuls
 
 echo
 echo "Ferdig. Sjekk:"
-echo "  curl -s localhost/api/health | jq"
+echo "  curl -s https://pokepuls.no/api/health | jq"
+echo "  curl -sI https://pokepuls.no/sitemap.xml | head -1"
+echo "  sudo -u pokepuls bash -c 'set -a; . /etc/pokepuls.env; set +a; cd $REPO && $VENV/bin/python overvak/varsler.py --torrkjor'"
 echo "  systemctl status pokepuls-api --no-pager"
 echo
 echo "TLS nar DNS peker hit:"
