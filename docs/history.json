@@ -1,6 +1,48 @@
 {
   "events": [
     {
+      "detected_at": "2026-08-06T10:00:15+00:00",
+      "store": "Pokelageret",
+      "name": "Victini Illustration Collection",
+      "price": "799.00 kr",
+      "url": "https://pokelageret.no/products/victini-illustration-collection?variant=47515394343163",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T10:00:15+00:00",
+      "store": "Pokelageret",
+      "name": "Dragapult ex - 130/167 - NM",
+      "price": "25.00 kr",
+      "url": "https://pokelageret.no/products/dragapult-ex-130-167?variant=48971007033595",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T10:00:15+00:00",
+      "store": "LABOGE",
+      "name": "Wiglett 052/182 - Paradox Rift - NM (ID: 53505769309646)",
+      "price": "6.90 kr",
+      "url": "https://laboge.no/products/wiglett-052-182-paradox-rift?variant=54147626008875",
+      "event": "utsolgt"
+    },
+    {
+      "detected_at": "2026-08-06T10:00:15+00:00",
+      "store": "Boosterpakker",
+      "name": "GEM PACK VOL.5 BOOSTER BOKS",
+      "price": "509,00 kr",
+      "previous_price": "519,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/gem-pack-vol-5-booster-boks-preorder",
+      "event": "prisendring"
+    },
+    {
+      "detected_at": "2026-08-06T10:00:15+00:00",
+      "store": "Boosterpakker",
+      "name": "GEM PACK VOL. 4 BOOSTER BOKS",
+      "price": "409,00 kr",
+      "previous_price": "419,00 kr",
+      "url": "https://boosterpakker.no/produkt/booster-bokser/gem-pack-vol-4-booster-boks",
+      "event": "prisendring"
+    },
+    {
       "detected_at": "2026-08-06T09:20:37+00:00",
       "store": "Pokestore",
       "name": "Pokemon Center Japan Reshiram & Zekrom Sleeves (64 stk)",
@@ -179319,51 +179361,6 @@
       "price": "299.00 kr",
       "url": "https://pokestore.no/products/pokemon-all-star-collection-cherrim-plush?variant=51989703852263",
       "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Sprigatito Plush",
-      "price": "359.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-sprigatito-plush?variant=51989703557351",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy Pokepeace Pikachu Plush (Goodnight Ver.)",
-      "price": "579.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepeace-pikachu-plush?variant=51989703491815",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon All Star Collection Omanyte Plush",
-      "price": "299.00 kr",
-      "url": "https://pokestore.no/products/pokemon-all-star-collection-omanyte-plush?variant=51989703459047",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Takara Tomy I Choose You! Mega Charizard Y Plush",
-      "price": "599.00 kr",
-      "url": "https://pokestore.no/products/pokemon-kutakuta-tatta-mega-charizard-plush?variant=51989703393511",
-      "product_class": "accessory",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-07-21T09:38:35+00:00",
-      "store": "Pokestore",
-      "name": "Pokemon Pokepiece Ball Chain Mascot - Mimikyu",
-      "price": "249.00 kr",
-      "url": "https://pokestore.no/products/pokemon-pokepiece-ball-chain-mascot-mimikyu?variant=51989703295207",
-      "product_class": "card",
       "event": "ny"
     }
   ]
