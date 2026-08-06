@@ -76,6 +76,10 @@ function svar(url, valg, innlogget) {
   else if (sti.startsWith("/history")) data = HISTORIKK;
   else if (sti.startsWith("/unmatched")) data = { antall: 0, varer: [] };
   else if (sti.startsWith("/product/")) data = PRODUKT;
+  else if (sti.startsWith("/push/nokkel")) data = { paa: false, public_key: null };
+  else if (sti.startsWith("/push/status")) data = {
+    enheter: [], antall: 0, stille_natt: true, maks_pris_ore: null,
+    sendt_7d: 0, vapid_paa: false };
   else if (sti.startsWith("/auth/me")) data = innlogget
     ? { innlogget: true, email: "kris@example.no", role: "free" } : { innlogget: false };
   else if (sti.startsWith("/watchlist/snapshot")) data = { produkter: [SNAPSHOT.produkter[0]] };
@@ -100,6 +104,26 @@ async function app(innlogget = false) {
   return w;
 }
 
+/* Som app(), men med et eget snapshot. Brukes av sorteringstestene, der
+ * poenget nettopp er hvilke data som kommer inn. */
+async function appMed(snapshot, innlogget = false) {
+  const dom = new JSDOM(les("index.html"), {
+    url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true,
+  });
+  const w = dom.window;
+  w.fetch = async (url, valg) => {
+    if (String(url).includes("/snapshot") && !String(url).includes("watchlist")) {
+      const kropp = JSON.stringify(snapshot);
+      return { ok: true, status: 200, text: async () => kropp,
+               json: async () => snapshot };
+    }
+    return svar(url, valg, innlogget);
+  };
+  w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 40));
+  return w;
+}
+
 const $ = (w, s) => w.document.querySelector(s);
 const alle = (w, s) => [...w.document.querySelectorAll(s)];
 
@@ -107,7 +131,7 @@ test("viser bare produkter pa lager som standard", async () => {
   const w = await app();
   const kort = alle(w, "#liste .kort");
   assert.equal(kort.length, 2, "ETB-en uten lager skal vaere filtrert bort");
-  assert.match($(w, "#teller").textContent, /2 produkter pa lager/);
+  assert.match($(w, "#teller").textContent, /2 produkter på lager/);
 });
 
 test("priser vises i kroner, ikke ore", async () => {
@@ -182,7 +206,7 @@ test("apner produktark med tilbud sortert og lenker som gar ut", async () => {
   const lenker = alle(w, "#ark .tilbud");
   assert.equal(lenker.length, 2);
   assert.equal(lenker[0].getAttribute("rel"), "noopener nofollow");
-  assert.match($(w, "#ark").textContent, /Pa lager/);
+  assert.match($(w, "#ark").textContent, /På lager/);
   assert.match($(w, "#ark").textContent, /Cardcenter/);
 });
 
@@ -192,7 +216,7 @@ test("hendelsesfanen viser gammel og ny pris ved prisendring", async () => {
     .dispatchEvent(new w.Event("click", { bubbles: true }));
   await new Promise((r) => setTimeout(r, 20));
   const tekst = $(w, "#hendelser").textContent;
-  assert.match(tekst, /pa lager igjen/);
+  assert.match(tekst, /på lager igjen/);
   assert.match(tekst, /1\s?899 kr/, "gammel pris skal vises");
   assert.match(tekst, /1\s?699 kr/, "ny pris skal vises");
   assert.equal(alle(w, "#hendelser .gjennomstreket").length, 1);
@@ -311,8 +335,81 @@ test("innlogget bruker kan folge og slutte a folge fra produktarket", async () =
   alle(w, "#liste .kort")[1].dispatchEvent(new w.Event("click", { bubbles: true }));
   await new Promise((r) => setTimeout(r, 25));
   const knapp = $(w, "#folg-knapp");
-  assert.match(knapp.textContent, /Folg denne/);
+  assert.match(knapp.textContent, /Følg denne/);
   knapp.dispatchEvent(new w.Event("click", { bubbles: true }));
   await new Promise((r) => setTimeout(r, 25));
-  assert.match($(w, "#folg-knapp").textContent, /Folger/);
+  assert.match($(w, "#folg-knapp").textContent, /Følger/);
+});
+
+
+/* ------------------------------------------------------ nytt i v6 */
+
+test("nyeste aktivitet havner overst, ikke alfabetisk", async () => {
+  // Regresjon mot den gamle sorteringen: «Ascended Heroes» laa alltid
+  // overst uansett hva som hadde skjedd, og det du apnet appen for a se
+  // -- hva som er nytt -- laa langt nede.
+  const na = new Date().toISOString();
+  const data = { ...SNAPSHOT, produkter: [
+    { id: "aaa:booster-box:en", set_id: "aaa", type_id: "booster-box", region: "en",
+      set_label: "Aaa Forst Alfabetisk", type_label: "Booster Box",
+      tilbud: [["butikk-a", 100000, 1]], min_pris: 100000, antall_pa_lager: 1,
+      sist_hendelse: null },
+    { id: "zzz:booster-box:en", set_id: "zzz", type_id: "booster-box", region: "en",
+      set_label: "Zzz Sist Alfabetisk", type_label: "Booster Box",
+      tilbud: [["butikk-b", 200000, 1]], min_pris: 200000, antall_pa_lager: 1,
+      sist_hendelse: na },
+  ] };
+  const w = await appMed(data);
+  const titler = alle(w, ".sett-tittel").map((e) => e.textContent.trim());
+  assert.deepEqual(titler, ["Zzz Sist Alfabetisk", "Aaa Forst Alfabetisk"]);
+});
+
+test("sett uten aktivitet beholder rekkefolgen fra API-et", async () => {
+  const w = await app();
+  const titler = alle(w, ".sett-tittel").map((e) => e.textContent.trim());
+  assert.deepEqual(titler, ["Pitch Black", "Mega Dream Japansk"]);
+});
+
+test("kortet viser hvilken butikk som er billigst, ikke antall tilbud", async () => {
+  const w = await app();
+  const tekst = $(w, "#liste").textContent;
+  assert.match(tekst, /billigst hos Cardcenter/);
+  assert.doesNotMatch(tekst, /2 tilbud/);
+});
+
+test("fersk hendelse gir tidsmerke pa kortet", async () => {
+  const data = { ...SNAPSHOT, produkter: [
+    { ...SNAPSHOT.produkter[0],
+      sist_hendelse: new Date(Date.now() - 12 * 60000).toISOString() },
+  ] };
+  const w = await appMed(data);
+  assert.equal(alle(w, ".nylig").length, 1);
+  assert.match($(w, ".nylig").textContent, /12 min siden/);
+});
+
+test("gammel hendelse gir IKKE tidsmerke", async () => {
+  const data = { ...SNAPSHOT, produkter: [
+    { ...SNAPSHOT.produkter[0],
+      sist_hendelse: new Date(Date.now() - 40 * 3600 * 1000).toISOString() },
+  ] };
+  const w = await appMed(data);
+  assert.equal(alle(w, ".nylig").length, 0);
+});
+
+test("regionfilteret heter Engelsk, ikke Vestlig", async () => {
+  const w = await app();
+  const chip = $(w, '[data-filter="region"][data-verdi="en"]');
+  assert.equal(chip.textContent.trim(), "Engelsk");
+  assert.doesNotMatch(w.document.body.textContent, /Vestlig/);
+});
+
+test("kontosiden sier fra nar varsler ikke er slatt pa pa serveren", async () => {
+  // vapid_paa: false i testdobbelen. Da skal det sta hvorfor, ikke en
+  // knapp som ikke kan virke.
+  const w = await app(true);
+  $(w, "#konto-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  const tekst = $(w, "#ark-innhold").textContent;
+  assert.match(tekst, /Varsler/);
+  assert.equal($(w, "#varsel-knapp"), null, "ingen knapp uten VAPID-nokler");
 });
