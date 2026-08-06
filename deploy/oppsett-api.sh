@@ -24,7 +24,12 @@ else
   # Scraperen skriver docs/data.json lokalt, mens EC2 fortsatt committer sin
   # egen versjon til git. Da stopper --ff-only pa en lokal endring. Sannheten
   # ligger uansett i Postgres, sa den lokale filen kastes.
-  sudo -u "$BRUKER" git -C "$REPO" checkout -- docs/ 2>/dev/null || true
+  # Uten dette stopper hver eneste pull etter forste deploy: skriptet
+  # chmod-er deploy/*.sh, git ser modusendringen som en lokal endring, og
+  # --ff-only nekter. Kjorebiten trengs ikke lenger (cron kaller /bin/bash),
+  # men chmod-en er billig forsikring -- sa vi ber git om a ignorere modus.
+  sudo -u "$BRUKER" git -C "$REPO" config core.fileMode false
+  sudo -u "$BRUKER" git -C "$REPO" checkout -- . 2>/dev/null || true
   sudo -u "$BRUKER" git -C "$REPO" pull --ff-only
 fi
 
@@ -108,9 +113,27 @@ LOGG "7/8 nginx"
 # certbot skriver TLS-blokka rett inn i denne filen. Kopierer vi repoets
 # versjon over den, forsvinner sertifikatet og hele siden blir utilgjengelig
 # pa https -- det skjedde ved forste deploy etter at TLS var satt opp.
+# Snippeten inneholder alt som endrer seg (produktsider, sidekart, admin).
+# Den installeres ALLTID -- ogsa nar certbot eier hovedkonfigen.
+install -d -m 755 /etc/nginx/snippets
+install -m 644 "$REPO/deploy/nginx-sider.conf" /etc/nginx/snippets/pokepuls-sider.conf
+
 if grep -q ssl_certificate /etc/nginx/sites-available/pokepuls 2>/dev/null; then
-  echo "TLS-konfig finnes; lar den sta. Kjor certbot pa nytt hvis du har"
-  echo "endret nginx-pokepuls.conf:  certbot --nginx -d pokepuls.no -d www.pokepuls.no --reinstall"
+  echo "TLS-konfig finnes; rorer den ikke, bortsett fra include-linja."
+  # Legg inn include-linja hvis den mangler. Uten dette blir nye ruter
+  # liggende i repoet uten a virke: /robots.txt og /p/ falt gjennom til
+  # `location /` og svarte med app-skallet i stedet.
+  if ! grep -q "pokepuls-sider.conf" /etc/nginx/sites-available/pokepuls; then
+    echo "Setter inn include foran location / ..."
+    # Foran FORSTE `location / {`. Rekkefolgen er ikke likegyldig: en
+    # prefiks-location som star etter den generelle, taper aldri -- men
+    # `location /` med try_files fanger alt som ikke matcher noe mer
+    # spesifikt, og da ma vare ruter vaere definert.
+    perl -0pi -e "s{(\n\s*location / \{)}{\n    include snippets/pokepuls-sider.conf;\n\$1}" \
+      /etc/nginx/sites-available/pokepuls
+    grep -q "pokepuls-sider.conf" /etc/nginx/sites-available/pokepuls \
+      || { echo "FEIL: klarte ikke sette inn include-linja. Gjor det manuelt."; exit 1; }
+  fi
 else
   install -m 644 "$REPO/deploy/nginx-pokepuls.conf" /etc/nginx/sites-available/pokepuls
 fi
