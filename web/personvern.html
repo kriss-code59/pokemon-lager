@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<title>Personvern – Pokepuls</title>
+<meta name="description" content="Hva Pokepuls lagrer om deg, hvorfor, og hvordan du sletter det.">
+<link rel="canonical" href="https://pokepuls.no/personvern.html">
+<link rel="stylesheet" href="/style.css?v=7">
+</head>
+<body class="side">
+
+<header class="side-topp">
+  <a class="side-hjem" href="/"><span class="merke-poke">poke</span><span class="merke-puls">puls</span></a>
+</header>
+
+<main class="side-innhold">
+  <h1>Personvern</h1>
+  <p class="side-under">Sist oppdatert 6. august 2026</p>
+
+  <p>Pokepuls drives av én privatperson, Kristian Bø. Nettstedet sammenligner
+  priser og lagerstatus på forseglede Pokémon-produkter hos norske butikker.
+  Under står nøyaktig hva som lagres, hvorfor, og hvordan du blir kvitt det.</p>
+
+  <h2>Du trenger ikke konto</h2>
+  <p>Hele katalogen, alle priser og all historikk er åpen uten innlogging. Da
+  lagres ingenting om deg utover det som står under «Logger».</p>
+
+  <h2>Har du konto, lagres dette</h2>
+  <ul class="side-liste-tekst">
+    <li><strong>E-postadressen din.</strong> Brukes til å logge inn og til å
+      sende deg nytt passord. Den selges ikke, deles ikke, og brukes ikke til
+      nyhetsbrev eller reklame.</li>
+    <li><strong>Passordet ditt — men aldri i klartekst.</strong> Bare en
+      argon2id-hash. Verken Kristian eller noen med tilgang til databasen kan
+      lese passordet ditt.</li>
+    <li><strong>Hvilke produkter du følger.</strong> Det er dette varslene
+      bygger på.</li>
+    <li><strong>Push-abonnementer.</strong> Slår du på varsler, lagres en
+      adresse fra nettleseren din, to krypteringsnøkler, og hva slags
+      nettleser det er. Adressen peker på nettleseren, ikke på deg — vi kan
+      sende et varsel dit, men ikke se noe annet.</li>
+    <li><strong>Når du sist logget inn</strong>, og hvilke varsler som er
+      sendt til deg. Uten det siste ville du fått samme varsel om igjen.</li>
+    <li><strong>Tilbakemeldinger du skriver</strong> i «Si fra», sammen med
+      e-postadressen din, slik at det går an å svare deg.</li>
+  </ul>
+
+  <h2>Logger</h2>
+  <p>Webserveren skriver vanlige tilgangslogger med IP-adresse, tidspunkt og
+  hvilken side som ble hentet. De brukes til feilsøking og til å stoppe
+  misbruk, og roteres bort av seg selv. Det er ingen Google Analytics, ingen
+  sporingspiksler, ingen annonsenettverk og ingen tredjeparts informasjons-
+  kapsler på siden.</p>
+
+  <h2>Informasjonskapsler</h2>
+  <p>Én, og bare hvis du logger inn: <code>pokepuls_sesjon</code>. Den holder
+  deg innlogget i 90 dager og inneholder ikke annet enn et tilfeldig tall.
+  Den er <code>HttpOnly</code> og <code>SameSite=Lax</code>, som betyr at den
+  ikke kan leses av javascript og ikke sendes til andre nettsteder.</p>
+
+  <h2>Hvem andre ser noe</h2>
+  <ul class="side-liste-tekst">
+    <li><strong>Hetzner</strong> (Tyskland) — serveren står der.</li>
+    <li><strong>Resend</strong> — sender e-postene om passord og bekreftelse.
+      De ser adressen din og innholdet i de e-postene.</li>
+    <li><strong>Apple, Google eller Mozilla</strong> — avhengig av nettleseren
+      din, går push-varslene gjennom deres tjeneste. Innholdet er kryptert
+      hele veien; de kan levere varselet, men ikke lese det.</li>
+    <li><strong>Butikkene</strong> — når du klikker deg videre til en butikk,
+      er det et helt vanlig besøk hos dem, og deres regler gjelder. Pokepuls
+      sender ikke noe om deg dit.</li>
+  </ul>
+
+  <h2>Slik sletter du alt</h2>
+  <p>Logg inn, trykk på kontoikonet øverst til høyre, og velg
+  <strong>Slett kontoen min</strong>. Det sletter e-postadressen,
+  følgelisten, varselinnstillingene og alle push-abonnementer med én gang, og
+  det finnes ingen kopi å hente dem tilbake fra. Tilbakemeldinger du har
+  skrevet blir liggende, men uten kobling til deg.</p>
+  <p>Du kan også skrive til
+  <a href="mailto:norgekriss@gmail.com">norgekriss@gmail.com</a> og be om
+  innsyn, retting eller sletting.</p>
+
+  <h2>Om prisene</h2>
+  <p>Prisene hentes automatisk fra butikkenes egne, åpne nettsider, og kan
+  være opptil 20 minutter gamle — eller feil, hvis en butikk har lagt dem ut
+  feil. Sjekk alltid prisen hos butikken før du kjøper. Pokepuls selger
+  ingenting og er ikke part i noe kjøp.</p>
+
+  <p class="hjelp">Pokémon og Pokémon-navn er varemerker som tilhører
+  Nintendo, Creatures Inc. og GAME FREAK inc. Pokepuls er ikke tilknyttet
+  dem, og heller ikke butikkene som listes.</p>
+</main>
+
+<footer class="side-fot">
+  <p><a href="/">Tilbake til Pokepuls</a></p>
+</footer>
+</body>
+</html>

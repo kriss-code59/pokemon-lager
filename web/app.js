@@ -410,7 +410,58 @@ function skjemaHtml(modus) {
     "</form>" +
     '<button class="lenkeknapp" id="bytt-modus" type="button" data-modus="' +
       (erNy ? "logg-inn" : "registrer") + '">' +
-      (erNy ? "Har du konto? Logg inn" : "Ny her? Lag konto") + "</button>";
+      (erNy ? "Har du konto? Logg inn" : "Ny her? Lag konto") + "</button>" +
+    (erNy ? '<p class="hjelp liten">Ved å lage konto godtar du at vi lagrer ' +
+            'e-postadressen din. <a href="/personvern.html">Slik behandler vi den.</a></p>'
+          : '<button class="lenkeknapp" id="glemt-lenke" type="button">Glemt passord?</button>');
+}
+
+/* Glemt passord.
+ *
+ * Svaret er alltid det samme, uansett om adressen finnes -- se
+ * /api/auth/glemt. Teksten her ma derfor ogsa vaere noytral: sier UI-et
+ * «sjekk innboksen», mens serveren ikke sendte noe, er det ikke en lognn --
+ * det er den eneste maaten a la vaere a rope ut hvem som har konto her. */
+function glemtHtml() {
+  return "<h2>Glemt passord</h2>" +
+    '<p class="hjelp">Skriv e-posten din, så sender vi en lenke du kan lage ' +
+    "nytt passord med. Lenken varer i én time.</p>" +
+    '<form id="glemt-skjema" class="skjema" novalidate>' +
+      '<label>E-post<input id="g-epost" type="email" autocomplete="email" required></label>' +
+      '<p class="feil" id="g-feil" hidden></p>' +
+      '<p class="hjelp" id="g-ok" hidden></p>' +
+      '<button class="hovedknapp" type="submit">Send lenke</button>' +
+    "</form>" +
+    '<button class="lenkeknapp" id="tilbake-innlogging" type="button">Tilbake til innlogging</button>';
+}
+
+function koblGlemt() {
+  const skjema = $("glemt-skjema");
+  if (!skjema) return;
+  skjema.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const knapp = skjema.querySelector("button[type=submit]");
+    const feil = $("g-feil");
+    const ok = $("g-ok");
+    feil.hidden = true;
+    knapp.disabled = true;
+    try {
+      const d = await hent("/auth/glemt", { method: "POST",
+        body: JSON.stringify({ email: $("g-epost").value.trim() }) });
+      ok.textContent = d.melding;
+      ok.hidden = false;
+      skjema.querySelector("label").hidden = true;
+      knapp.hidden = true;
+    } catch (err) {
+      feil.textContent = err.message;
+      feil.hidden = false;
+      knapp.disabled = false;
+    }
+  });
+  $("tilbake-innlogging").addEventListener("click", () => {
+    visArk(skjemaHtml("logg-inn"));
+    koblSkjema();
+  });
 }
 
 function koblSkjema() {
@@ -443,6 +494,8 @@ function koblSkjema() {
     visArk(skjemaHtml(e.target.dataset.modus));
     koblSkjema();
   });
+  const glemt = $("glemt-lenke");
+  if (glemt) glemt.addEventListener("click", () => { visArk(glemtHtml()); koblGlemt(); });
 }
 
 /* --------------------------------------------------------- web push */
@@ -600,16 +653,108 @@ function koblVarselKnapper() {
   });
 }
 
+/* ------------------------------------------------------------ feedback */
+
+/* Hvorfor dette er verdt plassen: den eneste maaten aa vite hvorfor folk
+ * IKKE bruker noe, er at de sier det. En e-postadresse i bunnteksten faar
+ * omtrent ingen svar -- den krever at du bytter app, formulerer en hel
+ * e-post og vet hva du skal skrive i emnefeltet. Et felt der du allerede
+ * staar faar svar.
+ *
+ * Kun for innloggede: da vet vi alltid hvem som sa det og kan svare. */
+const FEEDBACK_SLAG = [
+  ["feil", "Noe er feil"],
+  ["onske", "Ønske"],
+  ["butikk", "Butikk mangler"],
+  ["annet", "Annet"],
+];
+
+function feedbackHtml() {
+  return '<div class="varselboks"><h3>Si fra</h3>' +
+    '<p class="hjelp">Mangler en butikk? Er en pris feil? Savner du noe? ' +
+    "Skriv det her — det går rett til Kristian.</p>" +
+    '<form id="fb-skjema" class="skjema">' +
+      '<div class="chips chips-under" id="fb-slag">' +
+        FEEDBACK_SLAG.map(([v, t], i) =>
+          '<button type="button" class="chip' + (i === 0 ? " pa" : "") +
+          '" data-slag="' + v + '">' + t + "</button>").join("") +
+      "</div>" +
+      '<label><textarea id="fb-tekst" rows="4" maxlength="4000" required ' +
+        'placeholder="Skriv her…"></textarea></label>' +
+      '<p class="feil" id="fb-feil" hidden></p>' +
+      '<button class="hovedknapp" type="submit">Send</button>' +
+    "</form></div>";
+}
+
+function koblFeedback() {
+  const skjema = $("fb-skjema");
+  if (!skjema) return;
+  let valgt = "feil";
+  $("fb-slag").addEventListener("click", (e) => {
+    const c = e.target.closest(".chip");
+    if (!c) return;
+    valgt = c.dataset.slag;
+    for (const x of $("fb-slag").children) x.classList.toggle("pa", x === c);
+  });
+  skjema.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const knapp = skjema.querySelector("button[type=submit]");
+    const feil = $("fb-feil");
+    feil.hidden = true;
+    knapp.disabled = true;
+    try {
+      await hent("/feedback", { method: "POST", body: JSON.stringify({
+        tekst: $("fb-tekst").value.trim(), slag: valgt, side: state.fane }) });
+      skjema.innerHTML = '<p class="hjelp">Takk — den er mottatt.</p>';
+    } catch (err) {
+      feil.textContent = err.message;
+      feil.hidden = false;
+      knapp.disabled = false;
+    }
+  });
+}
+
 async function visKontoSide() {
+  const ubekreftet = state.bruker.epost_bekreftet === false;
   visArk('<h2>Konto</h2>' +
     '<p class="hjelp">Innlogget som <strong>' + esc(state.bruker.email) + "</strong>" +
     (state.bruker.role !== "free" ? " · " + esc(state.bruker.role) : "") + "</p>" +
     '<p class="hjelp liten">Du følger ' + state.folger.size + " produkt" +
       (state.folger.size === 1 ? "" : "er") + ".</p>" +
+    // Ubekreftet e-post er ikke et kosmetisk problem: uten den kan du ikke
+    // faa nytt passord, og da er kontoen tapt hvis du glemmer det.
+    (ubekreftet
+      ? '<div class="varselboks"><h3>Bekreft e-posten din</h3>' +
+        '<p class="hjelp">Uten en bekreftet adresse kan du ikke få nytt ' +
+        "passord hvis du glemmer det.</p>" +
+        '<button class="hovedknapp" id="send-verifisering" type="button">' +
+        "Send bekreftelseslenke</button>" +
+        '<p class="feil" id="ver-feil" hidden></p></div>'
+      : "") +
     '<div id="varsel-seksjon"><p class="hjelp liten">Sjekker varsler…</p></div>' +
+    feedbackHtml() +
     (state.bruker.role === "admin"
       ? '<a class="lenkeknapp" href="/admin.html">Åpne admin</a>' : "") +
-    '<button class="hovedknapp" id="logg-ut" type="button">Logg ut</button>');
+    '<button class="hovedknapp" id="logg-ut" type="button">Logg ut</button>' +
+    '<p class="hjelp liten" style="margin-top:18px">' +
+      '<a href="/personvern.html">Personvern</a> · ' +
+      '<button class="lenkeknapp" id="slett-konto" type="button" ' +
+        'style="margin:0;color:var(--tekst-svak)">Slett kontoen min</button></p>');
+
+  koblFeedback();
+  const ver = $("send-verifisering");
+  if (ver) ver.addEventListener("click", async () => {
+    ver.disabled = true;
+    try {
+      await hent("/auth/send-verifisering", { method: "POST" });
+      ver.textContent = "Sendt — se i innboksen";
+    } catch (e) {
+      $("ver-feil").textContent = e.message;
+      $("ver-feil").hidden = false;
+      ver.disabled = false;
+    }
+  });
+  $("slett-konto").addEventListener("click", visSlettKonto);
 
   // Varselseksjonen etterfylles: den ma sporre bade serveren og nettleserens
   // pushManager, og arket skal ikke stå tomt mens den venter.
@@ -626,6 +771,47 @@ async function visKontoSide() {
     lukkArk();
     tegnProdukter();
     if (state.fane === "folger") tegnFolgerFane();
+  });
+}
+
+/* Sletting krever passord selv om du allerede er innlogget. En ulaast
+ * telefon som ligger paa bordet skal ikke vaere nok til aa slette kontoen
+ * til noen andre -- og handlingen kan ikke angres. */
+function visSlettKonto() {
+  visArk("<h2>Slett kontoen</h2>" +
+    '<p class="hjelp">Dette sletter e-posten din, følgelisten, ' +
+    "varselinnstillingene og alle registrerte enheter. Det kan ikke angres, " +
+    "og vi har ingen kopi å hente den tilbake fra.</p>" +
+    '<form id="slett-skjema" class="skjema">' +
+      '<label>Bekreft med passordet ditt' +
+        '<input id="s-passord" type="password" autocomplete="current-password" required></label>' +
+      '<label>Hvorfor slutter du? <span class="hjelp liten">(frivillig, ' +
+        "lagres uten navn)</span>" +
+        '<input id="s-grunn" type="text" maxlength="500"></label>' +
+      '<p class="feil" id="s-feil" hidden></p>' +
+      '<button class="hovedknapp av" type="submit">Slett kontoen for godt</button>' +
+    "</form>" +
+    '<button class="lenkeknapp" id="s-avbryt" type="button">Avbryt</button>');
+
+  $("s-avbryt").addEventListener("click", visKontoSide);
+  $("slett-skjema").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const knapp = e.target.querySelector("button[type=submit]");
+    knapp.disabled = true;
+    try {
+      await hent("/auth/slett-meg", { method: "POST", body: JSON.stringify({
+        password: $("s-passord").value, grunn: $("s-grunn").value.trim() || null }) });
+      state.bruker = null;
+      state.folger = new Map();
+      $("konto-knapp").classList.remove("innlogget");
+      visArk('<h2>Kontoen er slettet</h2><p class="hjelp">Takk for at du ' +
+             "prøvde Pokepuls. Du er alltid velkommen tilbake.</p>");
+      tegnProdukter();
+    } catch (err) {
+      $("s-feil").textContent = err.message;
+      $("s-feil").hidden = false;
+      knapp.disabled = false;
+    }
   });
 }
 
@@ -812,6 +998,23 @@ lastBruker();
 /* Dyplenke fra de serverrendrede produktsidene: /p/<id> lenker hit med
  * ?produkt=<id>. Uten dette lander alle som kommer fra Google pa forsiden
  * og ma sokte seg frem til varen de nettopp leste om. */
+/* Bekreftelseslenken fra e-posten lander her. Vi tar imot tokenet, rydder
+ * det ut av adresselinjen (det skal ikke bli liggende i historikken eller
+ * i en delt lenke) og sier fra at det gikk bra. */
+(function verifiserEpost() {
+  const t = new URLSearchParams(location.search).get("verifiser");
+  if (!t) return;
+  history.replaceState(null, "", location.pathname);
+  hent("/auth/verifiser", { method: "POST", body: JSON.stringify({ token: t }) })
+    .then(() => {
+      if (state.bruker) state.bruker.epost_bekreftet = true;
+      visArk('<h2>E-posten er bekreftet</h2><p class="hjelp">Takk. Nå kan du ' +
+             "få nytt passord hvis du skulle glemme det.</p>");
+    })
+    .catch((e) => visArk('<h2>Lenken virket ikke</h2><p class="hjelp">' +
+                         esc(e.message) + "</p>"));
+})();
+
 (function dyplenke() {
   const id = new URLSearchParams(location.search).get("produkt");
   if (!id) return;

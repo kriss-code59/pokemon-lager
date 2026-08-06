@@ -439,3 +439,29 @@ body.admin .topp { position: static; }
 .koble-treff { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .koble-treff .chip { font-size: 12px; }
 .umatchet-verktoy .ok { color: var(--gronn); font-size: 13px; }
+
+/* ------------------------------------------------------- feedback */
+
+.skjema textarea {
+  padding: 11px 12px; background: var(--flate-2); border: 1px solid var(--kant);
+  border-radius: 11px; color: var(--tekst); font: inherit; font-size: 16px;
+  resize: vertical; -webkit-appearance: none;
+}
+.skjema textarea:focus { outline: none; border-color: var(--gul); }
+
+.umatchet.ny { border-color: var(--gul); }
+.fb-topp { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.fb-tekst {
+  white-space: pre-wrap; margin: 8px 0; font-size: 14px;
+  border-left: 2px solid var(--kant); padding-left: 10px;
+}
+
+/* Tekstlister pa personvernsiden. .side-liste er for tilbudsrader og har
+   sitt eget rutenett; denne er vanlig prosa med kulepunkt. */
+.side-liste-tekst { padding-left: 20px; margin: 0 0 16px; }
+.side-liste-tekst li { margin-bottom: 8px; }
+.side-innhold code {
+  background: var(--flate-2); padding: 1px 5px; border-radius: 5px;
+  font-size: 13px;
+}
+.side-innhold a { color: var(--bla); }

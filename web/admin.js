@@ -51,17 +51,9 @@ async function tegnDrift() {
   // Det viktigste tallet forst og storst: gaar scraperen? Alt annet pa
   // siden er meningslost hvis svaret er nei.
   //
-  // Nattpausen ma med. Scraperen sover 22-04 norsk tid (se
-  // deploy/pokepuls-cron-scrape.sh), og uten dette unntaket lyser siden
-  // rodt hver eneste natt. En overvaking som roper ulv seks timer i dognet
-  // er en overvaking du slutter a se pa -- det var nettopp slik den forrige
-  // dodmannsknappen ble ignorert.
-  const oslo = Number(new Intl.DateTimeFormat("no", {
-    timeZone: "Europe/Oslo", hour: "numeric", hour12: false }).format(new Date()));
-  const natt = oslo >= 22 || oslo < 4;
-
-  const helse = natt ? ["ok", "Nattpause (22–04)"]
-    : alder < 45 ? ["ok", "Scraperen går"]
+  // Ingen nattunntak: scraperen gar dognet rundt na, sa gult kl. 02 betyr
+  // det samme som gult kl. 14.
+  const helse = alder < 45 ? ["ok", "Scraperen går"]
     : alder < 180 ? ["gammel", "Scraperen henger etter"]
     : ["nede", "SCRAPEREN STÅR"];
 
@@ -259,6 +251,64 @@ function visTreff(felt) {
   }
 }
 
+/* ------------------------------------------------------------- feedback */
+
+const FB_STATUS = ["ny", "lest", "gjort", "avvist"];
+const FB_SLAG = { feil: "Feil", onske: "Ønske", butikk: "Butikk", annet: "Annet" };
+
+async function tegnFeedback() {
+  const d = await hent("/admin/feedback");
+  const a = d.antall || {};
+
+  $("#admin-innhold").innerHTML =
+    '<div class="tallrad">' + FB_STATUS.map((k) =>
+      '<div class="talle"><b>' + esc(a[k] || 0) + "</b><span>" + esc(k) +
+      "</span></div>").join("") + "</div>" +
+    (d.meldinger.length
+      ? d.meldinger.map((m) => fbKort(m)).join("")
+      : '<p class="hjelp">Ingen tilbakemeldinger ennå.</p>');
+
+  for (const b of document.querySelectorAll("[data-fb-status]")) {
+    b.addEventListener("click", async () => {
+      const [id, status] = b.dataset.fbStatus.split(":");
+      try {
+        await hent("/admin/feedback/" + id, { method: "POST",
+          body: JSON.stringify({ status }) });
+        await tegnFeedback();
+      } catch (e) { alert(e.message); }
+    });
+  }
+  for (const felt of document.querySelectorAll("[data-fb-notat]")) {
+    // Lagre naar feltet forlates, ikke ved hvert tastetrykk: ett kall i
+    // stedet for femti, og ingen halvskrevne notater i databasen.
+    felt.addEventListener("blur", () => {
+      hent("/admin/feedback/" + felt.dataset.fbNotat, { method: "POST",
+        body: JSON.stringify({ notat: felt.value }) }).catch(() => {});
+    });
+  }
+}
+
+function fbKort(m) {
+  return '<div class="umatchet' + (m.status === "ny" ? " ny" : "") + '">' +
+    '<div class="fb-topp">' +
+      '<span class="merkelapp">' + esc(FB_SLAG[m.slag] || m.slag) + "</span>" +
+      "<b>" + esc(m.epost || "ukjent") + "</b>" +
+      (m.slettet_konto ? ' <span class="hjelp liten">(slettet konto)</span>' : "") +
+      '<span class="hjelp liten"> · ' + esc(nar(m.created_at)) +
+      (m.side ? " · fra «" + esc(m.side) + "»" : "") + "</span>" +
+    "</div>" +
+    // pre-wrap, ikke innerHTML-formatering: teksten kommer fra en bruker og
+    // skal vises som tekst, med linjeskiftene deres i behold.
+    '<p class="fb-tekst">' + esc(m.tekst) + "</p>" +
+    '<div class="koble-treff">' + FB_STATUS.map((k) =>
+      '<button class="chip' + (m.status === k ? " pa" : "") +
+      '" data-fb-status="' + m.id + ":" + k + '">' + k + "</button>").join("") +
+    "</div>" +
+    '<input class="koble-sok" style="margin-top:8px" placeholder="Notat til deg selv…" ' +
+      'data-fb-notat="' + m.id + '" value="' + esc(m.notat || "") + '">' +
+    "</div>";
+}
+
 /* ---------------------------------------------------------------- faner */
 
 async function tegn() {
@@ -267,6 +317,7 @@ async function tegn() {
   try {
     if (state.fane === "drift") await tegnDrift();
     else if (state.fane === "brukere") await tegnBrukere();
+    else if (state.fane === "feedback") await tegnFeedback();
     else await tegnKatalog();
   } catch (e) {
     // 404 fra /api/admin/* betyr «du er ikke admin» -- endepunktene later
