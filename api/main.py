@@ -64,9 +64,17 @@ app.add_middleware(
 
 # Kontoer, sesjoner og folgeliste ligger i api/auth.py. De monteres her fordi
 # de trenger den samme tilkoblingspoolen, som ikke finnes for oppstart.
-from . import auth  # noqa: E402
+from . import admin, auth, push, sider  # noqa: E402
 
 auth.monter(app, lambda: pool)
+# push og admin gjenbruker auth.hent_bruker sa det bare finnes EN vei fra
+# cookie til bruker. To implementasjoner av "hvem er dette" er to steder en
+# autentiseringsfeil kan gjemme seg.
+push.monter(app, lambda: pool, auth.hent_bruker)
+admin.monter(app, lambda: pool, auth.hent_bruker)
+# Serverrendrede produktsider og sidekart. Ligger utenfor /api med vilje:
+# de er sider, ikke data, og de skal ha ekte URL-er som kan deles.
+sider.monter(app, lambda: pool)
 
 
 def _svar(request: Request, data: dict, cache: str) -> Response:
@@ -160,7 +168,15 @@ SELECT p.id, p.set_id, p.type_id, p.region, s.label AS set_label,
        -- nar dette er null.
        (array_remove(array_agg(l.image_url ORDER BY l.in_stock DESC NULLS LAST,
                                                    l.price_ore NULLS LAST), NULL))[1] AS bilde,
-       max(l.last_seen_at) AS sist_sett
+       max(l.last_seen_at) AS sist_sett,
+       -- Siste RELEVANTE hendelse, ikke siste hendelse. "Utsolgt" skal ikke
+       -- loefte en vare til toppen av "nylig aktivitet" -- det er nyheten om
+       -- at det ikke er noe aa hente. Uten dette skillet fylles toppen av
+       -- listen med varer du nettopp gikk glipp av.
+       (SELECT max(e.detected_at) FROM events e
+         WHERE e.product_id = p.id
+           AND e.kind IN ('ny','restock','prisendring')
+           AND e.detected_at > now() - interval '14 days') AS sist_hendelse
 FROM listings l
 JOIN products p      ON p.id = l.product_id
 JOIN sets s          ON s.id = p.set_id
