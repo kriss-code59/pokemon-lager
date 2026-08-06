@@ -44,8 +44,9 @@ MAKS_ALDER_MIN = 60
 # Ikke mas: ett varsel per time sa lenge feilen varer.
 VARSEL_INTERVALL_MIN = 60
 
-# Scraperen sover 22-04 norsk tid, sa data er lovlig gammelt om natta.
-NATT_START, NATT_SLUTT = 22, 4
+# Ingen natt-unntak lenger: scraperen gar dognet rundt (se
+# deploy/pokepuls-cron-scrape.sh). Star den kl. 02, skal det oppdages
+# kl. 02 -- ikke kl. 07, etter fem tapte timer.
 
 DSN = os.environ.get("POKEPULS_DSN", "postgresql:///pokepuls")
 ROT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -61,11 +62,6 @@ def oslo_time():
         return datetime.datetime.now(ZoneInfo("Europe/Oslo"))
     except Exception:
         return datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=1)))
-
-
-def er_natt():
-    t = oslo_time().hour
-    return t >= NATT_START or t < NATT_SLUTT
 
 
 def les_tilstand():
@@ -201,10 +197,6 @@ def les_siste_kjoring():
 
 def main():
     na = datetime.datetime.now(datetime.timezone.utc)
-
-    if er_natt():
-        print("natt i Norge -- hopper over")
-        return 0
 
     tidspunkt, ok, feilede, problem = les_siste_kjoring()
 
