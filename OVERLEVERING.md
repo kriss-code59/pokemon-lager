@@ -5,47 +5,35 @@ overleveringer. Les punkt 1 før du gjør noe annet.
 
 ---
 
-## 1. ⚠️ FØRSTE OPPGAVE: kjør deployen
+## 1. Status: alt er deployet og live
 
-Koden er skrevet, testet og pushet. **Den er ikke tatt i bruk på serveren
-ennå.** Til det trengs én kommando:
+Scraperen går, koden er pushet, `deploy/oppsett-api.sh` er kjørt, VAPID-nøkler
+er laget, og databasen er migrert. **Det som gjenstår er to ting bare du kan
+gjøre:**
 
-```bash
-ssh root@49.12.72.233                      # via kjeden i punkt 4
-cd /home/pokepuls/pokemon-lager
-sudo -u pokepuls git checkout -- docs/ && sudo -u pokepuls git pull --ff-only
-bash deploy/oppsett-api.sh
-```
+### a) Slå på varsler på telefonen din — 2 minutter
 
-`oppsett-api.sh` er utvidet og gjør nå åtte ting i stedet for sju. De nye:
+1. Åpne **pokepuls.no** i Safari på iPhone
+2. **Del → Legg til på Hjem-skjerm** (iOS gir ikke Web Push til en side som
+   ikke ligger der — det er ikke noe vi kan omgå)
+3. Åpne Pokepuls fra hjemskjermen, logg inn
+4. Konto-ikonet øverst til høyre → **🔔 Slå på varsler** → **Send et testvarsel**
 
-* **steg 3** kjører `db/002_varsler.sql` (varsling, admin, SEO-indeks)
-* **steg 5** lager VAPID-nøkler i `/etc/pokepuls.env` — **én gang, aldri
-  på nytt.** Bytter du dem, blir hvert eksisterende push-abonnement ugyldig
-  og alle må trykke «Slå på varsler» igjen uten å få vite hvorfor varslene
-  sluttet. Skriptet sjekker om de finnes og lar dem være.
-* **steg 8** legger inn cron for varselsenderen (hvert 5. min)
+Du er allerede satt til `admin`, så **Åpne admin** dukker opp samme sted.
 
-Verifiser etterpå:
+### b) Meld pokepuls.no inn i Google Search Console
+
+Sidene finnes nå — Google vet det ikke. Verifiser eierskap og send inn
+`https://pokepuls.no/sitemap.xml` (462 produktsider). Sjekk en av dem med
+Rich Results Test; JSON-LD-en skal gi pris og «på lager» rett i søketreffet.
+
+Verifiser at alt fortsatt står (alt svarte riktig 2026-08-06 kl. 23:20):
 
 ```bash
 curl -s https://pokepuls.no/api/health | jq          # ok: true
 curl -s https://pokepuls.no/api/push/nokkel | jq     # paa: true
-curl -sI https://pokepuls.no/sitemap.xml | head -1   # 200
-sudo -u pokepuls bash -c 'set -a; . /etc/pokepuls.env; set +a
-  cd /home/pokepuls/pokemon-lager && /home/pokepuls/venv/bin/python \
-  overvak/varsler.py --torrkjor'                     # viser hva som ville blitt sendt
-```
-
-Så, på telefonen: åpne pokepuls.no, **Del → Legg til på Hjem-skjerm**
-(iOS gir ikke Web Push til en side som ikke ligger der), åpne appen derfra,
-logg inn, konto-ikonet → **Slå på varsler** → **Send et testvarsel**.
-
-Gjør Kristian til admin så `/admin.html` åpner seg:
-
-```bash
-sudo -u pokepuls psql -d pokepuls -c \
-  "UPDATE users SET role='admin' WHERE email='<din e-post>'"
+curl -s https://pokepuls.no/robots.txt               # ikke app-skallet
+curl -s https://pokepuls.no/sitemap.xml | grep -c loc
 ```
 
 ---
@@ -92,7 +80,7 @@ du kan koble en umatchet tittel til et kanonisk produkt i nettleseren.
 Koblingen lagres i `manual_matches` og overlever neste ingest.
 
 **Scraperen er parallellisert.** 18 Shopify-butikker seks om gangen i én
-trådpool, 26 nettleserbutikker fordelt på tre Chromium-instanser, og de to
+trådpool, 18 nettleserbutikker fordelt på tre Chromium-instanser, og de to
 halvdelene kjører samtidig. Loggen viser nå de åtte tregeste butikkene med
 tid, så neste flaskehals ikke må gjettes. Justerbart uten deploy med
 `POKEPULS_SHOPIFY_PARALLELL` og `POKEPULS_BROWSER_PARALLELL`.
@@ -116,6 +104,14 @@ databasen og tar bare med produkter som faktisk har tilbud.
 `ikon-512.png` som aldri har eksistert i repoet — PWA-installasjon på Android
 og varselikonet var ødelagt. Nå finnes de, pluss `ikon-badge.png`.
 
+**Bildene: 0 → 3 762.** Admin-siden svarte på spørsmålet forrige overlevering
+ikke rakk: «Med bilde: 0». Ingen av 3 900 oppføringer hadde bilde, mens
+`data.json` hadde 19 197 bilde-URL-er liggende. Skjemaet hadde
+`listings.image_url` fra dag én, API-et leste den, frontenden viste den —
+men `ingest.py` skrev den aldri. Et felt som leses av alle og skrives av
+ingen feiler helt stille: ingenting kaster, listen ser bare litt kjedelig
+ut. Nå har 96 % av oppføringene ekte produktfoto.
+
 ---
 
 ## 3. Hva som er live nå
@@ -130,10 +126,10 @@ fornyer seg selv. `http://49.12.72.233` fungerer som reserveinngang.
 | E-post | MX + `mail.pokepuls.no` urørt — går fortsatt til Domene |
 | API | `/snapshot /catalog /product /history /unmatched /health` |
 | Kontoer | `/api/auth/*` + `/api/watchlist` |
-| Varsler | `/api/push/*` + `overvak/varsler.py` — **krever deploy** |
-| Admin | `/admin.html` + `/api/admin/*` — **krever deploy** |
-| Sider | `/p/<id>`, `/sitemap.xml`, `/robots.txt` — **krever deploy** |
-| Frontend | Mobil-først, 4 faner: Produkter, Nytt, Følger, Andre |
+| Varsler | `/api/push/*` + `overvak/varsler.py`, cron hvert 5. min — **live** |
+| Admin | `/admin.html` + `/api/admin/*` bak role=admin — **live** |
+| Sider | `/p/<id>` (462 stk), `/sitemap.xml`, `/robots.txt` — **live** |
+| Frontend | Mobil-først, 4 faner, **v=7**. 3 762 av 3 921 varer har foto |
 | Scraper | 33 butikker, hvert 20. min — **går** (3 899 varer, 0 feilet) |
 | Dødmannsknapp | Hvert 15. min, pusher til admin |
 | Gammel EC2 | Kjører fortsatt parallelt. Skal sies opp. |
@@ -186,6 +182,9 @@ opplastingsside i Chrome, én katalog om gangen:
 | nginx cacher statiske filer en uke | du ser din egen gamle kode | bump `?v=` i `index.html` **og** `SKALL`/`CACHE` i `sw.js`. Vi står på **v=6** |
 | `location /p/` etter `location /` i nginx | Googlebot får app-skallet i stedet for produktsiden | de nye blokkene ligger før `location /` |
 | Nye VAPID-nøkler | alle push-abonnementer dør stille | `oppsett-api.sh` lager dem bare hvis de mangler |
+| `chmod` i deploy-skriptet | hver `git pull` etterpå stopper på modusendring | `git config core.fileMode false` — ligger i `oppsett-api.sh` nå |
+| Nye `location`-blokker i `nginx-pokepuls.conf` | de kom aldri ut i drift, fordi skriptet med vilje ikke rører certbots fil. `/robots.txt` svarte med app-skallet | alt nytt ligger i `deploy/nginx-sider.conf` og inkluderes med én linje |
+| Å laste opp ny `app.js` uten å bumpe `?v=` | du tester mot din egen gamle kode i nettleseren | bump versjon **hver gang** app.js endres, ikke bare ved «release» |
 | Egen DNS-cache | du ser gammel side | `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder` |
 
 ---
@@ -255,16 +254,20 @@ tilbake**. Kommer samme tekst ut, virker hele kjeden.
 
 ## 8. Neste steg, i prioritert rekkefølge
 
-1. **Kjør deployen** (punkt 1) og send deg selv et testvarsel. Ingenting av
-   det over er verdt noe før varselet ligger på låseskjermen din.
-2. **Meld pokepuls.no inn i Google Search Console** og send inn
-   `https://pokepuls.no/sitemap.xml`. Sidene finnes nå; Google vet det ikke.
-   Sjekk `/p/<id>` med Rich Results Test — JSON-LD-en skal gi pris og
-   lagerstatus i treffet.
-3. **Mål rundetiden etter parallelliseringen.** Loggen skriver «Skanning
-   ferdig på X min» og de åtte tregeste butikkene. Er den under ~7 min, kan
-   intervallet ned fra 20 til 10 minutter i `/etc/cron.d/pokepuls` — det
-   halverer hvor gammelt et restock-varsel kan være.
+1. **Slå på varsler på telefonen** (punkt 1a). Ingenting av det over er
+   verdt noe før varselet ligger på låseskjermen din.
+2. **Google Search Console** (punkt 1b).
+3. **Mål rundetiden etter parallelliseringen.** Admin → Drift viser nå
+   varighet per kjøring, og loggen skriver «Skanning ferdig på X min» pluss
+   de åtte tregeste butikkene. Tallet var meningsløst før (alltid «0 min»,
+   fordi starttiden ble satt til når skanningen var *ferdig*) — det er
+   fikset, så de første ekte målingene kommer fra kjøringene etter kl. 04.
+   Er runden under ~7 min, kan intervallet ned fra 20 til 10 minutter i
+   `/etc/cron.d/pokepuls`. Det halverer hvor gammelt et restock-varsel kan
+   være, og det er hele poenget med produktet.
+   En observasjon å ta med: én treg nettleserbutikk styrer nå rundetiden,
+   siden de tre arbeiderne får statisk fordelte bunker. Blir det trangt, er
+   neste steg en delt kø i stedet for `sider[i::N]`.
 4. **Katalogdekning.** ~1 800 forseglede varer er umatchet. Admin-fanen
    «Katalog» sorterer dem på hvor mange butikker som selger dem, så den
    øverste koblingen gir mest dekning. Vanligste hull: Pokémon Center-esker
