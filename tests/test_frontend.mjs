@@ -76,12 +76,14 @@ function svar(url, valg, innlogget) {
   else if (sti.startsWith("/history")) data = HISTORIKK;
   else if (sti.startsWith("/unmatched")) data = { antall: 0, varer: [] };
   else if (sti.startsWith("/product/")) data = PRODUKT;
+  else if (sti.startsWith("/feedback")) data = { ok: true, id: 1 };
   else if (sti.startsWith("/push/nokkel")) data = { paa: false, public_key: null };
   else if (sti.startsWith("/push/status")) data = {
     enheter: [], antall: 0, stille_natt: true, maks_pris_ore: null,
     sendt_7d: 0, vapid_paa: false };
   else if (sti.startsWith("/auth/me")) data = innlogget
-    ? { innlogget: true, email: "kris@example.no", role: "free" } : { innlogget: false };
+    ? { innlogget: true, email: "kris@example.no", role: "free",
+        epost_bekreftet: true } : { innlogget: false };
   else if (sti.startsWith("/watchlist/snapshot")) data = { produkter: [SNAPSHOT.produkter[0]] };
   else if (sti.startsWith("/watchlist")) {
     if (valg && valg.method === "POST") data = { id: 7 };
@@ -412,4 +414,87 @@ test("kontosiden sier fra nar varsler ikke er slatt pa pa serveren", async () =>
   const tekst = $(w, "#ark-innhold").textContent;
   assert.match(tekst, /Varsler/);
   assert.equal($(w, "#varsel-knapp"), null, "ingen knapp uten VAPID-nokler");
+});
+
+
+/* ------------------------------------------- deling: feedback og konto */
+
+const konto = async (w) => {
+  $(w, "#konto-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  return w;
+};
+
+test("innlogget bruker far et felt for a si fra", async () => {
+  const w = await konto(await app(true));
+  assert.ok($(w, "#fb-skjema"), "feedback-skjemaet skal finnes");
+  assert.match($(w, "#ark-innhold").textContent, /Si fra/);
+});
+
+test("feedback kan sendes og kvitteres ut", async () => {
+  const w = await konto(await app(true));
+  $(w, "#fb-tekst").value = "Dere mangler Pokemadness";
+  $(w, "#fb-skjema").dispatchEvent(new w.Event("submit", { bubbles: true, cancelable: true }));
+  await new Promise((r) => setTimeout(r, 40));
+  assert.match($(w, "#fb-skjema").textContent, /Takk/);
+});
+
+test("tom feedback sendes ikke", async () => {
+  // Regresjon: uten required-attributtet gikk en tom melding rett inn, og
+  // admin fikk en rad uten innhold og uten mate a vite hvem som mente hva.
+  const w = await konto(await app(true));
+  assert.equal($(w, "#fb-tekst").required, true);
+});
+
+test("innloggingsskjemaet har vei ut for den som har glemt passordet", async () => {
+  const w = await app();
+  $(w, "#konto-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 20));
+  const lenke = $(w, "#glemt-lenke");
+  assert.ok(lenke, "glemt-passord-lenken skal finnes pa innlogging");
+  lenke.dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 20));
+  assert.ok($(w, "#glemt-skjema"));
+});
+
+test("registrering peker pa personvern", async () => {
+  const w = await app();
+  $(w, "#konto-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 20));
+  $(w, "#bytt-modus").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 20));
+  assert.ok($(w, '#ark-innhold a[href="/personvern.html"]'),
+            "den som lager konto skal se hva vi lagrer");
+});
+
+test("sletting av konto krever passord", async () => {
+  const w = await konto(await app(true));
+  $(w, "#slett-konto").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 20));
+  const felt = $(w, "#s-passord");
+  assert.ok(felt, "passordfeltet skal finnes");
+  assert.equal(felt.type, "password");
+  assert.equal(felt.required, true);
+  assert.match($(w, "#ark-innhold").textContent, /kan ikke angres/);
+});
+
+test("ubekreftet e-post gir en synlig oppfordring", async () => {
+  const dom = new JSDOM(les("index.html"), {
+    url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true,
+  });
+  const w = dom.window;
+  w.fetch = async (url, valg) => {
+    if (String(url).includes("/auth/me")) {
+      const d = { innlogget: true, email: "kris@example.no", role: "free",
+                  epost_bekreftet: false };
+      const k = JSON.stringify(d);
+      return { ok: true, status: 200, text: async () => k, json: async () => d };
+    }
+    return svar(url, valg, true);
+  };
+  w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 40));
+  await konto(w);
+  assert.ok($(w, "#send-verifisering"),
+            "uten bekreftet e-post kan du ikke fa nytt passord -- si fra om det");
 });
