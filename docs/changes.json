@@ -1,6 +1,60 @@
 {
   "changes": [
     {
+      "detected_at": "2026-08-06T12:40:29+00:00",
+      "store": "Pokelageret",
+      "name": "Ampharos - 090/086 - NM",
+      "price": "99.00 kr",
+      "url": "https://pokelageret.no/products/ampharos-090-086?variant=49002528276731",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T12:40:29+00:00",
+      "store": "Pokelageret",
+      "name": "Electrike - 196/182 - NM",
+      "price": "49.00 kr",
+      "url": "https://pokelageret.no/products/electrike-196-182?variant=49002496229627",
+      "product_class": "card",
+      "event": "restock"
+    },
+    {
+      "detected_at": "2026-08-06T12:40:29+00:00",
+      "store": "Pokelink",
+      "name": "#157 Cycling Road 157/165 Uncommon",
+      "price": "6.00 kr",
+      "url": "https://pokelink.no/products/157-cycling-road-157-165-uncommon?variant=41749892595795",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T12:40:29+00:00",
+      "store": "Outland",
+      "name": "Greninja Full View Deck Boks Deck Boks, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-greninja-full-view-deck-boks-deck-boks-pokemon-pokemon-74427162979",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T12:40:29+00:00",
+      "store": "Outland",
+      "name": "PokéMon Crochet Snorlax Kit: Includes Materials to Make Snorlax and Instructions for 5 Other PokéMon\nSabrina Somers\nPokéMon Crafts\nBoks-set · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-pokemon-crochet-snorlax-kit-9781446309612",
+      "product_class": "card",
+      "event": "ny"
+    },
+    {
+      "detected_at": "2026-08-06T12:40:29+00:00",
+      "store": "Outland",
+      "name": "Koraidon Full View Deck Box Deck Box, Pokemon\nUltra PRO\nDeck Boks · Engelsk",
+      "price": "",
+      "url": "https://www.outland.no/p/p-koraidon-full-view-deck-box-deck-box-pokemon-pokemon-74427161873",
+      "product_class": "accessory",
+      "event": "ny"
+    },
+    {
       "detected_at": "2026-08-06T12:00:31+00:00",
       "store": "Cardcenter",
       "name": "Pokemon Storm Emeralda Japansk Boosterpakke",
@@ -2643,60 +2697,6 @@
       "name": "Ascended Heroes – 047/217 – Mega Froslass ex",
       "price": "29,00 kr",
       "url": "https://collectible.no/home/ascended-heroes-047-217-mega-froslass-ex/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 227/217 – Snorunt",
-      "price": "79,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-227-217-snorunt/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 268/217 – Mega Hawlucha ex",
-      "price": "109,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-268-217-mega-hawlucha-ex/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 234/217 – Banette",
-      "price": "159,00 kr",
-      "url": "https://collectible.no/home/me-ascended-heroes-234-217-banette/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 204/217 – Team Rocket’s Giovanni",
-      "price": "3,90 kr",
-      "url": "https://collectible.no/home/ascended-heroes-204-217-team-rockets-giovanni/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 247/217 – Dreepy",
-      "price": "139,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-247-217-dreepy/",
-      "product_class": "card",
-      "event": "ny"
-    },
-    {
-      "detected_at": "2026-08-05T06:39:34+00:00",
-      "store": "Collectible",
-      "name": "Ascended Heroes – 256/217 – Boss’s Orders [Corbeau]",
-      "price": "119,00 kr",
-      "url": "https://collectible.no/home/ascended-heroes-256-217-bosss-orders-corbeau/",
       "product_class": "card",
       "event": "ny"
     }
