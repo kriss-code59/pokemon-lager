@@ -465,3 +465,13 @@ body.admin .topp { position: static; }
   font-size: 13px;
 }
 .side-innhold a { color: var(--bla); }
+
+/* Forhandssalg og bestillingsvarer: synlige, men tydelig ikke «pa lager». */
+.pris.bestilling { color: var(--bla); }
+.lager.bestilling { color: var(--bla); }
+.merkelapp.bestilling {
+  background: rgba(76, 154, 255, .15); color: var(--bla);
+  font-size: 11px; padding: 2px 7px; border-radius: 999px; white-space: nowrap;
+}
+.side-lager.bestilling { color: var(--bla); }
+.side-status.bestilling { background: rgba(76, 154, 255, .12); color: var(--bla); }

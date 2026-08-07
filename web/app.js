@@ -30,6 +30,15 @@ const HENDELSE = {
  * etter, var det ikke en restock det hastet med. */
 const NYLIG_MS = 24 * 3600 * 1000;
 
+/* Forhandssalg og bestillingsvarer er IKKE «pa lager», men de er heller
+ * ikke utsolgt. Butikkene setter available=true pa begge, sa uten dette
+ * skillet sto varer du ikke kunne fa i hus som «Pa lager» -- og utloste
+ * restock-varsel. Se katalog/tilgjengelighet.py. */
+const BESTILLING = {
+  forhandssalg: { kort: "Forhåndssalg", lang: "Kan forhåndsbestilles" },
+  bestillingsvare: { kort: "Bestilles", lang: "Butikken skaffer den" },
+};
+
 const state = {
   produkter: [], typer: new Map(),
   sok: "", kunLager: true, region: null, type: null,
@@ -227,8 +236,16 @@ function grupperHtml(treff) {
  * tilbud er allerede sortert av API-et: pa lager forst, sa stigende pris.
  * Forste rad med pa_lager=1 er derfor den billigste kjopbare. */
 function billigsteButikk(p) {
-  const t = (p.tilbud || []).find((x) => x[2] === 1 && x[1]);
+  // t[3] = bestillingstype. Et forhandssalg teller ikke som «billigst pa
+  // lager» -- det er ikke det samme produktet i tid.
+  const t = (p.tilbud || []).find((x) => x[2] === 1 && x[1] && !x[3]);
   return t ? butikknavn(t[0]) : null;
+}
+
+/* Billigste forhandssalg/bestilling, brukt nar ingen har varen inne. */
+function billigsteBestilling(p) {
+  const t = (p.tilbud || []).find((x) => x[2] === 1 && x[1] && x[3]);
+  return t ? { butikk: butikknavn(t[0]), pris: t[1], type: t[3] } : null;
 }
 
 function kortHtml(p) {
@@ -236,6 +253,7 @@ function kortHtml(p) {
   const pris = kr(p.min_pris);
   const folges = state.folger.has(p.id);
   const hos = billigsteButikk(p);
+  const best = antall ? null : billigsteBestilling(p);
   const tid = p.sist_hendelse ? new Date(p.sist_hendelse).getTime() : 0;
   const nylig = tid && Date.now() - tid < NYLIG_MS;
 
@@ -249,14 +267,18 @@ function kortHtml(p) {
       // Under navnet star det som faktisk avgjor om du klikker: hvor den er
       // billigst. «6 tilbud» er et tall om databasen, ikke om varen.
       '<span class="kort-under">' +
-        (hos ? "billigst hos " + esc(hos) : p.tilbud.length + " butikker følges") +
+        (hos ? "billigst hos " + esc(hos)
+             : best ? esc(BESTILLING[best.type].lang) + " hos " + esc(best.butikk)
+             : p.tilbud.length + " butikker følges") +
       "</span>" +
     "</span>" +
     '<span class="kort-hoyre">' +
       (pris ? '<span class="pris">' + pris + "</span>"
+            : best ? '<span class="pris bestilling">' + kr(best.pris) + "</span>"
             : '<span class="pris ingen">ikke på lager</span>') +
-      '<div class="lager ' + (antall ? "inne" : "ute") + '">' +
-        (antall ? antall + " butikk" + (antall > 1 ? "er" : "") + " inne" : "–") +
+      '<div class="lager ' + (antall ? "inne" : best ? "bestilling" : "ute") + '">' +
+        (antall ? antall + " butikk" + (antall > 1 ? "er" : "") + " inne"
+                : best ? esc(BESTILLING[best.type].kort) : "–") +
       "</div>" +
     "</span></button>";
 }
@@ -281,9 +303,16 @@ async function apneProdukt(id) {
       '<button class="folg-knapp" id="folg-knapp" type="button"></button>' +
       "</div></div>";
 
-    const inne = d.tilbud.filter((t) => t.in_stock === true);
+    // Tre bolker, ikke to. «Pa lager» skal bety at du kan fa den i posten;
+    // et forhandssalg hoerer hjemme i sin egen bolk, ikke oeverst blant dem
+    // som faktisk har varen.
+    const inne = d.tilbud.filter((t) => t.in_stock === true && !t.bestillingstype);
+    const bestill = d.tilbud.filter((t) => t.in_stock === true && t.bestillingstype);
     const ute = d.tilbud.filter((t) => t.in_stock !== true);
     if (inne.length) h += "<h3>På lager</h3>" + inne.map(tilbudHtml).join("");
+    if (bestill.length) h += "<h3>Forhåndssalg og bestillingsvarer</h3>" +
+      '<p class="hjelp liten">Kan legges i handlekurven, men sendes ikke nå.</p>' +
+      bestill.map(tilbudHtml).join("");
     if (ute.length) h += "<h3>Ikke på lager</h3>" + ute.map(tilbudHtml).join("");
 
     if (d.hendelser.length) {
@@ -324,6 +353,10 @@ function tilbudHtml(t) {
     '<span class="tilbud-venstre"><span class="tilbud-butikk">' +
       esc(t.store_name || butikknavn(t.store_id)) + "</span>" +
     '<span class="tilbud-tittel">' + esc(t.title) + "</span></span>" +
+    (t.bestillingstype
+      ? '<span class="merkelapp bestilling">' +
+        esc((BESTILLING[t.bestillingstype] || {}).kort || t.bestillingstype) + "</span>"
+      : "") +
     '<span class="pris">' + (kr(t.price_ore) || "–") + '</span><span class="pil">›</span></a>';
 }
 
