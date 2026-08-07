@@ -199,6 +199,10 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # billig nar det ikke er noe a sende (én sporring mot et vannmerke), og den
 # tar igjen automatisk hvis en runde skulle feile.
 */5 * * * * pokepuls cd /home/pokepuls/pokemon-lager && set -a && . /etc/pokepuls.env && set +a && /home/pokepuls/venv/bin/python overvak/varsler.py --stille >> /home/pokepuls/varsler.log 2>&1
+# Selv-deploy hvert 5. minutt: hent ny kode, kjor testene, deploy hvis
+# de er gronne. Kjores som ROOT (ikke pokepuls) fordi oppsett-api.sh
+# ma kunne skrive systemd- og nginx-konfigurasjon.
+*/5 * * * * root /bin/bash /home/pokepuls/pokemon-lager/deploy/selv-deploy.sh >> /home/pokepuls/selvdeploy.log 2>&1
 EOF
 chmod 644 /etc/cron.d/pokepuls
 
