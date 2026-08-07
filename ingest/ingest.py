@@ -227,6 +227,13 @@ def grupper_per_butikk(rader, katalog: Katalog, manuelle: dict | None = None):
             # Manuell kobling vinner over regelmotoren. Et menneske som har
             # sett varen vet mer enn et regexuttrykk.
             "product_id": manuell or (treff["product_id"] if treff else None),
+            # Forhaandssalg og bestillingsvarer skal ikke telle som "paa
+            # lager". MAA settes her, sammen med resten av oppforingen --
+            # koden under leser ny["bestillingstype"] direkte, og en
+            # manglende noekkel stopper HELE ingesten med KeyError.
+            # Det skjedde 2026-08-07: skanningen gikk fint hver 10. minutt,
+            # men ingenting kom inn i databasen paa halvannen time.
+            "bestillingstype": _bestillingstype(navn),
             # Butikkens produktbilde. Skjemaet har hatt listings.image_url
             # siden starten og API-et har alltid lest den -- men ingen skrev
             # den. Resultatet var 0 av 3 900 oppforinger med bilde, og en
