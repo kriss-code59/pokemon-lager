@@ -167,6 +167,19 @@ def les_data(sti: str) -> dict:
         return json.load(f)
 
 
+def _bestillingstype(tittel):
+    """Forhaandssalg og bestillingsvarer skal ikke telle som «paa lager».
+
+    Importeres sent og feiler mykt: en ingest som stopper fordi en ny modul
+    mangler, er verre enn en ingest uten denne merkingen.
+    """
+    try:
+        from katalog.tilgjengelighet import bestillingstype
+        return bestillingstype(tittel)
+    except Exception:
+        return None
+
+
 def les_manuelle_koblinger(cur) -> dict:
     """tittel -> product_id, satt av et menneske paa /admin.
 
@@ -284,7 +297,8 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                     continue
 
                 cur.execute(
-                    "SELECT id, url, title, price_ore, in_stock, product_id "
+                    "SELECT id, url, title, price_ore, in_stock, product_id, "
+                    "       bestillingstype "
                     "FROM listings WHERE store_id = %s", (butikk_id,))
                 for_ = {r["url"]: r for r in cur.fetchall()}
 
@@ -307,7 +321,7 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                     if gammel is None:
                         sett_inn.append((butikk_id, ny["product_id"], url, ny["title"],
                                          ny["price_ore"], ny["in_stock"], na, na,
-                                         ny["image_url"]))
+                                         ny["image_url"], ny["bestillingstype"]))
                         if ny["in_stock"] is True and not bootstrap:
                             hendelser.append((None, url, ny["product_id"], butikk_id,
                                               "ny", ny["price_ore"], None))
@@ -315,7 +329,7 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
 
                     oppdater.append((ny["product_id"], ny["title"], ny["price_ore"],
                                      ny["in_stock"], na, na, ny["image_url"],
-                                     gammel["id"]))
+                                     ny["bestillingstype"], gammel["id"]))
                     if bootstrap:
                         continue
 
@@ -330,6 +344,14 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                         hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
                                           "utsolgt", ny["price_ore"], None))
 
+                    # Forhaandssalg -> vanlig vare. Butikken lar in_stock staa
+                    # paa true gjennom hele skiftet, saa restock-regelen over
+                    # ser ingenting. Men det er nettopp NAA varen ble ekte.
+                    if (gammel.get("bestillingstype") and not ny["bestillingstype"]
+                            and er is True):
+                        hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
+                                          "restock", ny["price_ore"], None))
+
                     gp, np_ = gammel["price_ore"], ny["price_ore"]
                     if (gp and np_ and abs(np_ - gp) >= PRIS_STOY_ORE):
                         hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
@@ -338,8 +360,8 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                 if sett_inn:
                     cur.executemany(
                         "INSERT INTO listings (store_id, product_id, url, title, price_ore, "
-                        "in_stock, last_seen_at, last_ok_at, image_url) "
-                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) "
+                        "in_stock, last_seen_at, last_ok_at, image_url, bestillingstype) "
+                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "
                         "ON CONFLICT (url) DO UPDATE SET "
                         "  product_id = EXCLUDED.product_id, title = EXCLUDED.title, "
                         "  price_ore = EXCLUDED.price_ore, in_stock = EXCLUDED.in_stock, "
@@ -347,13 +369,18 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                         # COALESCE, ikke EXCLUDED alene: en kjoring der en
                         # butikk endrer temaet sitt og slutter a levere bilder
                         # skal ikke tomme kolonnen for alle varene deres.
-                        "  image_url = COALESCE(EXCLUDED.image_url, listings.image_url)",
+                        "  image_url = COALESCE(EXCLUDED.image_url, listings.image_url), "
+                        # Denne SKAL settes til NULL naar merkingen forsvinner:
+                        # et forhaandssalg blir en vanlig vare paa slippdatoen,
+                        # og da skal merkelappen bort av seg selv.
+                        "  bestillingstype = EXCLUDED.bestillingstype",
                         sett_inn)
                 if oppdater:
                     cur.executemany(
                         "UPDATE listings SET product_id = %s, title = %s, price_ore = %s, "
                         "in_stock = %s, last_seen_at = %s, last_ok_at = %s, "
-                        "image_url = COALESCE(%s, image_url) WHERE id = %s",
+                        "image_url = COALESCE(%s, image_url), bestillingstype = %s "
+                        "WHERE id = %s",
                         oppdater)
 
                 # Oppforinger som ikke lenger finnes i butikkens katalog.
