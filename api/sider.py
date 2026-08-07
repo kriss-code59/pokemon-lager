@@ -52,11 +52,15 @@ JOIN product_types t ON t.id = p.type_id WHERE p.id = %s
 
 TILBUD_SQL = """
 SELECT l.store_id, st.name AS store_name, l.title, l.price_ore, l.in_stock,
-       l.url, l.image_url, l.last_seen_at
+       l.url, l.image_url, l.last_seen_at, l.bestillingstype
 FROM listings l JOIN stores st ON st.id = l.store_id
 WHERE l.product_id = %s AND l.last_seen_at > now() - interval '14 days'
-ORDER BY l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST
+ORDER BY (l.in_stock AND l.bestillingstype IS NULL) DESC NULLS LAST,
+         l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST
 """
+
+# Hva merkelappen skal si. Speiler katalog/tilgjengelighet.py.
+BESTILLING_ORD = {"forhandssalg": "Forhåndssalg", "bestillingsvare": "Bestillingsvare"}
 
 
 def _kr(ore):
@@ -160,8 +164,15 @@ def monter(app, hent_pool):
             raise HTTPException(404, "Ukjent produkt")
         p = rader[0]
         tilbud = await _hent(TILBUD_SQL, produkt_id)
-        inne = [t for t in tilbud if t["in_stock"] is True and t["price_ore"]]
-        ute = [t for t in tilbud if t not in inne]
+        # «Paa lager» maa bety at du kan faa den i posten. Et forhaandssalg
+        # som staar oeverst under den overskriften er feil svar paa
+        # spoersmaalet folk kom hit for aa faa -- og Google leser den samme
+        # overskriften.
+        inne = [t for t in tilbud
+                if t["in_stock"] is True and t["price_ore"] and not t["bestillingstype"]]
+        bestill = [t for t in tilbud
+                   if t["in_stock"] is True and t["price_ore"] and t["bestillingstype"]]
+        ute = [t for t in tilbud if t not in inne and t not in bestill]
         billigst = min((t["price_ore"] for t in inne), default=None)
         bilde = next((t["image_url"] for t in tilbud if t["image_url"]), None)
 
@@ -177,6 +188,10 @@ def monter(app, hent_pool):
                     f"Billigst: {_kr(billigst)}. Priser fra "
                     f"{', '.join(sorted({t['store_name'] for t in inne})[:5])} "
                     f"– oppdatert hvert 20. minutt.")
+        elif bestill:
+            besk = (f"{navn} er ikke på lager hos noen av de {len(tilbud)} norske "
+                    f"butikkene vi følger, men kan forhåndsbestilles hos "
+                    f"{len(bestill)}. Få varsel når den kommer på lager.")
         else:
             besk = (f"{navn} er utsolgt hos alle {len(tilbud)} norske butikker vi "
                     f"følger. Få varsel på telefonen når den kommer på lager igjen.")
@@ -197,7 +212,11 @@ def monter(app, hent_pool):
                 "@type": "AggregateOffer",
                 "priceCurrency": "NOK",
                 "offerCount": len(tilbud),
+                # PreOrder er en egen verdi i schema.org, og Google bruker
+                # den. Aa melde InStock paa et forhaandssalg er feilmerking
+                # av strukturerte data -- det straffes.
                 "availability": ("https://schema.org/InStock" if inne
+                                 else "https://schema.org/PreOrder" if bestill
                                  else "https://schema.org/OutOfStock"),
                 **({"lowPrice": round(billigst / 100, 2),
                     "highPrice": round(max(t["price_ore"] for t in inne) / 100, 2)}
@@ -207,8 +226,10 @@ def monter(app, hent_pool):
                     "url": t["url"],
                     "priceCurrency": "NOK",
                     "price": round(t["price_ore"] / 100, 2) if t["price_ore"] else None,
-                    "availability": ("https://schema.org/InStock" if t["in_stock"]
-                                     else "https://schema.org/OutOfStock"),
+                    "availability": (
+                        "https://schema.org/PreOrder" if t["bestillingstype"]
+                        else "https://schema.org/InStock" if t["in_stock"]
+                        else "https://schema.org/OutOfStock"),
                     "seller": {"@type": "Organization", "name": t["store_name"]},
                 } for t in tilbud[:20] if t["price_ore"]],
             }
@@ -219,8 +240,10 @@ def monter(app, hent_pool):
                     f'<span class="side-butikk">{_e(t["store_name"])}</span>'
                     f'<span class="side-tittel">{_e(t["title"])}</span></a>'
                     f'<span class="side-pris">{_e(_kr(t["price_ore"]) or "–")}</span>'
-                    f'<span class="side-lager {"inne" if t["in_stock"] else "ute"}">'
-                    f'{"På lager" if t["in_stock"] else "Utsolgt"}</span></li>')
+                    f'<span class="side-lager '
+                    f'{"bestilling" if t["bestillingstype"] else "inne" if t["in_stock"] else "ute"}">'
+                    f'{BESTILLING_ORD.get(t["bestillingstype"]) if t["bestillingstype"] else "På lager" if t["in_stock"] else "Utsolgt"}'
+                    f'</span></li>')
 
         kropp = [
             _sidehode(tittel, besk, f"{BASE}/p/{produkt_id}", jsonld, bilde),
@@ -236,6 +259,10 @@ def monter(app, hent_pool):
             kropp.append(f'<p class="side-status inne">På lager hos {len(inne)} '
                          f'butikk{"er" if len(inne) > 1 else ""} · billigst '
                          f'<strong>{_e(_kr(billigst))}</strong></p>')
+        elif bestill:
+            kropp.append(f'<p class="side-status bestilling">Ikke på lager, men '
+                         f'kan forhåndsbestilles hos {len(bestill)} '
+                         f'butikk{"er" if len(bestill) > 1 else ""}.</p>')
         else:
             kropp.append('<p class="side-status ute">Utsolgt hos alle butikker '
                          'vi følger akkurat nå.</p>')
@@ -246,6 +273,11 @@ def monter(app, hent_pool):
         if inne:
             kropp.append("<h2>På lager nå</h2><ul class=\"side-liste\">"
                          + "".join(rad(t) for t in inne) + "</ul>")
+        if bestill:
+            kropp.append("<h2>Forhåndssalg og bestillingsvarer</h2>"
+                         '<p class="side-under">Kan bestilles, men sendes ikke nå.</p>'
+                         '<ul class="side-liste">'
+                         + "".join(rad(t) for t in bestill) + "</ul>")
         if ute:
             kropp.append("<h2>Utsolgt</h2><ul class=\"side-liste\">"
                          + "".join(rad(t) for t in ute) + "</ul>")

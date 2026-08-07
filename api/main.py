@@ -160,10 +160,30 @@ SELECT p.id, p.set_id, p.type_id, p.region, s.label AS set_label,
        json_agg(json_build_array(
            l.store_id, l.price_ore,
            CASE WHEN l.in_stock IS TRUE THEN 1
-                WHEN l.in_stock IS FALSE THEN 0 ELSE null END)
-         ORDER BY l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST) AS tilbud,
-       min(l.price_ore) FILTER (WHERE l.in_stock) AS min_pris,
-       count(*) FILTER (WHERE l.in_stock) AS antall_pa_lager,
+                WHEN l.in_stock IS FALSE THEN 0 ELSE null END,
+           l.bestillingstype)
+         -- Ekte lager forst, deretter forhaandssalg, sa pris. Frontenden
+         -- leser tilbud[0] som «billigst kjopbar», og da ma en ekte vare
+         -- alltid sla et forhaandssalg.
+         ORDER BY (l.in_stock AND l.bestillingstype IS NULL) DESC NULLS LAST,
+                  l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST) AS tilbud,
+       -- «Paa lager» betyr na: butikken sier ja, OG det er ikke et
+       -- forhaandssalg eller en bestillingsvare. Se
+       -- katalog/tilgjengelighet.py -- butikkene setter available=true paa
+       -- begge, saa uten dette skillet sto varer du ikke kunne faa som
+       -- «Paa lager», og utloste restock-varsel.
+       min(l.price_ore) FILTER (
+         WHERE l.in_stock AND l.bestillingstype IS NULL) AS min_pris,
+       count(*) FILTER (
+         WHERE l.in_stock AND l.bestillingstype IS NULL) AS antall_pa_lager,
+       -- Egne tall, sa frontenden kan si «kan forhandsbestilles hos 3»
+       -- uten a blande det med ekte lager.
+       count(*) FILTER (
+         WHERE l.in_stock AND l.bestillingstype = 'forhandssalg') AS antall_forhandssalg,
+       count(*) FILTER (
+         WHERE l.in_stock AND l.bestillingstype = 'bestillingsvare') AS antall_bestilling,
+       min(l.price_ore) FILTER (
+         WHERE l.in_stock AND l.bestillingstype IS NOT NULL) AS min_pris_bestilling,
        -- Ett representativt bilde: helst fra en butikk som har varen inne,
        -- ellers hvilken som helst. Frontenden faller tilbake pa egen grafikk
        -- nar dette er null.
@@ -208,7 +228,7 @@ async def snapshot(request: Request):
     return _svar(request, {
         "sist_skannet": kjoring[0]["started_at"] if kjoring else None,
         "skanning_ok": bool(kjoring[0]["ok"]) if kjoring else None,
-        "felt": ["butikk", "pris_ore", "pa_lager"],
+        "felt": ["butikk", "pris_ore", "pa_lager", "bestillingstype"],
         "produkter": produkter,
     }, CACHE_SNAPSHOT)
 
@@ -244,9 +264,11 @@ async def product(request: Request, produkt_id: str):
 
     tilbud = await _hent(
         "SELECT l.store_id, st.name AS store_name, l.title, l.price_ore, "
-        "       l.in_stock, l.url, l.image_url, l.last_seen_at "
+        "       l.in_stock, l.url, l.image_url, l.last_seen_at, l.bestillingstype "
         "FROM listings l JOIN stores st ON st.id = l.store_id "
-        "WHERE l.product_id = %s ORDER BY l.in_stock DESC NULLS LAST, l.price_ore",
+        "WHERE l.product_id = %s "
+        "ORDER BY (l.in_stock AND l.bestillingstype IS NULL) DESC NULLS LAST, "
+        "         l.in_stock DESC NULLS LAST, l.price_ore",
         produkt_id)
     hendelser = await _hent(
         "SELECT kind, store_id, price_ore, prev_price_ore, detected_at "
