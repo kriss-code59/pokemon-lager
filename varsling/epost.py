@@ -58,7 +58,17 @@ def send(til: str, emne: str, tekst: str, html: str | None = None) -> tuple[bool
     req = urllib.request.Request(
         API, data=kropp, method="POST",
         headers={"Authorization": f"Bearer {nokkel}",
-                 "Content-Type": "application/json"})
+                 "Content-Type": "application/json",
+                 "Accept": "application/json",
+                 # MAA settes. Uten den sender urllib
+                 # "User-Agent: Python-urllib/3.x", og Cloudflare -- som
+                 # staar foran api.resend.com -- avviser den signaturen
+                 # med 403 "error code: 1010" FOR Resend i det hele tatt
+                 # ser forespoerselen. Da er domenet verifisert,
+                 # noekkelen gyldig, og loggen hos Resend helt tom, fordi
+                 # kallet aldri kom fram. Det tok en time aa finne
+                 # 2026-08-07.
+                 "User-Agent": "pokepuls/1.0 (+https://pokepuls.no)"})
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             r.read()
@@ -71,6 +81,10 @@ def send(til: str, emne: str, tekst: str, html: str | None = None) -> tuple[bool
             detalj = e.read().decode()[:300]
         except Exception:
             pass
+        if "1010" in detalj:
+            detalj += (" -- dette er Cloudflare, ikke Resend. Kallet ble"
+                       " stoppet paa User-Agent. Sjekk at headeren over"
+                       " fortsatt sendes.")
         return False, f"Resend svarte {e.code}: {detalj}"
     except Exception as e:
         return False, f"{type(e).__name__}: {e}"
