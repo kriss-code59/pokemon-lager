@@ -53,7 +53,7 @@ HENDELSER_SQL = """
 SELECT e.id, e.kind, e.price_ore, e.prev_price_ore, e.detected_at,
        e.product_id, e.store_id, e.listing_id,
        st.name AS store_name,
-       l.title, l.url, l.image_url,
+       l.title, l.url, l.image_url, l.bestillingstype,
        s.label AS set_label, t.label AS type_label, p.region, p.set_id
 FROM events e
 JOIN stores st        ON st.id = e.store_id
