@@ -174,7 +174,15 @@ chmod 755 "$REPO"/deploy/*.sh
 cat > /etc/cron.d/pokepuls <<'EOF'
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin
-# Skanning + ingest hvert 20. minutt. timeout og flock -n er ikke pynt:
+# Skanning + ingest hvert 10. minutt.
+#
+# Var 20 for parallelliseringen halverte rundetiden fra 19 til 9,5 min.
+# Intervallet er taket paa hvor lenge en restock kan sta uoppdaget, saa
+# den slakken var ren tapt ferskhet. flock -n gjor det trygt: tar en
+# runde lenger enn 10 min, hoppes neste over, og vi er tilbake til
+# 20-minutters oppforsel uten at noe henger seg opp.
+#
+# timeout og flock -n er ikke pynt:
 # uten dem blokkerte en hengende kjoring 132 pafolgende i august 2026.
 #
 # /bin/bash foran skriptet er heller ikke pynt. Filer lastet opp gjennom
@@ -182,7 +190,7 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # etter et `chmod 755` setter dem tilbake. Cron ga da "flock: Permission
 # denied" og scraperen sto i 28 timer (2026-08-05). Kaller vi tolken
 # eksplisitt, betyr kjorebiten ingenting.
-*/20 * * * * pokepuls timeout -k 60 2400 flock -n /tmp/pokepuls-scrape.lock /bin/bash /home/pokepuls/pokemon-lager/deploy/pokepuls-cron-scrape.sh >> /home/pokepuls/scrape.log 2>&1
+*/10 * * * * pokepuls timeout -k 60 2400 flock -n /tmp/pokepuls-scrape.lock /bin/bash /home/pokepuls/pokemon-lager/deploy/pokepuls-cron-scrape.sh >> /home/pokepuls/scrape.log 2>&1
 # Dodmannsknapp hvert 15. minutt. EGEN jobb uten delt las, slik at den
 # fortsatt lever nar scraperen henger. Det er hele poenget med den.
 */15 * * * * pokepuls cd /home/pokepuls/pokemon-lager && set -a && . /etc/pokepuls.env && set +a && /home/pokepuls/venv/bin/python overvak/dodmannsknapp.py >> /home/pokepuls/dodmannsknapp.log 2>&1
