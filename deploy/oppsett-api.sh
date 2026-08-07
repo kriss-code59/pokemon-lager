@@ -71,6 +71,10 @@ sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/002_varsler.s
 # 003: glemt passord, feedback og kontosletting -- alt som ma finnes for
 # fremmede kan lage konto her.
 sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/003_deling.sql"
+# 004: forhandssalg og bestillingsvarer skal ikke telle som «pa lager».
+# Etterfyller ogsa de eksisterende radene, sa fiksen er synlig med en gang
+# og ikke forst etter at hver enkelt vare er sett pa nytt.
+sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/004_forhandssalg.sql"
 
 LOGG "4/8 Miljofil"
 if [[ ! -f /etc/pokepuls.env ]]; then
