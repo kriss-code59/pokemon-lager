@@ -32,6 +32,20 @@ STATUS = {
 
 EMOJI = {"restock": "🛒", "ny": "✨", "prisendring": "💸", "utsolgt": "⚫"}
 
+# Naar varen er et forhaandssalg eller en bestillingsvare, er «Paa lager» en
+# loegn -- du kan legge den i kurven, men den kommer ikke i posten i morgen.
+# Vi skjuler den ikke (et forhaandssalg er ofte den beste muligheten som
+# finnes), men varselet ma si HVA det er. Se katalog/tilgjengelighet.py.
+BESTILLING_STATUS = {
+    "forhandssalg": "Forhåndssalg",
+    "bestillingsvare": "Kan bestilles",
+}
+BESTILLING_EMOJI = {"forhandssalg": "📅", "bestillingsvare": "📦"}
+BESTILLING_LINJE = {
+    "forhandssalg": "forhåndsbestilling — kommer ved slipp",
+    "bestillingsvare": "bestillingsvare — butikken skaffer den",
+}
+
 # Under denne grensen regner vi prisen som "ingen pris". Butikkene bruker
 # 1 kr og 0 kr som plassholder for varer som ikke kan kjopes enna.
 MIN_EKTE_PRIS_ORE = 500
@@ -106,8 +120,16 @@ def bygg(hendelse: dict, kontekst: dict) -> dict:
     kind = hendelse.get("kind", "ny")
     butikk = hendelse.get("store_name") or hendelse.get("store_id") or "Ukjent butikk"
     pris = hendelse.get("price_ore")
+    bestilling = hendelse.get("bestillingstype")
 
-    tittel = f"{EMOJI.get(kind, '•')} {butikk}: {STATUS.get(kind, kind)}"
+    # Forhaandssalg og bestillingsvarer far sin egen tittel, men bare naar
+    # varselet handler om at noe ble tilgjengelig. En prisendring paa et
+    # forhaandssalg er fortsatt en prisendring.
+    if bestilling and kind in ("restock", "ny"):
+        tittel = (f"{BESTILLING_EMOJI.get(bestilling, '•')} {butikk}: "
+                  f"{BESTILLING_STATUS[bestilling]}")
+    else:
+        tittel = f"{EMOJI.get(kind, '•')} {butikk}: {STATUS.get(kind, kind)}"
     navn = produktnavn(hendelse.get("set_label"), hendelse.get("type_label"),
                        hendelse.get("region"), hendelse.get("title"))
 
@@ -121,6 +143,13 @@ def bygg(hendelse: dict, kontekst: dict) -> dict:
         linje = f"{kroner(for_)} {pil} {kroner(pris)} · " + vurdering(
             pris, kontekst.get("billigst_na_ore"), kontekst.get("billigst_butikk"),
             kontekst.get("billigst_7d_ore"), kontekst.get("antall_pa_lager", 0))
+    elif bestilling:
+        # Ingen «billigst paa lager»-paastand her: den sammenligner mot varer
+        # du faktisk kan faa naa, og det er ikke det dette er.
+        linje = f"{kroner(pris)} · {BESTILLING_LINJE[bestilling]}"
+        if kontekst.get("antall_pa_lager"):
+            linje += (f" · {kontekst['antall_pa_lager']} har den på lager fra "
+                      f"{kroner(kontekst.get('billigst_na_ore'))}")
     else:
         linje = f"{kroner(pris)} · " + vurdering(
             pris, kontekst.get("billigst_na_ore"), kontekst.get("billigst_butikk"),
@@ -141,6 +170,9 @@ def bygg(hendelse: dict, kontekst: dict) -> dict:
         "tag": f"{hendelse.get('product_id') or hendelse.get('listing_id')}"
                f":{hendelse.get('store_id')}",
         # Restock er det eneste som faktisk haster. Alt annet skal ikke
-        # vibrere telefonen.
-        "hastig": kind in ("restock", "ny"),
+        # vibrere telefonen. En bestillingsvare haster ikke -- den kan
+        # bestilles i morgen ogsaa. Et forhaandssalg haster derimot: det er
+        # der du sikrer deg til veiledende pris for alle andre.
+        "hastig": kind in ("restock", "ny") and bestilling != "bestillingsvare",
+        "bestillingstype": bestilling,
     }

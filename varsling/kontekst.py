@@ -13,6 +13,11 @@ BILLIGST_NA_SQL = """
 SELECT l.price_ore, st.name AS store_name
 FROM listings l JOIN stores st ON st.id = l.store_id
 WHERE l.product_id = %s AND l.in_stock IS TRUE AND l.price_ore >= 500
+  -- Bare ekte lager teller som sammenligningsgrunnlag. Et forhaandssalg
+  -- til 2 699 kr skal ikke gjore at en vare du kan faa i posten i morgen
+  -- til 2 999 kr faar merkelappen «finnes billigere» -- det er ikke det
+  -- samme produktet i tid.
+  AND l.bestillingstype IS NULL
   AND l.last_seen_at > now() - interval '2 days'
 ORDER BY l.price_ore
 """
