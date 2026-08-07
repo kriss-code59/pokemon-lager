@@ -57,9 +57,14 @@ logg "ny kode: ${FOR:0:8} -> ${ETTER:0:8}"
 # kjorende koden staar helt urort mens testene gaar -- feiler de, har vi
 # ikke engang tatt ned API-et et sekund.
 TRE=$(mktemp -d /tmp/pokepuls-test-XXXXXX)
+# mktemp lager mappa som ROOT. `git worktree add` kjores som pokepuls og
+# trenger SKRIVETILGANG -- chmod 755 gir bare lese og gaa-inn-i, og da
+# feiler den med en intetsigende melding. Eierskap, ikke rettigheter.
+chown "$BRUKER:$BRUKER" "$TRE"
 chmod 755 "$TRE"
-if ! sudo -u "$BRUKER" git worktree add -q --detach "$TRE" "$ETTER" 2>/dev/null; then
+if ! FEIL=$(sudo -u "$BRUKER" git worktree add -q --detach "$TRE" "$ETTER" 2>&1); then
   logg "klarte ikke lage arbeidstre -- hopper over deploy"
+  logg "  git sa: $FEIL"
   rmdir "$TRE" 2>/dev/null
   exit 1
 fi
