@@ -2036,6 +2036,12 @@ def skann_playwright_parallelt(sider: list) -> tuple[list, list, dict]:
 
 def main():
     start = time.monotonic()
+    # Ekte starttid. `last_updated` settes naar filen skrives -- altsa NAAR
+    # VI ER FERDIGE -- og ingest brukte den som scrape_runs.started_at.
+    # Varigheten ble derfor alltid null, og admin viste «brukte 0 min»
+    # for hver eneste kjoring. Det er nettopp tallet man trenger for a
+    # se om parallelliseringen hjalp, eller om noe blir tregere.
+    startet_iso = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
     previous_by_url = load_previous_products()
 
     logg(f"Starter: {len(SHOPIFY_STORES)} Shopify-butikker ({SHOPIFY_PARALLELL} "
@@ -2090,6 +2096,14 @@ def main():
         # Helsestatus, sa bade dashbordet og dodmannsknappen kan se om
         # kjoringen faktisk var komplett eller bare delvis vellykket.
         "health": {
+            # Ekte starttid. `last_updated` over settes naar filen SKRIVES,
+            # altsa naar vi er ferdige -- og ingest brukte den som
+            # scrape_runs.started_at. Varigheten ble derfor alltid null, og
+            # admin viste «brukte 0 min» for hver eneste kjoring. Det er
+            # nettopp tallet man trenger for a se om en butikk gjor runden
+            # tregere. MERK: den ma ligge her inne, ikke pa toppnivaa --
+            # ingest leser data["health"]["started_at"].
+            "started_at": startet_iso,
             "failed_stores": failed_stores,
             "carried_forward_stores": carried_stores,
             "store_count": len({p.store for p in all_products}),
