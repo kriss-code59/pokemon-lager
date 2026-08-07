@@ -498,3 +498,45 @@ test("ubekreftet e-post gir en synlig oppfordring", async () => {
   assert.ok($(w, "#send-verifisering"),
             "uten bekreftet e-post kan du ikke fa nytt passord -- si fra om det");
 });
+
+
+/* --------------------------------------- forhandssalg vs ekte lager */
+
+test("forhandssalg teller ikke som pa lager, men skjules heller ikke", async () => {
+  // Regresjon: produktsiden viste tre butikker under «Pa lager» der alle
+  // tre var forhandsbestillinger. Da er varselet en logn.
+  const data = { ...SNAPSHOT, produkter: [
+    { id: "ah:etb:en", set_id: "ah", type_id: "etb", region: "en",
+      set_label: "Ascended Heroes", type_label: "Elite Trainer Box",
+      // [butikk, pris, pa_lager, bestillingstype]
+      tilbud: [["boosterkongen", 269900, 1, "forhandssalg"]],
+      min_pris: null, antall_pa_lager: 0, sist_hendelse: null },
+  ] };
+  const w = await appMed(data);
+  // Kun-pa-lager-filteret er pa som standard, sa den skal vaere borte.
+  assert.equal(alle(w, "#liste .kort").length, 0, "forhandssalg er ikke pa lager");
+
+  // Men sla av filteret, og den skal vises -- med merkelapp, ikke som utsolgt.
+  $(w, '[data-filter="lager"]').dispatchEvent(new w.Event("click", { bubbles: true }));
+  const tekst = $(w, "#liste").textContent;
+  assert.equal(alle(w, "#liste .kort").length, 1);
+  assert.match(tekst, /Forhåndssalg/);
+  assert.match(tekst, /2\s?699 kr/, "prisen skal vises, ikke skjules");
+  assert.doesNotMatch(tekst, /billigst hos/, "et forhandssalg er ikke «billigst pa lager»");
+});
+
+test("ekte lager slar forhandssalg i «billigst hos»", async () => {
+  const data = { ...SNAPSHOT, produkter: [
+    { id: "ah:etb:en", set_id: "ah", type_id: "etb", region: "en",
+      set_label: "Ascended Heroes", type_label: "Elite Trainer Box",
+      tilbud: [["cardcenter", 289900, 1, null],
+               ["boosterkongen", 269900, 1, "forhandssalg"]],
+      min_pris: 289900, antall_pa_lager: 1, sist_hendelse: null },
+  ] };
+  const w = await appMed(data);
+  const tekst = $(w, "#liste").textContent;
+  // 2 699 er billigere, men kan ikke sendes. Da er 2 899 hos Cardcenter
+  // riktig svar pa «hvor far jeg den na».
+  assert.match(tekst, /billigst hos Cardcenter/);
+  assert.match(tekst, /2\s?899 kr/);
+});
