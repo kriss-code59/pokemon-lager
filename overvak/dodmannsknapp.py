@@ -36,10 +36,14 @@ import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Scraperen gar hvert 20. minutt. 60 min uten oppdatering er derfor tre
+# Scraperen gar hvert 10. minutt. 35 min uten oppdatering er derfor tre
 # tapte kjoringer -- utvetydig feil, men romslig nok til at en enkelt treg
 # kjoring ikke utloser falsk alarm.
-MAKS_ALDER_MIN = 60
+#
+# Tallet MAA folge intervallet. Star det pa 60 mens scraperen gar hvert
+# 10., far du en time med stille data for noen sier fra -- og hele poenget
+# med denne filen er at det ikke skal skje.
+MAKS_ALDER_MIN = 35
 
 # Ikke mas: ett varsel per time sa lenge feilen varer.
 VARSEL_INTERVALL_MIN = 60
