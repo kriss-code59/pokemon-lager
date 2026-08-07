@@ -97,7 +97,7 @@ def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld: dict | None,
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=7">
+<link rel="stylesheet" href="/style.css?v=8">
 {ld}
 </head><body class="side">"""
 
