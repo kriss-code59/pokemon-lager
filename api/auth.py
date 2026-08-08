@@ -237,7 +237,18 @@ def monter(app, hent_pool):
                 "LEFT JOIN product_types t ON t.id = p.type_id "
                 "WHERE s.user_id = %s ORDER BY se.label, t.sort_order",
                 (bruker["id"],))
-            return {"folger": await cur.fetchall()}
+            rader = await cur.fetchall()
+            cur = await conn.execute(
+                "SELECT varsel_maks_per_time FROM users WHERE id = %s", (bruker["id"],))
+            kvote = await cur.fetchone()
+        # «alt» er raden uten baade product_id og set_id. Den kunne frontenden
+        # regnet ut selv, men da ville regelen for hva «alt» er ligget to
+        # steder, og det er nettopp den typen duplisering som glir fra
+        # hverandre. Kvoten sendes med fordi knappen lover et konkret tall --
+        # staar det 5 i teksten mens brukeren har 12, er teksten en logn.
+        return {"folger": rader,
+                "alt": any(r["product_id"] is None and r["set_id"] is None for r in rader),
+                "maks_per_time": kvote["varsel_maks_per_time"] if kvote else 5}
 
     @liste_router.post("")
     async def folg(data: Folg, pokepuls_sesjon: str | None = Cookie(None)):

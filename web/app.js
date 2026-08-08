@@ -47,6 +47,8 @@ const state = {
   fane: "produkter",
   bruker: null,        // null = ikke innlogget
   folger: new Map(),   // product_id -> abonnement-id
+  folgerAlt: false,    // «foelg alt»: én rad uten product_id og set_id
+  maksPerTime: 5,      // brukerens timeskvote, hentet fra serveren
   apentProdukt: null,
 };
 
@@ -396,8 +398,14 @@ async function lastFolger() {
   try {
     const d = await hent("/watchlist");
     state.folger = new Map(d.folger.filter((f) => f.product_id).map((f) => [f.product_id, f.id]));
+    // Serveren sier selv om «alt» er paa; vi utleder det ikke av radene.
+    state.folgerAlt = !!d.alt;
+    // Faller tilbake til 5 hvis feltet mangler -- en eldre server skal ikke
+    // gi «du faar maks undefined varsler i timen».
+    state.maksPerTime = d.maks_per_time || 5;
   } catch (e) {
     state.folger = new Map();
+    state.folgerAlt = false;
   }
 }
 
@@ -702,6 +710,59 @@ async function varselSeksjonHtml() {
     '<p class="feil" id="varsel-feil" hidden></p></div>';
 }
 
+/* «Foelg alt».
+ *
+ * Backend har hatt dette siden bolk 3, men uten knapp fantes det ikke for
+ * noen andre enn den som kan skrive en POST for haand.
+ *
+ * Teksten maa si dempingen HOYT, foer trykket. Katalogen ga 433 restock,
+ * 105 prisendringer og 202 utsolgt paa ett doegn. En bruker som tror han
+ * skrur paa «alt» og faar alt, skrur av varsler for godt samme kveld --
+ * og da har du mistet ham, ikke bare denne funksjonen. Lover vi taket
+ * paa forhaand, er 5 i timen en funksjon i stedet for et loftebrudd.
+ *
+ * Boksen staar utenfor varselSeksjonHtml() med vilje: den seksjonen
+ * returnerer tidlig naar nettleseren ikke stotter push eller VAPID mangler,
+ * og abonnementet ditt skal ikke forsvinne fordi Safari er Safari. */
+function folgAltHtml() {
+  const paa = state.folgerAlt;
+  const maks = state.maksPerTime;
+  return '<div class="varselboks"><h3>Følg alt</h3>' +
+    '<p class="hjelp">' + (paa
+      ? "Du følger hele katalogen. Du trenger ikke følge produkter enkeltvis " +
+        "i tillegg — de kommer uansett."
+      : "Slipp å hake av vare for vare. Du får beskjed om alt som kommer på " +
+        "lager, og om nye varer.") + "</p>" +
+    '<p class="hjelp liten">Maks ' + maks + " varsler i timen. Resten samles i " +
+      "ett: «14 andre varer kom på lager». Prisendringer og utsolgt varsler " +
+      "vi ikke om her — det ville vært bakgrunnsstøy. Varer du følger " +
+      "enkeltvis går alltid gjennom, uansett kvote.</p>" +
+    '<button class="hovedknapp' + (paa ? " av" : "") + '" id="folg-alt-knapp" type="button">' +
+      (paa ? "Slutt å følge alt" : "Følg alt") + "</button>" +
+    '<p class="feil" id="folg-alt-feil" hidden></p></div>';
+}
+
+function koblFolgAlt() {
+  const knapp = $("folg-alt-knapp");
+  if (!knapp) return;
+  knapp.addEventListener("click", async () => {
+    knapp.disabled = true;
+    const feil = $("folg-alt-feil");
+    feil.hidden = true;
+    try {
+      await hent("/watchlist/alt", { method: state.folgerAlt ? "DELETE" : "POST" });
+      // Les tilstanden tilbake fra serveren i stedet for aa anta at den ble
+      // som vi ba om. Knappen skal aldri kunne staa og lyve om hva du foelger.
+      await lastFolger();
+      await visKontoSide();
+    } catch (e) {
+      feil.textContent = e.message;
+      feil.hidden = false;
+      knapp.disabled = false;
+    }
+  });
+}
+
 function koblVarselKnapper() {
   const knapp = $("varsel-knapp");
   const feil = $("varsel-feil");
@@ -810,8 +871,10 @@ async function visKontoSide() {
   visArk('<h2>Konto</h2>' +
     '<p class="hjelp">Innlogget som <strong>' + esc(state.bruker.email) + "</strong>" +
     (state.bruker.role !== "free" ? " · " + esc(state.bruker.role) : "") + "</p>" +
-    '<p class="hjelp liten">Du følger ' + state.folger.size + " produkt" +
-      (state.folger.size === 1 ? "" : "er") + ".</p>" +
+    '<p class="hjelp liten">' + (state.folgerAlt
+      ? "Du følger hele katalogen."
+      : "Du følger " + state.folger.size + " produkt" +
+        (state.folger.size === 1 ? "" : "er") + ".") + "</p>" +
     // Ubekreftet e-post er ikke et kosmetisk problem: uten den kan du ikke
     // faa nytt passord, og da er kontoen tapt hvis du glemmer det.
     (ubekreftet
@@ -823,6 +886,7 @@ async function visKontoSide() {
         '<p class="feil" id="ver-feil" hidden></p></div>'
       : "") +
     '<div id="varsel-seksjon"><p class="hjelp liten">Sjekker varsler…</p></div>' +
+    folgAltHtml() +
     feedbackHtml() +
     (state.bruker.role === "admin"
       ? '<a class="lenkeknapp" href="/admin.html">Åpne admin</a>' : "") +
@@ -833,6 +897,7 @@ async function visKontoSide() {
         'style="margin:0;color:var(--tekst-svak)">Slett kontoen min</button></p>');
 
   koblFeedback();
+  koblFolgAlt();
   const ver = $("send-verifisering");
   if (ver) ver.addEventListener("click", async () => {
     ver.disabled = true;

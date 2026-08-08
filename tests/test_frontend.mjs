@@ -66,6 +66,13 @@ const HISTORIKK = {
   ],
 };
 
+/* «Foelg alt» holdes som ekte tilstand i testdobbelen, ikke som et fast
+ * svar. Knappen leser tilstanden tilbake fra serveren etter hvert trykk, og
+ * en dobbel som alltid svarer det samme ville sagt at knappen virker selv om
+ * den aldri sendte noe. KALL gjor det mulig aa se HVA den sendte. */
+let ALT_PAA = false;
+const KALL = [];
+
 /* Frontenden leser svaret med r.text() slik at et tomt svar (204) ikke
  * kaster. Testdobbelen ma derfor tilby text(), ikke bare json(). */
 function svar(url, valg, innlogget) {
@@ -85,10 +92,20 @@ function svar(url, valg, innlogget) {
     ? { innlogget: true, email: "kris@example.no", role: "free",
         epost_bekreftet: true } : { innlogget: false };
   else if (sti.startsWith("/watchlist/snapshot")) data = { produkter: [SNAPSHOT.produkter[0]] };
+  else if (sti.startsWith("/watchlist/alt")) {
+    KALL.push({ sti, metode: (valg && valg.method) || "GET" });
+    if (valg && valg.method === "POST") { ALT_PAA = true; data = { id: 9, paa: true }; }
+    else if (valg && valg.method === "DELETE") { ALT_PAA = false; data = { ok: true, paa: false }; }
+    else data = { paa: ALT_PAA };
+  }
   else if (sti.startsWith("/watchlist")) {
     if (valg && valg.method === "POST") data = { id: 7 };
     else if (valg && valg.method === "DELETE") data = { ok: true };
-    else data = { folger: innlogget ? [{ id: 7, product_id: "pitch-black:booster-box:en" }] : [] };
+    else data = {
+      folger: innlogget ? [{ id: 7, product_id: "pitch-black:booster-box:en" }] : [],
+      alt: innlogget ? ALT_PAA : false,
+      maks_per_time: 5,
+    };
   } else if (sti.startsWith("/auth/")) data = { email: "kris@example.no", role: "free" };
   const kropp = JSON.stringify(data);
   return { ok: data !== null, status: data ? 200 : 404,
@@ -96,6 +113,8 @@ function svar(url, valg, innlogget) {
 }
 
 async function app(innlogget = false) {
+  ALT_PAA = false;
+  KALL.length = 0;
   const dom = new JSDOM(les("index.html"), {
     url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true,
   });
@@ -539,4 +558,106 @@ test("ekte lager slar forhandssalg i «billigst hos»", async () => {
   // riktig svar pa «hvor far jeg den na».
   assert.match(tekst, /billigst hos Cardcenter/);
   assert.match(tekst, /2\s?899 kr/);
+});
+
+/* ------------------------------------------------------------ folg alt */
+
+/* Backend og API for «foelg alt» har vaert ferdig siden bolk 3. Det som
+ * manglet var knappen -- og en funksjon uten inngang finnes ikke for noen
+ * andre enn den som kan skrive en POST for haand. Testene her handler
+ * derfor mest om at loftet i teksten stemmer med det systemet faktisk
+ * gjor, for det er der en slik knapp mister tillit. */
+
+test("kontosiden har en knapp for a folge alt", async () => {
+  const w = await konto(await app(true));
+  const knapp = $(w, "#folg-alt-knapp");
+  assert.ok(knapp, "knappen skal finnes for innloggede");
+  assert.equal(knapp.textContent.trim(), "Følg alt");
+});
+
+test("dempingen staar i teksten FOR du trykker", async () => {
+  // Det viktigste i hele boksen. En bruker som tror «alt» betyr alt, far
+  // 300-500 varsler i dognet og skrur av varsler for godt samme kveld.
+  // Da har du mistet ham, ikke bare funksjonen.
+  const w = await konto(await app(true));
+  const boks = $(w, "#folg-alt-knapp").closest(".varselboks").textContent;
+  assert.match(boks, /Maks 5 varsler i timen/);
+  assert.match(boks, /samles i ett/i);
+  assert.match(boks, /enkeltvis går alltid gjennom/i);
+});
+
+test("teksten viser brukerens egen kvote, ikke tallet 5 hardkodet", async () => {
+  const dom = new JSDOM(les("index.html"), {
+    url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true });
+  dom.window.fetch = async (url, valg) => {
+    const sti = String(url).replace(/^.*\/api/, "");
+    if (sti === "/watchlist") {
+      const d = { folger: [], alt: false, maks_per_time: 12 };
+      const k = JSON.stringify(d);
+      return { ok: true, status: 200, text: async () => k, json: async () => d };
+    }
+    return svar(url, valg, true);
+  };
+  dom.window.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 40));
+  await konto(dom.window);
+  assert.match($(dom.window, "#folg-alt-knapp").closest(".varselboks").textContent,
+               /Maks 12 varsler i timen/);
+});
+
+test("knappen sender POST /watchlist/alt og bytter til av-tilstand", async () => {
+  const w = await konto(await app(true));
+  $(w, "#folg-alt-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  assert.deepEqual(KALL, [{ sti: "/watchlist/alt", metode: "POST" }]);
+  const knapp = $(w, "#folg-alt-knapp");
+  assert.equal(knapp.textContent.trim(), "Slutt å følge alt");
+  assert.ok(knapp.classList.contains("av"));
+});
+
+test("trykk nummer to skrur det av igjen", async () => {
+  const w = await konto(await app(true));
+  $(w, "#folg-alt-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  $(w, "#folg-alt-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  assert.deepEqual(KALL.map((k) => k.metode), ["POST", "DELETE"]);
+  assert.equal($(w, "#folg-alt-knapp").textContent.trim(), "Følg alt");
+});
+
+test("naar du folger alt sier kontosiden det, ikke 'du folger 1 produkt'", async () => {
+  const w = await konto(await app(true));
+  $(w, "#folg-alt-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  const tekst = $(w, "#ark-innhold").textContent;
+  assert.match(tekst, /Du følger hele katalogen/);
+  assert.doesNotMatch(tekst, /Du følger 1 produkt/);
+});
+
+test("boksen overlever at nettleseren ikke stotter push", async () => {
+  // jsdom har ingen serviceWorker, sa push.stottes() er alltid false her --
+  // varselseksjonen returnerer tidlig med «stotter ikke varsler». Ligger
+  // «folg alt» inni den seksjonen, forsvinner den samtidig. Den skal ikke:
+  // abonnementet ditt er ikke Safaris ansvar.
+  const w = await konto(await app(true));
+  assert.match($(w, "#varsel-seksjon").textContent, /støtter ikke varsler/,
+               "forutsetningen: push er ikke tilgjengelig i denne testen");
+  assert.ok($(w, "#folg-alt-knapp"), "knappen skal staa likevel");
+});
+
+test("en feil fra serveren vises, og knappen kan proves igjen", async () => {
+  const w = await konto(await app(true));
+  w.fetch = async (url, valg) => {
+    if (String(url).includes("/watchlist/alt")) {
+      const k = JSON.stringify({ detail: "Ikke innlogget" });
+      return { ok: false, status: 401, text: async () => k,
+               json: async () => JSON.parse(k) };
+    }
+    return svar(url, valg, true);
+  };
+  $(w, "#folg-alt-knapp").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 60));
+  assert.equal($(w, "#folg-alt-feil").hidden, false);
+  assert.match($(w, "#folg-alt-feil").textContent, /Ikke innlogget/);
+  assert.equal($(w, "#folg-alt-knapp").disabled, false, "skal kunne proves igjen");
 });
