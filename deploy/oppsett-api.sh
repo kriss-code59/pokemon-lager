@@ -75,6 +75,7 @@ sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/003_deling.sq
 # Etterfyller ogsa de eksisterende radene, sa fiksen er synlig med en gang
 # og ikke forst etter at hver enkelt vare er sett pa nytt.
 sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/004_forhandssalg.sql"
+sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/005_folg_alt.sql"
 
 LOGG "4/8 Miljofil"
 if [[ ! -f /etc/pokepuls.env ]]; then

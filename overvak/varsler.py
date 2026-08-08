@@ -66,14 +66,40 @@ WHERE e.id > %s
 ORDER BY e.id
 """
 
-# Hvem foelger dette? Enten produktet direkte, eller hele settet.
+# Hvem foelger dette? Produktet, hele settet, eller ALT (begge NULL).
+#
+# `spesifikk` avgjor om timeskvoten gjelder. Har du bedt om akkurat DENNE
+# varen, skal du faa den uansett hvor mye annet som skjer -- kvoten er der
+# for aa temme «foelg alt», ikke for aa holde tilbake noe du har valgt selv.
+# Traff en bruker baade spesifikt og via «alt», vinner det spesifikke.
 ABONNENTER_SQL = """
-SELECT DISTINCT u.id, u.email, u.varsel_stille_natt, u.varsel_maks_pris_ore
+SELECT u.id, u.email, u.varsel_stille_natt, u.varsel_maks_pris_ore,
+       u.varsel_maks_per_time,
+       bool_or(sub.product_id IS NOT NULL OR sub.set_id IS NOT NULL) AS spesifikk
 FROM subscriptions sub
 JOIN users u ON u.id = sub.user_id
 WHERE %s = ANY(sub.kinds)
   AND (   (sub.product_id IS NOT NULL AND sub.product_id = %s)
-       OR (sub.set_id     IS NOT NULL AND sub.set_id     = %s))
+       OR (sub.set_id     IS NOT NULL AND sub.set_id     = %s)
+       OR (sub.product_id IS NULL     AND sub.set_id IS NULL))
+GROUP BY u.id, u.email, u.varsel_stille_natt, u.varsel_maks_pris_ore,
+         u.varsel_maks_per_time
+"""
+
+# Henter kvoten og nullstiller den hvis klokketimen har rullet over.
+# Nullstillingen skjer i SAMME setning som lesingen, slik at to samtidige
+# kjoringer ikke kan se hver sin halvgamle telling.
+KVOTE_SQL = """
+INSERT INTO varsel_kvote (user_id) VALUES (%s)
+ON CONFLICT (user_id) DO UPDATE SET
+  time_start = GREATEST(varsel_kvote.time_start, date_trunc('hour', now())),
+  sendt  = CASE WHEN varsel_kvote.time_start < date_trunc('hour', now())
+                THEN 0 ELSE varsel_kvote.sendt END,
+  dempet = CASE WHEN varsel_kvote.time_start < date_trunc('hour', now())
+                THEN 0 ELSE varsel_kvote.dempet END,
+  dempet_tekst = CASE WHEN varsel_kvote.time_start < date_trunc('hour', now())
+                      THEN '{}'::TEXT[] ELSE varsel_kvote.dempet_tekst END
+RETURNING sendt, dempet
 """
 
 ENHETER_SQL = """
@@ -86,6 +112,63 @@ def er_natt(na: datetime | None = None) -> bool:
     return time >= NATT_FRA or time < NATT_TIL
 
 
+def kort_navn(varsel: dict) -> str:
+    """Forste linje av kroppen -- produktnavnet. Det er det eneste som
+    gir mening i en samleliste; butikk og pris varierer per rad."""
+    return (varsel.get("body") or "").split("\n")[0][:60]
+
+
+def samletekst(antall: int, navn: list[str]) -> dict:
+    """Ett varsel som staar for mange.
+
+    Tallet forst, fordi det er det som forteller deg om du bor apne
+    Pokepuls naa eller etter middag. Navnene under, saa du kan se om noe
+    du faktisk venter paa er blant dem.
+    """
+    vist = [n for n in navn if n][:3]
+    kropp = " · ".join(vist) if vist else "Se alle på pokepuls.no"
+    if antall > len(vist) and vist:
+        kropp += f" · og {antall - len(vist)} til"
+    return {
+        "title": f"🛒 {antall} flere varer kom inn",
+        "body": kropp,
+        "url": "https://pokepuls.no/",
+        "produkt_url": "https://pokepuls.no/",
+        "bilde": None,
+        "kind": "samle",
+        # Fast tag: et nyere samlevarsel erstatter det forrige i stedet
+        # for aa stable seg opp time etter time.
+        "tag": "pokepuls:samle",
+        # Et sammendrag haster per definisjon ikke. Hadde det hastet,
+        # ville det vaert sendt enkeltvis.
+        "hastig": False,
+        "bestillingstype": None,
+    }
+
+
+def send_samlevarsel(cur, sender, natt: bool) -> int:
+    """-> antall brukere som fikk et sammendrag."""
+    cur.execute("SELECT k.user_id, k.dempet, k.dempet_tekst, u.varsel_stille_natt "
+                "FROM varsel_kvote k JOIN users u ON u.id = k.user_id "
+                "WHERE k.dempet > 0")
+    sendt = 0
+    for rad in cur.fetchall():
+        # Nullstill uansett. Et sammendrag som ikke ble sendt fordi det er
+        # natt, skal ikke dukke opp klokka sju som gammelt nytt.
+        cur.execute("UPDATE varsel_kvote SET dempet = 0, dempet_tekst = '{}' "
+                    "WHERE user_id = %s", (rad["user_id"],))
+        if natt and rad["varsel_stille_natt"]:
+            continue
+        varsel = samletekst(rad["dempet"], list(rad["dempet_tekst"] or []))
+        cur.execute(ENHETER_SQL, (rad["user_id"],))
+        for enhet in cur.fetchall():
+            ok, _feil, _status = sender.send(enhet, varsel)
+            if ok:
+                sendt += 1
+                break
+    return sendt
+
+
 def sett_vannmerke(cur, event_id: int) -> None:
     cur.execute(
         "UPDATE varsel_tilstand SET siste_event_id = %s, sist_kjort_at = now() "
@@ -94,7 +177,8 @@ def sett_vannmerke(cur, event_id: int) -> None:
 
 def kjor(dsn: str = DSN, torrkjor: bool = False, verbose: bool = True) -> dict:
     stat = {"vurdert": 0, "kandidater": 0, "sendt": 0, "feilet": 0,
-            "hoppet_natt": 0, "hoppet_pris": 0, "doede_enheter": 0, "storm": False}
+            "hoppet_natt": 0, "hoppet_pris": 0, "doede_enheter": 0,
+            "dempet": 0, "samlevarsler": 0, "storm": False}
 
     with psycopg.connect(dsn, row_factory=dict_row, autocommit=False) as conn:
         with conn.cursor() as cur:
@@ -158,6 +242,24 @@ def kjor(dsn: str = DSN, torrkjor: bool = False, verbose: bool = True) -> dict:
                         stat["hoppet_pris"] += 1
                         continue
 
+                    # Timeskvoten. Gjelder bare den som har bedt om ALT --
+                    # se ABONNENTER_SQL. Er taket naadd, teller vi hendelsen
+                    # som dempet og sender ett samlevarsel til slutt i
+                    # stedet. Vannmerket flyttes uansett, saa den kommer
+                    # aldri tilbake som et nytt varsel senere.
+                    if not bruker["spesifikk"]:
+                        cur.execute(KVOTE_SQL, (bruker["id"],))
+                        kvote = cur.fetchone()
+                        maks = bruker["varsel_maks_per_time"] or 5
+                        if kvote["sendt"] >= maks:
+                            cur.execute(
+                                "UPDATE varsel_kvote SET dempet = dempet + 1, "
+                                "dempet_tekst = (dempet_tekst || ARRAY[%s])[1:5] "
+                                "WHERE user_id = %s",
+                                (kort_navn(varsel), bruker["id"]))
+                            stat["dempet"] += 1
+                            continue
+
                     # Reserver plassen FOR vi sender. Feiler utsendingen,
                     # staar raden igjen med ok=false -- da vet vi at det
                     # skjedde, og vi sender likevel ikke det samme paa nytt.
@@ -204,11 +306,20 @@ def kjor(dsn: str = DSN, torrkjor: bool = False, verbose: bool = True) -> dict:
                                             (feil, enhet["id"]))
                     if noen_ok:
                         stat["sendt"] += 1
+                        if not bruker["spesifikk"]:
+                            cur.execute("UPDATE varsel_kvote SET sendt = sendt + 1 "
+                                        "WHERE user_id = %s", (bruker["id"],))
                     else:
                         stat["feilet"] += 1
                         cur.execute("UPDATE notifications_sent SET ok = FALSE, feil = %s "
                                     "WHERE user_id = %s AND event_id = %s",
                                     (siste_feil, bruker["id"], h["id"]))
+
+            # Ett samlevarsel per bruker som ble dempet. Det sendes til
+            # slutt, naar vi vet hvor mange det ble -- ikke underveis, der
+            # vi bare ville visst om det forste.
+            if not torrkjor:
+                stat["samlevarsler"] = send_samlevarsel(cur, sender, natt)
 
             if not torrkjor:
                 sett_vannmerke(cur, hoyeste)

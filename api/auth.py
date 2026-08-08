@@ -262,6 +262,44 @@ def monter(app, hent_pool):
                 (bruker["id"], data.product_id, data.set_id, kinds))
             return {"id": (await cur.fetchone())["id"], "oppdatert": False}
 
+    # MAA staa FOR /{abonnement_id}. FastAPI matcher i den rekkefolgen
+    # rutene er deklarert, og "alt" ville ellers blitt forsokt tolket som
+    # et tall og gitt 422.
+    @liste_router.post("/alt")
+    async def folg_alt(pokepuls_sesjon: str | None = Cookie(None)):
+        """Foelg hele katalogen.
+
+        Lagres som EN rad med baade product_id og set_id NULL, ikke som
+        3 900 rader. Ellers ville en enkelt bruker fylt tabellen, og
+        avfoelging blitt en sletting av tusenvis av rader.
+
+        Dempingen skjer i varslingsloypa, ikke her: se
+        overvak/varsler.py. Uten den ville dette gitt 300-500 varsler i
+        doegnet, og du hadde skrudd av varsler samme kveld.
+        """
+        pool = hent_pool()
+        bruker = _krev(await hent_bruker(pool, pokepuls_sesjon))
+        async with pool.connection() as conn:
+            cur = await conn.execute(
+                "INSERT INTO subscriptions (user_id, product_id, set_id, kinds) "
+                "VALUES (%s, NULL, NULL, %s) "
+                "ON CONFLICT (user_id) WHERE product_id IS NULL AND set_id IS NULL "
+                "DO UPDATE SET kinds = EXCLUDED.kinds RETURNING id",
+                (bruker["id"], ["restock", "ny"]))
+            return {"id": (await cur.fetchone())["id"], "paa": True}
+
+    @liste_router.delete("/alt")
+    async def slutt_folg_alt(pokepuls_sesjon: str | None = Cookie(None)):
+        pool = hent_pool()
+        bruker = _krev(await hent_bruker(pool, pokepuls_sesjon))
+        async with pool.connection() as conn:
+            await conn.execute(
+                "DELETE FROM subscriptions WHERE user_id = %s "
+                "AND product_id IS NULL AND set_id IS NULL", (bruker["id"],))
+        # Ikke 404 hvis den ikke fantes: aa skru av noe som allerede er av
+        # er ikke en feil, og knappen skal ikke kunne komme ut av synk.
+        return {"ok": True, "paa": False}
+
     @liste_router.delete("/{abonnement_id}")
     async def slutt_a_folge(abonnement_id: int,
                             pokepuls_sesjon: str | None = Cookie(None)):
