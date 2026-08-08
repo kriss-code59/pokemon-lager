@@ -8,43 +8,30 @@ en lasseskjerm pa to sekunder.
 
 Formatet:
 
-    Mythic: Paa lager
-    Prismatic Evolutions / Booster Bundle
-    1 399 kr - billigst paa lager
+    Naa inne hos Mythic
+    Prismatic Evolutions - Booster Bundle
+    1 399 kr - ingen har den billigere
 
-Tittelen svarer paa HVOR og HVA SKJEDDE. Forste linje svarer paa HVA.
+Tittelen sier hva som SKJEDDE, ikke hva noe ER. Det er forskjellen paa
+"Mythic: Paa lager" og "Naa inne hos Mythic": den forste er en tilstand du
+maa tolke, den andre er en beskjed. Paa en laaseskjerm rekker du bare den
+ene linjen, og da skal den vaere en beskjed.
+
 Andre linje svarer paa det eneste spoersmaalet som avgjoer om du klikker:
-ER DETTE EN GOD PRIS? Uten den siste linjen maa du aapne siden for aa vite
-om varselet var verdt aa faa, og da har varselet ikke spart deg for noe.
+ER DETTE EN GOD PRIS? Uten den maa du aapne siden for aa vite om varselet
+var verdt aa faa, og da har varselet ikke spart deg for noe.
+
+Ordlyden er bevisst norsk og muntlig ("naa inne hos", "ingen har den
+billigere") framfor etikettpreget ("paa lager", "billigst"). Det er den
+samme informasjonen; det er ikke den samme stemmen.
 """
 from __future__ import annotations
 
 REGION_MERKE = {"en": "", "jp": "JP", "cn": "CN", "ko": "KR"}
 
-# Tittelens hoyre side. "Paa lager" dekker bade forste gang vi ser varen og
-# at den kom tilbake -- for en kjoper er det samme beskjed.
-STATUS = {
-    "restock": "På lager",
-    "ny": "På lager",
-    "prisendring": "Ny pris",
-    "utsolgt": "Utsolgt",
-}
+EMOJI = {"restock": "🛒", "ny": "🛒", "prisendring": "💸", "utsolgt": "⚫"}
 
-EMOJI = {"restock": "🛒", "ny": "✨", "prisendring": "💸", "utsolgt": "⚫"}
-
-# Naar varen er et forhaandssalg eller en bestillingsvare, er «Paa lager» en
-# loegn -- du kan legge den i kurven, men den kommer ikke i posten i morgen.
-# Vi skjuler den ikke (et forhaandssalg er ofte den beste muligheten som
-# finnes), men varselet ma si HVA det er. Se katalog/tilgjengelighet.py.
-BESTILLING_STATUS = {
-    "forhandssalg": "Forhåndssalg",
-    "bestillingsvare": "Kan bestilles",
-}
 BESTILLING_EMOJI = {"forhandssalg": "📅", "bestillingsvare": "📦"}
-BESTILLING_LINJE = {
-    "forhandssalg": "forhåndsbestilling — kommer ved slipp",
-    "bestillingsvare": "bestillingsvare — butikken skaffer den",
-}
 
 # Under denne grensen regner vi prisen som "ingen pris". Butikkene bruker
 # 1 kr og 0 kr som plassholder for varer som ikke kan kjopes enna.
@@ -62,12 +49,18 @@ def kroner(ore: int | None) -> str:
     return tall + " kr"
 
 
+def _antall_ord(n: int) -> str:
+    """'fire andre' leses raskere enn '4 andre' i en setning."""
+    return {2: "to", 3: "tre", 4: "fire", 5: "fem", 6: "seks",
+            7: "sju", 8: "åtte", 9: "ni"}.get(n, str(n))
+
+
 def produktnavn(set_label: str | None, type_label: str | None,
                 region: str | None = None, tittel: str | None = None) -> str:
-    """'Prismatic Evolutions / Booster Bundle' -- samme rekkefolge som i
+    """'Prismatic Evolutions - Booster Bundle' -- samme rekkefolge som i
     hodet ditt: hvilket sett, sa hvilken eske."""
     if set_label and type_label:
-        navn = f"{set_label} / {type_label}"
+        navn = f"{set_label} · {type_label}"
         merke = REGION_MERKE.get(region or "en", "")
         return f"{navn} ({merke})" if merke else navn
     # Umatchet vare: butikkens egen tittel er alt vi har. Kort den ned, ellers
@@ -93,25 +86,26 @@ def vurdering(pris_ore: int | None, billigst_na_ore: int | None,
     if (billigst_na_ore is not None
             and billigst_na_ore >= MIN_EKTE_PRIS_ORE
             and billigst_na_ore < pris_ore):
-        hos = f" hos {billigst_butikk}" if billigst_butikk else ""
-        return f"⚠️ finnes billigere: {kroner(billigst_na_ore)}{hos}"
+        if billigst_butikk:
+            return f"men {billigst_butikk} har den til {kroner(billigst_na_ore)}"
+        return f"finnes til {kroner(billigst_na_ore)} et annet sted"
 
     # Vi er billigst av dem som har den inne -- men bare verdt aa si hvis
     # det finnes noen aa vaere billigst enn.
     if antall_pa_lager > 1:
-        return "✅ billigst på lager"
+        return "ingen har den billigere"
 
-    # Eneste butikk med varen inne. Da er historikken det eneste maalestokken.
+    # Eneste butikk med varen inne. Da er historikken den eneste maalestokken.
     if billigst_7d_ore is not None and billigst_7d_ore >= MIN_EKTE_PRIS_ORE:
         if pris_ore <= billigst_7d_ore:
-            return "🔥 laveste pris siste 7 døgn"
-        return f"billigst kjøpbar siste 7 døgn: {kroner(billigst_7d_ore)}"
+            return "laveste på en uke"
+        return f"billigere for noen dager siden: {kroner(billigst_7d_ore)}"
 
-    return "✅ eneste butikk med varen inne"
+    return "eneste butikk med varen inne"
 
 
 def bygg(hendelse: dict, kontekst: dict) -> dict:
-    """-> {'title', 'body', 'url', 'tag', 'kind', 'krever_handling'}
+    """-> {'title', 'body', 'url', 'tag', 'kind', 'hastig', ...}
 
     `hendelse` er en rad fra events med butikk- og produktnavn slaatt opp.
     `kontekst` er prisbildet: billigst_na_ore, billigst_butikk,
@@ -121,39 +115,54 @@ def bygg(hendelse: dict, kontekst: dict) -> dict:
     butikk = hendelse.get("store_name") or hendelse.get("store_id") or "Ukjent butikk"
     pris = hendelse.get("price_ore")
     bestilling = hendelse.get("bestillingstype")
+    andre = kontekst.get("antall_pa_lager") or 0
 
+    navn = produktnavn(hendelse.get("set_label"), hendelse.get("type_label"),
+                       hendelse.get("region"), hendelse.get("title"))
+
+    # ---------------------------------------------------------- forhaandssalg
     # Forhaandssalg og bestillingsvarer far sin egen tittel, men bare naar
     # varselet handler om at noe ble tilgjengelig. En prisendring paa et
     # forhaandssalg er fortsatt en prisendring.
     if bestilling and kind in ("restock", "ny"):
-        tittel = (f"{BESTILLING_EMOJI.get(bestilling, '•')} {butikk}: "
-                  f"{BESTILLING_STATUS[bestilling]}")
-    else:
-        tittel = f"{EMOJI.get(kind, '•')} {butikk}: {STATUS.get(kind, kind)}"
-    navn = produktnavn(hendelse.get("set_label"), hendelse.get("type_label"),
-                       hendelse.get("region"), hendelse.get("title"))
+        if bestilling == "forhandssalg":
+            tittel = "📅 Åpnet for forhåndsbestilling"
+            linje = f"{kroner(pris)} hos {butikk} — kommer ved slipp"
+        else:
+            tittel = f"📦 Kan bestilles hos {butikk}"
+            linje = f"{kroner(pris)} — butikken skaffer den"
+        # Ingen «ingen har den billigere» her: den sammenligner mot varer du
+        # faktisk kan faa naa, og det er ikke det dette er.
+        if andre:
+            linje += (f" · {_antall_ord(andre)} har den inne fra "
+                      f"{kroner(kontekst.get('billigst_na_ore'))}")
 
-    if kind == "utsolgt":
-        linje = "utsolgt hos denne butikken"
-        if kontekst.get("antall_pa_lager"):
-            linje += f" · fortsatt inne hos {kontekst['antall_pa_lager']} andre"
+    # ---------------------------------------------------------------- utsolgt
+    elif kind == "utsolgt":
+        tittel = f"⚫ Tomt hos {butikk}"
+        linje = (f"{_antall_ord(andre).capitalize()} andre har den fortsatt inne"
+                 if andre else "Ingen andre har den inne heller")
+
+    # ------------------------------------------------------------ prisendring
     elif kind == "prisendring":
         for_ = hendelse.get("prev_price_ore")
-        pil = "↓" if (for_ and pris and pris < for_) else "↑"
-        linje = f"{kroner(for_)} {pil} {kroner(pris)} · " + vurdering(
+        if for_ and pris:
+            diff = abs(for_ - pris)
+            retning = "Ned" if pris < for_ else "Opp"
+            tittel = f"💸 {retning} {kroner(diff)} hos {butikk}"
+        else:
+            tittel = f"💸 Ny pris hos {butikk}"
+        pil = "→"
+        linje = f"{kroner(for_)} {pil} {kroner(pris)} — " + vurdering(
             pris, kontekst.get("billigst_na_ore"), kontekst.get("billigst_butikk"),
-            kontekst.get("billigst_7d_ore"), kontekst.get("antall_pa_lager", 0))
-    elif bestilling:
-        # Ingen «billigst paa lager»-paastand her: den sammenligner mot varer
-        # du faktisk kan faa naa, og det er ikke det dette er.
-        linje = f"{kroner(pris)} · {BESTILLING_LINJE[bestilling]}"
-        if kontekst.get("antall_pa_lager"):
-            linje += (f" · {kontekst['antall_pa_lager']} har den på lager fra "
-                      f"{kroner(kontekst.get('billigst_na_ore'))}")
+            kontekst.get("billigst_7d_ore"), andre)
+
+    # ------------------------------------------------------- restock og nytt
     else:
-        linje = f"{kroner(pris)} · " + vurdering(
+        tittel = f"🛒 Nå inne hos {butikk}"
+        linje = f"{kroner(pris)} — " + vurdering(
             pris, kontekst.get("billigst_na_ore"), kontekst.get("billigst_butikk"),
-            kontekst.get("billigst_7d_ore"), kontekst.get("antall_pa_lager", 0))
+            kontekst.get("billigst_7d_ore"), andre)
 
     return {
         "title": tittel,

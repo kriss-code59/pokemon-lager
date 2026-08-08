@@ -116,11 +116,11 @@ def test_varsel_om_forhandssalg_sier_ikke_paa_lager():
              dict(billigst_na_ore=None, billigst_butikk=None,
                   billigst_7d_ore=None, antall_pa_lager=0))
     assert "På lager" not in v["title"]
-    assert "Forhåndssalg" in v["title"]
-    assert "forhåndsbestilling" in v["body"]
+    assert "forhåndsbestilling" in v["title"]
+    assert "kommer ved slipp" in v["body"]
     # Ingen «billigst paa lager»-paastand: den sammenligner mot varer du
     # faktisk kan faa naa.
-    assert "billigst på lager" not in v["body"]
+    assert "ingen har den billigere" not in v["body"]
 
 
 def test_forhandssalg_naevner_hvem_som_har_den_ekte():
@@ -131,7 +131,7 @@ def test_forhandssalg_naevner_hvem_som_har_den_ekte():
                   product_id="ah:etb:en", bestillingstype=FORHANDSSALG),
              dict(billigst_na_ore=249900, billigst_butikk="Cardcenter",
                   billigst_7d_ore=249900, antall_pa_lager=2))
-    assert "2 har den på lager" in v["body"].replace(" ", " ")
+    assert "to har den inne" in v["body"].replace(" ", " ")
 
 
 def test_bestillingsvare_haster_ikke():
@@ -158,5 +158,5 @@ def test_prisendring_paa_forhandssalg_er_fortsatt_en_prisendring():
                   bestillingstype=FORHANDSSALG),
              dict(billigst_na_ore=90000, billigst_butikk="X",
                   billigst_7d_ore=90000, antall_pa_lager=1))
-    assert "Ny pris" in v["title"]
-    assert "↓" in v["body"]
+    assert "Ned" in v["title"]
+    assert "→" in v["body"]

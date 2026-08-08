@@ -104,8 +104,8 @@ def test_varselet_kan_dekrypteres_av_mottakeren(pushtjeneste, abonnement, nokler
         auth_secret=base64.urlsafe_b64decode(auth + "=="),
     )
     d = json.loads(klartekst)
-    assert d["title"] == "🛒 Mythic: På lager"
-    assert "Prismatic Evolutions / Booster Bundle" in d["body"]
+    assert d["title"] == "🛒 Nå inne hos Mythic"
+    assert "Prismatic Evolutions · Booster Bundle" in d["body"]
     # Lenken ma gaa til butikken. Gaar den til oss, har brukeren tapt de
     # sekundene varselet skulle spare dem for.
     assert d["url"] == "https://mythic.no/x"

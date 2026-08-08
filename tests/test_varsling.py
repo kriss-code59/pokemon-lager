@@ -55,7 +55,7 @@ def test_desimaler_bruker_komma():
 
 def test_produktnavn_uten_regionmerke_for_engelsk():
     assert produktnavn("Prismatic Evolutions", "Booster Bundle", "en") == \
-        "Prismatic Evolutions / Booster Bundle"
+        "Prismatic Evolutions · Booster Bundle"
 
 
 def test_produktnavn_merker_japansk():
@@ -77,21 +77,21 @@ def test_lang_tittel_kortes_ned():
 
 def test_billigst_naar_flere_har_den_inne():
     assert vurdering(139900, 139900, "Mythic", 139900, antall_pa_lager=3) == \
-        "✅ billigst på lager"
+        "ingen har den billigere"
 
 
 def test_sier_ifra_naar_noen_er_billigere():
     ut = n(vurdering(104900, 89900, "Kanoncon", 89900, antall_pa_lager=4))
-    assert "finnes billigere" in ut and "899 kr" in ut and "Kanoncon" in ut
+    assert "har den til" in ut and "899 kr" in ut and "Kanoncon" in ut
 
 
 def test_eneste_butikk_sammenlignes_med_historikk():
     ut = n(vurdering(129900, 129900, "Pokestore", 99900, antall_pa_lager=1))
-    assert "siste 7 døgn" in ut and "999 kr" in ut
+    assert "noen dager siden" in ut and "999 kr" in ut
 
 
 def test_laveste_pris_paa_en_uke_markeres():
-    assert "laveste pris" in vurdering(149900, 149900, "Emken", 159900,
+    assert "laveste" in vurdering(149900, 149900, "Emken", 159900,
                                        antall_pa_lager=1)
 
 
@@ -105,14 +105,14 @@ def test_plassholderpris_gir_ingen_falsk_paastand():
 def test_billigere_alternativ_med_plassholderpris_ignoreres():
     # En annen butikk med 1 kr er ikke "billigere" -- den er ikke i salg.
     ut = vurdering(139900, 100, "Rar Butikk", None, antall_pa_lager=2)
-    assert "finnes billigere" not in ut
+    assert "har den til" not in ut
 
 
 def test_en_butikk_alene_paastaar_ikke_billigst():
     # "billigst på lager" er meningslost naar det ikke finnes noen a vaere
     # billigst enn -- og det hoeres ut som en anbefaling.
     ut = vurdering(139900, 139900, "Mythic", None, antall_pa_lager=1)
-    assert ut == "✅ eneste butikk med varen inne"
+    assert ut == "eneste butikk med varen inne"
 
 
 # -------------------------------------------------------------------- bygg
@@ -135,14 +135,14 @@ def _k(**kw):
 
 def test_tittel_har_butikk_og_status():
     v = bygg(_h(), _k())
-    assert v["title"] == "🛒 Mythic: På lager"
+    assert v["title"] == "🛒 Nå inne hos Mythic"
 
 
 def test_kroppen_har_produkt_paa_forste_linje_og_pris_paa_andre():
     v = bygg(_h(), _k())
     forste, andre = n(v["body"]).split("\n")
-    assert forste == "Prismatic Evolutions / Booster Bundle"
-    assert andre.startswith("1 399 kr · ")
+    assert forste == "Prismatic Evolutions · Booster Bundle"
+    assert andre.startswith("1 399 kr — ")
 
 
 def test_lenken_gaar_til_butikken_ikke_til_oss():
@@ -157,18 +157,21 @@ def test_produktlenken_finnes_som_alternativ():
 def test_prisendring_viser_gammel_og_ny_pris():
     v = bygg(_h(kind="prisendring", price_ore=239900, prev_price_ore=289900),
              _k(billigst_na_ore=239900))
-    assert "2 899 kr ↓ 2 399 kr" in n(v["body"])
+    # Retningen staar i TITTELEN ("Ned 500 kr"), ikke som en pil i kroppen.
+    # Da slipper kroppen aa gjenta noe du allerede har lest.
+    assert "2 899 kr → 2 399 kr" in n(v["body"])
+    assert "Ned" in v["title"] and "500 kr" in n(v["title"])
 
 
 def test_prisokning_far_pil_opp():
     v = bygg(_h(kind="prisendring", price_ore=289900, prev_price_ore=239900),
              _k(billigst_na_ore=289900))
-    assert "↑" in v["body"]
+    assert "Opp" in v["title"] and "500 kr" in n(v["title"])
 
 
 def test_utsolgt_sier_hvor_mange_andre_som_har_den():
     v = bygg(_h(kind="utsolgt"), _k(antall_pa_lager=2))
-    assert "fortsatt inne hos 2 andre" in v["body"]
+    assert "To andre har den fortsatt inne" in v["body"]
 
 
 def test_bare_restock_og_ny_er_hastig():
