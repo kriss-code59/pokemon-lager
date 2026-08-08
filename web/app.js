@@ -611,13 +611,64 @@ const push = {
   },
 };
 
+/* Installasjonshjelp.
+ *
+ * Ordene "PWA", "progressive web app" og "service worker" skal ALDRI staa i
+ * denne teksten. Folk som trenger den vet ikke hva det betyr, og de som vet
+ * hva det betyr trenger den ikke. Teksten sier én ting: legg Pokepuls paa
+ * hjemskjermen, saa virker varsler.
+ *
+ * Paa iPhone er dette ikke et tips, det er et krav. Safari nekter aa sende
+ * push til vanlige nettsider. Staar ikke det rett ut, tror folk at varslene
+ * er odelagte. */
+function installerHjelpHtml() {
+  const paa = push.paaHjemskjerm();
+  return "<h2>Slik får du varsler på telefonen</h2>" +
+    (paa
+      ? '<p class="side-status inne">Pokepuls ligger allerede på hjemskjermen ' +
+        "din. Da er du klar — varsler virker herfra.</p>"
+      : '<p class="hjelp">Pokepuls må ligge på hjemskjermen for å kunne sende ' +
+        "deg varsler. Det tar et halvt minutt, og du laster ikke ned noe.</p>") +
+
+    "<h3>iPhone og iPad</h3><ol class=\"side-liste-tekst\">" +
+    "<li>Åpne pokepuls.no i <strong>Safari</strong>. Chrome på iPhone kan " +
+      "ikke gjøre dette.</li>" +
+    "<li>Trykk <strong>Del</strong> nederst på skjermen — firkanten med en " +
+      "pil opp.</li>" +
+    "<li>Bla nedover i lista og velg <strong>Legg til på Hjem-skjerm</strong>.</li>" +
+    "<li>Trykk <strong>Legg til</strong> øverst til høyre.</li>" +
+    "<li>Åpne Pokepuls fra det nye ikonet, logg inn, og trykk " +
+      "<strong>Slå på varsler</strong>.</li></ol>" +
+    '<p class="hjelp liten">Dette er Apples regel, ikke vår. Safari sender ' +
+    "ikke varsler til vanlige nettsider uansett hva vi gjør.</p>" +
+
+    "<h3>Android</h3><ol class=\"side-liste-tekst\">" +
+    "<li>Åpne pokepuls.no i Chrome.</li>" +
+    "<li>Kommer det opp et felt nederst som sier <strong>Installer</strong>, " +
+      "trykk på det.</li>" +
+    "<li>Skjer ikke det: trykk de tre prikkene øverst til høyre, og velg " +
+      "<strong>Installer app</strong> eller <strong>Legg til på " +
+      "startskjerm</strong>.</li></ol>" +
+
+    "<h3>PC og Mac</h3>" +
+    '<p class="hjelp">I Chrome eller Edge kommer det et lite ikon helt til ' +
+    "høyre i adresselinjen — en skjerm med en pil ned. Trykk det og velg " +
+    "<strong>Installer</strong>. I Safari på Mac: <strong>Arkiv</strong> → " +
+    "<strong>Legg til i Dock</strong>.</p>" +
+
+    "<h3>Hvordan vet jeg at det ble riktig?</h3>" +
+    '<p class="hjelp">Åpne Pokepuls fra det nye ikonet. Ser du ingen ' +
+    "adresselinje øverst, ligger den riktig.</p>";
+}
+
 async function varselSeksjonHtml() {
   if (!push.stottes()) {
     if (push.erIos() && !push.paaHjemskjerm()) {
       return '<div class="varselboks"><h3>Varsler på iPhone</h3>' +
-        '<p class="hjelp">Safari gir bare varsler til sider som ligger på hjemskjermen. ' +
-        "Trykk <strong>Del</strong> nederst, velg <strong>Legg til på Hjem-skjerm</strong>, " +
-        "og åpne Pokepuls derfra. Da dukker knappen opp her.</p></div>";
+        '<p class="hjelp">Safari gir bare varsler til sider som ligger på ' +
+        "hjemskjermen. Det tar et halvt minutt.</p>" +
+        '<button class="hovedknapp" id="installer-hjelp" type="button">' +
+        "Vis meg hvordan</button></div>";
     }
     return '<div class="varselboks"><h3>Varsler</h3>' +
       '<p class="hjelp">Denne nettleseren støtter ikke varsler.</p></div>';
@@ -644,6 +695,10 @@ async function varselSeksjonHtml() {
            '<label class="bryter"><input type="checkbox" id="varsel-natt"' +
              (status.stille_natt ? " checked" : "") + "> Ikke varsle mellom 23 og 07</label>"
          : "") +
+    (push.paaHjemskjerm() ? "" :
+      '<p class="hjelp liten"><button class="lenkeknapp" id="installer-hjelp" ' +
+      'type="button" style="margin:0">Får du ikke varsler? Legg Pokepuls på ' +
+      "hjemskjermen</button></p>") +
     '<p class="feil" id="varsel-feil" hidden></p></div>';
 }
 
@@ -664,6 +719,9 @@ function koblVarselKnapper() {
       knapp.disabled = false;
     }
   });
+
+  const hjelp = $("installer-hjelp");
+  if (hjelp) hjelp.addEventListener("click", () => visArk(installerHjelpHtml()));
 
   const test = $("varsel-test");
   if (test) test.addEventListener("click", async () => {
@@ -1037,15 +1095,46 @@ lastBruker();
 (function verifiserEpost() {
   const t = new URLSearchParams(location.search).get("verifiser");
   if (!t) return;
-  history.replaceState(null, "", location.pathname);
+  // Tokenet ryddes ut av adresselinjen FORST etter at vi har svar. Gjor vi
+  // det for, og kallet feiler paa et daarlig nett, er tokenet borte fra
+  // skjermen og lenken kan ikke provess om igjen -- brukeren sitter igjen
+  // med en feilmelding og ingen vei videre.
+  const rydd = () => history.replaceState(null, "", location.pathname);
   hent("/auth/verifiser", { method: "POST", body: JSON.stringify({ token: t }) })
     .then(() => {
+      rydd();
       if (state.bruker) state.bruker.epost_bekreftet = true;
       visArk('<h2>E-posten er bekreftet</h2><p class="hjelp">Takk. Nå kan du ' +
              "få nytt passord hvis du skulle glemme det.</p>");
     })
-    .catch((e) => visArk('<h2>Lenken virket ikke</h2><p class="hjelp">' +
-                         esc(e.message) + "</p>"));
+    .catch((e) => {
+      rydd();
+      visArk('<h2>Lenken virket ikke</h2><p class="hjelp">' + esc(e.message) +
+        '</p><p class="hjelp liten">Ba du om flere lenker, er det bare den ' +
+        "siste som virker. De eldre slås av med vilje, slik at en lenke på " +
+        "avveie ikke kan brukes.</p>" +
+        '<button class="hovedknapp" id="ny-ver-lenke" type="button">' +
+        "Send meg en ny lenke</button>" +
+        '<p class="feil" id="ny-ver-feil" hidden></p>');
+      // En blindvei er ikke en feilmelding. Herfra skal du komme videre
+      // uten aa lete deg fram til kontosiden.
+      const k = $("ny-ver-lenke");
+      if (!k) return;
+      k.addEventListener("click", async () => {
+        k.disabled = true;
+        const f = $("ny-ver-feil");
+        try {
+          await hent("/auth/send-verifisering", { method: "POST" });
+          k.textContent = "Sendt — se i innboksen";
+        } catch (err) {
+          f.textContent = state.bruker
+            ? err.message
+            : "Du må være logget inn for å få en ny lenke.";
+          f.hidden = false;
+          k.disabled = false;
+        }
+      });
+    });
 })();
 
 (function dyplenke() {
