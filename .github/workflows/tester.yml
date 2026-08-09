@@ -1,0 +1,70 @@
+# Kjorer testene paa hver push og hver PR til main.
+#
+# HVORFOR DENNE FINNES
+#
+# Serveren kjorer allerede pytest for den deployer (se deploy/selv-deploy.sh),
+# saa en rod commit naar ikke produksjon. Men den porten star FEM MINUTTER
+# etter at du pushet, den sier bare fra gjennom dodmannsknappen, og den
+# kjorer ikke frontend-testene i det hele tatt. Da er det lett aa pushe noe
+# rodt, lukke lokket og tro at det gikk bra.
+#
+# Denne sier fra med en gang, i grensesnittet du allerede staar i, og den
+# kjorer BEGGE testsettene. Den erstatter ikke porten paa serveren -- den
+# fanger det samme tidligere, og litt mer.
+#
+# Ingen database her med vilje. Testene som trenger Postgres (selvtest.py)
+# kjores paa serveren; alt annet gaar uten, og en CI som krever en tjeneste
+# er en CI som ryker av grunner som ikke handler om koden din.
+
+name: Tester
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  # To pusher rett etter hverandre: bare den siste er interessant.
+  group: tester-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python-tester:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer avhengigheter
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r api/requirements.txt
+          # pglast gir SQL-syntakssjekk uten database (tests/test_sql.py),
+          # pytest-timeout hindrer at en hengende test spiser hele kvota.
+          pip install pytest pytest-timeout pglast
+
+      - name: pytest
+        run: python -m pytest tests -q --timeout=120
+
+  frontend-tester:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installer jsdom
+        run: npm install --no-audit --no-fund
+
+      - name: node --test
+        run: npm test
