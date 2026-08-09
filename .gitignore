@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 debug_screenshots/
+
+# Bare testene bruker npm. Frontenden har ingen byggesteg.
+node_modules/

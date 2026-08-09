@@ -17,6 +17,7 @@ pglast = pytest.importorskip("pglast")
 ROT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KILDER = [os.path.join(ROT, "api", "main.py"),
           os.path.join(ROT, "api", "auth.py"),
+          os.path.join(ROT, "api", "bruk.py"),
           os.path.join(ROT, "ingest", "ingest.py")]
 
 START = re.compile(r"^\s*(SELECT|INSERT|UPDATE|DELETE|WITH)\s+\S", re.I)

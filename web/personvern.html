@@ -7,7 +7,7 @@
 <title>Personvern – Pokepuls</title>
 <meta name="description" content="Hva Pokepuls lagrer om deg, hvorfor, og hvordan du sletter det.">
 <link rel="canonical" href="https://pokepuls.no/personvern.html">
-<link rel="stylesheet" href="/style.css?v=10">
+<link rel="stylesheet" href="/style.css?v=11">
 </head>
 <body class="side">
 
@@ -53,6 +53,22 @@
   misbruk, og roteres bort av seg selv. Det er ingen Google Analytics, ingen
   sporingspiksler, ingen annonsenettverk og ingen tredjeparts informasjons-
   kapsler på siden.</p>
+
+  <h2>Besøkstelling</h2>
+  <p>Vi teller hvor mange ganger appen åpnes, og om den ble åpnet fra
+  hjemskjermen eller i en nettleser. Det siste er hele poenget: vi trenger å
+  vite om det er verdt å be folk installere Pokepuls, siden varsler ikke
+  virker på iPhone uten.</p>
+  <p>Det som lagres er <em>fire tall</em> per dag: dato, hvilken side, om den
+  lå på hjemskjermen, og hvor mange. Ikke IP-adresse, ikke bruker-id, ikke
+  enhets-id, ikke klokkeslett, ikke hvor du kom fra. Det er ikke mulig å
+  regne seg tilbake til en person fra denne tabellen, fordi det ikke finnes
+  noe der å regne på — se
+  <code>db/006_bruk.sql</code> i <a href="https://github.com/kriss-code59/pokemon-lager">kildekoden</a>.</p>
+  <p>Nettleseren husker i én fane-økt at den allerede har talt, slik at det
+  ikke blir tjue åpninger av at du laster siden på nytt tjue ganger. Det er
+  et flagg i <code>sessionStorage</code>, det forsvinner når du lukker fanen,
+  og det inneholder ingenting annet enn tallet 1.</p>
 
   <h2>Informasjonskapsler</h2>
   <p>Én, og bare hvis du logger inn: <code>pokepuls_sesjon</code>. Den holder

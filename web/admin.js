@@ -309,6 +309,61 @@ function fbKort(m) {
     "</div>";
 }
 
+/* ------------------------------------------------------------------ bruk */
+
+/* Ett spoersmaal, ikke en analysepakke: VIRKER DET AA BE FOLK INSTALLERE?
+ *
+ * Derfor staar andelen installert stoerst og forst, og resten er en tabell
+ * du kan la vaere aa lese. Andelen regnes over 30 dager samlet fordi en
+ * dagsandel er stoy naar trafikken er liten -- to iPhone-brukere fra eller
+ * til flytter den ti prosentpoeng.
+ *
+ * Tallet er aapninger, ikke mennesker. Frontenden melder én gang per
+ * fane-oekt, saa den som aapner appen tre ganger om dagen teller tre. Det
+ * staar i teksten under fordi et tall uten enhet blir husket feil. */
+async function tegnBruk() {
+  const d = await hent("/admin/bruk");
+  const alle = Number(d.sum30.alle) || 0;
+  const inst = Number(d.sum30.installert) || 0;
+  const andel = alle ? Math.round((inst / alle) * 100) : 0;
+
+  // Dagene slaas sammen paa tvers av sider, men holdes delt paa standalone
+  // -- det er hele skillet fanen finnes for.
+  const dager = new Map();
+  for (const r of d.rader) {
+    const rad = dager.get(r.dag) || { installert: 0, nett: 0 };
+    rad[r.standalone ? "installert" : "nett"] += Number(r.antall) || 0;
+    dager.set(r.dag, rad);
+  }
+
+  $("#admin-innhold").innerHTML =
+    (alle
+      ? '<div class="helsekort ' + (andel >= 25 ? "ok" : andel >= 10 ? "gammel" : "nede") +
+        '"><strong>' + andel + " % åpner fra hjemskjermen</strong>" +
+        "<span>" + inst.toLocaleString("nb-NO") + " av " +
+        alle.toLocaleString("nb-NO") + " åpninger siste 30 dager</span></div>"
+      : '<p class="tom">Ingen åpninger registrert ennå. Tabellen fylles fra ' +
+        "første besøk etter at dette ble deployet.</p>") +
+
+    '<p class="hjelp">Én åpning per fane-økt, ikke per menneske: den som ' +
+    "åpner appen tre ganger om dagen teller tre. Ingen IP, ingen bruker-id, " +
+    "ingen informasjonskapsel — bare dato, side og om den lå på " +
+    "hjemskjermen.</p>" +
+
+    (dager.size
+      ? "<h2>Per dag</h2><div class=\"tabell\">" +
+        [...dager.entries()].map(([dag, r]) => {
+          const sum = r.installert + r.nett;
+          return '<div class="rad"><span><b>' + esc(dag) + "</b></span>" +
+            "<span>" + esc(sum) + " åpninger</span>" +
+            "<span>" + esc(r.installert) + " installert</span>" +
+            "<span>" + esc(r.nett) + " i nettleser</span>" +
+            "<span>" + (sum ? Math.round((r.installert / sum) * 100) : 0) +
+            " %</span></div>";
+        }).join("") + "</div>"
+      : "");
+}
+
 /* ---------------------------------------------------------------- faner */
 
 async function tegn() {
@@ -318,6 +373,7 @@ async function tegn() {
     if (state.fane === "drift") await tegnDrift();
     else if (state.fane === "brukere") await tegnBrukere();
     else if (state.fane === "feedback") await tegnFeedback();
+    else if (state.fane === "bruk") await tegnBruk();
     else await tegnKatalog();
   } catch (e) {
     // 404 fra /api/admin/* betyr «du er ikke admin» -- endepunktene later

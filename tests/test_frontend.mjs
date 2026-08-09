@@ -73,6 +73,10 @@ const HISTORIKK = {
 let ALT_PAA = false;
 const KALL = [];
 
+/* Det frontenden meldte inn til /api/bruk. Kroppen er poenget: standalone
+ * er hele grunnen til at endepunktet finnes. */
+const BRUK = [];
+
 /* Frontenden leser svaret med r.text() slik at et tomt svar (204) ikke
  * kaster. Testdobbelen ma derfor tilby text(), ikke bare json(). */
 function svar(url, valg, innlogget) {
@@ -91,6 +95,10 @@ function svar(url, valg, innlogget) {
   else if (sti.startsWith("/auth/me")) data = innlogget
     ? { innlogget: true, email: "kris@example.no", role: "free",
         epost_bekreftet: true } : { innlogget: false };
+  else if (sti.startsWith("/bruk")) {
+    BRUK.push(JSON.parse((valg && valg.body) || "null"));
+    data = {};
+  }
   else if (sti.startsWith("/watchlist/snapshot")) data = { produkter: [SNAPSHOT.produkter[0]] };
   else if (sti.startsWith("/watchlist/alt")) {
     KALL.push({ sti, metode: (valg && valg.method) || "GET" });
@@ -115,10 +123,15 @@ function svar(url, valg, innlogget) {
 async function app(innlogget = false) {
   ALT_PAA = false;
   KALL.length = 0;
+  BRUK.length = 0;
   const dom = new JSDOM(les("index.html"), {
     url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true,
   });
   const w = dom.window;
+  // jsdom implementerer ikke matchMedia. Alle ekte nettlesere gjor det, saa
+  // uten denne tester vi et miljo som ikke finnes noe sted.
+  w.matchMedia = w.matchMedia || ((q) => ({ matches: false, media: q,
+                                            addListener() {}, removeListener() {} }));
   w.fetch = async (url, valg) => svar(url, valg, innlogget);
   w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
   await new Promise((r) => setTimeout(r, 40));
@@ -132,6 +145,8 @@ async function appMed(snapshot, innlogget = false) {
     url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true,
   });
   const w = dom.window;
+  w.matchMedia = w.matchMedia || ((q) => ({ matches: false, media: q,
+                                            addListener() {}, removeListener() {} }));
   w.fetch = async (url, valg) => {
     if (String(url).includes("/snapshot") && !String(url).includes("watchlist")) {
       const kropp = JSON.stringify(snapshot);
@@ -660,4 +675,70 @@ test("en feil fra serveren vises, og knappen kan proves igjen", async () => {
   assert.equal($(w, "#folg-alt-feil").hidden, false);
   assert.match($(w, "#folg-alt-feil").textContent, /Ikke innlogget/);
   assert.equal($(w, "#folg-alt-knapp").disabled, false, "skal kunne proves igjen");
+});
+
+/* ---------------------------------------------------- sidevisninger */
+
+/* Ett spoersmaal: virker det aa be folk installere? Testene her passer paa
+ * de to maatene svaret kan bli feil paa -- at tallet blaases opp av
+ * omlastinger, og at iPhone-installasjoner teller som null. */
+
+/* Som app(), men med kontroll over de to tingene som avgjor om nettleseren
+ * ser seg selv som installert. */
+async function appSom({ standalone = false, ios = false } = {}) {
+  BRUK.length = 0;
+  const dom = new JSDOM(les("index.html"), {
+    url: "https://pokepuls.no/", runScripts: "outside-only", pretendToBeVisual: true });
+  const w = dom.window;
+  w.fetch = async (url, valg) => svar(url, valg, false);
+  w.matchMedia = (q) => ({ matches: standalone && /standalone/.test(q),
+                           media: q, addListener() {}, removeListener() {} });
+  if (ios) Object.defineProperty(w.navigator, "standalone", { value: true,
+                                                              configurable: true });
+  w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 40));
+  return w;
+}
+
+test("melder fra én gang naar appen aapnes", async () => {
+  await app();
+  assert.equal(BRUK.length, 1);
+  assert.deepEqual(BRUK[0], { side: "hjem", standalone: false });
+});
+
+test("samme fane teller ikke to ganger", async () => {
+  // Uten dette ser én person som laster siden tjue ganger ut som tjue
+  // aapninger, og da er andelen installert det eneste brukbare tallet
+  // igjen. sessionStorage doer med fanen, saa neste oekt teller igjen.
+  const w = await app();
+  assert.equal(BRUK.length, 1);
+  w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 40));
+  assert.equal(BRUK.length, 1, "andre lasting i samme fane skal ikke telles");
+});
+
+test("display-mode standalone teller som installert", async () => {
+  await appSom({ standalone: true });
+  assert.equal(BRUK[0].standalone, true);
+});
+
+test("iPhone teller som installert via navigator.standalone", async () => {
+  // Apple-spesifikk og finnes bare paa iOS. Uten denne sjekken teller du
+  // NULL iPhone-installasjoner -- og iOS er den ene plattformen der
+  // varsler ikke virker i det hele tatt uten installasjon, altsaa nettopp
+  // der du trenger tallet.
+  await appSom({ ios: true });
+  assert.equal(BRUK[0].standalone, true);
+});
+
+test("nettleser uten installasjon teller som ikke installert", async () => {
+  await appSom({});
+  assert.equal(BRUK[0].standalone, false);
+});
+
+test("meldingen sender ingenting som kan identifisere noen", async () => {
+  // Personvernerklaeringen lover «ingen sporing». Bryter noen det, skjer
+  // det ved at et felt sniker seg inn her.
+  await app();
+  assert.deepEqual(Object.keys(BRUK[0]).sort(), ["side", "standalone"]);
 });

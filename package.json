@@ -1,0 +1,11 @@
+{
+  "name": "pokepuls-frontend-tester",
+  "private": true,
+  "description": "Bare for testene. Frontenden selv har ingen byggesteg og ingen avhengigheter -- filen som ligger paa serveren er filen som kjorer. Denne filen finnes utelukkende for at `npm install && npm test` skal virke uten at man forst maa gjette seg til at det er jsdom som mangler.",
+  "scripts": {
+    "test": "node --test tests/test_frontend.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}

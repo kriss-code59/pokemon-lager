@@ -324,3 +324,8 @@ def monter(app, hent_pool, hent_bruker):
             return {"koblinger": await cur.fetchall()}
 
     app.include_router(router)
+    # Returneres slik at andre moduler kan gjenbruke VAKTEN, ikke skrive sin
+    # egen. Samme begrunnelse som at push og admin deler auth.hent_bruker:
+    # to implementasjoner av «slipper denne inn?» er to steder en
+    # autorisasjonsfeil kan gjemme seg.
+    return _krev_admin

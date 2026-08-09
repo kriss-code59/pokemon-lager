@@ -75,7 +75,16 @@ sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/003_deling.sq
 # Etterfyller ogsa de eksisterende radene, sa fiksen er synlig med en gang
 # og ikke forst etter at hver enkelt vare er sett pa nytt.
 sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/004_forhandssalg.sql"
-sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$REPO/db/005_folg_alt.sql"
+# Resten kjores i navnerekkefolge. Fram til 005 sto hver migrasjon oppfort
+# for hand her, og det er en felle som bare smeller EN gang per migrasjon --
+# men da smeller den i produksjon: koden er deployet, tabellen finnes ikke,
+# og endepunktet gir 500. Alle migrasjonene er idempotente, saa aa kjore
+# dem hver gang koster et halvt sekund og fjerner hele feilmuligheten.
+for MIG in $(ls "$REPO"/db/*.sql | sort); do
+  case "$(basename "$MIG")" in 00[1-4]_*) continue ;; esac
+  LOGG "  migrasjon $(basename "$MIG")"
+  sudo -u "$BRUKER" psql -q -v ON_ERROR_STOP=1 -d "$DB" -f "$MIG"
+done
 
 LOGG "4/8 Miljofil"
 if [[ ! -f /etc/pokepuls.env ]]; then

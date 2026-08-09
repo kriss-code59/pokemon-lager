@@ -1215,6 +1215,46 @@ lastBruker();
   prov();
 })();
 
+/* Sidevisninger.
+ *
+ * Ett kall, én gang per fane-oekt. Ingen id, ingen kapsel, ingenting som
+ * folger deg mellom oekter -- serveren lagrer bare dato, side, standalone
+ * og et antall. Se api/bruk.py og db/006_bruk.sql.
+ *
+ * Hvorfor sessionStorage og ikke bare telle hver lasting: uten det ser én
+ * person som laster siden tjue ganger ut som tjue aapninger, og da er
+ * tallet ubrukelig til det eneste det skal svare paa -- virker det aa be
+ * folk installere? sessionStorage doer med fanen, saa neste gang du aapner
+ * appen teller du igjen. Det er nettopp det vi vil.
+ *
+ * `navigator.standalone` er Apple-spesifikk og finnes bare paa iOS. Uten
+ * den andre sjekken teller du NULL iPhone-installasjoner -- og det er
+ * nettopp der du helst vil vite det, siden iOS er den ene plattformen der
+ * varsler ikke virker uten installasjon. */
+(function meldBruk() {
+  // HELE kroppen ligger i try. En teller som kaster under lasting stopper
+  // alt som star etter den i filen -- da har du byttet et tall du savner
+  // mot en app som ikke virker. Det er feil vei.
+  try {
+    try {
+      if (sessionStorage.getItem("pokepuls-meldt")) return;
+      sessionStorage.setItem("pokepuls-meldt", "1");
+    } catch (e) {
+      // Privat modus kaster paa sessionStorage. Da teller vi heller én gang
+      // for mye enn aa miste hele gruppen -- de som surfer privat er ikke
+      // en gruppe vi vil ha et systematisk hull i.
+    }
+    const standalone =
+      (window.matchMedia
+        ? window.matchMedia("(display-mode: standalone)").matches : false) ||
+      window.navigator.standalone === true;
+    hent("/bruk", {
+      method: "POST",
+      body: JSON.stringify({ side: "hjem", standalone }),
+    }).catch(() => {});   // en tapt telling er ikke verdt en feil hos brukeren
+  } catch (e) { /* se over */ }
+})();
+
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").catch(() => {});
 }

@@ -64,15 +64,18 @@ app.add_middleware(
 
 # Kontoer, sesjoner og folgeliste ligger i api/auth.py. De monteres her fordi
 # de trenger den samme tilkoblingspoolen, som ikke finnes for oppstart.
-from . import admin, auth, feedback, push, sider  # noqa: E402
+from . import admin, auth, bruk, feedback, push, sider  # noqa: E402
 
 auth.monter(app, lambda: pool)
 # push og admin gjenbruker auth.hent_bruker sa det bare finnes EN vei fra
 # cookie til bruker. To implementasjoner av "hvem er dette" er to steder en
 # autentiseringsfeil kan gjemme seg.
 push.monter(app, lambda: pool, auth.hent_bruker)
-admin.monter(app, lambda: pool, auth.hent_bruker)
+_krev_admin = admin.monter(app, lambda: pool, auth.hent_bruker)
 feedback.monter(app, lambda: pool, auth.hent_bruker)
+# Sidevisninger. Aapent endepunkt inn, adminbeskyttet endepunkt ut -- derfor
+# faar den vakten fra admin i stedet for aa lage sin egen.
+bruk.monter(app, lambda: pool, _krev_admin)
 # Serverrendrede produktsider og sidekart. Ligger utenfor /api med vilje:
 # de er sider, ikke data, og de skal ha ekte URL-er som kan deles.
 sider.monter(app, lambda: pool)
