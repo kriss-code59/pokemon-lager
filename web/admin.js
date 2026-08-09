@@ -321,6 +321,8 @@ function fbKort(m) {
  * Tallet er aapninger, ikke mennesker. Frontenden melder én gang per
  * fane-oekt, saa den som aapner appen tre ganger om dagen teller tre. Det
  * staar i teksten under fordi et tall uten enhet blir husket feil. */
+const apning = (n) => (n === 1 ? "åpning" : "åpninger");
+
 async function tegnBruk() {
   const d = await hent("/admin/bruk");
   const alle = Number(d.sum30.alle) || 0;
@@ -336,12 +338,19 @@ async function tegnBruk() {
     dager.set(r.dag, rad);
   }
 
+  // Under 50 aapninger far kortet ingen farge. En andel regnet paa fem
+  // besok er stoy, og et rodt kort som egentlig betyr «for lite data» er
+  // verre enn ingen farge: det larer deg aa overse kortet.
+  const nok = alle >= 50;
+  const farge = !nok ? "" : andel >= 25 ? " ok" : andel >= 10 ? " gammel" : " nede";
+
   $("#admin-innhold").innerHTML =
     (alle
-      ? '<div class="helsekort ' + (andel >= 25 ? "ok" : andel >= 10 ? "gammel" : "nede") +
-        '"><strong>' + andel + " % åpner fra hjemskjermen</strong>" +
+      ? '<div class="helsekort' + farge + '"><strong>' + andel +
+        " % åpner fra hjemskjermen</strong>" +
         "<span>" + inst.toLocaleString("nb-NO") + " av " +
-        alle.toLocaleString("nb-NO") + " åpninger siste 30 dager</span></div>"
+        alle.toLocaleString("nb-NO") + " " + apning(alle) + " siste 30 dager" +
+        (nok ? "" : " · for lite til å si noe ennå") + "</span></div>"
       : '<p class="tom">Ingen åpninger registrert ennå. Tabellen fylles fra ' +
         "første besøk etter at dette ble deployet.</p>") +
 
@@ -355,7 +364,7 @@ async function tegnBruk() {
         [...dager.entries()].map(([dag, r]) => {
           const sum = r.installert + r.nett;
           return '<div class="rad"><span><b>' + esc(dag) + "</b></span>" +
-            "<span>" + esc(sum) + " åpninger</span>" +
+            "<span>" + esc(sum) + " " + apning(sum) + "</span>" +
             "<span>" + esc(r.installert) + " installert</span>" +
             "<span>" + esc(r.nett) + " i nettleser</span>" +
             "<span>" + (sum ? Math.round((r.installert / sum) * 100) : 0) +
