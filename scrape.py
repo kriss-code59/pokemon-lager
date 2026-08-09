@@ -275,6 +275,91 @@ def diagnose_possible_block(page) -> str | None:
 # da hopper vi over produkter som ikke har "pokemon" i tittelen.
 # ---------------------------------------------------------------------------
 SHOPIFY_STORES = [
+    # -----------------------------------------------------------------
+    # Lagt til 2026-08-09. Alle er verifisert som Shopify ved at
+    # /products.json svarer med JSON -- det er den eneste palitelige
+    # plattformtesten, for temaet kan se ut som hva som helst.
+    #
+    # Samlingene er valgt av /collections.json, og BEVISST snevre: bare
+    # forseglet vare. Kortix alene har over 4 000 enkeltkort fordelt pa
+    # ~90 "-singles"-samlinger. A hente dem ville tredoblet rundetiden for
+    # a fylle katalogen med noe Pokepuls ikke folger.
+    # -----------------------------------------------------------------
+    {
+        "store": "Mythic",
+        "base_url": "https://mythic.no",
+        "collections": ["alle-pokemon-produkter", "alle-japanske"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Cardchimp",
+        "base_url": "https://cardchimp.no",
+        # Butikken har ingen egen engelsk-samling; frontpage er der de
+        # engelske varene ligger. Den inneholder ogsa tilbehor, derav
+        # tittelfilteret.
+        "collections": ["japanske-pokemonkort", "kinesiske-pokemonprodukter",
+                        "frontpage"],
+        "variant_mode": "each",
+        "require_pokemon_title": True,
+    },
+    {
+        "store": "PokeButikk",
+        "base_url": "https://pokebutikk.no",
+        "collections": ["pokemon-tcg", "mega", "engelsk-tcg"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "PokeMint",
+        "base_url": "https://pokemint.no",
+        "collections": ["english-booster-boxes", "english-booster-packs",
+                        "english-elite-trainer-boxes", "japanese-booster-boxes",
+                        "japanese-booster-packs", "engelske-booster-bokser",
+                        "engelske-booster-packs", "forhandsbestill"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "Kortix",
+        "base_url": "https://kortix.no",
+        # Bred TCG-butikk (Lorcana, One Piece, Yu-Gi-Oh, Digimon, Star
+        # Wars). Samlingene under er Pokemon-forseglet, men tittelfilteret
+        # star som en ekstra las: "Booster Bundle" alene sier ikke hvilket
+        # spill det er.
+        "collections": ["boosterboks", "enkeltpakker", "elite-trainer-box",
+                        "collection-bokser", "booster-bundles", "tins-minitins",
+                        "sealed-produkter-jp", "blister"],
+        "variant_mode": "each",
+        "require_pokemon_title": True,
+    },
+    {
+        "store": "Manaheim",
+        "base_url": "https://manaheim.no",
+        # Hobbybutikk med Warhammer og brettspill ved siden av.
+        "collections": ["pokemon-tcg", "pokemon-booster-packs",
+                        "pokemon-blister-packs"],
+        "variant_mode": "each",
+        "require_pokemon_title": True,
+    },
+    {
+        "store": "CollectorsCorner",
+        "base_url": "https://collectorscorner.no",
+        "collections": ["engelsk-booster-bokser", "engelsk-etb",
+                        "booster-packs-og-booster-bundles-engelsk",
+                        "engelske-pokemon-bokser", "pokemon-tcg-tins",
+                        "pokemon-booster-case", "japanske-booster-bokser",
+                        "japanske-booster-packs", "kinesisk-pokemon-tcg"],
+        "variant_mode": "each",
+    },
+    {
+        "store": "TCG Masters",
+        "base_url": "https://tcgmasters.no",
+        # Selger ogsa One Piece og Riftbound.
+        "collections": ["engelske-booster-boxer", "engelske-booster-pakker",
+                        "elite-trainer-box", "booster-bundles", "pokemon-tins",
+                        "special-collection-bokser", "japansk-sealed",
+                        "chinese-pokemon-products", "mega-evolutions"],
+        "variant_mode": "each",
+        "require_pokemon_title": True,
+    },
     {
         "store": "Cardcenter",
         "base_url": "https://cardcenter.no",
@@ -718,6 +803,50 @@ MANUAL_CHECK_STORES = [
         "store": "PokeMadness",
         "url": "https://www.pokemadness.no/",
         "reason": "PokeMadness viser en Cloudflare-utfordring (\"Vent litt...\") til automatiske besok.",
+    },
+    # ---- Kartlagt 2026-08-09, men ikke automatisert ----
+    #
+    # Alle fire generiske skraperne i denne filen (Shopify, WooCommerce,
+    # QuickButik, 24Nettbutikk) ble provd. Butikkene under kjorer noe
+    # annet. A legge dem inn ville ikke vaert konfigurasjon, det ville
+    # vaert en ny skraper per butikk -- og en uverifisert skraper som
+    # leverer feil lagerstatus er verre enn ingen: den sender varsler.
+    {
+        "store": "Gamezone",
+        "url": "https://gamezone.no/avdelinger/samlekort-nettbutikk/pokemon-tcg-nettbutikk",
+        "reason": "Kjorer Multicase (multicase.no) og rendrer produktlisten i "
+                  "nettleseren -- HTML-en som kommer over nettet inneholder "
+                  "«Oppdaterer, vennligst vent...» og ingen produkter. Ingen av "
+                  "de fire generiske skraperne treffer.",
+    },
+    {
+        "store": "Game and Trade",
+        "url": "https://www.gameandtrade.no/",
+        "reason": "PrestaShop (URL-monsteret /15-utvalgte-produkter og "
+                  "/hjem/116-...html). Femte plattform -- krever en egen "
+                  "skraper, ikke en konfigurasjonsrad.",
+    },
+    {
+        "store": "Poki-Heaven",
+        "url": "https://www.poki-heaven.no/butikk/pokemon-tcg",
+        "reason": "WordPress (/wp-json/ svarer), men UTEN WooCommerce -- "
+                  "ingen wc/store-ruter. Butikkdelen er en annen losning, saa "
+                  "scrape_woocommerce() sine klasser (instock/outofstock) "
+                  "finnes ikke i HTML-en.",
+    },
+    {
+        "store": "Tabletopbattle",
+        "url": "https://www.tabletopbattle.no/categories/pokemon-tcg",
+        "reason": "Verken Shopify (/products.json tom) eller WordPress "
+                  "(/wp-json/ tom). URL-monsteret /categories//products/ "
+                  "tilhorer en plattform vi ikke har kartlagt enna.",
+    },
+    {
+        "store": "Livet er Kort",
+        "url": "https://liveterkort.no/",
+        "reason": "Verken Shopify eller WordPress. Butikken er dessuten "
+                  "hovedsakelig basketkort; Pokemon er en liten del, saa den "
+                  "har lav prioritet selv naar plattformen er kartlagt.",
     },
     {
         "store": "CardCollect",
