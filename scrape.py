@@ -321,14 +321,20 @@ SHOPIFY_STORES = [
         "store": "Kortix",
         "base_url": "https://kortix.no",
         # Bred TCG-butikk (Lorcana, One Piece, Yu-Gi-Oh, Digimon, Star
-        # Wars). Samlingene under er Pokemon-forseglet, men tittelfilteret
-        # star som en ekstra las: "Booster Bundle" alene sier ikke hvilket
-        # spill det er.
+        # Wars), men de andre spillene ligger i EGNE samlinger -- de under
+        # er Pokemon.
+        #
+        # INGEN require_pokemon_title her, og det er et bevisst unntak:
+        # Kortix skriver settnavnet, ikke spillet. "Pitch Black Booster
+        # Box", "Destined Rivals Booster Box". Med tittelfilteret paa
+        # leverte butikken NULL varer i forste kjoring -- og null varer ser
+        # ut som en butikk uten noe paa lager, ikke som en feil. Skulle
+        # noe fra et annet spill snike seg inn, blir det staaende som
+        # umatchet i admin, og det er en langt billigere feil.
         "collections": ["boosterboks", "enkeltpakker", "elite-trainer-box",
                         "collection-bokser", "booster-bundles", "tins-minitins",
                         "sealed-produkter-jp", "blister"],
         "variant_mode": "each",
-        "require_pokemon_title": True,
     },
     {
         "store": "Manaheim",
