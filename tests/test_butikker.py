@@ -125,3 +125,38 @@ def test_vi_omgaar_ikke_bot_sperrer():
                     "anticaptcha", "puppeteer-extra-plugin-stealth",
                     "capsolver"]:
         assert teknikk not in kilde, f"{teknikk} horer ikke hjemme her"
+
+
+# --------------------------------------------------------------- slippdato
+
+def test_30th_har_slippdato_i_katalogen():
+    """Nedtellingen leser datoen herfra, ikke fra en dato i frontendkoden.
+
+    Poenget er ikke aa vaere pen. Poenget er at neste sett som skal telles
+    ned til krever ÉN rad i katalog.json og ingen kodeendring -- og at
+    datoen staar ett sted, saa den ikke kan bli feil to steder.
+    """
+    import json
+    k = json.loads((ROT / "katalog" / "katalog.json").read_text(encoding="utf-8"))
+    sett = {s["id"]: s for s in k["sets"]}
+    assert sett["30th-celebration"].get("slipp") == "2026-09-16"
+
+
+def test_slippdatoer_er_iso_og_ingenting_annet():
+    # "16.09.2026" ville blitt Invalid Date i nettleseren, og en nedtelling
+    # som viser NaN er verre enn ingen nedtelling.
+    import json
+    import re
+    k = json.loads((ROT / "katalog" / "katalog.json").read_text(encoding="utf-8"))
+    for s in k["sets"]:
+        if "slipp" in s:
+            assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", s["slipp"]), \
+                f'{s["id"]}: {s["slipp"]}'
+
+
+def test_katalogen_synker_slippdatoen_til_databasen():
+    # Uten dette staar release_date fortsatt NULL, /api/catalog svarer null,
+    # og nedtellingen dukker aldri opp -- uten at noe feiler.
+    kilde = (ROT / "ingest" / "ingest.py").read_text(encoding="utf-8")
+    assert "release_date" in kilde
+    assert 's.get("slipp")' in kilde

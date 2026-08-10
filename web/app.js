@@ -41,13 +41,15 @@ const BESTILLING = {
 
 const state = {
   produkter: [], typer: new Map(),
-  sok: "", kunLager: true, region: null, type: null,
+  sok: "", kunLager: true, forhandssalg: false, region: null, type: null,
   hendelseKinds: new Set(["restock"]),
   andre: [], andreVist: 0,
   fane: "produkter",
   bruker: null,        // null = ikke innlogget
   folger: new Map(),   // product_id -> abonnement-id
   folgerAlt: false,    // «foelg alt»: én rad uten product_id og set_id
+  folgerSett: new Map(),  // set_id -> abonnement-id
+  slipp: new Map(),    // set_id -> slippdato, for sett som ikke er ute enna
   maksPerTime: 5,      // brukerens timeskvote, hentet fra serveren
   apentProdukt: null,
 };
@@ -144,6 +146,12 @@ async function last() {
     // Ma fylles for _sok bygges under: ellers indekseres "Pokenordic" og
     // et sok pa "pokenordic" gir treff mens "PokeNordic" i listen ikke gjor.
     (kat.stores || []).forEach((b) => butikkNavn.set(b.id, b.name));
+    // Slippdato kommer fra katalogen, ikke fra en dato skrevet inn i denne
+    // filen. Neste sett som skal telles ned til krever da én rad i
+    // katalog.json og ingen endring her.
+    (kat.sets || []).forEach((s) => {
+      if (s.release_date) state.slipp.set(s.id, s.release_date);
+    });
     state.produkter = snap.produkter.map((p) => ({
       ...p,
       _sok: (p.set_label + " " + p.type_label + " " + REGION[p.region] + " " +
@@ -151,6 +159,7 @@ async function last() {
     }));
     ferskhet(snap.sist_skannet, snap.skanning_ok);
     tegnProdukter();
+    tegnSlippBoks();
   } catch (e) {
     $("liste").innerHTML =
       '<p class="tom">Fikk ikke kontakt med API-et.<br><small>' + esc(e.message) + "</small></p>";
@@ -175,10 +184,124 @@ function filtrert() {
   const q = state.sok.trim().toLowerCase();
   const ord = q ? q.split(/\s+/) : [];
   return state.produkter.filter((p) => {
-    if (state.kunLager && !p.antall_pa_lager) return false;
+    // Forhaandssalg er et EGET filter, ikke en oppmyking av «kun paa lager».
+    // De to spor om helt ulike ting: «hva kan jeg kjope na» og «hva kan jeg
+    // sikre meg for alle andre». Blander man dem, mister «paa lager» sin
+    // betydning -- og det er den betydningen restock-varselet hviler paa.
+    if (state.forhandssalg && !Number(p.antall_forhandssalg)) return false;
+    if (state.kunLager && !state.forhandssalg && !p.antall_pa_lager) return false;
     if (state.region && p.region !== state.region) return false;
     if (state.type && p.type_id !== state.type) return false;
     return ord.every((o) => p._sok.includes(o));
+  });
+}
+
+/* Nedtelling til et sett som ikke er ute enna.
+ *
+ * Staar UTENFOR den filtrerte listen med vilje. Et sett som ikke er sluppet
+ * har null varer paa lager, og standardfilteret er «kun paa lager» -- saa
+ * det mest etterspurte settet i aaret ville vaert usynlig helt fram til
+ * slippdagen. Det er presis feil dag aa bli synlig paa: hele poenget er aa
+ * sikre seg FOR alle andre.
+ *
+ * Boksen viser bare det ene settet som er naermest slipp. Tre nedtellinger
+ * over hverandre er ingen nedtelling.
+ */
+function slippBoksHtml() {
+  const naa = Date.now();
+  const kommende = [...state.slipp.entries()]
+    .map(([id, dato]) => ({ id, dato, tid: new Date(dato + "T00:00:00+02:00").getTime() }))
+    .filter((s) => s.tid > naa)
+    .sort((a, b) => a.tid - b.tid);
+  if (!kommende.length) return "";
+
+  const s = kommende[0];
+  const produkter = state.produkter.filter((p) => p.set_id === s.id);
+  if (!produkter.length) return "";
+
+  const navn = produkter[0].set_label;
+  const dager = Math.ceil((s.tid - naa) / 86400000);
+  // Tilbud finnes, men ingen av dem er «paa lager» -- de er forhaandssalg.
+  // Det er nettopp det tallet som betyr noe her.
+  const butikker = new Set();
+  let billigst = null;
+  for (const p of produkter) {
+    for (const t of p.tilbud || []) {
+      if (t[2] === 1 && t[3] === "forhandssalg") {
+        butikker.add(t[0]);
+        if (t[1] && (billigst === null || t[1] < billigst)) billigst = t[1];
+      }
+    }
+  }
+
+  return '<div class="slipp">' +
+    '<div class="slipp-topp"><span class="slipp-dager">' + dager + "</span>" +
+    '<span class="slipp-tekst">' + (dager === 1 ? "dag" : "dager") + " til<br><strong>" +
+      esc(navn) + "</strong></span></div>" +
+    '<p class="hjelp">Slippes ' + esc(nyNorskDato(s.dato)) + ", samtidig i hele verden. " +
+    (butikker.size
+      ? butikker.size + (butikker.size === 1 ? " butikk har" : " butikker har") +
+        " åpnet for forhåndsbestilling" +
+        (billigst ? ", fra " + kr(billigst) : "") + "."
+      : "Ingen norske butikker har åpnet for forhåndsbestilling ennå.") + "</p>" +
+    '<p class="hjelp liten">Følg settet, så får du beskjed i det en butikk ' +
+    "åpner forhåndssalg — og igjen når varen faktisk kommer på lager.</p>" +
+    settFolgesHtml(s.id, navn) +
+    '<p class="feil" id="slipp-feil" hidden></p>' +
+    '<button class="lenkeknapp" id="slipp-vis" type="button">' +
+      (produkter.length === 1 ? "Vis produktet"
+                              : "Vis alle " + produkter.length + " produktene") +
+      "</button>" +
+    "</div>";
+}
+
+function nyNorskDato(iso) {
+  const m = ["januar", "februar", "mars", "april", "mai", "juni", "juli",
+             "august", "september", "oktober", "november", "desember"];
+  const d = new Date(iso + "T00:00:00+02:00");
+  return d.getDate() + ". " + m[d.getMonth()] + " " + d.getFullYear();
+}
+
+function tegnSlippBoks() {
+  const boks = $("slipp-boks");
+  if (!boks) return;
+  const html = slippBoksHtml();
+  boks.innerHTML = html;
+  boks.hidden = !html;
+  if (!html) return;
+
+  const knapp = $("folg-sett");
+  if (knapp) knapp.addEventListener("click", async () => {
+    knapp.disabled = true;
+    const feil = $("slipp-feil");
+    feil.hidden = true;
+    try {
+      await vekslFolgSett(knapp.dataset.sett);
+      tegnSlippBoks();
+      tegnProdukter();
+    } catch (e) {
+      feil.textContent = e.message;
+      feil.hidden = false;
+      knapp.disabled = false;
+    }
+  });
+
+  const vis = $("slipp-vis");
+  if (vis) vis.addEventListener("click", () => {
+    // Sok pa settnavnet og slipp lagerfilteret: settet er ikke ute enna, sa
+    // «kun paa lager» ville gitt null treff og sett ut som en feil.
+    const navn = $("slipp-boks").querySelector("strong").textContent;
+    $("sok").value = navn;
+    state.sok = navn.toLowerCase();
+    state.kunLager = false;
+    for (const el of $("chips").children) {
+      if (el.dataset.filter === "lager") {
+        el.classList.remove("pa");
+        el.classList.add("chip-av");
+      }
+    }
+    $("tom-sok").hidden = false;
+    tegnProdukter();
   });
 }
 
@@ -187,7 +310,8 @@ function tegnProdukter() {
   const liste = $("liste");
   $("tom-liste").hidden = treff.length > 0;
   $("teller").textContent = treff.length
-    ? treff.length + " produkter" + (state.kunLager ? " på lager" : "") +
+    ? treff.length + " produkter" +
+      (state.forhandssalg ? " til forhåndsbestilling" : state.kunLager ? " på lager" : "") +
       " · " + new Set(treff.map((p) => p.set_id + p.region)).size + " sett"
     : "";
   liste.innerHTML = grupperHtml(treff);
@@ -390,7 +514,7 @@ async function lastBruker() {
     await lastFolger();
     // Folgelisten kommer etter forste tegning. Uten denne omtegningen ser du
     // ingen hjerter for du tilfeldigvis rorer et filter.
-    if (state.produkter.length) tegnProdukter();
+    if (state.produkter.length) { tegnProdukter(); tegnSlippBoks(); }
   }
 }
 
@@ -398,6 +522,8 @@ async function lastFolger() {
   try {
     const d = await hent("/watchlist");
     state.folger = new Map(d.folger.filter((f) => f.product_id).map((f) => [f.product_id, f.id]));
+    state.folgerSett = new Map(
+      d.folger.filter((f) => f.set_id && !f.product_id).map((f) => [f.set_id, f.id]));
     // Serveren sier selv om «alt» er paa; vi utleder det ikke av radene.
     state.folgerAlt = !!d.alt;
     // Faller tilbake til 5 hvis feltet mangler -- en eldre server skal ikke
@@ -405,6 +531,7 @@ async function lastFolger() {
     state.maksPerTime = d.maks_per_time || 5;
   } catch (e) {
     state.folger = new Map();
+    state.folgerSett = new Map();
     state.folgerAlt = false;
   }
 }
@@ -426,6 +553,41 @@ async function vekslFolg(produktId) {
   } catch (e) {
     alert("Klarte ikke å lagre: " + e.message);
   }
+}
+
+/* «Foelg hele settet».
+ *
+ * API-et har stottet abonnement paa set_id siden dag én, men det har aldri
+ * hatt en knapp -- noyaktig samme hull som «foelg alt» hadde. Uten den ma
+ * du hake av ni produkttyper hver for seg for aa dekke ett sett, og da gjor
+ * du det ikke.
+ *
+ * Det er dette som gjor forhaandssalg brukbart: du vet ikke HVILKEN
+ * butikk som apner forst, eller om det blir ETB-en eller boksen. Foelger
+ * du settet, treffer du uansett.
+ */
+function settFolgesHtml(settId, settNavn) {
+  if (!state.bruker) return "";
+  const paa = state.folgerSett.has(settId);
+  return '<button class="hovedknapp' + (paa ? " av" : "") + '" ' +
+    'id="folg-sett" type="button" data-sett="' + esc(settId) + '">' +
+    (paa ? "Slutt å følge " + esc(settNavn) : "🔔 Følg hele " + esc(settNavn)) +
+    "</button>";
+}
+
+async function vekslFolgSett(settId) {
+  if (state.folgerSett.has(settId)) {
+    await hent("/watchlist/" + state.folgerSett.get(settId), { method: "DELETE" });
+  } else {
+    await hent("/watchlist", {
+      method: "POST",
+      // Forhaandssalg kommer inn som «ny» naar butikken legger ut varen, og
+      // som «restock» naar den gaar fra forhaandssalg til ekte lager. Begge
+      // ma vaere med, ellers gaar du glipp av den ene halvparten.
+      body: JSON.stringify({ set_id: settId, kinds: ["restock", "ny"] }),
+    });
+  }
+  await lastFolger();
 }
 
 function apneKonto() {
@@ -1094,10 +1256,13 @@ function koble() {
     if (!c) return;
     const { filter, verdi } = c.dataset;
     if (filter === "lager") state.kunLager = !state.kunLager;
+    else if (filter === "forhandssalg") state.forhandssalg = !state.forhandssalg;
     else state[filter] = state[filter] === verdi ? null : verdi;
     for (const el of $("chips").children) {
       const f = el.dataset.filter;
-      const pa = f === "lager" ? state.kunLager : state[f] === el.dataset.verdi;
+      const pa = f === "lager" ? state.kunLager
+        : f === "forhandssalg" ? state.forhandssalg
+        : state[f] === el.dataset.verdi;
       el.classList.toggle("pa", pa);
       el.classList.toggle("chip-av", !pa);
     }

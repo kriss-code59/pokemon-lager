@@ -34,8 +34,22 @@ const SNAPSHOT = {
     { id: "mega-dream:booster-box:jp", set_id: "mega-dream", type_id: "booster-box",
       region: "jp", set_label: "Mega Dream", type_label: "Booster Box",
       tilbud: [["neo-tokyo", 149950, 1]], min_pris: 149950, antall_pa_lager: 1 },
+    // Ikke sluppet enna: tilbud finnes, men hvert eneste ett er
+    // forhaandssalg. Det er nettopp denne kombinasjonen standardfilteret
+    // skjuler, og som slippboksen finnes for aa redde.
+    { id: "30th-celebration:etb:en", set_id: "30th-celebration", type_id: "etb",
+      region: "en", set_label: "30th Anniversary Celebration",
+      type_label: "Elite Trainer Box",
+      tilbud: [["cardcenter", 89900, 1, "forhandssalg"],
+               ["outland", 94900, 1, "forhandssalg"]],
+      min_pris: null, antall_pa_lager: 0, antall_forhandssalg: 2 },
   ],
 };
+
+// Slippdato ~40 dager fram, regnet ut i stedet for skrevet inn: en fast dato
+// i en test slutter aa vaere «i framtiden» en dag, og da feiler den av en
+// grunn som ikke er kodens.
+const SLIPP = new Date(Date.now() + 40 * 86400000).toISOString().slice(0, 10);
 
 const PRODUKT = {
   produkt: { id: "pitch-black:booster-box:en", set_id: "pitch-black",
@@ -83,7 +97,12 @@ function svar(url, valg, innlogget) {
   const sti = String(url).replace(/^.*\/api/, "");
   let data = null;
   if (sti.startsWith("/snapshot")) data = SNAPSHOT;
-  else if (sti.startsWith("/catalog")) data = { sets: [], types: [], stores: [] };
+  else if (sti.startsWith("/catalog")) data = {
+    sets: [{ id: "30th-celebration", label: "30th Anniversary Celebration",
+             region: "en", release_date: SLIPP },
+           { id: "pitch-black", label: "Pitch Black", region: "en",
+             release_date: null }],
+    types: [], stores: [] };
   else if (sti.startsWith("/history")) data = HISTORIKK;
   else if (sti.startsWith("/unmatched")) data = { antall: 0, varer: [] };
   else if (sti.startsWith("/product/")) data = PRODUKT;
@@ -212,7 +231,7 @@ test("samme sett i to regioner blir to bolker", async () => {
 test("filteret 'kun pa lager' kan slas av og viser da alt", async () => {
   const w = await app();
   $(w, '[data-filter="lager"]').dispatchEvent(new w.Event("click", { bubbles: true }));
-  assert.equal(alle(w, "#liste .kort").length, 3);
+  assert.equal(alle(w, "#liste .kort").length, 4);
 });
 
 test("regionfilter begrenser listen", async () => {
@@ -741,4 +760,108 @@ test("meldingen sender ingenting som kan identifisere noen", async () => {
   // det ved at et felt sniker seg inn her.
   await app();
   assert.deepEqual(Object.keys(BRUK[0]).sort(), ["side", "standalone"]);
+});
+
+/* ------------------------------------------ forhandssalg og slippboks */
+
+/* Bakgrunnen: 30th Celebration laa i katalogen med tilbud fra flere
+ * butikker, men var USYNLIG paa forsiden. Alle tilbudene var forhaandssalg,
+ * standardfilteret er «kun paa lager», og da faller settet ut. Det mest
+ * etterspurte slippet i aaret ville dukket opp forste gang paa slippdagen
+ * -- presis for sent, siden hele poenget med forhaandssalg er aa sikre seg
+ * FOR alle andre. */
+
+test("forhandssalg er skjult som standard", async () => {
+  // Regresjonsvern for det motsatte: at noen «fikser» synligheten ved aa la
+  // forhaandssalg telle som paa lager. Da lyver restock-varselet igjen.
+  const w = await app();
+  assert.doesNotMatch($(w, "#liste").textContent, /30th/);
+});
+
+test("forhandssalg-filteret viser dem, og bare dem", async () => {
+  const w = await app();
+  $(w, '[data-filter="forhandssalg"]').dispatchEvent(new w.Event("click", { bubbles: true }));
+  const kort = alle(w, "#liste .kort");
+  assert.equal(kort.length, 1);
+  assert.match($(w, "#liste").textContent, /30th Anniversary Celebration/);
+  assert.match($(w, "#teller").textContent, /til forhåndsbestilling/);
+});
+
+test("forhandssalg-filteret gjor ikke varen til «pa lager»", async () => {
+  const w = await app();
+  $(w, '[data-filter="forhandssalg"]').dispatchEvent(new w.Event("click", { bubbles: true }));
+  assert.doesNotMatch($(w, "#teller").textContent, /på lager/);
+});
+
+test("slippboksen teller ned og staar utenfor filteret", async () => {
+  const w = await app();
+  const boks = $(w, "#slipp-boks");
+  assert.equal(boks.hidden, false, "boksen skal vises selv om settet ikke er inne");
+  const tekst = boks.textContent;
+  assert.match(tekst, /40\s*dager til/);
+  assert.match(tekst, /30th Anniversary Celebration/);
+  assert.match(tekst, /2 butikker har åpnet for forhåndsbestilling/);
+  assert.match(tekst, /fra 899 kr/, "billigste forhandssalg, ikke billigste noe");
+});
+
+test("slippboksen sier fra naar ingen butikk har apnet enna", async () => {
+  const uten = { ...SNAPSHOT, produkter: SNAPSHOT.produkter.map((p) =>
+    p.set_id === "30th-celebration"
+      ? { ...p, tilbud: [], antall_forhandssalg: 0 } : p) };
+  const w = await appMed(uten);
+  assert.match($(w, "#slipp-boks").textContent,
+               /Ingen norske butikker har åpnet/);
+});
+
+test("slippboksen vises ikke for et sett som allerede er ute", async () => {
+  // Nedtelling til noe som skjedde i fjor er stoy, og stoy over listen er
+  // dyrere enn stoy under den.
+  const dom = new JSDOM(les("index.html"), { url: "https://pokepuls.no/",
+    runScripts: "outside-only", pretendToBeVisual: true });
+  const w = dom.window;
+  w.matchMedia = (q) => ({ matches: false, media: q, addListener() {}, removeListener() {} });
+  w.fetch = async (url, valg) => {
+    if (String(url).includes("/catalog")) {
+      const d = { sets: [{ id: "30th-celebration", label: "30th Anniversary Celebration",
+                           region: "en", release_date: "2020-01-01" }],
+                  types: [], stores: [] };
+      const k = JSON.stringify(d);
+      return { ok: true, status: 200, text: async () => k, json: async () => d };
+    }
+    return svar(url, valg, false);
+  };
+  w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 60));
+  assert.equal($(w, "#slipp-boks").hidden, true);
+});
+
+test("folg-knappen vises bare for innloggede", async () => {
+  const ute = await app(false);
+  assert.equal($(ute, "#folg-sett"), null);
+  const inne = await app(true);
+  await new Promise((r) => setTimeout(r, 60));
+  assert.ok($(inne, "#folg-sett"), "innlogget skal kunne folge settet");
+});
+
+test("folg-knappen lager et abonnement paa SETTET, ikke paa ett produkt", async () => {
+  // Det er hele poenget: du vet ikke hvilken butikk som apner forhaandssalg
+  // forst, eller om det blir ETB-en eller boksen. Folger du settet, treffer
+  // du uansett.
+  const w = await app(true);
+  await new Promise((r) => setTimeout(r, 60));
+  const sendt = [];
+  const gammelFetch = w.fetch;
+  w.fetch = async (url, valg) => {
+    if (String(url).endsWith("/watchlist") && valg && valg.method === "POST")
+      sendt.push(JSON.parse(valg.body));
+    return gammelFetch(url, valg);
+  };
+  $(w, "#folg-sett").dispatchEvent(new w.Event("click", { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 80));
+  assert.equal(sendt.length, 1);
+  assert.equal(sendt[0].set_id, "30th-celebration");
+  assert.equal(sendt[0].product_id, undefined, "skal ikke sende product_id");
+  // Begge trengs: «ny» naar butikken legger ut forhaandssalget, «restock»
+  // naar det gaar over til ekte lager paa slippdagen.
+  assert.deepEqual(sendt[0].kinds.sort(), ["ny", "restock"]);
 });

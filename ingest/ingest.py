@@ -113,10 +113,14 @@ def normaliser_lager(verdi):
 
 def synk_katalog(cur, katalog: Katalog) -> int:
     regioner = {r["id"]: r["label"] for r in katalog.regions}
+    # `slipp` er valgfri og finnes bare paa sett som ikke er ute enna.
+    # Kolonnen release_date har staatt tom siden dag én; den fylles her, og
+    # frontenden teller ned fra den i stedet for aa ha datoen hardkodet.
     cur.executemany(
-        "INSERT INTO sets (id, label, region) VALUES (%s, %s, %s) "
-        "ON CONFLICT (id) DO UPDATE SET label = EXCLUDED.label, region = EXCLUDED.region",
-        [(s["id"], s["label"], s["region"]) for s in katalog.sets],
+        "INSERT INTO sets (id, label, region, release_date) VALUES (%s, %s, %s, %s) "
+        "ON CONFLICT (id) DO UPDATE SET label = EXCLUDED.label, "
+        "  region = EXCLUDED.region, release_date = EXCLUDED.release_date",
+        [(s["id"], s["label"], s["region"], s.get("slipp")) for s in katalog.sets],
     )
     cur.executemany(
         "INSERT INTO product_types (id, label, sort_order) VALUES (%s, %s, %s) "

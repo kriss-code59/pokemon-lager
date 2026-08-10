@@ -475,3 +475,28 @@ body.admin .topp { position: static; }
 }
 .side-lager.bestilling { color: var(--bla); }
 .side-status.bestilling { background: rgba(76, 154, 255, .12); color: var(--bla); }
+
+/* Nedtelling til et sett som ikke er sluppet enna.
+ *
+ * Ligger over listen og utenfor filtrene. Den skal se ut som en plakat, ikke
+ * som enda et produktkort -- den konkurrerer med resten av siden om
+ * oppmerksomhet, og den vinner bare hvis den ser annerledes ut. */
+.slipp {
+  margin: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--gul);
+  background: linear-gradient(160deg, rgba(255, 200, 0, .10), transparent 70%);
+}
+.slipp-topp { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.slipp-dager {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gul);
+  font-variant-numeric: tabular-nums;
+}
+.slipp-tekst { font-size: 15px; line-height: 1.3; }
+.slipp-tekst strong { font-size: 17px; }
+.slipp .hovedknapp { margin-top: 10px; }
+.slipp .lenkeknapp { margin-top: 6px; }
