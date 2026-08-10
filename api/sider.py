@@ -24,7 +24,7 @@ import html
 import json
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, HTTPException, Request, Response
+from fastapi import APIRouter, Request, Response
 
 router = APIRouter(tags=["sider"])
 
@@ -110,6 +110,28 @@ SIDEFOT = """
 </body></html>"""
 
 
+def _ikke_funnet() -> str:
+    return """<!DOCTYPE html>
+<html lang="no"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<meta name="robots" content="noindex">
+<title>Fant ikke varen – Pokepuls</title>
+<link rel="stylesheet" href="/style.css?v=15">
+</head><body class="side">
+<main class="side-innhold">
+  <h1>Vi fant ikke den varen</h1>
+  <p class="hjelp">Enten finnes den ikke lenger hos noen av butikkene vi
+  følger, eller så er lenken skrevet feil. Begge deler skjer — en vare kan
+  bli avpublisert lenge etter at noen delte lenken.</p>
+  <p><a class="hovedknapp smal" href="/">Søk i alle produktene</a></p>
+  <p class="hjelp liten"><a href="/">Pokepuls</a> følger priser og lagerstatus
+  på forseglede Pokémon-produkter hos norske butikker.</p>
+</main>
+</body></html>"""
+
+
 def monter(app, hent_pool):
 
     async def _hent(sql, *args):
@@ -161,7 +183,13 @@ def monter(app, hent_pool):
     async def produktside(request: Request, produkt_id: str):
         rader = await _hent(PRODUKT_SQL, produkt_id)
         if not rader:
-            raise HTTPException(404, "Ukjent produkt")
+            # En ekte side, ikke {"detail":"Not Found"}. Disse URL-ene deles
+            # i Facebook-grupper og paa Discord, og de overlever produktet:
+            # en vare kan bli avpublisert lenge etter at lenken ble delt.
+            # Statuskoden er fortsatt 404 -- Google skal ikke indeksere den
+            # -- men mennesket som klikket skal faa en vei videre.
+            return Response(content=_ikke_funnet(), status_code=404,
+                            media_type="text/html; charset=utf-8")
         p = rader[0]
         tilbud = await _hent(TILBUD_SQL, produkt_id)
         # «Paa lager» maa bety at du kan faa den i posten. Et forhaandssalg

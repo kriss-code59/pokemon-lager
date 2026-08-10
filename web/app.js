@@ -1063,6 +1063,7 @@ async function visKontoSide() {
     '<button class="hovedknapp" id="logg-ut" type="button">Logg ut</button>' +
     '<p class="hjelp liten" style="margin-top:18px">' +
       '<a href="/personvern.html">Personvern</a> · ' +
+      '<a href="/vilkar.html">Vilkår</a> · ' +
       '<button class="lenkeknapp" id="slett-konto" type="button" ' +
         'style="margin:0;color:var(--tekst-svak)">Slett kontoen min</button></p>');
 

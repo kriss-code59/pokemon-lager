@@ -160,3 +160,87 @@ def test_katalogen_synker_slippdatoen_til_databasen():
     kilde = (ROT / "ingest" / "ingest.py").read_text(encoding="utf-8")
     assert "release_date" in kilde
     assert 's.get("slipp")' in kilde
+
+
+# ------------------------------------------------------- lansering
+
+"""Ting som maa vaere paa plass for aa staa offentlig.
+
+Alle sammen er feil som IKKE gir en exception. De gir en side som ser helt
+riktig ut mens den mangler noe -- og det er nettopp derfor de trenger en
+test og ikke bare et blikk.
+"""
+
+WEB = ROT / "web"
+
+
+def test_sikkerhetsheadere_ligger_i_snippeten_som_faktisk_deployes():
+    """Regresjon mot en felle som allerede har kostet oss én gang.
+
+    Headerne sto i deploy/nginx-pokepuls.conf i lang tid og virket aldri:
+    certbot eier /etc/nginx/sites-available/pokepuls, saa oppsett-api.sh
+    nekter aa kopiere repoets versjon over den. Malt mot produksjon svarte
+    pokepuls.no uten en eneste header.
+
+    Snippeten er den ENESTE nginx-filen som installeres ved hver deploy.
+    Staar de ikke der, finnes de ikke.
+    """
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    for header in ["Strict-Transport-Security", "X-Content-Type-Options",
+                   "X-Frame-Options", "Referrer-Policy",
+                   "Content-Security-Policy"]:
+        assert header in konf, f"{header} mangler i snippeten"
+
+
+def test_admin_gjentar_headerne():
+    # nginx sin arveregel: én add_header i en location slaar av ALLE arvede.
+    # /admin har sin egen X-Robots-Tag, saa uten gjentakelse ville admin --
+    # den ene siden det er verdt aa angripe -- vaert uten CSP.
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    admin = konf[konf.index("location ~ ^/admin"):]
+    for header in ["Content-Security-Policy", "X-Frame-Options",
+                   "Strict-Transport-Security"]:
+        assert header in admin, f"{header} mangler i admin-blokka"
+
+
+def test_ingen_innebygde_skript_i_html():
+    """CSP-en setter script-src 'self' uten unsafe-inline.
+
+    Et innebygd <script> ville sluttet aa kjore i det CSP-en slaar inn --
+    stille, uten feil paa serveren. Det innebygde skriptet i
+    nytt-passord.html ble flyttet ut nettopp derfor, og den siden er den
+    ENE som maa virke naar alt annet har gaatt galt: den er veien tilbake
+    inn i en konto du er laast ute av.
+    """
+    import re
+    for fil in WEB.glob("*.html"):
+        html = fil.read_text(encoding="utf-8")
+        for m in re.finditer(r"<script(?![^>]*\bsrc=)[^>]*>", html):
+            tag = m.group(0)
+            # JSON-LD er et datablokk-element, ikke kjorbar kode.
+            assert "application/ld+json" in tag, f"{fil.name}: {tag}"
+
+
+def test_forsiden_har_delebilde():
+    # Uten dette ser en lenke delt i en Facebook-gruppe eller paa Discord ut
+    # som en naken URL. Det er nettopp der veksten kommer fra.
+    html = (WEB / "index.html").read_text(encoding="utf-8")
+    assert 'property="og:image"' in html
+    assert (WEB / "og-bilde.png").exists(), "bildet det pekes paa maa finnes"
+
+
+def test_vilkaar_finnes_og_er_lenket():
+    vilkar = WEB / "vilkar.html"
+    assert vilkar.exists()
+    tekst = vilkar.read_text(encoding="utf-8")
+    # De tre tingene som MAA staa i et forbrukerkjop av et abonnement.
+    for maa in ["49", "Angrerett", "fornyes automatisk"]:
+        assert maa in tekst, f"vilkaarene mangler «{maa}»"
+    app = (WEB / "app.js").read_text(encoding="utf-8")
+    assert "/vilkar.html" in app, "vilkaarene maa vaere naabare fra kontosiden"
+
+
+def test_ukjent_produkt_gir_en_side_og_ikke_rå_json():
+    kilde = (ROT / "api" / "sider.py").read_text(encoding="utf-8")
+    assert "_ikke_funnet" in kilde
+    assert "status_code=404" in kilde, "den skal fortsatt VAERE 404 for Google"
