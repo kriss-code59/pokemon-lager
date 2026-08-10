@@ -91,6 +91,9 @@ const KALL = [];
  * er hele grunnen til at endepunktet finnes. */
 const BRUK = [];
 
+/* Varsler som appen lukket. Se «rydd varselsenteret»-testene nederst. */
+const LUKKET = [];
+
 /* Frontenden leser svaret med r.text() slik at et tomt svar (204) ikke
  * kaster. Testdobbelen ma derfor tilby text(), ikke bare json(). */
 function svar(url, valg, innlogget) {
@@ -151,6 +154,18 @@ async function app(innlogget = false) {
   // uten denne tester vi et miljo som ikke finnes noe sted.
   w.matchMedia = w.matchMedia || ((q) => ({ matches: false, media: q,
                                             addListener() {}, removeListener() {} }));
+  // jsdom har ingen serviceWorker. Uten denne kan vi ikke teste at appen
+  // rydder varselsenteret naar den aapnes.
+  LUKKET.length = 0;
+  const varsler = [{ close() { LUKKET.push("a"); } }, { close() { LUKKET.push("b"); } }];
+  Object.defineProperty(w.navigator, "serviceWorker", {
+    configurable: true,
+    value: {
+      getRegistration: async () => ({ getNotifications: async () => varsler }),
+      ready: Promise.resolve({ getNotifications: async () => varsler }),
+      register: async () => ({}),
+    },
+  });
   w.fetch = async (url, valg) => svar(url, valg, innlogget);
   w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
   await new Promise((r) => setTimeout(r, 40));
@@ -876,4 +891,44 @@ test("folg-knappen lager et abonnement paa SETTET, ikke paa ett produkt", async 
   // Begge trengs: «ny» naar butikken legger ut forhaandssalget, «restock»
   // naar det gaar over til ekte lager paa slippdagen.
   assert.deepEqual(sendt[0].kinds.sort(), ["ny", "restock"]);
+});
+
+/* --------------------------------------------- rydd varselsenteret */
+
+/* «Vi far alle varslene paa nytt hver gang vi oppdaterer siden.»
+ *
+ * De kom aldri paa nytt. De hadde ligget der hele tiden: et varsel du ikke
+ * sveiper bort blir staaende i varslingssenteret, og paa iOS leveres i
+ * tillegg alt som kom mens appen var lukket, samlet, i det du aapner den.
+ *
+ * Staar du INNE i appen, har varselet gjort jobben sin. */
+
+test("varselsenteret ryddes naar appen aapnes", async () => {
+  await app();
+  await new Promise((r) => setTimeout(r, 30));
+  assert.deepEqual(LUKKET, ["a", "b"]);
+});
+
+test("ryddes ogsaa naar fanen blir synlig igjen", async () => {
+  // Paa mobil byttes det mellom apper langt oftere enn sider lastes. Uten
+  // dette ville varslene blitt liggende gjennom en hel dags bruk.
+  const w = await app();
+  await new Promise((r) => setTimeout(r, 30));
+  LUKKET.length = 0;
+  w.document.dispatchEvent(new w.Event("visibilitychange"));
+  await new Promise((r) => setTimeout(r, 30));
+  assert.deepEqual(LUKKET, ["a", "b"]);
+});
+
+test("en nettleser uten serviceWorker skal ikke kaste", async () => {
+  // Safari uten hjemskjerm, eldre Android. Ryddingen er en bekvemmelighet;
+  // den skal aldri vaere grunnen til at appen ikke laster.
+  const dom = new JSDOM(les("index.html"), { url: "https://pokepuls.no/",
+    runScripts: "outside-only", pretendToBeVisual: true });
+  const w = dom.window;
+  w.matchMedia = (q) => ({ matches: false, media: q, addListener() {}, removeListener() {} });
+  w.fetch = async (url, valg) => svar(url, valg, false);
+  w.eval(les("app.js").replace(/if \("serviceWorker"[\s\S]*$/, ""));
+  await new Promise((r) => setTimeout(r, 40));
+  assert.equal(alle(w, "#liste .kort").length, 2, "appen skal virke som vanlig");
 });

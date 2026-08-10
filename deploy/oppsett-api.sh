@@ -183,7 +183,20 @@ chmod 755 "$HJEM"
 # mens API-et var oppdatert. Utad ser det ut som en vellykket deploy: den
 # nye koden virker, og bare nginx-endringene mangler. Det tok en hel okt aa
 # oppdage sist.
-if ! nginx -t; then
+# nginx ligger i /usr/sbin. Cron kjorer med PATH=/usr/bin:/bin, saa `nginx`
+# alene gir «command not found» -- og skriptet gikk videre som om alt var
+# bra. Resultatet: snippeten ble skrevet til disk hver eneste deploy, og
+# nginx leste den aldri. Sikkerhetsheaderne laa ferdig installert paa
+# serveren i timevis uten aa virke.
+#
+# Absolutt sti, med oppslag som reserve hvis distroen flytter den.
+NGINX=$(command -v nginx || echo /usr/sbin/nginx)
+if [[ ! -x "$NGINX" ]]; then
+  echo "FEIL: finner ikke nginx (provde $NGINX)"
+  exit 1
+fi
+
+if ! "$NGINX" -t; then
   echo "FEIL: nginx avviste konfigurasjonen. Rorer ikke den kjorende."
   echo "      Kjor 'nginx -t' for hele feilmeldingen."
   exit 1
@@ -194,7 +207,10 @@ LOGG "8/8 Cron for skanning, ingest og varsling"
 chmod 755 "$REPO"/deploy/*.sh
 cat > /etc/cron.d/pokepuls <<'EOF'
 SHELL=/bin/bash
-PATH=/usr/local/bin:/usr/bin:/bin
+# /usr/sbin MAA vaere med. Uten den finner ikke selv-deploy.sh nginx, og
+# nginx-konfigurasjonen blir skrevet til disk uten noen gang aa bli lest.
+# Det sto slik i maanedsvis: snippeten var oppdatert, headerne manglet.
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Skanning + ingest hvert 10. minutt.
 #
 # Var 20 for parallelliseringen halverte rundetiden fra 19 til 9,5 min.

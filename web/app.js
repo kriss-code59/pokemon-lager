@@ -1429,6 +1429,43 @@ lastBruker();
   } catch (e) { /* se over */ }
 })();
 
+/* Rydd varselsenteret naar appen aapnes.
+ *
+ * Dette er grunnen til at det foles som om «alle varslene kommer paa nytt
+ * hver gang du oppdaterer siden». De kommer ikke paa nytt -- de har ligget
+ * der hele tiden. Et varsel du ikke sveiper bort blir liggende i
+ * varslingssenteret, og paa iOS leveres i tillegg alt som kom mens appen
+ * var lukket, samlet, i det du aapner den.
+ *
+ * Naar du staar INNE i appen har varselet gjort jobben sin. Det skal ikke
+ * ligge igjen og be om oppmerksomhet for noe du allerede ser paa.
+ *
+ * Vi rydder ogsaa naar fanen blir synlig igjen, ikke bare ved lasting:
+ * paa mobil byttes det mellom apper langt oftere enn sider lastes.
+ */
+function ryddVarsler() {
+  if (!("serviceWorker" in navigator)) return;
+  navigator.serviceWorker.getRegistration()
+    .then((reg) => {
+      if (!reg || !reg.getNotifications) return;
+      return reg.getNotifications().then((varsler) => {
+        for (const v of varsler) v.close();
+      });
+    })
+    .catch(() => {});   // en opprydding som feiler skal aldri vises
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) ryddVarsler();
+});
+
+// Ved lasting. Funksjonen sjekker selv om serviceWorker finnes, saa den kan
+// kalles fritt -- den skal aldri vaere grunnen til at appen ikke starter.
+ryddVarsler();
+
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").catch(() => {});
+  // Én gang til naar registreringen er aktiv: paa aller forste besok finnes
+  // det ingen registrering enna naar linja over kjorer.
+  navigator.serviceWorker.ready.then(ryddVarsler).catch(() => {});
 }

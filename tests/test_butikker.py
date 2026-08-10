@@ -244,3 +244,29 @@ def test_ukjent_produkt_gir_en_side_og_ikke_rå_json():
     kilde = (ROT / "api" / "sider.py").read_text(encoding="utf-8")
     assert "_ikke_funnet" in kilde
     assert "status_code=404" in kilde, "den skal fortsatt VAERE 404 for Google"
+
+
+def test_cron_har_usr_sbin_i_path():
+    """Rotaarsaken til at sikkerhetsheaderne aldri kom ut.
+
+    /etc/cron.d/pokepuls skrives av oppsett-api.sh og satte
+    PATH=/usr/local/bin:/usr/bin:/bin. nginx ligger i /usr/sbin. Dermed ga
+    `nginx -t` «command not found» i deployen, skriptet gikk videre, og
+    konfigurasjonen ble skrevet til disk uten noen gang aa bli lest inn.
+
+    Feilen er usynlig utenfra: filen ER oppdatert, tidsstemplet ER ferskt,
+    og `nginx -t` kjort for haand sier at alt er i orden.
+    """
+    skript = (ROT / "deploy" / "oppsett-api.sh").read_text(encoding="utf-8")
+    path_linjer = [l for l in skript.splitlines() if l.startswith("PATH=")]
+    assert path_linjer, "fant ingen PATH-linje i cron-oppsettet"
+    for l in path_linjer:
+        assert "/usr/sbin" in l, f"cron mangler /usr/sbin: {l}"
+
+
+def test_deployen_bruker_absolutt_sti_til_nginx():
+    # Belte og seler: selv om PATH skulle bli feil igjen, skal deployen
+    # finne nginx -- eller si tydelig fra at den ikke gjor det.
+    skript = (ROT / "deploy" / "oppsett-api.sh").read_text(encoding="utf-8")
+    assert "/usr/sbin/nginx" in skript
+    assert '"$NGINX" -t' in skript
