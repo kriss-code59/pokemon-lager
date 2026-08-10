@@ -176,8 +176,19 @@ ln -sf /etc/nginx/sites-available/pokepuls /etc/nginx/sites-enabled/pokepuls
 rm -f /etc/nginx/sites-enabled/default
 # nginx ma kunne lese web/ gjennom /home/pokepuls.
 chmod 755 "$HJEM"
-nginx -t
-systemctl reload nginx
+# HOYT, ikke stille.
+#
+# Feiler `nginx -t`, kjorte skriptet videre til `systemctl reload nginx`,
+# som naturlig nok nektet -- og nginx fortsatte med GAMMEL konfigurasjon
+# mens API-et var oppdatert. Utad ser det ut som en vellykket deploy: den
+# nye koden virker, og bare nginx-endringene mangler. Det tok en hel okt aa
+# oppdage sist.
+if ! nginx -t; then
+  echo "FEIL: nginx avviste konfigurasjonen. Rorer ikke den kjorende."
+  echo "      Kjor 'nginx -t' for hele feilmeldingen."
+  exit 1
+fi
+systemctl reload nginx || { echo "FEIL: nginx reload feilet"; exit 1; }
 
 LOGG "8/8 Cron for skanning, ingest og varsling"
 chmod 755 "$REPO"/deploy/*.sh
