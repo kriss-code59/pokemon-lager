@@ -221,29 +221,37 @@ function slippBoksHtml() {
 
   const navn = produkter[0].set_label;
   const dager = Math.ceil((s.tid - naa) / 86400000);
-  // Tilbud finnes, men ingen av dem er «paa lager» -- de er forhaandssalg.
-  // Det er nettopp det tallet som betyr noe her.
-  const butikker = new Set();
+  // TRE tilstander, ikke to. Skillet mellom «ingen butikk har varen» og
+  // «butikkene har lagt den ut, men ingen selger den akkurat na» er hele
+  // poenget rett for et slipp: det siste betyr at butikkene staar klare, og
+  // at det kan skje naar som helst. Sa dem i samme sekk, og teksten sier
+  // «ingenting skjer» pa akkurat det tidspunktet det er mest som skjer.
+  const apne = new Set();      // tar bestilling NA
+  const klare = new Set();     // har lagt ut varen, men ikke kjopbar
   let billigst = null;
   for (const p of produkter) {
     for (const t of p.tilbud || []) {
+      klare.add(t[0]);
       if (t[2] === 1 && t[3] === "forhandssalg") {
-        butikker.add(t[0]);
+        apne.add(t[0]);
         if (t[1] && (billigst === null || t[1] < billigst)) billigst = t[1];
       }
     }
   }
+  const butikkord = (n) => n + (n === 1 ? " butikk" : " butikker");
 
   return '<div class="slipp">' +
     '<div class="slipp-topp"><span class="slipp-dager">' + dager + "</span>" +
     '<span class="slipp-tekst">' + (dager === 1 ? "dag" : "dager") + " til<br><strong>" +
       esc(navn) + "</strong></span></div>" +
     '<p class="hjelp">Slippes ' + esc(nyNorskDato(s.dato)) + ", samtidig i hele verden. " +
-    (butikker.size
-      ? butikker.size + (butikker.size === 1 ? " butikk har" : " butikker har") +
-        " åpnet for forhåndsbestilling" +
+    (apne.size
+      ? butikkord(apne.size) + " tar forhåndsbestilling nå" +
         (billigst ? ", fra " + kr(billigst) : "") + "."
-      : "Ingen norske butikker har åpnet for forhåndsbestilling ennå.") + "</p>" +
+      : klare.size
+        ? butikkord(klare.size) + " har lagt ut varene, men ingen tar " +
+          "bestilling akkurat nå."
+        : "Ingen norske butikker har lagt ut settet ennå.") + "</p>" +
     '<p class="hjelp liten">Følg settet, så får du beskjed i det en butikk ' +
     "åpner forhåndssalg — og igjen når varen faktisk kommer på lager.</p>" +
     settFolgesHtml(s.id, navn) +

@@ -800,17 +800,29 @@ test("slippboksen teller ned og staar utenfor filteret", async () => {
   const tekst = boks.textContent;
   assert.match(tekst, /40\s*dager til/);
   assert.match(tekst, /30th Anniversary Celebration/);
-  assert.match(tekst, /2 butikker har åpnet for forhåndsbestilling/);
+  assert.match(tekst, /2 butikker tar forhåndsbestilling nå/);
   assert.match(tekst, /fra 899 kr/, "billigste forhandssalg, ikke billigste noe");
 });
 
-test("slippboksen sier fra naar ingen butikk har apnet enna", async () => {
-  const uten = { ...SNAPSHOT, produkter: SNAPSHOT.produkter.map((p) =>
+test("slippboksen skiller «har lagt ut» fra «tar bestilling»", async () => {
+  // Rett for et slipp er dette den viktigste setningen paa siden. Butikker
+  // som har lagt ut varen men ikke selger den enna, staar KLARE -- det kan
+  // skje naar som helst. Slaas de sammen med «ingen har den», sier teksten
+  // «ingenting skjer» paa akkurat det tidspunktet det er mest som skjer.
+  const lagt_ut = { ...SNAPSHOT, produkter: SNAPSHOT.produkter.map((p) =>
+    p.set_id === "30th-celebration"
+      ? { ...p, tilbud: [["cardcenter", null, 0, null], ["outland", null, 0, null]],
+          antall_forhandssalg: 0 } : p) };
+  const a = await appMed(lagt_ut);
+  assert.match($(a, "#slipp-boks").textContent,
+               /2 butikker har lagt ut varene, men ingen tar bestilling akkurat nå/);
+
+  const ingenting = { ...SNAPSHOT, produkter: SNAPSHOT.produkter.map((p) =>
     p.set_id === "30th-celebration"
       ? { ...p, tilbud: [], antall_forhandssalg: 0 } : p) };
-  const w = await appMed(uten);
-  assert.match($(w, "#slipp-boks").textContent,
-               /Ingen norske butikker har åpnet/);
+  const b = await appMed(ingenting);
+  assert.match($(b, "#slipp-boks").textContent,
+               /Ingen norske butikker har lagt ut settet ennå/);
 });
 
 test("slippboksen vises ikke for et sett som allerede er ute", async () => {
