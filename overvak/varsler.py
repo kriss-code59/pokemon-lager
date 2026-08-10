@@ -70,12 +70,19 @@ ORDER BY e.id
 #
 # `spesifikk` avgjor om timeskvoten gjelder. Har du bedt om akkurat DENNE
 # varen, skal du faa den uansett hvor mye annet som skjer -- kvoten er der
-# for aa temme «foelg alt», ikke for aa holde tilbake noe du har valgt selv.
-# Traff en bruker baade spesifikt og via «alt», vinner det spesifikke.
+# for aa temme det brede, ikke for aa holde tilbake noe du har valgt selv.
+# Traff en bruker baade spesifikt og bredt, vinner det spesifikke.
+#
+# SETT teller som BREDT, ikke som spesifikt. Det var det ikke for, og det
+# var feil: ett sett er ni produkttyper ganger 41 butikker. Aa foelge et
+# sett ligner mye mer paa «foelg alt» enn paa «foelg denne varen», og da
+# skal det ha samme demping. Uten dette kan ett sett i bevegelse gi femti
+# varsler i slengen -- og da skrur du av varsler, som er den ene feilen
+# dette systemet ikke har raad til.
 ABONNENTER_SQL = """
 SELECT u.id, u.email, u.varsel_stille_natt, u.varsel_maks_pris_ore,
        u.varsel_maks_per_time,
-       bool_or(sub.product_id IS NOT NULL OR sub.set_id IS NOT NULL) AS spesifikk
+       bool_or(sub.product_id IS NOT NULL) AS spesifikk
 FROM subscriptions sub
 JOIN users u ON u.id = sub.user_id
 WHERE %s = ANY(sub.kinds)

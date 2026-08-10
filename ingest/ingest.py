@@ -171,6 +171,30 @@ def les_data(sti: str) -> dict:
         return json.load(f)
 
 
+# En BESTILLINGSVARE skal aldri bli en hendelse.
+#
+# katalog/tilgjengelighet.py sier det selv: «For en som venter paa restock er
+# dette i praksis utsolgt.» Butikken har den ikke -- den bestiller den hjem
+# hvis du kjoper. Ingen slippdato, ingen garanti for naar.
+#
+# Vi hadde allerede dempet dem i TEKSTEN (varsling/tekst.py lar dem ikke
+# vibrere). Men hendelsen ble laget likevel, og et varsel som ikke vibrerer
+# er fortsatt et varsel. Maalt over seks timer: 210 av 350 hendelser i hele
+# systemet var bestillingsvarer. Seksti prosent av all stoy, fra noe ingen
+# kan kjope.
+#
+# Verre: `in_stock` paa en bestillingsvare er ustabil. Butikkens tema viser
+# den snart som kjopbar og snart ikke, og hver vending ble en «restock».
+# Mystic Trades alene laget 228 av dem paa seks timer. Det er ikke
+# restock -- det er en maaler som blafrer.
+#
+# FORHAANDSSALG er noe helt annet og beholdes: der sikrer du deg til
+# veiledende pris for alle andre, og det er kanskje det mest verdifulle
+# signalet Pokepuls har.
+def _stille(bestillingstype) -> bool:
+    return bestillingstype == "bestillingsvare"
+
+
 def _bestillingstype(tittel):
     """Forhaandssalg og bestillingsvarer skal ikke telle som «paa lager».
 
@@ -333,7 +357,8 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                         sett_inn.append((butikk_id, ny["product_id"], url, ny["title"],
                                          ny["price_ore"], ny["in_stock"], na, na,
                                          ny["image_url"], ny["bestillingstype"]))
-                        if ny["in_stock"] is True and not bootstrap:
+                        if (ny["in_stock"] is True and not bootstrap
+                                and not _stille(ny["bestillingstype"])):
                             hendelser.append((None, url, ny["product_id"], butikk_id,
                                               "ny", ny["price_ore"], None))
                         continue
@@ -348,10 +373,14 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                     # None pa noen av sidene betyr "vet ikke" og skal aldri
                     # bli en hendelse. Det var nettopp den antagelsen som
                     # sendte falske restock-varsler for.
-                    if var is False and er is True:
+                    # Er varen en bestillingsvare paa EN av sidene, er verken
+                    # «kom paa lager» eller «ble utsolgt» sant. Den har aldri
+                    # vaert i hus.
+                    stille = _stille(ny["bestillingstype"]) or _stille(gammel.get("bestillingstype"))
+                    if var is False and er is True and not stille:
                         hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
                                           "restock", ny["price_ore"], None))
-                    elif var is True and er is False:
+                    elif var is True and er is False and not stille:
                         hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
                                           "utsolgt", ny["price_ore"], None))
 
@@ -400,7 +429,7 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                 borte = [r for u, r in for_.items() if u not in oppforinger]
                 if borte and not bootstrap:
                     for r in borte:
-                        if r["in_stock"] is True:
+                        if r["in_stock"] is True and not _stille(r.get("bestillingstype")):
                             hendelser.append((r["id"], r["url"], r["product_id"], butikk_id,
                                               "utsolgt", r["price_ore"], None))
                     cur.execute(

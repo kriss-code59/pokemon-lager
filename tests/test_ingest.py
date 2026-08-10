@@ -170,3 +170,82 @@ def test_produkt_id_kan_ha_annen_region_enn_settet():
     assert avvik, "forventet minst ett produkt med avvikende region"
     for pid in ider:
         assert len(pid.split(":")) == 3, pid
+
+
+# ------------------------------------------------- bestillingsvarer tier
+
+"""En bestillingsvare skal aldri bli en hendelse.
+
+Maalt i drift 10. august 2026: 210 av 350 hendelser i hele systemet paa seks
+timer var bestillingsvarer. Mystic Trades alene sto for 228 «restock» -- ikke
+fordi noe kom paa lager, men fordi `in_stock` paa en bestillingsvare blafrer
+mellom sant og usant fra kjoring til kjoring.
+
+katalog/tilgjengelighet.py sier det selv: for en som venter paa restock er en
+bestillingsvare i praksis utsolgt. Vi hadde dempet dem i TEKSTEN -- de
+vibrerer ikke -- men hendelsen ble laget likevel, og et varsel som ikke
+vibrerer er fortsatt et varsel.
+
+Forhaandssalg er noe helt annet og maa fortsatt slippe gjennom.
+"""
+
+
+def test_bestillingsvare_er_stille():
+    from ingest import _stille
+    assert _stille("bestillingsvare") is True
+
+
+def test_forhandssalg_er_ikke_stille():
+    # Det er der du sikrer deg til veiledende pris for alle andre. Demper vi
+    # den, har vi fjernet det mest verdifulle signalet i hele produktet.
+    from ingest import _stille
+    assert _stille("forhandssalg") is False
+
+
+def test_vanlig_vare_er_ikke_stille():
+    from ingest import _stille
+    assert _stille(None) is False
+
+
+def test_regelen_gjelder_alle_stedene_en_hendelse_lages():
+    """Leser kilden, fordi hendelsene lages inni en lang databaseloop.
+
+    En regel som bare daekker tre av fire steder er verre enn ingen regel:
+    stoyen gaar ned nok til at man tror det er fikset, og fortsetter aa komme
+    fra det fjerde. Derfor sjekkes HVERT sted en hendelse legges paa listen,
+    ikke bare at ordet «_stille» finnes i filen.
+    """
+    from pathlib import Path
+    kilde = (Path(__file__).resolve().parents[1] / "ingest" / "ingest.py").read_text(
+        encoding="utf-8")
+    linjer = kilde.splitlines()
+
+    steder = [(i, l) for i, l in enumerate(linjer)
+              if any(f'"{k}", ' in l for k in ("ny", "restock", "utsolgt"))
+              and "price_ore" in l]
+    assert len(steder) >= 4, f"fant bare {len(steder)} hendelsessteder"
+
+    # `not ny["bestillingstype"]` teller ogsaa som en gyldig sjekk. Det er
+    # regelen for «forhaandssalg eller bestillingsvare ble en vanlig vare»,
+    # og den er en EKTE restock: varen gikk fra noe butikken maatte skaffe,
+    # til noe de har staaende. Den skal du ha beskjed om.
+    for i, linje in steder:
+        rundt = "\n".join(linjer[max(0, i - 8):i + 1])
+        assert ("_stille(" in rundt or "not stille" in rundt
+                or 'not ny["bestillingstype"]' in rundt), \
+            f"linje {i + 1} lager en hendelse uten bestillingsvare-sjekk: {linje.strip()}"
+
+
+def test_sett_abonnement_teller_som_bredt_ikke_spesifikt():
+    """Timeskvoten skal gjelde for sett.
+
+    Ett sett er ni produkttyper ganger 41 butikker. Aa foelge et sett ligner
+    mye mer paa «foelg alt» enn paa «foelg denne varen». Uten dempingen kan
+    ett sett i bevegelse gi femti varsler i slengen -- og da skrur folk av
+    varsler, som er den ene feilen dette systemet ikke har raad til.
+    """
+    from pathlib import Path
+    sql = (Path(__file__).resolve().parents[1] / "overvak" / "varsler.py").read_text(
+        encoding="utf-8")
+    assert "bool_or(sub.product_id IS NOT NULL) AS spesifikk" in sql
+    assert "bool_or(sub.product_id IS NOT NULL OR sub.set_id IS NOT NULL)" not in sql
