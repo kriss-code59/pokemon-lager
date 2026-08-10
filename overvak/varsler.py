@@ -82,7 +82,14 @@ ORDER BY e.id
 ABONNENTER_SQL = """
 SELECT u.id, u.email, u.varsel_stille_natt, u.varsel_maks_pris_ore,
        u.varsel_maks_per_time,
-       bool_or(sub.product_id IS NOT NULL) AS spesifikk
+       (u.role IN ('premium', 'admin')
+        AND (u.premium_until IS NULL OR u.premium_until > now())) AS premium,
+       bool_or(sub.product_id IS NOT NULL) AS spesifikk,
+       -- Prisgrense per abonnement. Et abonnement UTEN grense slipper alt
+       -- gjennom: du skal aldri miste et varsel du har bedt om bredt fordi
+       -- du satte en grense et annet sted.
+       bool_or(sub.maks_pris_ore IS NULL) AS grense_fri,
+       min(sub.maks_pris_ore) AS grense
 FROM subscriptions sub
 JOIN users u ON u.id = sub.user_id
 WHERE %s = ANY(sub.kinds)
@@ -90,7 +97,7 @@ WHERE %s = ANY(sub.kinds)
        OR (sub.set_id     IS NOT NULL AND sub.set_id     = %s)
        OR (sub.product_id IS NULL     AND sub.set_id IS NULL))
 GROUP BY u.id, u.email, u.varsel_stille_natt, u.varsel_maks_pris_ore,
-         u.varsel_maks_per_time
+         u.varsel_maks_per_time, u.role, u.premium_until
 """
 
 # Henter kvoten og nullstiller den hvis klokketimen har rullet over.
@@ -246,6 +253,20 @@ def kjor(dsn: str = DSN, torrkjor: bool = False, verbose: bool = True) -> dict:
                         continue
                     tak = bruker["varsel_maks_pris_ore"]
                     if tak and h["price_ore"] and h["price_ore"] > tak:
+                        stat["hoppet_pris"] += 1
+                        continue
+
+                    # Prisgrense per vare -- premium.
+                    #
+                    # Faller premiumen bort, slutter grensene aa gjelde og
+                    # du faar ALT igjen. Det er med vilje: den motsatte
+                    # retningen ville gjort at et utlopt abonnement stilner
+                    # varsler du fortsatt venter paa, uten at noe sier fra.
+                    # Aa faa for mange varsler er synlig; aa miste dem er
+                    # det ikke.
+                    if (bruker["premium"] and not bruker["grense_fri"]
+                            and bruker["grense"] and h["price_ore"]
+                            and h["price_ore"] > bruker["grense"]):
                         stat["hoppet_pris"] += 1
                         continue
 

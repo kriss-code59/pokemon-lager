@@ -49,6 +49,8 @@ const state = {
   folger: new Map(),   // product_id -> abonnement-id
   folgerAlt: false,    // «foelg alt»: én rad uten product_id og set_id
   folgerSett: new Map(),  // set_id -> abonnement-id
+  grenser: new Map(),     // product_id -> maks_pris_ore (null = ingen grense)
+  premium: false,
   slipp: new Map(),    // set_id -> slippdato, for sett som ikke er ute enna
   maksPerTime: 5,      // brukerens timeskvote, hentet fra serveren
   apentProdukt: null,
@@ -435,6 +437,7 @@ async function apneProdukt(id) {
       '<div class="ark-under"><span>' + esc(p.type_label) + "</span>" +
       '<span class="merkelapp ' + p.region + '">' + esc(REGION[p.region] || p.region) + "</span></div>" +
       '<button class="folg-knapp" id="folg-knapp" type="button"></button>' +
+      '<div id="grense-boks"></div>' +
       "</div></div>";
 
     // Tre bolker, ikke to. «Pa lager» skal bety at du kan fa den i posten;
@@ -479,6 +482,56 @@ function tegnFolgKnapp() {
   knapp.textContent = folges ? "♥ Følger" : "♡ Følg denne";
   knapp.className = "folg-knapp" + (folges ? " pa" : "");
   knapp.onclick = () => vekslFolg(state.apentProdukt);
+  tegnGrense();
+}
+
+/* «Varsle bare naar den er under X kr» -- per vare.
+ *
+ * Den globale grensen (hele kontoen) har ligget i databasen lenge og er
+ * nesten ubrukelig: foelger du boosterpakker til 119 og bokser til 6 000,
+ * finnes det ingen enkelt verdi som gir mening. Setter du 1 000, hoerer du
+ * aldri om en boks igjen.
+ *
+ * Feltet vises bare naar du allerede foelger varen. Aa sette en grense paa
+ * noe du ikke foelger er en innstilling uten virkning, og en innstilling
+ * uten virkning er verre enn ingen. */
+function tegnGrense() {
+  const boks = $("grense-boks");
+  if (!boks) return;
+  const id = state.apentProdukt;
+  if (!state.bruker || !state.folger.has(id)) { boks.innerHTML = ""; return; }
+
+  if (!state.premium) {
+    boks.innerHTML = '<p class="hjelp liten">Vil du bare varsles under en ' +
+      'viss pris? <a href="/vilkar.html">Premium</a> lar deg sette en ' +
+      "grense per vare.</p>";
+    return;
+  }
+
+  const ore = state.grenser.get(id);
+  boks.innerHTML =
+    '<label class="grense">Varsle bare under ' +
+    '<input id="grense-felt" type="number" inputmode="numeric" min="1" ' +
+      'step="1" placeholder="ingen grense"' +
+      (ore ? ' value="' + Math.round(ore / 100) + '"' : "") + "> kr</label>" +
+    '<p class="feil" id="grense-feil" hidden></p>';
+
+  const felt = $("grense-felt");
+  felt.addEventListener("change", async () => {
+    const feil = $("grense-feil");
+    feil.hidden = true;
+    const abonnement = state.folger.get(id);
+    const kr = felt.value.trim() === "" ? null : Number(felt.value);
+    try {
+      const d = await hent("/watchlist/" + abonnement + "/grense", {
+        method: "POST", body: JSON.stringify({ maks_pris_kr: kr }),
+      });
+      state.grenser.set(id, d.maks_pris_ore);
+    } catch (e) {
+      feil.textContent = e.message;
+      feil.hidden = false;
+    }
+  });
 }
 
 function tilbudHtml(t) {
@@ -532,6 +585,11 @@ async function lastFolger() {
     state.folger = new Map(d.folger.filter((f) => f.product_id).map((f) => [f.product_id, f.id]));
     state.folgerSett = new Map(
       d.folger.filter((f) => f.set_id && !f.product_id).map((f) => [f.set_id, f.id]));
+    state.grenser = new Map(
+      d.folger.filter((f) => f.product_id).map((f) => [f.product_id, f.maks_pris_ore]));
+    // Serveren avgjor hva som er premium. Frontenden viser bare -- den
+    // sperrer ikke, for et skjult felt er ingen sperre.
+    state.premium = !!d.premium;
     // Serveren sier selv om «alt» er paa; vi utleder det ikke av radene.
     state.folgerAlt = !!d.alt;
     // Faller tilbake til 5 hvis feltet mangler -- en eldre server skal ikke
@@ -540,6 +598,8 @@ async function lastFolger() {
   } catch (e) {
     state.folger = new Map();
     state.folgerSett = new Map();
+    state.grenser = new Map();
+    state.premium = false;
     state.folgerAlt = false;
   }
 }

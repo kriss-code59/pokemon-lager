@@ -500,3 +500,16 @@ body.admin .topp { position: static; }
 .slipp-tekst strong { font-size: 17px; }
 .slipp .hovedknapp { margin-top: 10px; }
 .slipp .lenkeknapp { margin-top: 6px; }
+
+/* Prisgrense per vare. Skal se ut som en innstilling, ikke som et skjema --
+ * den staar rett under folgeknappen og maa ikke stjele oppmerksomhet fra
+ * prisene, som er det folk kom for. */
+.grense {
+  display: flex; align-items: center; gap: 6px;
+  margin-top: 8px; font-size: 13px; color: var(--tekst-svak);
+}
+.grense input {
+  width: 88px; padding: 5px 8px; border-radius: 8px;
+  border: 1px solid var(--kant); background: var(--flate);
+  color: var(--tekst); font-size: 14px; font-variant-numeric: tabular-nums;
+}

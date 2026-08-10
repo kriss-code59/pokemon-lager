@@ -66,6 +66,12 @@ class Innlogging(BaseModel):
     password: str = Field(min_length=1, max_length=200)
 
 
+class Grense(BaseModel):
+    # None betyr «fjern grensen». 0 ville betydd «varsle aldri», og det er
+    # ikke noe noen mener -- da slutter man aa folge i stedet.
+    maks_pris_kr: int | None = Field(default=None, ge=1, le=1_000_000)
+
+
 class Folg(BaseModel):
     product_id: str | None = None
     set_id: str | None = None
@@ -146,6 +152,19 @@ async def hent_bruker(pool, token: str | None):
             "WHERE s.token_hash = %s AND s.expires_at > now()",
             (_hash_token(token),))
         return await cur.fetchone()
+
+
+def er_premium(bruker) -> bool:
+    """Én definisjon av premium, brukt overalt.
+
+    `premium_until IS NULL` betyr ubegrenset -- det er slik en rolle satt
+    for haand i admin ser ut. Stripe fyller feltet med sluttdatoen for
+    perioden som er betalt.
+    """
+    if not bruker or bruker["role"] not in ("premium", "admin"):
+        return False
+    til = bruker.get("premium_until")
+    return til is None or til > datetime.now(timezone.utc)
 
 
 def _krev(bruker):
@@ -230,6 +249,7 @@ def monter(app, hent_pool):
         async with pool.connection() as conn:
             cur = await conn.execute(
                 "SELECT s.id, s.product_id, s.set_id, s.kinds, s.fast_lane, "
+                "       s.maks_pris_ore, "
                 "       se.label AS set_label, t.label AS type_label, p.region "
                 "FROM subscriptions s "
                 "LEFT JOIN products p ON p.id = s.product_id "
@@ -248,7 +268,8 @@ def monter(app, hent_pool):
         # staar det 5 i teksten mens brukeren har 12, er teksten en logn.
         return {"folger": rader,
                 "alt": any(r["product_id"] is None and r["set_id"] is None for r in rader),
-                "maks_per_time": kvote["varsel_maks_per_time"] if kvote else 5}
+                "maks_per_time": kvote["varsel_maks_per_time"] if kvote else 5,
+                "premium": er_premium(bruker)}
 
     @liste_router.post("")
     async def folg(data: Folg, pokepuls_sesjon: str | None = Cookie(None)):
@@ -310,6 +331,34 @@ def monter(app, hent_pool):
         # Ikke 404 hvis den ikke fantes: aa skru av noe som allerede er av
         # er ikke en feil, og knappen skal ikke kunne komme ut av synk.
         return {"ok": True, "paa": False}
+
+    @liste_router.post("/{abonnement_id}/grense")
+    async def sett_grense(abonnement_id: int, data: Grense,
+                          pokepuls_sesjon: str | None = Cookie(None)):
+        """«Varsle bare naar den er under X kr» -- per vare.
+
+        Premium. Den globale grensen i /api/push/innstillinger er fortsatt
+        gratis; den gjelder hele kontoen og er nesten ubrukelig naar du
+        foelger baade boosterpakker til 119 og bokser til 6 000.
+
+        Serveren avviser, ikke bare grensesnittet. En knapp som er skjult er
+        ikke en sperre -- endepunktet er aapent for hvem som helst med en
+        terminal.
+        """
+        pool = hent_pool()
+        bruker = _krev(await hent_bruker(pool, pokepuls_sesjon))
+        if not er_premium(bruker):
+            raise HTTPException(
+                402, "Prisgrense per vare er en premium-funksjon.")
+        ore = data.maks_pris_kr * 100 if data.maks_pris_kr else None
+        async with pool.connection() as conn:
+            cur = await conn.execute(
+                "UPDATE subscriptions SET maks_pris_ore = %s "
+                "WHERE id = %s AND user_id = %s RETURNING id",
+                (ore, abonnement_id, bruker["id"]))
+            if not await cur.fetchone():
+                raise HTTPException(404, "Fant ikke abonnementet")
+        return {"ok": True, "maks_pris_ore": ore}
 
     @liste_router.delete("/{abonnement_id}")
     async def slutt_a_folge(abonnement_id: int,

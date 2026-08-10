@@ -175,3 +175,80 @@ def test_kvoten_kommer_fra_brukeren_ikke_fra_en_konstant():
 def test_folgelisten_er_uendret():
     # Nye felt skal ikke ha flyttet paa det som allerede virket.
     assert _liste([ENKELT])["folger"] == [ENKELT]
+
+
+# ------------------------------------------------------ prisgrense per vare
+
+"""«Varsle bare naar den er under X kr» -- per vare, ikke per konto.
+
+users.varsel_maks_pris_ore har ligget der siden 002 og gjelder HELE kontoen.
+Foelger du boosterpakker til 119 kr og bokser til 6 000, finnes det ingen
+enkelt verdi som gir mening: setter du 1 000, hoerer du aldri om en boks
+igjen. Derfor per abonnement.
+
+Testene her handler om de to reglene som er lette aa faa feil vei, og der
+feil vei betyr at noen mister et varsel de ventet paa.
+"""
+
+
+def _kilde(sti):
+    from pathlib import Path
+    return (Path(__file__).resolve().parents[1] / sti).read_text(encoding="utf-8")
+
+
+def test_abonnement_uten_grense_slipper_alt_gjennom():
+    """Den minst overraskende retningen.
+
+    En hendelse kan treffe deg gjennom flere abonnementer samtidig -- du
+    foelger baade produktet og hele settet. Setter du en grense paa
+    produktet, skal du ikke miste settvarslene du ba om bredt.
+    """
+    sql = _kilde("overvak/varsler.py")
+    assert "bool_or(sub.maks_pris_ore IS NULL) AS grense_fri" in sql
+    assert 'not bruker["grense_fri"]' in sql
+
+
+def test_grensen_slutter_aa_gjelde_naar_premium_faller_bort():
+    """Retningen er med vilje.
+
+    Faller premiumen bort og grensene BLE staaende, ville et utlopt
+    abonnement stilnet varsler du fortsatt venter paa -- uten at noe sier
+    fra. Aa faa for mange varsler er synlig. Aa miste dem er det ikke.
+    """
+    sql = _kilde("overvak/varsler.py")
+    i = sql.index('bruker["grense_fri"]')
+    assert 'bruker["premium"]' in sql[max(0, i - 200):i]
+
+
+def test_premium_avgjores_ett_sted():
+    # To definisjoner av «har denne betalt?» er to steder det kan gaa galt,
+    # og den ene vil vaere den som gir bort funksjonen gratis.
+    auth = _kilde("api/auth.py")
+    assert "def er_premium(" in auth
+    assert auth.count("def er_premium(") == 1
+
+
+def test_serveren_avviser_og_ikke_bare_grensesnittet():
+    """En skjult knapp er ingen sperre.
+
+    /api/watchlist/{id}/grense er aapent for hvem som helst med en terminal.
+    Sperren maa ligge i endepunktet, ikke i at feltet ikke tegnes.
+    """
+    auth = _kilde("api/auth.py")
+    i = auth.index("async def sett_grense")
+    kropp = auth[i:i + 1400]
+    assert "er_premium(bruker)" in kropp
+    assert "402" in kropp, "402 Payment Required er det riktige svaret her"
+
+
+def test_null_fjerner_grensen_og_null_kroner_er_ikke_lov():
+    # 0 ville betydd «varsle aldri», og det er ikke noe noen mener -- da
+    # slutter man aa folge i stedet.
+    auth = _kilde("api/auth.py")
+    i = auth.index("class Grense")
+    assert "ge=1" in auth[i:i + 300]
+
+
+def test_migrasjonen_tillater_ikke_negative_grenser():
+    sql = _kilde("db/007_prisgrense.sql")
+    assert "maks_pris_ore IS NULL OR maks_pris_ore > 0" in sql
