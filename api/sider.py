@@ -118,7 +118,7 @@ def _ikke_funnet() -> str:
 <meta name="theme-color" content="#0b0d10">
 <meta name="robots" content="noindex">
 <title>Fant ikke varen – Pokepuls</title>
-<link rel="stylesheet" href="/style.css?v=17">
+<link rel="stylesheet" href="/style.css?v=18">
 </head><body class="side">
 <main class="side-innhold">
   <h1>Vi fant ikke den varen</h1>

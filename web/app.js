@@ -658,6 +658,69 @@ async function vekslFolgSett(settId) {
   await lastFolger();
 }
 
+/* Premium.
+ *
+ * Boksen etterfylles, som varselseksjonen: den maa spore serveren om
+ * betaling i det hele tatt er satt opp. Er den ikke det, staar det
+ * ingenting her -- en halvkonfigurert betalingsloype skal ikke se ut som
+ * en fungerende en.
+ *
+ * All logikk om HVEM som er premium ligger paa serveren. Denne filen kan
+ * hvem som helst laste ned og endre. */
+async function tegnPremium() {
+  const boks = $("premium-boks");
+  if (!boks) return;
+  let d = null;
+  try { d = await hent("/betaling/status"); } catch (e) { return; }
+  if (!d || !d.paa) { boks.innerHTML = ""; return; }
+
+  if (d.premium) {
+    const til = d.gjelder_til
+      ? new Date(d.gjelder_til).toLocaleDateString("nb-NO",
+          { day: "numeric", month: "long", year: "numeric" })
+      : null;
+    boks.innerHTML = '<div class="varselboks"><h3>Premium</h3>' +
+      '<p class="hjelp">Du har Pokepuls Premium' +
+        (til ? ", betalt ut " + esc(til) : "") + ". Takk.</p>" +
+      '<p class="hjelp liten">Du kan sette en prisgrense per vare: åpne en ' +
+      "vare du følger, og skriv inn hva den må under for at vi skal si fra.</p>" +
+      '<button class="lenkeknapp" id="premium-portal" type="button">' +
+      "Administrer eller si opp</button>" +
+      '<p class="feil" id="premium-feil" hidden></p></div>';
+  } else {
+    boks.innerHTML = '<div class="varselboks"><h3>Pokepuls Premium</h3>' +
+      '<p class="hjelp">' + d.pris_kr + " kr i måneden. Alt du bruker i dag " +
+      "forblir gratis — Premium er bare i tillegg.</p>" +
+      '<ul class="side-liste-tekst liten"><li><strong>Prisgrense per vare.</strong> ' +
+      "«Si fra bare når denne boksen er under 3 999.»</li></ul>" +
+      '<button class="hovedknapp" id="premium-kjop" type="button">' +
+      "Prøv Premium — " + d.pris_kr + " kr/mnd</button>" +
+      '<p class="hjelp liten">Fornyes automatisk. Si opp når som helst. ' +
+      '<a href="/vilkar.html">Vilkår</a>.</p>' +
+      '<p class="feil" id="premium-feil" hidden></p></div>';
+  }
+
+  const vis = (e) => {
+    const f = $("premium-feil");
+    if (f) { f.textContent = e; f.hidden = !e; }
+  };
+  const gaaTil = async (sti, knapp) => {
+    knapp.disabled = true;
+    vis("");
+    try {
+      const r = await hent(sti, { method: "POST" });
+      location.href = r.url;    // videre til Stripe -- vi ser aldri kortet
+    } catch (e) {
+      vis(e.message);
+      knapp.disabled = false;
+    }
+  };
+  const kjop = $("premium-kjop");
+  if (kjop) kjop.addEventListener("click", () => gaaTil("/betaling/start", kjop));
+  const portal = $("premium-portal");
+  if (portal) portal.addEventListener("click", () => gaaTil("/betaling/portal", portal));
+}
+
 function apneKonto() {
   if (state.bruker) return visKontoSide();
   visArk(skjemaHtml("logg-inn"));
@@ -1116,6 +1179,7 @@ async function visKontoSide() {
         '<p class="feil" id="ver-feil" hidden></p></div>'
       : "") +
     '<div id="varsel-seksjon"><p class="hjelp liten">Sjekker varsler…</p></div>' +
+    '<div id="premium-boks"></div>' +
     folgAltHtml() +
     feedbackHtml() +
     (state.bruker.role === "admin"
@@ -1129,6 +1193,7 @@ async function visKontoSide() {
 
   koblFeedback();
   koblFolgAlt();
+  tegnPremium();
   const ver = $("send-verifisering");
   if (ver) ver.addEventListener("click", async () => {
     ver.disabled = true;

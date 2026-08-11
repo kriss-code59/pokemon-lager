@@ -10,3 +10,7 @@ email-validator==2.3.0
 # httpx brukes bare av tests/selvtest.py (FastAPI TestClient), men installeres
 # med resten sa selvtesten kan kjores pa serveren uten ekstra steg.
 httpx==0.28.1
+# Betaling. Importeres forst ved bruk (se api/betaling.py), saa API-et
+# starter ogsaa uten den -- en manglende avhengighet skal ikke ta ned det
+# som er gratis og virker.
+stripe==15.5.0
