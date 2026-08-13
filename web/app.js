@@ -438,6 +438,7 @@ async function apneProdukt(id) {
       '<span class="merkelapp ' + p.region + '">' + esc(REGION[p.region] || p.region) + "</span></div>" +
       '<button class="folg-knapp" id="folg-knapp" type="button"></button>' +
       '<div id="grense-boks"></div>' +
+      '<div id="pris-historikk"></div>' +
       "</div></div>";
 
     // Tre bolker, ikke to. «Pa lager» skal bety at du kan fa den i posten;
@@ -483,6 +484,7 @@ function tegnFolgKnapp() {
   knapp.className = "folg-knapp" + (folges ? " pa" : "");
   knapp.onclick = () => vekslFolg(state.apentProdukt);
   tegnGrense();
+  tegnPrishistorikk();
 }
 
 /* «Varsle bare naar den er under X kr» -- per vare.
@@ -532,6 +534,68 @@ function tegnGrense() {
       feil.hidden = false;
     }
   });
+}
+
+/* Prishistorikk.
+ *
+ * En sparkline, ikke et diagrambibliotek. 180 punkter i en SVG er noen
+ * hundre byte; et bibliotek er hundre kilobyte og et byggesteg vi ikke
+ * har. Formen er det som betyr noe -- ikke aksene.
+ *
+ * Det viktigste tallet er ikke grafen, det er LAVESTE REGISTRERT. Det er
+ * det som gjor at «3 999» blir til «3 999, og den har vaert nede i 3 199».
+ * Uten den setningen er en pris bare et tall.
+ */
+function sparkline(punkter) {
+  const v = punkter.map((p) => p.laveste);
+  if (v.length < 2) return "";
+  const lav = Math.min(...v), hoy = Math.max(...v);
+  const spenn = hoy - lav || 1;
+  const B = 280, H = 48;
+  const d = v.map((y, i) =>
+    (i ? "L" : "M") + (i / (v.length - 1) * B).toFixed(1) + " " +
+    (H - (y - lav) / spenn * (H - 6) - 3).toFixed(1)).join(" ");
+  return '<svg class="spark" viewBox="0 0 ' + B + " " + H + '" ' +
+    'preserveAspectRatio="none" aria-hidden="true">' +
+    '<path d="' + d + '" fill="none" stroke="currentColor" stroke-width="1.6" ' +
+    'stroke-linejoin="round" stroke-linecap="round"/></svg>';
+}
+
+async function tegnPrishistorikk() {
+  const boks = $("pris-historikk");
+  if (!boks) return;
+  boks.innerHTML = "";
+  if (!state.bruker) return;
+
+  const id = state.apentProdukt;
+  let d;
+  try {
+    d = await hent("/statistikk/pris/" + encodeURIComponent(id));
+  } catch (e) {
+    // 402 = ikke betalt. Vis hva de gaar glipp av, ikke en feilmelding.
+    if (/402/.test(e.message) || /premium/i.test(e.message)) {
+      boks.innerHTML = '<p class="hjelp liten">Se prishistorikk og laveste ' +
+        'registrerte pris med <a href="/om.html">Premium</a>.</p>';
+    }
+    return;
+  }
+  if (!d.laveste_ore) {
+    boks.innerHTML = '<p class="hjelp liten">Ingen prishistorikk registrert ' +
+      "for denne varen ennå.</p>";
+    return;
+  }
+  const nar = d.laveste_nar
+    ? new Date(d.laveste_nar).toLocaleDateString("nb-NO",
+        { day: "numeric", month: "short", year: "numeric" })
+    : null;
+  boks.innerHTML = '<div class="historikk">' +
+    '<div class="historikk-topp"><span>Laveste registrert</span>' +
+    "<strong>" + kr(d.laveste_ore) + "</strong></div>" +
+    sparkline(d.punkter) +
+    '<p class="hjelp liten">' +
+      (d.laveste_hos ? esc(d.laveste_hos) + (nar ? ", " + esc(nar) : "") + ". " : "") +
+      "Laveste vi har <em>registrert</em> — historikken starter da vi begynte " +
+      "å måle varen.</p></div>";
 }
 
 function tilbudHtml(t) {

@@ -97,7 +97,7 @@ def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld: dict | None,
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=19">
+<link rel="stylesheet" href="/style.css?v=20">
 {ld}
 </head><body class="side">"""
 
@@ -109,6 +109,7 @@ SIDEFOT = """
     <a href="/om.html">Om Pokepuls</a>
     <a href="/butikker">Butikker</a>
     <a href="/kalender">Slippkalender</a>
+    <a href="/statistikk.html">Statistikk</a>
     <a href="/vilkar.html">Vilk&aring;r</a>
     <a href="/personvern.html">Personvern</a>
     <a href="/om.html#kontakt">Kontakt</a>
@@ -144,7 +145,7 @@ def _ikke_funnet() -> str:
 <meta name="theme-color" content="#0b0d10">
 <meta name="robots" content="noindex">
 <title>Fant ikke varen – Pokepuls</title>
-<link rel="stylesheet" href="/style.css?v=19">
+<link rel="stylesheet" href="/style.css?v=20">
 </head><body class="side">
 <main class="side-innhold">
   <h1>Vi fant ikke den varen</h1>

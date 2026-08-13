@@ -64,7 +64,7 @@ app.add_middleware(
 
 # Kontoer, sesjoner og folgeliste ligger i api/auth.py. De monteres her fordi
 # de trenger den samme tilkoblingspoolen, som ikke finnes for oppstart.
-from . import admin, auth, betaling, bruk, feedback, push, sider  # noqa: E402
+from . import admin, auth, betaling, bruk, feedback, push, sider, statistikk  # noqa: E402
 
 auth.monter(app, lambda: pool)
 # push og admin gjenbruker auth.hent_bruker sa det bare finnes EN vei fra
@@ -79,6 +79,7 @@ bruk.monter(app, lambda: pool, _krev_admin)
 # Betaling. er_premium sendes inn i stedet for aa importeres, saa det
 # fortsatt bare finnes ÉN definisjon av «har denne betalt?».
 betaling.monter(app, lambda: pool, auth.hent_bruker, auth.er_premium)
+statistikk.monter(app, lambda: pool, auth.hent_bruker, auth.er_premium)
 # Serverrendrede produktsider og sidekart. Ligger utenfor /api med vilje:
 # de er sider, ikke data, og de skal ha ekte URL-er som kan deles.
 sider.monter(app, lambda: pool)

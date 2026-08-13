@@ -567,3 +567,17 @@ body.admin .topp { position: static; }
   font-size: 13px; color: var(--tekst-svak);
 }
 .kal-naar { color: var(--gul); font-weight: 600; }
+
+/* Stolper paa statistikksiden. Ren HTML og en bredde i prosent -- et
+ * diagrambibliotek er hundre kilobyte for dette. */
+.stolper { margin: 10px 0 6px; }
+.stolpe-rad {
+  display: grid; grid-template-columns: 1fr 2fr auto;
+  gap: 10px; align-items: center; padding: 4px 0; font-size: 13px;
+}
+.stolpe-merk { color: var(--tekst); overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; }
+.stolpe-spor { background: var(--flate); border-radius: 999px; height: 8px; }
+.stolpe-fyll { display: block; height: 8px; border-radius: 999px; background: var(--gul); }
+.stolpe-tall { color: var(--tekst-svak); font-variant-numeric: tabular-nums;
+  font-size: 12px; white-space: nowrap; }
