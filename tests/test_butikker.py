@@ -270,3 +270,66 @@ def test_deployen_bruker_absolutt_sti_til_nginx():
     skript = (ROT / "deploy" / "oppsett-api.sh").read_text(encoding="utf-8")
     assert "/usr/sbin/nginx" in skript
     assert '"$NGINX" -t' in skript
+
+
+# ------------------------------------------------------- offentlig lansering
+
+def test_bunntekst_paa_alle_sider_folk_kan_lande_paa():
+    """Ansvarsfraskrivelsen maa staa der folk ER.
+
+    Vi viser priser hentet automatisk fra andres nettsider, og vi er ikke
+    part i kjopet. Staar det bare paa en underside ingen aapner, har vi i
+    praksis latt vaere aa si det.
+    """
+    for navn in ["index.html", "personvern.html", "vilkar.html", "om.html"]:
+        html = (WEB / navn).read_text(encoding="utf-8")
+        assert "bunn-lenker" in html, f"{navn} mangler bunntekst"
+        assert "ikke en butikk" in html, f"{navn} mangler ansvarsfraskrivelse"
+
+    # Og paa de serverrendrede sidene.
+    sider = (ROT / "api" / "sider.py").read_text(encoding="utf-8")
+    assert "bunn-lenker" in sider
+
+
+def test_ingen_privat_epost_er_synlig():
+    """Han vil ikke ha gmail-adressen sin ute.
+
+    hjelp@pokepuls.no er en rolleadresse og helt greit. En privat adresse i
+    en offentlig kildekode blir hostet av soppelroboter innen uker.
+    """
+    for fil in list(WEB.glob("*.html")) + list(WEB.glob("*.js")):
+        assert "norgekriss" not in fil.read_text(encoding="utf-8"), fil.name
+
+
+def test_kontaktskjemaet_virker_uten_innlogging():
+    """En tjeneste som tar betalt maa naas av folk uten konto.
+
+    Den som vurderer aa lage konto, den som ikke kommer inn, og den som vil
+    klage -- ingen av dem har en konto aa logge inn med.
+    """
+    kilde = (ROT / "api" / "feedback.py").read_text(encoding="utf-8")
+    i = kilde.index('@router.post("/apen")')
+    # Til NESTE rute, ikke et fast antall tegn: /mine like under bruker
+    # hent_bruker, og en for lang skive ville lest den som del av denne.
+    j = kilde.index("@router", i + 20)
+    kropp = kilde[i:j]
+    assert "hent_bruker" not in kropp, "det aapne skjemaet skal ikke kreve innlogging"
+    assert "nettsted" in kropp, "honningkrukka mangler"
+    assert "429" in kropp, "bremseklossen mangler"
+
+
+def test_de_nye_sidene_staar_i_sidekartet_og_i_nginx():
+    # En side som ikke staar i sidekartet krypes sjeldnere. En side uten
+    # nginx-rute svarer med app-skallet, og Googlebot ser ingenting.
+    sider = (ROT / "api" / "sider.py").read_text(encoding="utf-8")
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    for sti in ["/butikker", "/kalender"]:
+        assert f'"{sti}"' in sider, f"{sti} mangler i sidekartet"
+        assert f"location = {sti}" in konf, f"{sti} mangler nginx-rute"
+
+
+def test_slippkalenderen_har_noe_aa_vise():
+    import json
+    k = json.loads((ROT / "katalog" / "katalog.json").read_text(encoding="utf-8"))
+    med_dato = [s for s in k["sets"] if s.get("slipp")]
+    assert len(med_dato) >= 2, "en kalender med én oppforing er ikke en kalender"

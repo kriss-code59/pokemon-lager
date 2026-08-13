@@ -12,6 +12,8 @@ verdt a angripe.
 """
 from __future__ import annotations
 
+import hashlib
+import os
 import time
 
 from fastapi import APIRouter, Cookie, HTTPException, Request
@@ -26,6 +28,15 @@ SLAG = {"feil", "onske", "butikk", "annet"}
 # fordi noen dobbelttrykket paa daarlig nett.
 MAKS_PER_TIME = 5
 _sendt: dict[str, list[float]] = {}
+
+
+class AapenMelding(BaseModel):
+    tekst: str = Field(min_length=10, max_length=4000)
+    # Valgfri. Krever vi e-post, faar vi bare falske adresser -- og den som
+    # bare vil si fra om en feil trenger ikke svar.
+    epost: str | None = Field(default=None, max_length=200)
+    # Honningkrukke. Skjult for mennesker, fristende for roboter.
+    nettsted: str | None = Field(default=None, max_length=200)
 
 
 class Melding(BaseModel):
@@ -58,6 +69,49 @@ def monter(app, hent_pool, hent_bruker):
                 "INSERT INTO feedback (user_id, epost, tekst, slag, side, user_agent) "
                 "VALUES (%s, %s, %s, %s, %s, %s) RETURNING id",
                 (bruker["id"], bruker["email"], data.tekst.strip(), slag, data.side,
+                 (request.headers.get("user-agent") or "")[:300]))
+            return {"ok": True, "id": (await cur.fetchone())["id"]}
+
+    # ------------------------------------------------------------ aapent
+    #
+    # Kontaktskjema UTEN innlogging.
+    #
+    # Feedback-skjemaet over krever konto, og det er riktig for det det er:
+    # nesten null soppel, og alltid en adresse aa svare paa. Men en tjeneste
+    # som tar betalt maa ha en vei inn for folk som IKKE har konto -- den som
+    # vurderer aa lage en, den som ikke kommer inn, den som vil klage.
+    #
+    # Prisen er soppel. Tre ting mot det, ingen av dem en CAPTCHA:
+    #   1. Honningkrukke: et felt mennesker ikke ser og roboter fyller ut.
+    #      Er det fylt, later vi som alt gikk bra og kaster meldingen.
+    #   2. Bremsekloss per avsender, flyktig og saltet -- samme mekanisme som
+    #      i api/bruk.py.
+    #   3. E-post er valgfritt. Krever vi det, faar vi bare falske adresser.
+    _aapne: dict[str, list[float]] = {}
+    _AAPEN_SALT = os.urandom(16)
+
+    @router.post("/apen")
+    async def apen(data: AapenMelding, request: Request):
+        if data.nettsted:
+            # Honningkrukka. Svar 200 -- en robot som faar vite at den ble
+            # avslort, prover paa nytt med et annet triks.
+            return {"ok": True}
+
+        raa = request.client.host if request.client else "?"
+        nokkel = hashlib.blake2b(raa.encode(), key=_AAPEN_SALT, digest_size=8).hexdigest()
+        na = time.time()
+        tider = [t for t in _aapne.get(nokkel, []) if na - t < 3600]
+        if len(tider) >= 3:
+            raise HTTPException(429, "Du har sendt noen meldinger nå. Prøv igjen om en time.")
+        tider.append(na)
+        _aapne[nokkel] = tider
+
+        pool = hent_pool()
+        async with pool.connection() as conn:
+            cur = await conn.execute(
+                "INSERT INTO feedback (user_id, epost, tekst, slag, side, user_agent) "
+                "VALUES (NULL, %s, %s, 'annet', 'kontakt', %s) RETURNING id",
+                (data.epost, data.tekst.strip(),
                  (request.headers.get("user-agent") or "")[:300]))
             return {"ok": True, "id": (await cur.fetchone())["id"]}
 

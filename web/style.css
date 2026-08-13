@@ -513,3 +513,57 @@ body.admin .topp { position: static; }
   border: 1px solid var(--kant); background: var(--flate);
   color: var(--tekst); font-size: 14px; font-variant-numeric: tabular-nums;
 }
+
+/* Bunntekst.
+ *
+ * To jobber, og den ene er ikke design: ansvarsfraskrivelsen MAA staa der
+ * folk faktisk er, ikke gjemt paa en underside. Vi viser priser vi henter
+ * automatisk fra andres nettsider, og vi er ikke part i kjopet. Sier vi det
+ * ikke hoyt, har vi latt vaere aa si det.
+ *
+ * Den andre er sokemotorer: lenkene herfra er det som gjor at /butikker og
+ * /kalender i det hele tatt blir funnet.
+ *
+ * I appen ligger den OVER den faste fanelinja, med luft under seg saa den
+ * ikke havner bak. */
+.bunn {
+  margin: 32px 14px calc(78px + env(safe-area-inset-bottom));
+  padding-top: 18px;
+  border-top: 1px solid var(--kant);
+  color: var(--tekst-svak);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+.side .bunn { margin-bottom: 32px; max-width: 780px; margin-left: auto; margin-right: auto; }
+.bunn-lenker { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 14px; }
+.bunn-lenker a { color: var(--tekst); text-decoration: none; }
+.bunn-lenker a:hover { text-decoration: underline; }
+.bunn-tekst { margin: 0 0 8px; }
+.bunn-merke { margin: 14px 0 0; opacity: .7; }
+
+/* Honningkrukka. Maa vaere usynlig for mennesker OG for skjermlesere, men
+ * fortsatt i DOM-en og utfyllbar for en robot. display:none er ikke nok --
+ * enkelte roboter hopper over skjulte felt. */
+.honning {
+  position: absolute; left: -9999px; width: 1px; height: 1px;
+  overflow: hidden;
+}
+
+/* Serverrendrede oversiktssider: butikker og kalender. */
+.tabell-side { overflow-x: auto; margin: 14px 0; }
+.tabell-side table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tabell-side th, .tabell-side td {
+  padding: 9px 10px; border-bottom: 1px solid var(--kant); text-align: left;
+}
+.tabell-side th { color: var(--tekst-svak); font-weight: 500; font-size: 12.5px; }
+.tabell-side .tall { text-align: right; font-variant-numeric: tabular-nums; }
+
+.kal-post {
+  padding: 14px 0; border-bottom: 1px solid var(--kant);
+}
+.kal-post h3 { margin: 4px 0 6px; font-size: 17px; }
+.kal-dato {
+  display: flex; align-items: baseline; gap: 10px;
+  font-size: 13px; color: var(--tekst-svak);
+}
+.kal-naar { color: var(--gul); font-weight: 600; }

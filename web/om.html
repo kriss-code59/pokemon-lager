@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<title>Om Pokepuls – hvem vi er og hva vi gjør</title>
+<meta name="description" content="Pokepuls følger priser og lagerstatus på forseglede Pokémon-produkter hos over 40 norske butikker, og varsler deg når noe kommer inn. Slik virker det, og slik når du oss.">
+<link rel="canonical" href="https://pokepuls.no/om.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pokepuls">
+<meta property="og:title" content="Om Pokepuls">
+<meta property="og:description" content="Hvordan Pokepuls henter priser, hva vi kan love, og hva vi ikke kan.">
+<meta property="og:url" content="https://pokepuls.no/om.html">
+<meta property="og:image" content="https://pokepuls.no/og-bilde.png?v=1">
+<link rel="stylesheet" href="/style.css?v=19">
+</head>
+<body class="side">
+
+<header class="side-topp">
+  <a class="side-hjem" href="/"><span class="merke-poke">poke</span><span class="merke-puls">puls</span></a>
+</header>
+
+<main class="side-innhold">
+  <h1>Om Pokepuls</h1>
+  <p class="side-under">Sist oppdatert 11. august 2026</p>
+
+  <p>Pokepuls følger priser og lagerstatus på forseglede Pokémon-produkter hos
+  over 40 norske nettbutikker, og sender deg et varsel på telefonen når noe du
+  følger kommer inn. Det er hele tjenesten.</p>
+
+  <h2>Hvorfor den finnes</h2>
+  <p>Populære sett selges ut på minutter. Skal du ha en booster box til
+  veiledende pris, må du enten sitte og oppdatere femten nettbutikker, eller
+  få beskjed i det den kommer. Pokepuls gjør det andre.</p>
+
+  <h2>Hvordan tallene hentes</h2>
+  <p>Vi leser butikkenes egne, åpne produktsider — de samme sidene du selv
+  ville besøkt. Hele runden tar rundt ti minutter, og starter på nytt med én
+  gang. Det betyr at en pris her kan være opptil tjue minutter gammel.</p>
+  <p>Vi omgår ikke sperrer. Butikker som stenger ute automatiske besøk står
+  oppført som «sjekk manuelt» med en direktelenke, i stedet for at vi later
+  som om vi har ferske tall fra dem. Det er ærligere, og det slutter ikke å
+  virke neste gang de bytter design.</p>
+
+  <h2>Hva vi ikke kan love</h2>
+  <ul class="side-liste-tekst">
+    <li>At prisen stemmer i det du klikker. Butikken kan ha endret den.</li>
+    <li>At varen fortsatt er der. Et restock kan være over på sekunder.</li>
+    <li>At vi fanger alt. En butikk kan endre nettsiden sin slik at vi leser
+      den feil, uten at vi oppdager det med én gang.</li>
+  </ul>
+  <p><strong>Sjekk alltid prisen hos butikken før du kjøper.</strong></p>
+
+  <h2>Vi er ikke en butikk</h2>
+  <p>Pokepuls selger ingenting og er ikke part i noe kjøp. Handler du hos en
+  butikk du fant her, er avtalen mellom deg og den butikken — det gjelder også
+  reklamasjon, angrerett og frakt.</p>
+  <p>Pokepuls er en uavhengig tjeneste og er ikke tilknyttet Pokémon,
+  Nintendo, Creatures Inc. eller GAME FREAK inc. Pokémon og Pokémon-navn er
+  deres varemerker.</p>
+
+  <h2 id="kontakt">Kontakt</h2>
+  <p>Skriv her, så leser vi det. Du trenger ingen konto. Legg igjen e-post
+  bare hvis du vil ha svar.</p>
+
+  <form id="kontakt-skjema" class="skjema">
+    <label>Hva vil du si?
+      <textarea id="k-tekst" rows="5" minlength="10" maxlength="4000" required
+        placeholder="En butikk mangler, en pris er feil, eller noe helt annet…"></textarea>
+    </label>
+    <label>E-post <span class="hjelp liten">(valgfritt — bare hvis du vil ha svar)</span>
+      <input id="k-epost" type="email" autocomplete="email" maxlength="200">
+    </label>
+    <!-- Honningkrukke: skjult for mennesker, fristende for roboter. Fylles
+         den ut, kaster serveren meldingen og later som alt gikk bra. -->
+    <div class="honning" aria-hidden="true">
+      <label>Nettsted<input id="k-nettsted" type="text" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <p class="feil" id="k-feil" hidden></p>
+    <p class="hjelp" id="k-ok" hidden></p>
+    <button class="hovedknapp" type="submit">Send</button>
+  </form>
+
+  <p class="hjelp liten">Formell henvendelse, innsyn eller sletting:
+  <a href="mailto:hjelp@pokepuls.no">hjelp@pokepuls.no</a>.</p>
+
+  <h2>Mer</h2>
+  <p><a href="/butikker">Butikkene vi følger</a> ·
+     <a href="/kalender">Slippkalender</a> ·
+     <a href="/vilkar.html">Vilkår</a> ·
+     <a href="/personvern.html">Personvern</a></p>
+</main>
+
+<footer class="bunn">
+  <nav class="bunn-lenker" aria-label="Sidekart">
+    <a href="/om.html">Om Pokepuls</a>
+    <a href="/butikker">Butikker</a>
+    <a href="/kalender">Slippkalender</a>
+    <a href="/vilkar.html">Vilkår</a>
+    <a href="/personvern.html">Personvern</a>
+    <a href="/om.html#kontakt">Kontakt</a>
+  </nav>
+  <p class="bunn-tekst">Pokepuls er en uavhengig tjeneste, og er ikke tilknyttet
+  Pokémon, Nintendo, Creatures Inc. eller GAME FREAK inc. Vi er ikke en butikk
+  — kjøp, betaling og levering skjer hos butikkene vi lenker til.</p>
+  <p class="bunn-tekst">Priser og lagerstatus hentes automatisk og kan være
+  opptil 20 minutter gamle. <strong>Bekreft alltid hos butikken før du
+  kjøper.</strong></p>
+  <p class="bunn-merke">© 2026 Pokepuls</p>
+</footer>
+
+<script src="/om.js?v=19"></script>
+</body></html>

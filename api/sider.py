@@ -97,17 +97,43 @@ def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld: dict | None,
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=9">
+<link rel="stylesheet" href="/style.css?v=19">
 {ld}
 </head><body class="side">"""
 
 
 SIDEFOT = """
-<footer class="side-fot">
-  <p><a href="/">Pokepuls</a> foelger lagerstatus og pris paa forseglede
-  Pok&eacute;mon-produkter hos norske butikker, og oppdaterer hvert 20. minutt.</p>
+<footer class="bunn">
+  <nav class="bunn-lenker" aria-label="Sidekart">
+    <a href="/">Forsiden</a>
+    <a href="/om.html">Om Pokepuls</a>
+    <a href="/butikker">Butikker</a>
+    <a href="/kalender">Slippkalender</a>
+    <a href="/vilkar.html">Vilk&aring;r</a>
+    <a href="/personvern.html">Personvern</a>
+    <a href="/om.html#kontakt">Kontakt</a>
+  </nav>
+  <p class="bunn-tekst">Pokepuls er en uavhengig tjeneste, og er ikke tilknyttet
+  Pok&eacute;mon, Nintendo, Creatures Inc. eller GAME FREAK inc. Vi er ikke en
+  butikk &mdash; kj&oslash;p, betaling og levering skjer hos butikkene vi lenker til.</p>
+  <p class="bunn-tekst">Priser og lagerstatus hentes automatisk og kan v&aelig;re
+  opptil 20 minutter gamle. <strong>Bekreft alltid hos butikken f&oslash;r du
+  kj&oslash;per.</strong></p>
+  <p class="bunn-merke">&copy; 2026 Pokepuls</p>
 </footer>
 </body></html>"""
+
+
+def _svar_html(request, html: str) -> Response:
+    """Ferdig side med sidefot og fornuftig cache.
+
+    Fem minutter: butikkoversikten endrer seg med hver skanning, og en
+    kalender som er en time gammel er ikke feil -- men en butikkliste som
+    sier «12 inne» naar det er null, er det.
+    """
+    return Response(html + SIDEFOT, media_type="text/html; charset=utf-8",
+                    headers={"Cache-Control": "public, max-age=300, "
+                                              "stale-while-revalidate=3600"})
 
 
 def _ikke_funnet() -> str:
@@ -118,7 +144,7 @@ def _ikke_funnet() -> str:
 <meta name="theme-color" content="#0b0d10">
 <meta name="robots" content="noindex">
 <title>Fant ikke varen – Pokepuls</title>
-<link rel="stylesheet" href="/style.css?v=18">
+<link rel="stylesheet" href="/style.css?v=19">
 </head><body class="side">
 <main class="side-innhold">
   <h1>Vi fant ikke den varen</h1>
@@ -149,6 +175,14 @@ def monter(app, hent_pool):
                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
                  f"<url><loc>{BASE}/</loc><lastmod>{na}</lastmod>"
                  f"<changefreq>hourly</changefreq><priority>1.0</priority></url>"]
+        for sti, hyppig, prio in [("/butikker", "daily", "0.7"),
+                                  ("/kalender", "daily", "0.7"),
+                                  ("/om.html", "monthly", "0.5"),
+                                  ("/vilkar.html", "yearly", "0.3"),
+                                  ("/personvern.html", "yearly", "0.3")]:
+            deler.append(f"<url><loc>{BASE}{sti}</loc><lastmod>{na}</lastmod>"
+                         f"<changefreq>{hyppig}</changefreq>"
+                         f"<priority>{prio}</priority></url>")
         for r in rader:
             endret = (r["endret"].date().isoformat() if r["endret"] else na)
             # Produkter som faktisk er paa lager er de folk soker etter og
@@ -178,6 +212,133 @@ def monter(app, hent_pool):
             headers={"Cache-Control": "public, max-age=86400"})
 
     # ------------------------------------------------------- produktside
+
+    # ------------------------------------------------------ butikkoversikt
+
+    BUTIKKER_SQL = """
+    SELECT s.id, s.name,
+           count(l.id) FILTER (WHERE l.last_seen_at > now() - interval '7 days')
+             AS varer,
+           count(l.id) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL)
+             AS inne,
+           min(l.price_ore) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL)
+             AS billigst,
+           max(l.last_ok_at) AS sist
+    FROM stores s LEFT JOIN listings l ON l.store_id = s.id
+    GROUP BY s.id, s.name
+    ORDER BY inne DESC, varer DESC, s.name
+    """
+
+    @router.get("/butikker")
+    async def butikker(request: Request):
+        """Alle butikkene vi foelger, med hvor mye de har inne akkurat na.
+
+        Dette er en side ingen konkurrent kan kopiere uten aa gjore det
+        samme arbeidet: den ER dekningen. Og den svarer paa et sok folk
+        faktisk gjor -- «norske pokemon-butikker».
+        """
+        rader = await _hent(BUTIKKER_SQL)
+        aktive = [r for r in rader if r["varer"]]
+        tomme = [r for r in rader if not r["varer"]]
+        totalt_inne = sum(r["inne"] or 0 for r in aktive)
+
+        def _rad(r):
+            pris = (f"<td class=\"tall\">fra {_kr(r['billigst'])}</td>"
+                    if r["billigst"] else '<td class="tall">&ndash;</td>')
+            return ("<tr><td><strong>" + _e(r["name"]) + "</strong></td>"
+                    f"<td class=\"tall\">{r['varer']}</td>"
+                    f"<td class=\"tall\">{r['inne']}</td>" + pris + "</tr>")
+
+        html = _sidehode(
+            "Norske Pok\u00e9mon-butikker vi f\u00f8lger \u2013 pris og lager | Pokepuls",
+            f"Pokepuls f\u00f8lger {len(aktive)} norske nettbutikker som selger "
+            f"forseglede Pok\u00e9mon-produkter. Se hvem som har mest inne n\u00e5, "
+            "og hvor det er billigst.",
+            BASE + "/butikker", None)
+        html += "<main class=\"side-innhold\"><h1>Butikkene vi f\u00f8lger</h1>"
+        html += (f'<p class="side-under">{len(aktive)} norske nettbutikker '
+                 f"\u00b7 {totalt_inne} varer p\u00e5 lager akkurat n\u00e5</p>")
+        html += ("<p>Listen oppdateres automatisk hver kj\u00f8ring. «Inne» teller "
+                 "bare varer du kan f\u00e5 i posten \u2014 forh\u00e5ndssalg og "
+                 "bestillingsvarer er holdt utenfor, fordi de ikke er det samme.</p>")
+        html += ('<div class="tabell-side"><table><thead><tr><th>Butikk</th>'
+                 '<th class="tall">Varer</th><th class="tall">Inne</th>'
+                 '<th class="tall">Billigst</th></tr></thead><tbody>')
+        html += "".join(_rad(r) for r in aktive)
+        html += "</tbody></table></div>"
+        if tomme:
+            html += ("<h2>Kartlagt, men ikke automatisert</h2>"
+                     "<p>Disse stenger ute automatiske bes\u00f8k, eller kj\u00f8rer en "
+                     "plattform vi ikke leser enn\u00e5. Vi later ikke som om vi har "
+                     "ferske tall fra dem.</p><p class=\"hjelp\">"
+                     + ", ".join(_e(r["name"]) for r in tomme) + "</p>")
+        html += ('<p><a class="hovedknapp smal" href="/">Se alle produktene</a></p>'
+                 "</main>")
+        return _svar_html(request, html)
+
+    # --------------------------------------------------------- slippkalender
+
+    KALENDER_SQL = """
+    SELECT s.id, s.label, s.region, s.release_date,
+           count(DISTINCT p.id) FILTER (WHERE l.id IS NOT NULL) AS produkter,
+           count(l.id) FILTER (WHERE l.in_stock AND l.bestillingstype = 'forhandssalg')
+             AS forhandssalg
+    FROM sets s
+    LEFT JOIN products p ON p.set_id = s.id
+    LEFT JOIN listings l ON l.product_id = p.id
+    WHERE s.release_date IS NOT NULL
+    GROUP BY s.id, s.label, s.region, s.release_date
+    ORDER BY s.release_date
+    """
+
+    MND = ["januar", "februar", "mars", "april", "mai", "juni", "juli",
+           "august", "september", "oktober", "november", "desember"]
+
+    @router.get("/kalender")
+    async def kalender(request: Request):
+        rader = await _hent(KALENDER_SQL)
+        i_dag = datetime.now(timezone.utc).date()
+        kommende = [r for r in rader if r["release_date"] >= i_dag]
+        tidligere = [r for r in rader if r["release_date"] < i_dag]
+
+        def _post(r):
+            d = r["release_date"]
+            dager = (d - i_dag).days
+            naar = (f"om {dager} dager" if dager > 1 else
+                    "i morgen" if dager == 1 else
+                    "i dag" if dager == 0 else "sluppet")
+            linje = f"{d.day}. {MND[d.month - 1]} {d.year}"
+            ut = ('<div class="kal-post"><div class="kal-dato">' + _e(linje) +
+                  f'<span class="kal-naar">{_e(naar)}</span></div>'
+                  "<h3>" + _e(r["label"]) + "</h3>")
+            if r["forhandssalg"]:
+                ut += (f'<p class="hjelp">{r["forhandssalg"]} butikkoppf\u00f8ringer '
+                       "til forh\u00e5ndsbestilling n\u00e5.</p>")
+            elif r["produkter"]:
+                ut += (f'<p class="hjelp">{r["produkter"]} produkter er lagt ut hos '
+                       "butikkene, men ingen tar bestilling akkurat n\u00e5.</p>")
+            else:
+                ut += '<p class="hjelp">Ingen norske butikker har lagt ut settet enn\u00e5.</p>'
+            return ut + "</div>"
+
+        html = _sidehode(
+            "Slippkalender for Pok\u00e9mon-kort \u2013 kommende sett | Pokepuls",
+            "N\u00e5r slippes de neste Pok\u00e9mon-settene, og hvilke norske butikker "
+            "har \u00e5pnet for forh\u00e5ndsbestilling? Oppdateres automatisk.",
+            BASE + "/kalender", None)
+        html += "<main class=\"side-innhold\"><h1>Slippkalender</h1>"
+        html += ("<p>N\u00e5r de neste settene kommer, og hvor langt de norske "
+                 "butikkene har kommet med forh\u00e5ndssalg. F\u00f8lg et sett i appen, "
+                 "s\u00e5 f\u00e5r du beskjed i det den f\u00f8rste butikken \u00e5pner.</p>")
+        if kommende:
+            html += "<h2>Kommer</h2>" + "".join(_post(r) for r in kommende)
+        else:
+            html += '<p class="hjelp">Ingen bekreftede slipp framover akkurat n\u00e5.</p>'
+        if tidligere:
+            html += "<h2>Nylig sluppet</h2>" + "".join(_post(r) for r in tidligere[-6:])
+        html += ('<p><a class="hovedknapp smal" href="/">Se hva som er p\u00e5 lager</a></p>'
+                 "</main>")
+        return _svar_html(request, html)
 
     @router.get("/p/{produkt_id}")
     async def produktside(request: Request, produkt_id: str):
