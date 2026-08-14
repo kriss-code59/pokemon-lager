@@ -864,6 +864,40 @@ def _hva_staar_paa_siden(page, store: str) -> None:
         pass
 
 
+_PRISTALL = re.compile(r"\d[\d\s\u00a0.]*(?:,\d{1,2})?")
+
+
+def _pris_tekst(el) -> str:
+    """Hent ÉN pris ut av et element som kan inneholde to.
+
+    Er varen paa tilbud, staar foer-prisen og tilbudsprisen i samme boks, og
+    teksten blir «kr 2 990,00kr 2 599,00». En parser som tar det forste
+    tallet lagrer 2 990 for en vare som koster 2 599 -- vi ville vist for hoy
+    pris, og en prisgrense pa 2 700 ville aldri slaatt ut.
+
+    Vi tar den LAVESTE. Ikke den siste: rekkefolgen i DOM-en er en konvensjon
+    butikken kan bytte naar de bytter tema, mens en tilbudspris alltid er
+    lavere enn foer-prisen. Er det et prisintervall for varianter, gir
+    laveste «fra»-prisen, som er den butikken selv viser.
+    """
+    tekst = _tekst(el)
+    if not tekst:
+        return ""
+    ore = []
+    for treff in _PRISTALL.findall(tekst):
+        reint = treff.replace(" ", "").replace("\u00a0", "").replace(".", "")
+        try:
+            verdi = float(reint.replace(",", "."))
+        except ValueError:
+            continue
+        if verdi > 0:
+            ore.append(verdi)
+    if len(ore) < 2:
+        return tekst
+    lav = min(ore)
+    return f"kr {lav:,.2f}".replace(",", " ").replace(".", ",")
+
+
 def _tekst(el) -> str:
     """Les teksten i et element, ogsaa naar det ikke er gjengitt paa skjermen.
 
@@ -943,7 +977,7 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
                 if not navn:
                     hoppet["tomt navn"] = hoppet.get("tomt navn", 0) + 1
                     continue
-                pris = _tekst(k.query_selector(SQUARESPACE_PRIS))
+                pris = _pris_tekst(k.query_selector(SQUARESPACE_PRIS))
                 # Squarespace merker utsolgt med et eget element. Finnes det
                 # ikke, er varen kjopbar -- vi gjetter aldri til None her,
                 # for en vare med ukjent lagerstatus kan aldri gi restock.
@@ -984,16 +1018,26 @@ SQUARESPACE_SITES = [
     },
 ]
 
+# Livet er Kort er verifisert med `--bare` og gaar i den ordinaere runden:
+#
+#     25 varer, 18 inne, 7 ute, 0 ukjent. Uten pris: 0.
+#
+# Forste skanning er stille av seg selv -- `bootstrap = not for_` i
+# ingest.py ser at butikken ikke har noen oppforinger fra for, og lager
+# ingen hendelser. Ingen faar 18 varsler fordi vi la til en butikk.
+PLAYWRIGHT_SITES = PLAYWRIGHT_SITES + [
+    {**site, "custom_scraper": "squarespace"} for site in SQUARESPACE_SITES
+]
+
 # Butikker som er skrevet, men IKKE verifisert med `--bare` enna.
 #
 # De naas av provingen og er usynlige for den fulle skanningen. Det er
 # forskjellen paa aa skrive en skraper og aa slippe den los paa 40 butikker
 # og et varselsystem som naa sender til betalende kunder.
 #
-# Naar `--bare "Livet er Kort"` viser navn, priser og lagerstatus som
-# stemmer, flyttes raden ned i PLAYWRIGHT_SITES og butikken gaar live.
-UNDER_UTPROVING = [{**site, "custom_scraper": "squarespace"}
-                   for site in SQUARESPACE_SITES]
+# Tom naa. Neste butikk som skrives, legges her til `--bare` viser navn,
+# priser og lagerstatus som stemmer.
+UNDER_UTPROVING: list[dict] = []
 
 # Norli og PokeMadness blokkerer automatiserte besok (se docstring ovenfor).
 # Vi lister dem her med en direkte lenke, slik at dashboardet kan vise dem

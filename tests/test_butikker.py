@@ -612,3 +612,41 @@ def test_navnet_har_en_siste_utvei():
     j = kilde.index("def scrape_squarespace")
     kropp = kilde[j:kilde.index("\nSQUARESPACE_SITES", j)]
     assert "aria-label" in kropp
+
+
+def test_tilbudspris_gir_ett_tall_ikke_to():
+    """«kr 2 990,00kr 2 599,00» -- foer-pris og tilbudspris i samme boks.
+
+    En parser som tar det forste tallet lagrer 2 990 for en vare som koster
+    2 599: vi viser for hoy pris, og en prisgrense pa 2 700 slaar aldri ut.
+    """
+    import re as _re
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    rom = {"re": _re}
+    exec(kilde[kilde.index("_PRISTALL ="):kilde.index("def _tekst(el)")], rom)
+    exec("def _tekst(el):\n    return el\n", rom)
+    pris = rom["_pris_tekst"]
+    assert pris("kr 2 990,00kr 2 599,00") == "kr 2 599,00"
+    assert pris("kr 990,00kr 899,00") == "kr 899,00"
+    # Én pris skal staa uroert.
+    assert pris("kr 189,00") == "kr 189,00"
+    assert pris("") == ""
+
+
+def test_livet_er_kort_gaar_i_ordinaer_runde():
+    # Verifisert med --bare: 25 varer, 18 inne, 7 ute, 0 ukjent, 0 uten pris.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("UNDER_UTPROVING")
+    assert "UNDER_UTPROVING: list[dict] = []" in kilde, "butikken staar fortsatt til proving"
+    assert 'for site in SQUARESPACE_SITES' in kilde[:i]
+
+
+def test_ny_butikk_er_stille_forste_skanning():
+    """Butikken kommer inn med 18 varer paa lager. Uten bootstrap-regelen
+    ville hver av dem blitt en 'ny'-hendelse, og folk som folger settene
+    ville faatt 18 varsler fordi VI la til en butikk.
+    """
+    kilde = (ROT / "ingest" / "ingest.py").read_text(encoding="utf-8")
+    assert "bootstrap = not for_" in kilde
+    i = kilde.index("bootstrap = not for_")
+    assert "not bootstrap" in kilde[i:i + 1200]
