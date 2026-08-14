@@ -9,8 +9,8 @@
  *
  * Regelen for cache er enkel: skallet fra cache, /api/ ALDRI fra cache.
  */
-const CACHE = "pokepuls-skall-v24";
-const SKALL = ["/", "/style.css?v=24", "/app.js?v=24", "/ikon.svg", "/manifest.webmanifest"];
+const CACHE = "pokepuls-skall-v25";
+const SKALL = ["/", "/style.css?v=25", "/app.js?v=25", "/ikon.svg", "/manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SKALL)).then(() => self.skipWaiting()));

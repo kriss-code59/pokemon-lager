@@ -992,3 +992,50 @@ test("Andre-fanen tegner kort med de klassene CSS-en gjelder for", () => {
               "visMerAndre bruker ikke ." + klasse);
   }
 });
+
+/* ------------------------------------------------- oppdagbarhet
+ *
+ * Kristian spurte om slippkalenderen og statistikken var «litt gjemt».
+ * De laa bare i bunnteksten -- kalenderen er en av de sterkeste grunnene
+ * til aa komme tilbake, og statistikken er en av tre ting folk betaler
+ * for. Begge var ett klikk unna aa aldri bli funnet.
+ */
+
+test("slippboksen lenker videre til hele kalenderen", () => {
+  // Boksen viser ETT sett, det naermeste. Den som bryr seg om slipp,
+  // bryr seg som regel om de neste ogsaa.
+  const kilde = les("app.js");
+  const i = kilde.indexOf("function slippBoksHtml");
+  const kropp = kilde.slice(i, kilde.indexOf("function nyNorskDato"));
+  assert.ok(kropp.includes('href="/kalender"'),
+            "slippboksen har ingen vei til kalenderen");
+});
+
+test("premium selger paa alle tre funksjonene, ikke bare én", () => {
+  // Vi bygde prisgrense, prishistorikk OG restock-statistikk. Boksen
+  // listet bare den forste -- de to andre var usynlige for den som
+  // skulle bestemme seg for aa betale 49 kr i maaneden.
+  const kilde = les("app.js");
+  const i = kilde.indexOf("async function tegnPremium");
+  const kropp = kilde.slice(i, i + 3500);
+  assert.match(kropp, /Prisgrense per vare/);
+  assert.match(kropp, /Prishistorikk/);
+  assert.match(kropp, /Restock-statistikk/);
+  // Veien til siden maa finnes begge veier: for den som vurderer aa
+  // betale, og for den som allerede har betalt og skal finne den igjen.
+  const treff = kropp.match(/href="\/statistikk\.html"/g) || [];
+  assert.ok(treff.length >= 2,
+            `statistikk lenkes bare ${treff.length} sted(er) i premium-boksen`);
+});
+
+test("cacheversjonen er bumpet overalt samtidig", () => {
+  // Glemmer vi én, serverer tjeneren gammel app.js mot ny style.css --
+  // og det er den slags feil som bare vises hos brukeren.
+  const sw = les("sw.js");
+  const v = sw.match(/pokepuls-skall-v(\d+)/)?.[1];
+  assert.ok(v, "fant ingen cacheversjon i sw.js");
+  assert.ok(sw.includes(`/app.js?v=${v}`), "SKALL-listen i sw.js henger etter");
+  assert.ok(sw.includes(`/style.css?v=${v}`), "SKALL-listen i sw.js henger etter");
+  assert.ok(les("index.html").includes(`app.js?v=${v}`),
+            "index.html henger etter sw.js");
+});

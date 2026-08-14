@@ -262,6 +262,10 @@ function slippBoksHtml() {
       (produkter.length === 1 ? "Vis produktet"
                               : "Vis alle " + produkter.length + " produktene") +
       "</button>" +
+    // Boksen viser ETT sett -- det naermeste. Den som bryr seg om slipp,
+    // bryr seg som regel om de neste ogsaa, og fram til naa fantes veien
+    // dit bare i bunnteksten.
+    '<a class="lenkeknapp" href="/kalender">Hele slippkalenderen</a>' +
     "</div>";
 }
 
@@ -748,6 +752,8 @@ async function tegnPremium() {
         (til ? ", betalt ut " + esc(til) : "") + ". Takk.</p>" +
       '<p class="hjelp liten">Du kan sette en prisgrense per vare: åpne en ' +
       "vare du følger, og skriv inn hva den må under for at vi skal si fra.</p>" +
+      '<p class="hjelp liten"><a href="/statistikk.html">Restock-statistikk</a>' +
+      " — hvilke butikker fyller på oftest, og når på døgnet.</p>" +
       '<button class="lenkeknapp" id="premium-portal" type="button">' +
       "Administrer eller si opp</button>" +
       '<p class="feil" id="premium-feil" hidden></p></div>';
@@ -755,8 +761,17 @@ async function tegnPremium() {
     boks.innerHTML = '<div class="varselboks"><h3>Pokepuls Premium</h3>' +
       '<p class="hjelp">' + d.pris_kr + " kr i måneden. Alt du bruker i dag " +
       "forblir gratis — Premium er bare i tillegg.</p>" +
-      '<ul class="side-liste-tekst liten"><li><strong>Prisgrense per vare.</strong> ' +
-      "«Si fra bare når denne boksen er under 3 999.»</li></ul>" +
+      // Boksen listet ÉN ting. Vi bygde tre, og de to andre var usynlige
+      // for den som skulle bestemme seg for aa betale.
+      '<ul class="side-liste-tekst liten">' +
+      "<li><strong>Prisgrense per vare.</strong> " +
+      "«Si fra bare når denne boksen er under 3 999.»</li>" +
+      "<li><strong>Prishistorikk.</strong> Se hva en vare har kostet før, " +
+      "og hva som er det laveste vi har registrert — så du vet om " +
+      "dagens pris faktisk er et kupp.</li>" +
+      "<li><strong>Restock-statistikk.</strong> Hvilke butikker fyller på " +
+      "oftest, og når på døgnet det pleier å skje.</li></ul>" +
+      '<p class="hjelp liten"><a href="/statistikk.html">Se statistikken</a></p>' +
       '<button class="hovedknapp" id="premium-kjop" type="button">' +
       "Prøv Premium — " + d.pris_kr + " kr/mnd</button>" +
       '<p class="hjelp liten">Fornyes automatisk. Si opp når som helst. ' +
