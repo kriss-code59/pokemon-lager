@@ -60,6 +60,40 @@ BASE = os.environ.get("POKEPULS_BASE_URL", "https://pokepuls.no").rstrip("/")
 PRIS_KR = 49
 
 
+def _felt(objekt, navn, standard=None):
+    """Les et felt fra et StripeObject.
+
+    StripeObject ER IKKE EN DICT. Den stotter [] men ikke .get() --
+    __getattr__ fanger navnet «get» og leter etter et FELT som heter det,
+    som gir «AttributeError: get».
+
+    Det kostet oss en runde med 500-feil i webhooken, og fella er lett aa
+    ga i igjen: objektet oppforer seg som en dict i alt annet, og feilen
+    dukker forst opp naar en ekte hendelse kommer inn.
+    """
+    try:
+        return objekt[navn]
+    except (KeyError, TypeError, IndexError):
+        return standard
+
+
+def _periode_slutt(abo):
+    """Naar den betalte perioden loper ut.
+
+    Fram til API-versjon 2025-03 laa `current_period_end` paa selve
+    abonnementet. I nyere versjoner -- deriblant 2026-07-29.dahlia som
+    webhooken bruker -- er den flyttet ned paa LINJENE, fordi et abonnement
+    kan ha flere linjer med ulik periode.
+
+    Vi leser begge steder. Vi har bare én linje, saa den forste holder.
+    """
+    slutt = _felt(abo, "current_period_end")
+    if slutt:
+        return slutt
+    linjer = _felt(_felt(abo, "items"), "data") or []
+    return _felt(linjer[0], "current_period_end") if linjer else None
+
+
 def _stripe():
     """Importeres ved bruk, ikke ved oppstart.
 
@@ -251,8 +285,8 @@ def monter(app, hent_pool, hent_bruker, er_premium):
         data = hendelse["data"]["object"]
 
         if type_ == "checkout.session.completed":
-            kunde = data.get("customer")
-            abo_id = data.get("subscription")
+            kunde = _felt(data, "customer")
+            abo_id = _felt(data, "subscription")
             if not (kunde and abo_id):
                 return
             abo = stripe.Subscription.retrieve(abo_id)
@@ -261,7 +295,7 @@ def monter(app, hent_pool, hent_bruker, er_premium):
         elif type_ in ("customer.subscription.created",
                        "customer.subscription.updated",
                        "customer.subscription.deleted"):
-            await _oppdater(conn, data.get("customer"), data)
+            await _oppdater(conn, _felt(data, "customer"), data)
 
     async def _oppdater(conn, kunde_id, abo):
         """Skriv status og dato, og loft eller la rollen staa.
@@ -273,8 +307,8 @@ def monter(app, hent_pool, hent_bruker, er_premium):
         """
         if not kunde_id:
             return
-        status = abo.get("status")
-        slutt = abo.get("current_period_end")
+        status = _felt(abo, "status")
+        slutt = _periode_slutt(abo)
         gjelder_til = (datetime.fromtimestamp(slutt, tz=timezone.utc)
                        if slutt else None)
 
@@ -282,7 +316,7 @@ def monter(app, hent_pool, hent_bruker, er_premium):
             "UPDATE stripe_kunder SET abonnement_id = %s, status = %s, "
             "  gjelder_til = %s, endret = now() "
             "WHERE stripe_customer_id = %s RETURNING user_id",
-            (abo.get("id"), status, gjelder_til, kunde_id))
+            (_felt(abo, "id"), status, gjelder_til, kunde_id))
         rad = await cur.fetchone()
         if not rad:
             return

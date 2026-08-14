@@ -187,3 +187,70 @@ def test_riktige_prefikser_gir_ingen_klage():
         assert betaling.feilkonfigurert() == []
     finally:
         betaling.FORVENTET = gammel
+
+
+# ------------------------------------------- StripeObject er ikke en dict
+
+class _FalskStripeObject:
+    """Oppforer seg som stripe._stripe_object.StripeObject.
+
+    Stotter [] men IKKE .get() -- __getattr__ fanger navnet «get» og leter
+    etter et felt som heter det. Det er noyaktig oppforselen som ga
+    «AttributeError: get» og 500 i webhooken paa forste ekte betaling.
+    """
+
+    def __init__(self, **felt):
+        self._data = felt
+
+    def __getitem__(self, k):
+        return self._data[k]
+
+    def __getattr__(self, k):
+        try:
+            return self._data[k]
+        except KeyError as e:
+            raise AttributeError(*e.args) from e
+
+
+def test_felt_leser_uten_aa_bruke_get():
+    from api.betaling import _felt
+    o = _FalskStripeObject(customer="cus_1", status="active")
+    assert _felt(o, "customer") == "cus_1"
+    assert _felt(o, "finnes_ikke") is None
+    assert _felt(o, "finnes_ikke", "reserve") == "reserve"
+    assert _felt(None, "hva som helst") is None
+
+
+def test_koden_bruker_aldri_punktum_get_paa_stripe_objekter():
+    """Regresjonsvern.
+
+    Fella er lett aa gaa i igjen: objektet oppforer seg som en dict i alt
+    annet, og feilen dukker forst opp naar en EKTE hendelse kommer inn --
+    altsaa naar noen har betalt.
+    """
+    import re
+    for linje in KILDE.splitlines():
+        if linje.strip().startswith("#"):
+            continue
+        assert not re.search(r"\b(data|abo|hendelse)\.get\(", linje), linje.strip()
+
+
+def test_periode_slutt_leses_baade_gammelt_og_nytt_sted():
+    """`current_period_end` flyttet.
+
+    Fram til API-versjon 2025-03 laa den paa selve abonnementet. I nyere
+    versjoner -- deriblant 2026-07-29.dahlia som webhooken bruker -- ligger
+    den paa LINJENE, fordi et abonnement kan ha flere med ulik periode.
+    """
+    from api.betaling import _periode_slutt
+
+    gammelt = _FalskStripeObject(current_period_end=1800000000)
+    assert _periode_slutt(gammelt) == 1800000000
+
+    nytt = _FalskStripeObject(items=_FalskStripeObject(
+        data=[_FalskStripeObject(current_period_end=1900000000)]))
+    assert _periode_slutt(nytt) == 1900000000
+
+    # Ingen av delene: skal gi None, ikke kaste. En manglende dato er
+    # ubehagelig; en exception i webhooken er en tapt betaling.
+    assert _periode_slutt(_FalskStripeObject(status="active")) is None
