@@ -932,3 +932,63 @@ test("en nettleser uten serviceWorker skal ikke kaste", async () => {
   await new Promise((r) => setTimeout(r, 40));
   assert.equal(alle(w, "#liste .kort").length, 2, "appen skal virke som vanlig");
 });
+
+/* ------------------------------------------------ tekst som gaar utenfor */
+
+/* Andre-fanen viser RAA butikktitler -- «2025 Pokemon Chinese Gem Pack
+ * Volume 3 Houndoom Master Ball Rare #050...» -- og de la seg tvers over
+ * prisen.
+ *
+ * Aarsaken hadde ligget der hele tiden: .kort-navn har text-overflow og
+ * white-space, men staar paa et <span>, og de reglene virker IKKE paa et
+ * inline-element. Paa produktlista merkes det aldri, fordi navnene der er
+ * korte. Derfor testes CSS-en direkte -- jsdom regner ikke layout, saa en
+ * DOM-test ville sagt at alt var i orden. */
+
+const CSS = readFileSync(join(ROT, "web", "style.css"), "utf8");
+
+function regel(velger) {
+  const i = CSS.indexOf("\n" + velger + " {");
+  if (i < 0) return "";
+  return CSS.slice(i, CSS.indexOf("}", i));
+}
+
+test("kort-navn kan faktisk kortes av", () => {
+  const r = regel(".kort-navn");
+  assert.match(r, /text-overflow:\s*ellipsis/);
+  assert.match(r, /white-space:\s*nowrap/);
+  assert.match(r, /display:\s*block/,
+               "ellipsis virker ikke paa et inline-element -- <span> ma blokkeres");
+});
+
+test("flex-elementet kan krympe under innholdet sitt", () => {
+  // Uten min-width: 0 nekter et flex-element aa bli smalere enn innholdet,
+  // og da hjelper ingen ellipsis.
+  assert.match(regel(".kort-venstre"), /min-width:\s*0/);
+});
+
+test("prisen klemmes ikke av en lang tittel", () => {
+  assert.match(regel(".kort-hoyre"), /flex:\s*0 0 auto/);
+});
+
+test("kort som er lenker ser ikke ut som lenker", () => {
+  // Andre-fanen bruker <a class="kort">. Uten dette tar nettleseren over
+  // med blaatt og understrek midt i en ellers mork side.
+  const i = CSS.indexOf("a.kort {");
+  assert.ok(i > 0, "a.kort mangler");
+  const r = CSS.slice(i, CSS.indexOf("}", i));
+  assert.match(r, /color:\s*inherit/);
+  assert.match(r, /text-decoration:\s*none/);
+});
+
+test("Andre-fanen tegner kort med de klassene CSS-en gjelder for", () => {
+  // Bindeleddet: virker CSS-en, men markupen bruker andre klasser, er
+  // testene over verdilose.
+  const js = les("app.js");
+  const i = js.indexOf("function visMerAndre");
+  const kropp = js.slice(i, i + 900);
+  for (const klasse of ["kort", "kort-venstre", "kort-navn", "kort-hoyre"]) {
+    assert.ok(kropp.includes('"' + klasse) || kropp.includes(klasse + '"'),
+              "visMerAndre bruker ikke ." + klasse);
+  }
+});

@@ -133,13 +133,38 @@ main { padding: 0 14px; }
   border-radius: var(--radius); cursor: pointer;
 }
 .kort:active { background: var(--flate-2); }
+/* Andre-fanen bruker <a class="kort"> for aa lenke rett til butikken.
+ * Uten dette tar nettleseren over med blaatt og understrek, og raden ser
+ * ut som en feil midt i en ellers mork side. */
+a.kort { color: inherit; text-decoration: none; }
+/* Prisen skal aldri klemmes av en lang tittel. */
+.kort-hoyre { flex: 0 0 auto; padding-left: 4px; }
 .kort-venstre { flex: 1; min-width: 0; }
+
+/* display:block er ikke pynt her -- det er hele fiksen.
+ *
+ * `overflow`, `text-overflow` og `white-space` virker IKKE paa et inline-
+ * element, og .kort-navn staar paa et <span>. Reglene har altsaa aldri
+ * gjort noe. Paa produktlista merkes det ikke, for der er navnene korte
+ * («Booster Box»). Paa Andre-fanen er de raa butikktitler paa hundre tegn,
+ * og da la de seg tvers over prisen.
+ *
+ * min-width: 0 paa .kort-venstre er den andre halvparten: uten den nekter
+ * et flex-element aa krympe under sitt eget innhold, og da hjelper ingen
+ * ellipsis. */
 .kort-navn {
+  display: block;
   font-weight: 600; font-size: 15px; margin-bottom: 3px;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.kort-under { font-size: 12.5px; color: var(--tekst-svak); display: flex; gap: 7px; align-items: center; }
-.kort-hoyre { text-align: right; flex: 0 0 auto; }
+.kort-under {
+  font-size: 12.5px; color: var(--tekst-svak);
+  display: flex; gap: 7px; align-items: center;
+  min-width: 0;
+}
+/* Butikknavnet under tittelen kan ogsaa vaere langt. */
+.kort-under > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kort-hoyre { text-align: right; }
 .pris { font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums; }
 .pris.ingen { color: var(--tekst-svak); font-weight: 500; font-size: 13px; }
 .lager { font-size: 11.5px; margin-top: 2px; }

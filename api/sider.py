@@ -97,7 +97,7 @@ def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld: dict | None,
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=20">
+<link rel="stylesheet" href="/style.css?v=21">
 {ld}
 </head><body class="side">"""
 
@@ -145,7 +145,7 @@ def _ikke_funnet() -> str:
 <meta name="theme-color" content="#0b0d10">
 <meta name="robots" content="noindex">
 <title>Fant ikke varen – Pokepuls</title>
-<link rel="stylesheet" href="/style.css?v=20">
+<link rel="stylesheet" href="/style.css?v=21">
 </head><body class="side">
 <main class="side-innhold">
   <h1>Vi fant ikke den varen</h1>
