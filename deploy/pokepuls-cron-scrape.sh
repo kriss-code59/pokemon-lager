@@ -33,8 +33,12 @@ cd "$REPO"
 echo "$(date -u +%FT%TZ) start skanning"
 timeout -k 60 2400 "$VENV/bin/python" -u scrape.py
 
+# Delt laas med hurtigrunden -- se pokepuls-cron-hurtig.sh. To ingest-
+# kjoringer mot samme listings-tabell kan hver for seg se en vare som «ny
+# paa lager» og lage varselet to ganger.
 echo "$(date -u +%FT%TZ) start ingest"
 POKEPULS_DSN="${POKEPULS_DSN:-postgresql:///pokepuls}" \
+  flock -w 300 /tmp/pokepuls-ingest.lock \
   "$VENV/bin/python" -u ingest/ingest.py --data docs/data.json
 
 echo "$(date -u +%FT%TZ) ferdig"

@@ -228,6 +228,12 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # denied" og scraperen sto i 28 timer (2026-08-05). Kaller vi tolken
 # eksplisitt, betyr kjorebiten ingenting.
 */10 * * * * pokepuls timeout -k 60 2400 flock -n /tmp/pokepuls-scrape.lock /bin/bash /home/pokepuls/pokemon-lager/deploy/pokepuls-cron-scrape.sh >> /home/pokepuls/scrape.log 2>&1
+# HURTIGRUNDE hvert 3. minutt: bare Shopify-butikkene, som svarer med ferdig
+# JSON paa sekunder. Den fulle runden bruker 9,5 min, og nesten alt er
+# Chromium -- Shopify-butikkene sto og ventet paa noe de ikke har med aa
+# gjore. Egen laas, saa de to kan gaa samtidig; delt laas rundt selve ingest,
+# saa de aldri skriver til listings samtidig.
+*/3 * * * * pokepuls timeout -k 30 300 flock -n /tmp/pokepuls-hurtig.lock /bin/bash /home/pokepuls/pokemon-lager/deploy/pokepuls-cron-hurtig.sh >> /home/pokepuls/hurtig.log 2>&1
 # Dodmannsknapp hvert 15. minutt. EGEN jobb uten delt las, slik at den
 # fortsatt lever nar scraperen henger. Det er hele poenget med den.
 */15 * * * * pokepuls cd /home/pokepuls/pokemon-lager && set -a && . /etc/pokepuls.env && set +a && /home/pokepuls/venv/bin/python overvak/dodmannsknapp.py >> /home/pokepuls/dodmannsknapp.log 2>&1

@@ -650,3 +650,61 @@ def test_ny_butikk_er_stille_forste_skanning():
     assert "bootstrap = not for_" in kilde
     i = kilde.index("bootstrap = not for_")
     assert "not bootstrap" in kilde[i:i + 1200]
+
+
+# --------------------------------------------------------------- hurtigrunden
+
+def test_hurtig_skriver_egen_fil_ikke_data_json():
+    """Hurtigrunden kjorer bare Shopify-butikkene. Skrev den til data.json,
+    ville nettsiden vist en katalog uten nettleserbutikkene hvert tredje
+    minutt, og den fulle runden ville sett det som at halve Norge la ned.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def main():")
+    kropp = kilde[i:]
+    assert 'hurtig = "--hurtig" in sys.argv' in kropp
+    assert 'fil = "docs/data-hurtig.json" if hurtig else "docs/data.json"' in kropp
+    assert 'with open(fil, "w"' in kropp
+    assert 'with open("docs/data.json", "w"' not in kropp
+    # Og forrige tilstand maa leses fra SAMME fil, ellers ser hurtigrunden
+    # hele nettleserkatalogen som forsvunnet.
+    assert "load_previous_products(fil)" in kropp
+
+
+def test_hurtig_er_et_kjent_flagg():
+    # Ukjente flagg avvises med sys.exit(2). Var --hurtig ikke kjent, ville
+    # cron-jobben stoppet -- eller verre, paa en eldre server ignorert
+    # flagget og kjort en full skanning hvert tredje minutt.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("KJENTE_FLAGG = ")
+    assert "--hurtig" in kilde[i:kilde.index("\n\n", i)]
+
+
+def test_hurtig_roerer_ikke_de_offentlige_loggene():
+    # changes.json og history.json eies av den fulle runden. ntfy ogsaa:
+    # brukervarslene kommer fra databasen, og to kilder til samme varsel
+    # er en kilde for mye.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def main():")
+    kropp = kilde[i:]
+    assert "update_changes_log(new_events) if not hurtig else []" in kropp
+    assert "elif not hurtig:" in kropp
+
+
+def test_de_to_ingest_kjoringene_deler_laas():
+    """Skanningene skal gjerne gaa samtidig -- derfor har de hver sin laas.
+    Men de skriver til SAMME listings-tabell, og to ingest-kjoringer kan
+    hver for seg se en vare som «ny paa lager» og lage varselet to ganger.
+    """
+    for navn in ("pokepuls-cron-scrape.sh", "pokepuls-cron-hurtig.sh"):
+        s = (ROT / "deploy" / navn).read_text(encoding="utf-8")
+        assert "/tmp/pokepuls-ingest.lock" in s, navn
+        # -w, ikke -n: vent heller enn aa hoppe over ingest.
+        assert "flock -w" in s, navn
+
+    cron = (ROT / "deploy" / "oppsett-api.sh").read_text(encoding="utf-8")
+    assert "pokepuls-cron-hurtig.sh" in cron
+    assert "/tmp/pokepuls-hurtig.lock" in cron
+    # Skanne-laasene maa vaere FORSKJELLIGE, ellers venter hurtigrunden paa
+    # den fulle og hele poenget forsvinner.
+    assert "/tmp/pokepuls-scrape.lock" in cron

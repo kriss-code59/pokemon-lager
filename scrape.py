@@ -1984,9 +1984,9 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
     return results
 
 
-def load_previous_products() -> dict:
+def load_previous_products(fil: str = "docs/data.json") -> dict:
     try:
-        with open("docs/data.json", "r", encoding="utf-8") as f:
+        with open(fil, "r", encoding="utf-8") as f:
             data = json.load(f)
         return {p["url"]: p for p in data.get("products", []) if p.get("url")}
     except Exception:
@@ -2526,7 +2526,38 @@ def bare_en_butikk(navn: str) -> int:
 
 
 # Flagg scrape.py forstaar. Alt annet avvises.
-KJENTE_FLAGG = {"--bare", "--test-notification", "--test-restock-notification"}
+KJENTE_FLAGG = {"--bare", "--hurtig",
+                "--test-notification", "--test-restock-notification"}
+
+
+def _full_runde(start):
+    """Hele runden: Shopify-poolen og nettleserne side om side.
+
+    Trukket ut av main() da --hurtig kom til, slik at hurtigmodus ikke
+    trenger aa navigere rundt kode den aldri kjorer.
+    """
+    logg(f"Starter: {len(SHOPIFY_STORES)} Shopify-butikker ({SHOPIFY_PARALLELL} "
+         f"samtidig) + {len(PLAYWRIGHT_SITES)} nettleserbutikker "
+         f"({BROWSER_PARALLELL} samtidig).")
+
+    # Shopify-poolen startes FOERST og faar gaa mens nettleserne jobber:
+    # den ene venter paa fremmede HTTP-servere, den andre paa Chromium.
+    # De konkurrerer ikke om det samme.
+    with ThreadPoolExecutor(max_workers=1, thread_name_prefix="shopify-pool") as ytre:
+        shopify_fremtid = ytre.submit(skann_shopify_parallelt, SHOPIFY_STORES)
+        pw_produkter, pw_feilede, pw_tider = skann_playwright_parallelt(PLAYWRIGHT_SITES)
+        sh_produkter, sh_feilede, sh_tider = shopify_fremtid.result()
+
+    all_products = sh_produkter + pw_produkter
+    failed_stores = sh_feilede + pw_feilede
+    tider = {**sh_tider, **pw_tider}
+
+    # Tregeste butikker forst i loggen. Dette er den eneste maaten aa vite
+    # HVEM som eier rundetiden -- gjetting har kostet oss tid for.
+    tregest = sorted(tider.items(), key=lambda kv: -kv[1])[:8]
+    logg("Tregeste butikker: " + ", ".join(f"{n} {s:.0f}s" for n, s in tregest))
+    logg(f"Skanning ferdig pa {(time.monotonic() - start) / 60:.1f} min.")
+    return all_products, failed_stores, tider
 
 
 def main():
@@ -2562,6 +2593,22 @@ def main():
             sys.exit(1)
         sys.exit(bare_en_butikk(sys.argv[i + 1]))
 
+    # HURTIGFILEN.
+    #
+    # Den fulle runden tar 9,5 minutter, og nesten alt av det er Chromium.
+    # Shopify-butikkene svarer med ferdig JSON paa sekunder -- de venter
+    # bare paa at nettleserne skal bli ferdige med noe helt annet.
+    #
+    # --hurtig kjorer BARE dem, hvert tredje minutt, i sin egen fil. Det tar
+    # tiden fra en restock skjer til vi vet om den fra opptil ti minutter ned
+    # til opptil tre, der det meste av norsk Pokemon-lager faktisk ligger.
+    #
+    # Egen fil er ikke pynt. Skrev den til data.json, ville nettsiden vist en
+    # katalog uten nettleserbutikkene hvert tredje minutt, og den fulle
+    # runden ville sett det som at halve Norge la ned samtidig.
+    hurtig = "--hurtig" in sys.argv
+    fil = "docs/data-hurtig.json" if hurtig else "docs/data.json"
+
     start = time.monotonic()
     # Ekte starttid. `last_updated` settes naar filen skrives -- altsa NAAR
     # VI ER FERDIGE -- og ingest brukte den som scrape_runs.started_at.
@@ -2569,30 +2616,14 @@ def main():
     # for hver eneste kjoring. Det er nettopp tallet man trenger for a
     # se om parallelliseringen hjalp, eller om noe blir tregere.
     startet_iso = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
-    previous_by_url = load_previous_products()
+    previous_by_url = load_previous_products(fil)
 
-    logg(f"Starter: {len(SHOPIFY_STORES)} Shopify-butikker ({SHOPIFY_PARALLELL} "
-         f"samtidig) + {len(PLAYWRIGHT_SITES)} nettleserbutikker "
-         f"({BROWSER_PARALLELL} samtidig).")
-
-    # Shopify-poolen startes FOERST og faar gaa mens nettleserne jobber:
-    # den ene venter paa fremmede HTTP-servere, den andre paa Chromium.
-    # De konkurrerer ikke om det samme.
-    with ThreadPoolExecutor(max_workers=1, thread_name_prefix="shopify-pool") as ytre:
-        shopify_fremtid = ytre.submit(skann_shopify_parallelt, SHOPIFY_STORES)
-        pw_produkter, pw_feilede, pw_tider = skann_playwright_parallelt(PLAYWRIGHT_SITES)
-        sh_produkter, sh_feilede, sh_tider = shopify_fremtid.result()
-
-    all_products = sh_produkter + pw_produkter
-    failed_stores = sh_feilede + pw_feilede
-    tider = {**sh_tider, **pw_tider}
-
-    # Tregeste butikker forst i loggen. Dette er den eneste maaten aa vite
-    # HVEM som eier rundetiden -- gjetting har kostet oss tid for.
-    tregest = sorted(tider.items(), key=lambda kv: -kv[1])[:8]
-    logg("Tregeste butikker: " + ", ".join(f"{n} {s:.0f}s" for n, s in tregest))
-    logg(f"Skanning ferdig pa {(time.monotonic() - start) / 60:.1f} min.")
-
+    if hurtig:
+        logg(f"HURTIG: {len(SHOPIFY_STORES)} Shopify-butikker, ingen nettleser.")
+        all_products, failed_stores, tider = skann_shopify_parallelt(SHOPIFY_STORES)
+        logg(f"Skanning ferdig pa {(time.monotonic() - start) / 60:.1f} min.")
+    else:
+        all_products, failed_stores, tider = _full_runde(start)
 
     # Se carry_forward_failed_stores(): ma kjores FOR hendelsene beregnes,
     # ellers ser en butikk som feilet ut som om hele katalogen forsvant.
@@ -2610,11 +2641,15 @@ def main():
               f"(grense {ALERT_STORM_THRESHOLD}). Sender INGEN varsler -- dette "
               f"tyder pa datafeil, ikke ekte restock. Butikker som feilet: "
               f"{', '.join(failed_stores) or 'ingen'}")
-    else:
+    elif not hurtig:
+        # ntfy og de offentlige loggene hoerer til den fulle runden.
+        # Varslene til brukerne kommer fra databasen (ingest -> events ->
+        # overvak/varsler.py), ikke herfra -- saa hurtigrunden trenger dem
+        # ikke, og to kilder til samme varsel er en kilde for mye.
         send_ntfy_notification(new_events)
 
-    changes = update_changes_log(new_events)
-    history = update_history_log(new_events + extra_events)
+    changes = update_changes_log(new_events) if not hurtig else []
+    history = update_history_log(new_events + extra_events) if not hurtig else []
 
     output = {
         "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
@@ -2638,12 +2673,12 @@ def main():
         },
     }
 
-    with open("docs/data.json", "w", encoding="utf-8") as f:
+    with open(fil, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     in_stock_count = sum(1 for p in all_products if p.in_stock)
     print(f"\nFerdig. {len(all_products)} produkter funnet totalt, "
-          f"{in_stock_count} pa lager. Lagret til docs/data.json")
+          f"{in_stock_count} pa lager. Lagret til {fil}")
     print(f"{len(new_events)} nye lagerhendelser siden forrige kjoring "
           f"(totalt {len(changes)} lagret i docs/changes.json).")
     print(f"{len(new_events) + len(extra_events)} hendelser totalt denne kjoringen "
