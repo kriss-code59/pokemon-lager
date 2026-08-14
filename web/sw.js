@@ -9,8 +9,8 @@
  *
  * Regelen for cache er enkel: skallet fra cache, /api/ ALDRI fra cache.
  */
-const CACHE = "pokepuls-skall-v21";
-const SKALL = ["/", "/style.css?v=21", "/app.js?v=21", "/ikon.svg", "/manifest.webmanifest"];
+const CACHE = "pokepuls-skall-v22";
+const SKALL = ["/", "/style.css?v=22", "/app.js?v=22", "/ikon.svg", "/manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SKALL)).then(() => self.skipWaiting()));
@@ -110,11 +110,27 @@ self.addEventListener("pushsubscriptionchange", (e) => {
         userVisibleOnly: true,
         applicationServerKey: nokkel,
       });
+      // En service worker har ingen localStorage. Vi sporr et aapent vindu
+      // om installasjons-id-en; finnes ingen, sender vi uten -- da rydder
+      // neste sidebesok opp i stedet.
+      let inst = null;
+      try {
+        const vinduer = await self.clients.matchAll({ type: "window" });
+        if (vinduer.length) {
+          inst = await new Promise((svar) => {
+            const kanal = new MessageChannel();
+            kanal.port1.onmessage = (e) => svar(e.data && e.data.installasjon);
+            vinduer[0].postMessage({ sporr: "installasjon" }, [kanal.port2]);
+            setTimeout(() => svar(null), 500);
+          });
+        }
+      } catch (_) { /* uten id virker abonnementet fortsatt */ }
+
       await fetch("/api/push/abonner", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "same-origin",
-        body: JSON.stringify(ny.toJSON()),
+        body: JSON.stringify({ ...ny.toJSON(), installasjon: inst }),
       });
       if (gammel) {
         await fetch("/api/push/avmeld", {

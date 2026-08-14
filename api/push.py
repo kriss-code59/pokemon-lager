@@ -31,6 +31,10 @@ class Nokler(BaseModel):
 class Abonnement(BaseModel):
     endpoint: str = Field(min_length=20, max_length=800)
     keys: Nokler
+    # Nettleserens egen id, husket i localStorage. Se db/009_installasjon.sql.
+    # Valgfri: en gammel klient som ikke sender den skal fortsatt kunne
+    # abonnere -- den faar bare ikke oppryddingen.
+    installasjon: str | None = Field(default=None, max_length=64)
 
 
 class Endepunkt(BaseModel):
@@ -91,15 +95,41 @@ def monter(app, hent_pool, hent_bruker):
         ua = (request.headers.get("user-agent") or "")[:300]
         async with pool.connection() as conn:
             cur = await conn.execute(
-                "INSERT INTO push_endpoints (user_id, endpoint, p256dh, auth, user_agent) "
-                "VALUES (%s, %s, %s, %s, %s) "
+                "INSERT INTO push_endpoints "
+                "  (user_id, endpoint, p256dh, auth, user_agent, installasjon) "
+                "VALUES (%s, %s, %s, %s, %s, %s) "
                 "ON CONFLICT (endpoint) DO UPDATE SET "
                 "  user_id = EXCLUDED.user_id, p256dh = EXCLUDED.p256dh, "
                 "  auth = EXCLUDED.auth, user_agent = EXCLUDED.user_agent, "
+                "  installasjon = EXCLUDED.installasjon, "
                 "  feil_pa_rad = 0, sist_feil = NULL "
                 "RETURNING id", (bruker["id"], data.endpoint,
-                                 data.keys.p256dh, data.keys.auth, ua))
-            return {"id": (await cur.fetchone())["id"], "ok": True}
+                                 data.keys.p256dh, data.keys.auth, ua,
+                                 data.installasjon))
+            ny_id = (await cur.fetchone())["id"]
+
+            # Rydd bort tidligere registreringer FRA SAMME NETTLESER.
+            #
+            # Uten dette samler det seg ett endepunkt per service
+            # worker-generasjon, alle levende, og hvert varsel gaar ut i like
+            # mange kopier. Malt i drift: én bruker hadde tre.
+            #
+            # To kriterier, og det andre er det som rydder opp i rotet som
+            # allerede finnes:
+            #   1. samme installasjons-id  -- sikkert, samme nettleser
+            #   2. ingen installasjons-id + samme user agent -- rader fra for
+            #      denne endringen. Heuristikk, men den treffer nettopp de
+            #      gamle duplikatene og lar ekte andre enheter staa.
+            fjernet = 0
+            if data.installasjon:
+                cur = await conn.execute(
+                    "DELETE FROM push_endpoints WHERE user_id = %s AND id <> %s "
+                    "  AND (installasjon = %s "
+                    "       OR (installasjon IS NULL AND user_agent = %s)) "
+                    "RETURNING id",
+                    (bruker["id"], ny_id, data.installasjon, ua))
+                fjernet = len(await cur.fetchall())
+            return {"id": ny_id, "ok": True, "fjernet_gamle": fjernet}
 
     @router.post("/avmeld")
     async def avmeld(data: Endepunkt, pokepuls_sesjon: str | None = Cookie(None)):

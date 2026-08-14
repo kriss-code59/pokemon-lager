@@ -915,6 +915,33 @@ function koblSkjema() {
  * 3. **Abonnementet er per nettleser, ikke per konto.** Vi lagrer det mot
  *    brukeren, og sw.js sender inn et nytt hvis nettleseren bytter det ut.
  */
+/* Nettleserens egen id, husket paa tvers av service worker-bytter.
+ *
+ * Uten den samler det seg ETT push-endepunkt per service worker-generasjon.
+ * Alle er levende, saa den vanlige oppryddingen (som sletter DODE
+ * endepunkter) fjerner dem aldri -- og hvert varsel gaar ut i like mange
+ * kopier. Malt i drift 14. august: én bruker hadde tre, opprettet 7., 9. og
+ * 13. august. Tolv deployer paa én dag ga tre nye abonnementer.
+ *
+ * Dette er ikke sporing. Id-en lages her i nettleseren, sendes bare til oss,
+ * og brukes bare til aa kjenne igjen en enhet som allerede er innlogget.
+ * localStorage er valgt fremfor sessionStorage nettopp fordi den maa
+ * overleve at fanen lukkes -- det er hele poenget. */
+function installasjonsId() {
+  try {
+    let id = localStorage.getItem("pokepuls-installasjon");
+    if (!id) {
+      id = (crypto.randomUUID && crypto.randomUUID()) ||
+           String(Date.now()) + Math.random().toString(36).slice(2);
+      localStorage.setItem("pokepuls-installasjon", id);
+    }
+    return id;
+  } catch (e) {
+    // Privat modus. Da faar vi ikke ryddet, men abonnementet virker.
+    return null;
+  }
+}
+
 const push = {
   stottes() {
     return "serviceWorker" in navigator && "PushManager" in window &&
@@ -963,7 +990,10 @@ const push = {
         userVisibleOnly: true,
         applicationServerKey: this.nokkelTilBytes(nokkel),
       });
-    await hent("/push/abonner", { method: "POST", body: JSON.stringify(ab.toJSON()) });
+    await hent("/push/abonner", {
+      method: "POST",
+      body: JSON.stringify({ ...ab.toJSON(), installasjon: installasjonsId() }),
+    });
     return ab;
   },
 
@@ -1653,6 +1683,14 @@ document.addEventListener("visibilitychange", () => {
 ryddVarsler();
 
 if ("serviceWorker" in navigator) {
+  // Service workeren har ingen localStorage. Naar den bytter push-abonnement
+  // spor den oss om installasjons-id-en, saa serveren kan rydde bort den
+  // forrige registreringen fra samme nettleser.
+  navigator.serviceWorker.addEventListener("message", (e) => {
+    if (e.data && e.data.sporr === "installasjon" && e.ports && e.ports[0]) {
+      e.ports[0].postMessage({ installasjon: installasjonsId() });
+    }
+  });
   navigator.serviceWorker.register("/sw.js").catch(() => {});
   // Én gang til naar registreringen er aktiv: paa aller forste besok finnes
   // det ingen registrering enna naar linja over kjorer.

@@ -254,3 +254,60 @@ def test_periode_slutt_leses_baade_gammelt_og_nytt_sted():
     # Ingen av delene: skal gi None, ikke kaste. En manglende dato er
     # ubehagelig; en exception i webhooken er en tapt betaling.
     assert _periode_slutt(_FalskStripeObject(status="active")) is None
+
+
+# ------------------------------------------- ett endepunkt per nettleser
+
+"""Duplikatvarslene.
+
+Malt i drift 14. august: én bruker hadde TRE push-endepunkter, opprettet
+7., 9. og 13. august. Alle med feil_pa_rad = 0 og last_ok_at samme time --
+altsaa alle levende. Hvert varsel gikk ut i tre kopier til samme person.
+
+Aarsaken er at nettleseren kan bytte push-abonnement naar service workeren
+oppdateres, og den oppdateres ved hver cache-bump. Tolv deployer paa én dag
+ga tre nye abonnementer.
+
+Den vanlige oppryddingen hjelper ikke: den sletter DODE endepunkter. Disse
+er ikke dode.
+"""
+
+PUSH = (ROT / "api" / "push.py").read_text(encoding="utf-8")
+APP_JS = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+
+
+def test_abonner_rydder_bort_forrige_fra_samme_nettleser():
+    i = PUSH.index('@router.post("/abonner")')
+    kropp = PUSH[i:PUSH.index("@router.post", i + 20)]
+    assert "DELETE FROM push_endpoints" in kropp, "ingen opprydding"
+    assert "installasjon = %s" in kropp
+    # Heuristikken som rydder opp i duplikatene som ALLEREDE finnes: gamle
+    # rader har ingen installasjons-id, men samme user agent.
+    assert "installasjon IS NULL AND user_agent" in kropp
+
+
+def test_oppryddingen_rorer_ikke_andre_enheter():
+    # En som faktisk bruker to telefoner skal beholde begge. Sletting skjer
+    # bare paa samme installasjon eller samme user agent.
+    i = PUSH.index("DELETE FROM push_endpoints WHERE user_id")
+    setning = PUSH[i:i + 400]
+    assert "id <> %s" in setning, "den nye raden maa overleve"
+    assert "user_id = %s" in setning, "aldri paa tvers av brukere"
+
+
+def test_installasjons_id_overlever_at_fanen_lukkes():
+    # sessionStorage ville gitt en ny id per fane, og da hadde vi loest
+    # ingenting. Den MAA vaere localStorage.
+    i = APP_JS.index("function installasjonsId")
+    kropp = APP_JS[i:i + 700]
+    assert "localStorage" in kropp
+    assert "sessionStorage" not in kropp
+
+
+def test_klienten_uten_id_faar_fortsatt_abonnere():
+    # Privat modus kaster paa localStorage. Da mister vi oppryddingen, men
+    # varslene skal fortsatt virke -- en bekvemmelighet skal aldri vaere
+    # grunnen til at hovedfunksjonen ryker.
+    assert "installasjon: str | None" in PUSH
+    i = APP_JS.index("function installasjonsId")
+    assert "return null" in APP_JS[i:i + 800]
