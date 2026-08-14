@@ -191,8 +191,12 @@ def les_data(sti: str) -> dict:
 # FORHAANDSSALG er noe helt annet og beholdes: der sikrer du deg til
 # veiledende pris for alle andre, og det er kanskje det mest verdifulle
 # signalet Pokepuls har.
+FORHANDSSALG = "forhandssalg"
+BESTILLINGSVARE = "bestillingsvare"
+
+
 def _stille(bestillingstype) -> bool:
-    return bestillingstype == "bestillingsvare"
+    return bestillingstype == BESTILLINGSVARE
 
 
 def _bestillingstype(tittel):
@@ -384,11 +388,27 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                         hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
                                           "utsolgt", ny["price_ore"], None))
 
-                    # Forhaandssalg -> vanlig vare. Butikken lar in_stock staa
+                    # FORHAANDSSALG -> vanlig vare. Butikken lar in_stock staa
                     # paa true gjennom hele skiftet, saa restock-regelen over
                     # ser ingenting. Men det er nettopp NAA varen ble ekte.
-                    if (gammel.get("bestillingstype") and not ny["bestillingstype"]
-                            and er is True):
+                    #
+                    # BARE forhaandssalg, ikke bestillingsvare. Regelen sto
+                    # opprinnelig for begge, og det ga 105 falske restock paa
+                    # tre timer -- alle fra Mystic Trades.
+                    #
+                    # Mekanismen er subtil: merkingen leses fra TITTELEN. Leser
+                    # scraperen den én gang uten «[BESTILLINGSVARE]» -- fordi
+                    # butikkens side rendret annerledes det sekundet -- ser
+                    # ingest at bestillingstype forsvant, og tolker det som at
+                    # varen ble ekte. Neste kjoring er merket tilbake, og
+                    # runden gjentar seg.
+                    #
+                    # For forhaandssalg er overgangen ekte og skjer én gang:
+                    # paa slippdagen. For en bestillingsvare er den stort sett
+                    # stoy -- og selv naar den er ekte, er «butikken har den
+                    # naa likevel» et svakt signal aa vekke noen for.
+                    if (gammel.get("bestillingstype") == FORHANDSSALG
+                            and not ny["bestillingstype"] and er is True):
                         hendelser.append((gammel["id"], url, ny["product_id"], butikk_id,
                                           "restock", ny["price_ore"], None))
 

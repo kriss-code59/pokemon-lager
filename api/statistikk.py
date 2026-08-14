@@ -68,7 +68,9 @@ RESTOCK_BUTIKK_SQL = """
 SELECT e.store_id, st.name AS store_name, count(*) AS antall,
        max(e.detected_at) AS sist
 FROM events e LEFT JOIN stores st ON st.id = e.store_id
+     LEFT JOIN listings l ON l.id = e.listing_id
 WHERE e.kind = 'restock' AND e.detected_at > now() - make_interval(days => %s)
+  AND (l.bestillingstype IS NULL OR l.bestillingstype <> 'bestillingsvare')
 GROUP BY e.store_id, st.name ORDER BY antall DESC LIMIT 20
 """
 

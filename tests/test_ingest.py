@@ -249,3 +249,35 @@ def test_sett_abonnement_teller_som_bredt_ikke_spesifikt():
         encoding="utf-8")
     assert "bool_or(sub.product_id IS NOT NULL) AS spesifikk" in sql
     assert "bool_or(sub.product_id IS NOT NULL OR sub.set_id IS NOT NULL)" not in sql
+
+
+def test_bare_forhandssalg_gir_restock_naar_merkingen_forsvinner():
+    """Malt i drift 14. august: 105 falske restock paa tre timer.
+
+    Regelen «bestillingstype forsvant -> varen ble ekte -> restock» sto
+    opprinnelig for BEGGE typer. Mekanismen som gjorde den farlig er
+    subtil: merkingen leses fra TITTELEN. Leser scraperen den én gang uten
+    «[BESTILLINGSVARE]» -- fordi butikkens side rendret annerledes det
+    sekundet -- ser ingest at merkingen forsvant og tolker det som at varen
+    ble ekte. Neste kjoring er merket tilbake, og runden gjentar seg.
+
+    For FORHAANDSSALG er overgangen ekte og skjer én gang: paa
+    slippdagen. Den beholder vi.
+    """
+    from pathlib import Path
+    kilde = (Path(__file__).resolve().parents[1] / "ingest" / "ingest.py").read_text(
+        encoding="utf-8")
+    i = kilde.index('and not ny["bestillingstype"]')
+    rundt = kilde[max(0, i - 120):i + 60]
+    assert "== FORHANDSSALG" in rundt, \
+        "regelen maa gjelde BARE forhaandssalg, ikke enhver bestillingstype"
+
+
+def test_statistikken_teller_ikke_bestillingsvarer_som_paafyll():
+    # En bestillingsvare er ikke paafyll. Uten filteret ble «butikken som
+    # fyller paa oftest» en maaling av hvilken butikk som blafret mest.
+    from pathlib import Path
+    sql = (Path(__file__).resolve().parents[1] / "api" / "statistikk.py").read_text(
+        encoding="utf-8")
+    i = sql.index("RESTOCK_BUTIKK_SQL")
+    assert "bestillingsvare" in sql[i:i + 700]
