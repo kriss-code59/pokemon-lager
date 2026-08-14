@@ -47,6 +47,11 @@ class Rolle(BaseModel):
     role: str = Field(pattern="^(free|premium|admin)$")
 
 
+class Premium(BaseModel):
+    user_id: str
+    gi: bool
+
+
 class FeedbackStatus(BaseModel):
     status: str | None = Field(default=None, pattern="^(ny|lest|gjort|avvist)$")
     notat: str | None = Field(default=None, max_length=2000)
@@ -134,6 +139,81 @@ def monter(app, hent_pool, hent_bruker):
             if not rad:
                 raise HTTPException(404, "Ukjent bruker")
         return rad
+
+    # ------------------------------------------------------------ premium
+    #
+    # Gratis premium, gitt for haand. Til lanseringskampanjen: «de 50 forste
+    # faar premium gratis».
+    #
+    # Hvorfor et EGET endepunkt og ikke bare rolleknappen:
+    #
+    #   * Rollen alene er ikke nok. er_premium() krever role='premium' OG at
+    #     premium_until enten er NULL eller i framtiden. Setter du bare
+    #     rollen paa en som har hatt et abonnement som gikk ut, faar de
+    #     ingenting -- den gamle datoen staar der fortsatt og har passert.
+    #
+    #   * En som BETALER skal ikke kunne miste abonnementet sitt med et
+    #     uhell herfra. Vi rorer aldri stripe_kunder, og vi sier fra i
+    #     svaret hvis brukeren har et aktivt abonnement.
+
+    @router.post("/premium")
+    async def sett_premium(data: Premium, pokepuls_sesjon: str | None = Cookie(None)):
+        await _krev_admin(pokepuls_sesjon)
+        async with hent_pool().connection() as conn:
+            cur = await conn.execute(
+                "SELECT u.email, u.role, s.status AS abo_status "
+                "FROM users u LEFT JOIN stripe_kunder s ON s.user_id = u.id "
+                "WHERE u.id = %s", (data.user_id,))
+            for_ = await cur.fetchone()
+            if not for_:
+                raise HTTPException(404, "Ukjent bruker")
+            if for_["role"] == "admin":
+                raise HTTPException(400, "Admin har premium uansett.")
+
+            if data.gi:
+                # premium_until = NULL betyr ubegrenset. Det er nettopp det
+                # en gave er: den gaar ikke ut, og den fornyes ikke.
+                cur = await conn.execute(
+                    "UPDATE users SET role = 'premium', premium_until = NULL "
+                    "WHERE id = %s RETURNING email, role, premium_until",
+                    (data.user_id,))
+            else:
+                # Tilbake til free. Betaler de, setter neste webhook fra
+                # Stripe rollen tilbake av seg selv -- vi har ikke rort
+                # abonnementet.
+                cur = await conn.execute(
+                    "UPDATE users SET role = 'free', premium_until = NULL "
+                    "WHERE id = %s RETURNING email, role, premium_until",
+                    (data.user_id,))
+            rad = await cur.fetchone()
+
+        return {**rad, "betalende": for_["abo_status"] in ("active", "trialing"),
+                "advarsel": ("Brukeren har et AKTIVT abonnement hos Stripe. "
+                             "Abonnementet er urort -- si det opp i Stripe hvis "
+                             "det var meningen.")
+                            if for_["abo_status"] in ("active", "trialing") else None}
+
+    @router.get("/premium/telling")
+    async def premium_telling(pokepuls_sesjon: str | None = Cookie(None)):
+        """Hvor mange har premium, og hvor mange av dem betaler.
+
+        Til kampanjen: du maa vite naar de 50 gratisplassene er brukt opp.
+        """
+        await _krev_admin(pokepuls_sesjon)
+        async with hent_pool().connection() as conn:
+            cur = await conn.execute("""
+                SELECT
+                  count(*) FILTER (WHERE u.role = 'premium') AS premium,
+                  count(*) FILTER (WHERE u.role = 'premium'
+                                   AND s.status IN ('active', 'trialing')) AS betalende,
+                  count(*) FILTER (WHERE u.role = 'premium'
+                                   AND u.premium_until IS NULL
+                                   AND (s.status IS NULL
+                                        OR s.status NOT IN ('active', 'trialing')))
+                    AS gratis,
+                  count(*) AS brukere
+                FROM users u LEFT JOIN stripe_kunder s ON s.user_id = u.id""")
+            return await cur.fetchone()
 
     # -------------------------------------------------------------- drift
 

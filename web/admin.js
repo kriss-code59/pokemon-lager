@@ -104,7 +104,17 @@ async function tegnDrift() {
 
 async function tegnBrukere() {
   const d = await hent("/admin/users");
+  let t = null;
+  try { t = await hent("/admin/premium/telling"); } catch (e) { /* eldre server */ }
   $("#admin-innhold").innerHTML =
+    (t ? '<div class="tallrad">' + [
+      ["Brukere", t.brukere], ["Premium", t.premium],
+      ["Betalende", t.betalende], ["Gratis gitt", t.gratis],
+      // Kampanjen: 50 gratisplasser. Naar de er brukt opp, skal det staa
+      // her og ikke i hodet ditt.
+      ["Igjen av 50", Math.max(0, 50 - Number(t.gratis))],
+    ].map(([n, v]) => '<div class="talle"><b>' + esc(v) + "</b><span>" +
+      esc(n) + "</span></div>").join("") + "</div>" : "") +
     '<p class="hjelp">' + d.brukere.length + " registrerte brukere. " +
     "Klikk en rad for å se hva de følger.</p>" +
     '<div class="tabell">' + d.brukere.map((u) =>
@@ -133,6 +143,22 @@ async function visBruker(id) {
       ["free", "premium", "admin"].map((r) =>
         '<button class="chip' + (d.bruker.role === r ? " pa" : "") +
         '" data-rolle="' + r + '">' + r + "</button>").join(" ") + "</p>" +
+
+    // Egen knapp, ikke bare rollen. Rollen alene er ikke nok: er_premium()
+    // krever ogsaa at premium_until er NULL eller i framtiden, og en gammel
+    // dato fra et utlopt abonnement ville staatt igjen og gjort gaven
+    // virkningslos.
+    (d.bruker.role === "admin" ? "" :
+      '<p class="hjelp">' +
+      (d.bruker.role === "premium"
+        ? '<button class="chip pa" id="premium-av">Ta bort premium</button>' +
+          '<span class="hjelp liten"> ' +
+          (d.bruker.premium_until
+            ? "Betalt ut " + esc(new Date(d.bruker.premium_until)
+                .toLocaleDateString("nb-NO"))
+            : "Gratis, uten utløp") + "</span>"
+        : '<button class="chip" id="premium-pa">Gi gratis premium</button>') +
+      '</p><p class="feil" id="premium-feil" hidden></p>') +
 
     "<h3>Følger (" + d.folger.length + ")</h3>" +
     (d.folger.length ? '<div class="tabell">' + d.folger.map((f) =>
@@ -172,6 +198,31 @@ async function visBruker(id) {
       } catch (e) { alert(e.message); }
     });
   }
+
+  const premium = async (gi, knapp) => {
+    knapp.disabled = true;
+    const feil = $("#premium-feil");
+    feil.hidden = true;
+    try {
+      const r = await hent("/admin/premium", { method: "POST",
+        body: JSON.stringify({ user_id: id, gi }) });
+      // Advarselen er ikke en feil -- den er informasjon du trenger. Tar du
+      // premium fra noen som BETALER, fortsetter Stripe aa trekke dem, og
+      // neste webhook setter rollen tilbake. Da maa abonnementet sies opp
+      // hos Stripe, ikke her.
+      if (r.advarsel) alert(r.advarsel);
+      await tegnBrukere();
+      visBruker(id);
+    } catch (e) {
+      feil.textContent = e.message;
+      feil.hidden = false;
+      knapp.disabled = false;
+    }
+  };
+  const pa = $("#premium-pa");
+  if (pa) pa.addEventListener("click", () => premium(true, pa));
+  const av = $("#premium-av");
+  if (av) av.addEventListener("click", () => premium(false, av));
   boks.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 

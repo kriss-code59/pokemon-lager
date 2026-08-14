@@ -311,3 +311,53 @@ def test_klienten_uten_id_faar_fortsatt_abonnere():
     assert "installasjon: str | None" in PUSH
     i = APP_JS.index("function installasjonsId")
     assert "return null" in APP_JS[i:i + 800]
+
+
+# ------------------------------------------------- gratis premium fra admin
+
+ADMIN = (ROT / "api" / "admin.py").read_text(encoding="utf-8")
+
+
+def test_gratis_premium_nullstiller_utlopsdatoen():
+    """Rollen alene er ikke nok.
+
+    er_premium() krever role='premium' OG at premium_until er NULL eller i
+    framtiden. Gir du premium til noen som har hatt et abonnement som gikk
+    ut, staar den gamle datoen igjen og har passert -- og gaven virker
+    ikke. Det ville vaert en feil ingen oppdaget for kunden klaget.
+    """
+    i = ADMIN.index("async def sett_premium")
+    kropp = ADMIN[i:ADMIN.index("@router.get", i)]
+    assert "role = 'premium', premium_until = NULL" in kropp
+    assert "role = 'free', premium_until = NULL" in kropp
+
+
+def test_admin_rorer_aldri_abonnementet():
+    """En som betaler skal ikke miste abonnementet med et uhell herfra.
+
+    Vi skriver aldri til stripe_kunder. Tar du premium fra noen som
+    betaler, fortsetter Stripe aa trekke dem -- og neste webhook setter
+    rollen tilbake. Derfor sier svaret fra i stedet for aa late som.
+    """
+    i = ADMIN.index("async def sett_premium")
+    kropp = ADMIN[i:ADMIN.index("@router.get", i)]
+    assert "UPDATE stripe_kunder" not in kropp
+    assert "DELETE FROM stripe_kunder" not in kropp
+    assert "advarsel" in kropp
+
+
+def test_admin_kan_ikke_degradere_seg_selv_via_premium():
+    # Rolleknappen har allerede en sperre mot aa fjerne egen admin-rolle.
+    # Premium-knappen ville ellers vaert en vei rundt den.
+    i = ADMIN.index("async def sett_premium")
+    kropp = ADMIN[i:ADMIN.index("@router.get", i)]
+    assert 'role"] == "admin"' in kropp
+
+
+def test_tellingen_skiller_betalende_fra_gitt():
+    # Kampanjen er «de 50 forste faar gratis». Da maa du vite hvor mange av
+    # premium-brukerne som faktisk betaler, ellers teller du feil.
+    i = ADMIN.index("async def premium_telling")
+    kropp = ADMIN[i:i + 1200]
+    assert "betalende" in kropp and "gratis" in kropp
+    assert "premium_until IS NULL" in kropp, "en gave har ingen utlopsdato"
