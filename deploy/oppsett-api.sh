@@ -172,6 +172,25 @@ if grep -q ssl_certificate /etc/nginx/sites-available/pokepuls 2>/dev/null; then
 else
   install -m 644 "$REPO/deploy/nginx-pokepuls.conf" /etc/nginx/sites-available/pokepuls
 fi
+# Slaa av enkeltsidefallbacken, slik at ukjente adresser blir ekte 404.
+#
+# Vi eier ikke denne filen -- certbot skriver i den -- saa vi lapper den
+# idempotent i stedet for aa overskrive, akkurat som med include-linjen over.
+# Sikring: tar vi feil, skal siden ikke gaa ned. Vi tar en kopi, prover, og
+# legger tilbake originalen hvis nginx ikke godtar resultatet.
+if grep -q 'try_files \$uri \$uri/ /index.html;' /etc/nginx/sites-available/pokepuls 2>/dev/null; then
+  cp /etc/nginx/sites-available/pokepuls /etc/nginx/sites-available/pokepuls.for-404
+  sed -i 's|try_files \$uri \$uri/ /index.html;|try_files $uri $uri/ =404;|' \
+    /etc/nginx/sites-available/pokepuls
+  if "${NGINX:-$(command -v nginx || echo /usr/sbin/nginx)}" -t >/dev/null 2>&1; then
+    LOGG "  enkeltsidefallback av -- ukjente adresser gir naa ekte 404"
+    rm -f /etc/nginx/sites-available/pokepuls.for-404
+  else
+    mv /etc/nginx/sites-available/pokepuls.for-404 /etc/nginx/sites-available/pokepuls
+    echo "ADVARSEL: 404-lappen ble forkastet, nginx godtok den ikke. Originalen er lagt tilbake."
+  fi
+fi
+
 ln -sf /etc/nginx/sites-available/pokepuls /etc/nginx/sites-enabled/pokepuls
 rm -f /etc/nginx/sites-enabled/default
 # nginx ma kunne lese web/ gjennom /home/pokepuls.

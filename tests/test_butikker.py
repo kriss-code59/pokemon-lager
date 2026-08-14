@@ -708,3 +708,37 @@ def test_de_to_ingest_kjoringene_deler_laas():
     # Skanne-laasene maa vaere FORSKJELLIGE, ellers venter hurtigrunden paa
     # den fulle og hele poenget forsvinner.
     assert "/tmp/pokepuls-scrape.lock" in cron
+
+
+# ------------------------------------------------------------ ekte 404
+
+def test_ukjent_adresse_gir_404_ikke_forsiden():
+    """`/finnes-ikke-test` svarte 200 med forsiden og canonical til «/».
+
+    Sokemotorer ser da uendelig mange duplikater av forsiden, og et
+    menneske som folger en brukket lenke tror den kom fram.
+    """
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    assert "error_page 404 /404.html;" in konf
+
+    side = (ROT / "web" / "404.html").read_text(encoding="utf-8")
+    assert 'name="robots" content="noindex"' in side
+    # En 404 uten vei videre er en blindvei.
+    for lenke in ('href="/"', "/butikker", "/kalender", "/om.html"):
+        assert lenke in side
+
+
+def test_404_lappen_kan_ikke_ta_ned_siden():
+    """Vi eier ikke certbot-filen. Lappen maa vaere idempotent, og den maa
+    legge tilbake originalen hvis nginx ikke godtar resultatet -- ellers
+    er en skrivefeil her det samme som at hele pokepuls.no gaar ned.
+    """
+    sh = (ROT / "deploy" / "oppsett-api.sh").read_text(encoding="utf-8")
+    i = sh.index("Slaa av enkeltsidefallbacken")
+    blokk = sh[i:i + 1600]
+    assert "pokepuls.for-404" in blokk, "ingen kopi tas for endring"
+    assert "-t >/dev/null" in blokk, "nginx -t kjores ikke pa resultatet"
+    assert "mv /etc/nginx/sites-available/pokepuls.for-404" in blokk, \
+        "originalen legges ikke tilbake ved feil"
+    # Idempotent: bare hvis monsteret faktisk staar der.
+    assert blokk.index("if grep -q") < blokk.index("sed -i")
