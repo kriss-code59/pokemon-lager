@@ -438,5 +438,10 @@ def test_provingen_leser_dataklassens_egne_feltnavn():
 
     i = kilde.index("def bare_en_butikk")
     kropp = kilde[i:kilde.index("\ndef main():", i)]
-    assert "price_ore" not in kropp, "leser databasenavn i stedet for dataklassen"
-    assert 'p.name' in kropp and 'p.price' in kropp
+    # Bare KODE. Kommentaren over fiksen NEVNER price_ore for aa forklare
+    # hva som var galt -- tredje gang i dag en test slaas ut av sin egen
+    # begrunnelse. Kommentarer er dokumentasjon, ikke oppforsel.
+    kode = "\n".join(l.split("#")[0] for l in kropp.splitlines()
+                     if not l.strip().startswith("#") and '"""' not in l)
+    assert "price_ore" not in kode, "leser databasenavn i stedet for dataklassen"
+    assert "p.name" in kode and "p.price" in kode
