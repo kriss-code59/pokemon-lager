@@ -2224,18 +2224,21 @@ def bare_en_butikk(navn: str) -> int:
               "noe paa lager -- den feiler ikke, den tier.")
         return 1
 
-    # De tre feltene som avgjor om skraperen duger: tittel, pris og lager.
-    # Er lagerstatus None paa alt, er den ubrukelig selv om titlene stemmer.
-    inne = sum(1 for p in produkter if getattr(p, "in_stock", None) is True)
-    ute = sum(1 for p in produkter if getattr(p, "in_stock", None) is False)
+    # De tre feltene som avgjor om skraperen duger: navn, pris og lager.
+    #
+    # Feltnavnene er Product sine EGNE: name, price, in_stock. Forste
+    # utgave av denne funksjonen leste `title` og `price_ore` -- navn fra
+    # databasen, ikke fra dataklassen -- og skrev derfor «ingen priser» og
+    # tomme titler for en butikk som fungerte helt fint. Et verktoy som
+    # lyver om hva det ser, faar deg til aa forkaste en skraper som virker.
+    inne = sum(1 for p in produkter if p.in_stock is True)
+    ute = sum(1 for p in produkter if p.in_stock is False)
     vet_ikke = len(produkter) - inne - ute
-    uten_pris = sum(1 for p in produkter if not getattr(p, "price_ore", None))
+    uten_pris = sum(1 for p in produkter if not (p.price or "").strip())
 
     for p in produkter[:15]:
-        lager = {True: "inne", False: "ute"}.get(getattr(p, "in_stock", None), "?")
-        pris = getattr(p, "price_ore", None)
-        print(f"  [{lager:4}] {(pris / 100) if pris else '-':>9} kr  "
-              f"{(getattr(p, 'title', '') or '')[:70]}")
+        lager = {True: "inne", False: "ute"}.get(p.in_stock, "?")
+        print(f"  [{lager:4}] {(p.price or '-'):>12}  {(p.name or '')[:66]}")
     if len(produkter) > 15:
         print(f"  ... og {len(produkter) - 15} til")
 

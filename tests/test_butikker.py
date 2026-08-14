@@ -413,3 +413,30 @@ def test_ukjente_flagg_avvises():
     i_bare = kilde.index('"--bare" in sys.argv', i_main)
     assert i_avvis < i_bare, "avvisningen maa komme forst av alt i main()"
     assert "sys.exit(2)" in kilde
+
+
+def test_provingen_leser_dataklassens_egne_feltnavn():
+    """Forste utgave leste `title` og `price_ore` -- navn fra DATABASEN,
+    ikke fra Product-dataklassen, som bruker `name` og `price`.
+
+    Resultatet var at provingen skrev tomme titler og «ADVARSEL: ingen
+    priser» for Mythic, en butikk som fungerer helt fint. Et verktoy som
+    lyver om hva det ser, faar deg til aa forkaste en skraper som virker --
+    og det er verre enn ikke aa ha verktoyet.
+    """
+    import ast as _ast
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+
+    # Hent de faktiske feltnavnene fra dataklassen, ikke fra hukommelsen.
+    tre = _ast.parse(kilde)
+    felt = set()
+    for node in _ast.walk(tre):
+        if isinstance(node, _ast.ClassDef) and node.name == "Product":
+            felt = {n.target.id for n in node.body
+                    if isinstance(n, _ast.AnnAssign)}
+    assert {"name", "price", "in_stock"} <= felt
+
+    i = kilde.index("def bare_en_butikk")
+    kropp = kilde[i:kilde.index("\ndef main():", i)]
+    assert "price_ore" not in kropp, "leser databasenavn i stedet for dataklassen"
+    assert 'p.name' in kropp and 'p.price' in kropp
