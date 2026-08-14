@@ -394,3 +394,22 @@ def test_provingen_advarer_om_de_to_dodelige_feilene():
     kropp = kilde[i:kilde.index("\ndef main():", i)]
     assert "lagerstatus er ukjent for ALT" in kropp
     assert "ingen priser" in kropp
+
+
+def test_ukjente_flagg_avvises():
+    """14. august: `--bare Mythic` ble kjort mot en server der flagget enda
+    ikke var deployet. Gammel kode kjente det ikke igjen, ignorerte det, og
+    kjorte en FULL produksjonsskanning i stillhet -- 44 butikker, ny
+    data.json, 1408 hendelser, og bare stormvernet mellom det og en
+    varselstorm.
+
+    Et program som stille gjor noe stort naar du ba om noe lite, er
+    farligere enn et som nekter.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    assert "KJENTE_FLAGG" in kilde
+    i_main = kilde.index("def main():")
+    i_avvis = kilde.index("ukjente = [a for a in sys.argv", i_main)
+    i_bare = kilde.index('"--bare" in sys.argv', i_main)
+    assert i_avvis < i_bare, "avvisningen maa komme forst av alt i main()"
+    assert "sys.exit(2)" in kilde

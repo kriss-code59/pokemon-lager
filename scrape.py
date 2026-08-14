@@ -2250,7 +2250,34 @@ def bare_en_butikk(navn: str) -> int:
     return 0
 
 
+# Flagg scrape.py forstaar. Alt annet avvises.
+KJENTE_FLAGG = {"--bare", "--test-notification", "--test-restock-notification"}
+
+
 def main():
+    # AVVIS UKJENTE ARGUMENTER.
+    #
+    # Dette kostet oss en runde 14. august: `--bare Mythic` ble kjort mot en
+    # server der flagget enda ikke var deployet. Den gamle koden kjente det
+    # ikke igjen, ignorerte det -- og kjorte en FULL produksjonsskanning i
+    # stillhet. 44 butikker, ny data.json, 1408 hendelser, og bare
+    # stormvernet mellom det og en varselstorm.
+    #
+    # Verre: den manuelle kjoringen tok ikke flock-laasen, saa den kunne
+    # kjore samtidig med cron. To skanninger som skriver samme data.json er
+    # nettopp det laasen finnes for.
+    #
+    # Et program som stille gjor noe stort naar du ba om noe lite, er
+    # farligere enn et som nekter.
+    ukjente = [a for a in sys.argv[1:]
+               if a.startswith("-") and a not in KJENTE_FLAGG]
+    if ukjente:
+        print(f"Ukjent argument: {' '.join(ukjente)}")
+        print(f"Kjenner: {', '.join(sorted(KJENTE_FLAGG))}")
+        print("Kjorer INGENTING. Er flagget nytt, er det trolig ikke "
+              "deployet paa denne serveren enna -- sjekk `git log -1`.")
+        sys.exit(2)
+
     # --bare MAA sjekkes forst: den skal aldri roere data.json eller
     # databasen, og alt under her gjor nettopp det.
     if "--bare" in sys.argv:
