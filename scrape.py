@@ -803,10 +803,24 @@ PLAYWRIGHT_SITES = (
 # skjelett -- for alltid. Det ser ut som en butikk uten varer, ikke som en
 # feil.
 # ---------------------------------------------------------------------------
-SQUARESPACE_KORT = ".grid-item, li.grid-item, .list-item, .ProductList-item"
-SQUARESPACE_TITTEL = ".grid-title, .ProductList-title, .grid-meta-status + *, h3"
-SQUARESPACE_PRIS = ".product-price, .grid-prices, .product-price-money"
-SQUARESPACE_UTSOLGT = ".product-mark.sold-out, .sold-out, .ProductList-soldOut"
+# Selektorene er LEST fra butikken, ikke gjettet fra Squarespace-konvensjon.
+#
+# Forste forsok brukte .grid-item og .ProductList-item -- standardklassene i
+# Squarespace 7.1. Butikken bruker ingen av dem. Den kjorer en egen
+# storefront-widget med «ws-»-prefiks, og diagnosen viste det rett ut:
+#
+#   product-list-item: 25, name: 25, ws-product-price: 25, price-holder: 29
+#
+# 25 produktkort, og ikke ett av dem der jeg lette.
+SQUARESPACE_KORT = ".product-list-item, .ws-card"
+SQUARESPACE_TITTEL = ".name, .product-attr .name, h3"
+SQUARESPACE_PRIS = ".ws-product-price, .sale-price, .price-holder .price, .price"
+# Utsolgt-markoren har vi enna ikke sett -- den dukker bare opp naar en vare
+# faktisk ER utsolgt. Vi leter bredt etter bade klasse og tekst, og
+# --bare skriver ut det forste kortet raatt saa den kan bekreftes.
+SQUARESPACE_UTSOLGT = ("[class*=sold-out], [class*=soldout], [class*=utsolgt], "
+                       ".out-of-stock, .unavailable")
+SQUARESPACE_UTSOLGT_ORD = ("utsolgt", "sold out", "soldout", "ikke pa lager")
 
 
 def _hva_staar_paa_siden(page, store: str) -> None:
@@ -879,6 +893,13 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
             _hva_staar_paa_siden(page, store)
             continue
 
+        if UNDER_PROVING and kort:
+            try:
+                print(f"[{store}]   forste kort, raatt:\n"
+                      + (kort[0].evaluate("e => e.outerHTML") or "")[:900])
+            except Exception:
+                pass
+
         for k in kort:
             try:
                 lenke = k.query_selector("a[href]")
@@ -895,7 +916,14 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
                 # Squarespace merker utsolgt med et eget element. Finnes det
                 # ikke, er varen kjopbar -- vi gjetter aldri til None her,
                 # for en vare med ukjent lagerstatus kan aldri gi restock.
+                # Bade klasse og tekst. Vi har ikke sett markoren enna --
+                # den finnes bare paa varer som ER utsolgt -- saa vi leter
+                # bredt heller enn aa anta at alt er paa lager. Feil vei her
+                # gir falske restock-varsler.
                 utsolgt = k.query_selector(SQUARESPACE_UTSOLGT) is not None
+                if not utsolgt:
+                    korttekst = (k.inner_text() or "").lower()
+                    utsolgt = any(o in korttekst for o in SQUARESPACE_UTSOLGT_ORD)
                 full = href if href.startswith("http") else _absolutt(href, url)
                 produkter[full] = Product(store=store, name=navn, price=pris,
                                           in_stock=not utsolgt, url=full)
@@ -2312,6 +2340,14 @@ def skann_playwright_parallelt(sider: list) -> tuple[list, list, dict]:
     return produkter, feilede, tider
 
 
+# Settes av bare_en_butikk(), av ingen andre.
+#
+# En skraper skal ikke lese kommandolinjen. Gjor den det, finnes «--bare»
+# plutselig to steder i fila, og den som leser koden maa vite hvilket av dem
+# som styrer hva. Ett flagg, satt ett sted.
+UNDER_PROVING = False
+
+
 def bare_en_butikk(navn: str) -> int:
     """Kjor ÉN butikk, skriv INGENTING, og vis hva den fant.
 
@@ -2335,6 +2371,8 @@ def bare_en_butikk(navn: str) -> int:
     Navnet matches uten hensyn til store bokstaver, og delvis -- «mythic»
     treffer «Mythic».
     """
+    global UNDER_PROVING
+    UNDER_PROVING = True
     # UNDER_UTPROVING er med her og BARE her. Det er hele poenget: en ny
     # skraper skal kunne provekjores uten at den samtidig slippes los paa
     # den fulle skanningen og varselsystemet.

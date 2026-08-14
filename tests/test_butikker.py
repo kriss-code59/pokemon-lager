@@ -517,3 +517,42 @@ def test_provingen_forteller_hva_som_staar_paa_siden():
     # Og den maa faktisk kalles naar det gaar galt.
     j = kilde.index("def scrape_squarespace")
     assert "_hva_staar_paa_siden(page, store)" in kilde[j:j + 3000]
+
+
+def test_squarespace_selektorene_er_lest_ikke_gjettet():
+    """Forste forsok brukte .grid-item og .ProductList-item -- Squarespace
+    7.1 sine standardklasser. Butikken bruker ingen av dem; den kjorer en
+    egen storefront-widget. Diagnosen viste 25 kort med klassen
+    `product-list-item`, og ikke ett av dem der jeg lette.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("SQUARESPACE_KORT = ")
+    linje = kilde[i:kilde.index("\n", i)]
+    assert "product-list-item" in linje
+    assert "grid-item" not in linje, "gjetningen staar igjen"
+
+
+def test_utsolgt_ledes_av_bade_klasse_og_tekst():
+    # Markoren har vi ikke sett -- den finnes bare paa varer som ER
+    # utsolgt. Aa anta at alt er paa lager ville gitt falske restock.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def scrape_squarespace")
+    kropp = kilde[i:kilde.index("\nSQUARESPACE_SITES", i)]
+    assert "SQUARESPACE_UTSOLGT_ORD" in kropp
+    assert "SQUARESPACE_UTSOLGT)" in kropp
+
+
+def test_skrapere_leser_ikke_kommandolinjen():
+    """Da provingen skulle skrive ut et raatt produktkort, la jeg
+    `"--bare" in sys.argv` inn i selve skraperen. Da fantes flagget to
+    steder, og test_bare_flagget_finnes_og_kjorer_forst fant feil ett.
+
+    Testen hadde rett. En skraper skal ikke vite hvordan programmet ble
+    startet -- den skal lese et flagg noen andre har satt.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def scrape_squarespace")
+    kropp = kilde[i:kilde.index("\nSQUARESPACE_SITES", i)]
+    assert "sys.argv" not in kropp
+    assert "UNDER_PROVING" in kropp
+    assert kilde.count('"--bare" in sys.argv') == 1
