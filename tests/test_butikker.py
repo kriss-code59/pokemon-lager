@@ -556,3 +556,32 @@ def test_skrapere_leser_ikke_kommandolinjen():
     assert "sys.argv" not in kropp
     assert "UNDER_PROVING" in kropp
     assert kilde.count('"--bare" in sys.argv') == 1
+
+
+def test_kort_forsvinner_ikke_i_stillhet():
+    """Andre runde paa Livet er Kort: skraperen fant 25 produktkort og
+    laget null produkter. Loekka hadde `except Exception: continue`, saa
+    25 feil ble svelget uten et ord -- og utsiden saa ut som en butikk
+    uten varer.
+
+    Det er samme feilmodus som butikken som leverer null: den feiler ikke,
+    den tier. Naa telles hvert kort som hoppes over, med grunn, og forste
+    feil vises.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def scrape_squarespace")
+    kropp = kilde[i:kilde.index("\nSQUARESPACE_SITES", i)]
+    assert "except Exception:\n                continue" not in kropp, \
+        "stille except er tilbake"
+    assert "forste_feil" in kropp
+    assert "Hoppet over" in kropp
+
+
+def test_attributtvelgere_er_siterte():
+    # En ugyldig CSS-velger kaster, og i en loekke med except/continue
+    # betyr det at hvert eneste kort forsvinner.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("SQUARESPACE_UTSOLGT = ")
+    blokk = kilde[i:kilde.index("SQUARESPACE_UTSOLGT_ORD", i)]
+    assert "[class*=sold-out]" not in blokk, "usitert attributtverdi"
+    assert '[class*="sold-out"]' in blokk

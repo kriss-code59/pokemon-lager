@@ -818,8 +818,8 @@ SQUARESPACE_PRIS = ".ws-product-price, .sale-price, .price-holder .price, .price
 # Utsolgt-markoren har vi enna ikke sett -- den dukker bare opp naar en vare
 # faktisk ER utsolgt. Vi leter bredt etter bade klasse og tekst, og
 # --bare skriver ut det forste kortet raatt saa den kan bekreftes.
-SQUARESPACE_UTSOLGT = ("[class*=sold-out], [class*=soldout], [class*=utsolgt], "
-                       ".out-of-stock, .unavailable")
+SQUARESPACE_UTSOLGT = ('[class*="sold-out"], [class*="soldout"], '
+                       '[class*="utsolgt"], .out-of-stock, .unavailable')
 SQUARESPACE_UTSOLGT_ORD = ("utsolgt", "sold out", "soldout", "ikke pa lager")
 
 
@@ -900,16 +900,21 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
             except Exception:
                 pass
 
+        hoppet: dict[str, int] = {}
+        forste_feil = None
+
         for k in kort:
             try:
                 lenke = k.query_selector("a[href]")
                 if not lenke:
+                    hoppet["ingen lenke"] = hoppet.get("ingen lenke", 0) + 1
                     continue
                 href = lenke.get_attribute("href") or ""
                 tittel_el = k.query_selector(SQUARESPACE_TITTEL)
                 navn = (tittel_el.inner_text().strip() if tittel_el
                         else lenke.inner_text().strip())
                 if not navn:
+                    hoppet["tomt navn"] = hoppet.get("tomt navn", 0) + 1
                     continue
                 pris_el = k.query_selector(SQUARESPACE_PRIS)
                 pris = pris_el.inner_text().strip() if pris_el else ""
@@ -927,8 +932,20 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
                 full = href if href.startswith("http") else _absolutt(href, url)
                 produkter[full] = Product(store=store, name=navn, price=pris,
                                           in_stock=not utsolgt, url=full)
-            except Exception:
-                continue
+            except Exception as e:
+                # IKKE stille. 25 kort som forsvinner uten et ord ser
+                # nyaktig ut som en butikk uten varer -- og da leter man
+                # etter feil selektor i timevis mens feilen er en helt
+                # annen. Vi teller, og vi viser den forste.
+                hoppet["feil"] = hoppet.get("feil", 0) + 1
+                if forste_feil is None:
+                    forste_feil = repr(e)
+
+        if hoppet:
+            print(f"[{store}] Hoppet over {sum(hoppet.values())} av "
+                  f"{len(kort)} kort: {hoppet}")
+            if forste_feil:
+                print(f"[{store}]   forste feil: {forste_feil}")
 
     print(f"[{store}] Fant {len(produkter)} produkter totalt.")
     return list(produkter.values())
