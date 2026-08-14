@@ -864,6 +864,30 @@ def _hva_staar_paa_siden(page, store: str) -> None:
         pass
 
 
+def _tekst(el) -> str:
+    """Les teksten i et element, ogsaa naar det ikke er gjengitt paa skjermen.
+
+    inner_text() gir den GJENGITTE teksten. Er elementet lat-gjengitt, skjult
+    eller utenfor synsfeltet, returnerer den tom streng -- selv om teksten
+    staar i DOM-en. Det kostet oss en full runde paa Livet er Kort: 50 kort,
+    50 tomme navn, null unntak.
+
+    text_content() leser DOM-en direkte. Vi prover den forst og faller
+    tilbake paa inner_text(), som haandterer <br> og skjulte barn penere naar
+    elementet faktisk ER synlig.
+    """
+    if el is None:
+        return ""
+    for les in (el.text_content, el.inner_text):
+        try:
+            t = (les() or "").strip()
+            if t:
+                return " ".join(t.split())
+        except Exception:
+            pass
+    return ""
+
+
 def scrape_squarespace(page, site: dict) -> list[Product]:
     store = site["store"]
     produkter: dict[str, Product] = {}
@@ -910,14 +934,16 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
                     hoppet["ingen lenke"] = hoppet.get("ingen lenke", 0) + 1
                     continue
                 href = lenke.get_attribute("href") or ""
-                tittel_el = k.query_selector(SQUARESPACE_TITTEL)
-                navn = (tittel_el.inner_text().strip() if tittel_el
-                        else lenke.inner_text().strip())
+                navn = _tekst(k.query_selector(SQUARESPACE_TITTEL)) or _tekst(lenke)
+                if not navn:
+                    # Siste utvei: butikken skriver tittelen i aria-label
+                    # paa lenken («View product details for ...»).
+                    merke = (lenke.get_attribute("aria-label") or "").strip()
+                    navn = merke.split(" for ", 1)[-1] if " for " in merke else ""
                 if not navn:
                     hoppet["tomt navn"] = hoppet.get("tomt navn", 0) + 1
                     continue
-                pris_el = k.query_selector(SQUARESPACE_PRIS)
-                pris = pris_el.inner_text().strip() if pris_el else ""
+                pris = _tekst(k.query_selector(SQUARESPACE_PRIS))
                 # Squarespace merker utsolgt med et eget element. Finnes det
                 # ikke, er varen kjopbar -- vi gjetter aldri til None her,
                 # for en vare med ukjent lagerstatus kan aldri gi restock.
@@ -927,7 +953,7 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
                 # gir falske restock-varsler.
                 utsolgt = k.query_selector(SQUARESPACE_UTSOLGT) is not None
                 if not utsolgt:
-                    korttekst = (k.inner_text() or "").lower()
+                    korttekst = _tekst(k).lower()
                     utsolgt = any(o in korttekst for o in SQUARESPACE_UTSOLGT_ORD)
                 full = href if href.startswith("http") else _absolutt(href, url)
                 produkter[full] = Product(store=store, name=navn, price=pris,

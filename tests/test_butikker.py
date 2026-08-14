@@ -585,3 +585,30 @@ def test_attributtvelgere_er_siterte():
     blokk = kilde[i:kilde.index("SQUARESPACE_UTSOLGT_ORD", i)]
     assert "[class*=sold-out]" not in blokk, "usitert attributtverdi"
     assert '[class*="sold-out"]' in blokk
+
+
+def test_tekst_leses_fra_dom_ikke_fra_skjermen():
+    """Tredje runde paa Livet er Kort: 50 kort, 50 tomme navn, null unntak.
+
+    inner_text() gir den GJENGITTE teksten. Kortene er lat-gjengitt --
+    bildet er fortsatt en plassholder -- saa teksten sto i DOM-en, men ikke
+    paa skjermen. text_content() leser DOM-en direkte.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    assert "def _tekst" in kilde
+    i = kilde.index("def _tekst")
+    assert "text_content" in kilde[i:i + 900]
+
+    j = kilde.index("def scrape_squarespace")
+    kropp = kilde[j:kilde.index("\nSQUARESPACE_SITES", j)]
+    assert ".inner_text()" not in kropp, "raa inner_text er tilbake i loekka"
+    assert "_tekst(" in kropp
+
+
+def test_navnet_har_en_siste_utvei():
+    # Butikken skriver tittelen i aria-label paa lenken. Er DOM-teksten
+    # tom av en grunn vi ikke forutsaa, staar navnet fortsatt der.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    j = kilde.index("def scrape_squarespace")
+    kropp = kilde[j:kilde.index("\nSQUARESPACE_SITES", j)]
+    assert "aria-label" in kropp
