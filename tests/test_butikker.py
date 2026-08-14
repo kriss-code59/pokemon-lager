@@ -497,3 +497,23 @@ def test_squarespace_gjetter_aldri_ukjent_lagerstatus():
     kropp = kilde[i:kilde.index("\nSQUARESPACE_SITES", i)]
     assert "in_stock=not utsolgt" in kropp
     assert "in_stock=None" not in kropp
+
+
+def test_provingen_forteller_hva_som_staar_paa_siden():
+    """En feilmelding som sier «sjekk selektorene» og lagrer en PNG er ikke
+    en feilmelding -- det er en blindsone. Noen maa aapne et bilde paa en
+    server for aa komme videre.
+
+    Naar vi ikke finner produkter, skal utskriften si hvilke knapper siden
+    har (staar samtykkebanneret fortsatt der?), hvor mange treff hver
+    kandidatselektor gir, og hvilke klassenavn siden faktisk bruker.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    assert "def _hva_staar_paa_siden" in kilde
+    i = kilde.index("def _hva_staar_paa_siden")
+    kropp = kilde[i:kilde.index("\ndef scrape_squarespace", i)]
+    assert "knapper paa siden" in kropp
+    assert "vanligste klasser" in kropp
+    # Og den maa faktisk kalles naar det gaar galt.
+    j = kilde.index("def scrape_squarespace")
+    assert "_hva_staar_paa_siden(page, store)" in kilde[j:j + 3000]

@@ -809,6 +809,47 @@ SQUARESPACE_PRIS = ".product-price, .grid-prices, .product-price-money"
 SQUARESPACE_UTSOLGT = ".product-mark.sold-out, .sold-out, .ProductList-soldOut"
 
 
+def _hva_staar_paa_siden(page, store: str) -> None:
+    """Skriv ut hva siden FAKTISK inneholder naar vi ikke fant produkter.
+
+    Uten dette lagrer skraperen et skjermbilde og sier «selektorene ma
+    sjekkes» -- og da maa et menneske aapne en PNG paa en server for aa
+    komme videre. Det er en blindsone, ikke en feilmelding.
+
+    Her kommer tre ting som til sammen nesten alltid forteller hva som er
+    galt: hvilke knapper som finnes (staar samtykkebanneret fortsatt der?),
+    hvor mange treff hver kandidatselektor gir, og hvilke klassenavn siden
+    faktisk bruker.
+    """
+    try:
+        knapper = page.eval_on_selector_all(
+            "button, a[role=button]",
+            "els => els.map(e => (e.innerText||'').trim()).filter(t => t && t.length < 40).slice(0, 15)")
+        print(f"[{store}]   knapper paa siden: {knapper}")
+    except Exception:
+        pass
+
+    for velger in [".grid-item", "li.grid-item", ".list-item", ".ProductList-item",
+                   "[class*=ProductList]", "[class*=product]", "article",
+                   "a[href*='/p/']", ".sqs-block-product"]:
+        try:
+            n = len(page.query_selector_all(velger))
+        except Exception:
+            n = -1
+        if n:
+            print(f"[{store}]   {velger}: {n}")
+
+    try:
+        klasser = page.evaluate(
+            "() => { const t = {}; document.querySelectorAll('[class]').forEach("
+            "e => String(e.className).split(/\\s+/).forEach(c => { if (c) t[c] = (t[c]||0)+1; }));"
+            " return Object.entries(t).sort((a,b) => b[1]-a[1]).slice(0, 20)"
+            ".map(([c,n]) => c + ':' + n); }")
+        print(f"[{store}]   vanligste klasser: {klasser}")
+    except Exception:
+        pass
+
+
 def scrape_squarespace(page, site: dict) -> list[Product]:
     store = site["store"]
     produkter: dict[str, Product] = {}
@@ -833,10 +874,9 @@ def scrape_squarespace(page, site: dict) -> list[Product]:
         if not kort:
             diag = diagnose_possible_block(page)
             print(f"[{store}] Fant ingen produktkort pa {url}"
-                  + (f". Mulig blokkering: {diag}" if diag else
-                     " -- selektorene ma sjekkes, ELLER cookie-banneret ble "
-                     "ikke klikket bort (butikken er bak Termly)."))
+                  + (f". Mulig blokkering: {diag}" if diag else "."))
             safe_screenshot(page, store, "_" + url.rstrip("/").split("/")[-1])
+            _hva_staar_paa_siden(page, store)
             continue
 
         for k in kort:
