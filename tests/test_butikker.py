@@ -346,3 +346,51 @@ def test_ingen_personnavn_i_det_offentlige():
         tekst = fil.read_text(encoding="utf-8")
         for ord_ in ["Kristian", "norgekriss"]:
             assert ord_ not in tekst, f"{fil.name} inneholder «{ord_}»"
+
+
+# -------------------------------------------------- prov én butikk alene
+
+def test_bare_flagget_finnes_og_kjorer_forst():
+    """Fram til naa fantes ingen maate aa prove en ny skraper paa.
+
+    scrape.py kjorer alle 41 butikkene eller ingen, og resultatet gaar rett
+    i databasen -- som lager hendelser, som sender varsler. Til betalende
+    kunder. En ny butikk maatte altsaa legges inn usett og verifiseres i
+    produksjon.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    assert "def bare_en_butikk" in kilde
+    i_main = kilde.index("def main():")
+    i_bare = kilde.index('"--bare" in sys.argv')
+    i_start = kilde.index("start = time.monotonic()", i_main)
+    assert i_main < i_bare < i_start, \
+        "--bare maa sjekkes FOR resten av main, ellers rores data.json"
+
+
+def test_sys_importeres_for_det_brukes():
+    # sys sto importert nede i main(), etter der --bare leser sys.argv.
+    # Det ville gitt NameError paa forste kjoring.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i_import = kilde.index("\nimport sys\n")
+    assert i_import < kilde.index("def bare_en_butikk")
+
+
+def test_provingen_skriver_ingenting():
+    """Hele poenget: den skal kunne kjores paa serveren uten folger."""
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def bare_en_butikk")
+    kropp = kilde[i:kilde.index("\ndef main():", i)]
+    for farlig in ["update_changes_log", "update_history_log",
+                   "send_ntfy_notification", "json.dump", "open("]:
+        assert farlig not in kropp, f"provingen roerer {farlig}"
+
+
+def test_provingen_advarer_om_de_to_dodelige_feilene():
+    # En skraper som finner titler men ikke lagerstatus kan aldri utlose et
+    # restock-varsel. En uten priser kan aldri bli «billigst». Begge ser ut
+    # som suksess hvis man bare teller varer.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def bare_en_butikk")
+    kropp = kilde[i:kilde.index("\ndef main():", i)]
+    assert "lagerstatus er ukjent for ALT" in kropp
+    assert "ingen priser" in kropp

@@ -37,6 +37,7 @@ Kjor lokalt:
 import json
 import os
 import re
+import sys
 import threading
 import time
 import datetime
@@ -2169,7 +2170,96 @@ def skann_playwright_parallelt(sider: list) -> tuple[list, list, dict]:
     return produkter, feilede, tider
 
 
+def bare_en_butikk(navn: str) -> int:
+    """Kjor ÉN butikk, skriv INGENTING, og vis hva den fant.
+
+    HVORFOR DENNE FINNES
+
+    Fram til naa var det ingen maate aa prove en ny skraper paa. `scrape.py`
+    kjorer alle 41 butikkene eller ingen, og resultatet gaar rett i
+    databasen -- som lager hendelser, som sender varsler. Til betalende
+    kunder.
+
+    Det gjorde at en ny butikk maatte legges inn usett og verifiseres i
+    produksjon. En skraper som leser lagerstatus feil sender falske varsler,
+    og falske varsler er den ene feilen dette produktet ikke overlever.
+
+    Denne roerer ingenting: ingen data.json, ingen database, ingen varsler.
+    Den henter, skriver ut, og avslutter.
+
+        python3 scrape.py --bare "Livet er Kort"
+        python3 scrape.py --bare Mythic
+
+    Navnet matches uten hensyn til store bokstaver, og delvis -- «mythic»
+    treffer «Mythic».
+    """
+    alle = ([{**b, "_type": "shopify"} for b in SHOPIFY_STORES]
+            + [{**b, "_type": "playwright"} for b in PLAYWRIGHT_SITES])
+    treff = [b for b in alle if navn.lower() in b["store"].lower()]
+
+    if not treff:
+        print(f"Fant ingen butikk som matcher «{navn}».")
+        print("Kjente butikker: " + ", ".join(sorted(b["store"] for b in alle)))
+        return 1
+    if len(treff) > 1:
+        print(f"«{navn}» matcher flere: " + ", ".join(b["store"] for b in treff))
+        return 1
+
+    butikk = treff[0]
+    print(f"=== {butikk['store']} ({butikk['_type']}) ===")
+    t0 = time.monotonic()
+    try:
+        if butikk["_type"] == "shopify":
+            produkter = scrape_shopify_store(butikk)
+        else:
+            produkter, _feilet, _tider = skann_playwright_parallelt([butikk])
+    except Exception as e:
+        print(f"FEILET: {type(e).__name__}: {e}")
+        return 1
+
+    print(f"Brukte {time.monotonic() - t0:.0f}s, fant {len(produkter)} varer.\n")
+    if not produkter:
+        print("INGEN VARER. Enten er samlingene feil, eller saa leses ikke "
+              "siden. En butikk som leverer null ser ut som en butikk uten "
+              "noe paa lager -- den feiler ikke, den tier.")
+        return 1
+
+    # De tre feltene som avgjor om skraperen duger: tittel, pris og lager.
+    # Er lagerstatus None paa alt, er den ubrukelig selv om titlene stemmer.
+    inne = sum(1 for p in produkter if getattr(p, "in_stock", None) is True)
+    ute = sum(1 for p in produkter if getattr(p, "in_stock", None) is False)
+    vet_ikke = len(produkter) - inne - ute
+    uten_pris = sum(1 for p in produkter if not getattr(p, "price_ore", None))
+
+    for p in produkter[:15]:
+        lager = {True: "inne", False: "ute"}.get(getattr(p, "in_stock", None), "?")
+        pris = getattr(p, "price_ore", None)
+        print(f"  [{lager:4}] {(pris / 100) if pris else '-':>9} kr  "
+              f"{(getattr(p, 'title', '') or '')[:70]}")
+    if len(produkter) > 15:
+        print(f"  ... og {len(produkter) - 15} til")
+
+    print(f"\nLager: {inne} inne, {ute} ute, {vet_ikke} ukjent. "
+          f"Uten pris: {uten_pris}.")
+    if vet_ikke == len(produkter):
+        print("ADVARSEL: lagerstatus er ukjent for ALT. Da kan skraperen "
+              "aldri utlose et restock-varsel.")
+    if uten_pris == len(produkter):
+        print("ADVARSEL: ingen priser. Da kan varen aldri bli «billigst».")
+    print("\nIngenting ble lagret. Dette var bare en proving.")
+    return 0
+
+
 def main():
+    # --bare MAA sjekkes forst: den skal aldri roere data.json eller
+    # databasen, og alt under her gjor nettopp det.
+    if "--bare" in sys.argv:
+        i = sys.argv.index("--bare")
+        if i + 1 >= len(sys.argv):
+            print("Bruk: python3 scrape.py --bare \"Butikknavn\"")
+            sys.exit(1)
+        sys.exit(bare_en_butikk(sys.argv[i + 1]))
+
     start = time.monotonic()
     # Ekte starttid. `last_updated` settes naar filen skrives -- altsa NAAR
     # VI ER FERDIGE -- og ingest brukte den som scrape_runs.started_at.
