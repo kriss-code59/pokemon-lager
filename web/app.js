@@ -1211,7 +1211,7 @@ const FEEDBACK_SLAG = [
 function feedbackHtml() {
   return '<div class="varselboks"><h3>Si fra</h3>' +
     '<p class="hjelp">Mangler en butikk? Er en pris feil? Savner du noe? ' +
-    "Skriv det her — det går rett til Kristian.</p>" +
+    "Skriv det her — vi leser alt som kommer inn.</p>" +
     '<form id="fb-skjema" class="skjema">' +
       '<div class="chips chips-under" id="fb-slag">' +
         FEEDBACK_SLAG.map(([v, t], i) =>

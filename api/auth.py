@@ -441,7 +441,7 @@ def monter(app, hent_pool):
             if not epost_modul.er_satt_opp():
                 raise HTTPException(
                     503, "E-post er ikke satt opp på serveren ennå. "
-                         "Ta kontakt på norgekriss@gmail.com.")
+                         "Ta kontakt på hjelp@pokepuls.no.")
             token = await _lag_token(pool, bruker["id"], "passord",
                                      timedelta(hours=PASSORD_TIMER))
             ok, feil = epost_modul.send_passordlenke(

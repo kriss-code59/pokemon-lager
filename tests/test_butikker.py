@@ -333,3 +333,16 @@ def test_slippkalenderen_har_noe_aa_vise():
     k = json.loads((ROT / "katalog" / "katalog.json").read_text(encoding="utf-8"))
     med_dato = [s for s in k["sets"] if s.get("slipp")]
     assert len(med_dato) >= 2, "en kalender med én oppforing er ikke en kalender"
+
+
+def test_ingen_personnavn_i_det_offentlige():
+    """Han vil ikke staa med navn paa siden.
+
+    Merk at dette er et VALG om hva nettstedet sier, ikke en vurdering av
+    hva loven krever av en naeringsdrivende som selger til forbrukere. Se
+    notatet i vilkar.html.
+    """
+    for fil in list(WEB.glob("*.html")) + list(WEB.glob("*.js")):
+        tekst = fil.read_text(encoding="utf-8")
+        for ord_ in ["Kristian", "norgekriss"]:
+            assert ord_ not in tekst, f"{fil.name} inneholder «{ord_}»"
