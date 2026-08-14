@@ -72,8 +72,35 @@ def _stripe():
     return stripe
 
 
+# Noklene har faste prefikser, og de er lette aa bytte om paa: begge er
+# lange, tilfeldige strenger man limer inn etter hverandre. Skjer det, feiler
+# ikke oppsettet -- det feiler forst naar en ekte kunde trykker kjop, og da
+# med «Invalid API Key» dypt nede i et Stripe-spor. Det tok oss en runde med
+# journalctl aa finne.
+#
+# Sjekken her koster ingenting og gjor feilen synlig med én gang.
+FORVENTET = {
+    "STRIPE_SECRET_KEY": ("sk_", HEMMELIG),
+    "STRIPE_WEBHOOK_SECRET": ("whsec_", WEBHOOK_HEMMELIG),
+    "STRIPE_PRICE_ID": ("price_", PRIS_ID),
+}
+
+
+def feilkonfigurert() -> list[str]:
+    """-> liste over variabler som ser gale ut. Tom liste = alt stemmer."""
+    ut = []
+    for navn, (prefiks, verdi) in FORVENTET.items():
+        if verdi and not verdi.startswith(prefiks):
+            # Bare prefikset, aldri verdien. En feilmelding som gjentar en
+            # hemmelig nokkel havner i loggen, og loggen er ikke hemmelig.
+            ut.append(f"{navn} starter med «{verdi.split('_')[0]}_», "
+                      f"forventet «{prefiks}». Er to av dem byttet om?")
+    return ut
+
+
 def paa() -> bool:
-    return bool(HEMMELIG and WEBHOOK_HEMMELIG and PRIS_ID)
+    return bool(HEMMELIG and WEBHOOK_HEMMELIG and PRIS_ID
+                and not feilkonfigurert())
 
 
 class Start(BaseModel):
@@ -81,6 +108,8 @@ class Start(BaseModel):
 
 
 def monter(app, hent_pool, hent_bruker, er_premium):
+    for melding in feilkonfigurert():
+        print(f"[betaling] FEIL I OPPSETT: {melding}", flush=True)
 
     async def _bruker(token):
         bruker = await hent_bruker(hent_pool(), token)
@@ -103,6 +132,9 @@ def monter(app, hent_pool, hent_bruker, er_premium):
                 rad = await cur.fetchone()
         return {
             "paa": paa(),
+            # Synlig i grensesnittet, saa du ikke maa lete i journalctl for
+            # aa oppdage at oppsettet er feil.
+            "oppsettfeil": feilkonfigurert(),
             "pris_kr": PRIS_KR,
             "premium": er_premium(bruker) if bruker else False,
             "status": rad["status"] if rad else None,

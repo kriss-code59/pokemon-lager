@@ -141,3 +141,49 @@ def test_prisen_star_i_stripe_ikke_i_koden():
     assert "visning" in rundt, "PRIS_KR mangler forklaringen om at den bare vises"
     # Den skal aldri sendes til Stripe som beloep.
     assert "amount" not in KILDE, "beloepet skal komme fra pris-ID-en, ikke herfra"
+
+
+def test_byttede_nokler_oppdages_med_en_gang():
+    """Byttefeilen som kostet oss en runde med journalctl.
+
+    STRIPE_SECRET_KEY og STRIPE_WEBHOOK_SECRET er begge lange, tilfeldige
+    strenger man limer inn etter hverandre. Bytter man om, feiler ingenting
+    ved oppstart -- det feiler forst naar en ekte kunde trykker kjop, med
+    «Invalid API Key» dypt nede i et Stripe-spor.
+
+    Prefiksene er faste. Da er det ingen grunn til aa oppdage det senere
+    enn med én gang.
+    """
+    import importlib
+    from api import betaling
+
+    gammel = betaling.FORVENTET
+    try:
+        betaling.FORVENTET = {
+            "STRIPE_SECRET_KEY": ("sk_", "whsec_abc123"),
+            "STRIPE_WEBHOOK_SECRET": ("whsec_", "sk_test_abc123"),
+            "STRIPE_PRICE_ID": ("price_", "price_ok"),
+        }
+        feil = betaling.feilkonfigurert()
+        assert len(feil) == 2
+        assert "byttet om" in feil[0]
+        # Verdien skal ALDRI gjentas i meldingen -- den havner i loggen,
+        # og loggen er ikke hemmelig.
+        assert "abc123" not in " ".join(feil)
+    finally:
+        betaling.FORVENTET = gammel
+        importlib.reload(betaling)
+
+
+def test_riktige_prefikser_gir_ingen_klage():
+    from api import betaling
+    gammel = betaling.FORVENTET
+    try:
+        betaling.FORVENTET = {
+            "STRIPE_SECRET_KEY": ("sk_", "sk_test_x"),
+            "STRIPE_WEBHOOK_SECRET": ("whsec_", "whsec_y"),
+            "STRIPE_PRICE_ID": ("price_", "price_z"),
+        }
+        assert betaling.feilkonfigurert() == []
+    finally:
+        betaling.FORVENTET = gammel
