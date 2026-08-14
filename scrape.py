@@ -790,6 +790,100 @@ PLAYWRIGHT_SITES = (
     + [{**site, "custom_scraper": "woocommerce"} for site in WOOCOMMERCE_SITES]
 )
 
+# ---------------------------------------------------------------------------
+# SQUARESPACE -- klientrendret butikk (Livet er Kort).
+#
+# Produktene finnes ikke i HTML-en som kommer over nettet; de hentes av
+# javascript etter at siden er lastet. Derfor Playwright, som de andre
+# nettleserbutikkene.
+#
+# Det som gjorde denne vanskelig aa finne ut av: butikken ligger bak Termly,
+# en samtykkesperre som blokkerer Squarespace sine egne skript til du har
+# godtatt cookies. Uten det klikket staar produktgriden som tomme graa
+# skjelett -- for alltid. Det ser ut som en butikk uten varer, ikke som en
+# feil.
+# ---------------------------------------------------------------------------
+SQUARESPACE_KORT = ".grid-item, li.grid-item, .list-item, .ProductList-item"
+SQUARESPACE_TITTEL = ".grid-title, .ProductList-title, .grid-meta-status + *, h3"
+SQUARESPACE_PRIS = ".product-price, .grid-prices, .product-price-money"
+SQUARESPACE_UTSOLGT = ".product-mark.sold-out, .sold-out, .ProductList-soldOut"
+
+
+def scrape_squarespace(page, site: dict) -> list[Product]:
+    store = site["store"]
+    produkter: dict[str, Product] = {}
+
+    for url in site["urls"]:
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(1500)
+            dismiss_cookie_banner(page)
+            # Skriptene laster forst ETTER samtykket, saa vi maa vente igjen.
+            page.wait_for_timeout(3000)
+            scroll_to_load_lazy_content(page)
+        except Exception as e:
+            print(f"[{store}] Kunne ikke laste {url}: {e}")
+            continue
+
+        try:
+            page.wait_for_selector(SQUARESPACE_KORT, timeout=20000)
+        except Exception:
+            pass
+        kort = page.query_selector_all(SQUARESPACE_KORT)
+        if not kort:
+            diag = diagnose_possible_block(page)
+            print(f"[{store}] Fant ingen produktkort pa {url}"
+                  + (f". Mulig blokkering: {diag}" if diag else
+                     " -- selektorene ma sjekkes, ELLER cookie-banneret ble "
+                     "ikke klikket bort (butikken er bak Termly)."))
+            safe_screenshot(page, store, "_" + url.rstrip("/").split("/")[-1])
+            continue
+
+        for k in kort:
+            try:
+                lenke = k.query_selector("a[href]")
+                if not lenke:
+                    continue
+                href = lenke.get_attribute("href") or ""
+                tittel_el = k.query_selector(SQUARESPACE_TITTEL)
+                navn = (tittel_el.inner_text().strip() if tittel_el
+                        else lenke.inner_text().strip())
+                if not navn:
+                    continue
+                pris_el = k.query_selector(SQUARESPACE_PRIS)
+                pris = pris_el.inner_text().strip() if pris_el else ""
+                # Squarespace merker utsolgt med et eget element. Finnes det
+                # ikke, er varen kjopbar -- vi gjetter aldri til None her,
+                # for en vare med ukjent lagerstatus kan aldri gi restock.
+                utsolgt = k.query_selector(SQUARESPACE_UTSOLGT) is not None
+                full = href if href.startswith("http") else _absolutt(href, url)
+                produkter[full] = Product(store=store, name=navn, price=pris,
+                                          in_stock=not utsolgt, url=full)
+            except Exception:
+                continue
+
+    print(f"[{store}] Fant {len(produkter)} produkter totalt.")
+    return list(produkter.values())
+
+
+SQUARESPACE_SITES = [
+    {
+        "store": "Livet er Kort",
+        "urls": ["https://liveterkort.no/kj-p"],
+    },
+]
+
+# Butikker som er skrevet, men IKKE verifisert med `--bare` enna.
+#
+# De naas av provingen og er usynlige for den fulle skanningen. Det er
+# forskjellen paa aa skrive en skraper og aa slippe den los paa 40 butikker
+# og et varselsystem som naa sender til betalende kunder.
+#
+# Naar `--bare "Livet er Kort"` viser navn, priser og lagerstatus som
+# stemmer, flyttes raden ned i PLAYWRIGHT_SITES og butikken gaar live.
+UNDER_UTPROVING = [{**site, "custom_scraper": "squarespace"}
+                   for site in SQUARESPACE_SITES]
+
 # Norli og PokeMadness blokkerer automatiserte besok (se docstring ovenfor).
 # Vi lister dem her med en direkte lenke, slik at dashboardet kan vise dem
 # under "Sjekk manuelt" i stedet for a late som om vi har fersk lagerdata
@@ -868,6 +962,13 @@ MANUAL_CHECK_STORES = [
 COOKIE_BUTTON_TEXTS = [
     "Godta alle", "Godta alle cookies", "Aksepter alle", "Aksepter",
     "Godta", "OK", "Jeg forstar", "Tillat alle",
+    # ENGELSK. Manglet helt, og det er ikke en liten mangel: Livet er Kort
+    # kjorer Termly, en samtykkesperre som BLOKKERER butikkskriptene til du
+    # har godtatt. Banneret er paa engelsk. Uten «Accept» ville skraperen
+    # sett en evig tom produktgrid og rapportert «ingen varer» -- uten at
+    # noe feilet. En butikk som leverer null tier, den roper ikke.
+    "Accept all", "Accept All Cookies", "Accept all cookies",
+    "Allow all", "Accept", "I agree", "Got it",
 ]
 
 
@@ -2105,6 +2206,7 @@ def skann_playwright_parallelt(sider: list) -> tuple[list, list, dict]:
         "maxgaming": scrape_maxgaming,
         "quickbutik": scrape_quickbutik,
         "woocommerce": scrape_woocommerce,
+        "squarespace": scrape_squarespace,
     }
 
     # Statisk fordeling annenhver: butikkene ligger gruppert etter plattform,
@@ -2193,8 +2295,13 @@ def bare_en_butikk(navn: str) -> int:
     Navnet matches uten hensyn til store bokstaver, og delvis -- «mythic»
     treffer «Mythic».
     """
+    # UNDER_UTPROVING er med her og BARE her. Det er hele poenget: en ny
+    # skraper skal kunne provekjores uten at den samtidig slippes los paa
+    # den fulle skanningen og varselsystemet.
     alle = ([{**b, "_type": "shopify"} for b in SHOPIFY_STORES]
-            + [{**b, "_type": "playwright"} for b in PLAYWRIGHT_SITES])
+            + [{**b, "_type": "playwright"} for b in PLAYWRIGHT_SITES]
+            + [{**b, "_type": "playwright (under utproving)"}
+               for b in UNDER_UTPROVING])
     treff = [b for b in alle if navn.lower() in b["store"].lower()]
 
     if not treff:

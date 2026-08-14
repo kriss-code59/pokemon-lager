@@ -445,3 +445,55 @@ def test_provingen_leser_dataklassens_egne_feltnavn():
                      if not l.strip().startswith("#") and '"""' not in l)
     assert "price_ore" not in kode, "leser databasenavn i stedet for dataklassen"
     assert "p.name" in kode and "p.price" in kode
+
+
+# ------------------------------------------------ butikker under utproving
+
+def test_under_utproving_er_usynlig_for_full_skanning():
+    """En ny skraper skal kunne provekjores uten aa bli sluppet los.
+
+    UNDER_UTPROVING naas av `--bare` og INGENTING annet. Den skal ikke
+    havne i PLAYWRIGHT_SITES for noen har sett at den leser butikken
+    riktig -- forskjellen paa aa skrive en skraper og aa la den varsle
+    betalende kunder.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    assert "UNDER_UTPROVING" in kilde
+    # Bare i definisjonen og i bare_en_butikk. Ikke i PLAYWRIGHT_SITES.
+    i_pw = kilde.index("PLAYWRIGHT_SITES = (")
+    blokk = kilde[i_pw:kilde.index(")", i_pw)]
+    assert "UNDER_UTPROVING" not in blokk, "en uverifisert skraper er i full rotasjon"
+    i_bare = kilde.index("def bare_en_butikk")
+    assert "UNDER_UTPROVING" in kilde[i_bare:kilde.index("\ndef main():", i_bare)]
+
+
+def test_cookie_tekstene_dekker_engelsk():
+    """Livet er Kort kjorer Termly, som BLOKKERER butikkskriptene til du har
+    godtatt cookies -- og banneret er paa engelsk.
+
+    Uten «Accept» ville skraperen sett en evig tom produktgrid og rapportert
+    «ingen varer», uten at noe feilet. En butikk som leverer null tier; den
+    roper ikke.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("COOKIE_BUTTON_TEXTS = [")
+    blokk = kilde[i:kilde.index("]", i)]
+    for tekst in ["Accept", "Allow all", "I agree"]:
+        assert tekst in blokk, f"mangler «{tekst}»"
+
+
+def test_squarespace_er_registrert_som_skraper():
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    assert "def scrape_squarespace" in kilde
+    assert '"squarespace": scrape_squarespace' in kilde
+
+
+def test_squarespace_gjetter_aldri_ukjent_lagerstatus():
+    # En vare med in_stock=None kan aldri utlose et restock-varsel. Finnes
+    # ikke utsolgt-merket, ER varen kjopbar -- det er Squarespace sin egen
+    # konvensjon, ikke en antakelse fra oss.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def scrape_squarespace")
+    kropp = kilde[i:kilde.index("\nSQUARESPACE_SITES", i)]
+    assert "in_stock=not utsolgt" in kropp
+    assert "in_stock=None" not in kropp
