@@ -1039,3 +1039,19 @@ test("cacheversjonen er bumpet overalt samtidig", () => {
   assert.ok(les("index.html").includes(`app.js?v=${v}`),
             "index.html henger etter sw.js");
 });
+
+test("vilkaarene sier ikke hvor mange som staar bak", () => {
+  // Kristian ba om at navnet hans skulle bort. Setningen «Pokepuls driftes
+  // av én person» ble staaende og sa fortsatt at det er en enmannsjobb.
+  //
+  // Forbeholdet den baerer -- at tjenesten kan vaere nede og varsler kan
+  // utebli -- er det viktige, og det staar fortsatt. Bemanningen er ikke
+  // noe kunden trenger aa vite for aa forstaa det.
+  const v = les("vilkar.html");
+  assert.ok(!/av én person/.test(v), "bemanningen staar fortsatt i vilkaarene");
+  assert.match(v, /kan være nede, varsler kan/,
+               "forbeholdet forsvant sammen med setningen");
+  for (const fil of ["vilkar.html", "personvern.html", "om.html"]) {
+    assert.ok(!/Kristian|privatperson/.test(les(fil)), fil);
+  }
+});
