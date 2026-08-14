@@ -175,6 +175,27 @@ def monter(app, hent_pool, hent_bruker, er_premium):
             "gjelder_til": rad["gjelder_til"] if rad else None,
         }
 
+    def _finnes(stripe, kunde_id: str) -> bool:
+        """Finnes kunden i den modusen vi kjorer i NAA?
+
+        En kunde-ID hoerer til én modus. `cus_...` laget i testmodus finnes
+        ikke i live, og omvendt -- og Stripe svarer «No such customer».
+
+        Det er ikke en teoretisk feil. Vi testet betalingen i testmodus for
+        vi skrudde paa live, og raden i stripe_kunder ble staaende og peke
+        paa en testkunde. Neste trykk paa kjopsknappen ville feilet med en
+        rod boks og ingen forklaring.
+
+        Det samme skjer for hvem som helst hvis noklene noen gang byttes.
+        Derfor er det ikke noe man rydder opp i én gang -- det er noe koden
+        skal taale.
+        """
+        try:
+            k = stripe.Customer.retrieve(kunde_id)
+            return not _felt(k, "deleted", False)
+        except Exception:
+            return False
+
     # ------------------------------------------------------------- kjope
 
     @router.post("/start")
@@ -193,6 +214,12 @@ def monter(app, hent_pool, hent_bruker, er_premium):
             rad = await cur.fetchone()
 
             kunde = rad["stripe_customer_id"] if rad else None
+            if kunde and not _finnes(stripe, kunde):
+                # Peker paa en kunde som ikke finnes her. Lag en ny heller
+                # enn aa la brukeren staa fast -- den gamle raden er verdilos
+                # uansett, for abonnementet den viste til finnes ikke i denne
+                # modusen.
+                kunde = None
             if not kunde:
                 # Gjenbruk kunden ved neste kjop. Uten dette faar samme
                 # person en ny kunde per forsok, og betalingshistorikken
@@ -242,7 +269,12 @@ def monter(app, hent_pool, hent_bruker, er_premium):
             rad = await cur.fetchone()
         if not rad:
             raise HTTPException(404, "Du har ingen betaling å administrere.")
-        okt = _stripe().billing_portal.Session.create(
+        stripe = _stripe()
+        if not _finnes(stripe, rad["stripe_customer_id"]):
+            raise HTTPException(
+                404, "Vi finner ingen aktiv betaling på kontoen din. "
+                     "Har du nettopp kjøpt Premium, prøv igjen om et minutt.")
+        okt = stripe.billing_portal.Session.create(
             customer=rad["stripe_customer_id"], return_url=BASE + "/")
         return {"url": okt["url"]}
 

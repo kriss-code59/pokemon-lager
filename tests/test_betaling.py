@@ -361,3 +361,39 @@ def test_tellingen_skiller_betalende_fra_gitt():
     kropp = ADMIN[i:i + 1200]
     assert "betalende" in kropp and "gratis" in kropp
     assert "premium_until IS NULL" in kropp, "en gave har ingen utlopsdato"
+
+
+# MERK: _uten_kommentarer() finnes allerede lenger oppe i fila, og den
+# stripper docstrings ogsaa. Da jeg definerte den paa nytt her, skygget den
+# for originalen -- og test_ingen_kortdata_noe_sted slo ut paa ordet «cvc»
+# i betaling.py sin egen forklaring paa hvorfor vi ALDRI ser kortdata.
+# Testen hadde rett; den nye hjelperen var feil.
+
+
+def test_kundeid_fra_feil_modus_stopper_ikke_kjopet():
+    """En kunde-ID hoerer til ÉN modus. `cus_...` laget i testmodus finnes
+    ikke i live, og Stripe svarer «No such customer».
+
+    Vi testet betalingen i testmodus for vi skrudde paa live, og raden i
+    stripe_kunder ble staaende og peke paa en testkunde. Neste trykk paa
+    kjopsknappen ville feilet med en rod boks og ingen forklaring.
+
+    Det skal ikke vaere noe man rydder opp i manuelt i databasen -- det
+    skal vaere noe koden taaler.
+    """
+    kilde = _uten_kommentarer(
+        (ROT / "api" / "betaling.py").read_text(encoding="utf-8"))
+    assert "def _finnes(" in kilde
+    i = kilde.index("async def start(")
+    kropp = kilde[i:kilde.index("async def portal(", i)]
+    assert "_finnes(stripe, kunde)" in kropp
+    assert "kunde = None" in kropp
+
+
+def test_portalen_sier_ifra_i_stedet_for_aa_kraesje():
+    kilde = _uten_kommentarer(
+        (ROT / "api" / "betaling.py").read_text(encoding="utf-8"))
+    i = kilde.index("async def portal(")
+    kropp = kilde[i:i + 1400]
+    assert "_finnes(stripe, rad[" in kropp
+    assert "404" in kropp
