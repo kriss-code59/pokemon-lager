@@ -103,3 +103,35 @@ def test_forsiden_har_bare_én_websitenode():
     h = (ROT / "web" / "index.html").read_text(encoding="utf-8")
     assert h.count('type="application/ld+json"') == 1
     assert h.count('"@type":"WebSite"') == 1
+
+
+def test_odelagt_skraper_kalles_ikke_et_valg():
+    """Emken, Collectible og Ark sto under «Kartlagt, men ikke
+    automatisert» -- sammen med butikker vi bevisst ikke leser.
+
+    Men vi HADDE lest dem. Skraperne var i stykker, og siden presenterte
+    det som en beslutning. Det er samme feil som gaar igjen overalt her:
+    en butikk som leverer null feiler ikke, den tier -- og skjuler vi
+    tausheten bak en pen overskrift, blir den aldri oppdaget.
+    """
+    assert "stille = [r for r in tomme if r[\"sist\"]]" in KILDE
+    assert "aldri = [r for r in tomme if not r[\"sist\"]]" in KILDE
+    # To ulike overskrifter, ikke én samlesekk.
+    assert "Uten ferske tall" in KILDE
+    assert "Kartlagt, men ikke automatisert" in KILDE
+    # Og et tall man kan gjore noe med.
+    assert "_dager_siden" in KILDE
+
+
+def test_dager_siden_taaler_alt():
+    import types
+    rom: dict = {}
+    i = KILDE.index("def _dager_siden")
+    exec(KILDE[i:KILDE.index("\ndef ", i + 10)], rom)
+    f = rom["_dager_siden"]
+    from datetime import datetime, timedelta, timezone
+    na = datetime.now(timezone.utc)
+    assert f(None) == "aldri"
+    assert f(na) == "i dag"
+    assert f(na - timedelta(days=1)) == "i går"
+    assert f(na - timedelta(days=9)) == "9 dager siden"

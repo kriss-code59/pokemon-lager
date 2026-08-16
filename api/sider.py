@@ -128,6 +128,16 @@ NETTSTED_LD = {
 }
 
 
+def _dager_siden(tid) -> str:
+    """«3 dager siden». Et tall er en paastand man kan gjore noe med;
+    «ikke automatisert» er det ikke."""
+    if not tid:
+        return "aldri"
+    from datetime import datetime, timezone
+    d = (datetime.now(timezone.utc) - tid).days
+    return "i dag" if d < 1 else "i g\u00e5r" if d == 1 else f"{d} dager siden"
+
+
 def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld=None,
               bilde: str | None = None) -> str:
     # Alt legges i én @graph. To losrevne script-blokker er lovlig, men da
@@ -301,7 +311,23 @@ def monter(app, hent_pool):
         """
         rader = await _hent(BUTIKKER_SQL)
         aktive = [r for r in rader if r["varer"]]
+
+        # SKILL MELLOM «VI LESER DEN IKKE» OG «VI LESER DEN, MEN FIKK NULL».
+        #
+        # Begge sto tidligere under «Kartlagt, men ikke automatisert» -- og
+        # da leste siden en OEDELAGT skraper som et valg vi hadde tatt.
+        # Emken, Collectible og Ark sto slik i minst sju dager.
+        #
+        # Det er den samme feilen som gaar igjen overalt her: en butikk som
+        # leverer null feiler ikke, den tier. Skjuler vi tausheten bak en
+        # pen overskrift, blir den aldri oppdaget.
+        #
+        # `sist` = siste vellykkede skanning. Har vi ALDRI hatt tall, er
+        # butikken kartlagt men ikke automatisert. Har vi hatt tall for og
+        # ikke naa, er noe i stykker.
         tomme = [r for r in rader if not r["varer"]]
+        stille = [r for r in tomme if r["sist"]]
+        aldri = [r for r in tomme if not r["sist"]]
         totalt_inne = sum(r["inne"] or 0 for r in aktive)
 
         def _rad(r):
@@ -339,11 +365,22 @@ def monter(app, hent_pool):
         html += "".join(_rad(r) for r in aktive)
         html += "</tbody></table></div>"
         if tomme:
-            html += ("<h2>Kartlagt, men ikke automatisert</h2>"
-                     "<p>Disse stenger ute automatiske bes\u00f8k, eller kj\u00f8rer en "
-                     "plattform vi ikke leser enn\u00e5. Vi later ikke som om vi har "
-                     "ferske tall fra dem.</p><p class=\"hjelp\">"
-                     + ", ".join(_e(r["name"]) for r in tomme) + "</p>")
+            if aldri:
+                html += ("<h2>Kartlagt, men ikke automatisert</h2>"
+                         "<p>Disse stenger ute automatiske bes\u00f8k, eller "
+                         "kj\u00f8rer en plattform vi ikke leser enn\u00e5. Vi later "
+                         "ikke som om vi har ferske tall fra dem.</p>"
+                         "<p class=\"hjelp\">"
+                         + ", ".join(_e(r["name"]) for r in aldri) + "</p>")
+            if stille:
+                html += ("<h2>Uten ferske tall</h2>"
+                         "<p>Disse har vi lest f\u00f8r, men f\u00e5r ikke noe fra n\u00e5. "
+                         "Som regel har butikken lagt om nettsiden sin. Vi viser "
+                         "det heller enn \u00e5 la raden st\u00e5 tom.</p>"
+                         "<ul class=\"side-liste-tekst\">"
+                         + "".join(f"<li>{_e(r['name'])} \u2014 sist "
+                                   f"{_dager_siden(r['sist'])}</li>"
+                                   for r in stille) + "</ul>")
         html += ('<p><a class="hovedknapp smal" href="/">Se alle produktene</a></p>'
                  "</main>")
         return _svar_html(request, html)
