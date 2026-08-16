@@ -243,6 +243,90 @@ def test_robots_stenger_ikke_verifiseringen_ute():
     # aa gjennomfore, uten at noe annet sluttet aa virke.
     i = KILDE.index("async def robots")
     kropp = KILDE[i:i + 900]
-    for sti in ('"Disallow: /admin', '"Disallow: /api/'):
+    for sti in ('"Disallow: /admin', '"Disallow: /api/', '"Disallow: /ny'):
         assert sti in kropp
-    assert kropp.count("Disallow:") == 2, "nye Disallow-regler -- sjekk filen"
+    assert kropp.count("Disallow:") == 3, "nye Disallow-regler -- sjekk filen"
+
+
+# ------------------------------------------- forhandsvisning av nytt design
+
+def test_forhandsvisningen_rorer_ikke_dagens_side():
+    """Kristian vil se det nye designet for han bestemmer seg. Da maa
+    dagens side vaere noyaktig som for -- ellers vurderer han ikke to
+    alternativer, han vurderer én side i endring.
+    """
+    for fil in ("ny.html", "ny.css", "ny.js"):
+        assert (ROT / "web" / fil).exists(), fil
+    # Ingen av de nye filene skal vaere lenket fra dagens app.
+    app = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    index = (ROT / "web" / "index.html").read_text(encoding="utf-8")
+    for kilde in (app, index):
+        assert "ny.css" not in kilde
+        assert "ny.js" not in kilde
+        assert '"/ny"' not in kilde
+
+
+def test_forhandsvisningen_holdes_ute_av_google():
+    """Den viser de samme varene som forsiden. To sider med samme innhold
+    konkurrerer med hverandre -- og den ene er en kladd.
+    """
+    html = (ROT / "web" / "ny.html").read_text(encoding="utf-8")
+    assert 'name="robots" content="noindex, nofollow"' in html
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    i = konf.index("location = /ny {")
+    assert 'X-Robots-Tag "noindex, nofollow"' in konf[i:i + 1800]
+    assert '"Disallow: /ny' in KILDE
+
+
+def test_skriftene_er_det_eneste_som_slipper_gjennom_csp():
+    """Designet bygger paa Space Grotesk og JetBrains Mono, og «er det
+    data, er det monospace» er hele karakteren i det. Med feil skrifter
+    ville vi vurdert noe annet enn det som ble tegnet.
+
+    Men det gjelder BARE skriftene, og BARE denne adressen. script-src maa
+    staa urort paa 'self' -- en forhandsvisning er ikke en grunn til aa
+    lempe paa det som holder fremmed kode ute.
+    """
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    i = konf.index("location = /ny {")
+    blokk = konf[i:i + 1800]
+    assert "https://fonts.googleapis.com" in blokk
+    assert "https://fonts.gstatic.com" in blokk
+    assert "script-src 'self';" in blokk, "script-src er lempet paa"
+    # Og ingen andre locations skal ha faatt fremmede kilder.
+    assert konf.count("fonts.gstatic.com") == 1
+
+
+def test_forhandsvisningen_bruker_ekte_data():
+    """Paa oppdiktede tall ville vi vurdert en tegning, ikke et produkt.
+    Det er naar en butikk heter «CollectorsCorner» og prisen er «12 999 kr»
+    at man ser om designet holder.
+    """
+    js = (ROT / "web" / "ny.js").read_text(encoding="utf-8")
+    for endepunkt in ('"/snapshot"', '"/catalog"', '"/product/"'):
+        assert endepunkt in js, endepunkt
+
+
+def test_begge_tettheter_finnes():
+    # Handoffen ber om et valg mellom 1a og 1b. Kristian valgte aa se
+    # begge paa ekte data for han bestemmer.
+    js = (ROT / "web" / "ny.js").read_text(encoding="utf-8")
+    css = (ROT / "web" / "ny.css").read_text(encoding="utf-8")
+    assert 'localStorage.getItem("pokepuls-ny-tetthet")' in js
+    assert ".liste.luftig" in css
+    assert ".liste.kompakt" in css
+
+
+def test_folging_krever_fortsatt_konto():
+    """Designet viste ett trykk uten konto. Det er push-abonnementet som
+    henger sammen med brukeren, og den loypa har betalende kunder i seg.
+    Utseendet kan vurderes uten aa rore den.
+    """
+    js = (ROT / "web" / "ny.js").read_text(encoding="utf-8")
+    # Klikkhaandteringen, ikke markupen. Forste treff paa «data-folg» er
+    # selve knappen -- den sier ingenting om hva som skjer naar man
+    # trykker, og det er DET testen handler om.
+    i = js.index('closest("[data-folg]")')
+    kropp = js[i:i + 600]
+    assert "location.href" in kropp, "folger uten aa sende til innlogging"
+    assert "?produkt=" in kropp, "sender ikke videre til riktig vare"

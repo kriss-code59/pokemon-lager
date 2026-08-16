@@ -333,6 +333,10 @@ def monter(app, hent_pool):
             # OpenAPI-side som rangerer paa merkenavnet ditt er pinlig.
             "Disallow: /admin\n"
             "Disallow: /api/\n"
+            # Forhandsvisningen viser de samme varene som forsiden. To
+            # sider med samme innhold konkurrerer med hverandre, og den
+            # ene av dem er en kladd.
+            "Disallow: /ny\n"
             "\n"
             f"Sitemap: {BASE}/sitemap.xml\n",
             media_type="text/plain",
