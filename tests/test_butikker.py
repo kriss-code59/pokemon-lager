@@ -634,19 +634,18 @@ def test_tilbudspris_gir_ett_tall_ikke_to():
 
 
 def test_livet_er_kort_gaar_i_ordinaer_runde():
-    # Verifisert med --bare: 25 varer, 18 inne, 7 ute, 0 ukjent, 0 uten pris.
-    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
-    i = kilde.index("UNDER_UTPROVING")
-    # Butikken maa staa i den ordinaere runden...
-    assert "for site in SQUARESPACE_SITES" in kilde[:i]
-    # ...og IKKE lenger blant dem som bare naas av --bare.
-    #
-    # Testen sjekket tidligere at UNDER_UTPROVING var tom. Det var bevis nok
-    # den dagen listen bare hadde hatt denne ene butikken i seg, men det er
-    # ikke det den maaler -- den maaler at Livet er Kort er ute av koen.
-    til_proving = kilde[kilde.index("UNDER_UTPROVING: list[dict] = ["):]
-    assert "Livet er Kort" not in til_proving[:til_proving.index("\n]")]
+    """Verifisert med --bare: 25 varer, 18 inne, 7 ute, 0 ukjent.
 
+    Testen leste tidligere kildekoden og lette etter at UNDER_UTPROVING var
+    tom. Det gikk i stykker med én gang neste butikk kom i koen -- og verre,
+    den kunne ikke se om butikken faktisk havnet i den ferdige listen.
+    """
+    scrape = _last_scrape()
+    navn = [b["store"] for b in scrape.PLAYWRIGHT_SITES]
+    assert "Livet er Kort" in navn
+    assert navn.count("Livet er Kort") == 1
+    b = next(x for x in scrape.PLAYWRIGHT_SITES if x["store"] == "Livet er Kort")
+    assert b["custom_scraper"] == "squarespace"
 
 def test_ny_butikk_er_stille_forste_skanning():
     """Butikken kommer inn med 18 varer paa lager. Uten bootstrap-regelen
@@ -754,37 +753,96 @@ def test_404_lappen_kan_ikke_ta_ned_siden():
 def test_lcgcards_er_lagt_til_som_24nettbutikk():
     """«Powered by 24Nettbutikk» staar i bunnteksten deres -- samme
     plattform som PokeShop, Boosterpakker, Card Kings og Emken. Skraperen
-    finnes; det er bare adressene som er nye.
+    fantes; det var bare adressene som var nye.
     """
-    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
-    i = kilde.index("UNDER_UTPROVING: list[dict] = [")
-    blokk = kilde[i:kilde.index("\n]", i)]
-    assert '"store": "LCGCards"' in blokk
-    assert '"custom_scraper": "nettbutikk24"' in blokk
-    assert "lcgcards.no" in blokk
-
+    scrape = _last_scrape()
+    b = next(x for x in scrape.PLAYWRIGHT_SITES if x["store"] == "LCGCards")
+    assert b["custom_scraper"] == "nettbutikk24"
+    assert b["urls"] and all("lcgcards.no" in u for u in b["urls"])
 
 def test_lcgcards_henter_bare_pokemon():
-    """Butikken selger ogsaa One Piece, Magic, Yu-Gi-Oh og Naruto.
-    «Nyheter» og «Forhandsbestilling» blander alt sammen -- tar vi dem med,
+    """Butikken selger ogsaa One Piece, Magic, Yu-Gi-Oh og Naruto, og
+    «Nyheter» og «Forhandsbestilling» blander alt sammen. Tar vi dem med,
     havner Magic-bokser i Andre-fanen og ser ut som noe vi ikke klarte aa
     gjenkjenne.
     """
-    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
-    i = kilde.index('"store": "LCGCards"')
-    blokk = kilde[i:kilde.index("},", i)]
-    for forbudt in ("riftbound", "one-piece", "magic", "yu-gi-oh",
-                    "/nyheter", "forhandsbestilling"):
-        assert forbudt not in blokk, forbudt
-    assert "pokemon" in blokk
+    scrape = _last_scrape()
+    b = next(x for x in scrape.PLAYWRIGHT_SITES if x["store"] == "LCGCards")
+    for u in b["urls"]:
+        for forbudt in ("riftbound", "one-piece", "magic", "yu-gi-oh",
+                        "/nyheter", "forhandsbestilling"):
+            assert forbudt not in u, f"{forbudt} i {u}"
+        assert "pokemon" in u
+
+def test_ingen_butikk_gaar_live_uten_proving():
+    """Regelen fra Livet er Kort: en skraper ingen har sett med egne oyne
+    slippes ikke los paa 45 butikker og et varselsystem med betalende
+    kunder. UNDER_UTPROVING naas bare av `--bare`.
+
+    Testen sto tidligere pinnet til LCGCards. Den gjorde jobben sin --
+    butikken er verifisert og live -- men da maalte den én butikk én gang,
+    ikke regelen. Naa maaler den regelen: alt som staar i koen, MAA vaere
+    utenfor den ordinaere runden.
+    """
+    scrape = _last_scrape()
+    i_runden = {b["store"] for b in scrape.PLAYWRIGHT_SITES}
+    i_runden |= {b["store"] for b in scrape.SHOPIFY_STORES}
+    for butikk in scrape.UNDER_UTPROVING:
+        assert butikk["store"] not in i_runden, \
+            f"{butikk['store']} staar bade til proving og i runden"
+
+def _last_scrape():
+    """Importer scrape.py med playwright stubbet ut.
+
+    Testene her leser ellers kildekoden. Det holder for det meste, men
+    IKKE for dette: PLAYWRIGHT_SITES settes sammen av flere lister flere
+    steder i fila, og om en butikk faktisk havner i den ferdige listen kan
+    man ikke se ved aa lese. Det maa kjores.
+    """
+    import sys
+    import types
+    if "playwright.sync_api" not in sys.modules:
+        pw = types.ModuleType("playwright")
+        api = types.ModuleType("playwright.sync_api")
+        api.sync_playwright = lambda *a, **k: None
+        api.TimeoutError = type("TimeoutError", (Exception,), {})
+        api.Error = type("Error", (Exception,), {})
+        pw.sync_api = api
+        sys.modules["playwright"] = pw
+        sys.modules["playwright.sync_api"] = api
+    sys.path.insert(0, str(ROT))
+    import scrape
+    return scrape
 
 
-def test_ny_butikk_starter_under_utproving():
-    # Regelen fra Livet er Kort: en skraper som ikke er sett med egne oyne,
-    # slippes ikke los paa 45 butikker og et varselsystem med betalende
-    # kunder. UNDER_UTPROVING naas bare av --bare.
+def test_lcgcards_havner_faktisk_i_skanningen():
+    """PLAYWRIGHT_SITES bygges ferdig lenger oppe i fila enn der butikken
+    ble lagt til. Utvider man NETTBUTIKK24_SITES etterpaa, staar butikken
+    i en liste ingen ser paa -- og en butikk som ikke skannes feiler ikke,
+    den tier.
+
+    Derfor sjekker denne testen den FERDIGE listen, ikke kildekoden.
+    """
+    scrape = _last_scrape()
+    navn = [b["store"] for b in scrape.PLAYWRIGHT_SITES]
+    assert "LCGCards" in navn
+    assert navn.count("LCGCards") == 1, "butikken staar to ganger"
+    assert "Livet er Kort" in navn, "forrige butikk falt ut"
+    assert not scrape.UNDER_UTPROVING, "LCGCards staar fortsatt til proving"
+
+
+def test_provingen_bruker_samme_prisregel_som_ingest():
+    """LCGCards leverte to varer til «0,00 kr», og provingen sa «Uten pris:
+    0» -- teksten fantes jo. Men ingest kaster alt under
+    MIN_EKTE_PRIS_ORE, saa de to hadde ingen pris i databasen uansett.
+
+    En proving som maaler noe annet enn det systemet lagrer, gir falsk
+    trygghet.
+    """
     kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
-    i = kilde.index("UNDER_UTPROVING: list[dict] = [")
-    assert "LCGCards" in kilde[i:kilde.index("\n]", i)]
-    # Og den maa IKKE staa i den ordinaere runden enna.
-    assert kilde.count('"store": "LCGCards"') == 1
+    i = kilde.index("def bare_en_butikk")
+    kropp = kilde[i:kilde.index("\ndef ", i + 10)]
+    assert "from ingest.ingest import pris_til_ore" in kropp
+    assert "pris_til_ore(p.price) is None" in kropp
+    # Og den maa si ifra ved DELVIS mangel, ikke bare naar alt mangler.
+    assert "elif uten_pris:" in kropp

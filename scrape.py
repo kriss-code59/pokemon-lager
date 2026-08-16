@@ -1037,7 +1037,22 @@ PLAYWRIGHT_SITES = PLAYWRIGHT_SITES + [
 #
 # Tom naa. Neste butikk som skrives, legges her til `--bare` viser navn,
 # priser og lagerstatus som stemmer.
-UNDER_UTPROVING: list[dict] = [
+# LCGCards er verifisert med `--bare` og gaar i den ordinaere runden:
+#
+#     88 varer, 53 inne, 35 ute, 0 ukjent.
+#
+# To varer sto til «0,00 kr». De faar ingen pris i databasen -- ingest
+# kaster alt under MIN_EKTE_PRIS_ORE -- saa de vises uten pris og kan
+# aldri bli «billigst». Det er riktig oppfoersel for en utsolgt vare der
+# butikken har skjult prisen.
+# MAA legges paa PLAYWRIGHT_SITES, ikke paa NETTBUTIKK24_SITES.
+#
+# PLAYWRIGHT_SITES bygges ferdig lenger oppe i fila, av blant annet
+# NETTBUTIKK24_SITES. Utvider vi kilden ETTER at den er lest, staar
+# butikken i en liste ingen ser paa -- og en butikk som ikke skannes
+# feiler ikke, den tier. Testen under sjekker den ferdige listen, ikke
+# kildekoden, nettopp fordi dette ikke er synlig ved lesing.
+PLAYWRIGHT_SITES = PLAYWRIGHT_SITES + [
     # LCGCards -- «Powered by 24Nettbutikk» staar i bunnteksten deres, saa
     # dette er samme plattform som PokeShop, Boosterpakker, Card Kings og
     # Emken. Skraperen finnes; det er bare adressene som er nye.
@@ -1060,6 +1075,12 @@ UNDER_UTPROVING: list[dict] = [
         "custom_scraper": "nettbutikk24",
     },
 ]
+
+# Butikker som er skrevet, men IKKE verifisert med `--bare` enna.
+#
+# De naas av provingen og er usynlige for den fulle skanningen. Tom naa.
+UNDER_UTPROVING: list[dict] = []
+
 
 # Norli og PokeMadness blokkerer automatiserte besok (se docstring ovenfor).
 # Vi lister dem her med en direkte lenke, slik at dashboardet kan vise dem
@@ -2528,7 +2549,17 @@ def bare_en_butikk(navn: str) -> int:
     inne = sum(1 for p in produkter if p.in_stock is True)
     ute = sum(1 for p in produkter if p.in_stock is False)
     vet_ikke = len(produkter) - inne - ute
-    uten_pris = sum(1 for p in produkter if not (p.price or "").strip())
+    # SAMME REGEL SOM ROERLEDNINGEN, IKKE EN LIGNENDE.
+    #
+    # Provingen talte tidligere tomme tekststrenger. LCGCards leverte to
+    # varer til «0,00 kr», og da sto det «Uten pris: 0» -- teksten fantes
+    # jo. Men ingest kaster alt under MIN_EKTE_PRIS_ORE, saa de to hadde
+    # ingen pris i databasen uansett.
+    #
+    # En proving som maaler noe annet enn det systemet faktisk lagrer, gir
+    # falsk trygghet. Naa spor vi ingest sin egen parser.
+    from ingest.ingest import pris_til_ore
+    uten_pris = sum(1 for p in produkter if pris_til_ore(p.price) is None)
 
     for p in produkter[:15]:
         lager = {True: "inne", False: "ute"}.get(p.in_stock, "?")
@@ -2543,6 +2574,10 @@ def bare_en_butikk(navn: str) -> int:
               "aldri utlose et restock-varsel.")
     if uten_pris == len(produkter):
         print("ADVARSEL: ingen priser. Da kan varen aldri bli «billigst».")
+    elif uten_pris:
+        print(f"MERK: {uten_pris} varer uten brukbar pris. De vises uten pris "
+              "og kan ikke bli «billigst» -- som regel utsolgte varer der "
+              "butikken skjuler prisen. Sjekk at det stemmer.")
     print("\nIngenting ble lagret. Dette var bare en proving.")
     return 0
 
