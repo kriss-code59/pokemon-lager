@@ -846,3 +846,30 @@ def test_provingen_bruker_samme_prisregel_som_ingest():
     assert "pris_til_ore(p.price) is None" in kropp
     # Og den maa si ifra ved DELVIS mangel, ikke bare naar alt mangler.
     assert "elif uten_pris:" in kropp
+
+
+def test_diagnosen_gjelder_alle_skrapere_ikke_bare_squarespace():
+    """Ark svarte: «selektor ... ma oppdateres. Apne siden i nettleseren,
+    hoyreklikk paa et produkt -> Inspiser».
+
+    Den beskjeden ber et menneske gjore jobben manuelt -- og verktoyet som
+    gjor den automatisk fantes allerede. Det var bare laast inne i
+    Squarespace-skraperen, fordi det var der jeg trengte det forst.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    # Tre steder melder «fant ingen produktkort». Alle tre maa vise hva
+    # siden faktisk inneholder.
+    assert kilde.count("_hva_staar_paa_siden(") >= 4  # 1 def + 3 kall
+    assert "Apne siden i nettleseren" not in kilde, \
+        "ber fortsatt mennesket inspisere manuelt"
+
+
+def test_diagnosen_defineres_for_den_brukes():
+    # scrape.py er én lang fil, og funksjonen kalles fra tre steder langt
+    # fra hverandre. Star definisjonen under et kall, kraesjer den forst
+    # naar en butikk faktisk feiler -- altsaa i produksjon.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    d = kilde.index("def _hva_staar_paa_siden")
+    for kall in ("_hva_staar_paa_siden(page, store)",
+                 '_hva_staar_paa_siden(page, site["store"])'):
+        assert d < kilde.index(kall), f"{kall} kommer for definisjonen"

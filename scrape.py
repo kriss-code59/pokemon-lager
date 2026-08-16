@@ -1314,6 +1314,7 @@ def scrape_nille(page, site: dict) -> list[Product]:
         if diag:
             print(f"[{store}] Mulig blokkering oppdaget: {diag}")
         safe_screenshot(page, store)
+        _hva_staar_paa_siden(page, store)
     else:
         extra = f" av {expected_total} oppgitt" if expected_total else ""
         print(f"[{store}] Fant {len(collected)} produkter direkte pa kategorisiden{extra}.")
@@ -1855,6 +1856,7 @@ def scrape_outland(page, site: dict) -> list[Product]:
         if diag:
             print(f"[{store}] Mulig blokkering oppdaget: {diag}")
         safe_screenshot(page, store)
+        _hva_staar_paa_siden(page, store)
     else:
         extra = f" av {expected_total} oppgitt" if expected_total else ""
         print(f"[{store}] Fant {len(collected)} produkter direkte pa kategorisiden{extra}.")
@@ -1966,10 +1968,10 @@ def scrape_with_browser(page, site: dict) -> list[Product]:
                               f"Mulig blokkering oppdaget: {diag}")
                     else:
                         print(f"[{site['store']}] Fant ingen produktkort pa {url} "
-                              f"-- selektor '{site['card_selector']}' ma sannsynligvis oppdateres. "
-                              f"Apne siden i nettleseren, hoyreklikk pa et produkt -> Inspiser, "
-                              f"og oppdater 'card_selector' i scrape.py.")
+                              f"-- selektor '{site['card_selector']}' traff ingenting. "
+                              f"Klassenavnene siden faktisk bruker staar under.")
                     safe_screenshot(page, site["store"], suffix)
+                    _hva_staar_paa_siden(page, site["store"])
                 break
 
             if site.get("visit_product_pages"):
