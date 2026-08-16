@@ -637,8 +637,15 @@ def test_livet_er_kort_gaar_i_ordinaer_runde():
     # Verifisert med --bare: 25 varer, 18 inne, 7 ute, 0 ukjent, 0 uten pris.
     kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
     i = kilde.index("UNDER_UTPROVING")
-    assert "UNDER_UTPROVING: list[dict] = []" in kilde, "butikken staar fortsatt til proving"
-    assert 'for site in SQUARESPACE_SITES' in kilde[:i]
+    # Butikken maa staa i den ordinaere runden...
+    assert "for site in SQUARESPACE_SITES" in kilde[:i]
+    # ...og IKKE lenger blant dem som bare naas av --bare.
+    #
+    # Testen sjekket tidligere at UNDER_UTPROVING var tom. Det var bevis nok
+    # den dagen listen bare hadde hatt denne ene butikken i seg, men det er
+    # ikke det den maaler -- den maaler at Livet er Kort er ute av koen.
+    til_proving = kilde[kilde.index("UNDER_UTPROVING: list[dict] = ["):]
+    assert "Livet er Kort" not in til_proving[:til_proving.index("\n]")]
 
 
 def test_ny_butikk_er_stille_forste_skanning():
@@ -742,3 +749,42 @@ def test_404_lappen_kan_ikke_ta_ned_siden():
         "originalen legges ikke tilbake ved feil"
     # Idempotent: bare hvis monsteret faktisk staar der.
     assert blokk.index("if grep -q") < blokk.index("sed -i")
+
+
+def test_lcgcards_er_lagt_til_som_24nettbutikk():
+    """«Powered by 24Nettbutikk» staar i bunnteksten deres -- samme
+    plattform som PokeShop, Boosterpakker, Card Kings og Emken. Skraperen
+    finnes; det er bare adressene som er nye.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("UNDER_UTPROVING: list[dict] = [")
+    blokk = kilde[i:kilde.index("\n]", i)]
+    assert '"store": "LCGCards"' in blokk
+    assert '"custom_scraper": "nettbutikk24"' in blokk
+    assert "lcgcards.no" in blokk
+
+
+def test_lcgcards_henter_bare_pokemon():
+    """Butikken selger ogsaa One Piece, Magic, Yu-Gi-Oh og Naruto.
+    «Nyheter» og «Forhandsbestilling» blander alt sammen -- tar vi dem med,
+    havner Magic-bokser i Andre-fanen og ser ut som noe vi ikke klarte aa
+    gjenkjenne.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index('"store": "LCGCards"')
+    blokk = kilde[i:kilde.index("},", i)]
+    for forbudt in ("riftbound", "one-piece", "magic", "yu-gi-oh",
+                    "/nyheter", "forhandsbestilling"):
+        assert forbudt not in blokk, forbudt
+    assert "pokemon" in blokk
+
+
+def test_ny_butikk_starter_under_utproving():
+    # Regelen fra Livet er Kort: en skraper som ikke er sett med egne oyne,
+    # slippes ikke los paa 45 butikker og et varselsystem med betalende
+    # kunder. UNDER_UTPROVING naas bare av --bare.
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("UNDER_UTPROVING: list[dict] = [")
+    assert "LCGCards" in kilde[i:kilde.index("\n]", i)]
+    # Og den maa IKKE staa i den ordinaere runden enna.
+    assert kilde.count('"store": "LCGCards"') == 1

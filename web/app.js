@@ -52,6 +52,9 @@ const state = {
   grenser: new Map(),     // product_id -> maks_pris_ore (null = ingen grense)
   premium: false,
   slipp: new Map(),    // set_id -> slippdato, for sett som ikke er ute enna
+  // Sortering av bolkene. Huskes mellom besok -- den som har valgt
+  // slippdato én gang, mener som regel det neste gang ogsaa.
+  sortering: localStorage.getItem("pokepuls-sortering") || "nytt",
   maksPerTime: 5,      // brukerens timeskvote, hentet fra serveren
   apentProdukt: null,
 };
@@ -358,7 +361,22 @@ function grupperHtml(treff) {
   // Stabil sortering: like verdier beholder opprinnelig rekkefolge (som er
   // alfabetisk fra API-et). Array.prototype.sort er stabil i alle nettlesere
   // vi bryr oss om, men vi tar med `i` sa det ikke er noe a lure pa.
-  bolker.sort((a, b) => (b.tid - a.tid) || (a.i - b.i));
+  if (state.sortering === "slipp") {
+    // NYESTE SETT FORST. Et sett uten slippdato i katalogen havner sist --
+    // ikke overst med tiden 0, som ville gitt en liste der ukjente sett
+    // fortrengte dem vi faktisk vet naar kom.
+    for (const b of bolker) {
+      const d = state.slipp.get(b.produkter[0].set_id);
+      b.slipp = d ? new Date(d).getTime() : -Infinity;
+    }
+    bolker.sort((a, b) => (b.slipp - a.slipp) || (a.i - b.i));
+  } else if (state.sortering === "navn") {
+    bolker.sort((a, b) =>
+      a.produkter[0].set_label.localeCompare(b.produkter[0].set_label, "nb") ||
+      (a.i - b.i));
+  } else {
+    bolker.sort((a, b) => (b.tid - a.tid) || (a.i - b.i));
+  }
 
   let html = "";
   for (const { produkter } of bolker) {
@@ -1485,6 +1503,18 @@ function byttFane(navn) {
 }
 
 function koble() {
+  // Sorteringen settes FOR vi lytter, ellers viser nedtrekket «Nytt forst»
+  // mens listen er sortert paa slippdato fra forrige besok.
+  const sortValg = $("sortering");
+  if (sortValg) {
+    sortValg.value = state.sortering;
+    sortValg.addEventListener("change", (e) => {
+      state.sortering = e.target.value;
+      localStorage.setItem("pokepuls-sortering", state.sortering);
+      tegnProdukter();
+    });
+  }
+
   $("sok").addEventListener("input", (e) => {
     state.sok = e.target.value;
     $("tom-sok").hidden = !state.sok;

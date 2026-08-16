@@ -606,3 +606,32 @@ body.admin .topp { position: static; }
 .stolpe-fyll { display: block; height: 8px; border-radius: 999px; background: var(--gul); }
 .stolpe-tall { color: var(--tekst-svak); font-variant-numeric: tabular-nums;
   font-size: 12px; white-space: nowrap; }
+
+
+/* Sorteringsvalget. Ligger over filterknappene, ikke inni dem: et filter
+   fjerner rader, en sortering flytter dem. Blandes de i samme rad, tror
+   folk at «Slippdato» skjuler sett uten dato. */
+.sorter-rad {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  font-size: 13px;
+  color: var(--tekst-svak);
+}
+.sorter-rad select {
+  background: var(--flate);
+  color: var(--tekst);
+  border: 1px solid var(--kant);
+  border-radius: 999px;
+  padding: 6px 26px 6px 12px;
+  font-family: inherit;
+  font-size: 16px; /* 16px = ingen iOS-zoom, samme grunn som #sok */
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%238b95a3' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+.sorter-rad select:focus-visible { outline: 2px solid var(--gul); }

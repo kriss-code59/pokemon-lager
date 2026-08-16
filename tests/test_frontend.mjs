@@ -1055,3 +1055,39 @@ test("vilkaarene sier ikke hvor mange som staar bak", () => {
     assert.ok(!/Kristian|privatperson/.test(les(fil)), fil);
   }
 });
+
+/* --------------------------------------------------- sortering av bolker */
+
+test("sorteringsvalget finnes og husker seg selv", () => {
+  const html = les("index.html");
+  assert.match(html, /id="sortering"/);
+  for (const v of ['value="nytt"', 'value="slipp"', 'value="navn"']) {
+    assert.ok(html.includes(v), v);
+  }
+  const js = les("app.js");
+  assert.match(js, /localStorage\.getItem\("pokepuls-sortering"\)/);
+  assert.match(js, /localStorage\.setItem\("pokepuls-sortering"/);
+  // Verdien maa settes FOR vi lytter, ellers viser nedtrekket «Nytt forst»
+  // mens listen er sortert paa slippdato fra forrige besok.
+  const i = js.indexOf("function koble()");
+  const kropp = js.slice(i, i + 900);
+  assert.ok(kropp.indexOf("sortValg.value = state.sortering") <
+            kropp.indexOf('addEventListener("change"'));
+});
+
+test("sett uten slippdato havner sist, ikke overst", () => {
+  // Med tiden 0 ville sett vi ikke vet slippdato paa fortrengt dem vi
+  // faktisk vet naar kom -- i en sortering som heter «Slippdato».
+  const js = les("app.js");
+  const i = js.indexOf('state.sortering === "slipp"');
+  const kropp = js.slice(i, i + 500);
+  assert.match(kropp, /-Infinity/);
+});
+
+test("sorteringen bruker slippdatoene fra katalogen", () => {
+  // Ikke datoer skrevet inn i denne filen. Neste sett krever da én rad i
+  // katalogen og ingen endring i frontenden.
+  const js = les("app.js");
+  const i = js.indexOf('state.sortering === "slipp"');
+  assert.match(js.slice(i, i + 400), /state\.slipp\.get/);
+});

@@ -22,7 +22,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/ikon.svg">
-<link rel="stylesheet" href="/style.css?v=25">
+<link rel="stylesheet" href="/style.css?v=26">
 </head>
 <body>
 
@@ -42,6 +42,14 @@
     <input id="sok" type="search" inputmode="search" autocomplete="off"
            placeholder="Søk etter sett, produkt eller butikk" aria-label="Søk">
     <button id="tom-sok" class="tom-sok" type="button" aria-label="Tøm søket" hidden>&times;</button>
+  </div>
+  <div class="sorter-rad">
+    <label for="sortering">Sorter</label>
+    <select id="sortering">
+      <option value="nytt">Nytt først</option>
+      <option value="slipp">Slippdato</option>
+      <option value="navn">Navn A–Å</option>
+    </select>
   </div>
   <div class="chips" id="chips" role="group" aria-label="Filtre">
     <button class="chip chip-av" data-filter="lager">Kun på lager</button>
@@ -124,6 +132,6 @@
   <div id="ark-innhold"></div>
 </div>
 
-<script src="/app.js?v=25" type="module"></script>
+<script src="/app.js?v=26" type="module"></script>
 </body>
 </html>

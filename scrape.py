@@ -1037,7 +1037,29 @@ PLAYWRIGHT_SITES = PLAYWRIGHT_SITES + [
 #
 # Tom naa. Neste butikk som skrives, legges her til `--bare` viser navn,
 # priser og lagerstatus som stemmer.
-UNDER_UTPROVING: list[dict] = []
+UNDER_UTPROVING: list[dict] = [
+    # LCGCards -- «Powered by 24Nettbutikk» staar i bunnteksten deres, saa
+    # dette er samme plattform som PokeShop, Boosterpakker, Card Kings og
+    # Emken. Skraperen finnes; det er bare adressene som er nye.
+    #
+    # BARE Pokemon-kategoriene. Butikken selger ogsaa One Piece, Magic,
+    # Yu-Gi-Oh og Naruto, og «Nyheter» og «Forhandsbestilling» blander alt
+    # sammen. Tar vi dem med, havner Magic-bokser i Andre-fanen og ser ut
+    # som noe vi ikke klarte aa gjenkjenne.
+    {
+        "store": "LCGCards",
+        "urls": [
+            "https://lcgcards.no/butikk/japansk-pokemon/alt-japansk",
+            "https://lcgcards.no/butikk/kinesisk-pokemon/booster-box",
+            "https://lcgcards.no/butikk/kinesisk-pokemon/booster-pack",
+            "https://lcgcards.no/butikk/kinesisk-pokemon/kinesisk-gift-box",
+            "https://lcgcards.no/butikk/kinesisk-pokemon/collection-box-1",
+            "https://lcgcards.no/butikk/koreansk-pokemon/koreansk-booster-box",
+            "https://lcgcards.no/butikk/koreansk-pokemon/koreansk-booster-pack",
+        ],
+        "custom_scraper": "nettbutikk24",
+    },
+]
 
 # Norli og PokeMadness blokkerer automatiserte besok (se docstring ovenfor).
 # Vi lister dem her med en direkte lenke, slik at dashboardet kan vise dem
