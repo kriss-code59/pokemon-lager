@@ -27,7 +27,7 @@ import os
 import re
 import sys
 import unicodedata
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import psycopg
 from psycopg.rows import dict_row
@@ -44,6 +44,12 @@ KRYMP_GRENSE = 0.25
 
 # Under dette antallet oppforinger er krympvernet meningslost stoy.
 KRYMP_MINIMUM = 20
+
+# Hvor lenge krympvernet faar holde en butikk ute for vi tror paa
+# skraperen i stedet. Seks timer er ca. 36 fulle runder -- rikelig til at
+# en forbigaaende feil har rettet seg selv, og kort nok til at en butikk
+# som faktisk har lagt om ikke blir borte i en uke.
+KRYMP_MAKS_TIMER = 6
 
 # Én kjoring som produserer flere hendelser enn dette er en feil, ikke en
 # nyhet. Hendelsene lagres, men markeres slik at varsling kan hoppe over dem.
@@ -337,17 +343,51 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
 
                 cur.execute(
                     "SELECT id, url, title, price_ore, in_stock, product_id, "
-                    "       bestillingstype "
+                    "       bestillingstype, last_ok_at "
                     "FROM listings WHERE store_id = %s", (butikk_id,))
                 for_ = {r["url"]: r for r in cur.fetchall()}
 
                 # Krympvernet. Uten dette blir en halvferdig skanning til en
                 # katalog som "forsvant", og neste kjoring til en varselstorm.
-                if (len(for_) >= KRYMP_MINIMUM
-                        and len(oppforinger) < len(for_) * (1 - KRYMP_GRENSE)):
+                krympet = (len(for_) >= KRYMP_MINIMUM
+                           and len(oppforinger) < len(for_) * (1 - KRYMP_GRENSE))
+
+                # NAAR VERNET SELV BLIR FEILEN
+                #
+                # Vernet finnes for aa overleve ÉN halvferdig skanning. Men
+                # naar det slaar til, oppdateres ingen oppforinger -- saa
+                # `for_` blir staaende like stor, og neste kjoring
+                # sammenligner den samme lille katalogen mot den samme
+                # gamle. Og hopper over igjen. For alltid.
+                #
+                # Emken, Collectible og Ark sto slik. Skraperne virket
+                # perfekt naar de ble kjort alene; de var laast ute av et
+                # vern som ikke kunne slippe.
+                #
+                # En krymping som varer i timevis er ikke et uhell -- da har
+                # butikken faktisk lagt om. Etter KRYMP_MAKS_TIMER uten
+                # ferske tall gir vi vernet opp og tror paa skraperen.
+                sist_ok = max((r["last_ok_at"] for r in for_.values()
+                               if r["last_ok_at"]), default=None)
+                fastlaast = (krympet and sist_ok is not None
+                             and datetime.now(timezone.utc) - sist_ok
+                             > timedelta(hours=KRYMP_MAKS_TIMER))
+
+                if krympet and not fastlaast:
                     stat["hoppet_over"].append(
                         "%s (%d -> %d, krympvern)" % (butikk, len(for_), len(oppforinger)))
                     continue
+
+                # Vi slipper taket, men vi VARSLER ikke om det. De som
+                # forsvinner her har vaert utilgjengelige i timevis alt --
+                # aa sende «utsolgt» for femti varer paa én gang ville
+                # vaert en varselstorm om noe som skjedde i forrige uke.
+                stille_borte = fastlaast
+                if fastlaast:
+                    stat.setdefault("krympvern_frigitt", []).append(
+                        "%s (%d -> %d, laast siden %s)"
+                        % (butikk, len(for_), len(oppforinger),
+                           sist_ok.isoformat(timespec="minutes")))
 
                 bootstrap = not for_
                 if bootstrap:
@@ -447,7 +487,7 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                 # Vi kom hit bare fordi krympvernet sa at skanningen var hel,
                 # sa dette er ekte avpubliseringer. De regnes som utsolgt.
                 borte = [r for u, r in for_.items() if u not in oppforinger]
-                if borte and not bootstrap:
+                if borte and not bootstrap and not stille_borte:
                     for r in borte:
                         if r["in_stock"] is True and not _stille(r.get("bestillingstype")):
                             hendelser.append((r["id"], r["url"], r["product_id"], butikk_id,

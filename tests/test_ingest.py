@@ -281,3 +281,56 @@ def test_statistikken_teller_ikke_bestillingsvarer_som_paafyll():
         encoding="utf-8")
     i = sql.index("RESTOCK_BUTIKK_SQL")
     assert "bestillingsvare" in sql[i:i + 700]
+
+
+# ------------------------------------------------- krympvernet maa slippe
+
+def _ingest_kilde():
+    import pathlib
+    return (pathlib.Path(__file__).resolve().parent.parent
+            / "ingest" / "ingest.py").read_text(encoding="utf-8")
+
+
+def test_krympvernet_kan_slippe_taket():
+    """Vernet finnes for aa overleve ÉN halvferdig skanning. Men naar det
+    slaar til, oppdateres ingen oppforinger -- saa `for_` blir staaende
+    like stor, og neste kjoring sammenligner den samme lille katalogen mot
+    den samme gamle. Og hopper over igjen. For alltid.
+
+    Emken, Collectible og Ark sto slik. Skraperne virket perfekt naar de
+    ble kjort alene; de var laast ute av et vern som ikke kunne slippe.
+    """
+    k = _ingest_kilde()
+    assert "KRYMP_MAKS_TIMER" in k
+    assert "fastlaast" in k
+    # Vernet maa fortsatt virke i det NORMALE tilfellet.
+    assert "if krympet and not fastlaast:" in k
+    # Og frigivelsen maa vaere basert paa tid siden siste ekte data.
+    i = k.index("fastlaast = ")
+    assert "last_ok_at" in k[:i]
+    assert "timedelta(hours=KRYMP_MAKS_TIMER)" in k[i:i + 300]
+
+
+def test_frigivelse_sender_ikke_varselstorm():
+    """De som forsvinner naar vernet slipper, har vaert utilgjengelige i
+    timevis alt. Aa sende «utsolgt» for femti varer paa én gang ville vaert
+    en varselstorm om noe som skjedde i forrige uke.
+    """
+    k = _ingest_kilde()
+    assert "stille_borte" in k
+    assert "not bootstrap and not stille_borte" in k
+
+
+def test_frigivelsen_er_synlig_i_rapporten():
+    # Et vern som slipper i det stille er like usynlig som et vern som
+    # laaser i det stille.
+    k = _ingest_kilde()
+    assert "krympvern_frigitt" in k
+
+
+def test_last_ok_at_hentes_faktisk():
+    # Uten kolonnen i SELECT-en er sist_ok alltid None, og vernet slipper
+    # aldri -- akkurat som for, bare med mer kode.
+    k = _ingest_kilde()
+    i = k.index("FROM listings WHERE store_id = %s")
+    assert "last_ok_at" in k[i - 400:i]
