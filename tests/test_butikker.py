@@ -892,3 +892,34 @@ def test_diagnosen_teller_lenker_ikke_bare_klassenavn():
     # Bare lenker paa samme domene -- ellers drukner det i Facebook,
     # Instagram og betalingslogoer.
     assert "d.host !== location.host" in kropp
+
+
+def test_collectible_henter_forseglet_ikke_enkeltkort():
+    """/pokemon-kort/ er landingssiden for ENKELTKORT -- en marketingside
+    full av karuseller som viser de samme varene om igjen.
+
+    Den brukte 284 sekunder, en tredjedel av hele skannerunden, paa aa
+    hente 105 enkeltkort som ingest kaster med én gang. Vi hadde NULL
+    forseglede varer fra en av de storste butikkene.
+    """
+    scrape = _last_scrape()
+    b = next(x for x in scrape.PLAYWRIGHT_SITES if x["store"] == "Collectible")
+    assert all("/pokemon-kort" not in u for u in b["urls"]), \
+        "peker fortsatt paa enkeltkortsiden"
+    # De forseglede kategoriene butikken selv henviser til.
+    assert any("boosters" in u for u in b["urls"])
+    assert any("trainer-box" in u for u in b["urls"])
+
+
+def test_ark_er_ute_av_skanningen_og_forklart():
+    """Vi dropper Ark. Da maa den ogsaa SLUTTE aa skannes -- ellers bruker
+    den 73 sekunder hver runde og staar som «uten ferske tall» for alltid.
+
+    Og den maa vaere forklart. En butikk som bare forsvinner fra listen er
+    like taus som en som feiler.
+    """
+    scrape = _last_scrape()
+    assert "Ark" not in [b["store"] for b in scrape.PLAYWRIGHT_SITES]
+    ark = next(b for b in scrape.MANUAL_CHECK_STORES if b["store"] == "Ark")
+    assert ark["url"].startswith("https://")
+    assert len(ark["reason"]) > 80, "for tynn begrunnelse"

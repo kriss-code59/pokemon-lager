@@ -634,15 +634,6 @@ OUTLAND_URL = (
 
 PLAYWRIGHT_SITES = [
     {
-        "store": "Ark",
-        "urls": [
-            "https://www.ark.no/merkevarer/pokemon",
-        ],
-        "card_selector": "article, li.product, div.product-item, [data-testid='product-card']",
-        "name_selector": "h2, h3, .product-title, [data-testid='product-title']",
-        "price_selector": ".price, [data-testid='price']",
-    },
-    {
         "store": "Nille",
         "urls": [
             "https://www.nille.no/category/pokemon/",
@@ -772,7 +763,23 @@ QUICKBUTIK_SITES = [
 # tekst -- se scrape_woocommerce().
 # ---------------------------------------------------------------------------
 WOOCOMMERCE_SITES = [
-    {"store": "Collectible", "urls": ["https://collectible.no/pokemon-kort/"]},
+    # FEIL SIDE I FLERE MAANEDER.
+    #
+    # /pokemon-kort/ er landingssiden for ENKELTKORT -- en marketingside
+    # full av karuseller («Utvalgte», «High-end», «Nylig lagt til») som
+    # viser de samme varene om igjen. Den brukte 284 sekunder, en tredjedel
+    # av hele skannerunden, paa aa hente 105 enkeltkort som ingest kaster
+    # med én gang. Vi har hatt NULL forseglede varer fra en av de storste
+    # butikkene.
+    #
+    # Siden sier det rett ut selv: «Booster pakker og bokser finner du her»
+    # -- og peker hit. Det er det Pokepuls handler om.
+    {"store": "Collectible", "urls": [
+        "https://collectible.no/pokemon-boosters/",
+        "https://collectible.no/pokemon-collector-trainer-boxes/",
+        "https://collectible.no/pokemon-theme-decks/",
+        "https://collectible.no/pokemon-tins/",
+    ]},
     {"store": "Gameninja", "urls": ["https://www.gameninja.no/produktkategori/samlekortspill/pokemon/"]},
     {"store": "Kanoncon", "urls": ["https://www.kanoncon.no/avdeling/tcg/pokemon/"]},
     # Bruker den brede foreldrekategorien ("pokemon"), ikke den smale
@@ -1125,6 +1132,17 @@ UNDER_UTPROVING: list[dict] = []
 # under "Sjekk manuelt" i stedet for a late som om vi har fersk lagerdata
 # fra dem.
 MANUAL_CHECK_STORES = [
+    {
+        "store": "Ark",
+        "url": "https://www.ark.no/merkevarer/pokemon",
+        "reason": "ark.no bygger sidene med genererte klassenavn"
+                  " (_1ys6fhp0, atzik1) som endrer seg ved hver deploy, og"
+                  " produktkortene har ingen stabil data-testid aa feste seg"
+                  " i. En skraper mot den siden ville vaert i stykker igjen"
+                  " neste gang de deployer. Ark er dessuten en bokhandel der"
+                  " Pokemon er en liten hylle -- vi lenker heller direkte enn"
+                  " aa late som om vi har ferske tall.",
+    },
     {
         "store": "Norli",
         "url": "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort",
