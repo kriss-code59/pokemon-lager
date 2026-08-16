@@ -853,6 +853,44 @@ def _hva_staar_paa_siden(page, store: str) -> None:
         if n:
             print(f"[{store}]   {velger}: {n}")
 
+    # LENKENE ER STABILE NAAR KLASSENAVNENE IKKE ER DET.
+    #
+    # Ark ga oss ['_1ys6fhp0', '_2vkvse0', 'atzik1'] -- hashede navn fra
+    # byggeverktoyet. De er ubrukelige som feste, og de endrer seg hver gang
+    # butikken deployer. Da hjelper det ikke aa liste dem.
+    #
+    # Men hvert produktkort inneholder en lenke til en produktside, og den
+    # stien velger butikken selv: /produkt/, /p/, /vare/. Den staar i ro.
+    # Teller vi hvor lenkene peker, ser vi hvor produktene er uansett hva
+    # CSS-en heter.
+    try:
+        stier = page.evaluate(
+            "() => { const t = {};"
+            " document.querySelectorAll('a[href]').forEach(a => {"
+            "   try { const d = new URL(a.href, location.href);"
+            "     if (d.host !== location.host) return;"
+            "     const b = '/' + d.pathname.split('/').filter(Boolean).slice(0, 2).join('/');"
+            "     t[b] = (t[b] || 0) + 1; } catch (e) {} });"
+            " return Object.entries(t).sort((a,b) => b[1]-a[1]).slice(0, 12)"
+            ".map(([c,n]) => c + ':' + n); }")
+        print(f"[{store}]   lenker per sti: {stier}")
+    except Exception:
+        pass
+
+    # data-testid overlever ofte en omskriving av CSS-en, fordi den finnes
+    # for testenes skyld og ikke for utseendet.
+    try:
+        testid = page.eval_on_selector_all(
+            "[data-testid]",
+            "els => { const t = {}; els.forEach(e => { const v ="
+            " e.getAttribute('data-testid'); t[v] = (t[v]||0)+1; });"
+            " return Object.entries(t).sort((a,b) => b[1]-a[1]).slice(0, 10)"
+            ".map(([c,n]) => c + ':' + n); }")
+        if testid:
+            print(f"[{store}]   data-testid: {testid}")
+    except Exception:
+        pass
+
     try:
         klasser = page.evaluate(
             "() => { const t = {}; document.querySelectorAll('[class]').forEach("

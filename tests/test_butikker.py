@@ -873,3 +873,22 @@ def test_diagnosen_defineres_for_den_brukes():
     for kall in ("_hva_staar_paa_siden(page, store)",
                  '_hva_staar_paa_siden(page, site["store"])'):
         assert d < kilde.index(kall), f"{kall} kommer for definisjonen"
+
+
+def test_diagnosen_teller_lenker_ikke_bare_klassenavn():
+    """Ark ga ['_1ys6fhp0', '_2vkvse0', 'atzik1'] -- hashede klassenavn fra
+    byggeverktoyet. De er ubrukelige som feste og endrer seg ved hver
+    deploy. Ingen av kandidatselektorene traff, ikke engang `article`.
+
+    Men hvert produktkort inneholder en lenke til en produktside, og den
+    stien velger butikken selv: /produkt/, /p/, /vare/. Den staar i ro
+    uansett hva CSS-en heter.
+    """
+    kilde = (ROT / "scrape.py").read_text(encoding="utf-8")
+    i = kilde.index("def _hva_staar_paa_siden")
+    kropp = kilde[i:kilde.index("\ndef ", i + 10)]
+    assert "lenker per sti" in kropp
+    assert "data-testid" in kropp
+    # Bare lenker paa samme domene -- ellers drukner det i Facebook,
+    # Instagram og betalingslogoer.
+    assert "d.host !== location.host" in kropp
