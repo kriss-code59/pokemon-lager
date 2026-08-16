@@ -343,12 +343,24 @@ def monter(app, hent_pool):
     # ------------------------------------------------------ butikkoversikt
 
     BUTIKKER_SQL = """
+    -- FRISKHETSFILTERET MAA GJELDE ALLE TRE TALLENE.
+    --
+    -- `varer` filtrerte paa siste sju dogn. `inne` og `billigst` gjorde det
+    -- ikke. Derfor sto Emken med «17 varer» og «41 inne» -- flere paa lager
+    -- enn butikken hadde varer.
+    --
+    -- Verre enn at det ser rart ut: «inne» talte oppforinger vi ikke har
+    -- sett paa uker, og «billigst» kunne vise en pris fra en vare som ikke
+    -- har eksistert siden juni. Det er den slags tall folk stoler paa naar
+    -- de velger butikk.
     SELECT s.id, s.name,
            count(l.id) FILTER (WHERE l.last_seen_at > now() - interval '7 days')
              AS varer,
-           count(l.id) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL)
+           count(l.id) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL
+                               AND l.last_seen_at > now() - interval '7 days')
              AS inne,
-           min(l.price_ore) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL)
+           min(l.price_ore) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL
+                                    AND l.last_seen_at > now() - interval '7 days')
              AS billigst,
            max(l.last_ok_at) AS sist
     FROM stores s LEFT JOIN listings l ON l.store_id = s.id

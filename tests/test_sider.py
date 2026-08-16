@@ -195,3 +195,29 @@ def test_nginx_faller_tilbake_naar_api_et_er_nede():
     # slaar av ALLE arvede.
     i = konf.index("location @forside_statisk")
     assert "Content-Security-Policy" in konf[i:i + 1200]
+
+
+def test_bare_én_adresse_for_nettstedet():
+    """Malt mot produksjon: bade pokepuls.no og www.pokepuls.no svarte 200
+    med hele nettstedet. Google saa to komplette kopier og maatte gjette --
+    lenker, autoritet og kravlebudsjett delt paa to.
+
+    Canonical-taggen peker riktig, men den er et HINT. En 301 er en regel.
+    """
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    assert "if ($host = www.pokepuls.no)" in konf
+    assert "return 301 https://pokepuls.no$request_uri;" in konf
+
+
+def test_friskhetsfilteret_gjelder_alle_tallene():
+    """Emken sto med «17 varer» og «41 inne» -- flere paa lager enn
+    butikken hadde varer.
+
+    `varer` filtrerte paa siste sju dogn, `inne` og `billigst` gjorde det
+    ikke. Da talte «inne» oppforinger vi ikke hadde sett paa uker, og
+    «billigst» kunne vise prisen paa en vare som ikke fantes lenger.
+    """
+    i = KILDE.index("BUTIKKER_SQL")
+    sql = KILDE[i:KILDE.index('"""', KILDE.index('"""', i) + 3)]
+    # Tre tall, tre friskhetsfiltre.
+    assert sql.count("last_seen_at > now() - interval '7 days'") == 3
