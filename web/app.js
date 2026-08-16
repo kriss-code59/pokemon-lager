@@ -343,6 +343,13 @@ function tegnProdukter() {
  * dag uansett hva som har skjedd. Det du apner appen for a se, er hva som
  * er nytt -- sa det ligger overst. Sett uten aktivitet beholder sin
  * innbyrdes rekkefolge under. */
+/* Slippdato for en bolk, som tall. Sett uten dato havner sist -- ikke
+ * oeverst med tiden 0, som ville gjort ukjente sett til de nyeste. */
+function slippTid(bolk) {
+  const d = state.slipp.get(bolk.produkter[0].set_id);
+  return d ? new Date(d).getTime() : -Infinity;
+}
+
 function grupperHtml(treff) {
   const grupper = new Map();
   for (const p of treff) {
@@ -351,13 +358,34 @@ function grupperHtml(treff) {
     grupper.get(nokkel).push(p);
   }
 
-  const bolker = [...grupper.values()].map((produkter, i) => ({
-    produkter,
-    // Ferskeste hendelse i bolken. 0 = ingen aktivitet vi vet om.
-    tid: Math.max(...produkter.map((p) =>
-      p.sist_hendelse ? new Date(p.sist_hendelse).getTime() : 0)),
-    i,
-  }));
+  const NYLIG = 7 * 24 * 3600 * 1000;
+  const na = Date.now();
+
+  const bolker = [...grupper.values()].map((produkter, i) => {
+    const tid = Math.max(...produkter.map((p) =>
+      p.sist_hendelse ? new Date(p.sist_hendelse).getTime() : 0));
+    return {
+      produkter,
+      tid,
+      // TRE NIVAAER, IKKE ÉN TIDSSTEMPEL.
+      //
+      // For sorterte bolkene bare paa ferskeste hendelse. Da kunne et doedt
+      // sett med én prisendring paa én obskur vare ligge over et sett med
+      // tjue varer inne hos ti butikker. Du apner appen for aa se hva du
+      // kan kjope -- et sett du ikke kan kjope noe fra er ikke svaret,
+      // uansett hvor nylig noe skjedde med det.
+      //
+      // 2 = noe er paa lager naa
+      // 1 = kan forhaandsbestilles
+      // 0 = ingenting aa faa
+      niva: produkter.some((p) => Number(p.antall_pa_lager)) ? 2
+          : produkter.some((p) => Number(p.antall_forhandssalg)) ? 1 : 0,
+      // Aktivitet teller bare hvis den er fersk. En restock fra i mars sier
+      // ingenting om i dag, og lot gamle sett ligge oeverst i maanedsvis.
+      fersk: tid && (na - tid) < NYLIG ? tid : 0,
+      i,
+    };
+  });
   // Stabil sortering: like verdier beholder opprinnelig rekkefolge (som er
   // alfabetisk fra API-et). Array.prototype.sort er stabil i alle nettlesere
   // vi bryr oss om, men vi tar med `i` sa det ikke er noe a lure pa.
@@ -365,17 +393,20 @@ function grupperHtml(treff) {
     // NYESTE SETT FORST. Et sett uten slippdato i katalogen havner sist --
     // ikke overst med tiden 0, som ville gitt en liste der ukjente sett
     // fortrengte dem vi faktisk vet naar kom.
-    for (const b of bolker) {
-      const d = state.slipp.get(b.produkter[0].set_id);
-      b.slipp = d ? new Date(d).getTime() : -Infinity;
-    }
-    bolker.sort((a, b) => (b.slipp - a.slipp) || (a.i - b.i));
+    bolker.sort((a, b) => (slippTid(b) - slippTid(a)) || (a.i - b.i));
   } else if (state.sortering === "navn") {
     bolker.sort((a, b) =>
       a.produkter[0].set_label.localeCompare(b.produkter[0].set_label, "nb") ||
       (a.i - b.i));
   } else {
-    bolker.sort((a, b) => (b.tid - a.tid) || (a.i - b.i));
+    // Kan du faa tak i det? Skjedde det noe nylig? Er settet nytt?
+    // -- i den rekkefolgen. Siste ledd (a.i - b.i) holder alfabetisk
+    // rekkefolge fra API-et for alt som ellers er likt.
+    bolker.sort((a, b) =>
+      (b.niva - a.niva) ||
+      (b.fersk - a.fersk) ||
+      (slippTid(b) - slippTid(a)) ||
+      (a.i - b.i));
   }
 
   let html = "";

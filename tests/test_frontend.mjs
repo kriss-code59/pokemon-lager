@@ -1078,9 +1078,12 @@ test("sorteringsvalget finnes og husker seg selv", () => {
 test("sett uten slippdato havner sist, ikke overst", () => {
   // Med tiden 0 ville sett vi ikke vet slippdato paa fortrengt dem vi
   // faktisk vet naar kom -- i en sortering som heter «Slippdato».
+  //
+  // Testen sto tidligere og lette inne i sorteringsblokken. Regelen bor
+  // ETT sted naa, saa den maales der den bor.
   const js = les("app.js");
-  const i = js.indexOf('state.sortering === "slipp"');
-  const kropp = js.slice(i, i + 500);
+  const i = js.indexOf("function slippTid");
+  const kropp = js.slice(i, js.indexOf("function grupperHtml", i));
   assert.match(kropp, /-Infinity/);
 });
 
@@ -1088,6 +1091,44 @@ test("sorteringen bruker slippdatoene fra katalogen", () => {
   // Ikke datoer skrevet inn i denne filen. Neste sett krever da én rad i
   // katalogen og ingen endring i frontenden.
   const js = les("app.js");
-  const i = js.indexOf('state.sortering === "slipp"');
-  assert.match(js.slice(i, i + 400), /state\.slipp\.get/);
+  const i = js.indexOf("function slippTid");
+  assert.match(js.slice(i, js.indexOf("function grupperHtml", i)),
+               /state\.slipp\.get/);
+});
+
+/* ----------------------------------------- standardrekkefolgen paa settene */
+
+test("sett du kan kjope noe fra ligger over sett du ikke kan", () => {
+  // For sorterte bolkene bare paa ferskeste hendelse. Da kunne et doedt
+  // sett med én prisendring paa én obskur vare ligge over et sett med tjue
+  // varer inne hos ti butikker.
+  const js = les("app.js");
+  const i = js.indexOf("function grupperHtml");
+  const kropp = js.slice(i, js.indexOf("\n/* Billigste butikk", i));
+  assert.match(kropp, /niva:/);
+  assert.match(kropp, /antall_pa_lager/);
+  assert.match(kropp, /antall_forhandssalg/);
+  // Nivaa maa veie tyngst i sammenligningen.
+  const sort = kropp.slice(kropp.indexOf("bolker.sort((a, b) =>\n      (b.niva"));
+  assert.ok(sort.indexOf("b.niva") < sort.indexOf("b.fersk"));
+});
+
+test("gammel aktivitet fortrenger ikke nye sett", () => {
+  // En restock fra i mars sier ingenting om i dag, og lot gamle sett ligge
+  // oeverst i maanedsvis.
+  const js = les("app.js");
+  const i = js.indexOf("function grupperHtml");
+  const kropp = js.slice(i, i + 2500);
+  assert.match(kropp, /const NYLIG = 7 \* 24 \* 3600 \* 1000/);
+  assert.match(kropp, /fersk: tid && \(na - tid\) < NYLIG \? tid : 0/);
+});
+
+test("slippdato leses ett sted, ikke to", () => {
+  // Regelen om at sett uten dato skal havne SIST laa duplisert. To kopier
+  // av samme regel er én kopi som blir glemt.
+  const js = les("app.js");
+  assert.match(js, /function slippTid\(bolk\)/);
+  assert.equal((js.match(/-Infinity/g) || []).length, 1);
+  assert.ok((js.match(/slippTid\(/g) || []).length >= 3,
+            "hjelperen brukes ikke fra begge sorteringene");
 });

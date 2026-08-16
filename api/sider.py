@@ -142,7 +142,7 @@ def _e(s):
 #
 # Testen tests/test_sider.py binder dette tallet til sw.js, saa de to ikke
 # kan gaa fra hverandre igjen uten at noe blir rodt.
-CSS_V = 26
+CSS_V = 27
 
 
 # Hvem nettstedet er. Google bruker den til aa knytte sammen treff fra samme
