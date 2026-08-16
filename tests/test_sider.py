@@ -221,3 +221,28 @@ def test_friskhetsfilteret_gjelder_alle_tallene():
     sql = KILDE[i:KILDE.index('"""', KILDE.index('"""', i) + 3)]
     # Tre tall, tre friskhetsfiltre.
     assert sql.count("last_seen_at > now() - interval '7 days'") == 3
+
+
+def test_google_verifiseringsfilen_ligger_der():
+    """Search Console-tilgangen henger paa denne ene filen.
+
+    Forsvinner den -- ved en opprydding, en flytting av web/, en .gitignore
+    som blir litt for ivrig -- mister vi tilgangen til de eneste ekte
+    tallene vi har paa hvordan Pokepuls gjor det i soek. Og vi merker det
+    ikke, for nettstedet virker fint uten den.
+    """
+    fil = ROT / "web" / "google8e11db2d0c64d7f6.html"
+    assert fil.exists(), "Google-verifiseringen er borte"
+    # Google sammenligner innholdet, ikke bare filnavnet.
+    assert fil.read_text(encoding="utf-8").strip() == \
+        "google-site-verification: google8e11db2d0c64d7f6.html"
+
+
+def test_robots_stenger_ikke_verifiseringen_ute():
+    # Disallow paa noe som dekker filen ville gjort verifiseringen umulig
+    # aa gjennomfore, uten at noe annet sluttet aa virke.
+    i = KILDE.index("async def robots")
+    kropp = KILDE[i:i + 900]
+    for sti in ('"Disallow: /admin', '"Disallow: /api/'):
+        assert sti in kropp
+    assert kropp.count("Disallow:") == 2, "nye Disallow-regler -- sjekk filen"
