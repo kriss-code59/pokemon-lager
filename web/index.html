@@ -18,11 +18,24 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Pokepuls – priser og lagerstatus på Pokémon-kort i Norge">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Pokepuls","url":"https://pokepuls.no/","inLanguage":"nb-NO","description":"Priser og lagerstatus på forseglede Pokémon-produkter hos norske butikker.","potentialAction":{"@type":"SearchAction","target":"https://pokepuls.no/?sok={search_term_string}","query-input":"required name=search_term_string"}}</script>
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/ikon.svg">
 <link rel="stylesheet" href="/style.css?v=26">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","@id":"https://pokepuls.no/#nettsted","name":"Pokepuls",
+  "url":"https://pokepuls.no/","inLanguage":"nb-NO",
+  "potentialAction":{"@type":"SearchAction",
+   "target":{"@type":"EntryPoint","urlTemplate":"https://pokepuls.no/?sok={search_term_string}"},
+   "query-input":"required name=search_term_string"}},
+ {"@type":"WebApplication","name":"Pokepuls",
+  "url":"https://pokepuls.no/","applicationCategory":"ShoppingApplication",
+  "operatingSystem":"Web",
+  "description":"Pris og lagerstatus p\u00e5 forseglede Pok\u00e9mon-produkter hos over 40 norske nettbutikker, med push-varsel n\u00e5r noe kommer inn.",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}
+]}
+</script>
 </head>
 <body>
 

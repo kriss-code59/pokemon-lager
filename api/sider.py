@@ -59,6 +59,33 @@ ORDER BY (l.in_stock AND l.bestillingstype IS NULL) DESC NULLS LAST,
          l.in_stock DESC NULLS LAST, l.price_ore NULLS LAST
 """
 
+# Andre produkter i samme sett.
+#
+# HVORFOR DETTE ER SEO OG IKKE PYNT
+#
+# Produktsidene laa som oyer: sitemap inn, ingen lenker mellom dem. En
+# soekemotor maatte tilbake til sitemap for hver eneste side, og ingen side
+# gav noen annen side vekt. Interne lenker er det billigste som finnes for
+# aa faa dype sider indeksert -- og for et menneske som ser paa en ETB er
+# «hva annet finnes i dette settet» uansett neste spoersmaal.
+#
+# Bare produkter vi faktisk har en oppforing paa. En lenke til en tom side
+# er verre enn ingen lenke.
+SOSKEN_SQL = """
+SELECT p.id, s.label AS set_label, t.label AS type_label, p.region,
+       count(*) FILTER (WHERE l.in_stock) AS inne
+FROM products p
+JOIN sets s ON s.id = p.set_id
+JOIN product_types t ON t.id = p.type_id
+JOIN listings l ON l.product_id = p.id
+WHERE p.set_id = (SELECT set_id FROM products WHERE id = %s)
+  AND p.id <> %s
+  AND l.last_seen_at > now() - interval '14 days'
+GROUP BY p.id, s.label, t.label, p.region
+ORDER BY count(*) FILTER (WHERE l.in_stock) DESC, t.label
+LIMIT 12
+"""
+
 # Hva merkelappen skal si. Speiler katalog/tilgjengelighet.py.
 BESTILLING_ORD = {"forhandssalg": "Forhåndssalg", "bestillingsvare": "Bestillingsvare"}
 
@@ -75,10 +102,42 @@ def _e(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
 
-def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld: dict | None,
+# Cacheversjonen paa CSS-en. Den sto hardkodet her og hadde drevet fra
+# resten av nettstedet -- serverrendrede sider ba om v24 mens alt annet var
+# paa v26. Den slags oppdager ingen: siden ser riktig ut, den er bare gammel.
+#
+# Testen tests/test_sider.py binder dette tallet til sw.js, saa de to ikke
+# kan gaa fra hverandre igjen uten at noe blir rodt.
+CSS_V = 26
+
+
+# Hvem nettstedet er. Google bruker den til aa knytte sammen treff fra samme
+# avsender, og til aa vise sokefeltet «sok paa pokepuls.no» rett i resultatet.
+NETTSTED_LD = {
+    "@type": "WebSite",
+    "@id": "https://pokepuls.no/#nettsted",
+    "name": "Pokepuls",
+    "url": "https://pokepuls.no/",
+    "inLanguage": "nb-NO",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": {"@type": "EntryPoint",
+                   "urlTemplate": "https://pokepuls.no/?sok={search_term_string}"},
+        "query-input": "required name=search_term_string",
+    },
+}
+
+
+def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld=None,
               bilde: str | None = None) -> str:
+    # Alt legges i én @graph. To losrevne script-blokker er lovlig, men da
+    # maa Google gjette at de handler om samme side -- i en graf staar det.
+    graf = [NETTSTED_LD]
+    if jsonld:
+        graf += jsonld if isinstance(jsonld, list) else [jsonld]
     ld = ('<script type="application/ld+json">%s</script>'
-          % json.dumps(jsonld, ensure_ascii=False)) if jsonld else ""
+          % json.dumps({"@context": "https://schema.org", "@graph": graf},
+                       ensure_ascii=False))
     og_bilde = f'<meta property="og:image" content="{_e(bilde)}">' if bilde else ""
     return f"""<!DOCTYPE html>
 <html lang="no"><head>
@@ -97,7 +156,7 @@ def _sidehode(tittel: str, beskrivelse: str, kanonisk: str, jsonld: dict | None,
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=24">
+<link rel="stylesheet" href="/style.css?v={CSS_V}">
 {ld}
 </head><body class="side">"""
 
@@ -138,14 +197,16 @@ def _svar_html(request, html: str) -> Response:
 
 
 def _ikke_funnet() -> str:
-    return """<!DOCTYPE html>
+    # f-streng: den eneste klammen i teksten er {CSS_V}. Uten f-en sto
+    # «?v={CSS_V}» ordrett i HTML-en -- og den ville aldri lastet CSS.
+    return f"""<!DOCTYPE html>
 <html lang="no"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0d10">
 <meta name="robots" content="noindex">
 <title>Fant ikke varen – Pokepuls</title>
-<link rel="stylesheet" href="/style.css?v=24">
+<link rel="stylesheet" href="/style.css?v={CSS_V}">
 </head><body class="side">
 <main class="side-innhold">
   <h1>Vi fant ikke den varen</h1>
@@ -255,7 +316,17 @@ def monter(app, hent_pool):
             f"Pokepuls f\u00f8lger {len(aktive)} norske nettbutikker som selger "
             f"forseglede Pok\u00e9mon-produkter. Se hvem som har mest inne n\u00e5, "
             "og hvor det er billigst.",
-            BASE + "/butikker", None)
+            BASE + "/butikker",
+            {
+                "@type": "ItemList",
+                "name": "Norske nettbutikker med Pok\u00e9mon-produkter",
+                "numberOfItems": len(aktive),
+                "itemListElement": [
+                    {"@type": "ListItem", "position": i + 1,
+                     "item": {"@type": "Organization", "name": r["name"]}}
+                    for i, r in enumerate(aktive[:50])
+                ],
+            })
         html += "<main class=\"side-innhold\"><h1>Butikkene vi f\u00f8lger</h1>"
         html += (f'<p class="side-under">{len(aktive)} norske nettbutikker '
                  f"\u00b7 {totalt_inne} varer p\u00e5 lager akkurat n\u00e5</p>")
@@ -326,7 +397,17 @@ def monter(app, hent_pool):
             "Slippkalender for Pok\u00e9mon-kort \u2013 kommende sett | Pokepuls",
             "N\u00e5r slippes de neste Pok\u00e9mon-settene, og hvilke norske butikker "
             "har \u00e5pnet for forh\u00e5ndsbestilling? Oppdateres automatisk.",
-            BASE + "/kalender", None)
+            BASE + "/kalender",
+            {
+                "@type": "ItemList",
+                "name": "Kommende Pok\u00e9mon-sett",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": i + 1,
+                     "item": {"@type": "Product", "name": r["label"],
+                              "releaseDate": str(r["release_date"])}}
+                    for i, r in enumerate(kommende[:25])
+                ],
+            })
         html += "<main class=\"side-innhold\"><h1>Slippkalender</h1>"
         html += ("<p>N\u00e5r de neste settene kommer, og hvor langt de norske "
                  "butikkene har kommet med forh\u00e5ndssalg. F\u00f8lg et sett i appen, "
@@ -388,7 +469,6 @@ def monter(app, hent_pool):
 
         # JSON-LD: dette er det som gir pris og «på lager» rett i Google-treffet.
         jsonld = {
-            "@context": "https://schema.org",
             "@type": "Product",
             "name": navn,
             "description": besk,
@@ -423,6 +503,21 @@ def monter(app, hent_pool):
                     "seller": {"@type": "Organization", "name": t["store_name"]},
                 } for t in tilbud[:20] if t["price_ore"]],
             }
+
+        # Brodsmuler. Google viser dem i stedet for den raa adressen i
+        # treffet, og de forteller hvor siden hoerer hjemme.
+        jsonld = [jsonld, {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Pokepuls",
+                 "item": BASE + "/"},
+                {"@type": "ListItem", "position": 2,
+                 "name": p["set_label"], "item": f"{BASE}/p/{produkt_id}"},
+                {"@type": "ListItem", "position": 3, "name": navn},
+            ],
+        }]
+
+        sosken = await _hent(SOSKEN_SQL, produkt_id, produkt_id)
 
         def rad(t):
             return (f'<li class="side-tilbud">'
@@ -471,6 +566,22 @@ def monter(app, hent_pool):
         if ute:
             kropp.append("<h2>Utsolgt</h2><ul class=\"side-liste\">"
                          + "".join(rad(t) for t in ute) + "</ul>")
+
+        if sosken:
+            kropp.append(f'<h2>Mer fra {_e(p["set_label"])}</h2>'
+                         '<ul class="side-sosken">'
+                         + "".join(
+                             f'<li><a href="/p/{_e(r["id"])}">{_e(r["type_label"])}'
+                             + (f' ({_e(REGION_ORD.get(r["region"], ""))})'
+                                if r["region"] != "en" else "")
+                             + "</a>"
+                             + (f' <span class="side-sosken-inne">{r["inne"]} inne</span>'
+                                if r["inne"] else "")
+                             + "</li>" for r in sosken)
+                         + "</ul>")
+
+        kropp.append('<p class="side-mer"><a href="/butikker">Alle butikkene vi '
+                     'følger</a> · <a href="/kalender">Slippkalender</a></p>')
 
         kropp.append("</main>" + SIDEFOT)
         return Response("".join(kropp), media_type="text/html; charset=utf-8",

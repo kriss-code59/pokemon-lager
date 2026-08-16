@@ -635,3 +635,18 @@ body.admin .topp { position: static; }
   background-size: 10px;
 }
 .sorter-rad select:focus-visible { outline: 2px solid var(--gul); }
+
+
+/* Lenker til soesknene i samme sett. Ligger nederst paa produktsiden:
+   den som ikke fant det den lette etter, skal ha et sted aa gaa som ikke
+   er tilbakeknappen. */
+.side-sosken { list-style: none; padding: 0; margin: .5rem 0 1rem; }
+.side-sosken li {
+  display: flex; align-items: baseline; gap: .5rem;
+  padding: 9px 0; border-bottom: 1px solid var(--kant);
+}
+.side-sosken a { color: var(--tekst); text-decoration: none; }
+.side-sosken a:hover { text-decoration: underline; }
+.side-sosken-inne { font-size: 12px; color: var(--gronn); }
+.side-mer { font-size: 13px; color: var(--tekst-svak); margin-top: 1.2rem; }
+.side-mer a { color: var(--tekst-svak); }
