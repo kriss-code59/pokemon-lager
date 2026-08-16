@@ -23,17 +23,51 @@ from __future__ import annotations
 import html
 import json
 from datetime import datetime, timezone
+from pathlib import Path
 
-from fastapi import APIRouter, Request, Response
+from fastapi import APIRouter, HTTPException, Request, Response
 
 router = APIRouter(tags=["sider"])
 
 BASE = "https://pokepuls.no"
+_ROT = Path(__file__).resolve().parent.parent
 REGION_ORD = {"en": "engelsk", "jp": "japansk", "cn": "kinesisk", "ko": "koreansk"}
 
 # Bare produkter med ekte tilbud kommer i sidekartet. Aa be Google indeksere
 # 460 sider der halvparten er tomme er en rask maate aa laere den at
 # domenet ikke er verdt aa krype.
+# Forsiden, serverrendret.
+#
+# HVORFOR
+#
+# Forsiden var et JavaScript-skall. Det forste en soekemotor saa var ordet
+# «laster…». Produktsidene og oversiktene rangerte, men SELVE forsiden --
+# den folk lenker til, og den som skal treffe «pokemon kort pa lager norge»
+# -- hadde ingen tekst i det hele tatt.
+#
+# Google kjorer riktignok JavaScript, men det skjer i en egen ko, dager
+# senere, og det rangerer daarligere. Konkurrentene serverer ferdig HTML.
+#
+# To dagers vindu: en vare som ikke er sett paa to dogn hoerer ikke hjemme
+# paa forsiden uansett hvor fin den ser ut i databasen.
+FORSIDE_SQL = """
+SELECT p.id, s.label AS set_label, p.region, t.label AS type_label,
+       s.release_date,
+       min(l.price_ore) FILTER (
+         WHERE l.in_stock AND l.bestillingstype IS NULL) AS pris,
+       count(*) FILTER (
+         WHERE l.in_stock AND l.bestillingstype IS NULL) AS butikker
+FROM products p
+JOIN sets s ON s.id = p.set_id
+JOIN product_types t ON t.id = p.type_id
+JOIN listings l ON l.product_id = p.id
+WHERE l.last_seen_at > now() - interval '2 days'
+GROUP BY p.id, s.label, p.region, t.label, s.release_date, t.sort_order
+HAVING count(*) FILTER (WHERE l.in_stock AND l.bestillingstype IS NULL) > 0
+ORDER BY s.release_date DESC NULLS LAST, s.label, t.sort_order
+LIMIT 150
+"""
+
 SITEMAP_SQL = """
 SELECT p.id, max(l.last_seen_at) AS endret,
        count(*) FILTER (WHERE l.in_stock) AS inne
@@ -126,6 +160,27 @@ NETTSTED_LD = {
         "query-input": "required name=search_term_string",
     },
 }
+
+
+_SKALL: dict = {"mtid": None, "html": ""}
+
+
+def _skallet() -> str:
+    """web/index.html, lest fra disk og hurtiglagret paa endringstidspunkt.
+
+    ÉN kilde til forsidens skall. Kopierte vi HTML-en inn i Python, ville vi
+    hatt to forsider aa holde i takt -- og den ene ville blitt glemt neste
+    gang noen la til en fane.
+    """
+    fil = _ROT / "web" / "index.html"
+    try:
+        mtid = fil.stat().st_mtime
+    except OSError:
+        return ""
+    if _SKALL["mtid"] != mtid:
+        _SKALL["html"] = fil.read_text(encoding="utf-8")
+        _SKALL["mtid"] = mtid
+    return _SKALL["html"]
 
 
 def _dager_siden(tid) -> str:
@@ -384,6 +439,70 @@ def monter(app, hent_pool):
         html += ('<p><a class="hovedknapp smal" href="/">Se alle produktene</a></p>'
                  "</main>")
         return _svar_html(request, html)
+
+    # ------------------------------------------------------------- forsiden
+
+    @router.get("/")
+    async def forside(request: Request):
+        """Forsiden med ekte innhold i HTML-en.
+
+        Appen tar over saa snart app.js har kjort -- den skriver over bade
+        #teller og #liste med ferske tall fra API-et. Det som staar her er
+        altsaa forstevisningen og det soekemotoren leser, og de to viser det
+        SAMME: samme varer, samme priser, samme butikkantall.
+
+        Det er ikke en detalj. Serverer man én ting til Google og en annen
+        til folk, heter det cloaking, og det er en av de faa tingene som gir
+        manuell straff.
+        """
+        skall = _skallet()
+        if not skall:
+            # Uten skallet har vi ingenting aa injisere i. Da er det bedre
+            # at nginx serverer filen selv enn at vi finner paa noe.
+            raise HTTPException(503, "Forsiden er ikke tilgjengelig.")
+
+        rader = await _hent(FORSIDE_SQL)
+
+        # Grupper paa sett OG region -- ellers havner den engelske, japanske
+        # og kinesiske utgaven av samme sett i samme bolk, og listen ser ut
+        # til aa vise «Booster Box» tre ganger uten forklaring.
+        bolker: dict[tuple, list] = {}
+        for r in rader:
+            bolker.setdefault((r["set_label"], r["region"]), []).append(r)
+
+        biter = []
+        for (sett, region), varer in bolker.items():
+            merke = ("" if region == "en"
+                     else f' <span class="merkelapp {_e(region)}">'
+                          f'{_e(REGION_ORD.get(region, region))}</span>')
+            biter.append(f'<div class="sett-tittel">{_e(sett)}{merke}</div>')
+            for v in varer:
+                pris = _kr(v["pris"]) or "\u2013"
+                butikker = v["butikker"]
+                biter.append(
+                    f'<a class="kort" href="/p/{_e(v["id"])}">'
+                    f'<span class="kort-venstre">'
+                    f'<span class="kort-navn">{_e(v["type_label"])}</span>'
+                    f'<span class="kort-under">{butikker} '
+                    f'butikk{"er" if butikker != 1 else ""} p\u00e5 lager</span>'
+                    f'</span>'
+                    f'<span class="kort-pris">{_e(pris)}</span></a>')
+
+        antall = len(rader)
+        teller = (f"{antall} forseglede Pok\u00e9mon-produkter er p\u00e5 lager hos "
+                  f"norske nettbutikker akkurat n\u00e5. Prisene hentes automatisk "
+                  f"og oppdateres gjennom hele d\u00f8gnet.")
+
+        html = skall.replace(
+            '<p class="teller" id="teller"></p>',
+            f'<p class="teller" id="teller">{teller}</p>', 1)
+        html = html.replace(
+            '<div id="liste" class="liste"></div>',
+            '<div id="liste" class="liste">' + "".join(biter) + "</div>", 1)
+
+        return Response(html, media_type="text/html; charset=utf-8",
+                        headers={"Cache-Control": "public, max-age=60, "
+                                                  "stale-while-revalidate=600"})
 
     # --------------------------------------------------------- slippkalender
 
