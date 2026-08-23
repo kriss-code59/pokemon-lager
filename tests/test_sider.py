@@ -539,3 +539,37 @@ def test_rutenettet_viser_bildet_stort():
     # Kvadratisk ramme, ellers hopper radene i hoyde etter hvilke
     # pakkeskudd butikkene tilfeldigvis har.
     assert "aspect-ratio: 1 / 1" in css[css.index(".rutebilde {"):][:300]
+
+
+def test_bildene_sender_ikke_henviser():
+    """Bildene laa der -- 97 % dekning -- URL-ene svarte 200 fra serveren,
+    og likevel var rutene tomme i nettleseren.
+
+    Forskjellen er Referer: curl sender ingen, nettleseren sender
+    «https://pokepuls.no». Flere Shopify-butikker avviser fremmede
+    henvisere paa bilde-CDN-en sin.
+
+    Det var maalt, ikke gjettet: samme URL, 200 fra serveren, blank i
+    nettleseren. Uten henviser ser CDN-en et helt vanlig bildekall.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    # Alle tre stedene vi viser butikkbilder.
+    assert js.count('referrerpolicy="no-referrer"') >= 3
+
+
+def test_reservebildet_er_synlig_mot_ramma():
+    """Fyllet var #1b2027 -- noyaktig samme farge som .rutebilde bak.
+    Et bilde som feilet saa da ut som en tom boks, og det var umulig aa se
+    forskjell paa «mangler bilde» og «her er det ingenting».
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("function reservebilde")
+    # Strip kommentarene forst. Forklaringen paa hvorfor #1b2027 var feil
+    # inneholder naturligvis «#1b2027», og uten dette slaar testen ut paa
+    # sin egen begrunnelse -- for femte gang i dette prosjektet.
+    kropp = "\n".join(l for l in js[i:i + 1100].splitlines()
+                      if not l.lstrip().startswith("//"))
+    assert "#1b2027" not in kropp, "reservebildet er usynlig igjen"
+    css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
+    j = css.index(".rutebilde {")
+    assert "var(--flate-2)" in css[j:j + 300]

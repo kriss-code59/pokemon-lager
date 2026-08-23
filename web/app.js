@@ -132,7 +132,11 @@ function reservebilde(p) {
   const form = FORM[p.type_id] || '<rect x="16" y="20" width="32" height="26" rx="3"/>';
   const svg =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">' +
-    '<rect width="64" height="64" rx="10" fill="#1b2027"/>' +
+    // Fyllet var #1b2027 -- noyaktig samme farge som rammen bak i
+    // rutenettet. Et bilde som feilet saa da ut som en tom boks, og det
+    // var umulig aa se forskjell paa «mangler bilde» og «her er det
+    // ingenting». Litt lysere, saa silhuetten leses.
+    '<rect width="64" height="64" rx="10" fill="#232a33"/>' +
     '<g fill="none" stroke="' + farge + '" stroke-width="2.4" stroke-linejoin="round" opacity="0.85">' +
     form + "</g></svg>";
   return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
@@ -141,7 +145,17 @@ function reservebilde(p) {
 function bildeHtml(p, klasse) {
   const reserve = reservebilde(p);
   const src = p.bilde || reserve;
-  return '<img class="' + klasse + '" loading="lazy" decoding="async" alt="" ' +
+  // referrerpolicy="no-referrer" -- MAALT, IKKE GJETTET.
+  //
+  // Bildene laa der (97 % dekning), URL-ene svarte 200 fra serveren, og
+  // likevel var rutene tomme i nettleseren. Forskjellen er Referer:
+  // curl sender ingen, nettleseren sender «https://pokepuls.no».
+  // Flere Shopify-butikker avviser fremmede henvisere paa bilde-CDN-en.
+  //
+  // Uten henviser ser CDN-en et helt vanlig bildekall. Vi ber ikke om noe
+  // vi ikke har lov til -- vi slutter aa fortelle hvem som spor.
+  return '<img class="' + klasse + '" loading="lazy" decoding="async" ' +
+    'referrerpolicy="no-referrer" alt="" ' +
     'src="' + esc(src) + '" onerror="this.onerror=null;this.src=\'' + reserve + '\'">';
 }
 
@@ -287,7 +301,8 @@ function tegnRestockStripe() {
       // meg en runde -- b[0] ville gitt forste bokstav i butikknavnet.
       const butikk = billigsteButikk(p);
       return '<button class="stripe-rad" type="button" data-produkt="' + esc(p.id) + '">' +
-        '<img class="stripe-bilde" src="' + esc(p.bilde || reservebilde(p)) + '" alt="">' +
+        '<img class="stripe-bilde" referrerpolicy="no-referrer" src="' +
+          esc(p.bilde || reservebilde(p)) + '" alt="">' +
         '<span class="stripe-tekst"><span class="stripe-navn">' +
           esc(p.set_label) + " " + esc(p.type_label) + "</span>" +
         '<span class="stripe-meta">' + esc(butikk || "") +
@@ -675,7 +690,8 @@ async function apneProdukt(id) {
     const iSnapshot = state.produkter.find((x) => x.id === id) || p;
     const bilde = d.tilbud.find((t) => t.image_url);
     let h = '<div class="ark-topp">' +
-      (bilde ? '<img class="ark-bilde" src="' + esc(bilde.image_url) + '" alt="" ' +
+      (bilde ? '<img class="ark-bilde" referrerpolicy="no-referrer" ' +
+               'src="' + esc(bilde.image_url) + '" alt="" ' +
                "onerror=\"this.onerror=null;this.src='" + reservebilde(iSnapshot) + "'\">"
              : '<img class="ark-bilde" src="' + reservebilde(iSnapshot) + '" alt="">') +
       '<div class="ark-tekst"><h2>' + esc(p.set_label) + "</h2>" +
