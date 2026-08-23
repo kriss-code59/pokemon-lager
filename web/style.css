@@ -650,3 +650,111 @@ body.admin .topp { position: static; }
 .side-sosken-inne { font-size: 12px; color: var(--gronn); }
 .side-mer { font-size: 13px; color: var(--tekst-svak); margin-top: 1.2rem; }
 .side-mer a { color: var(--tekst-svak); }
+
+
+/* =====================================================================
+   TESTOMRAADE (/ny)
+   =====================================================================
+   Alt her er bak `body.ny`. Forsiden laster samme fil og ser den aldri.
+   Naar noe godkjennes, fjernes `.ny`-prefikset og reglene gjelder overalt.
+   ===================================================================== */
+
+/* Filterpanelet finnes i DOM-en paa forsiden ogsaa, men `display: contents`
+   gjor at det ikke finnes i LAYOUTEN -- barna oppforer seg som for. Det er
+   hele grunnen til at dagens side ikke endret seg med en piksel. */
+.filterpanel { display: contents; }
+
+body.ny .filterpanel {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 160ms ease-out;
+}
+body.ny .filterpanel.apent { max-height: 300px; overflow-x: auto; }
+
+body.ny .filterlinje {
+  display: flex; align-items: center; gap: 7px;
+  margin-top: 9px;
+  overflow-x: auto; scrollbar-width: none;
+}
+body.ny .filterlinje::-webkit-scrollbar { display: none; }
+
+.filterknapp {
+  display: flex; align-items: center; gap: 6px; flex: none;
+  background: var(--tekst); color: var(--bg);
+  border: 0; border-radius: 999px;
+  padding: 7px 14px; font-size: 13.5px; font-weight: 600;
+}
+.filterteller {
+  background: rgba(11, 13, 16, .22);
+  border-radius: 999px; padding: 1px 6px;
+  font-size: 11px; font-variant-numeric: tabular-nums;
+}
+.aktive-filtre { display: flex; gap: 7px; }
+.aktiv-chip {
+  display: flex; align-items: center; gap: 6px; flex: none;
+  background: var(--flate-2); border: 1px solid var(--kant);
+  border-radius: 999px; padding: 6px 10px 6px 12px;
+  font-size: 13px; white-space: nowrap;
+}
+.aktiv-chip button {
+  border: 0; background: none; padding: 0 2px;
+  color: var(--tekst-svak); font-size: 15px; line-height: 1;
+}
+
+/* --- restock-stripen: det eneste som haster --- */
+.stripe {
+  background: var(--flate-2);
+  border: 1px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.stripe-topp {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 9px;
+}
+.stripe-merke {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gronn);
+}
+.stripe-antall {
+  font-size: 11px; color: var(--tekst-svak);
+  font-variant-numeric: tabular-nums;
+}
+.stripe-rad {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  background: var(--flate); border: 1px solid var(--kant);
+  border-radius: 12px; padding: 8px;
+  margin-bottom: 7px; text-align: left; color: inherit;
+}
+.stripe-rad:last-child { margin-bottom: 0; }
+.stripe-bilde {
+  width: 34px; height: 44px; flex: none;
+  border-radius: 6px; object-fit: contain; background: var(--flate-2);
+}
+/* min-width: 0 -- uten den nekter flex-barnet aa krympe, og teksten
+   presser prisen ut av kortet i stedet for aa forkortes. */
+.stripe-tekst { flex: 1; min-width: 0; }
+.stripe-navn {
+  display: block; font-size: 13.5px; font-weight: 600;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.stripe-meta {
+  display: block; font-size: 11px; color: var(--tekst-svak);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.stripe-pris {
+  flex: none; font-size: 14px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+/* Ingenting inne: én stille linje. En tom fremhevet blokk roper like hoyt
+   som en full, og da slutter folk aa se paa den. */
+.stripe-stille {
+  font-size: 12px; color: var(--tekst-svak);
+  padding: 8px 2px 12px;
+}
+
+body.ny #tom-liste .lenkeknapp {
+  display: block; margin: 12px auto 0;
+}

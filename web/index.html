@@ -21,7 +21,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/ikon.svg">
-<link rel="stylesheet" href="/style.css?v=27">
+<link rel="stylesheet" href="/style.css?v=28">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"WebSite","@id":"https://pokepuls.no/#nettsted","name":"Pokepuls",
@@ -56,6 +56,19 @@
            placeholder="Søk etter sett, produkt eller butikk" aria-label="Søk">
     <button id="tom-sok" class="tom-sok" type="button" aria-label="Tøm søket" hidden>&times;</button>
   </div>
+  <!-- TESTOMRAADE: én filterknapp i stedet for radene.
+       Skjult paa forsiden, synlig paa /ny. Se app.js -> NY. -->
+  <div class="filterlinje" id="filterlinje" hidden>
+    <button class="filterknapp" id="knapp-filtre" type="button" aria-expanded="false">
+      Filtre<span class="filterteller" id="filterteller" hidden>0</span>
+    </button>
+    <div class="aktive-filtre" id="aktive-filtre"></div>
+  </div>
+
+  <!-- `display: contents` paa forsiden: beholderen finnes i DOM-en, men
+       ikke i layouten, saa dagens side ser noyaktig ut som for. Paa /ny
+       blir den et sammenleggbart panel. -->
+  <div class="filterpanel" id="filterpanel">
   <div class="sorter-rad">
     <label for="sortering">Sorter</label>
     <select id="sortering">
@@ -76,10 +89,13 @@
     <button class="chip" data-filter="type" data-verdi="bundle">Bundle</button>
     <button class="chip" data-filter="type" data-verdi="tin">Tin</button>
   </div>
+  </div>
 </header>
 
 <main id="innhold">
   <section id="fane-produkter" class="fane">
+    <!-- TESTOMRAADE: det eneste som haster paa siden. -->
+    <div id="restock-stripe" hidden></div>
     <div id="slipp-boks" hidden></div>
     <p class="teller" id="teller"></p>
     <div id="liste" class="liste"></div>
@@ -145,6 +161,6 @@
   <div id="ark-innhold"></div>
 </div>
 
-<script src="/app.js?v=27" type="module"></script>
+<script src="/app.js?v=28" type="module"></script>
 </body>
 </html>

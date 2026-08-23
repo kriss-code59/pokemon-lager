@@ -248,85 +248,99 @@ def test_robots_stenger_ikke_verifiseringen_ute():
     assert kropp.count("Disallow:") == 3, "nye Disallow-regler -- sjekk filen"
 
 
-# ------------------------------------------- forhandsvisning av nytt design
+# ---------------------------------------------------- testomraadet /ny
 
-def test_forhandsvisningen_rorer_ikke_dagens_side():
-    """Kristian vil se det nye designet for han bestemmer seg. Da maa
-    dagens side vaere noyaktig som for -- ellers vurderer han ikke to
-    alternativer, han vurderer én side i endring.
+def test_ny_er_samme_fil_som_forsiden():
+    """/ny serverer NOYAKTIG samme index.html. Forskjellen er et flagg i
+    app.js.
+
+    Alternativet var en kopi av appen. app.js er over 2000 linjer -- en
+    fork ville blitt to forsider aa holde i takt, og den ene ville blitt
+    glemt neste gang noen rettet en feil.
     """
-    for fil in ("ny.html", "ny.css", "ny.js"):
-        assert (ROT / "web" / fil).exists(), fil
-    # Ingen av de nye filene skal vaere lenket fra dagens app.
-    app = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    index = (ROT / "web" / "index.html").read_text(encoding="utf-8")
-    for kilde in (app, index):
-        assert "ny.css" not in kilde
-        assert "ny.js" not in kilde
-        assert '"/ny"' not in kilde
-
-
-def test_forhandsvisningen_holdes_ute_av_google():
-    """Den viser de samme varene som forsiden. To sider med samme innhold
-    konkurrerer med hverandre -- og den ene er en kladd.
-    """
-    html = (ROT / "web" / "ny.html").read_text(encoding="utf-8")
-    assert 'name="robots" content="noindex, nofollow"' in html
     konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
     i = konf.index("location = /ny {")
-    assert 'X-Robots-Tag "noindex, nofollow"' in konf[i:i + 1800]
+    blokk = konf[i:i + 1500]
+    assert "try_files /index.html =404;" in blokk
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert 'const NY = location.pathname === "/ny";' in js
+
+
+def test_forsiden_ser_ikke_testfunksjonene():
+    """Hele poenget: Kristian skal kunne prove noe uten at kundene merker
+    det. Alt nytt maa ligge bak flagget eller bak `body.ny` i CSS-en.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    # De tre nye funksjonene maa alle sjekke flagget for de gjor noe.
+    for fn in ("tegnRestockStripe", "tegnFilterlinje", "tegnTomListe"):
+        i = js.index("function " + fn)
+        kropp = js[i:i + 420]
+        assert "NY" in kropp, fn + " sjekker ikke flagget"
+
+    css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
+    i = css.index("TESTOMRAADE (/ny)")
+    # Filterpanelet er det ene unntaket: det MAA vaere display:contents paa
+    # forsiden, ellers endrer beholderen layouten der ogsaa.
+    assert ".filterpanel { display: contents; }" in css[i:]
+
+
+def test_testomraadet_holdes_ute_av_google():
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    i = konf.index("location = /ny {")
+    assert 'X-Robots-Tag "noindex, nofollow"' in konf[i:i + 1500]
     assert '"Disallow: /ny' in KILDE
 
 
-def test_skriftene_er_det_eneste_som_slipper_gjennom_csp():
-    """Designet bygger paa Space Grotesk og JetBrains Mono, og «er det
-    data, er det monospace» er hele karakteren i det. Med feil skrifter
-    ville vi vurdert noe annet enn det som ble tegnet.
+def test_posisjon_er_kun_tillatt_paa_ny():
+    """«Finn naermeste butikk» skal spore om posisjon. Da maa
+    Permissions-Policy tillate det -- men BARE der funksjonen finnes.
 
-    Men det gjelder BARE skriftene, og BARE denne adressen. script-src maa
-    staa urort paa 'self' -- en forhandsvisning er ikke en grunn til aa
-    lempe paa det som holder fremmed kode ute.
+    Resten av nettstedet skal fortsatt ha geolocation slaatt helt av.
     """
     konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    assert konf.count("geolocation=(self)") == 1, "posisjon aapnet flere steder"
     i = konf.index("location = /ny {")
-    blokk = konf[i:i + 1800]
-    assert "https://fonts.googleapis.com" in blokk
-    assert "https://fonts.gstatic.com" in blokk
-    assert "script-src 'self';" in blokk, "script-src er lempet paa"
-    # Og ingen andre locations skal ha faatt fremmede kilder.
-    assert konf.count("fonts.gstatic.com") == 1
+    assert "geolocation=(self)" in konf[i:i + 1500]
 
 
-def test_forhandsvisningen_bruker_ekte_data():
-    """Paa oppdiktede tall ville vi vurdert en tegning, ikke et produkt.
-    Det er naar en butikk heter «CollectorsCorner» og prisen er «12 999 kr»
-    at man ser om designet holder.
+def test_restockstripen_ser_bare_siste_time():
+    """En restock fra i gaar haster ikke, den er historikk -- og hoerer
+    hjemme i Nytt-fanen. Stripen mister all mening hvis den fylles med
+    gammelt.
     """
-    js = (ROT / "web" / "ny.js").read_text(encoding="utf-8")
-    for endepunkt in ('"/snapshot"', '"/catalog"', '"/product/"'):
-        assert endepunkt in js, endepunkt
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert "const STRIPE_VINDU_MS = 60 * 60 * 1000;" in js
+    i = js.index("function restockNylig")
+    kropp = js[i:i + 500]
+    assert "STRIPE_VINDU_MS" in kropp
+    assert "antall_pa_lager" in kropp, "tar med forhandssalg som restock"
 
 
-def test_begge_tettheter_finnes():
-    # Handoffen ber om et valg mellom 1a og 1b. Kristian valgte aa se
-    # begge paa ekte data for han bestemmer.
-    js = (ROT / "web" / "ny.js").read_text(encoding="utf-8")
-    css = (ROT / "web" / "ny.css").read_text(encoding="utf-8")
-    assert 'localStorage.getItem("pokepuls-ny-tetthet")' in js
-    assert ".liste.luftig" in css
-    assert ".liste.kompakt" in css
-
-
-def test_folging_krever_fortsatt_konto():
-    """Designet viste ett trykk uten konto. Det er push-abonnementet som
-    henger sammen med brukeren, og den loypa har betalende kunder i seg.
-    Utseendet kan vurderes uten aa rore den.
+def test_tom_liste_regner_ut_hvilket_filter_som_koster_mest():
+    """«Ingen treff» er en blindvei: du maa selv gjette hvilket av tre
+    filtre som var for strengt. Naa fjerner vi ett om gangen, teller, og
+    tilbyr det som gir flest.
     """
-    js = (ROT / "web" / "ny.js").read_text(encoding="utf-8")
-    # Klikkhaandteringen, ikke markupen. Forste treff paa «data-folg» er
-    # selve knappen -- den sier ingenting om hva som skjer naar man
-    # trykker, og det er DET testen handler om.
-    i = js.index('closest("[data-folg]")')
-    kropp = js[i:i + 600]
-    assert "location.href" in kropp, "folger uten aa sende til innlogging"
-    assert "?produkt=" in kropp, "sender ikke videre til riktig vare"
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("function tegnTomListe")
+    kropp = js[i:js.index("/* RESTOCK-STRIPEN", i)]
+    assert "for (const [navn, tekst] of aktive)" in kropp
+    assert "filtrert().length" in kropp
+    # Og state MAA legges tilbake -- ellers har utregningen endret
+    # filtrene brukeren faktisk har paa.
+    assert kropp.count("Object.assign(state, sikkerhetskopi)") == 2
+
+
+def test_filterknappen_gjenbruker_de_gamle_filtrene():
+    """Vi bygget ikke et nytt filtersystem. Chip-radene ligger fortsatt i
+    panelet bak knappen, og leser og skriver samme state.
+
+    Hadde vi laget et parallelt sett, ville de to kommet ut av takt --
+    og feilen ville vaert usynlig til noen brukte begge.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("function nullstillFilter")
+    kropp = js[i:i + 900]
+    for felt in ("state.kunLager", "state.forhandssalg", "state.region", "state.type"):
+        assert felt in kropp, felt
+    assert '$("chips").children' in kropp, "chip-radene oppdateres ikke"

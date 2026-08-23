@@ -61,6 +61,18 @@ const state = {
 
 /* ------------------------------------------------------------- verktoy */
 
+/* TESTOMRAADE.
+ *
+ * /ny serverer NOYAKTIG samme fil som forsiden. Forskjellen er dette
+ * flagget: funksjoner som ikke er godkjent enna er paa der og av her.
+ *
+ * Hvorfor ikke en kopi av appen: denne filen er over 2000 linjer. En fork
+ * ville blitt to forsider aa holde i takt, og den ene ville blitt glemt
+ * neste gang noen rettet en feil. Aa skipe en funksjon betyr aa fjerne én
+ * if-setning -- ikke aa flytte kode mellom to filer og haape.
+ */
+const NY = location.pathname === "/ny";
+
 const kr = (ore) => ore == null ? null :
   (ore % 100 === 0 ? (ore / 100).toLocaleString("nb-NO")
                    : (ore / 100).toLocaleString("nb-NO", { minimumFractionDigits: 2 })) + " kr";
@@ -165,6 +177,7 @@ async function last() {
     ferskhet(snap.sist_skannet, snap.skanning_ok);
     tegnProdukter();
     tegnSlippBoks();
+    tegnRestockStripe();
   } catch (e) {
     $("liste").innerHTML =
       '<p class="tom">Fikk ikke kontakt med API-et.<br><small>' + esc(e.message) + "</small></p>";
@@ -181,6 +194,103 @@ function ferskhet(iso, ok) {
   if (!iso) return prikkstatus("nede", "ukjent");
   const min = (Date.now() - new Date(iso)) / 60000;
   prikkstatus(min < 45 && ok !== false ? "ok" : min < 180 ? "gammel" : "nede", siden(iso));
+}
+
+/* «INGEN TREFF» ER EN BLINDVEI.
+ *
+ * Slaar du paa tre filtre og treffer null, sto det bare «Ingen treff. Prov
+ * et annet sok, eller slaa av filtrene» -- og saa maatte du selv gjette
+ * HVILKET filter som var for strengt.
+ *
+ * Naa regner vi ut hva hvert enkelt filter koster: fjern ett om gangen, se
+ * hvor mange som da dukker opp, og tilby det som gir flest. Det er billig
+ * -- listen er noen tusen rader -- og det er forskjellen paa en vegg og en
+ * dor.
+ */
+function tegnTomListe() {
+  const boks = $("tom-liste");
+  if (!boks || !NY) return;
+  const aktive = aktiveFiltre();
+  if (!aktive.length) {
+    boks.textContent = state.sok
+      ? "Ingen treff på «" + state.sok + "»."
+      : "Ingen treff.";
+    return;
+  }
+
+  // Prov aa fjerne ett filter om gangen og se hva som da ville matchet.
+  const sikkerhetskopi = {
+    kunLager: state.kunLager, forhandssalg: state.forhandssalg,
+    region: state.region, type: state.type,
+  };
+  let best = null;
+  for (const [navn, tekst] of aktive) {
+    nullstillFilter(navn);
+    const antall = filtrert().length;
+    Object.assign(state, sikkerhetskopi);
+    if (antall && (!best || antall > best.antall)) best = { navn, tekst, antall };
+  }
+  Object.assign(state, sikkerhetskopi);
+
+  boks.innerHTML = "Ingen treff med filtrene du har på." +
+    (best ? '<button class="lenkeknapp" type="button" data-fjern="' + best.navn +
+      '">Vis ' + best.antall + " produkter uten «" + esc(best.tekst) + "»</button>"
+          : "");
+}
+
+/* RESTOCK-STRIPEN -- det eneste som haster paa siden.
+ *
+ * Forsiden hadde ingen hastegrad: alt saa like viktig ut, og det som
+ * nettopp kom inn laa begravd i listen. Nytt-fanen finnes, men den maa man
+ * oppsoke -- og den som skal rekke en booster box rekker ikke aa lete.
+ *
+ * Bare siste time. En restock fra i gaar er ikke haster, den er historikk,
+ * og den hoerer hjemme i Nytt-fanen.
+ *
+ * Er ingenting kommet inn, kollapser den til én stille linje. En tom
+ * fremhevet blokk roper like hoyt som en full, og da slutter folk aa se
+ * paa den.
+ */
+const STRIPE_VINDU_MS = 60 * 60 * 1000;
+
+function restockNylig() {
+  const na = Date.now();
+  return state.produkter
+    .filter((p) => Number(p.antall_pa_lager) && p.sist_hendelse)
+    .map((p) => ({ p, t: new Date(p.sist_hendelse).getTime() }))
+    .filter((x) => na - x.t < STRIPE_VINDU_MS)
+    .sort((a, b) => b.t - a.t)
+    .slice(0, 3);
+}
+
+function tegnRestockStripe() {
+  const boks = $("restock-stripe");
+  if (!boks || !NY) return;
+  const nylig = restockNylig();
+  boks.hidden = false;
+
+  if (!nylig.length) {
+    boks.className = "stripe-stille";
+    boks.textContent = "Ingenting nytt inn den siste timen.";
+    return;
+  }
+
+  boks.className = "stripe";
+  boks.innerHTML =
+    '<div class="stripe-topp"><span class="stripe-merke">På lager nå</span>' +
+    '<span class="stripe-antall">' + nylig.length + " siste time</span></div>" +
+    nylig.map(({ p }) => {
+      // billigsteButikk() gir NAVNET, ikke tuppelen. Den detaljen kostet
+      // meg en runde -- b[0] ville gitt forste bokstav i butikknavnet.
+      const butikk = billigsteButikk(p);
+      return '<button class="stripe-rad" type="button" data-produkt="' + esc(p.id) + '">' +
+        '<img class="stripe-bilde" src="' + esc(p.bilde || reservebilde(p)) + '" alt="">' +
+        '<span class="stripe-tekst"><span class="stripe-navn">' +
+          esc(p.set_label) + " " + esc(p.type_label) + "</span>" +
+        '<span class="stripe-meta">' + esc(butikk || "") +
+          " · " + esc(siden(p.sist_hendelse)) + "</span></span>" +
+        '<span class="stripe-pris">' + esc(kr(p.min_pris) || "") + "</span></button>";
+    }).join("");
 }
 
 /* ----------------------------------------------------------- produkter */
@@ -322,10 +432,62 @@ function tegnSlippBoks() {
   });
 }
 
+/* AKTIVE FILTRE SOM FJERNBARE CHIPS.
+ *
+ * Radene med filterknapper tok mesteparten av mobilskjermen for forste
+ * produkt kom til syne -- to varer over folden. Én knapp med teller, og de
+ * valgte filtrene som chips du kan trykke bort.
+ *
+ * Filtrene selv er UENDRET: dette leser og skriver samme state som
+ * chip-radene, og chip-radene ligger fortsatt i panelet bak knappen. Vi
+ * bygget ikke et nytt filtersystem, vi flyttet inngangen til det.
+ */
+function aktiveFiltre() {
+  const ut = [];
+  if (state.kunLager) ut.push(["lager", "På lager"]);
+  if (state.forhandssalg) ut.push(["forhandssalg", "Forhåndssalg"]);
+  if (state.region) ut.push(["region", REGION[state.region] || state.region]);
+  if (state.type) ut.push(["type", state.typer.get(state.type) || state.type]);
+  return ut;
+}
+
+function nullstillFilter(navn) {
+  if (navn === "lager") state.kunLager = false;
+  else if (navn === "forhandssalg") state.forhandssalg = false;
+  else if (navn === "region") state.region = null;
+  else if (navn === "type") state.type = null;
+  // Chip-radene bak panelet maa foelge med, ellers staar de og lyser paa
+  // et filter som ikke lenger gjelder.
+  for (const el of $("chips").children) {
+    const f = el.dataset.filter;
+    const paa = f === "lager" ? state.kunLager
+      : f === "forhandssalg" ? state.forhandssalg
+      : f === "region" ? state.region === el.dataset.verdi
+      : f === "type" ? state.type === el.dataset.verdi : false;
+    el.classList.toggle("chip-av", !paa);
+  }
+}
+
+function tegnFilterlinje() {
+  if (!NY) return;
+  const linje = $("filterlinje");
+  if (!linje) return;
+  linje.hidden = state.fane !== "produkter";
+  const aktive = aktiveFiltre();
+  $("filterteller").hidden = !aktive.length;
+  $("filterteller").textContent = aktive.length;
+  $("aktive-filtre").innerHTML = aktive.map(([navn, tekst]) =>
+    '<span class="aktiv-chip">' + esc(tekst) +
+    '<button type="button" data-fjern="' + navn + '" aria-label="Fjern ' +
+    esc(tekst) + '">&times;</button></span>').join("");
+}
+
 function tegnProdukter() {
   const treff = filtrert();
   const liste = $("liste");
   $("tom-liste").hidden = treff.length > 0;
+  tegnFilterlinje();
+  if (!treff.length) tegnTomListe();
   $("teller").textContent = treff.length
     ? treff.length + " produkter" +
       (state.forhandssalg ? " til forhåndsbestilling" : state.kunLager ? " på lager" : "") +
@@ -1527,6 +1689,12 @@ function byttFane(navn) {
   $("fane-andre").hidden = navn !== "andre";
   document.querySelector(".sok-rad").hidden = navn !== "produkter";
   $("chips").hidden = navn !== "produkter";
+  if (NY) {
+    const l = $("filterlinje");
+    if (l) l.hidden = navn !== "produkter";
+    const st = $("restock-stripe");
+    if (st) st.hidden = navn !== "produkter";
+  }
   if (navn === "nytt") lastHendelser();
   if (navn === "folger") tegnFolgerFane();
   if (navn === "andre") lastAndre();
@@ -1554,6 +1722,31 @@ function koble() {
   $("tom-sok").addEventListener("click", () => {
     $("sok").value = ""; state.sok = ""; $("tom-sok").hidden = true; tegnProdukter();
   });
+
+  // ---- TESTOMRAADE: filterknapp, chips og restock-stripe ----
+  if (NY) {
+    document.body.classList.add("ny");
+    const knapp = $("knapp-filtre");
+    knapp.addEventListener("click", () => {
+      const panel = $("filterpanel");
+      const apent = panel.classList.toggle("apent");
+      knapp.setAttribute("aria-expanded", apent ? "true" : "false");
+    });
+
+    // Ett sted for aa fjerne et filter, uansett om trykket kom fra chipsen
+    // i filterlinjen eller fra knappen i tom-listen.
+    document.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-fjern]");
+      if (!b) return;
+      nullstillFilter(b.dataset.fjern);
+      tegnProdukter();
+    });
+
+    $("restock-stripe").addEventListener("click", (e) => {
+      const rad = e.target.closest("[data-produkt]");
+      if (rad) apneProdukt(rad.dataset.produkt);
+    });
+  }
 
   $("chips").addEventListener("click", (e) => {
     const c = e.target.closest(".chip");
