@@ -250,40 +250,6 @@ def test_robots_stenger_ikke_verifiseringen_ute():
 
 # ---------------------------------------------------- testomraadet /ny
 
-def test_ny_er_samme_fil_som_forsiden():
-    """/ny serverer NOYAKTIG samme index.html. Forskjellen er et flagg i
-    app.js.
-
-    Alternativet var en kopi av appen. app.js er over 2000 linjer -- en
-    fork ville blitt to forsider aa holde i takt, og den ene ville blitt
-    glemt neste gang noen rettet en feil.
-    """
-    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
-    i = konf.index("location = /ny {")
-    blokk = konf[i:i + 1500]
-    assert "try_files /index.html =404;" in blokk
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    assert 'const NY = location.pathname === "/ny";' in js
-
-
-def test_forsiden_ser_ikke_testfunksjonene():
-    """Hele poenget: Kristian skal kunne prove noe uten at kundene merker
-    det. Alt nytt maa ligge bak flagget eller bak `body.ny` i CSS-en.
-    """
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    # De tre nye funksjonene maa alle sjekke flagget for de gjor noe.
-    for fn in ("tegnRestockStripe", "tegnFilterlinje", "tegnTomListe"):
-        i = js.index("function " + fn)
-        kropp = js[i:i + 420]
-        assert "NY" in kropp, fn + " sjekker ikke flagget"
-
-    css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
-    i = css.index("TESTOMRAADE (/ny)")
-    # Filterpanelet er det ene unntaket: det MAA vaere display:contents paa
-    # forsiden, ellers endrer beholderen layouten der ogsaa.
-    assert ".filterpanel { display: contents; }" in css[i:]
-
-
 def test_testomraadet_holdes_ute_av_google():
     konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
     i = konf.index("location = /ny {")
@@ -573,3 +539,56 @@ def test_reservebildet_er_synlig_mot_ramma():
     css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
     j = css.index(".rutebilde {")
     assert "var(--flate-2)" in css[j:j + 300]
+
+
+# ------------------------- fire funksjoner ut av proving, én staar igjen
+
+def test_flagget_gjelder_bare_kartet_naa():
+    """Flagget gjaldt fem funksjoner. Fire er godkjent og staar paa
+    forsiden for alle -- restock-stripen, filterknappen, veien ut av en
+    tom liste og rutenettet.
+
+    Aa skipe dem betydde aa fjerne én if-setning. Det var hele poenget med
+    aa bygge dem bak et flagg i stedet for i en kopi av appen.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert 'const KART_PAA_PROVE = location.pathname === "/ny";' in js
+    # Ingen andre funksjoner skal henge paa det.
+    assert js.count("KART_PAA_PROVE") == 2, "flagget brukes flere steder enn kartet"
+    # Og det gamle navnet skal vaere borte, saa ingen tror det finnes to.
+    assert "const NY = " not in js
+
+
+def test_de_fire_gjelder_for_alle():
+    """Ingen av dem skal sjekke hvilken adresse man er paa lenger."""
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    for fn in ("tegnRestockStripe", "tegnFilterlinje", "tegnTomListe"):
+        i = js.index("function " + fn)
+        kropp = js[i:i + 420]
+        assert "KART_PAA_PROVE" not in kropp, fn + " henger fortsatt paa flagget"
+
+    import re
+    css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
+    # Kommentaren kan nevne det gamle prefikset -- den forklarer nettopp
+    # hvorfor det er borte. Reglene kan ikke bruke det. Strip blokkene
+    # ordentlig; aa se paa hva en linje BEGYNNER med treffer ikke midten
+    # av en flerlinjes kommentar.
+    regler = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    assert "body.ny" not in regler
+
+
+def test_kartknappen_finnes_bare_paa_ny():
+    """Kartet hviler paa lagerdata vi ikke har ordentlig enna -- bare
+    Outland oppgir noe, og bare et antall. Da skal knappen ikke staa paa
+    forsiden og love noe.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("const kartKnapp")
+    kropp = js[i:i + 320]
+    assert "KART_PAA_PROVE" in kropp
+    # Fjernes, ikke bare skjules: en skjult knapp i DOM-en er noe folk
+    # finner, og da aapner de et kart vi ikke staar inne for.
+    assert "kartKnapp.remove()" in kropp
+    html = (ROT / "web" / "index.html").read_text(encoding="utf-8")
+    i = html.index('id="knapp-kart"')
+    assert "hidden" in html[i:i + 120], "knappen vises for JS rekker aa fjerne den"

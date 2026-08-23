@@ -74,7 +74,18 @@ const state = {
  * neste gang noen rettet en feil. Aa skipe en funksjon betyr aa fjerne én
  * if-setning -- ikke aa flytte kode mellom to filer og haape.
  */
-const NY = location.pathname === "/ny";
+/* /ny er testomraadet.
+ *
+ * Flagget gjaldt fem funksjoner. Fire av dem er godkjent og staar naa paa
+ * forsiden for alle -- restock-stripen, filterknappen, veien ut av en tom
+ * liste og rutenettet. Aa skipe dem betyr aa fjerne en if-setning, og det
+ * er nettopp det som skjedde her.
+ *
+ * Igjen staar butikkartet. Det bygger paa lagerdata vi enna ikke har
+ * ordentlig -- bare Outland oppgir noe, og bare et antall -- saa det blir
+ * paa /ny til kjedene er kartlagt.
+ */
+const KART_PAA_PROVE = location.pathname === "/ny";
 
 const kr = (ore) => ore == null ? null :
   (ore % 100 === 0 ? (ore / 100).toLocaleString("nb-NO")
@@ -226,7 +237,7 @@ function ferskhet(iso, ok) {
  */
 function tegnTomListe() {
   const boks = $("tom-liste");
-  if (!boks || !NY) return;
+  if (!boks) return;
   const aktive = aktiveFiltre();
   if (!aktive.length) {
     boks.textContent = state.sok
@@ -282,7 +293,7 @@ function restockNylig() {
 
 function tegnRestockStripe() {
   const boks = $("restock-stripe");
-  if (!boks || !NY) return;
+  if (!boks) return;
   const nylig = restockNylig();
   boks.hidden = false;
 
@@ -487,7 +498,6 @@ function nullstillFilter(navn) {
 }
 
 function tegnFilterlinje() {
-  if (!NY) return;
   const linje = $("filterlinje");
   if (!linje) return;
   linje.hidden = state.fane !== "produkter";
@@ -512,7 +522,7 @@ function tegnProdukter() {
   //
   // Listen beholdes: den viser «billigst hos X», som rutenettet ikke har
   // plass til. To maater aa se det samme paa, for to ulike sporsmaal.
-  if (NY) liste.classList.toggle("rutenett", state.visning === "rutenett");
+  liste.classList.toggle("rutenett", state.visning === "rutenett");
   $("tom-liste").hidden = treff.length > 0;
   tegnFilterlinje();
   if (!treff.length) tegnTomListe();
@@ -644,7 +654,7 @@ function rutenettKortHtml(p) {
 }
 
 function kortHtml(p) {
-  if (NY && state.visning === "rutenett") return rutenettKortHtml(p);
+  if (state.visning === "rutenett") return rutenettKortHtml(p);
   const antall = Number(p.antall_pa_lager) || 0;
   const pris = kr(p.min_pris);
   const folges = state.folger.has(p.id);
@@ -1735,12 +1745,10 @@ function byttFane(navn) {
   $("fane-andre").hidden = navn !== "andre";
   document.querySelector(".sok-rad").hidden = navn !== "produkter";
   $("chips").hidden = navn !== "produkter";
-  if (NY) {
-    const l = $("filterlinje");
-    if (l) l.hidden = navn !== "produkter";
-    const st = $("restock-stripe");
-    if (st) st.hidden = navn !== "produkter";
-  }
+  const l = $("filterlinje");
+  if (l) l.hidden = navn !== "produkter";
+  const st = $("restock-stripe");
+  if (st) st.hidden = navn !== "produkter";
   if (navn === "nytt") lastHendelser();
   if (navn === "folger") tegnFolgerFane();
   if (navn === "andre") lastAndre();
@@ -1769,43 +1777,54 @@ function koble() {
     $("sok").value = ""; state.sok = ""; $("tom-sok").hidden = true; tegnProdukter();
   });
 
-  // ---- TESTOMRAADE: filterknapp, chips og restock-stripe ----
-  if (NY) {
-    document.body.classList.add("ny");
-    const knapp = $("knapp-filtre");
-    knapp.addEventListener("click", () => {
-      const panel = $("filterpanel");
-      const apent = panel.classList.toggle("apent");
-      knapp.setAttribute("aria-expanded", apent ? "true" : "false");
-    });
+  // Filterknappen, chipsene, restock-stripen og rutenettet -- godkjent
+  // og live for alle.
+  const filterKnapp = $("knapp-filtre");
+  filterKnapp.addEventListener("click", () => {
+    const panel = $("filterpanel");
+    const apent = panel.classList.toggle("apent");
+    filterKnapp.setAttribute("aria-expanded", apent ? "true" : "false");
+  });
 
-    // Ett sted for aa fjerne et filter, uansett om trykket kom fra chipsen
-    // i filterlinjen eller fra knappen i tom-listen.
-    document.addEventListener("click", (e) => {
-      const b = e.target.closest("[data-fjern]");
-      if (!b) return;
-      nullstillFilter(b.dataset.fjern);
-      tegnProdukter();
-    });
+  // Ett sted for aa fjerne et filter, uansett om trykket kom fra chipsen
+  // i filterlinjen eller fra knappen i tom-listen.
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-fjern]");
+    if (!b) return;
+    nullstillFilter(b.dataset.fjern);
+    tegnProdukter();
+  });
 
-    $("knapp-kart").addEventListener("click", apneKart);
-
-    const visKnapp = $("knapp-visning");
-    const settVisning = () => {
-      visKnapp.textContent = state.visning === "rutenett" ? "Liste" : "Rutenett";
-    };
+  const visKnapp = $("knapp-visning");
+  const settVisning = () => {
+    visKnapp.textContent = state.visning === "rutenett" ? "Liste" : "Rutenett";
+  };
+  settVisning();
+  visKnapp.addEventListener("click", () => {
+    state.visning = state.visning === "rutenett" ? "liste" : "rutenett";
+    localStorage.setItem("pokepuls-visning", state.visning);
     settVisning();
-    visKnapp.addEventListener("click", () => {
-      state.visning = state.visning === "rutenett" ? "liste" : "rutenett";
-      localStorage.setItem("pokepuls-visning", state.visning);
-      settVisning();
-      tegnProdukter();
-    });
+    tegnProdukter();
+  });
 
-    $("restock-stripe").addEventListener("click", (e) => {
-      const rad = e.target.closest("[data-produkt]");
-      if (rad) apneProdukt(rad.dataset.produkt);
-    });
+  $("restock-stripe").addEventListener("click", (e) => {
+    const rad = e.target.closest("[data-produkt]");
+    if (rad) apneProdukt(rad.dataset.produkt);
+  });
+
+  // Butikkartet er det ENESTE som fortsatt bare finnes paa /ny. Det
+  // hviler paa lagerdata vi ikke har ordentlig enna.
+  // Null-sjekken er ikke pynt: uten den kaster koble() hvis knappen ikke
+  // finnes, og DA kobles ingenting -- ikke soket, ikke filtrene, ikke
+  // fanene. En manglende knapp ville tatt ned hele appen.
+  const kartKnapp = $("knapp-kart");
+  if (kartKnapp) {
+    if (KART_PAA_PROVE) {
+      kartKnapp.hidden = false;
+      kartKnapp.addEventListener("click", apneKart);
+    } else {
+      kartKnapp.remove();
+    }
   }
 
   $("chips").addEventListener("click", (e) => {

@@ -21,7 +21,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/ikon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/ikon.svg">
-<link rel="stylesheet" href="/style.css?v=34">
+<link rel="stylesheet" href="/style.css?v=35">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"WebSite","@id":"https://pokepuls.no/#nettsted","name":"Pokepuls",
@@ -56,21 +56,20 @@
            placeholder="Søk etter sett, produkt eller butikk" aria-label="Søk">
     <button id="tom-sok" class="tom-sok" type="button" aria-label="Tøm søket" hidden>&times;</button>
   </div>
-  <!-- TESTOMRAADE: én filterknapp i stedet for radene.
-       Skjult paa forsiden, synlig paa /ny. Se app.js -> NY. -->
-  <div class="filterlinje" id="filterlinje" hidden>
+  <!-- Én filterknapp i stedet for radene med chips. -->
+  <div class="filterlinje" id="filterlinje">
     <button class="filterknapp" id="knapp-filtre" type="button" aria-expanded="false">
       Filtre<span class="filterteller" id="filterteller" hidden>0</span>
     </button>
     <div class="aktive-filtre" id="aktive-filtre"></div>
-    <button class="kartknapp" id="knapp-kart" type="button">Butikk nær deg</button>
+    <!-- Butikkartet er fortsatt bare paa /ny. app.js fjerner knappen
+         andre steder. -->
+    <button class="kartknapp" id="knapp-kart" type="button" hidden>Butikk nær deg</button>
     <button class="visknapp" id="knapp-visning" type="button"
             aria-label="Bytt mellom liste og rutenett">Rutenett</button>
   </div>
 
-  <!-- `display: contents` paa forsiden: beholderen finnes i DOM-en, men
-       ikke i layouten, saa dagens side ser noyaktig ut som for. Paa /ny
-       blir den et sammenleggbart panel. -->
+  <!-- Sammenleggbart panel med sortering og alle filterknappene. -->
   <div class="filterpanel" id="filterpanel">
   <div class="sorter-rad">
     <label for="sortering">Sorter</label>
@@ -97,7 +96,7 @@
 
 <main id="innhold">
   <section id="fane-produkter" class="fane">
-    <!-- TESTOMRAADE: det eneste som haster paa siden. -->
+    <!-- Det eneste som haster paa siden. -->
     <div id="restock-stripe" hidden></div>
     <div id="slipp-boks" hidden></div>
     <p class="teller" id="teller"></p>
@@ -164,6 +163,6 @@
   <div id="ark-innhold"></div>
 </div>
 
-<script src="/app.js?v=34" type="module"></script>
+<script src="/app.js?v=35" type="module"></script>
 </body>
 </html>

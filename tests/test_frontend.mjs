@@ -1132,3 +1132,14 @@ test("slippdato leses ett sted, ikke to", () => {
   assert.ok((js.match(/slippTid\(/g) || []).length >= 3,
             "hjelperen brukes ikke fra begge sorteringene");
 });
+
+test("koble() overlever at kartknappen ikke finnes", () => {
+  // Da kartet ble tatt av forsiden, fjernet app.js knappen med
+  // .remove(). Uten null-sjekk kaster det naar knappen ikke er i DOM-en
+  // -- og da kobles INGENTING: ikke soket, ikke filtrene, ikke fanene.
+  // En manglende knapp ville tatt ned hele appen.
+  const js = les("app.js");
+  const i = js.indexOf('const kartKnapp = $("knapp-kart")');
+  const kropp = js.slice(i, i + 400);
+  assert.match(kropp, /if \(kartKnapp\)/);
+});

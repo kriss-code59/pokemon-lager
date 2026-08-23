@@ -653,31 +653,31 @@ body.admin .topp { position: static; }
 
 
 /* =====================================================================
-   TESTOMRAADE (/ny)
+   RESTOCK-STRIPE, FILTERKNAPP, RUTENETT -- OG KARTET SOM ENNA PROVES
    =====================================================================
-   Alt her er bak `body.ny`. Forsiden laster samme fil og ser den aldri.
-   Naar noe godkjennes, fjernes `.ny`-prefikset og reglene gjelder overalt.
+   Alt dette laa bak `body.ny` mens det ble provd ut. Fire av fem er
+   godkjent og staar naa for alle; prefikset er fjernet. Kartreglene
+   staar igjen, men de gjor ingenting uten knappen, og den finnes bare
+   paa /ny.
    ===================================================================== */
 
-/* Filterpanelet finnes i DOM-en paa forsiden ogsaa, men `display: contents`
-   gjor at det ikke finnes i LAYOUTEN -- barna oppforer seg som for. Det er
-   hele grunnen til at dagens side ikke endret seg med en piksel. */
-.filterpanel { display: contents; }
-
-body.ny .filterpanel {
+/* Sammenleggbart panel. Da funksjonen sto til proving var dette
+   `display: contents` paa forsiden, saa beholderen ikke fantes i
+   layouten der. Naa gjelder den overalt, og trikset kan gaa. */
+.filterpanel {
   display: block;
   max-height: 0;
   overflow: hidden;
   transition: max-height 160ms ease-out;
 }
-body.ny .filterpanel.apent { max-height: 300px; overflow-x: auto; }
+.filterpanel.apent { max-height: 300px; overflow-x: auto; }
 
-body.ny .filterlinje {
+.filterlinje {
   display: flex; align-items: center; gap: 7px;
   margin-top: 9px;
   overflow-x: auto; scrollbar-width: none;
 }
-body.ny .filterlinje::-webkit-scrollbar { display: none; }
+.filterlinje::-webkit-scrollbar { display: none; }
 
 .filterknapp {
   display: flex; align-items: center; gap: 6px; flex: none;
@@ -755,7 +755,7 @@ body.ny .filterlinje::-webkit-scrollbar { display: none; }
   padding: 8px 2px 12px;
 }
 
-body.ny #tom-liste .lenkeknapp {
+#tom-liste .lenkeknapp {
   display: block; margin: 12px auto 0;
 }
 
@@ -840,18 +840,18 @@ body.ny #tom-liste .lenkeknapp {
   border: 1px solid var(--kant); border-radius: 999px;
   padding: 7px 13px; font-size: 13px; white-space: nowrap;
 }
-body.ny .liste.rutenett {
+.liste.rutenett {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-@media (min-width: 560px)  { body.ny .liste.rutenett { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 860px)  { body.ny .liste.rutenett { grid-template-columns: repeat(4, 1fr); } }
-@media (min-width: 1120px) { body.ny .liste.rutenett { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 560px)  { .liste.rutenett { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 860px)  { .liste.rutenett { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1120px) { .liste.rutenett { grid-template-columns: repeat(5, 1fr); } }
 
 /* Settoverskriftene hoerer til listen. I et rutenett ville de brutt
    kolonnene i biter og gjort rutenettet til en liste med luft i. */
-body.ny .liste.rutenett .sett-tittel { display: none; }
+.liste.rutenett .sett-tittel { display: none; }
 
 .rutekort {
   display: flex; flex-direction: column; gap: 8px;
