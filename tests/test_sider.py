@@ -425,3 +425,18 @@ def test_posisjonen_forlater_aldri_telefonen():
     assert "hent(" not in kropp, "sender posisjonen til serveren"
     assert "localStorage" not in kropp, "lagrer posisjonen"
     assert "tegn({ lat:" in kropp
+
+
+def test_testomraadet_kan_ikke_mellomlagres():
+    """Kristian saa den gamle forhandsvisningen i timevis etter at den var
+    slettet: nettleseren serverte /ny fra sin egen disk uten aa spore
+    serveren. Jeg lette etter feilen paa serveren, der alt var riktig.
+
+    En adresse som bytter innhold flere ganger om dagen skal ikke kunne
+    ligge i en cache. Forsiden kan det -- den har versjonsstreng paa CSS
+    og JS -- men /ny er selve stedet der ting endrer seg.
+    """
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    i = konf.index("location = /ny {")
+    blokk = konf[i:konf.index("}", i)]
+    assert 'Cache-Control "no-store' in blokk

@@ -790,3 +790,10 @@ body.ny #tom-liste .lenkeknapp {
   flex: none; font-size: 12px; color: var(--tekst-svak);
   font-variant-numeric: tabular-nums;
 }
+
+/* To lenkeknapper etter hverandre i slippboksen hang sammen uten
+   mellomrom: «Vis alle 16 produkteneHele slippkalenderen». De er inline,
+   og HTML kollapser ikke linjeskift til et synlig skille inne i en
+   flex-fri beholder. */
+.slipp .lenkeknapp { display: inline-block; margin-right: 14px; }
+.slipp .lenkeknapp:last-child { margin-right: 0; }
