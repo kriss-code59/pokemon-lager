@@ -55,6 +55,9 @@ const state = {
   // Sortering av bolkene. Huskes mellom besok -- den som har valgt
   // slippdato én gang, mener som regel det neste gang ogsaa.
   sortering: localStorage.getItem("pokepuls-sortering") || "nytt",
+  // Liste eller rutenett. Huskes -- den som liker store bilder liker dem
+  // ogsaa i morgen.
+  visning: localStorage.getItem("pokepuls-visning") || "liste",
   maksPerTime: 5,      // brukerens timeskvote, hentet fra serveren
   apentProdukt: null,
 };
@@ -485,6 +488,16 @@ function tegnFilterlinje() {
 function tegnProdukter() {
   const treff = filtrert();
   const liste = $("liste");
+  // RUTENETT MED STORE BILDER.
+  //
+  // Vi har bilde paa 487 av 496 produkter -- 98 %. De ble vist som 46
+  // piksler brede miniatyrer, og da spiller det ingen rolle at vi har
+  // dem. Konkurrenten viser pakkeskuddet stort, og DET er grunnen til at
+  // deres side ser bedre ut -- ikke farger, ikke typografi.
+  //
+  // Listen beholdes: den viser «billigst hos X», som rutenettet ikke har
+  // plass til. To maater aa se det samme paa, for to ulike sporsmaal.
+  if (NY) liste.classList.toggle("rutenett", state.visning === "rutenett");
   $("tom-liste").hidden = treff.length > 0;
   tegnFilterlinje();
   if (!treff.length) tegnTomListe();
@@ -599,7 +612,24 @@ function billigsteBestilling(p) {
   return t ? { butikk: butikknavn(t[0]), pris: t[1], type: t[3] } : null;
 }
 
+function rutenettKortHtml(p) {
+  const antall = Number(p.antall_pa_lager) || 0;
+  const pris = kr(p.min_pris);
+  const best = antall ? null : billigsteBestilling(p);
+  const folges = state.folger.has(p.id);
+  const status = antall ? "inne" : best ? "forhand" : "ute";
+  return '<button class="rutekort" data-produkt="' + esc(p.id) + '">' +
+    '<span class="rutebilde">' + bildeHtml(p, "rutefoto") +
+      (folges ? '<span class="rute-folges" title="Du følger denne">♥</span>' : "") +
+    "</span>" +
+    '<span class="rutenavn">' + esc(p.set_label) + " " + esc(p.type_label) + "</span>" +
+    '<span class="rutebunn"><span class="ruteprikk ' + status + '"></span>' +
+      '<span class="rutepris">' + (pris || (best ? kr(best.pris) : "–")) +
+    "</span></span></button>";
+}
+
 function kortHtml(p) {
+  if (NY && state.visning === "rutenett") return rutenettKortHtml(p);
   const antall = Number(p.antall_pa_lager) || 0;
   const pris = kr(p.min_pris);
   const folges = state.folger.has(p.id);
@@ -1744,6 +1774,18 @@ function koble() {
 
     $("knapp-kart").addEventListener("click", apneKart);
 
+    const visKnapp = $("knapp-visning");
+    const settVisning = () => {
+      visKnapp.textContent = state.visning === "rutenett" ? "Liste" : "Rutenett";
+    };
+    settVisning();
+    visKnapp.addEventListener("click", () => {
+      state.visning = state.visning === "rutenett" ? "liste" : "rutenett";
+      localStorage.setItem("pokepuls-visning", state.visning);
+      settVisning();
+      tegnProdukter();
+    });
+
     $("restock-stripe").addEventListener("click", (e) => {
       const rad = e.target.closest("[data-produkt]");
       if (rad) apneProdukt(rad.dataset.produkt);
@@ -2038,6 +2080,78 @@ function lastLeaflet() {
   return leafletLastet;
 }
 
+/* POSTNUMMER I STEDET FOR POSISJONSTILGANG.
+ *
+ * Forste versjon spurte nettleseren om posisjon. Det virker, men det
+ * koster en tillatelsesboks for du har sett noe som helst, det virker
+ * daarlig paa desktop, og det er en personopplysning vi egentlig ikke
+ * trenger. Konkurrenten bruker postnummer, og de har rett.
+ *
+ * Et postnummer holder. Vi skal svare paa «hvilken butikk er naermest»,
+ * ikke navigere deg dit -- og til det er en by noyaktig nok.
+ *
+ * Tabellen er postnummerSERIER, ikke enkeltnumre. Norge har rundt 5 000
+ * postnumre; alle i frontenden ville vaert hundrevis av kilobyte for en
+ * presisjon ingen merker. Her er det 89 rader uten hull, og treffet er
+ * byen eller distriktet du bor i.
+ *
+ * Vi sier det ogsaa rett ut i grensesnittet: avstanden er omtrentlig.
+ */
+const POSTSTEDER = [
+  [1, 1299, "Oslo", 59.913, 10.739], [1300, 1379, "Bærum", 59.891, 10.527],
+  [1380, 1399, "Asker", 59.833, 10.435], [1400, 1499, "Follo", 59.720, 10.836],
+  [1500, 1599, "Moss", 59.435, 10.664], [1600, 1699, "Fredrikstad", 59.221, 10.934],
+  [1700, 1799, "Sarpsborg", 59.284, 11.109], [1800, 1899, "Indre Østfold", 59.583, 11.166],
+  [1900, 1999, "Nedre Romerike", 59.940, 11.170], [2000, 2099, "Lillestrøm", 59.956, 11.049],
+  [2100, 2199, "Sør-Odal", 60.253, 11.688], [2200, 2299, "Kongsvinger", 60.190, 11.994],
+  [2300, 2399, "Hamar", 60.795, 11.068], [2400, 2499, "Elverum", 60.881, 11.562],
+  [2500, 2599, "Tynset", 62.276, 10.777], [2600, 2699, "Lillehammer", 61.115, 10.466],
+  [2700, 2799, "Hadeland", 60.373, 10.556], [2800, 2899, "Gjøvik", 60.795, 10.692],
+  [2900, 2999, "Valdres", 60.987, 9.234], [3000, 3099, "Drammen", 59.744, 10.204],
+  [3100, 3199, "Tønsberg", 59.267, 10.408], [3200, 3299, "Sandefjord", 59.131, 10.225],
+  [3300, 3399, "Hokksund", 59.774, 9.909], [3400, 3499, "Lier", 59.792, 10.243],
+  [3500, 3599, "Hønefoss", 60.169, 10.257], [3600, 3699, "Kongsberg", 59.665, 9.650],
+  [3700, 3799, "Skien", 59.209, 9.609], [3800, 3899, "Midt-Telemark", 59.412, 9.062],
+  [3900, 3999, "Porsgrunn", 59.141, 9.656], [4000, 4099, "Stavanger", 58.970, 5.733],
+  [4100, 4199, "Strand", 59.021, 6.043], [4200, 4299, "Sauda", 59.650, 6.359],
+  [4300, 4399, "Sandnes", 58.852, 5.735], [4400, 4499, "Flekkefjord", 58.297, 6.661],
+  [4500, 4599, "Mandal", 58.028, 7.457], [4600, 4699, "Kristiansand", 58.146, 7.995],
+  [4700, 4799, "Vennesla", 58.297, 7.977], [4800, 4899, "Arendal", 58.461, 8.772],
+  [4900, 4999, "Risør", 58.622, 9.070], [5000, 5099, "Bergen", 60.393, 5.324],
+  [5100, 5199, "Nordhordland", 60.545, 5.288], [5200, 5299, "Bjørnafjorden", 60.183, 5.466],
+  [5300, 5399, "Askøy", 60.400, 5.180], [5400, 5499, "Stord", 59.783, 5.500],
+  [5500, 5599, "Haugesund", 59.413, 5.268], [5600, 5699, "Kvam", 60.370, 6.144],
+  [5700, 5799, "Voss", 60.630, 6.416], [5800, 5899, "Sogndal", 61.230, 7.100],
+  [5900, 5999, "Austrheim", 60.780, 4.930], [6000, 6099, "Ålesund", 62.472, 6.155],
+  [6100, 6199, "Volda", 62.147, 6.070], [6200, 6299, "Stranda", 62.310, 6.940],
+  [6300, 6399, "Åndalsnes", 62.567, 7.688], [6400, 6499, "Molde", 62.737, 7.159],
+  [6500, 6599, "Kristiansund", 63.110, 7.728], [6600, 6699, "Sunndal", 62.675, 8.563],
+  [6700, 6799, "Måløy", 61.937, 5.113], [6800, 6899, "Førde", 61.452, 5.856],
+  [6900, 6999, "Florø", 61.599, 5.032], [7000, 7099, "Trondheim", 63.430, 10.395],
+  [7100, 7199, "Indre Fosen", 63.585, 9.968], [7200, 7299, "Hitra", 63.290, 9.100],
+  [7300, 7399, "Orkland", 63.300, 9.850], [7400, 7499, "Heimdal", 63.360, 10.350],
+  [7500, 7599, "Stjørdal", 63.470, 10.919], [7600, 7699, "Levanger", 63.746, 11.300],
+  [7700, 7799, "Steinkjer", 64.015, 11.495], [7800, 7899, "Namsos", 64.466, 11.496],
+  [7900, 7999, "Rørvik", 64.862, 11.240], [8000, 8099, "Bodø", 67.280, 14.405],
+  [8100, 8199, "Fauske", 67.259, 15.393], [8200, 8299, "Rognan", 67.098, 15.394],
+  [8300, 8399, "Svolvær", 68.234, 14.567], [8400, 8499, "Sortland", 68.696, 15.412],
+  [8500, 8599, "Narvik", 68.438, 17.427], [8600, 8699, "Mo i Rana", 66.313, 14.142],
+  [8700, 8799, "Nesna", 66.196, 13.023], [8800, 8899, "Sandnessjøen", 66.021, 12.632],
+  [8900, 8999, "Brønnøysund", 65.474, 12.212], [9000, 9099, "Tromsø", 69.649, 18.955],
+  [9100, 9199, "Kvaløya", 69.680, 18.800], [9200, 9299, "Balsfjord", 69.220, 19.550],
+  [9300, 9399, "Finnsnes", 69.230, 17.980], [9400, 9499, "Harstad", 68.798, 16.541],
+  [9500, 9599, "Alta", 69.968, 23.271], [9600, 9699, "Hammerfest", 70.663, 23.682],
+  [9700, 9799, "Lakselv", 70.050, 24.970], [9800, 9899, "Vadsø", 70.074, 29.749],
+  [9900, 9999, "Kirkenes", 69.727, 30.045],
+];
+
+function stedFraPostnummer(tekst) {
+  const n = parseInt(String(tekst).trim(), 10);
+  if (!Number.isInteger(n) || n < 1 || n > 9999) return null;
+  const rad = POSTSTEDER.find(([fra, til]) => n >= fra && n <= til);
+  return rad ? { navn: rad[2], lat: rad[3], lon: rad[4] } : null;
+}
+
 /* Luftlinje i kilometer. Haversine -- Norge er langt nok nord til at
  * «bare regn med rette linjer» bommer med titalls kilometer. */
 function avstandKm(lat1, lon1, lat2, lon2) {
@@ -2145,37 +2259,43 @@ async function apneKart() {
     return;
   }
 
-  const tegn = (meg) => {
+  const husket = localStorage.getItem("pokepuls-postnummer") || "";
+
+  const tegn = (meg, post) => {
     visArk("<h2>Butikk nær deg</h2>" +
       '<p class="hjelp">' + esc(d.forbehold) + "</p>" +
-      '<div id="kart-boks" class="kart-boks"></div>' +
-      '<button class="lenkeknapp" id="finn-meg" type="button">' +
-        (meg ? "Oppdater posisjonen min" : "Finn nærmeste") + "</button>" +
+      '<div class="postrad"><label for="postnr">Postnummer</label>' +
+        '<input id="postnr" type="text" inputmode="numeric" maxlength="4" ' +
+        'autocomplete="postal-code" placeholder="0150" value="' +
+        esc(post || "") + '"></div>' +
+      (meg ? '<p class="hjelp liten">Avstand fra ' + esc(meg.navn) +
+             ". Omtrentlig — vi regner fra midten av området, ikke fra døra di.</p>"
+           : "") +
       '<p class="feil" id="kart-feil" hidden></p>' +
+      '<div id="kart-boks" class="kart-boks"></div>' +
       stedslisteHtml(d.steder, meg));
 
     tegnKart(d.steder, meg);
 
-    $("finn-meg").onclick = () => {
-      const feil = $("kart-feil");
-      if (!navigator.geolocation) {
-        feil.textContent = "Nettleseren din har ikke posisjon.";
+    const felt = $("postnr");
+    const sok = () => {
+      const verdi = felt.value.trim();
+      if (!verdi) { localStorage.removeItem("pokepuls-postnummer"); tegn(null, ""); return; }
+      const sted = stedFraPostnummer(verdi);
+      if (!sted) {
+        const feil = $("kart-feil");
+        feil.textContent = "Fant ikke postnummeret. Skriv fire siffer.";
         feil.hidden = false;
         return;
       }
-      // Posisjonen forlater ALDRI telefonen. Avstandene regnes ut her, i
-      // nettleseren -- vi sender ingen koordinater til serveren og lagrer
-      // dem ingen steder. Det er ikke en teknisk detalj, det er hele
-      // grunnen til at vi torde sporre.
-      navigator.geolocation.getCurrentPosition(
-        (pos) => tegn({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
-        () => {
-          feil.textContent = "Fikk ikke posisjonen din. Du kan fortsatt " +
-            "se butikkene i listen.";
-          feil.hidden = false;
-        },
-        { timeout: 8000, maximumAge: 300000 });
+      localStorage.setItem("pokepuls-postnummer", verdi);
+      tegn(sted, verdi);
     };
+    felt.addEventListener("change", sok);
+    felt.addEventListener("keydown", (e) => { if (e.key === "Enter") felt.blur(); });
   };
-  tegn(null);
+
+  // Har vi et postnummer fra forrige besok, bruk det med én gang. Da ser
+  // du din egen naerhet forst, ikke hele Norge.
+  tegn(husket ? stedFraPostnummer(husket) : null, husket);
 }

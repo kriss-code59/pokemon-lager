@@ -342,10 +342,24 @@ def test_ingen_personnavn_i_det_offentlige():
     hva loven krever av en naeringsdrivende som selger til forbrukere. Se
     notatet i vilkar.html.
     """
+    # «Kristian» alene er for grovt: Kristiansand og Kristiansund er byer,
+    # og postnummertabellen inneholder begge. Testen slo ut paa dem og
+    # ville faatt oss til aa fjerne to norske byer fra et kart.
+    #
+    # Vi leter etter navnet som PERSON: fornavn etterfulgt av etternavn,
+    # eller etternavnet alene. Da treffer den det den er til for, og bare
+    # det.
+    import re as _re
+    monstre = [
+        _re.compile(r"Kristian\s+B(ø|o)\b"),
+        _re.compile(r"\bKristian\b(?!s(and|und))"),
+        _re.compile(r"norgekriss"),
+    ]
     for fil in list(WEB.glob("*.html")) + list(WEB.glob("*.js")):
         tekst = fil.read_text(encoding="utf-8")
-        for ord_ in ["Kristian", "norgekriss"]:
-            assert ord_ not in tekst, f"{fil.name} inneholder «{ord_}»"
+        for m in monstre:
+            treff = m.search(tekst)
+            assert not treff, f"{fil.name} inneholder «{treff.group(0)}»"
 
 
 # -------------------------------------------------- prov én butikk alene

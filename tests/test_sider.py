@@ -291,18 +291,6 @@ def test_testomraadet_holdes_ute_av_google():
     assert '"Disallow: /ny' in KILDE
 
 
-def test_posisjon_er_kun_tillatt_paa_ny():
-    """«Finn naermeste butikk» skal spore om posisjon. Da maa
-    Permissions-Policy tillate det -- men BARE der funksjonen finnes.
-
-    Resten av nettstedet skal fortsatt ha geolocation slaatt helt av.
-    """
-    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
-    assert konf.count("geolocation=(self)") == 1, "posisjon aapnet flere steder"
-    i = konf.index("location = /ny {")
-    assert "geolocation=(self)" in konf[i:i + 1500]
-
-
 def test_restockstripen_ser_bare_siste_time():
     """En restock fra i gaar haster ikke, den er historikk -- og hoerer
     hjemme i Nytt-fanen. Stripen mister all mening hvis den fylles med
@@ -394,20 +382,6 @@ def test_alle_femten_outlandbutikker_er_seedet():
     # Tromso har ikke aapnet enna og skal ikke telle som et sted du kan dra.
     assert "'Åpner høsten 2026'" in sql
     assert "18.95530, FALSE" in sql
-
-
-def test_posisjonen_forlater_aldri_telefonen():
-    """Avstandene regnes ut i nettleseren. Vi sender ingen koordinater til
-    serveren og lagrer dem ingen steder -- det er hele grunnen til at vi
-    torde sporre om posisjon i det hele tatt.
-    """
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    i = js.index("navigator.geolocation.getCurrentPosition")
-    kropp = js[i:i + 600]
-    # Posisjonen skal bare inn i tegn(), aldri i et kall til serveren.
-    assert "hent(" not in kropp, "sender posisjonen til serveren"
-    assert "localStorage" not in kropp, "lagrer posisjonen"
-    assert "tegn({ lat:" in kropp
 
 
 def test_testomraadet_kan_ikke_mellomlagres():
@@ -505,3 +479,63 @@ def test_gammelt_kart_ryddes_for_nytt_tegnes():
     kropp = js[i:i + 700]
     assert "kartet.remove()" in kropp
     assert "invalidateSize" in js[i:i + 3000], "hoyden maales aldri paa nytt"
+
+
+def test_postnummer_i_stedet_for_posisjonstilgang():
+    """Forste versjon spurte nettleseren om posisjon. Det koster en
+    tillatelsesboks for brukeren har sett noe som helst, virker daarlig
+    paa desktop, og er en personopplysning vi ikke trenger.
+
+    Et postnummer holder: vi skal svare paa «hvilken butikk er naermest»,
+    ikke navigere deg dit.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert "navigator.geolocation" not in js, "spor fortsatt om posisjon"
+    assert "const POSTSTEDER = [" in js
+    assert "function stedFraPostnummer" in js
+
+
+def test_geolocation_er_stengt_overalt():
+    # Da funksjonen forsvant, skal tillatelsen ogsaa gjore det. En aapen
+    # Permissions-Policy uten en funksjon bak er bare en aapen dor.
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    assert "geolocation=(self)" not in konf
+    assert konf.count("geolocation=()") >= 5
+
+
+def test_postnummertabellen_har_ingen_hull():
+    """Et postnummer som faller mellom to serier gir ingen treff, og
+    brukeren faar «fant ikke postnummeret» paa et helt gyldig nummer.
+    """
+    import re
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    blokk = js[js.index("const POSTSTEDER = ["):js.index("function stedFraPostnummer")]
+    rader = [(int(a), int(b)) for a, b, *_ in
+             re.findall(r"\[(\d+), (\d+), \"([^\"]+)\", ([\d.]+), ([\d.]+)\]", blokk)]
+    assert len(rader) > 50, f"bare {len(rader)} serier"
+    assert rader[0][0] == 1 and rader[-1][1] == 9999, "dekker ikke 0001-9999"
+    forrige = 0
+    for fra, til in rader:
+        assert fra == forrige + 1, f"hull eller overlapp ved {fra} (forrige slutt {forrige})"
+        forrige = til
+
+
+def test_rutenettet_viser_bildet_stort():
+    """Vi har bilde paa 487 av 496 produkter -- 98 %. De ble vist som 46
+    piksler brede miniatyrer, og da spiller det ingen rolle at vi har dem.
+
+    Konkurrenten viser pakkeskuddet stort, og DET er grunnen til at deres
+    side ser bedre ut -- ikke farger, ikke typografi.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert "function rutenettKortHtml" in js
+    assert 'bildeHtml(p, "rutefoto")' in js
+    css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
+    i = css.index(".rutefoto {")
+    kropp = css[i:i + 300]
+    # contain, ikke cover: en booster box skal ikke beskjaeres slik at
+    # settnavnet paa esken forsvinner.
+    assert "object-fit: contain" in kropp
+    # Kvadratisk ramme, ellers hopper radene i hoyde etter hvilke
+    # pakkeskudd butikkene tilfeldigvis har.
+    assert "aspect-ratio: 1 / 1" in css[css.index(".rutebilde {"):][:300]
