@@ -159,6 +159,39 @@ async def catalog(request: Request):
                  CACHE_KATALOG)
 
 
+# -------------------------------------------------------- fysiske butikker
+
+@app.get("/api/steder")
+async def steder(request: Request):
+    """Hvor du kan gaa inn og kjope kort i dag.
+
+    HVA DETTE SVARER PAA, OG HVA DET IKKE GJOR
+
+    «Finnes det en butikk i naerheten min» -- ja. «Har DEN butikken varen»
+    -- nei, og det skal vi ikke late som.
+
+    Vi undersokte alle 46 butikkene. Bare Outland oppgir lager i fysisk
+    butikk i det hele tatt, og bare som et ANTALL: «Tilgjengelig i 4
+    butikker», ikke hvilke fire. Ingen norsk kjede vi leser rekker ut med
+    lager per filial.
+
+    Et kart faar folk til aa tro paa presisjon. Hadde vi tegnet en prikk
+    paa Bergen for en vare som finnes i «4 av 15», ville noen kjort dit.
+    """
+    rader = await _hent(
+        "SELECT f.id, f.kjede, f.navn, f.adresse, f.poststed, "
+        "       f.lat::float8 AS lat, f.lon::float8 AS lon, f.aapnet, f.merknad, "
+        "       f.store_id "
+        "FROM fysiske_butikker f ORDER BY f.kjede, f.poststed, f.navn")
+    return _svar(request, {
+        "steder": rader,
+        # Staar i svaret, ikke bare i grensesnittet: den som leser API-et
+        # direkte skal se samme forbehold.
+        "forbehold": "Viser hvor kjedene har utsalg, ikke hva som er på "
+                     "hylla der akkurat nå. Ring butikken før du drar.",
+    }, CACHE_KATALOG)
+
+
 # --------------------------------------------------------------- snapshot
 
 SNAPSHOT_SQL = """

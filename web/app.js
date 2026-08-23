@@ -1742,6 +1742,8 @@ function koble() {
       tegnProdukter();
     });
 
+    $("knapp-kart").addEventListener("click", apneKart);
+
     $("restock-stripe").addEventListener("click", (e) => {
       const rad = e.target.closest("[data-produkt]");
       if (rad) apneProdukt(rad.dataset.produkt);
@@ -1964,4 +1966,140 @@ if ("serviceWorker" in navigator) {
   // Én gang til naar registreringen er aktiv: paa aller forste besok finnes
   // det ingen registrering enna naar linja over kjorer.
   navigator.serviceWorker.ready.then(ryddVarsler).catch(() => {});
+}
+
+/* =====================================================================
+   FYSISKE BUTIKKER PAA KART  (testomraadet)
+   =====================================================================
+
+   HVA KARTET SVARER PAA
+
+   «Finnes det en butikk i naerheten min» -- ja. «Har DEN butikken varen»
+   -- nei.
+
+   Vi undersokte alle 46 butikkene. Bare Outland oppgir lager i fysisk
+   butikk i det hele tatt, og bare som et ANTALL: «Tilgjengelig i 4
+   butikker», ikke hvilke fire. Ingen norsk kjede vi leser rekker ut med
+   lager per filial.
+
+   Et kart faar folk til aa tro paa presisjon. Hadde vi tegnet en gronn
+   prikk paa Bergen for en vare som finnes i «4 av 15», ville noen kjort
+   dit. Derfor viser kartet hvor kjedene ER, og sier det rett ut.
+
+   HVORFOR INGEN KYSTLINJE
+
+   Et Norges-omriss tegnet etter hukommelsen ville sett omtrent riktig ut
+   og vaert feil -- og et kart som ser presist ut, blir trodd. Prikkene
+   ligger paa ekte koordinater i ekte projeksjon; det er alt vi kan
+   staa inne for uten en ordentlig kartkilde.
+   ===================================================================== */
+
+/* Norge i Mercator. Faste grenser, ikke utregnet fra butikkene vi har --
+   ellers ville kartet endret form hver gang en kjede aapnet et utsalg. */
+const KART = { lat0: 57.5, lat1: 70.5, lon0: 4.0, lon1: 20.0, b: 300, h: 470 };
+
+function merkatorY(lat) {
+  return Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI / 180) / 2));
+}
+
+function kartPunkt(lat, lon) {
+  const y0 = merkatorY(KART.lat0), y1 = merkatorY(KART.lat1);
+  return {
+    x: ((lon - KART.lon0) / (KART.lon1 - KART.lon0)) * KART.b,
+    // SVG teller y nedover, kartet nordover. Uten minus staar Tromso i sor.
+    y: KART.h - ((merkatorY(lat) - y0) / (y1 - y0)) * KART.h,
+  };
+}
+
+/* Luftlinje i kilometer. Haversine -- Norge er langt nok nord til at
+   «bare regn med rette linjer» bommer med titalls kilometer. */
+function avstandKm(lat1, lon1, lat2, lon2) {
+  const R = 6371, rad = (g) => g * Math.PI / 180;
+  const dLat = rad(lat2 - lat1), dLon = rad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 +
+    Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+function kartHtml(steder) {
+  const aapne = steder.filter((s) => s.aapnet);
+  const grader = [60, 63, 66, 69];
+
+  const prikker = steder.map((s) => {
+    const { x, y } = kartPunkt(s.lat, s.lon);
+    return '<circle class="kart-prikk' + (s.aapnet ? "" : " kommer") +
+      '" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="5">' +
+      "<title>" + esc(s.navn + " — " + s.adresse + ", " + s.poststed) +
+      "</title></circle>";
+  }).join("");
+
+  const linjer = grader.map((g) => {
+    const y = kartPunkt(g, KART.lon0).y;
+    return '<line class="kart-grad" x1="0" y1="' + y.toFixed(1) +
+      '" x2="' + KART.b + '" y2="' + y.toFixed(1) + '"></line>' +
+      '<text class="kart-gradtekst" x="4" y="' + (y - 4).toFixed(1) + '">' +
+      g + "°N</text>";
+  }).join("");
+
+  return '<svg class="kart" viewBox="0 0 ' + KART.b + " " + KART.h +
+    '" role="img" aria-label="Kart over fysiske butikker i Norge">' +
+    linjer + prikker + "</svg>" +
+    '<p class="hjelp liten">' + aapne.length + " butikker · " +
+    esc([...new Set(steder.map((s) => s.kjede))].join(", ")) + "</p>";
+}
+
+function stedslisteHtml(steder, meg) {
+  const med = steder.map((s) => ({
+    ...s,
+    km: meg ? avstandKm(meg.lat, meg.lon, s.lat, s.lon) : null,
+  }));
+  if (meg) med.sort((a, b) => a.km - b.km);
+
+  return '<ul class="stedliste">' + med.map((s) =>
+    "<li><span><strong>" + esc(s.navn) + "</strong>" +
+    '<span class="hjelp liten">' + esc(s.adresse) + ", " + esc(s.poststed) +
+      (s.merknad ? " · " + esc(s.merknad) : "") + "</span></span>" +
+    (s.km != null
+      ? '<span class="stedavstand">' + Math.round(s.km) + " km</span>"
+      : s.aapnet ? "" : '<span class="stedavstand">kommer</span>') +
+    "</li>").join("") + "</ul>";
+}
+
+async function apneKart() {
+  visArk('<p class="hjelp">Laster…</p>');
+  let d;
+  try { d = await hent("/steder"); }
+  catch (e) { visArk('<p class="feil">Fikk ikke kontakt med serveren.</p>'); return; }
+
+  const tegn = (meg) => {
+    visArk('<h2>Butikk nær deg</h2>' +
+      '<p class="hjelp">' + esc(d.forbehold) + "</p>" +
+      '<div class="kart-boks">' + kartHtml(d.steder) + "</div>" +
+      '<button class="lenkeknapp" id="finn-meg" type="button">' +
+        (meg ? "Oppdater posisjonen min" : "Finn nærmeste") + "</button>" +
+      '<p class="feil" id="kart-feil" hidden></p>' +
+      stedslisteHtml(d.steder, meg));
+
+    $("finn-meg").onclick = () => {
+      const feil = $("kart-feil");
+      if (!navigator.geolocation) {
+        feil.textContent = "Nettleseren din har ikke posisjon.";
+        feil.hidden = false;
+        return;
+      }
+      // Posisjonen forlater ALDRI telefonen. Avstandene regnes ut her, i
+      // nettleseren -- vi sender ingen koordinater til serveren og lagrer
+      // dem ingen steder. Det er ikke en teknisk detalj, det er hele
+      // grunnen til at vi torde spore.
+      navigator.geolocation.getCurrentPosition(
+        (pos) => tegn({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+        () => {
+          feil.textContent = "Fikk ikke posisjonen din. Du kan fortsatt " +
+            "se butikkene i listen.";
+          feil.hidden = false;
+        },
+        { timeout: 8000, maximumAge: 300000 });
+    };
+  };
+  tegn(null);
 }

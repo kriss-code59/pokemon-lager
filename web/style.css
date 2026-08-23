@@ -758,3 +758,35 @@ body.ny .filterlinje::-webkit-scrollbar { display: none; }
 body.ny #tom-liste .lenkeknapp {
   display: block; margin: 12px auto 0;
 }
+
+/* --- kart over fysiske butikker (testomraadet) --- */
+.kartknapp {
+  flex: none; margin-left: auto;
+  background: var(--flate-2); color: var(--tekst);
+  border: 1px solid var(--kant); border-radius: 999px;
+  padding: 7px 13px; font-size: 13px; white-space: nowrap;
+}
+.kart-boks {
+  background: var(--flate); border: 1px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 10px; margin: 12px 0;
+}
+.kart { display: block; width: 100%; max-width: 300px; margin: 0 auto; height: auto; }
+.kart-prikk { fill: var(--gronn); opacity: .85; }
+/* Butikker som ikke har aapnet enna skal vaere med, men ikke se ut som et
+   sted du kan dra i dag. */
+.kart-prikk.kommer { fill: none; stroke: var(--tekst-svak); stroke-width: 1.5; }
+.kart-grad { stroke: var(--kant); stroke-width: 1; }
+.kart-gradtekst { fill: var(--tekst-svak); font-size: 9px; }
+
+.stedliste { list-style: none; padding: 0; margin: 12px 0 0; }
+.stedliste li {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--kant);
+}
+.stedliste li:last-child { border-bottom: 0; }
+.stedliste span span { display: block; }
+.stedavstand {
+  flex: none; font-size: 12px; color: var(--tekst-svak);
+  font-variant-numeric: tabular-nums;
+}

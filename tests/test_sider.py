@@ -344,3 +344,84 @@ def test_filterknappen_gjenbruker_de_gamle_filtrene():
     for felt in ("state.kunLager", "state.forhandssalg", "state.region", "state.type"):
         assert felt in kropp, felt
     assert '$("chips").children' in kropp, "chip-radene oppdateres ikke"
+
+
+# ------------------------------------------- fysiske butikker og kartet
+
+def test_kartet_lover_ikke_lager_i_den_enkelte_butikken():
+    """Vi undersokte alle 46 butikkene. Bare Outland oppgir lager i fysisk
+    butikk, og bare som et ANTALL -- «Tilgjengelig i 4 butikker», ikke
+    hvilke fire.
+
+    Et kart faar folk til aa tro paa presisjon. En gronn prikk paa Bergen
+    for en vare som finnes i «4 av 15» ville faatt noen til aa kjore dit.
+    Forbeholdet maa derfor staa i SVARET, ikke bare i grensesnittet -- den
+    som leser API-et direkte skal se det samme.
+    """
+    main = (ROT / "api" / "main.py").read_text(encoding="utf-8")
+    i = main.index('@app.get("/api/steder")')
+    kropp = main[i:i + 2200]
+    assert '"forbehold"' in kropp
+    # Setningen brytes over to linjer i kilden. Test innholdet, ikke
+    # linjebruddet -- ellers slaar testen ut neste gang noen rykker inn.
+    assert "Viser hvor kjedene har utsalg" in kropp
+    assert "Ring butikken før du drar" in kropp
+
+
+def test_kolonnenavnet_sier_at_det_er_et_antall():
+    """Kolonnen heter «antall_fysiske_butikker», ikke «butikker». Ingen
+    skal senere tro den kan peke paa et kart.
+    """
+    sql = (ROT / "db" / "010_fysiske_butikker.sql").read_text(encoding="utf-8")
+    assert "antall_fysiske_butikker INT" in sql
+    ing = (ROT / "ingest" / "ingest.py").read_text(encoding="utf-8")
+    assert "antall_fysiske_butikker = COALESCE(" in ing, \
+        "en tom runde tommer kolonnen for alle varene"
+
+
+def test_koordinater_er_numeric_ikke_float():
+    # En breddegrad som flyter er en prikk som flytter seg.
+    sql = (ROT / "db" / "010_fysiske_butikker.sql").read_text(encoding="utf-8")
+    assert "lat         NUMERIC(8, 5) NOT NULL" in sql
+    assert "lon         NUMERIC(8, 5) NOT NULL" in sql
+
+
+def test_alle_femten_outlandbutikker_er_seedet():
+    import re
+    sql = (ROT / "db" / "010_fysiske_butikker.sql").read_text(encoding="utf-8")
+    rader = re.findall(r"^  \('outland-", sql, re.M)
+    assert len(rader) == 15, f"fant {len(rader)} butikker"
+    # Tromso har ikke aapnet enna og skal ikke telle som et sted du kan dra.
+    assert "'Åpner høsten 2026'" in sql
+    assert "18.95530, FALSE" in sql
+
+
+def test_kartet_snur_ikke_norge_paa_hodet():
+    """SVG teller y nedover, kartet nordover. Uten korreksjonen staar
+    Tromso i sor -- og det ser ut som et kart, saa ingen ville stusset.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("function kartPunkt")
+    kropp = js[i:i + 500]
+    assert "KART.h - " in kropp, "y-aksen er ikke snudd"
+
+
+def test_kartgrensene_er_faste():
+    # Regnet vi dem ut fra butikkene vi har, ville kartet endret form hver
+    # gang en kjede aapnet et utsalg.
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert "const KART = { lat0: 57.5, lat1: 70.5, lon0: 4.0, lon1: 20.0" in js
+
+
+def test_posisjonen_forlater_aldri_telefonen():
+    """Avstandene regnes ut i nettleseren. Vi sender ingen koordinater til
+    serveren og lagrer dem ingen steder -- det er hele grunnen til at vi
+    torde sporre om posisjon i det hele tatt.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("navigator.geolocation.getCurrentPosition")
+    kropp = js[i:i + 600]
+    # Posisjonen skal bare inn i tegn(), aldri i et kall til serveren.
+    assert "hent(" not in kropp, "sender posisjonen til serveren"
+    assert "localStorage" not in kropp, "lagrer posisjonen"
+    assert "tegn({ lat:" in kropp

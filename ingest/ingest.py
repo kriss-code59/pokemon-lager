@@ -279,6 +279,18 @@ def grupper_per_butikk(rader, katalog: Katalog, manuelle: dict | None = None):
             # bilde-URL-er liggende. Et felt som leses av alle og skrives av
             # ingen feiler stille: ingenting kaster, det ser bare tomt ut.
             "image_url": (r.get("image") or None),
+            # Antall FYSISKE butikker i kjeden som har varen.
+            #
+            # Bare Outland oppgir dette, og de oppgir bare tallet -- ikke
+            # hvilke butikker. Kolonnen heter derfor «antall», ikke
+            # «butikker»: ingen skal senere tro den kan peke paa et kart.
+            #
+            # Per august 2026 er den som regel NULL, fordi Outland flyttet
+            # opplysningen fra kategorikortene til produktsidene. Vi henter
+            # den ikke derfra -- det ville kostet ~50 ekstra sidelastinger
+            # per runde for én butikk. Roeret staar klart hvis de flytter
+            # den tilbake.
+            "antall_fysiske": r.get("store_count"),
         }
     return per_butikk, dict(forkastet)
 
@@ -400,7 +412,8 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                     if gammel is None:
                         sett_inn.append((butikk_id, ny["product_id"], url, ny["title"],
                                          ny["price_ore"], ny["in_stock"], na, na,
-                                         ny["image_url"], ny["bestillingstype"]))
+                                         ny["image_url"], ny["bestillingstype"],
+                                         ny["antall_fysiske"]))
                         if (ny["in_stock"] is True and not bootstrap
                                 and not _stille(ny["bestillingstype"])):
                             hendelser.append((None, url, ny["product_id"], butikk_id,
@@ -409,7 +422,8 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
 
                     oppdater.append((ny["product_id"], ny["title"], ny["price_ore"],
                                      ny["in_stock"], na, na, ny["image_url"],
-                                     ny["bestillingstype"], gammel["id"]))
+                                     ny["bestillingstype"], ny["antall_fysiske"],
+                                     gammel["id"]))
                     if bootstrap:
                         continue
 
@@ -460,8 +474,9 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                 if sett_inn:
                     cur.executemany(
                         "INSERT INTO listings (store_id, product_id, url, title, price_ore, "
-                        "in_stock, last_seen_at, last_ok_at, image_url, bestillingstype) "
-                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "
+                        "in_stock, last_seen_at, last_ok_at, image_url, bestillingstype, "
+                        "antall_fysiske_butikker) "
+                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "
                         "ON CONFLICT (url) DO UPDATE SET "
                         "  product_id = EXCLUDED.product_id, title = EXCLUDED.title, "
                         "  price_ore = EXCLUDED.price_ore, in_stock = EXCLUDED.in_stock, "
@@ -473,13 +488,20 @@ def kjor(dsn: str, data_sti: str, katalog_sti: str | None = None,
                         # Denne SKAL settes til NULL naar merkingen forsvinner:
                         # et forhaandssalg blir en vanlig vare paa slippdatoen,
                         # og da skal merkelappen bort av seg selv.
-                        "  bestillingstype = EXCLUDED.bestillingstype",
+                        "  bestillingstype = EXCLUDED.bestillingstype, "
+                        # COALESCE, som bildet: en runde der Outland ikke
+                        # rakk aa vise tallet skal ikke tomme det for alle
+                        # varene deres.
+                        "  antall_fysiske_butikker = COALESCE("
+                        "    EXCLUDED.antall_fysiske_butikker, "
+                        "    listings.antall_fysiske_butikker)",
                         sett_inn)
                 if oppdater:
                     cur.executemany(
                         "UPDATE listings SET product_id = %s, title = %s, price_ore = %s, "
                         "in_stock = %s, last_seen_at = %s, last_ok_at = %s, "
-                        "image_url = COALESCE(%s, image_url), bestillingstype = %s "
+                        "image_url = COALESCE(%s, image_url), bestillingstype = %s, "
+                        "antall_fysiske_butikker = COALESCE(%s, antall_fysiske_butikker) "
                         "WHERE id = %s",
                         oppdater)
 
