@@ -769,15 +769,39 @@ body.ny #tom-liste .lenkeknapp {
 .kart-boks {
   background: var(--flate); border: 1px solid var(--kant);
   border-radius: var(--radius);
-  padding: 10px; margin: 12px 0;
+  padding: 14px 10px; margin: 12px 0;
 }
-.kart { display: block; width: 100%; max-width: 300px; margin: 0 auto; height: auto; }
-.kart-prikk { fill: var(--gronn); opacity: .85; }
-/* Butikker som ikke har aapnet enna skal vaere med, men ikke se ut som et
-   sted du kan dra i dag. */
-.kart-prikk.kommer { fill: none; stroke: var(--tekst-svak); stroke-width: 1.5; }
-.kart-grad { stroke: var(--kant); stroke-width: 1; }
-.kart-gradtekst { fill: var(--tekst-svak); font-size: 9px; }
+.kart { display: block; width: 100%; max-width: 340px; margin: 0 auto; height: auto; }
+
+/* Land som flate, ikke som strek. En kystlinje uten fyll leser som en
+   krusedull; med fyll leser den som et land. */
+.kart-land {
+  fill: var(--flate-2);
+  stroke: var(--kant);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.kart-by circle { fill: var(--gronn); }
+.kart-glo { fill: var(--gronn); opacity: .18; }
+.kart-by text {
+  fill: var(--tekst); font-size: 10px; font-weight: 600;
+  /* paint-order: stroke tegner konturen UNDER fyllet. Uten den legger
+     streken seg oppa bokstavene og teksten blir en gro klatt -- det var
+     nettopp det som skjedde i forste utkast. */
+  paint-order: stroke;
+  stroke: var(--flate); stroke-width: 3px; stroke-linejoin: round;
+}
+.kart-by.naermest circle { fill: var(--gul); }
+.kart-by.naermest .kart-glo { fill: var(--gul); opacity: .22; }
+.kart-by.naermest text { fill: var(--gul); }
+/* Butikker som ikke har aapnet skal vaere med, men ikke se ut som et sted
+   du kan dra i dag. */
+.kart-by.kommer circle { fill: none; stroke: var(--tekst-svak); stroke-width: 1.4; }
+.kart-by.kommer .kart-glo { display: none; }
+.kart-by.kommer text { fill: var(--tekst-svak); }
+
+.kart-meg { fill: var(--bla); stroke: var(--bg); stroke-width: 2; }
 
 .stedliste { list-style: none; padding: 0; margin: 12px 0 0; }
 .stedliste li {
@@ -797,3 +821,8 @@ body.ny #tom-liste .lenkeknapp {
    flex-fri beholder. */
 .slipp .lenkeknapp { display: inline-block; margin-right: 14px; }
 .slipp .lenkeknapp:last-child { margin-right: 0; }
+.kart-forklaring circle { fill: var(--gronn); }
+.kart-forklaring circle.tom {
+  fill: none; stroke: var(--tekst-svak); stroke-width: 1.4;
+}
+.kart-forklaring text { fill: var(--tekst-svak); font-size: 9.5px; }

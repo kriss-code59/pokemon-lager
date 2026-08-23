@@ -407,10 +407,22 @@ def test_kartet_snur_ikke_norge_paa_hodet():
 
 
 def test_kartgrensene_er_faste():
-    # Regnet vi dem ut fra butikkene vi har, ville kartet endret form hver
-    # gang en kjede aapnet et utsalg.
+    """Regnet vi dem ut fra butikkene vi har, ville kartet endret form hver
+    gang en kjede aapnet et utsalg.
+
+    Testen sto tidligere med de eksakte tallene i seg. Da slo den ut da
+    utsnittet ble utvidet for aa faa med Finnmark -- en endring som var
+    riktig. Den maaler naa regelen: grensene er konstanter, og de dekker
+    hele fastlandet.
+    """
+    import re
     js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    assert "const KART = { lat0: 57.5, lat1: 70.5, lon0: 4.0, lon1: 20.0" in js
+    m = re.search(r"const KART = \{ lat0: ([\d.]+), lat1: ([\d.]+), "
+                  r"lon0: ([\d.]+), lon1: ([\d.]+)", js)
+    assert m, "KART-grensene er ikke konstanter lenger"
+    lat0, lat1, lon0, lon1 = (float(g) for g in m.groups())
+    assert lat0 <= 58.0 and lat1 >= 71.1, "utsnittet dekker ikke hele Norge"
+    assert lon0 <= 5.0 and lon1 >= 30.9, "Finnmark faller utenfor"
 
 
 def test_posisjonen_forlater_aldri_telefonen():
@@ -440,3 +452,57 @@ def test_testomraadet_kan_ikke_mellomlagres():
     i = konf.index("location = /ny {")
     blokk = konf[i:konf.index("}", i)]
     assert 'Cache-Control "no-store' in blokk
+
+
+def test_kartet_har_et_ekte_omriss():
+    """Forste forsok var prikker paa breddegradslinjer, uten kystlinje --
+    jeg ville ikke «dikte opp» et kart. Det ble et punktdiagram.
+
+    Resonnementet var feil: et STILISERT omriss er ikke uaerlig, ingen tror
+    et skjematisk kart er en oppmaaling. Det uaerlige ville vaert aa paastaa
+    lager i den enkelte butikken, og det er noe helt annet.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert "const NORGE = [" in js
+    i = js.index("const NORGE = [")
+    blokk = js[i:js.index("\n];", i)]
+    import re
+    punkter = re.findall(r"\[(\d+\.\d+), (\d+\.\d+)\]", blokk)
+    assert len(punkter) >= 40, f"bare {len(punkter)} punkter -- for grovt"
+    # Nordkapp og Kirkenes maa vaere med, ellers er det ikke Norge.
+    assert max(float(a) for a, b in punkter) > 71.0, "mangler Nordkapp"
+    assert max(float(b) for a, b in punkter) > 30.0, "mangler Finnmark"
+    assert "kart-grad" not in js, "rutenettet fra punktdiagrammet staar igjen"
+
+
+def test_omrisset_gaar_gjennom_samme_projeksjon_som_prikkene():
+    """Omrisset er [bredde, lengde], ikke ferdige SVG-koordinater.
+
+    Hadde det vaert hardkodet i piksler, ville butikkprikkene glidd av
+    land forste gang noen endret utsnittet -- og det ville sett riktig ut
+    helt til noen kjente Norge godt nok til aa stusse.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("const land = NORGE.map")
+    assert "kartPunkt(lat, lon)" in js[i:i + 260]
+
+
+def test_byer_klynges_saa_prikkene_ikke_klumper_seg():
+    # Outland har tre butikker i Oslo. Tre prikker oppa hverandre ser ut
+    # som en klatt, ikke som informasjon.
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("function kartHtml")
+    kropp = js[i:js.index("function stedslisteHtml", i)]
+    assert "byer.set(s2.poststed" in kropp
+    assert "b.antall - 1" in kropp, "prikken vokser ikke med antallet"
+
+
+def test_bare_de_bynavnene_som_tilforer_noe():
+    """Rundt Oslofjorden ligger seks byer saa taett at alle etiketter la
+    seg oppa hverandre. Listen rett under kartet har uansett alle navnene.
+    """
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("function kartHtml")
+    kropp = js[i:js.index("function stedslisteHtml", i)]
+    assert "const merket = b.antall > 1" in kropp
+    assert "naermest" in kropp, "naermeste by faar ikke navn"

@@ -1994,9 +1994,53 @@ if ("serviceWorker" in navigator) {
    staa inne for uten en ordentlig kartkilde.
    ===================================================================== */
 
-/* Norge i Mercator. Faste grenser, ikke utregnet fra butikkene vi har --
-   ellers ville kartet endret form hver gang en kjede aapnet et utsalg. */
-const KART = { lat0: 57.5, lat1: 70.5, lon0: 4.0, lon1: 20.0, b: 300, h: 470 };
+/* NORGES OMRISS.
+ *
+ * Forste forsok var prikker paa breddegradslinjer, uten kystlinje -- jeg
+ * ville ikke «dikte opp» et kart. Det ble et punktdiagram, og det saa
+ * deretter ut.
+ *
+ * Resonnementet var feil. Et STILISERT kartomriss er ikke uaerlig; ingen
+ * tror et skjematisk kart er en oppmaaling. Det uaerlige ville vaert aa
+ * paastaa lager i den enkelte butikken, og det er noe helt annet.
+ *
+ * Omrisset er punkter i [bredde, lengde] -- ikke ferdige SVG-koordinater.
+ * Det betyr at kystlinjen og butikkprikkene gaar gjennom SAMME
+ * projeksjon: bytter vi utsnitt, folger begge med. Hadde omrisset vaert
+ * hardkodet i piksler, ville prikkene glidd fra land ved forste endring.
+ *
+ * Punktene folger kysten med klokka fra Lindesnes.
+ */
+const NORGE = [
+  // Sorlandet ostover mot Oslofjorden
+  [57.98, 7.05], [58.02, 7.49], [58.14, 8.00], [58.46, 8.77], [58.75, 9.60],
+  [59.05, 10.03], [59.42, 10.48], [59.74, 10.60], [59.91, 10.75],
+  // Ostsiden av fjorden og ned mot svenskegrensen
+  [59.60, 10.70], [59.22, 10.93], [59.12, 11.39],
+  // Grensen mot Sverige, nordover
+  [59.90, 11.70], [61.05, 12.60], [62.30, 12.15], [63.30, 12.10],
+  [64.05, 13.90], [65.00, 14.50], [66.15, 15.40], [67.25, 16.40],
+  [68.45, 18.10], [68.95, 20.55], [69.30, 21.05],
+  // Finnmark ostover til Kirkenes
+  [69.05, 23.00], [69.10, 25.90], [69.55, 27.05], [69.70, 29.10], [69.80, 30.90],
+  // Nordkysten vestover
+  [70.35, 30.05], [70.55, 28.30], [70.95, 27.30], [71.17, 25.78],
+  [70.66, 23.68], [70.30, 21.70], [69.65, 18.96], [69.32, 16.12],
+  // Lofoten og Helgeland
+  [68.45, 14.60], [67.88, 12.98], [67.28, 14.40], [66.02, 12.63],
+  [65.05, 12.10], [64.86, 11.24], [64.00, 10.30],
+  // Trondheimsfjorden inn og ut
+  [63.60, 10.90], [63.43, 10.40], [63.45, 9.60], [63.11, 7.73],
+  // Vestlandet sorover
+  [62.75, 7.15], [62.47, 6.15], [62.10, 5.40], [61.94, 5.11],
+  [61.30, 4.95], [60.80, 4.95], [60.39, 5.32], [59.90, 5.20],
+  [59.41, 5.27], [58.97, 5.73], [58.65, 5.60], [58.45, 5.99],
+];
+
+/* Faste grenser, ikke utregnet fra butikkene vi har -- ellers ville kartet
+ * endret form hver gang en kjede aapnet et utsalg. Lengdegrad helt ut til
+ * 31 fordi Finnmark strekker seg lenger ost enn Istanbul. */
+const KART = { lat0: 57.4, lat1: 71.5, lon0: 4.0, lon1: 31.5, b: 320, h: 420 };
 
 function merkatorY(lat) {
   return Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI / 180) / 2));
@@ -2012,7 +2056,7 @@ function kartPunkt(lat, lon) {
 }
 
 /* Luftlinje i kilometer. Haversine -- Norge er langt nok nord til at
-   «bare regn med rette linjer» bommer med titalls kilometer. */
+ * «bare regn med rette linjer» bommer med titalls kilometer. */
 function avstandKm(lat1, lon1, lat2, lon2) {
   const R = 6371, rad = (g) => g * Math.PI / 180;
   const dLat = rad(lat2 - lat1), dLon = rad(lon2 - lon1);
@@ -2021,31 +2065,83 @@ function avstandKm(lat1, lon1, lat2, lon2) {
   return 2 * R * Math.asin(Math.sqrt(a));
 }
 
-function kartHtml(steder) {
-  const aapne = steder.filter((s) => s.aapnet);
-  const grader = [60, 63, 66, 69];
+function kartHtml(steder, meg) {
+  const land = NORGE.map(([lat, lon], k) => {
+    const { x, y } = kartPunkt(lat, lon);
+    return (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
+  }).join(" ") + " Z";
 
-  const prikker = steder.map((s) => {
-    const { x, y } = kartPunkt(s.lat, s.lon);
-    return '<circle class="kart-prikk' + (s.aapnet ? "" : " kommer") +
-      '" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="5">' +
-      "<title>" + esc(s.navn + " — " + s.adresse + ", " + s.poststed) +
-      "</title></circle>";
+  /* KLYNG PER BY.
+   *
+   * Outland har tre butikker i Oslo. Tre prikker oppa hverandre ser ut som
+   * en klatt, ikke som informasjon. Én prikk som vokser med antallet sier
+   * det samme, tydeligere. */
+  const byer = new Map();
+  for (const s2 of steder) {
+    const n = byer.get(s2.poststed) || { poststed: s2.poststed, lat: s2.lat,
+                                         lon: s2.lon, antall: 0, aapne: 0 };
+    n.antall++;
+    if (s2.aapnet) n.aapne++;
+    byer.set(s2.poststed, n);
+  }
+
+  /* HVILKE BYER SKAL HA NAVN PAA KARTET?
+   *
+   * Forste forsok satte navn paa alle. Rundt Oslofjorden ligger seks byer
+   * saa taett at etikettene la seg oppa hverandre og gjorde kartet
+   * uleselig -- og listen rett under kartet har uansett alle navnene.
+   *
+   * Regel: navn bare der det tilfoerer noe kartet ikke viser. Byer med
+   * flere butikker, og den naermeste deg. Resten er prikker; trykker du
+   * paa dem, staar navnet i tooltipen. */
+  const naermest = meg ? [...byer.values()]
+    .sort((a, b) => avstandKm(meg.lat, meg.lon, a.lat, a.lon) -
+                    avstandKm(meg.lat, meg.lon, b.lat, b.lon))[0] : null;
+
+  const prikker = [...byer.values()].map((b) => {
+    const { x, y } = kartPunkt(b.lat, b.lon);
+    const r = 4.5 + Math.min(b.antall - 1, 3) * 1.8;
+    const merket = b.antall > 1 || (naermest && naermest.poststed === b.poststed);
+    const klasse = (b.aapne ? "kart-by" : "kart-by kommer") +
+                   (naermest && naermest.poststed === b.poststed ? " naermest" : "");
+    return '<g class="' + klasse + '">' +
+      '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) +
+        '" r="' + (r + 5).toFixed(1) + '" class="kart-glo"></circle>' +
+      '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) +
+        '" r="' + r.toFixed(1) + '"></circle>' +
+      (merket
+        ? '<text x="' + (x + r + 5).toFixed(1) + '" y="' + (y + 3.5).toFixed(1) + '">' +
+          esc(b.poststed) + (b.antall > 1 ? " (" + b.antall + ")" : "") + "</text>"
+        : "") +
+      "<title>" + esc(b.poststed + " — " + b.antall +
+        (b.antall === 1 ? " butikk" : " butikker")) + "</title></g>";
   }).join("");
 
-  const linjer = grader.map((g) => {
-    const y = kartPunkt(g, KART.lon0).y;
-    return '<line class="kart-grad" x1="0" y1="' + y.toFixed(1) +
-      '" x2="' + KART.b + '" y2="' + y.toFixed(1) + '"></line>' +
-      '<text class="kart-gradtekst" x="4" y="' + (y - 4).toFixed(1) + '">' +
-      g + "°N</text>";
-  }).join("");
+  const megPrikk = meg ? (() => {
+    const { x, y } = kartPunkt(meg.lat, meg.lon);
+    // Bare hvis posisjonen er innenfor utsnittet -- er du i Spania skal
+    // ikke prikken din klistres til kanten og se ut som en butikk.
+    if (x < 0 || x > KART.b || y < 0 || y > KART.h) return "";
+    return '<circle class="kart-meg" cx="' + x.toFixed(1) + '" cy="' +
+      y.toFixed(1) + '" r="5"><title>Her er du</title></circle>';
+  })() : "";
+
+  /* Nedre hoyre hjorne er Sverige -- altsaa tomt. Forklaringen legges der
+   * i stedet for under kartet: den fyller et hull som ellers ser ut som
+   * en feil, og staar naermere prikkene den forklarer. */
+  const forklaring =
+    '<g class="kart-forklaring" transform="translate(' + (KART.b - 108) +
+      "," + (KART.h - 52) + ')">' +
+    '<circle cx="6" cy="0" r="4.5"></circle>' +
+    '<text x="17" y="3.5">har butikk</text>' +
+    '<circle class="tom" cx="6" cy="19" r="4.5"></circle>' +
+    '<text x="17" y="22.5">åpner snart</text>' +
+    "</g>";
 
   return '<svg class="kart" viewBox="0 0 ' + KART.b + " " + KART.h +
     '" role="img" aria-label="Kart over fysiske butikker i Norge">' +
-    linjer + prikker + "</svg>" +
-    '<p class="hjelp liten">' + aapne.length + " butikker · " +
-    esc([...new Set(steder.map((s) => s.kjede))].join(", ")) + "</p>";
+    '<path class="kart-land" d="' + land + '"></path>' +
+    prikker + megPrikk + forklaring + "</svg>";
 }
 
 function stedslisteHtml(steder, meg) {
@@ -2074,7 +2170,7 @@ async function apneKart() {
   const tegn = (meg) => {
     visArk('<h2>Butikk nær deg</h2>' +
       '<p class="hjelp">' + esc(d.forbehold) + "</p>" +
-      '<div class="kart-boks">' + kartHtml(d.steder) + "</div>" +
+      '<div class="kart-boks">' + kartHtml(d.steder, meg) + "</div>" +
       '<button class="lenkeknapp" id="finn-meg" type="button">' +
         (meg ? "Oppdater posisjonen min" : "Finn nærmeste") + "</button>" +
       '<p class="feil" id="kart-feil" hidden></p>' +
