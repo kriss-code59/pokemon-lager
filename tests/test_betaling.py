@@ -277,14 +277,25 @@ APP_JS = (ROT / "web" / "app.js").read_text(encoding="utf-8")
 
 
 def test_abonner_rydder_bort_forrige_fra_samme_nettleser():
-    i = PUSH.index('@router.post("/abonner")')
-    kropp = PUSH[i:PUSH.index("@router.post", i + 20)]
-    assert "DELETE FROM push_endpoints" in kropp, "ingen opprydding"
-    assert "installasjon = %s" in kropp
-    # Heuristikken som rydder opp i duplikatene som ALLEREDE finnes: gamle
-    # rader har ingen installasjons-id, men samme user agent.
-    assert "installasjon IS NULL AND user_agent" in kropp
+    """En bruker skal ha ÉN registrering per nettleser, ikke én per
+    service worker-generasjon.
 
+    Testen sto tidligere og krevde at oppryddingen matchet paa user_agent.
+    Den laaste fast nettopp regelen som viste seg aa vaere feil: strengen
+    endrer seg naar telefonen oppdaterer iOS, og da overlevde duplikatene.
+    Testen var altsaa gronn mens feilen sto i drift.
+
+    Den maaler naa resultatet -- at rader uten installasjons-id ryddes bort
+    naar det finnes en med -- ikke hvordan jeg lose det forste gang.
+    """
+    kilde = (ROT / "api" / "push.py").read_text(encoding="utf-8")
+    i = kilde.index('@router.post("/abonner")')
+    kropp = kilde[i:kilde.index('@router.post("/avmeld")', i)]
+    assert "DELETE FROM push_endpoints" in kropp
+    assert "installasjon = %s OR installasjon IS NULL" in kropp
+    # Den nye raden maa vaere unntatt, ellers sletter vi det vi nettopp
+    # lagde og brukeren staar uten varsler.
+    assert "id <> %s" in kropp
 
 def test_oppryddingen_rorer_ikke_andre_enheter():
     # En som faktisk bruker to telefoner skal beholde begge. Sletting skjer

@@ -396,35 +396,6 @@ def test_alle_femten_outlandbutikker_er_seedet():
     assert "18.95530, FALSE" in sql
 
 
-def test_kartet_snur_ikke_norge_paa_hodet():
-    """SVG teller y nedover, kartet nordover. Uten korreksjonen staar
-    Tromso i sor -- og det ser ut som et kart, saa ingen ville stusset.
-    """
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    i = js.index("function kartPunkt")
-    kropp = js[i:i + 500]
-    assert "KART.h - " in kropp, "y-aksen er ikke snudd"
-
-
-def test_kartgrensene_er_faste():
-    """Regnet vi dem ut fra butikkene vi har, ville kartet endret form hver
-    gang en kjede aapnet et utsalg.
-
-    Testen sto tidligere med de eksakte tallene i seg. Da slo den ut da
-    utsnittet ble utvidet for aa faa med Finnmark -- en endring som var
-    riktig. Den maaler naa regelen: grensene er konstanter, og de dekker
-    hele fastlandet.
-    """
-    import re
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    m = re.search(r"const KART = \{ lat0: ([\d.]+), lat1: ([\d.]+), "
-                  r"lon0: ([\d.]+), lon1: ([\d.]+)", js)
-    assert m, "KART-grensene er ikke konstanter lenger"
-    lat0, lat1, lon0, lon1 = (float(g) for g in m.groups())
-    assert lat0 <= 58.0 and lat1 >= 71.1, "utsnittet dekker ikke hele Norge"
-    assert lon0 <= 5.0 and lon1 >= 30.9, "Finnmark faller utenfor"
-
-
 def test_posisjonen_forlater_aldri_telefonen():
     """Avstandene regnes ut i nettleseren. Vi sender ingen koordinater til
     serveren og lagrer dem ingen steder -- det er hele grunnen til at vi
@@ -454,55 +425,83 @@ def test_testomraadet_kan_ikke_mellomlagres():
     assert 'Cache-Control "no-store' in blokk
 
 
-def test_kartet_har_et_ekte_omriss():
-    """Forste forsok var prikker paa breddegradslinjer, uten kystlinje --
-    jeg ville ikke «dikte opp» et kart. Det ble et punktdiagram.
 
-    Resonnementet var feil: et STILISERT omriss er ikke uaerlig, ingen tror
-    et skjematisk kart er en oppmaaling. Det uaerlige ville vaert aa paastaa
-    lager i den enkelte butikken, og det er noe helt annet.
+
+# ------------------------------------------------- ekte kart (Leaflet)
+
+def test_leaflet_ligger_lokalt_ikke_paa_et_cdn():
+    """CSP-en tillater bare egne skript, og den skal ikke myknes opp for
+    et kartbibliotek. Et `script-src` som slipper inn et CDN, slipper inn
+    alt det CDN-et noen gang serverer.
+    """
+    assert (ROT / "web" / "vendor" / "leaflet" / "leaflet.js").exists()
+    assert (ROT / "web" / "vendor" / "leaflet" / "leaflet.css").exists()
+    # BSD-lisensen skal folge med koden.
+    assert (ROT / "web" / "vendor" / "leaflet" / "LICENSE").exists()
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert 'LEAFLET_JS = "/vendor/leaflet/leaflet.js"' in js
+    assert "unpkg.com" not in js and "cdn.jsdelivr" not in js
+
+    konf = (ROT / "deploy" / "nginx-sider.conf").read_text(encoding="utf-8")
+    assert konf.count("script-src 'self';") >= 1
+    assert "script-src 'self' https" not in konf, "CSP er myknet opp"
+
+
+def test_kartet_lastes_forst_naar_noen_aapner_det():
+    """148 kB. Forsiden skal ikke betale for en funksjon de fleste aldri
+    trykker paa.
     """
     js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    assert "const NORGE = [" in js
-    i = js.index("const NORGE = [")
-    blokk = js[i:js.index("\n];", i)]
-    import re
-    punkter = re.findall(r"\[(\d+\.\d+), (\d+\.\d+)\]", blokk)
-    assert len(punkter) >= 40, f"bare {len(punkter)} punkter -- for grovt"
-    # Nordkapp og Kirkenes maa vaere med, ellers er det ikke Norge.
-    assert max(float(a) for a, b in punkter) > 71.0, "mangler Nordkapp"
-    assert max(float(b) for a, b in punkter) > 30.0, "mangler Finnmark"
-    assert "kart-grad" not in js, "rutenettet fra punktdiagrammet staar igjen"
+    assert "function lastLeaflet" in js
+    # Ikke i HTML-en -- da lastes den for alle.
+    html = (ROT / "web" / "index.html").read_text(encoding="utf-8")
+    assert "leaflet" not in html.lower()
 
 
-def test_omrisset_gaar_gjennom_samme_projeksjon_som_prikkene():
-    """Omrisset er [bredde, lengde], ikke ferdige SVG-koordinater.
+def test_osm_faar_navngiving():
+    # Flisene er gratis fordi noen har tegnet dem. Navngiving er kravet.
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    i = js.index("L.tileLayer(")
+    assert "OpenStreetMap-bidragsytere" in js[i:i + 400]
 
-    Hadde det vaert hardkodet i piksler, ville butikkprikkene glidd av
-    land forste gang noen endret utsnittet -- og det ville sett riktig ut
-    helt til noen kjente Norge godt nok til aa stusse.
+
+def test_markorene_slipper_unna_morkfilteret():
+    """Flisene inverteres for aa bli morke. Ligger markorene i samme lag,
+    blir gronn til rosa -- og statusfargen er hele poenget med dem.
+    """
+    css = (ROT / "web" / "style.css").read_text(encoding="utf-8")
+    i = css.index(".leaflet-tile-pane")
+    assert "invert(1)" in css[i:i + 200]
+    # Filteret maa gjelde flis-panelet, ikke hele kartet.
+    assert ".leaflet-container {" in css
+    j = css.index(".leaflet-container {")
+    assert "invert" not in css[j:j + 120]
+
+
+def test_kartbiblioteket_ligger_ikke_i_skallcachen():
+    # 148 kB som aldri endrer seg. Legger vi det i skall-cachen, lastes
+    # det ned paa nytt hver gang vi bumper versjonen.
+    sw = (ROT / "web" / "sw.js").read_text(encoding="utf-8")
+    assert 'url.pathname.startsWith("/vendor/")' in sw
+    assert "vendor" not in sw.split("const SKALL")[1].split("]")[0]
+
+
+def test_byer_klynges_men_kan_zoomes_fra_hverandre():
+    # Outland har tre butikker i Oslo. Tre markorer oppa hverandre er en
+    # klatt -- men i et ekte kart skiller de seg naar du zoomer inn.
+    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
+    assert "function byklynger" in js
+    i = js.index("function byklynger")
+    assert "byer.set(s.poststed" in js[i:i + 500]
+
+
+def test_gammelt_kart_ryddes_for_nytt_tegnes():
+    """Uten dette klager Leaflet paa at beholderen allerede er i bruk, og
+    kartet blir staaende tomt -- noe som forst skjer naar brukeren trykker
+    «finn naermeste» og kartet skal tegnes paa nytt.
     """
     js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    i = js.index("const land = NORGE.map")
-    assert "kartPunkt(lat, lon)" in js[i:i + 260]
-
-
-def test_byer_klynges_saa_prikkene_ikke_klumper_seg():
-    # Outland har tre butikker i Oslo. Tre prikker oppa hverandre ser ut
-    # som en klatt, ikke som informasjon.
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    i = js.index("function kartHtml")
-    kropp = js[i:js.index("function stedslisteHtml", i)]
-    assert "byer.set(s2.poststed" in kropp
-    assert "b.antall - 1" in kropp, "prikken vokser ikke med antallet"
-
-
-def test_bare_de_bynavnene_som_tilforer_noe():
-    """Rundt Oslofjorden ligger seks byer saa taett at alle etiketter la
-    seg oppa hverandre. Listen rett under kartet har uansett alle navnene.
-    """
-    js = (ROT / "web" / "app.js").read_text(encoding="utf-8")
-    i = js.index("function kartHtml")
-    kropp = js[i:js.index("function stedslisteHtml", i)]
-    assert "const merket = b.antall > 1" in kropp
-    assert "naermest" in kropp, "naermeste by faar ikke navn"
+    i = js.index("function tegnKart")
+    kropp = js[i:i + 700]
+    assert "kartet.remove()" in kropp
+    assert "invalidateSize" in js[i:i + 3000], "hoyden maales aldri paa nytt"

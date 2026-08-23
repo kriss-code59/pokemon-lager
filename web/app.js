@@ -1994,65 +1994,48 @@ if ("serviceWorker" in navigator) {
    staa inne for uten en ordentlig kartkilde.
    ===================================================================== */
 
-/* NORGES OMRISS.
+/* EKTE KART -- Leaflet med OpenStreetMap-fliser.
  *
- * Forste forsok var prikker paa breddegradslinjer, uten kystlinje -- jeg
- * ville ikke «dikte opp» et kart. Det ble et punktdiagram, og det saa
- * deretter ut.
+ * Forste forsok var prikker paa breddegradslinjer. Andre forsok var et
+ * tegnet Norges-omriss. Begge var «kart» i den forstand at de viste hvor
+ * ting laa, og ingen av dem var det folk mener med et kart: du kunne ikke
+ * zoome inn og se hvilken gate butikken ligger i.
  *
- * Resonnementet var feil. Et STILISERT kartomriss er ikke uaerlig; ingen
- * tror et skjematisk kart er en oppmaaling. Det uaerlige ville vaert aa
- * paastaa lager i den enkelte butikken, og det er noe helt annet.
+ * Leaflet ligger i web/vendor/ og lastes LOKALT. CSP-en tillater bare
+ * egne skript, og den skal ikke myknes opp for et kartbibliotek.
  *
- * Omrisset er punkter i [bredde, lengde] -- ikke ferdige SVG-koordinater.
- * Det betyr at kystlinjen og butikkprikkene gaar gjennom SAMME
- * projeksjon: bytter vi utsnitt, folger begge med. Hadde omrisset vaert
- * hardkodet i piksler, ville prikkene glidd fra land ved forste endring.
+ * Biblioteket er 148 kB og lastes forst naar noen aapner kartet. Forsiden
+ * skal ikke betale for en funksjon de fleste aldri trykker paa.
  *
- * Punktene folger kysten med klokka fra Lindesnes.
+ * FLISENE
+ *
+ * OpenStreetMap sine egne. De er lyse, og appen er mork -- derfor
+ * CSS-filteret i style.css, som er den vanlige maaten aa gjore OSM morkt
+ * paa uten aa binde seg til en betalt leverandor.
+ *
+ * OSM krever navngiving, og den staar nede i hjornet. Bruksvilkaarene
+ * deres gjelder volum: blir dette en side med mye trafikk, maa vi over paa
+ * en egen flisleverandor. Det er en regning, ikke en teknisk hindring, og
+ * den kommer forst naar tjenesten er stor nok til aa taale den.
  */
-const NORGE = [
-  // Sorlandet ostover mot Oslofjorden
-  [57.98, 7.05], [58.02, 7.49], [58.14, 8.00], [58.46, 8.77], [58.75, 9.60],
-  [59.05, 10.03], [59.42, 10.48], [59.74, 10.60], [59.91, 10.75],
-  // Ostsiden av fjorden og ned mot svenskegrensen
-  [59.60, 10.70], [59.22, 10.93], [59.12, 11.39],
-  // Grensen mot Sverige, nordover
-  [59.90, 11.70], [61.05, 12.60], [62.30, 12.15], [63.30, 12.10],
-  [64.05, 13.90], [65.00, 14.50], [66.15, 15.40], [67.25, 16.40],
-  [68.45, 18.10], [68.95, 20.55], [69.30, 21.05],
-  // Finnmark ostover til Kirkenes
-  [69.05, 23.00], [69.10, 25.90], [69.55, 27.05], [69.70, 29.10], [69.80, 30.90],
-  // Nordkysten vestover
-  [70.35, 30.05], [70.55, 28.30], [70.95, 27.30], [71.17, 25.78],
-  [70.66, 23.68], [70.30, 21.70], [69.65, 18.96], [69.32, 16.12],
-  // Lofoten og Helgeland
-  [68.45, 14.60], [67.88, 12.98], [67.28, 14.40], [66.02, 12.63],
-  [65.05, 12.10], [64.86, 11.24], [64.00, 10.30],
-  // Trondheimsfjorden inn og ut
-  [63.60, 10.90], [63.43, 10.40], [63.45, 9.60], [63.11, 7.73],
-  // Vestlandet sorover
-  [62.75, 7.15], [62.47, 6.15], [62.10, 5.40], [61.94, 5.11],
-  [61.30, 4.95], [60.80, 4.95], [60.39, 5.32], [59.90, 5.20],
-  [59.41, 5.27], [58.97, 5.73], [58.65, 5.60], [58.45, 5.99],
-];
+const LEAFLET_JS = "/vendor/leaflet/leaflet.js";
+const LEAFLET_CSS = "/vendor/leaflet/leaflet.css";
+let leafletLastet = null;
 
-/* Faste grenser, ikke utregnet fra butikkene vi har -- ellers ville kartet
- * endret form hver gang en kjede aapnet et utsalg. Lengdegrad helt ut til
- * 31 fordi Finnmark strekker seg lenger ost enn Istanbul. */
-const KART = { lat0: 57.4, lat1: 71.5, lon0: 4.0, lon1: 31.5, b: 320, h: 420 };
-
-function merkatorY(lat) {
-  return Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI / 180) / 2));
-}
-
-function kartPunkt(lat, lon) {
-  const y0 = merkatorY(KART.lat0), y1 = merkatorY(KART.lat1);
-  return {
-    x: ((lon - KART.lon0) / (KART.lon1 - KART.lon0)) * KART.b,
-    // SVG teller y nedover, kartet nordover. Uten minus staar Tromso i sor.
-    y: KART.h - ((merkatorY(lat) - y0) / (y1 - y0)) * KART.h,
-  };
+function lastLeaflet() {
+  if (leafletLastet) return leafletLastet;
+  leafletLastet = new Promise((ok, nei) => {
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = LEAFLET_CSS;
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = LEAFLET_JS;
+    js.onload = ok;
+    js.onerror = () => nei(new Error("fikk ikke lastet kartet"));
+    document.head.appendChild(js);
+  });
+  return leafletLastet;
 }
 
 /* Luftlinje i kilometer. Haversine -- Norge er langt nok nord til at
@@ -2065,83 +2048,74 @@ function avstandKm(lat1, lon1, lat2, lon2) {
   return 2 * R * Math.asin(Math.sqrt(a));
 }
 
-function kartHtml(steder, meg) {
-  const land = NORGE.map(([lat, lon], k) => {
-    const { x, y } = kartPunkt(lat, lon);
-    return (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
-  }).join(" ") + " Z";
-
-  /* KLYNG PER BY.
-   *
-   * Outland har tre butikker i Oslo. Tre prikker oppa hverandre ser ut som
-   * en klatt, ikke som informasjon. Én prikk som vokser med antallet sier
-   * det samme, tydeligere. */
+/* Klyng butikker per by.
+ *
+ * Outland har tre butikker i Oslo. Tre markorer oppa hverandre ser ut som
+ * en klatt, ikke som informasjon -- og zoomer du inn, skiller de seg. */
+function byklynger(steder) {
   const byer = new Map();
-  for (const s2 of steder) {
-    const n = byer.get(s2.poststed) || { poststed: s2.poststed, lat: s2.lat,
-                                         lon: s2.lon, antall: 0, aapne: 0 };
-    n.antall++;
-    if (s2.aapnet) n.aapne++;
-    byer.set(s2.poststed, n);
+  for (const s of steder) {
+    const n = byer.get(s.poststed) ||
+      { poststed: s.poststed, lat: s.lat, lon: s.lon, butikker: [] };
+    n.butikker.push(s);
+    byer.set(s.poststed, n);
+  }
+  return [...byer.values()];
+}
+
+let kartet = null;
+
+function tegnKart(steder, meg) {
+  const boks = $("kart-boks");
+  if (!boks || !window.L) return;
+
+  // Rydd et gammelt kart bort for vi lager et nytt. Uten dette klager
+  // Leaflet paa at beholderen allerede er i bruk, og kartet blir tomt.
+  if (kartet) { kartet.remove(); kartet = null; }
+
+  kartet = L.map(boks, { scrollWheelZoom: false, attributionControl: true })
+    .setView([64.5, 13.0], 4);
+
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; OpenStreetMap-bidragsytere",
+  }).addTo(kartet);
+
+  const punkter = [];
+  for (const by of byklynger(steder)) {
+    const aapne = by.butikker.filter((b) => b.aapnet);
+    const merke = L.circleMarker([by.lat, by.lon], {
+      radius: 7 + Math.min(by.butikker.length - 1, 3) * 2,
+      className: aapne.length ? "kart-merke" : "kart-merke kommer",
+    }).addTo(kartet);
+
+    merke.bindPopup(
+      "<strong>" + esc(by.poststed) + "</strong><br>" +
+      by.butikker.map((b) =>
+        esc(b.navn) + "<br><span class='popup-adresse'>" +
+        esc(b.adresse) + (b.merknad ? " · " + esc(b.merknad) : "") +
+        (b.aapnet ? "" : " · åpner snart") + "</span>").join("<br>"));
+    punkter.push([by.lat, by.lon]);
   }
 
-  /* HVILKE BYER SKAL HA NAVN PAA KARTET?
-   *
-   * Forste forsok satte navn paa alle. Rundt Oslofjorden ligger seks byer
-   * saa taett at etikettene la seg oppa hverandre og gjorde kartet
-   * uleselig -- og listen rett under kartet har uansett alle navnene.
-   *
-   * Regel: navn bare der det tilfoerer noe kartet ikke viser. Byer med
-   * flere butikker, og den naermeste deg. Resten er prikker; trykker du
-   * paa dem, staar navnet i tooltipen. */
-  const naermest = meg ? [...byer.values()]
-    .sort((a, b) => avstandKm(meg.lat, meg.lon, a.lat, a.lon) -
-                    avstandKm(meg.lat, meg.lon, b.lat, b.lon))[0] : null;
+  if (meg) {
+    L.circleMarker([meg.lat, meg.lon], { radius: 7, className: "kart-meg" })
+      .addTo(kartet).bindPopup("Her er du");
+    punkter.push([meg.lat, meg.lon]);
+  }
 
-  const prikker = [...byer.values()].map((b) => {
-    const { x, y } = kartPunkt(b.lat, b.lon);
-    const r = 4.5 + Math.min(b.antall - 1, 3) * 1.8;
-    const merket = b.antall > 1 || (naermest && naermest.poststed === b.poststed);
-    const klasse = (b.aapne ? "kart-by" : "kart-by kommer") +
-                   (naermest && naermest.poststed === b.poststed ? " naermest" : "");
-    return '<g class="' + klasse + '">' +
-      '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) +
-        '" r="' + (r + 5).toFixed(1) + '" class="kart-glo"></circle>' +
-      '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) +
-        '" r="' + r.toFixed(1) + '"></circle>' +
-      (merket
-        ? '<text x="' + (x + r + 5).toFixed(1) + '" y="' + (y + 3.5).toFixed(1) + '">' +
-          esc(b.poststed) + (b.antall > 1 ? " (" + b.antall + ")" : "") + "</text>"
-        : "") +
-      "<title>" + esc(b.poststed + " — " + b.antall +
-        (b.antall === 1 ? " butikk" : " butikker")) + "</title></g>";
-  }).join("");
-
-  const megPrikk = meg ? (() => {
-    const { x, y } = kartPunkt(meg.lat, meg.lon);
-    // Bare hvis posisjonen er innenfor utsnittet -- er du i Spania skal
-    // ikke prikken din klistres til kanten og se ut som en butikk.
-    if (x < 0 || x > KART.b || y < 0 || y > KART.h) return "";
-    return '<circle class="kart-meg" cx="' + x.toFixed(1) + '" cy="' +
-      y.toFixed(1) + '" r="5"><title>Her er du</title></circle>';
-  })() : "";
-
-  /* Nedre hoyre hjorne er Sverige -- altsaa tomt. Forklaringen legges der
-   * i stedet for under kartet: den fyller et hull som ellers ser ut som
-   * en feil, og staar naermere prikkene den forklarer. */
-  const forklaring =
-    '<g class="kart-forklaring" transform="translate(' + (KART.b - 108) +
-      "," + (KART.h - 52) + ')">' +
-    '<circle cx="6" cy="0" r="4.5"></circle>' +
-    '<text x="17" y="3.5">har butikk</text>' +
-    '<circle class="tom" cx="6" cy="19" r="4.5"></circle>' +
-    '<text x="17" y="22.5">åpner snart</text>' +
-    "</g>";
-
-  return '<svg class="kart" viewBox="0 0 ' + KART.b + " " + KART.h +
-    '" role="img" aria-label="Kart over fysiske butikker i Norge">' +
-    '<path class="kart-land" d="' + land + '"></path>' +
-    prikker + megPrikk + forklaring + "</svg>";
+  // Er posisjonen kjent, ram inn deg og de tre naermeste. Hele Norge er
+  // riktig naar man ikke vet hvor du er, og unyttig naar man vet det.
+  if (meg && punkter.length > 1) {
+    const naer = byklynger(steder)
+      .map((b) => ({ b, km: avstandKm(meg.lat, meg.lon, b.lat, b.lon) }))
+      .sort((a, b) => a.km - b.km).slice(0, 3)
+      .map((x) => [x.b.lat, x.b.lon]);
+    kartet.fitBounds([[meg.lat, meg.lon], ...naer], { padding: [30, 30] });
+  }
+  // Leaflet maaler beholderen ved oppstart. Aapnes kartet i et ark som
+  // fortsatt glir inn, er hoyden feil og flisene legger seg skjevt.
+  setTimeout(() => kartet && kartet.invalidateSize(), 120);
 }
 
 function stedslisteHtml(steder, meg) {
@@ -2162,19 +2136,25 @@ function stedslisteHtml(steder, meg) {
 }
 
 async function apneKart() {
-  visArk('<p class="hjelp">Laster…</p>');
+  visArk('<p class="hjelp">Laster kart…</p>');
   let d;
-  try { d = await hent("/steder"); }
-  catch (e) { visArk('<p class="feil">Fikk ikke kontakt med serveren.</p>'); return; }
+  try {
+    [d] = await Promise.all([hent("/steder"), lastLeaflet()]);
+  } catch (e) {
+    visArk('<p class="feil">Fikk ikke lastet kartet.</p>');
+    return;
+  }
 
   const tegn = (meg) => {
-    visArk('<h2>Butikk nær deg</h2>' +
+    visArk("<h2>Butikk nær deg</h2>" +
       '<p class="hjelp">' + esc(d.forbehold) + "</p>" +
-      '<div class="kart-boks">' + kartHtml(d.steder, meg) + "</div>" +
+      '<div id="kart-boks" class="kart-boks"></div>' +
       '<button class="lenkeknapp" id="finn-meg" type="button">' +
         (meg ? "Oppdater posisjonen min" : "Finn nærmeste") + "</button>" +
       '<p class="feil" id="kart-feil" hidden></p>' +
       stedslisteHtml(d.steder, meg));
+
+    tegnKart(d.steder, meg);
 
     $("finn-meg").onclick = () => {
       const feil = $("kart-feil");
@@ -2186,7 +2166,7 @@ async function apneKart() {
       // Posisjonen forlater ALDRI telefonen. Avstandene regnes ut her, i
       // nettleseren -- vi sender ingen koordinater til serveren og lagrer
       // dem ingen steder. Det er ikke en teknisk detalj, det er hele
-      // grunnen til at vi torde spore.
+      // grunnen til at vi torde sporre.
       navigator.geolocation.getCurrentPosition(
         (pos) => tegn({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
         () => {

@@ -120,14 +120,30 @@ def monter(app, hent_pool, hent_bruker):
             #   2. ingen installasjons-id + samme user agent -- rader fra for
             #      denne endringen. Heuristikk, men den treffer nettopp de
             #      gamle duplikatene og lar ekte andre enheter staa.
+            # RETTELSE 23. AUGUST -- den forste versjonen var for smal.
+            #
+            # Kriterium 2 krevde at user_agent ogsaa matchet. Den strengen
+            # endrer seg naar telefonen oppdaterer iOS, og da overlevde de
+            # gamle radene. Malt i drift samme dag: én bruker hadde
+            # fortsatt TRE levende Apple-endepunkter -- ett med
+            # installasjons-id fra 23. august, og to uten fra 8. og 13.
+            # Alle friske, alle fikk hvert varsel.
+            #
+            # Jeg fikset fremtiden og lot fortiden staa, og det var
+            # fortiden som sendte tre kopier.
+            #
+            # Ny regel: har brukeren en rad MED installasjons-id, er alle
+            # rader UTEN det levninger fra for 14. august. Appen har satt
+            # id-en ved hver sidelasting siden da, saa en rad uten den er
+            # enten dod eller registrerer seg paa nytt med id ved neste
+            # besok. Aa beholde den gir bare duplikater.
             fjernet = 0
             if data.installasjon:
                 cur = await conn.execute(
                     "DELETE FROM push_endpoints WHERE user_id = %s AND id <> %s "
-                    "  AND (installasjon = %s "
-                    "       OR (installasjon IS NULL AND user_agent = %s)) "
+                    "  AND (installasjon = %s OR installasjon IS NULL) "
                     "RETURNING id",
-                    (bruker["id"], ny_id, data.installasjon, ua))
+                    (bruker["id"], ny_id, data.installasjon))
                 fjernet = len(await cur.fetchall())
             return {"id": ny_id, "ok": True, "fjernet_gamle": fjernet}
 

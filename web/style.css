@@ -767,41 +767,47 @@ body.ny #tom-liste .lenkeknapp {
   padding: 7px 13px; font-size: 13px; white-space: nowrap;
 }
 .kart-boks {
-  background: var(--flate); border: 1px solid var(--kant);
+  height: 320px;
+  border: 1px solid var(--kant);
   border-radius: var(--radius);
-  padding: 14px 10px; margin: 12px 0;
-}
-.kart { display: block; width: 100%; max-width: 340px; margin: 0 auto; height: auto; }
-
-/* Land som flate, ikke som strek. En kystlinje uten fyll leser som en
-   krusedull; med fyll leser den som et land. */
-.kart-land {
-  fill: var(--flate-2);
-  stroke: var(--kant);
-  stroke-width: 1;
-  stroke-linejoin: round;
+  margin: 12px 0;
+  overflow: hidden;
+  background: var(--flate-2);
 }
 
-.kart-by circle { fill: var(--gronn); }
-.kart-glo { fill: var(--gronn); opacity: .18; }
-.kart-by text {
-  fill: var(--tekst); font-size: 10px; font-weight: 600;
-  /* paint-order: stroke tegner konturen UNDER fyllet. Uten den legger
-     streken seg oppa bokstavene og teksten blir en gro klatt -- det var
-     nettopp det som skjedde i forste utkast. */
-  paint-order: stroke;
-  stroke: var(--flate); stroke-width: 3px; stroke-linejoin: round;
+/* OSM-flisene er lyse, appen er mork.
+ *
+ * Dette er den vanlige maaten aa gjore OSM morkt paa uten aa binde seg
+ * til en betalt flisleverandor: inverter, snu fargehjulet tilbake saa
+ * vann fortsatt er blaatt, og demp litt. */
+.leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.9);
 }
-.kart-by.naermest circle { fill: var(--gul); }
-.kart-by.naermest .kart-glo { fill: var(--gul); opacity: .22; }
-.kart-by.naermest text { fill: var(--gul); }
-/* Butikker som ikke har aapnet skal vaere med, men ikke se ut som et sted
-   du kan dra i dag. */
-.kart-by.kommer circle { fill: none; stroke: var(--tekst-svak); stroke-width: 1.4; }
-.kart-by.kommer .kart-glo { display: none; }
-.kart-by.kommer text { fill: var(--tekst-svak); }
+.leaflet-container { background: var(--flate-2); }
+.leaflet-control-attribution {
+  background: rgba(11, 13, 16, .75) !important;
+  color: var(--tekst-svak) !important;
+  font-size: 10px !important;
+}
+.leaflet-control-attribution a { color: var(--tekst-svak) !important; }
+.leaflet-control-zoom a {
+  background: var(--flate) !important;
+  color: var(--tekst) !important;
+  border-color: var(--kant) !important;
+}
 
-.kart-meg { fill: var(--bla); stroke: var(--bg); stroke-width: 2; }
+/* Markorene ligger UTENFOR flis-panelet, saa fargefilteret over roerer
+   dem ikke -- de skal vaere gronne, ikke inverterte. */
+.kart-merke { fill: var(--gronn); fill-opacity: .85; stroke: #0b0d10; stroke-width: 2; }
+.kart-merke.kommer { fill: none; stroke: var(--tekst-svak); stroke-width: 2; }
+.kart-meg { fill: var(--bla); fill-opacity: .9; stroke: #0b0d10; stroke-width: 2; }
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: var(--flate) !important;
+  color: var(--tekst) !important;
+}
+.leaflet-popup-content { font-size: 13px; }
+.popup-adresse { color: var(--tekst-svak); font-size: 11.5px; }
 
 .stedliste { list-style: none; padding: 0; margin: 12px 0 0; }
 .stedliste li {

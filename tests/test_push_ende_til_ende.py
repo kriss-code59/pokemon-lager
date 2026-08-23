@@ -151,3 +151,44 @@ def test_404_regnes_som_dod_enhet():
     # slettes -- ellers mister brukeren varslene sine av en forbigaaende feil.
     assert sender.er_dod(404) and sender.er_dod(410)
     assert not sender.er_dod(500) and not sender.er_dod(None)
+
+
+# ------------------------------------------- duplikate endepunkter, runde 2
+
+def _push_kilde():
+    import pathlib
+    return (pathlib.Path(__file__).resolve().parent.parent
+            / "api" / "push.py").read_text(encoding="utf-8")
+
+
+def test_opprydding_henger_ikke_paa_user_agent():
+    """Forste forsok krevde at user_agent ogsaa matchet for en gammel rad
+    ble ryddet bort. Den strengen endrer seg naar telefonen oppdaterer
+    iOS -- og da overlevde duplikatene.
+
+    Malt i drift 23. august: én bruker hadde fortsatt TRE levende
+    Apple-endepunkter, ett med installasjons-id fra samme dag og to uten
+    fra 8. og 13. Alle friske. Hvert varsel gikk ut i tre kopier.
+
+    Jeg fikset fremtiden og lot fortiden staa, og det var fortiden som
+    sendte tre kopier.
+    """
+    kilde = _push_kilde()
+    i = kilde.index("DELETE FROM push_endpoints WHERE user_id")
+    setning = kilde[i:i + 260]
+    assert "installasjon IS NULL)" in setning
+    assert "user_agent = %s" not in setning, "henger fortsatt paa user_agent"
+
+
+def test_migrasjonen_rydder_bare_der_det_finnes_en_nyere_rad():
+    """Brukere som BARE har rader uten installasjons-id har ikke vaert
+    innom siden endringen. Aa slette deres eneste registrering ville
+    skrudd av varslene deres helt -- den verste feilen et varselsystem kan
+    gjore, og en som ingen ville meldt fra om.
+    """
+    import pathlib
+    sql = (pathlib.Path(__file__).resolve().parent.parent
+           / "db" / "011_rydd_duplikate_push.sql").read_text(encoding="utf-8")
+    assert "p.installasjon IS NULL" in sql
+    assert "EXISTS (" in sql
+    assert "q.installasjon IS NOT NULL" in sql

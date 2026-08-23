@@ -9,8 +9,8 @@
  *
  * Regelen for cache er enkel: skallet fra cache, /api/ ALDRI fra cache.
  */
-const CACHE = "pokepuls-skall-v31";
-const SKALL = ["/", "/style.css?v=31", "/app.js?v=31", "/ikon.svg", "/manifest.webmanifest"];
+const CACHE = "pokepuls-skall-v32";
+const SKALL = ["/", "/style.css?v=32", "/app.js?v=32", "/ikon.svg", "/manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SKALL)).then(() => self.skipWaiting()));
@@ -29,6 +29,10 @@ self.addEventListener("fetch", (e) => {
   // Serverrendrede produktsider (/p/...) og sidekartet skal heller ikke
   // caches: de har priser i seg, og en gammel pris er verre enn ingen side.
   if (url.pathname.startsWith("/p/") || url.pathname === "/sitemap.xml") return;
+  // Kartbiblioteket er 148 kB og endrer seg aldri. La nettleserens egen
+  // cache ta det -- legger vi det i skall-cachen, lastes det ned paa nytt
+  // hver gang vi bumper versjonen, for en funksjon de fleste ikke aapner.
+  if (url.pathname.startsWith("/vendor/")) return;
 
   e.respondWith(
     fetch(e.request)
